@@ -1,0 +1,24 @@
+{
+  "comment": "Spreewerk CRM — Lead Pipeline Template (Airtable)",
+  "fields": [
+    {"name": "Company", "type": "singleLineText", "description": "Firmenname"},
+    {"name": "Branch", "type": "singleSelect", "options": ["Handwerk", "Steuerberater", "Anwalt", "Restaurant", "Friseur", "Dachdecker", "Elektriker", "Sanitär", "Immobilien", "Webdesign", "Versicherung", "Sonstige"]},
+    {"name": "Region", "type": "singleSelect", "options": ["Berlin", "Potsdam", "Brandenburg", "Cottbus", "Frankfurt (Oder)"]},
+    {"name": "Website", "type": "url", "description": "Firmenwebsite"},
+    {"name": "Email", "type": "email", "description": "Kontakt-E-Mail"},
+    {"name": "Phone", "type": "phoneNumber", "description": "Telefonnummer"},
+    {"name": "Status", "type": "singleSelect", "options": ["Neu", "Kontaktiert", "Interessiert", "Demo gesendet", "Verhandlung", "Kunde", "Absage"]},
+    {"name": "Potential_Score", "type": "number", "description": "KI-Bewertung 1-10"},
+    {"name": "Last_Contact", "type": "date", "description": "Letzter Kontakt"},
+    {"name": "Package", "type": "singleSelect", "options": ["Starter (290€)", "Growth (790€)", "Enterprise (1900€)", "Noch nicht zugeordnet"]},
+    {"name": "MRR", "type": "currency", "description": "Monatlicher wiederkehrender Umsatz"},
+    {"name": "Notes", "type": "multilineText", "description": "Notizen"},
+    {"name": "Scraped_At", "type": "dateTime", "description": "Gefunden am"}
+  ],
+  "views": [
+    {"name": "Pipeline", "type": "kanban", "group_by": "Status"},
+    {"name": "Neue Leads", "type": "grid", "filter": "Status = 'Neu'"},
+    {"name": "Kunden", "type": "grid", "filter": "Status = 'Kunde'"},
+    {"name": "MRR Übersicht", "type": "grid", "group_by": "Package"}
+  ]
+}

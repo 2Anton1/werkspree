@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.firecrawl/
+
+# secrets — never commit real credentials, only ~/.hermes/.env holds these
+.env
+.env.*
+*.pem
+*.key
+credentials.json

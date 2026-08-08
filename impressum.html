@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum — Werkspree</title>
+    <meta name="robots" content="noindex">
+    <style>
+        :root {
+            --primary: #122c4d;
+            --accent: #1f9d74;
+            --accent-deep: #167a5a;
+            --bg: #fafafa;
+            --surface: #ffffff;
+            --text: #1d2939;
+            --text-muted: #5b6b7f;
+            --border: rgba(18, 44, 77, 0.09);
+            --nav-height: 68px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font: 100%/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            -webkit-font-smoothing: antialiased;
+        }
+        .navbar {
+            position: sticky; top: 0; height: var(--nav-height);
+            display: flex; align-items: center;
+            background: rgba(250, 250, 250, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+            z-index: 10;
+        }
+        .nav-inner { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+        .brand { font-weight: 700; font-size: 1.05rem; color: var(--primary); text-decoration: none; }
+        .back-link { color: var(--text-muted); text-decoration: none; font-size: 0.92rem; font-weight: 500; }
+        .back-link:hover { color: var(--primary); }
+        main { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+        h1 { font-size: 2rem; letter-spacing: -0.02em; color: var(--primary); margin-bottom: 0.5rem; }
+        .stand { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2.5rem; }
+        h2 { font-size: 1.2rem; color: var(--primary); margin: 2.25rem 0 0.75rem; letter-spacing: -0.01em; }
+        p { margin-bottom: 0.9rem; }
+        address { font-style: normal; }
+        a { color: var(--accent-deep); }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        footer { text-align: center; color: var(--text-muted); font-size: 0.85rem; padding: 2rem 1.5rem; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">Werkspree</a>
+            <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Impressum</h1>
+        <p class="stand">Stand: 08.08.2026</p>
+
+        <h2>Angaben gemäß § 5 DDG</h2>
+        <div class="card">
+            <address>
+                Anton Drooff<br>
+                Einzelunternehmen<br>
+                Bernburger Str. 21<br>
+                06108 Halle<br>
+                Deutschland
+            </address>
+        </div>
+
+        <h2>Kontakt</h2>
+        <p>E-Mail: <a href="mailto:a2807d@gmail.com">a2807d@gmail.com</a></p>
+
+        <h2>Umsatzsteuer</h2>
+        <p>Gemäß § 19 Abs. 1 UStG wird keine Umsatzsteuer erhoben und ausgewiesen (Kleinunternehmerregelung). Alle auf dieser Website genannten Preise sind daher Endpreise ohne gesonderten Umsatzsteuerausweis.</p>
+
+        <h2>Verantwortlich für den Inhalt</h2>
+        <p>Anton Drooff (Anschrift wie oben)</p>
+
+        <h2>Streitschlichtung</h2>
+        <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+        <h2>Haftung für Inhalte</h2>
+        <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+
+        <h2>Haftung für Links</h2>
+        <p>Unser Angebot enthält Links zu externen Websites Dritter (z. B. Stripe, GitHub Pages), auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+    </main>
+
+    <footer>
+        <p>Werkspree · <a href="index.html">Startseite</a> · <a href="datenschutz.html">Datenschutzerklärung</a></p>
+    </footer>
+</body>
+</html>
