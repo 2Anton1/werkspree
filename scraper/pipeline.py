@@ -15,6 +15,14 @@ import json, re, subprocess, sys, os
 from datetime import datetime
 from pathlib import Path
 
+from email_extraction import (
+    best_email,
+    EMAIL_SEARCH_PATHS,
+    find_gelbeseiten_profile_url,
+    find_real_website_on_profile_page,
+    is_real_company_website,
+)
+
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
@@ -73,13 +81,22 @@ def extract_listings(gs_path):
         phone_match = re.search(r'(\d{3,4}\s+[\d\s]{6,})', details)
         if phone_match:
             phone = phone_match.group(1).strip()
-        # Look for external website URL in the GS page
-        web_match = re.search(r'(https?://(?!www\.gelbeseiten\.de|ies\.v4all)[^\s)"\\]+)', details)
+        # Look for external website URL in the GS page (any gelbeseiten.de
+        # subdomain is excluded, not just "www." -- the profile page itself
+        # is not the company's real website). This almost never finds
+        # anything on the category page -- the per-listing "Webseite" button
+        # there is JS-driven with no static href. It's kept as a free/cheap
+        # first attempt; the real resolution path is the GelbeSeiten profile
+        # page (see gelbeseiten_url + resolve_real_website below).
+        web_match = re.search(
+            r'(https?://(?!(?:[\w-]+\.)?gelbeseiten\.de|ies\.v4all)[^\s)"\\]+)',
+            details, re.IGNORECASE
+        )
         website = web_match.group(1).rstrip('\"') if web_match else ""
         leads.append({
             "company_name": name,
             "phone": phone,
-            "gelbeseiten_url": "",
+            "gelbeseiten_url": find_gelbeseiten_profile_url(details),
             "website": website,
             "email": "",
             "email_source": "",
@@ -91,21 +108,33 @@ def extract_listings(gs_path):
     return leads
 
 
+def resolve_real_website(gelbeseiten_url):
+    """Findet die echte Firmen-Website über die GelbeSeiten-Profilseite
+    (der 'Webseite'-Button auf der Kategorieseite hat keinen statischen
+    Link, auf der Profilseite des Unternehmens steht er aber normal)."""
+    if not gelbeseiten_url:
+        return ""
+    tmp = Path("/tmp/gsbiz_tmp.md")
+    if firecrawl_scrape(gelbeseiten_url, tmp, timeout=30):
+        return find_real_website_on_profile_page(tmp.read_text())
+    return ""
+
+
 def get_email_from_imprint(website):
-    """Scrape /impressum of a company website to find email."""
+    """Scrape a company website for an email address. Tries the homepage
+    first (many small sites show it directly, e.g. as a mailto: link in the
+    footer), then the classic legal-page paths. Stops at the first hit."""
     if not website:
         return ""
-    # Try /impressum first, then /kontakt
-    for path in ["/impressum", "/Impressum", "/kontakt", "/Kontakt"]:
-        url = website.rstrip("/") + path
+    base = website.rstrip("/")
+    for path in EMAIL_SEARCH_PATHS:
+        url = base + path
         tmp = Path("/tmp/imprint_tmp.md")
         if firecrawl_scrape(url, tmp, timeout=30):
             content = tmp.read_text()
-            emails = re.findall(r'[\w.-]+@[\w.-]+\.\w{2,}', content)
-            # Filter out generic emails
-            for e in emails:
-                if not any(x in e.lower() for x in ['example', 'spam', 'meinungsmeister', 'webmaster@']):
-                    return e
+            email = best_email(content)
+            if email:
+                return email
     return ""
 
 
@@ -140,6 +169,12 @@ def find_email(website):
     """Try to find a real email first, fall back to a validated domain guess.
     Returns (email, source) where source is 'scraped' or 'guessed' — outreach
     should be able to tell a confirmed address from an inferred one."""
+    if not is_real_company_website(website):
+        # Defense in depth: a gelbeseiten.de URL (e.g. stale data from before
+        # the profile-page resolution existed) must never reach the guesser —
+        # gelbeseiten.de itself has valid MX records, so it would "succeed"
+        # with a useless info@gelbeseiten.de guess.
+        return "", ""
     email = get_email_from_imprint(website)
     if email:
         return email, "scraped"
@@ -193,9 +228,14 @@ def main():
         l["branch"] = branch
         l["region"] = region
     
-    # Step 3: Get emails from first 5 company websites (credit limit)
+    # Step 3: Resolve the real company website, then find an email — for the
+    # first 5 new leads (credit limit). The GelbeSeiten category page's
+    # "Webseite" button has no static link, so `website` is almost always
+    # still empty here; resolve it via the individual profile page first.
     for i, lead in enumerate(new_leads[:5]):
-        if lead["website"]:
+        if not is_real_company_website(lead["website"]) and lead.get("gelbeseiten_url"):
+            lead["website"] = resolve_real_website(lead["gelbeseiten_url"])
+        if is_real_company_website(lead["website"]):
             email, source = find_email(lead["website"])
             lead["email"] = email
             lead["email_source"] = source
@@ -203,14 +243,24 @@ def main():
                 print(f"  Found email ({source}): {lead['company_name']} -> {email}")
             else:
                 print(f"  No email: {lead['company_name']}")
+        else:
+            print(f"  No website found: {lead['company_name']}")
 
     # Step 3b: Second pass — retry existing leads that never got an email
     # (previously only the current day's first 5 new leads were ever checked;
     # everyone else stayed empty forever). Small budget so we don't blow the
-    # Firecrawl credit limit on retries alone.
+    # Firecrawl credit limit on retries alone. Also resolves a real website
+    # for old leads that only ever had a gelbeseiten_url on file.
     existing = load_existing_leads()
-    retry_candidates = [l for l in existing if l.get("website") and not l.get("email")]
+    retry_candidates = [
+        l for l in existing
+        if not l.get("email") and (is_real_company_website(l.get("website")) or l.get("gelbeseiten_url"))
+    ]
     for lead in retry_candidates[:5]:
+        if not is_real_company_website(lead.get("website")) and lead.get("gelbeseiten_url"):
+            lead["website"] = resolve_real_website(lead["gelbeseiten_url"])
+        if not is_real_company_website(lead.get("website")):
+            continue
         email, source = find_email(lead["website"])
         if email:
             lead["email"] = email

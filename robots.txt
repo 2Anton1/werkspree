@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://werkspree.bki-de.de/sitemap.xml

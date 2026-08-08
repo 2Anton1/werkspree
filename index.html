@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Werkspree — KI-Automatisierung für kleine Unternehmen</title>
     <meta name="description" content="Wir automatisieren Rechnungswesen, Kundenkommunikation und Marketing für kleine Unternehmen in Berlin und Brandenburg.">
+    <link rel="canonical" href="https://werkspree.bki-de.de/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Werkspree — KI-Automatisierung für kleine Unternehmen">
     <meta property="og:description" content="Rechnungswesen, Kundenkommunikation und Marketing automatisiert — für kleine Unternehmen in Berlin und Brandenburg.">
+    <meta property="og:url" content="https://werkspree.bki-de.de/">
+    <meta property="og:site_name" content="Werkspree">
+    <meta property="og:image" content="https://werkspree.bki-de.de/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Werkspree — KI-Automatisierung für kleine Unternehmen">
+    <meta name="twitter:description" content="Rechnungswesen, Kundenkommunikation und Marketing automatisiert — für kleine Unternehmen in Berlin und Brandenburg.">
+    <meta name="twitter:image" content="https://werkspree.bki-de.de/og-image.png">
     <meta name="theme-color" content="#0f2540">
     <style>
         :root {
@@ -353,12 +363,16 @@
             transition: border-color 200ms var(--ease-out), background 200ms var(--ease-out);
         }
         .field input::placeholder,
-        .field textarea::placeholder { color: rgba(255, 255, 255, 0.42); }
+        .field textarea::placeholder { color: rgba(255, 255, 255, 0.5); }
         .field input:focus,
         .field textarea:focus {
-            outline: none;
             border-color: var(--accent);
             background: rgba(255, 255, 255, 0.14);
+        }
+        .field input:focus-visible,
+        .field textarea:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
         }
         .field textarea { resize: vertical; min-height: 110px; }
         .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
@@ -404,7 +418,121 @@
         footer .legal-links a { color: rgba(255, 255, 255, 0.6); text-decoration: none; }
         footer .legal-links a:hover { color: white; }
         .ust-note { text-align: center; color: var(--text-muted); font-size: 0.85rem; margin-top: var(--space-xl); }
+
+        /* ---------- FAQ ---------- */
+        .faq { background: var(--surface); }
+        .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-sm); }
+        .faq-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 0.3rem var(--space-md);
+        }
+        .faq-item summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-md);
+            padding: 1.1rem 0;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--primary);
+            cursor: pointer;
+            list-style: none;
+        }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+            border-radius: 6px;
+        }
+        .faq-item .chevron {
+            flex-shrink: 0;
+            width: 20px; height: 20px;
+            color: var(--text-muted);
+            transition: transform 250ms var(--ease-out);
+        }
+        .faq-item[open] .chevron { transform: rotate(180deg); }
+        .faq-item p {
+            color: var(--text-muted);
+            font-size: 0.96rem;
+            line-height: 1.6;
+            padding: 0 0 1.2rem;
+            margin: 0;
+        }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Werkspree",
+      "description": "Wir automatisieren Rechnungswesen, Kundenkommunikation und Marketing für kleine Unternehmen in Berlin und Brandenburg.",
+      "url": "https://werkspree.bki-de.de/",
+      "email": "a2807d@gmail.com",
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Berlin" },
+        { "@type": "AdministrativeArea", "name": "Brandenburg" }
+      ],
+      "provider": {
+        "@type": "Person",
+        "name": "Anton Drooff"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Bernburger Str. 21",
+        "postalCode": "06108",
+        "addressLocality": "Halle",
+        "addressCountry": "DE"
+      },
+      "priceRange": "€€",
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "KI Starter",
+          "description": "Automatisierte Rechnungsverarbeitung, E-Mail-Autoresponder mit KI, 1 Workflow nach Wahl, E-Mail-Support. Einmalige Einrichtung 490 € zzgl. laufender 290 €/Monat.",
+          "priceCurrency": "EUR",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceCurrency": "EUR",
+            "price": "290.00",
+            "unitText": "MONTH",
+            "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "MONTH" }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "KI Growth",
+          "description": "Rechnungsautomatisierung mit Mahnwesen, WhatsApp/Messenger-KI-Chatbot, Lead-Generierung & Follow-up, monatliche Auswertung, bis zu 5 Workflows, Telefon-Support. Einmalige Einrichtung 1.490 € zzgl. laufender 790 €/Monat.",
+          "priceCurrency": "EUR",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceCurrency": "EUR",
+            "price": "790.00",
+            "unitText": "MONTH",
+            "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "MONTH" }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "KI Enterprise",
+          "description": "Vollständige Prozessautomatisierung, CRM-Setup & Integration, Social-Media-Automatisierung, priorisierter Support, unbegrenzte Workflows. Einmalige Einrichtung 2.900 € zzgl. laufender 1.900 €/Monat.",
+          "priceCurrency": "EUR",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "priceCurrency": "EUR",
+            "price": "1900.00",
+            "unitText": "MONTH",
+            "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitText": "MONTH" }
+          }
+        },
+        {
+          "@type": "Offer",
+          "name": "Individuelle Lösung",
+          "description": "Maßgeschneiderte KI-Automatisierung, Prozessanalyse & Beratung, flexible Workflow-Konfiguration, persönliche Betreuung. Preis auf Anfrage."
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -413,6 +541,7 @@
             <ul class="nav-links">
                 <li><a href="#warum">Warum wir</a></li>
                 <li><a href="#pakete">Pakete</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
             <div class="nav-cta">
@@ -531,11 +660,50 @@
         </div>
     </div>
 
+    <div class="faq section" id="faq">
+        <div class="container">
+            <span class="section-eyebrow" data-reveal>Fragen</span>
+            <h2 class="section-title" data-reveal>Häufige Fragen</h2>
+            <div class="faq-list">
+                <details class="faq-item" data-reveal>
+                    <summary>Was passiert mit meinen Daten? Wo werden sie verarbeitet?
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </summary>
+                    <p>Ihre Anfrage über das Kontaktformular läuft über den Dienst Formspree; die eigentliche Automatisierung (z. B. die Rechnungsverarbeitung) läuft auf einem eigenen Server in Deutschland. Details zu allen eingesetzten Diensten und Ihren Rechten finden Sie in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+                </details>
+                <details class="faq-item" data-reveal>
+                    <summary>Wer haftet, wenn die KI eine Rechnung falsch erfasst?
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </summary>
+                    <p>Die KI erfasst und übergibt Rechnungen vor — die fachliche Prüfung und finale Freigabe bleibt bei Ihnen bzw. Ihrer Buchhaltung. Konkrete Haftungsfragen für Ihren Anwendungsfall klären wir individuell vor Vertragsschluss, nicht pauschal auf dieser Seite.</p>
+                </details>
+                <details class="faq-item" data-reveal>
+                    <summary>Wie lange binde ich mich? Wie kündige ich?
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </summary>
+                    <p>Laufzeit und Kündigungsfrist legen wir im Erstgespräch fest, bevor Sie etwas beauftragen — dazu machen wir hier bewusst keine pauschale Zusage, die im Einzelfall nicht stimmen könnte.</p>
+                </details>
+                <details class="faq-item" data-reveal>
+                    <summary>Was, wenn es bei meinem Betrieb nicht funktioniert?
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </summary>
+                    <p>Im kostenlosen, unverbindlichen Erstgespräch schauen wir uns Ihren konkreten Ablauf an und sagen ehrlich, ob sich eine Automatisierung für Sie lohnt. Passt es nicht, sagen wir das auch — dann entstehen keine Kosten.</p>
+                </details>
+                <details class="faq-item" data-reveal>
+                    <summary>Wie lange dauert die Einrichtung?
+                        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </summary>
+                    <p>Das hängt vom Umfang Ihres Pakets und Ihrer Ausgangslage ab. Eine realistische Einschätzung für Ihren Fall bekommen Sie im Erstgespräch, bevor Sie sich entscheiden.</p>
+                </details>
+            </div>
+        </div>
+    </div>
+
     <div class="contact" id="kontakt">
         <h2 data-reveal>Bereit für weniger Aufwand?</h2>
         <p class="lead" data-reveal>Schreiben Sie kurz, was bei Ihnen am meisten Zeit frisst. Wir melden uns innerhalb eines Werktags und sagen Ihnen ehrlich, ob sich Automatisierung bei Ihnen lohnt — kostenlos und unverbindlich.</p>
 
-        <form class="contact-form" data-reveal id="kontaktformular" action="https://formspree.io/f/FORM_ID_HIER_EINTRAGEN" method="POST" novalidate>
+        <form class="contact-form" data-reveal id="kontaktformular" action="https://formspree.io/f/mqpzewzj" method="POST" novalidate>
             <div class="field-row">
                 <div class="field">
                     <label for="k-name">Name <span class="req">*</span></label>
@@ -543,13 +711,13 @@
                 </div>
                 <div class="field">
                     <label for="k-firma">Betrieb</label>
-                    <input type="text" id="k-firma" name="firma" autocomplete="organization" placeholder="Mustermann Elektro GmbH">
+                    <input type="text" id="k-firma" name="firma" autocomplete="organization" placeholder="Mustermann GmbH">
                 </div>
             </div>
             <div class="field-row">
                 <div class="field">
                     <label for="k-mail">E-Mail <span class="req">*</span></label>
-                    <input type="email" id="k-mail" name="email" required autocomplete="email" placeholder="max@mustermann-elektro.de">
+                    <input type="email" id="k-mail" name="email" required autocomplete="email" placeholder="max@mustermann.de">
                 </div>
                 <div class="field">
                     <label for="k-tel">Telefon</label>
