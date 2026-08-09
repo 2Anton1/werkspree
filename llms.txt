@@ -1,0 +1,20 @@
+# Werkspree
+
+> KI-Automatisierung für kleine Unternehmen in Berlin und Brandenburg. Schwerpunkt: automatisierte Verarbeitung eingehender Rechnungen, Kundenkommunikation und wiederkehrende Bürovorgänge in Handwerks- und Kleinbetrieben.
+
+Werkspree richtet Automatisierungen ein, die Belege erfassen, Anfragen beantworten und Daten an die Steuerkanzlei übergeben. Zielgruppe sind Betriebe mit wenigen Beschäftigten und ohne eigene IT.
+
+## Fachliche Inhalte
+
+- [E-Rechnungspflicht für kleine Betriebe](https://werkspree.bki-de.de/e-rechnung/): Fristen 2025 bis 2028, Empfangspflicht seit 1.1.2025, umsatzabhängige Ausstellungspflicht ab 1.1.2027 (Vorjahresumsatz über 800.000 €) und ab 1.1.2028 für alle, Kleinunternehmerregelung nach § 19 UStG, Ausnahmen nach § 33 und § 34 UStDV, Aufbewahrung über acht Jahre. Mit Quellenangaben, Stand August 2026.
+- [E-Rechnung prüfen](https://werkspree.bki-de.de/e-rechnung-pruefen/): kostenloses Werkzeug, das XRechnung-XML- und ZUGFeRD-PDF-Dateien auf die Pflichtangaben nach EN 16931 prüft. Läuft vollständig im Browser, es werden keine Dateien übertragen.
+
+## Angebot
+
+- [Pakete und Preise](https://werkspree.bki-de.de/#pakete): KI Starter (490 € einmalig, 290 € monatlich), KI Growth (1.490 € / 790 €), KI Enterprise (2.900 € / 1.900 €), dazu individuelle Lösungen auf Anfrage. Alle Preise nach § 19 UStG ohne Umsatzsteuerausweis.
+- [Kontakt und Erstgespräch](https://werkspree.bki-de.de/#kontakt)
+
+## Rechtliches
+
+- [Impressum](https://werkspree.bki-de.de/impressum.html)
+- [Datenschutzerklärung](https://werkspree.bki-de.de/datenschutz.html)

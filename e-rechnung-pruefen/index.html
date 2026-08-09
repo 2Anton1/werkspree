@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Rechnung prüfen — XRechnung &amp; ZUGFeRD im Browser</title>
+<meta name="description" content="Kostenloser E-Rechnungs-Prüfer: XRechnung-XML oder ZUGFeRD-PDF auswählen und sofort sehen, welche Pflichtangaben nach EN 16931 enthalten sind. Läuft komplett im Browser, ohne Upload.">
+<link rel="canonical" href="https://werkspree.bki-de.de/e-rechnung-pruefen/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="E-Rechnung kostenlos prüfen — XRechnung & ZUGFeRD im Browser">
+<meta property="og:description" content="Datei auswählen, sofort sehen, ob es eine echte E-Rechnung ist und welche Pflichtangaben fehlen. Ohne Upload, ohne Anmeldung.">
+<meta property="og:url" content="https://werkspree.bki-de.de/e-rechnung-pruefen/">
+<meta property="og:site_name" content="Werkspree">
+<meta property="og:image" content="https://werkspree.bki-de.de/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f2540">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  .drop {
+    border: 2px dashed rgba(18, 44, 77, 0.22);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    padding: var(--space-xl) var(--space-md);
+    text-align: center;
+    transition: border-color 200ms var(--ease-out), background 200ms var(--ease-out);
+  }
+  .drop.over { border-color: var(--accent); background: rgba(31, 157, 116, 0.05); }
+  .drop p { color: var(--text-muted); margin: var(--space-2xs) 0 var(--space-md); }
+  .drop input[type=file] { position: absolute; width: 1px; height: 1px; opacity: 0; }
+  .filelabel { font-weight: 600; color: var(--primary); }
+
+  .verdict { border-radius: var(--radius-lg); padding: var(--space-md) var(--space-lg); margin: var(--space-lg) 0 var(--space-md); border: 1px solid var(--border); background: var(--surface); }
+  .verdict h2 { margin: 0 0 var(--space-2xs); font-size: 1.25rem; }
+  .verdict.ok { border-left: 5px solid #1f9d74; }
+  .verdict.warn { border-left: 5px solid #b3730b; }
+  .verdict.bad { border-left: 5px solid #b02a2a; }
+  .verdict p { margin: 0; color: var(--text-muted); }
+
+  .checks { list-style: none; padding: 0; }
+  .checks li { display: flex; gap: 0.6rem; padding: 0.5rem 0; border-bottom: 1px solid var(--border); align-items: baseline; }
+  .checks li:last-child { border-bottom: none; }
+  .mark { font-weight: 700; flex: 0 0 1.4rem; }
+  .mark.ok { color: #167a5a; }
+  .mark.warn { color: #8a5a08; }
+  .mark.bad { color: #98211f; }
+  .checks .why { display: block; font-size: 0.86rem; color: var(--text-muted); }
+
+  dl.fields { display: grid; grid-template-columns: minmax(140px, 34%) 1fr; gap: 0.45rem 1rem; margin: var(--space-sm) 0; font-size: 0.95rem; }
+  dl.fields dt { color: var(--text-muted); }
+  dl.fields dd { margin: 0; color: var(--text); word-break: break-word; }
+  .hidden { display: none; }
+  .badge-row { text-align: center; margin: var(--space-md) 0; }
+  .status-line { margin-top: var(--space-sm); }
+  .btn-row { display: flex; gap: var(--space-sm); flex-wrap: wrap; justify-content: center; }
+  .privacy-badge {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    background: rgba(31, 157, 116, 0.1); color: var(--accent-deep);
+    border-radius: var(--radius-full); padding: 0.35rem 0.9rem; font-size: 0.85rem; font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar" aria-label="Hauptnavigation">
+  <div class="nav-inner container">
+    <a href="../" class="brand">Werkspree</a>
+    <ul class="nav-links">
+      <li><a href="../e-rechnung/">E-Rechnung</a></li>
+      <li><a href="./" aria-current="page">Rechnung prüfen</a></li>
+      <li><a href="../#pakete">Pakete</a></li>
+      <li><a href="../#kontakt">Kontakt</a></li>
+    </ul>
+    <div class="nav-cta"><a href="../#kontakt" class="btn btn-sm">Erstgespräch</a></div>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="prose">
+    <span class="tagline"><span class="dot"></span>Kostenlos, ohne Anmeldung</span>
+    <h1>E-Rechnung prüfen</h1>
+    <p class="lead">Wählen Sie eine XRechnung-XML oder eine ZUGFeRD-PDF aus. Sie sehen sofort, ob es sich um eine echte E-Rechnung handelt und welche Pflichtangaben enthalten sind.</p>
+  </div>
+</header>
+
+<nav class="breadcrumb prose" aria-label="Brotkrümelnavigation">
+  <ol>
+    <li><a href="../">Start</a></li>
+    <li>E-Rechnung prüfen</li>
+  </ol>
+</nav>
+
+<main class="prose">
+
+  <p class="badge-row">
+    <span class="privacy-badge">Die Datei bleibt auf Ihrem Rechner — sie wird nicht hochgeladen.</span>
+  </p>
+
+  <div class="drop" id="drop">
+    <span class="filelabel">Datei hierher ziehen</span>
+    <p>oder auswählen — <code>.xml</code>, <code>.pdf</code></p>
+    <div class="btn-row">
+      <label class="btn">Datei auswählen<input type="file" id="file" accept=".xml,.pdf,text/xml,application/xml,application/pdf"></label>
+      <button class="btn btn-ghost" type="button" id="reset">Zurücksetzen</button>
+    </div>
+    <p id="status" class="note status-line" role="status" aria-live="polite"></p>
+  </div>
+
+  <section id="result" class="hidden" aria-live="polite">
+    <div class="verdict" id="verdict">
+      <h2 id="verdict-title">Ergebnis der Prüfung</h2>
+      <p id="verdict-text"></p>
+    </div>
+
+    <h2>Prüfpunkte</h2>
+    <ul class="checks" id="checks"></ul>
+
+    <h2>Ausgelesene Angaben</h2>
+    <dl class="fields" id="fields"></dl>
+
+    <p class="note">Diese Prüfung sieht nach, ob die zentralen Pflichtangaben der Norm EN&nbsp;16931 vorhanden und plausibel sind. Sie ersetzt keine vollständige technische Validierung nach Schematron und keine steuerliche Beurteilung der Rechnung.</p>
+  </section>
+
+  <h2>Was dieses Werkzeug prüft</h2>
+
+  <p>Der häufigste Fall in kleinen Betrieben: Eine Rechnung kommt per Mail, sieht aus wie immer, und niemand weiß, ob sie den neuen Anforderungen genügt. Genau das beantwortet diese Seite.</p>
+
+  <ul>
+    <li><strong>Ist es überhaupt eine E-Rechnung?</strong> Ein gewöhnliches PDF ohne eingebettete Daten ist keine, auch wenn es digital erstellt wurde.</li>
+    <li><strong>Welches Format und welches Profil?</strong> Bei ZUGFeRD ist das entscheidend: Die Profile <em>MINIMUM</em> und <em>BASIC WL</em> reichen als E-Rechnung nicht aus.</li>
+    <li><strong>Sind die Pflichtangaben da?</strong> Rechnungsnummer, Rechnungsdatum, Währung, Verkäufer mit Anschrift und Umsatzsteuer-Identifikation, Käufer, Steuerbetrag und Gesamtbeträge.</li>
+    <li><strong>Passen die Beträge zusammen?</strong> Netto plus Steuer sollte den Bruttobetrag ergeben.</li>
+  </ul>
+
+  <h2>Warum die Datei nicht hochgeladen wird</h2>
+
+  <p>Rechnungen enthalten Kundennamen, Beträge und Bankverbindungen. Es gibt keinen guten Grund, solche Daten für eine Formatprüfung an einen fremden Server zu schicken. Diese Seite lädt deshalb nichts hoch: Das Auslesen der XML-Datei und das Öffnen der PDF passieren vollständig in Ihrem Browser. Die dafür nötige PDF-Bibliothek liegt auf demselben Server wie diese Seite, es wird kein Dienst Dritter eingebunden.</p>
+
+  <p class="note">Nachprüfbar: Trennen Sie die Internetverbindung, nachdem die Seite geladen ist. Die Prüfung funktioniert weiter.</p>
+
+  <div class="cta-box">
+    <h3>Noch unklar, was ab wann für Sie gilt?</h3>
+    <p>Fristen, Ausnahmen und die Kleinunternehmerregelung — kompakt und mit Quellen.</p>
+    <a class="btn btn-ghost" href="../e-rechnung/">Zur Übersicht der E-Rechnungspflicht</a>
+  </div>
+
+  <div class="cta-box">
+    <h3>Wenn Sie das nicht jede Woche von Hand machen wollen</h3>
+    <p>Werkspree richtet die automatische Erfassung eingehender Rechnungen für kleine Betriebe in Berlin und Brandenburg ein. Erstgespräch kostenlos.</p>
+    <a class="btn" href="../#kontakt">Erstgespräch anfragen</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>Werkspree — KI-Automatisierung für kleine Unternehmen | Berlin &amp; Brandenburg</p>
+  <p class="legal-links"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutzerklärung</a></p>
+</footer>
+
+<script src="../assets/vendor/pdf.min.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var nav = document.getElementById('navbar');
+  var toggleNav = function () { nav.classList.toggle('scrolled', window.scrollY > 8); };
+  toggleNav();
+  window.addEventListener('scroll', toggleNav, { passive: true });
+
+  if (window.pdfjsLib) {
+    window.pdfjsLib.GlobalWorkerOptions.workerSrc = '../assets/vendor/pdf.worker.min.js';
+  }
+
+  var drop = document.getElementById('drop');
+  var fileInput = document.getElementById('file');
+  var statusEl = document.getElementById('status');
+  var resultEl = document.getElementById('result');
+  var verdictEl = document.getElementById('verdict');
+  var verdictTitle = document.getElementById('verdict-title');
+  var verdictText = document.getElementById('verdict-text');
+  var checksEl = document.getElementById('checks');
+  var fieldsEl = document.getElementById('fields');
+
+  /* ---------- XML-Hilfen (namensraum-unabhängig über localName) ---------- */
+
+  function ln(el) { return el.localName || el.nodeName.replace(/^.*:/, ''); }
+
+  function child(el, name) {
+    if (!el) return null;
+    var kids = el.children;
+    for (var i = 0; i < kids.length; i++) { if (ln(kids[i]) === name) return kids[i]; }
+    return null;
+  }
+
+  function walk(el) {
+    var cur = el;
+    for (var i = 1; i < arguments.length; i++) {
+      cur = child(cur, arguments[i]);
+      if (!cur) return null;
+    }
+    return cur;
+  }
+
+  function deep(root, name) {
+    if (!root) return null;
+    var list = root.getElementsByTagName('*');
+    for (var i = 0; i < list.length; i++) { if (ln(list[i]) === name) return list[i]; }
+    return null;
+  }
+
+  function txt(el) { return el ? el.textContent.trim() : ''; }
+
+  function num(s) {
+    if (!s) return null;
+    var v = parseFloat(String(s).replace(',', '.'));
+    return isNaN(v) ? null : v;
+  }
+
+  /* ---------- Profil-Erkennung ---------- */
+
+  var UNZUREICHEND = ['minimum', 'basicwl', 'basic wl'];
+
+  function describeProfile(id) {
+    var lower = (id || '').toLowerCase();
+    if (!lower) return { name: 'nicht angegeben', sufficient: null, note: 'Die Datei nennt kein Profil (BT-24). Das ist bei einer normkonformen E-Rechnung ungewöhnlich.' };
+    if (lower.indexOf('xrechnung') > -1) return { name: 'XRechnung', sufficient: true, note: 'XRechnung ist eine zulässige Ausprägung der Norm EN 16931.' };
+    if (lower.indexOf('minimum') > -1) return { name: 'ZUGFeRD/Factur-X MINIMUM', sufficient: false, note: 'Das Profil MINIMUM enthält nur Eckdaten und gilt nicht als E-Rechnung im Sinne des § 14 UStG.' };
+    if (lower.indexOf('basicwl') > -1) return { name: 'ZUGFeRD/Factur-X BASIC WL', sufficient: false, note: 'BASIC WL enthält keine Rechnungspositionen und gilt nicht als E-Rechnung im Sinne des § 14 UStG.' };
+    if (lower.indexOf('extended') > -1) return { name: 'ZUGFeRD/Factur-X EXTENDED', sufficient: true, note: 'EXTENDED erweitert die Norm EN 16931 und ist zulässig.' };
+    if (lower.indexOf('basic') > -1) return { name: 'ZUGFeRD/Factur-X BASIC', sufficient: true, note: 'BASIC ist eine zulässige Einschränkung der Norm EN 16931.' };
+    if (lower.indexOf('en16931') > -1 || lower.indexOf('en 16931') > -1) return { name: 'EN 16931 (ZUGFeRD-Profil „Comfort")', sufficient: true, note: 'Entspricht unmittelbar der europäischen Norm.' };
+    return { name: id, sufficient: null, note: 'Profil unbekannt — es konnte nicht automatisch zugeordnet werden.' };
+  }
+
+  /* ---------- Auslesen: UBL ---------- */
+
+  function readUBL(root) {
+    var supplier = walk(root, 'AccountingSupplierParty', 'Party');
+    var customer = walk(root, 'AccountingCustomerParty', 'Party');
+    var total = child(root, 'LegalMonetaryTotal');
+    var addr = supplier ? child(supplier, 'PostalAddress') : null;
+
+    function partyName(p) {
+      if (!p) return '';
+      return txt(walk(p, 'PartyLegalEntity', 'RegistrationName')) || txt(walk(p, 'PartyName', 'Name'));
+    }
+
+    var taxTotal = child(root, 'TaxTotal');
+
+    return {
+      syntax: 'UBL (XRechnung / Peppol BIS)',
+      profile: txt(child(root, 'CustomizationID')),
+      docType: ln(root),
+      id: txt(child(root, 'ID')),
+      issueDate: txt(child(root, 'IssueDate')),
+      typeCode: txt(child(root, 'InvoiceTypeCode')) || txt(child(root, 'CreditNoteTypeCode')),
+      currency: txt(child(root, 'DocumentCurrencyCode')),
+      sellerName: partyName(supplier),
+      sellerVat: txt(walk(supplier, 'PartyTaxScheme', 'CompanyID')),
+      sellerAddress: addr ? [txt(child(addr, 'StreetName')), [txt(child(addr, 'PostalZone')), txt(child(addr, 'CityName'))].filter(Boolean).join(' '), txt(walk(addr, 'Country', 'IdentificationCode'))].filter(Boolean).join(', ') : '',
+      sellerCountry: txt(walk(addr, 'Country', 'IdentificationCode')),
+      buyerName: partyName(customer),
+      lineTotal: num(txt(child(total, 'LineExtensionAmount'))),
+      netTotal: num(txt(child(total, 'TaxExclusiveAmount'))),
+      grossTotal: num(txt(child(total, 'TaxInclusiveAmount'))),
+      payable: num(txt(child(total, 'PayableAmount'))),
+      taxAmount: num(txt(child(taxTotal, 'TaxAmount'))),
+      iban: txt(walk(root, 'PaymentMeans', 'PayeeFinancialAccount', 'ID')),
+      lineCount: root.getElementsByTagName('*').length ? countLocal(root, 'InvoiceLine') + countLocal(root, 'CreditNoteLine') : 0
+    };
+  }
+
+  function countLocal(root, name) {
+    var list = root.getElementsByTagName('*'), n = 0;
+    for (var i = 0; i < list.length; i++) { if (ln(list[i]) === name) n++; }
+    return n;
+  }
+
+  /* ---------- Auslesen: CII (ZUGFeRD / Factur-X) ---------- */
+
+  function readCII(root) {
+    var ctx = child(root, 'ExchangedDocumentContext');
+    var doc = child(root, 'ExchangedDocument');
+    var tx = child(root, 'SupplyChainTradeTransaction');
+    var agreement = tx ? child(tx, 'ApplicableHeaderTradeAgreement') : null;
+    var settlement = tx ? child(tx, 'ApplicableHeaderTradeSettlement') : null;
+    var seller = agreement ? child(agreement, 'SellerTradeParty') : null;
+    var buyer = agreement ? child(agreement, 'BuyerTradeParty') : null;
+    var addr = seller ? child(seller, 'PostalTradeAddress') : null;
+    var sum = settlement ? child(settlement, 'SpecifiedTradeSettlementHeaderMonetarySummation') : null;
+
+    var vat = '';
+    if (seller) {
+      var regs = seller.getElementsByTagName('*');
+      for (var i = 0; i < regs.length; i++) {
+        if (ln(regs[i]) === 'ID' && (regs[i].getAttribute('schemeID') === 'VA' || regs[i].getAttribute('schemeID') === 'FC')) {
+          if (regs[i].getAttribute('schemeID') === 'VA') { vat = txt(regs[i]); break; }
+          if (!vat) vat = txt(regs[i]) + ' (Steuernummer)';
+        }
+      }
+    }
+
+    return {
+      syntax: 'CII (ZUGFeRD / Factur-X)',
+      profile: txt(walk(ctx, 'GuidelineSpecifiedDocumentContextParameter', 'ID')),
+      docType: 'CrossIndustryInvoice',
+      id: txt(child(doc, 'ID')),
+      issueDate: formatCiiDate(txt(walk(doc, 'IssueDateTime', 'DateTimeString'))),
+      typeCode: txt(child(doc, 'TypeCode')),
+      currency: txt(child(settlement, 'InvoiceCurrencyCode')),
+      sellerName: txt(child(seller, 'Name')),
+      sellerVat: vat,
+      sellerAddress: addr ? [txt(child(addr, 'LineOne')), [txt(child(addr, 'PostcodeCode')), txt(child(addr, 'CityName'))].filter(Boolean).join(' '), txt(child(addr, 'CountryID'))].filter(Boolean).join(', ') : '',
+      sellerCountry: txt(child(addr, 'CountryID')),
+      buyerName: txt(child(buyer, 'Name')),
+      lineTotal: num(txt(child(sum, 'LineTotalAmount'))),
+      netTotal: num(txt(child(sum, 'TaxBasisTotalAmount'))),
+      grossTotal: num(txt(child(sum, 'GrandTotalAmount'))),
+      payable: num(txt(child(sum, 'DuePayableAmount'))),
+      taxAmount: num(txt(child(sum, 'TaxTotalAmount'))),
+      iban: txt(deep(settlement, 'IBANID')),
+      lineCount: countLocal(root, 'IncludedSupplyChainTradeLineItem')
+    };
+  }
+
+  function formatCiiDate(s) {
+    if (/^\d{8}$/.test(s)) return s.slice(6, 8) + '.' + s.slice(4, 6) + '.' + s.slice(0, 4);
+    return s;
+  }
+
+  /* ---------- Prüflogik ---------- */
+
+  function buildChecks(d) {
+    var c = [];
+    var prof = describeProfile(d.profile);
+
+    c.push({
+      state: prof.sufficient === false ? 'bad' : (prof.sufficient === true ? 'ok' : 'warn'),
+      label: 'Profil: ' + prof.name,
+      why: prof.note
+    });
+
+    function req(value, label, why) {
+      c.push({ state: value ? 'ok' : 'bad', label: label + (value ? ': ' + value : ' fehlt'), why: value ? '' : why });
+    }
+
+    req(d.id, 'Rechnungsnummer (BT-1)', 'Ohne fortlaufende Rechnungsnummer ist die Rechnung nach § 14 UStG unvollständig.');
+    req(d.issueDate, 'Rechnungsdatum (BT-2)', 'Das Ausstellungsdatum ist Pflichtangabe.');
+    req(d.currency, 'Währung (BT-5)', 'Die Rechnungswährung muss angegeben sein.');
+    req(d.sellerName, 'Verkäufer (BT-27)', 'Der vollständige Name des leistenden Unternehmers fehlt.');
+    req(d.sellerAddress, 'Anschrift des Verkäufers (BT-35 ff.)', 'Die Anschrift des leistenden Unternehmers ist Pflichtangabe.');
+    req(d.buyerName, 'Käufer (BT-44)', 'Der Name des Rechnungsempfängers fehlt.');
+
+    c.push({
+      state: d.sellerVat ? 'ok' : 'warn',
+      label: d.sellerVat ? 'Steuerliche Identifikation des Verkäufers: ' + d.sellerVat : 'Keine USt-IdNr. oder Steuernummer des Verkäufers gefunden',
+      why: d.sellerVat ? '' : 'Für den Vorsteuerabzug ist eine der beiden Angaben erforderlich. Bei Kleinunternehmern nach § 19 UStG kann das Fehlen zutreffend sein.'
+    });
+
+    c.push({
+      state: d.grossTotal !== null ? 'ok' : 'bad',
+      label: d.grossTotal !== null ? 'Bruttobetrag: ' + fmt(d.grossTotal, d.currency) : 'Bruttobetrag fehlt',
+      why: d.grossTotal !== null ? '' : 'Der Gesamtbetrag einschließlich Steuer konnte nicht gelesen werden.'
+    });
+
+    if (d.netTotal !== null && d.taxAmount !== null && d.grossTotal !== null) {
+      var diff = Math.abs((d.netTotal + d.taxAmount) - d.grossTotal);
+      c.push({
+        state: diff < 0.02 ? 'ok' : 'bad',
+        label: diff < 0.02 ? 'Beträge sind rechnerisch schlüssig' : 'Beträge passen nicht zusammen',
+        why: fmt(d.netTotal, d.currency) + ' netto + ' + fmt(d.taxAmount, d.currency) + ' Steuer = ' + fmt(d.netTotal + d.taxAmount, d.currency) + ', angegeben sind ' + fmt(d.grossTotal, d.currency) + '.'
+      });
+    } else {
+      c.push({ state: 'warn', label: 'Rechnerische Prüfung nicht möglich', why: 'Netto-, Steuer- oder Bruttobetrag fehlt in der Datei.' });
+    }
+
+    c.push({
+      state: d.lineCount > 0 ? 'ok' : 'warn',
+      label: d.lineCount > 0 ? 'Rechnungspositionen: ' + d.lineCount : 'Keine Rechnungspositionen enthalten',
+      why: d.lineCount > 0 ? '' : 'Eine E-Rechnung nach EN 16931 enthält mindestens eine Position. Fehlen sie, deutet das auf ein unzureichendes Profil hin.'
+    });
+
+    if (d.iban) c.push({ state: 'ok', label: 'Bankverbindung: ' + d.iban, why: '' });
+
+    return c;
+  }
+
+  function fmt(v, cur) {
+    if (v === null || v === undefined) return '—';
+    try { return v.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + (cur ? ' ' + cur : ''); }
+    catch (e) { return v + (cur ? ' ' + cur : ''); }
+  }
+
+  /* ---------- Darstellung ---------- */
+
+  function show(d) {
+    var checks = buildChecks(d);
+    var bad = checks.filter(function (x) { return x.state === 'bad'; }).length;
+    var warn = checks.filter(function (x) { return x.state === 'warn'; }).length;
+
+    verdictEl.className = 'verdict ' + (bad ? 'bad' : (warn ? 'warn' : 'ok'));
+    if (bad) {
+      verdictTitle.textContent = bad === 1 ? 'Ein Punkt spricht gegen eine gültige E-Rechnung' : bad + ' Punkte sprechen gegen eine gültige E-Rechnung';
+      verdictText.textContent = 'Die Datei ist zwar eine strukturierte Rechnung im Format ' + d.syntax + ', erfüllt aber nicht alles, was die Norm EN 16931 verlangt. Die Einzelheiten stehen unten.';
+    } else if (warn) {
+      verdictTitle.textContent = 'Sieht gut aus, mit Anmerkungen';
+      verdictText.textContent = 'Alle geprüften Pflichtangaben sind vorhanden. ' + warn + (warn === 1 ? ' Punkt ist' : ' Punkte sind') + ' erwähnenswert — siehe unten.';
+    } else {
+      verdictTitle.textContent = 'Das ist eine gültige E-Rechnung';
+      verdictText.textContent = 'Format ' + d.syntax + '. Alle geprüften Pflichtangaben nach EN 16931 sind vorhanden und die Beträge sind schlüssig.';
+    }
+
+    checksEl.innerHTML = '';
+    checks.forEach(function (x) {
+      var li = document.createElement('li');
+      var m = document.createElement('span');
+      m.className = 'mark ' + x.state;
+      m.textContent = x.state === 'ok' ? '✓' : (x.state === 'warn' ? '!' : '✕');
+      var body = document.createElement('span');
+      var strong = document.createElement('strong');
+      strong.textContent = x.label;
+      body.appendChild(strong);
+      if (x.why) {
+        var w = document.createElement('span');
+        w.className = 'why';
+        w.textContent = x.why;
+        body.appendChild(w);
+      }
+      li.appendChild(m); li.appendChild(body);
+      checksEl.appendChild(li);
+    });
+
+    var rows = [
+      ['Syntax', d.syntax],
+      ['Profil (BT-24)', d.profile || '—'],
+      ['Dokumentart (BT-3)', d.typeCode ? d.typeCode + (d.typeCode === '380' ? ' (Rechnung)' : d.typeCode === '381' ? ' (Gutschrift)' : '') : '—'],
+      ['Rechnungsnummer', d.id || '—'],
+      ['Rechnungsdatum', d.issueDate || '—'],
+      ['Verkäufer', d.sellerName || '—'],
+      ['Anschrift', d.sellerAddress || '—'],
+      ['USt-IdNr. / Steuernr.', d.sellerVat || '—'],
+      ['Käufer', d.buyerName || '—'],
+      ['Positionen', d.lineCount || '—'],
+      ['Nettobetrag', fmt(d.netTotal, d.currency)],
+      ['Steuerbetrag', fmt(d.taxAmount, d.currency)],
+      ['Bruttobetrag', fmt(d.grossTotal, d.currency)],
+      ['Zahlbetrag', fmt(d.payable, d.currency)],
+      ['IBAN', d.iban || '—']
+    ];
+    fieldsEl.innerHTML = '';
+    rows.forEach(function (r) {
+      var dt = document.createElement('dt'); dt.textContent = r[0];
+      var dd = document.createElement('dd'); dd.textContent = r[1];
+      fieldsEl.appendChild(dt); fieldsEl.appendChild(dd);
+    });
+
+    resultEl.classList.remove('hidden');
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function showPlain(title, text) {
+    verdictEl.className = 'verdict bad';
+    verdictTitle.textContent = title;
+    verdictText.textContent = text;
+    checksEl.innerHTML = '';
+    fieldsEl.innerHTML = '';
+    resultEl.classList.remove('hidden');
+    resultEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* ---------- Eingang ---------- */
+
+  function handleXmlText(text) {
+    var doc = new DOMParser().parseFromString(text, 'application/xml');
+    if (doc.getElementsByTagName('parsererror').length) {
+      showPlain('Die Datei lässt sich nicht lesen', 'Der Inhalt ist keine gültige XML-Datei. Möglicherweise wurde sie beim Weiterleiten oder Speichern beschädigt.');
+      return;
+    }
+    var root = doc.documentElement;
+    var name = ln(root);
+    if (name === 'CrossIndustryInvoice') { show(readCII(root)); return; }
+    if (name === 'Invoice' || name === 'CreditNote') { show(readUBL(root)); return; }
+    showPlain('Kein bekanntes E-Rechnungsformat', 'Die Datei ist zwar gültiges XML, das Wurzelelement „' + name + '" gehört aber weder zu XRechnung (UBL) noch zu ZUGFeRD (CII).');
+  }
+
+  function handlePdf(buffer) {
+    if (!window.pdfjsLib) {
+      showPlain('PDF-Prüfung nicht verfügbar', 'Die PDF-Bibliothek konnte nicht geladen werden. Bitte laden Sie die Seite neu.');
+      return;
+    }
+    statusEl.textContent = 'PDF wird geöffnet …';
+    window.pdfjsLib.getDocument({ data: new Uint8Array(buffer) }).promise.then(function (pdf) {
+      return pdf.getAttachments();
+    }).then(function (att) {
+      statusEl.textContent = '';
+      var keys = att ? Object.keys(att) : [];
+      var xmlKey = null;
+      for (var i = 0; i < keys.length; i++) {
+        if (/\.xml$/i.test(keys[i]) || /\.xml$/i.test(att[keys[i]].filename || '')) { xmlKey = keys[i]; break; }
+      }
+      if (!xmlKey) {
+        showPlain(
+          'Das ist eine gewöhnliche PDF-Rechnung, keine E-Rechnung',
+          'In dieser PDF stecken keine strukturierten Rechnungsdaten. Nach § 14 UStG gilt sie als „sonstige Rechnung". In der Übergangszeit ist das zulässig, die spätere Ausstellungspflicht erfüllt sie aber nicht.'
+        );
+        return;
+      }
+      var bytes = att[xmlKey].content;
+      var text = new TextDecoder('utf-8').decode(bytes);
+      handleXmlText(text);
+    }).catch(function (e) {
+      statusEl.textContent = '';
+      showPlain('Die PDF lässt sich nicht öffnen', 'Die Datei ist beschädigt oder passwortgeschützt. (' + (e && e.message ? e.message : 'unbekannter Fehler') + ')');
+    });
+  }
+
+  function handleFile(f) {
+    if (!f) return;
+    statusEl.textContent = 'Gelesen: ' + f.name;
+    var reader = new FileReader();
+    var isPdf = /\.pdf$/i.test(f.name) || f.type === 'application/pdf';
+    reader.onload = function () {
+      if (isPdf) handlePdf(reader.result);
+      else handleXmlText(new TextDecoder('utf-8').decode(new Uint8Array(reader.result)));
+    };
+    reader.onerror = function () { showPlain('Die Datei konnte nicht gelesen werden', 'Bitte versuchen Sie es erneut.'); };
+    reader.readAsArrayBuffer(f);
+  }
+
+  fileInput.addEventListener('change', function () { handleFile(fileInput.files[0]); });
+
+  ['dragenter', 'dragover'].forEach(function (ev) {
+    drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.add('over'); });
+  });
+  ['dragleave', 'drop'].forEach(function (ev) {
+    drop.addEventListener(ev, function (e) { e.preventDefault(); drop.classList.remove('over'); });
+  });
+  drop.addEventListener('drop', function (e) {
+    if (e.dataTransfer && e.dataTransfer.files.length) handleFile(e.dataTransfer.files[0]);
+  });
+
+  document.getElementById('reset').addEventListener('click', function () {
+    fileInput.value = '';
+    statusEl.textContent = '';
+    resultEl.classList.add('hidden');
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "E-Rechnungs-Prüfer",
+      "url": "https://werkspree.bki-de.de/e-rechnung-pruefen/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Webbrowser",
+      "inLanguage": "de-DE",
+      "description": "Prüft XRechnung-XML- und ZUGFeRD-PDF-Dateien auf die Pflichtangaben nach EN 16931. Die Prüfung läuft vollständig im Browser, es wird nichts hochgeladen.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "publisher": { "@type": "Organization", "name": "Werkspree", "url": "https://werkspree.bki-de.de/" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://werkspree.bki-de.de/" },
+        { "@type": "ListItem", "position": 2, "name": "E-Rechnung prüfen", "item": "https://werkspree.bki-de.de/e-rechnung-pruefen/" }
+      ]
+    }
+  ]
+}
+</script>
+
+</body>
+</html>

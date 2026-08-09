@@ -1,6 +1,8 @@
 __pycache__/
 *.pyc
 .firecrawl/
+node_modules/
+package-lock.json
 
 # secrets — never commit real credentials, only ~/.hermes/.env holds these
 .env
@@ -8,3 +10,4 @@ __pycache__/
 *.pem
 *.key
 credentials.json
+graphify-out/

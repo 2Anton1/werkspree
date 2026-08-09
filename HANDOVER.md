@@ -252,6 +252,33 @@ N8N_API_KEY=...        (eyJhbG...)
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 09.08.2026 — Marketing: Inbound-Strategie aufgesetzt und erste zwei Bausteine live
+
+Auftrag von Anton: eine Marketingstrategie, die ein Agent **ohne sein Zutun** umsetzen kann. Rahmen von ihm vorgegeben: **0 € Budget**, Live-Deployment **ohne Vorabfreigabe**, sofort mit der Umsetzung beginnen.
+
+**Strategie:** neues Dokument `STRATEGIE-MARKETING.md`. Kern: Unter „0 € und ohne Anton" fällt praktisch alles weg, was in 12.6 als hoher Hebel steht (Steuerberater, Innung, Telefon, Google Business — alles braucht einen Menschen oder Geld). Kaltakquise per E-Mail bleibt wegen § 7 UWG gesperrt (12.7). Übrig bleibt genau ein Kanal, der zu einem Agenten passt: **eingehende Anfragen über Inhalte und kostenlose Werkzeuge auf der eigenen Seite**. Gewähltes Thema: die E-Rechnungspflicht — ein Zwang mit akuter Frist, deutlich weniger umkämpft als „KI-Automatisierung", und es führt direkt zum Starter-Paket.
+
+**Umgesetzt und live:**
+- `assets/site.css` — geteiltes Stylesheet für Unterseiten, Design-Token 1:1 aus `index.html` übernommen. `index.html` selbst blieb bei seinem Inline-CSS, um kein Risiko einzugehen.
+- `e-rechnung/index.html` — Ratgeber zur E-Rechnungspflicht. Fristenstaffel 2025/2027/2028, Empfangspflicht seit 1.1.2025, 800.000-€-Schwelle (maßgeblich ist der Umsatz **2026**), Kleinunternehmerregelung, Ausnahmen nach § 33/§ 34 UStDV und § 4 Nr. 8–29 UStG, Achtjahresaufbewahrung. Mit Quellenangabe (BMF-Schreiben vom 15.10.2025, ZDH, gesetze-im-internet.de), Stand-Datum und Hinweis „keine Rechtsberatung". JSON-LD: `Article`, `FAQPage`, `BreadcrumbList`.
+- `e-rechnung-pruefen/index.html` — **kostenloses Werkzeug**: prüft XRechnung-XML (UBL) und ZUGFeRD-PDF (CII) auf die Pflichtangaben nach EN 16931. Erkennt Profil (inkl. „MINIMUM und BASIC WL genügen nicht"), fehlende Pflichtfelder, unstimmige Beträge, und meldet bei einer PDF ohne eingebettete Daten ausdrücklich „gewöhnliche PDF-Rechnung, keine E-Rechnung". Läuft **vollständig im Browser**, kein Upload, kein CDN — `pdf.js` 3.11.174 liegt selbst gehostet unter `assets/vendor/` (Apache 2.0, Lizenz beiliegend). Das ist gleichzeitig das Datenschutz-Argument gegenüber der Zielgruppe.
+- `llms.txt` neu, `sitemap.xml` um die drei neuen URLs erweitert.
+- `index.html`: Navigation um „E-Rechnung" und „Rechnung prüfen" ergänzt, neue FAQ-Frage zur E-Rechnungspflicht mit Links auf beide Seiten, Footer-Links, vier rohe `&` als `&amp;` maskiert (Altbestand, vom Validator gefunden).
+- `datenschutz.html`: neuer Abschnitt 8 zum E-Rechnungs-Prüfer (lokale Verarbeitung, kein Drittdienst), Folgeabschnitte umnummeriert, Stand auf 09.08.2026 gesetzt.
+
+**Verifiziert, nicht nur behauptet:**
+- `tests/e-rechnung-pruefer/` — die echte Seite wird in jsdom geladen und die Dateien laufen durch denselben Weg wie beim Besucher (Dateiauswahl → `change`). 31 Prüfungen grün: vollständige XRechnung, vollständige ZUGFeRD-Rechnung, eine absichtlich dreifach kaputte Datei (Profil MINIMUM, fehlender Käufer, Summe stimmt nicht — alle drei erkannt), unbekanntes XML, kaputtes XML.
+- `pdf-test.mjs` — Anhang-Extraktion gegen eine echte PDF mit eingebetteter `factur-x.xml` und gegen eine gewöhnliche PDF. Beide korrekt.
+- `html-validate` über alle fünf HTML-Dateien: sauber. Dabei behoben: fehlende `aria-label` an den Navigationen, `scope="col"` in den Tabellen, leere Überschrift, Inline-Styles, redundantes `for`, zu lange `<title>`.
+- Lokaler Linkcheck über alle Seiten: keine toten Verweise.
+
+**Offen bzw. für Anton:**
+- 🔴 **Cron `e1e5b8283664` prüfen.** Im Handover steht „Neue Leads scrapen **+ E-Mails versenden**". Falls der Versandteil aktiv ist, gehört er stillgelegt, bis § 7 UWG geklärt ist. Von hier aus nicht einsehbar — das ist Hermes' Cron.
+- Ehrliche Erwartung: neue Seite, keine eingehenden Links, fremde Subdomain. Es kann gut sein, dass drei Monate lang **nichts** darüber hereinkommt. Der Engpass bleibt die fehlende Referenz und die Lieferfähigkeit (12.8), nicht das Marketing. Details in `STRATEGIE-MARKETING.md`, Abschnitt 4.
+- Noch nicht eingerichtet: ein Cron, der die Rechtslage regelmäßig gegen die Quellen prüft und die Ratgeber-Seite aktualisiert. Eine veraltete Frist wäre schlimmer als keine Seite.
+
+---
+
 ### 08.08.2026 (Nacht — Claude Code, Blöcke 0–3 aus PROMPT-TECHNIK.md)
 
 **Block 0 — Secrets:**
