@@ -1,0 +1,275 @@
+#!/usr/bin/env python3
+"""
+Werkspree Lead Warmth Scorer
+Scores leads 1-10 based on automation-readiness signals:
+
+WARM SIGNALS:
+- Website exists and is functional (not just a GelbeSeiten listing)
+- No online booking/appointment system (automation opportunity)
+- No chatbot/AI features (they don't have automation yet)
+- Manual contact form (they process things manually)
+- Job postings mentioning "Buchhaltung", "Rechnung", "Büro" (hiring for automatable tasks)
+- Small team (1-10 employees, mentioned in imprint)
+- Outdated website (old tech = no automation)
+- Multiple locations or high customer volume indicators
+- Instagram/Facebook but no WhatsApp Business
+- PDF menus, price lists (could be automated)
+
+COLD SIGNALS:
+- Already has online booking system
+- Already has chatbot
+- Large enterprise (50+ employees)
+- No website at all
+- Already a tech/digital company
+"""
+
+import json
+import re
+import subprocess
+import os
+import time
+from pathlib import Path
+from datetime import datetime
+
+DATA_DIR = Path(__file__).parent / "data"
+SCORED_FILE = DATA_DIR / "scored_leads.json"
+CACHE_DIR = Path(__file__).parent / ".." / ".firecrawl" / "warmth"
+
+
+def scrape_website(url, timeout=30):
+    """Scrape a website and return the content."""
+    if not url or "gelbeseiten.de" in url:
+        return None
+    
+    cache_key = re.sub(r'[^a-zA-Z0-9]', '_', url)[:50]
+    cache_path = CACHE_DIR / f"{cache_key}.md"
+    
+    if cache_path.exists():
+        return cache_path.read_text()
+    
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    
+    result = subprocess.run(
+        ["firecrawl", "scrape", url, "-o", str(cache_path)],
+        capture_output=True, text=True, timeout=timeout
+    )
+    
+    if result.returncode == 0 and cache_path.exists():
+        return cache_path.read_text()
+    return None
+
+
+def score_lead(lead, website_content=None):
+    """Score a lead 1-10 for automation readiness."""
+    score = 0
+    signals = []
+    
+    # 1. Has own website (not just GelbeSeiten) = +2
+    website = lead.get("website", "")
+    if website and "gelbeseiten.de" not in website:
+        score += 2
+        signals.append("has_own_website")
+    else:
+        signals.append("no_own_website")
+    
+    # 2. Has email = +1 (directly contactable)
+    if lead.get("email"):
+        score += 1
+        signals.append("has_email")
+    
+    # 3. Analyze website content for warmth signals
+    if website_content:
+        content_lower = website_content.lower()
+        
+        # Has contact form but no online booking = warm
+        if any(w in content_lower for w in ["kontaktformular", "kontakt form", "contact form"]):
+            if not any(w in content_lower for w in ["online termin", "online buchen", "booking", "termin buchen", "reservierung online"]):
+                score += 2
+                signals.append("manual_contact_form")
+            else:
+                score -= 1
+                signals.append("has_online_booking")
+        
+        # Has online booking = already automated (cold)
+        if any(w in content_lower for w in ["online termin", "online buchen", "booking system", "termin buchen", "reservierung online", "tablecheck", "opentable"]):
+            score -= 2
+            signals.append("already_has_online_booking")
+        
+        # Has chatbot = already has some automation (cold for chatbot, warm for other)
+        if any(w in content_lower for w in ["chatbot", "chat-bot", "ki-assistent", "künstliche intelligenz"]):
+            score -= 1
+            signals.append("already_has_chatbot")
+        else:
+            score += 1
+            signals.append("no_chatbot")
+        
+        # Mentions manual processes = warm
+        if any(w in content_lower for w in ["rechnung", "buchhaltung", "buchhalter", "faktura", "kontoauszug"]):
+            score += 1
+            signals.append("mentions_accounting")
+        
+        # Has WhatsApp but maybe not Business = warm
+        if any(w in content_lower for w in ["whatsapp"]):
+            if "whatsapp business" not in content_lower:
+                score += 1
+                signals.append("has_whatsapp_not_business")
+        
+        # No WhatsApp at all = automation opportunity
+        if "whatsapp" not in content_lower and lead.get("branch") in ["Restaurant", "Friseur", "Handwerk"]:
+            score += 1
+            signals.append("no_whatsapp")
+        
+        # Small team (1-10) = warm (can't afford dedicated staff)
+        if any(w in content_lower for w in ["kleinbetrieb", "familienbetrieb", "inhabergeführt", "1-10 mitarbeiter", "handwerk"]):
+            score += 1
+            signals.append("small_business")
+        
+        # Large company (50+) = cold for our pricing
+        if any(w in content_lower for w in ["über 50 mitarbeiter", "100 mitarbeiter", "konzern", "großunternehmen"]):
+            score -= 2
+            signals.append("large_company")
+        
+        # Outdated website signals (old CMS, no SSL, etc.) = warm
+        if any(w in content_lower for w in ["wordpress", "typo3", "joomla", "contao"]):
+            if "wp-" in content_lower or "wp-content" in content_lower:
+                score += 1
+                signals.append("outdated_cms")
+        
+        # Has PDF menus/price lists = warm (could be automated)
+        if any(w in content_lower for w in [".pdf", "speisekarte pdf", "preisliste pdf", "download"]):
+            score += 1
+            signals.append("has_pdf_documents")
+        
+        # Social media but no automation = warm
+        if any(w in content_lower for w in ["instagram", "facebook"]):
+            if "social media automation" not in content_lower:
+                score += 1
+                signals.append("social_media_no_automation")
+    
+    # 4. Branch-based scoring
+    branch = lead.get("branch", "")
+    high_automation_branches = {
+        "Steuerberater": 3,  # heavy invoicing/document processing
+        "Elektriker": 2,
+        "Dachdecker": 2,
+        "Sanitär": 2,
+        "Handwerksbetriebe": 2,
+        "Restaurant": 2,  # reservations, orders
+        "Immobilienmakler": 3,  # lead management
+        "Anwalt": 2,
+        "Friseur": 1,
+    }
+    branch_bonus = high_automation_branches.get(branch, 1)
+    score += branch_bonus
+    signals.append(f"branch_bonus_{branch}_{branch_bonus}")
+    
+    # 5. Region scoring (Berlin = more likely to adopt AI)
+    if lead.get("region") == "Berlin":
+        score += 1
+        signals.append("berlin_tech_savvy")
+    
+    # Clamp to 1-10
+    score = max(1, min(10, score))
+    
+    return score, signals
+
+
+def warm_leads(leads, max_scrape=20):
+    """Score all leads, scrape warmest ones first."""
+    # First pass: score without website content
+    scored = []
+    for lead in leads:
+        score, signals = score_lead(lead)
+        scored.append({
+            **lead,
+            "warmth_score": score,
+            "warmth_signals": signals,
+        })
+    
+    # Sort by score descending
+    scored.sort(key=lambda x: x["warmth_score"], reverse=True)
+    
+    # Second pass: scrape top N websites for deeper scoring
+    scraped_count = 0
+    for lead in scored:
+        if scraped_count >= max_scrape:
+            break
+        website = lead.get("website", "")
+        if website and "gelbeseiten.de" not in website:
+            print(f"  Scraping: {lead['company_name'][:30]}... ", end="")
+            content = scrape_website(website)
+            if content:
+                # Re-score with content
+                score, signals = score_lead(lead, content)
+                lead["warmth_score"] = score
+                lead["warmth_signals"] = signals
+                lead["website_scraped"] = True
+                print(f"score={score}")
+            else:
+                print("failed")
+            scraped_count += 1
+            time.sleep(0.5)
+    
+    return scored
+
+
+def main():
+    print("=" * 60)
+    print("Werkspree Lead Warmth Scorer")
+    print("=" * 60)
+    
+    # Load latest leads
+    lead_files = sorted(DATA_DIR.glob("leads_*.json"))
+    if not lead_files:
+        print("No leads found!")
+        return
+    
+    with open(lead_files[-1]) as f:
+        leads = json.load(f)
+    
+    print(f"Loaded {len(leads)} leads from {lead_files[-1].name}")
+    
+    # Score leads
+    print(f"\nScoring leads (scraping top 20 websites)...")
+    scored = warm_leads(leads, max_scrape=20)
+    
+    # Save
+    with open(SCORED_FILE, "w", encoding="utf-8") as f:
+        json.dump(scored, f, ensure_ascii=False, indent=2)
+    
+    # Summary
+    print(f"\n{'='*60}")
+    print(f"RESULTS")
+    print(f"{'='*60}")
+    
+    score_dist = {}
+    for l in scored:
+        s = l["warmth_score"]
+        score_dist[s] = score_dist.get(s, 0) + 1
+    
+    print(f"\nScore distribution:")
+    for s in sorted(score_dist.keys(), reverse=True):
+        bar = "█" * score_dist[s]
+        print(f"  {s:2d}: {bar} ({score_dist[s]})")
+    
+    # Top 15 warmest
+    print(f"\nTop 15 warmest leads:")
+    for l in scored[:15]:
+        email = l.get("email", "")
+        email_str = f" ✉ {email}" if email else ""
+        signals = ", ".join(l.get("warmth_signals", [])[:3])
+        print(f"  [{l['warmth_score']}/10] {l['company_name'][:35]:35s} | {l['branch']:15s} | {l['region']:8s}{email_str} | {signals}")
+    
+    # Warm leads with email ready for outreach
+    warm_with_email = [l for l in scored if l["warmth_score"] >= 5 and l.get("email")]
+    print(f"\n🔥 Warm leads with email (ready for outreach): {len(warm_with_email)}")
+    for l in warm_with_email:
+        print(f"  [{l['warmth_score']}/10] {l['company_name']} | {l['email']}")
+    
+    # Warm leads needing website scrape for email
+    warm_needs_email = [l for l in scored if l["warmth_score"] >= 5 and not l.get("email") and l.get("website") and "gelbeseiten" not in l.get("website","")]
+    print(f"\n🔥 Warm leads needing email extraction: {len(warm_needs_email)}")
+
+
+if __name__ == "__main__":
+    main()
