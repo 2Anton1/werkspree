@@ -6,6 +6,10 @@
     <title>Werkspree — KI-Automatisierung für kleine Unternehmen</title>
     <meta name="description" content="Wir automatisieren Rechnungswesen, Kundenkommunikation und Marketing für kleine Unternehmen in Berlin und Brandenburg.">
     <link rel="canonical" href="https://werkspree.bki-de.de/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Werkspree — KI-Automatisierung für kleine Unternehmen">
     <meta property="og:description" content="Rechnungswesen, Kundenkommunikation und Marketing automatisiert — für kleine Unternehmen in Berlin und Brandenburg.">
@@ -96,11 +100,13 @@
             width: 100%;
         }
         .brand {
-            font-weight: 700;
-            font-size: 1.05rem;
-            letter-spacing: -0.01em;
-            color: var(--primary);
+            display: flex;
+            align-items: center;
             text-decoration: none;
+        }
+        .brand img {
+            height: 26px;
+            display: block;
         }
         .nav-links {
             display: flex;
@@ -537,7 +543,7 @@
 <body>
     <nav class="navbar" id="navbar">
         <div class="nav-inner container">
-            <a href="#" class="brand">Werkspree</a>
+            <a href="#" class="brand"><img src="logo.svg" alt="Werkspree"></a>
             <ul class="nav-links">
                 <li><a href="#warum">Warum wir</a></li>
                 <li><a href="#pakete">Pakete</a></li>

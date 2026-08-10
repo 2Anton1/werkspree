@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum — Werkspree</title>
     <meta name="robots" content="noindex">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <style>
         :root {
             --primary: #122c4d;
@@ -34,7 +38,8 @@
             z-index: 10;
         }
         .nav-inner { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; width: 100%; display: flex; align-items: center; justify-content: space-between; }
-        .brand { font-weight: 700; font-size: 1.05rem; color: var(--primary); text-decoration: none; }
+        .brand { display: flex; align-items: center; text-decoration: none; }
+        .brand img { height: 24px; display: block; }
         .back-link { color: var(--text-muted); text-decoration: none; font-size: 0.92rem; font-weight: 500; }
         .back-link:hover { color: var(--primary); }
         main { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
@@ -57,7 +62,7 @@
 <body>
     <nav class="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="brand">Werkspree</a>
+            <a href="index.html" class="brand"><img src="logo.svg" alt="Werkspree"></a>
             <a href="index.html" class="back-link">← Zurück zur Startseite</a>
         </div>
     </nav>
