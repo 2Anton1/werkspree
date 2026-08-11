@@ -127,6 +127,13 @@ def send_email(to, subject, body):
 
 
 def main():
+    # Outbound cold email is disabled by default. Use --send only after
+    # documented consent/legal review and an explicit operator decision.
+    if "--send" not in sys.argv:
+        print("Outbound email disabled: lead collection and CRM preparation only.")
+        print("Use --send only after consent/legal review.")
+        return
+
     print("=" * 60)
     print("Werkspree Outreach Engine")
     print("=" * 60)

@@ -1,11 +1,11 @@
 # Werkspree — KI-Automatisierung für kleine Unternehmen
-## Vollständiger Projekt-Handover (Stand: 08.08.2026)
+## Vollständiger Projekt-Handover (Stand: 11.08.2026)
 
 ---
 
 ## 1. ÜBERBLICK
 
-**Werkspree** ist ein B2B-Service-Business, das KI-Automatisierung an kleine Unternehmen in Berlin/Brandenburg verkauft. Ziel: minimaler manueller Aufwand, Agent-gesteuert (Lead-Generierung, Outreach, CRM, Zahlungsabwicklung).
+**Werkspree** ist ein B2B-Service-Business, das konkrete Büroprozesse für kleine Handwerks- und Dienstleistungsbetriebe in Berlin/Brandenburg automatisiert. Die neue Kernpositionierung lautet: ein Prozess, klare Regeln, messbare Entlastung — mit menschlicher Kontrolle bei Entwürfen, finanziellen und irreversiblen Aktionen.
 
 **Pseudonym:** Finn Werksby (NIEMALS den echten Namen verwenden)
 **Absender-E-Mail:** a2807d@gmail.com (Display Name: "Finn Werksby")
@@ -25,8 +25,9 @@
 - **URL (aktuell):** https://2anton1.github.io/werkspree/
 - **Custom Domain:** https://werkspree.bki-de.de (CNAME gesetzt bei Strato, DNS propagiert, SSL-Zertifikat pending)
 - **Quelle:** ~/werkspree/index.html (im Root des Repos)
+- **Positionierung (11.08.2026):** Hero und Leistungsargumentation auf Rechnungs-OCR, Postfachentlastung, Lead-Nachfassung und Freigaben umgestellt. Paketnamen lauten jetzt Automation Starter/Growth/Enterprise; Leistungsumfang wurde auf konkrete, produktisierte Prozess-Sprints ausgerichtet.
 - **SSL:** GitHub Pages auto-SSL, HTTPS enforcement noch nicht aktiv (Zertifikat wird von GitHub ausgestellt, dauert 5-15 Min)
-- **Cron-Job "GitHub Pages SSL Check" (8a0ea7b0e123):** prüft alle 30 Min ob SSL bereit ist und aktiviert es automatisch. Wiederholt 12x.
+- **Cron-Job "GitHub Pages SSL Check" (8a0ea7b0e123):** prüft alle 30 Min ob SSL bereit ist und aktiviert es automatisch. Wiederholt 12x; nach erfolgreicher Aktivierung pausieren/entfernen.
 
 ### 2.3 n8n (Automatisierung)
 - **URL:** https://n8n.anton-drooff.de
@@ -152,7 +153,7 @@
 
 ### 4.4 Outreach-Engine
 - **Pfad:** ~/werkspree/scraper/outreach.py
-- **Funktion:** Lädt Leads, generiert personalisierte E-Mails, sendet via Gmail API
+- **Funktion:** Lädt Leads und kann personalisierte E-Mails erzeugen; Versand ist standardmäßig deaktiviert und erfordert explizit `--send` nach rechtlicher Prüfung/Einwilligung.
 - **Limit:** 10 E-Mails/Tag
 - **Follow-up-Logik:** Initial → 3 Tage Follow-up → 7 Tage letzter Follow-up
 - **Tracking:** ~/werkspree/scraper/data/sent_emails.json
@@ -163,6 +164,10 @@
 - **3 Templates:** initial (Kaltakquise), followup_3days (kurze Nachfrage), followup_7days (letzter Hinweis)
 - **Platzhalter:** {company_name}, {branch}, {region}, {first_contact_date}
 - **Unterschrift:** Finn Werksby, Werkspree
+
+### 4.9 Lieferprozesse
+- **Pfad:** `PROZESSE.md`
+- **Inhalt:** Automation-Sicherheitsstufen, Automation-Sprint, Rechnungs-OCR-Referenzprozess, CRM-/Lead-Regeln und Monatsbetreuung.
 
 ### 4.6 n8n Workflow-Datei
 - **Pfad:** ~/werkspree/n8n-workflows/rechnungs-ocr-demo.json
@@ -184,7 +189,7 @@
 
 | Job ID | Name | Schedule | Zweck |
 |---|---|---|---|
-| e1e5b8283664 | Werkspree Lead Pipeline | Täglich 10:00 | Neue Leads scrapen + E-Mails versenden |
+| e1e5b8283664 | Werkspree Lead Pipeline | Täglich 10:00 | Leads scrapen, qualifizieren und für CRM vorbereiten; Versand standardmäßig deaktiviert |
 | 8a0ea7b0e123 | GitHub Pages SSL Check | Alle 30 Min | SSL-Zertifikat prüfen + HTTPS aktivieren (12x wiederholend) |
 
 ---
@@ -225,6 +230,9 @@ N8N_API_KEY=...        (eyJhbG...)
 - [x] Outreach-Engine (outreach.py) + E-Mail-Templates
 - [x] Cron-Job: tägliche Lead-Pipeline um 10:00
 - [x] Pseudonym: Finn Werksby (überall, kein echter Name)
+- [x] Positionierung auf konkrete Büroprozesse, produktisierte Sprints und menschliche Freigaben ausgerichtet (11.08.2026)
+- [x] Liefer- und Sicherheitsprozesse in `PROZESSE.md` dokumentiert (11.08.2026)
+- [x] Outbound-E-Mail-Versand in `outreach.py` und `warm_outreach.py` standardmäßig deaktiviert; Aktivierung nur mit `--send` (11.08.2026)
 
 ### Ausstehend ⏳
 - [x] SSL-Zertifikat für werkspree.bki-de.de — **erledigt.** Am 09.08.2026 live über HTTPS geprüft, Zertifikat ist da. Cron `8a0ea7b0e123` kann abgeschaltet werden.
@@ -232,7 +240,9 @@ N8N_API_KEY=...        (eyJhbG...)
 - [ ] **Impressum & Datenschutzerklärung fehlen komplett** — rechtlich verpflichtend, siehe Abschnitt 11.1 (kritisch, blockiert nichts technisch, aber Abmahnrisiko)
 - [ ] E-Mail-Yield der Lead-Pipeline verbessern (aktuell nur 2 von 50 Leads mit E-Mail = 4%) — siehe Abschnitt 11.2
 - [ ] WhatsApp-Alternative (keine 2. Handynummer; Option: Twilio-Nummer ~1€/Monat)
-- [ ] Outreach starten (sobald mehr Leads mit E-Mail-Adressen gescraped sind)
+- [ ] Outreach rechtlich prüfen und nur bei zulässiger Grundlage/Einwilligung mit `--send` aktivieren
+- [ ] CRM-Statuswerte um Qualifiziert, Eingehend, Demo, Angebot und Nicht kontaktieren ergänzen
+- [ ] Automation-Starter-Demo als reproduzierbaren Testlauf mit anonymisierten Rechnungen dokumentieren
 - [ ] Feintuning Rechnungs-OCR (RegEx-Anpassung für JSON-String-Eingabe)
 - [ ] `crm/crm_template.json` ist veraltet (echtes CRM ist in Airtable) — entfernen oder klar als Archiv kennzeichnen
 

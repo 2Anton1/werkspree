@@ -149,6 +149,13 @@ def send_email(to, subject, body):
 
 
 def main():
+    # Default is qualification only. Sending requires explicit --send after
+    # consent/legal review and an operator decision.
+    if "--send" not in sys.argv:
+        print("Outbound email disabled: warm-lead scoring and CRM preparation only.")
+        print("Use --send only after consent/legal review.")
+        return
+
     print("=" * 60)
     print("Werkspree Warm Outreach Engine")
     print("=" * 60)
