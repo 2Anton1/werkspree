@@ -241,6 +241,8 @@ N8N_API_KEY=...        (eyJhbG...)
 - [ ] E-Mail-Yield der Lead-Pipeline verbessern (aktuell nur 2 von 50 Leads mit E-Mail = 4%) — siehe Abschnitt 11.2
 - [ ] WhatsApp-Alternative (keine 2. Handynummer; Option: Twilio-Nummer ~1€/Monat)
 - [ ] Outreach rechtlich prüfen und nur bei zulässiger Grundlage/Einwilligung mit `--send` aktivieren
+- [x] Hybrid-Lead-Plan eingeführt: günstiges Screening für alle, Deep-Research nur für maximal 10 Top-Leads, maximal 5 Outreach-Kandidaten pro Lauf (11.08.2026)
+- [x] Werkspree-Cron `e1e5b8283664` auf `gemini / models/gemini-3.5-flash` gepinnt, Versand deaktiviert und Zustellung auf `local` gestellt (11.08.2026)
 - [ ] CRM-Statuswerte um Qualifiziert, Eingehend, Demo, Angebot und Nicht kontaktieren ergänzen
 - [ ] Automation-Starter-Demo als reproduzierbaren Testlauf mit anonymisierten Rechnungen dokumentieren
 - [ ] Feintuning Rechnungs-OCR (RegEx-Anpassung für JSON-String-Eingabe)
