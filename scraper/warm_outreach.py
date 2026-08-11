@@ -20,7 +20,8 @@ TEMPLATES_FILE = SCRAPER_DIR / "email_templates.json"
 SENT_FILE = DATA_DIR / "sent_emails.json"
 SCORED_FILE = DATA_DIR / "scored_leads.json"
 MAX_EMAILS_PER_DAY = 10
-MIN_WARMTH_SCORE = 5
+MIN_WARMTH_SCORE = 7
+MAX_DRAFTS_PER_RUN = 5
 
 
 def load_scored_leads():
@@ -73,7 +74,7 @@ def get_eligible_leads(leads, sent):
         score = lead.get("warmth_score", 0)
         
         if company not in sent:
-            if score >= MIN_WARMTH_SCORE:
+            if score >= MIN_WARMTH_SCORE and lead.get("research_depth") == "deep":
                 lead["next_action"] = "initial"
                 eligible.append(lead)
         else:
@@ -98,7 +99,7 @@ def get_eligible_leads(leads, sent):
     eligible.sort(key=lambda x: x.get("warmth_score", 0), reverse=True)
     
     remaining = MAX_EMAILS_PER_DAY - sent_today
-    return eligible[:remaining]
+    return eligible[:min(remaining, MAX_DRAFTS_PER_RUN)]
 
 
 def personalize(template, lead, sent_data=None):
@@ -164,7 +165,8 @@ def main():
     print(f"Total scored leads: {len(leads)}")
     
     warm = [l for l in leads if l.get("warmth_score", 0) >= MIN_WARMTH_SCORE]
-    print(f"Warm leads (score >= {MIN_WARMTH_SCORE}): {len(warm)}")
+    deep = [l for l in warm if l.get("research_depth") == "deep"]
+    print(f"Hot leads (score >= {MIN_WARMTH_SCORE}, deep research): {len(deep)}")
     
     sent = load_sent()
     print(f"Already contacted: {len(sent)}")

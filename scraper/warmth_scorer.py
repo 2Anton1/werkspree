@@ -213,6 +213,33 @@ def warm_leads(leads, max_scrape=20):
     return scored
 
 
+def build_research_plan(leads, max_deep=10):
+    """Create a cheap-first hybrid research plan.
+
+    All leads receive deterministic screening metadata. Only the highest-scoring
+    leads are marked for deep research, keeping expensive enrichment bounded.
+    """
+    ranked = sorted(
+        (dict(lead) for lead in leads),
+        key=lambda lead: (lead.get("warmth_score", 0), bool(lead.get("email"))),
+        reverse=True,
+    )
+    plan = []
+    for index, lead in enumerate(ranked):
+        score = lead.get("warmth_score", 0)
+        if index < max_deep and score >= 5:
+            lead["research_depth"] = "deep"
+            lead["recommended_action"] = "create_demo"
+        elif score >= 4:
+            lead["research_depth"] = "light"
+            lead["recommended_action"] = "review"
+        else:
+            lead["research_depth"] = "screened"
+            lead["recommended_action"] = "archive"
+        plan.append(lead)
+    return plan
+
+
 def main():
     print("=" * 60)
     print("Werkspree Lead Warmth Scorer")
@@ -233,6 +260,11 @@ def main():
     print(f"\nScoring leads (scraping top 20 websites)...")
     scored = warm_leads(leads, max_scrape=20)
     
+    # Build the bounded hybrid plan: cheap screening for all, deep work only
+    # for the highest-scoring leads. The cron prompt may use this metadata for
+    # draft-only hot-lead assets; no outbound email is triggered here.
+    scored = build_research_plan(scored, max_deep=10)
+
     # Save
     with open(SCORED_FILE, "w", encoding="utf-8") as f:
         json.dump(scored, f, ensure_ascii=False, indent=2)
