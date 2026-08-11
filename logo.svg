@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 100" preserveAspectRatio="xMinYMid meet">
   <g transform="translate(0, 8)">
     <path d="M 15 32 C 22 32, 28 65, 35 65 C 42 65, 44 42, 50 42 C 56 42, 58 65, 65 65 C 72 65, 78 32, 85 32"
           fill="none" stroke="#122c4d" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
