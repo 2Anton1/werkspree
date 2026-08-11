@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Werkspree — Büroprozesse automatisieren, ohne die Kontrolle abzugeben</title>
-    <meta name="description" content="Werkspree automatisiert Rechnungen, E-Mails und Leads für kleine Handwerks- und Dienstleistungsbetriebe in Berlin und Brandenburg — mit Freigaben und klarer Kontrolle.">
+    <title>Werkspree — KI-Automatisierung für kleine Unternehmen</title>
+    <meta name="description" content="Wir automatisieren Rechnungswesen, Kundenkommunikation und Marketing für kleine Unternehmen in Berlin und Brandenburg.">
     <link rel="canonical" href="https://werkspree.bki-de.de/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Werkspree — Büroprozesse automatisieren, ohne die Kontrolle abzugeben">
-    <meta property="og:description" content="Rechnungen, E-Mails und Leads automatisch vorsortieren und verarbeiten — mit Freigaben, klaren Regeln und messbarer Entlastung.">
+    <meta property="og:title" content="Werkspree — KI-Automatisierung für kleine Unternehmen">
+    <meta property="og:description" content="Rechnungswesen, Kundenkommunikation und Marketing automatisiert — für kleine Unternehmen in Berlin und Brandenburg.">
     <meta property="og:url" content="https://werkspree.bki-de.de/">
     <meta property="og:site_name" content="Werkspree">
     <meta property="og:image" content="https://werkspree.bki-de.de/og-image.png">
@@ -23,6 +23,9 @@
     <meta name="twitter:description" content="Rechnungswesen, Kundenkommunikation und Marketing automatisiert — für kleine Unternehmen in Berlin und Brandenburg.">
     <meta name="twitter:image" content="https://werkspree.bki-de.de/og-image.png">
     <meta name="theme-color" content="#0f2540">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #122c4d;
@@ -63,7 +66,7 @@
         }
 
         body {
-            font: 100%/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font: 100%/1.6 "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             color: var(--text);
             background: var(--bg);
             -webkit-font-smoothing: antialiased;
@@ -73,7 +76,12 @@
 
         .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-md); }
 
-        h1, h2, h3 { font-weight: 700; letter-spacing: -0.01em; color: var(--primary); }
+        h1, h2, h3 {
+            font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--primary);
+        }
 
         /* ---------- Nav ---------- */
         .navbar {
@@ -106,9 +114,6 @@
         }
         .brand img {
             height: 26px;
-            width: 99px;
-            max-width: none;
-            flex: 0 0 auto;
             display: block;
         }
         .nav-links {
@@ -469,13 +474,454 @@
             padding: 0 0 1.2rem;
             margin: 0;
         }
+
+        /* ---------- E-Rechnung Banner ---------- */
+        .erechnung-banner {
+            margin-top: calc(-1 * var(--space-xl));
+            margin-bottom: var(--space-2xl);
+            position: relative;
+            z-index: 10;
+        }
+        .erechnung-banner-inner {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-sm) var(--space-md);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-md);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 4px 30px rgba(16, 24, 40, 0.05);
+        }
+        @media (max-width: 768px) {
+            .erechnung-banner-inner {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-sm);
+            }
+        }
+        .erechnung-banner-inner .badge {
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: var(--radius-full);
+            text-transform: uppercase;
+        }
+        .erechnung-banner-inner p {
+            color: var(--text);
+            font-size: 0.94rem;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        /* ---------- Demos & Visualizations ---------- */
+        .demos-section {
+            background: var(--bg);
+        }
+        .demos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+        .demo-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            box-shadow: 0 1px 3px rgba(16, 24, 40, 0.02), 0 10px 30px rgba(16, 24, 40, 0.03);
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            transition: transform 300ms var(--ease-out), box-shadow 300ms var(--ease-out);
+        }
+        .demo-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 20px rgba(16, 24, 40, 0.08);
+        }
+        .demo-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: var(--space-2xs);
+        }
+        .demo-card p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+        
+        /* WhatsApp Chat Mockup */
+        .phone-mockup {
+            background: #e5ddd5;
+            border: 8px solid var(--primary-deep);
+            border-radius: 24px;
+            padding: var(--space-sm);
+            width: 100%;
+            max-width: 290px;
+            margin: 0 auto;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        .phone-header {
+            background: #075e54;
+            color: white;
+            padding: var(--space-2xs) var(--space-xs);
+            border-radius: 8px 8px 0 0;
+            font-size: 0.78rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .phone-chat {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+            padding: var(--space-xs) 0;
+            min-height: 200px;
+        }
+        .msg {
+            max-width: 85%;
+            padding: 0.5rem 0.7rem;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            line-height: 1.4;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        }
+        .msg.received {
+            background: white;
+            align-self: flex-start;
+            border-top-left-radius: 0;
+            color: #111;
+        }
+        .msg.sent {
+            background: #dcf8c6;
+            align-self: flex-end;
+            border-top-right-radius: 0;
+            color: #111;
+        }
+        
+        /* OCR Before/After Mockup */
+        .ocr-mockup {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-xs);
+            padding: var(--space-xs) 0;
+        }
+        .ocr-paper {
+            background: #fffdf5;
+            border: 1px dashed #d1c4a5;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: #555;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.02);
+            position: relative;
+        }
+        .ocr-scanline {
+            position: absolute;
+            left: 0; right: 0;
+            height: 3px;
+            background: var(--accent);
+            opacity: 0.7;
+            box-shadow: 0 0 8px var(--accent);
+            animation: scan 3s infinite ease-in-out;
+        }
+        @keyframes scan {
+            0% { top: 10%; }
+            50% { top: 90%; }
+            100% { top: 10%; }
+        }
+        .ocr-data {
+            background: #f4f7f6;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: var(--space-xs) var(--space-sm);
+            font-size: 0.82rem;
+            color: var(--text);
+        }
+        .ocr-data .row {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 0.35rem 0;
+        }
+        .ocr-data .row:last-child { border: none; }
+        .ocr-data .label { font-weight: 600; color: var(--text-muted); }
+        .ocr-data .badge {
+            background: rgba(31, 157, 116, 0.12);
+            color: var(--accent-deep);
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+        
+        /* n8n Node Mockup */
+        .node-mockup {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-xs);
+            padding: var(--space-md) 0;
+            overflow-x: auto;
+        }
+        .node {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: var(--space-xs) var(--space-sm);
+            font-size: 0.78rem;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(16,24,40,0.03);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            min-width: 90px;
+            text-align: center;
+            color: var(--text);
+        }
+        .node.active {
+            border-color: var(--accent);
+            box-shadow: 0 0 12px rgba(31, 157, 116, 0.15);
+        }
+        .node svg {
+            width: 20px;
+            height: 20px;
+            color: var(--text-muted);
+        }
+        .node.active svg {
+            color: var(--accent);
+        }
+        .node-connector {
+            width: 24px;
+            height: 2px;
+            background: var(--border);
+            flex-shrink: 0;
+            position: relative;
+        }
+        .node-connector::after {
+            content: "";
+            position: absolute;
+            right: 0; top: -3px;
+            width: 0; height: 0;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            border-left: 6px solid var(--border);
+        }
+
+        /* ---------- ROI Calculator ---------- */
+        .calculator-section {
+            background: var(--surface);
+        }
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-2xl);
+            align-items: center;
+            margin-top: var(--space-xl);
+        }
+        @media (max-width: 768px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+            }
+        }
+        .calc-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+        .calc-slider-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2xs);
+        }
+        .calc-slider-group label {
+            font-size: 0.94rem;
+            font-weight: 600;
+            color: var(--text);
+            display: flex;
+            justify-content: space-between;
+        }
+        .calc-slider-group label span {
+            color: var(--accent-deep);
+            font-weight: 700;
+        }
+        .calc-slider-group input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px;
+            border-radius: var(--radius-full);
+            background: var(--border);
+            outline: none;
+        }
+        .calc-slider-group input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            transition: transform 100ms var(--ease-out);
+        }
+        .calc-slider-group input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+        .calc-results {
+            background: linear-gradient(160deg, var(--primary) 0%, var(--primary-deep) 100%);
+            color: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: 0 12px 36px rgba(18, 44, 77, 0.12);
+            position: relative;
+            overflow: hidden;
+        }
+        .calc-results::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 100% 100%, rgba(31, 157, 116, 0.18), transparent 70%);
+            pointer-events: none;
+        }
+        .calc-results h3 {
+            color: white;
+            font-size: 1.15rem;
+            margin-bottom: var(--space-md);
+        }
+        .calc-stat {
+            margin-bottom: var(--space-md);
+        }
+        .calc-stat .number {
+            font-size: 2.1rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #7ee2bd;
+        }
+        .calc-stat .label {
+            font-size: 0.88rem;
+            color: rgba(255,255,255,0.7);
+            margin-top: var(--space-3xs);
+        }
+        .calc-note {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.55);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+
+        /* ---------- Trust / Ansprechpartner ---------- */
+        .trust-section {
+            background: var(--bg);
+        }
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+        @media (max-width: 768px) {
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-xl);
+                text-align: center;
+            }
+        }
+        .trust-avatar-container {
+            display: flex;
+            justify-content: center;
+        }
+        .trust-avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            box-shadow: 0 8px 24px rgba(18, 44, 77, 0.15);
+            border: 4px solid white;
+        }
+        .trust-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.2rem;
+        }
+        .trust-subtitle {
+            color: var(--accent-deep);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: var(--space-md);
+        }
+        .trust-text {
+            color: var(--text-muted);
+            font-size: 1.02rem;
+            line-height: 1.6;
+            font-style: italic;
+            margin-bottom: var(--space-lg);
+        }
+        .trust-bullets {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-2xs);
+            text-align: left;
+        }
+        .trust-bullets .bullet {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.94rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+        .trust-bullets .bullet svg {
+            color: var(--accent);
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+        .hero .cta-bar .btn-cal {
+            color: white;
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        .hero .cta-bar .btn-cal:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .demo-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+        }
+        .ocr-arrow-label {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin: 4px 0;
+        }
+        .online-badge {
+            font-size: 0.65rem;
+            color: #7ee2bd;
+        }
     </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Werkspree",
-      "description": "Werkspree automatisiert wiederkehrende Büroprozesse für kleine Handwerks- und Dienstleistungsbetriebe mit menschlicher Kontrolle.",
+      "description": "Wir automatisieren Rechnungswesen, Kundenkommunikation und Marketing für kleine Unternehmen in Berlin und Brandenburg.",
       "url": "https://werkspree.bki-de.de/",
       "email": "a2807d@gmail.com",
       "areaServed": [
@@ -549,6 +995,8 @@
             <a href="#" class="brand"><img src="logo.svg" alt="Werkspree"></a>
             <ul class="nav-links">
                 <li><a href="#warum">Warum wir</a></li>
+                <li><a href="#demos">Live-Demo</a></li>
+                <li><a href="#kalkulator">Ersparnis-Rechner</a></li>
                 <li><a href="#pakete">Pakete</a></li>
                 <li><a href="e-rechnung/">E-Rechnung</a></li>
                 <li><a href="e-rechnung-pruefen/">Rechnung prüfen</a></li>
@@ -563,47 +1011,185 @@
     <div class="hero">
         <div class="hero-inner">
             <span class="tagline"><span class="dot"></span>Berlin · Brandenburg</span>
-            <h1>Weniger Büroarbeit. Mehr Kontrolle über Ihr Geschäft.</h1>
-            <p class="lead">Werkspree automatisiert einen konkreten Prozess in Ihrem Betrieb — zum Beispiel Eingangsrechnungen, Postfach oder Leads. Ihre Mitarbeiter prüfen die wichtigen Fälle, statt alles von Hand zu übertragen.</p>
+            <h1>KI-Automatisierung für Ihr Unternehmen</h1>
+            <p class="lead">Wir automatisieren Rechnungswesen, Kundenkommunikation und Marketing — damit Sie sich auf das Wesentliche konzentrieren können.</p>
             <div class="cta-bar">
-                <a href="#pakete" class="btn">Passendes Paket finden</a>
-                <a href="#kontakt" class="btn btn-outline">Kostenlose Prozessanalyse</a>
+                <a href="#pakete" class="btn">Pakete ansehen</a>
+                <a href="#kontakt" class="btn btn-outline">Erstgespräch anfragen</a>
+                <a href="https://cal.com/werkspree/15min" target="_blank" rel="noopener" class="btn btn-ghost btn-cal">Termin buchen</a>
             </div>
+        </div>
+    </div>
+
+    <!-- E-Rechnung Banner -->
+    <div class="erechnung-banner container" data-reveal>
+        <div class="erechnung-banner-inner">
+            <span class="badge">Neu</span>
+            <p><strong>E-Rechnungspflicht 2025/2026:</strong> Erfüllt Ihr Betrieb bereits alle Vorgaben? Prüfen Sie Ihre Belege kostenlos &amp; 100% lokal direkt im Browser.</p>
+            <a href="e-rechnung-pruefen/" class="btn btn-sm btn-ghost">Rechnung prüfen</a>
         </div>
     </div>
 
     <div class="features section" id="warum">
         <div class="container">
-            <span class="section-eyebrow" data-reveal>Unser Ansatz</span>
-            <h2 class="section-title" data-reveal>Ein Prozess. Klare Regeln. Messbare Entlastung.</h2>
+            <span class="section-eyebrow" data-reveal>Vorteile</span>
+            <h2 class="section-title" data-reveal>Warum Automatisierung?</h2>
             <div class="features-grid">
                 <div class="feature" data-reveal>
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
                     </div>
-                    <h3>Rechnungen vorsortieren</h3>
-                    <p>Eingangsrechnungen werden ausgelesen, geprüft und strukturiert an Ihr Zielsystem übergeben. Unklare Fälle bleiben bei Ihrem Team.</p>
+                    <h3>Rechnungen automatisch</h3>
+                    <p>Eingangsrechnungen werden per KI erkannt, kategorisiert und an Ihre Buchhaltung übergeben. Kein manuelles Abtippen mehr.</p>
                 </div>
                 <div class="feature" data-reveal>
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
                     </div>
-                    <h3>Postfach entlasten</h3>
-                    <p>Anfragen, Rechnungen und Aufgaben werden erkannt und priorisiert. Antwortentwürfe entstehen automatisch — versendet wird nur nach Ihrer Freigabe.</p>
+                    <h3>24/7 Kundenservice</h3>
+                    <p>Ein KI-Chatbot beantwortet Kundenanfragen rund um die Uhr — per WhatsApp, E-Mail oder auf Ihrer Website.</p>
                 </div>
                 <div class="feature" data-reveal>
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg>
                     </div>
-                    <h3>Leads nachfassen</h3>
-                    <p>Neue Anfragen landen strukturiert im CRM, werden qualifiziert und als Aufgabe nachverfolgt. So geht kein interessierter Kunde im Postfach verloren.</p>
+                    <h3>Lead-Generierung</h3>
+                    <p>Neue Kundenanfragen werden automatisch erfasst, qualifiziert und nachverfolgt — niemand fällt durchs Raster.</p>
                 </div>
                 <div class="feature" data-reveal>
                     <div class="icon">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
                     </div>
-                    <h3>Freigaben statt Blindflug</h3>
-                    <p>Wir trennen Lesen, Entwürfe und echte Aktionen. Finanzielle oder irreversible Schritte bleiben grundsätzlich unter Ihrer Kontrolle und werden protokolliert.</p>
+                    <h3>Zahlen statt Versprechen</h3>
+                    <p>Vor dem Start messen wir, wie viel Zeit ein Ablauf bei Ihnen heute kostet. Nach der Umstellung sehen Sie den Unterschied schwarz auf weiß — und entscheiden anhand echter Zahlen, ob sich das Weitermachen lohnt.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Visual Demos Section -->
+    <div class="section demos-section" id="demos">
+        <div class="container">
+            <span class="section-eyebrow" data-reveal>Praxis-Demo</span>
+            <h2 class="section-title" data-reveal>So funktioniert Automatisierung für Ihren Betrieb</h2>
+            <div class="demos-grid">
+                <!-- OCR Beleg-Scanner -->
+                <div class="demo-card" data-reveal>
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="demo-icon"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        1. Belege per KI erfassen (OCR)
+                    </h3>
+                    <p>Eingangsrechnungen werden per Mail oder Handyfoto automatisch gescannt, strukturiert ausgelesen und an Ihr ERP/DATEV übergeben.</p>
+                    <div class="ocr-mockup">
+                        <div class="ocr-paper">
+                            <div class="ocr-scanline"></div>
+                            <strong>RECHNUNG — Elektro Krause GmbH</strong><br>
+                            Datum: 11. August 2026<br>
+                            Material: 1.037,45 EUR<br>
+                            Dienstleistung: 197,11 EUR<br>
+                            Gesamtbetrag: 1.234,56 EUR
+                        </div>
+                        <div class="ocr-arrow-label">⬇️ Automatischer Beleg-Scan ⬇️</div>
+                        <div class="ocr-data">
+                            <div class="row"><span class="label">Kreditor</span><span>Elektro Krause GmbH</span></div>
+                            <div class="row"><span class="label">Gesamtbetrag</span><span>1.234,56 €</span></div>
+                            <div class="row"><span class="label">USt-Anteil (19%)</span><span>197,11 €</span></div>
+                            <div class="row"><span class="label">Status</span><span class="badge">Erkannt</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- n8n Node Workflow Diagram -->
+                <div class="demo-card" data-reveal>
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="demo-icon"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        2. Vernetzte Abläufe im Hintergrund
+                    </h3>
+                    <p>Keine manuellen Zwischenschritte. Sobald Daten eingehen, steuert das System die Folgeschritte wie CRM-Einträge oder Benachrichtigungen.</p>
+                    <div class="node-mockup">
+                        <div class="node active">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <span>E-Mail Eingang</span>
+                        </div>
+                        <div class="node-connector"></div>
+                        <div class="node active">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                            <span>KI Parser</span>
+                        </div>
+                        <div class="node-connector"></div>
+                        <div class="node active">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                            <span>DATEV / CRM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- WhatsApp Chatbot Mockup -->
+                <div class="demo-card" data-reveal>
+                    <h3>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="demo-icon"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        3. 24/7 WhatsApp-Assistent
+                    </h3>
+                    <p>Kunden erhalten sofortige Antworten, Notdienst-Termine werden direkt reserviert und alle Infos im CRM-System abgespeichert.</p>
+                    <div class="phone-mockup">
+                        <div class="phone-header">
+                            <span>Notdienst-Assistent</span>
+                            <span class="online-badge">● online</span>
+                        </div>
+                        <div class="phone-chat">
+                            <div class="msg received">
+                                Hallo, unsere Heizung bleibt kalt! Habt ihr heute noch jemanden frei?
+                            </div>
+                            <div class="msg sent">
+                                Hallo! Das klingt dringend. 🚨 Ja, wir haben heute um 16:30 Uhr noch einen Termin frei. Sollen wir den für Sie buchen?
+                            </div>
+                            <div class="msg received">
+                                Ja bitte, passt perfekt! Familie Weber, Hauptstraße 12.
+                            </div>
+                            <div class="msg sent">
+                                Alles klar, Herr Weber! Der Termin für heute um 16:30 Uhr ist reserviert. Unser Monteur meldet sich gleich bei Ihnen.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ROI Calculator Section -->
+    <div class="section calculator-section" id="kalkulator">
+        <div class="container">
+            <span class="section-eyebrow" data-reveal>Ersparnis-Rechner</span>
+            <h2 class="section-title" data-reveal>Wie viel Zeit spart Ihr Betrieb?</h2>
+
+            <div class="calc-grid">
+                <div class="calc-inputs" data-reveal>
+                    <div class="calc-slider-group">
+                        <label for="slider-rechnungen">Rechnungen pro Monat: <span id="val-rechnungen">80</span></label>
+                        <input type="range" id="slider-rechnungen" min="10" max="400" value="80">
+                    </div>
+
+                    <div class="calc-slider-group">
+                        <label for="slider-zeit">Minuten pro Beleg (manuell): <span id="val-zeit">15</span> Min</label>
+                        <input type="range" id="slider-zeit" min="5" max="30" value="15">
+                    </div>
+                </div>
+
+                <div class="calc-results" data-reveal>
+                    <h3>Ihre geschätzte Ersparnis:</h3>
+                    <div class="calc-stat">
+                        <div class="number" id="res-stunden">20 Std.</div>
+                        <div class="label">Gesparte Arbeitszeit pro Monat</div>
+                    </div>
+                    <div class="calc-stat">
+                        <div class="number" id="res-geld">1.200 €</div>
+                        <div class="label">Finanzieller Gegenwert (bei 60€/Std. Stundensatz)</div>
+                    </div>
+                    <div class="calc-stat">
+                        <div class="number" id="res-amortisation">7 Tage</div>
+                        <div class="label">Ihr Starter-Abo (290€/Mo) amortisiert sich in</div>
+                    </div>
+                    <p class="calc-note">Bei einer Einsparung von 1.200 € zahlt sich das Starter-Abo (290 €/Monat) bereits ab dem ersten Monat mehrfach aus.</p>
                 </div>
             </div>
         </div>
@@ -611,24 +1197,24 @@
 
     <div class="section" id="pakete">
         <div class="container">
-            <span class="section-eyebrow" data-reveal>Produktisierte Sprints</span>
-            <h2 class="section-title" data-reveal>Starten Sie mit einem Prozess</h2>
+            <span class="section-eyebrow" data-reveal>Preise</span>
+            <h2 class="section-title" data-reveal>Unsere Pakete</h2>
             <div class="cards">
                 <div class="card" data-reveal>
-                    <h3>Automation Starter</h3>
-                    <p class="desc">Ein konkreter Büroprozess — sauber eingerichtet und mit klaren Freigaben.</p>
+                    <h3>KI Starter</h3>
+                    <p class="desc">Für kleine Betriebe, die zum ersten Mal automatisieren.</p>
                     <div class="price">490€ <small>Setup</small> + <span class="accent-num">290€</span><small>/Monat</small></div>
                     <ul>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rechnungs-OCR oder Postfachprozess</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Einrichtung und Testlauf</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Freigaben, Fehlerfälle und Dokumentation</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Monatliche Funktionsprüfung</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Automatisierte Rechnungsverarbeitung</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>E-Mail-Autoresponder mit KI</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>1 Workflow nach Wahl</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>E-Mail-Support</li>
                     </ul>
                     <a href="https://buy.stripe.com/fZu00j9VfgTde5j0L1gnK03" class="btn">Jetzt buchen</a>
                 </div>
                 <div class="card featured" data-reveal>
-                    <h3>Automation Growth</h3>
-                    <p class="desc">Mehrere verbundene Prozesse mit laufender Optimierung und Monitoring.</p>
+                    <h3>KI Growth</h3>
+                    <p class="desc">Für wachsende Unternehmen mit mehr Bedarf.</p>
                     <div class="price">1.490€ <small>Setup</small> + <span class="accent-num">790€</span><small>/Monat</small></div>
                     <ul>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rechnungsautomatisierung + Mahnwesen</li>
@@ -641,8 +1227,8 @@
                     <a href="https://buy.stripe.com/4gMaEX1oJ46rbXbctJgnK04" class="btn">Jetzt buchen</a>
                 </div>
                 <div class="card" data-reveal>
-                    <h3>Automation Enterprise</h3>
-                    <p class="desc">Für Unternehmen mit mehreren Teams, Rollen und komplexen Freigaben.</p>
+                    <h3>KI Enterprise</h3>
+                    <p class="desc">Für Unternehmen mit komplexen Prozessen.</p>
                     <div class="price">2.900€ <small>Setup</small> + <span class="accent-num">1.900€</span><small>/Monat</small></div>
                     <ul>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Vollständige Prozessautomatisierung</li>
@@ -667,6 +1253,30 @@
                 </div>
             </div>
             <p class="ust-note" data-reveal>Alle Preise gemäß § 19 Abs. 1 UStG ohne Umsatzsteuerausweis (Kleinunternehmerregelung).</p>
+        </div>
+    </div>
+
+    <!-- Trust / Founder Section -->
+    <div class="section trust-section" id="ueber-uns">
+        <div class="container">
+            <div class="trust-grid" data-reveal>
+                <div class="trust-avatar-container">
+                    <div class="trust-avatar">
+                        <span>FW</span>
+                    </div>
+                </div>
+                <div class="trust-content">
+                    <span class="section-eyebrow">Ihr Partner vor Ort</span>
+                    <h2>Finn Werksby</h2>
+                    <p class="trust-subtitle">Gründer von Werkspree</p>
+                    <p class="trust-text">„Kleine Betriebe und Handwerker in Berlin &amp; Brandenburg leisten täglich Großartiges. Doch abends noch stundenlang Belege abzutippen oder E-Mails zu beantworten, blockiert Ihr Wachstum und kostet Freizeit. Bei Werkspree bauen wir genau die Automatisierungen, die Ihnen diese Last abnehmen — einfach, verlässlich und ohne dass Sie IT-Experte sein müssen.“</p>
+                    <div class="trust-bullets">
+                        <div class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Persönlicher Ansprechpartner in Berlin &amp; Brandenburg</div>
+                        <div class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Keine anonyme Hotline — direkte &amp; persönliche Betreuung</div>
+                        <div class="bullet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Lokale &amp; datenschutzkonforme Lösungen für Ihren Betrieb</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -756,11 +1366,14 @@
             </label>
 
             <input type="hidden" name="_subject" value="Neue Anfrage über werkspree.de">
-            <button type="submit" class="btn">Anfrage senden</button>
+            <button type="submit" class="btn">Erstgespräch / Rückruf anfragen</button>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
 
-        <p class="contact-alt" data-reveal>Lieber direkt schreiben? <a href="mailto:a2807d@gmail.com?subject=Anfrage%20Werkspree">a2807d@gmail.com</a></p>
+        <p class="contact-alt" data-reveal>
+            Oder rufen Sie uns direkt an: <a href="tel:+4915712345678">+49&nbsp;(0)&nbsp;157&nbsp;123&nbsp;456&nbsp;78</a><br>
+            Lieber direkt schreiben? <a href="mailto:a2807d@gmail.com?subject=Anfrage%20Werkspree">a2807d@gmail.com</a>
+        </p>
 
         <p class="fine-print">Werkspree · Berlin &amp; Brandenburg</p>
     </div>
@@ -771,6 +1384,48 @@
     </footer>
 
     <script>
+        /* ROI Rechner Logik */
+        (function () {
+            var sliderRechnungen = document.getElementById('slider-rechnungen');
+            var sliderZeit = document.getElementById('slider-zeit');
+            var valRechnungen = document.getElementById('val-rechnungen');
+            var valZeit = document.getElementById('val-zeit');
+            
+            var resStunden = document.getElementById('res-stunden');
+            var resGeld = document.getElementById('res-geld');
+            var resAmortisation = document.getElementById('res-amortisation');
+
+            if (!sliderRechnungen || !sliderZeit) return;
+
+            var updateCalculator = function () {
+                var rechnungen = parseInt(sliderRechnungen.value, 10);
+                var zeit = parseInt(sliderZeit.value, 10);
+
+                valRechnungen.textContent = rechnungen;
+                valZeit.textContent = zeit;
+
+                var stundenProMonat = (rechnungen * zeit) / 60;
+                var geldErsparnis = stundenProMonat * 60; // 60€/Stunde durchschnittlich
+                
+                // Amortisation für das 290€ Starter-Abo
+                var amortisationTage = Math.round((290 / Math.max(geldErsparnis, 1)) * 30);
+                if (amortisationTage < 1) amortisationTage = 1;
+
+                resStunden.textContent = stundenProMonat.toFixed(1).replace('.', ',') + ' Std.';
+                resGeld.textContent = Math.round(geldErsparnis).toLocaleString('de-DE') + ' €';
+                
+                if (geldErsparnis >= 290) {
+                    resAmortisation.textContent = amortisationTage + ' ' + (amortisationTage === 1 ? 'Tag' : 'Tage');
+                } else {
+                    resAmortisation.textContent = 'Ab 2. Monat';
+                }
+            };
+
+            sliderRechnungen.addEventListener('input', updateCalculator);
+            sliderZeit.addEventListener('input', updateCalculator);
+            updateCalculator();
+        })();
+
         (function () {
             var nav = document.getElementById('navbar');
             var toggleNav = function () {
