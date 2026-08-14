@@ -26,7 +26,7 @@
       "address": "+49 172 6299619",
       "phone": "+491726299619",
       "old_or_no_website": "",
-      "email": "info@ute-stonner.de",
+      "email": "kontakt@fahrschule-ulmann.de",
       "branch": "Fahrschule",
       "region": "Brandenburg an der Havel"
     },
@@ -44,7 +44,8 @@
       "rating": 4.5,
       "category": "Driving school",
       "address": "Trauerberg 15a",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": "http://www.fahrschule-ulmann.de"
     },
     {
       "name": "Fahrschule Lamm",
@@ -52,7 +53,8 @@
       "rating": 4.4,
       "category": "Driving school",
       "address": "Nicolaipl. 4",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Fahrschule an der Havel",
@@ -60,7 +62,8 @@
       "rating": 5.0,
       "category": "",
       "address": "",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Erste-Hilfe-Kurs bei Softaid - Brandenburg an der Havel",
@@ -68,7 +71,11 @@
       "rating": 5.0,
       "category": "Closed",
       "address": "+49 30 26547770",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": "",
+      "email": "kontakt@fahrschule-ulmann.de",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
     },
     {
       "name": "Sportbootschule Bollmannsruh",
@@ -103,7 +110,19 @@
       "address": "+49 172 6299619",
       "phone": "+491726299619",
       "old_or_no_website": "",
-      "email": "info@ute-stonner.de",
+      "email": "kontakt@fahrschule-ulmann.de",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Erste-Hilfe-Kurs bei Softaid - Brandenburg an der Havel",
+      "maps_url": "https://www.google.com/maps/place/Erste-Hilfe-Kurs+bei+Softaid+-+Brandenburg+an+der+Havel/data=!4m7!3m6!1s0x47a8c19b09c2476d:0x9f630622459cc586!8m2!3d52.4109327!4d12.5573024!16s%2Fg%2F11ym_9hg0g!19sChIJbUfCCZvBqEcRhsWcRSIGY58?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 30 26547770",
+      "phone": null,
+      "old_or_no_website": "",
+      "email": "kontakt@fahrschule-ulmann.de",
       "branch": "Fahrschule",
       "region": "Brandenburg an der Havel"
     }

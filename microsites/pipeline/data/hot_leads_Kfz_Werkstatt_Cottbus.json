@@ -1,0 +1,160 @@
+{
+  "branch": "Kfz Werkstatt",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "Kfz-Werkstatt Uwe Erfurt",
+      "maps_url": "https://www.google.com/maps/place/Kfz-Werkstatt+Uwe+Erfurt/data=!4m7!3m6!1s0x470873e5b4216a87:0x731a734702250942!8m2!3d51.7236!4d14.34549!16s%2Fg%2F1tdzdq1f!19sChIJh2ohtOVzCEcRQgklAkdzGnM?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto repair shop",
+      "address": "Franz-Schubert-Straße 7",
+      "phone": null
+    },
+    {
+      "name": "RST Kfz-Meisterwerkstatt Cottbus",
+      "maps_url": "https://www.google.com/maps/place/RST+Kfz-Meisterwerkstatt+Cottbus/data=!4m7!3m6!1s0x47087430011f493b:0x5f64684d0e26eeee!8m2!3d51.7671346!4d14.3617852!16s%2Fg%2F11h0ll56j!19sChIJO0kfATB0CEcR7u4mDk1oZF8?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto repair shop",
+      "address": "Merzdorfer Weg 33",
+      "phone": null
+    },
+    {
+      "name": "Auto Service Cottbus - KFZ-Meisterbetrieb Auto-Hirsch",
+      "maps_url": "https://www.google.com/maps/place/Auto+Service+Cottbus+-+KFZ-Meisterbetrieb+Auto-Hirsch/data=!4m7!3m6!1s0x47087433ba505811:0xe60472e8a9ec777!8m2!3d51.7731925!4d14.3623121!16s%2Fg%2F1tjxdc6c!19sChIJEVhQujN0CEcRd8eeii5HYA4?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Car repair and maintenance service",
+      "address": "Stadtring 3",
+      "phone": null
+    },
+    {
+      "name": "Car service Mende & Wiesner - Car Meisterbetrieb",
+      "maps_url": "https://www.google.com/maps/place/Car+service+Mende+%26+Wiesner+-+Car+Meisterbetrieb/data=!4m7!3m6!1s0x4708744e54606d69:0x10a13e7bb7c588b0!8m2!3d51.7753083!4d14.3452986!16s%2Fg%2F1hc4mlwr_!19sChIJaW1gVE50CEcRsIjFt3s-oRA?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto repair shop",
+      "address": "Gerhart-Hauptmann-Straße 15",
+      "phone": null
+    },
+    {
+      "name": "Autohaus Frunzke GbR",
+      "maps_url": "https://www.google.com/maps/place/Autohaus+Frunzke+GbR/data=!4m7!3m6!1s0x470874624a4af515:0x69c9dcf11d506a35!8m2!3d51.7564028!4d14.3157924!16s%2Fg%2F1th6ck23!19sChIJFfVKSmJ0CEcRNWpQHfHcyWk?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Auto repair shop",
+      "address": "Karl-Liebknecht-Straße 43",
+      "phone": null,
+      "old_or_no_website": "http://www.autohausfrunzke.de",
+      "email": "info@ute-stonner.de",
+      "branch": "Kfz Werkstatt",
+      "region": "Cottbus"
+    },
+    {
+      "name": "KFZ Meisterbetrieb Herzog Stefan",
+      "maps_url": "https://www.google.com/maps/place/KFZ+Meisterbetrieb+Herzog+Stefan/data=!4m7!3m6!1s0x4708754927a475cb:0xb182fefed1d8c988!8m2!3d51.7731672!4d14.3663337!16s%2Fg%2F11fcv4tnkq!19sChIJy3WkJ0l1CEcRiMnY0f7-grE?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Closed",
+      "address": "+49 162 7449059",
+      "phone": null
+    },
+    {
+      "name": "KFZ Werkstatt Sven Wehlauer",
+      "maps_url": "https://www.google.com/maps/place/KFZ+Werkstatt+Sven+Wehlauer/data=!4m7!3m6!1s0x470873f368d0abe9:0x42b739cbc9b19e10!8m2!3d51.73306!4d14.33318!16s%2Fg%2F1tgdm85f!19sChIJ6avQaPNzCEcREJ6xycs5t0I?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto repair shop",
+      "address": "Ringstraße Wokolica 22",
+      "phone": null
+    },
+    {
+      "name": "Autokraft Cottbus",
+      "maps_url": "https://www.google.com/maps/place/Autokraft+Cottbus/data=!4m7!3m6!1s0x4708743051bd2e23:0x26d3c35aec3c3fd3!8m2!3d51.7699919!4d14.3637082!16s%2Fg%2F11b6dp64yh!19sChIJIy69UTB0CEcR0z887FrD0yY?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Auto repair shop",
+      "address": "Drewitzer Str. 8a",
+      "phone": null
+    },
+    {
+      "name": "Jens Schomber Ströbitzer Boxengasse",
+      "maps_url": "https://www.google.com/maps/place/Jens+Schomber+Str%C3%B6bitzer+Boxengasse/data=!4m7!3m6!1s0x470874930d3cad3b:0x5dc3dfb14ff6462c!8m2!3d51.7637028!4d14.2960423!16s%2Fg%2F1vs5vdy6!19sChIJO608DZN0CEcRLEb2T7Hfw10?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Auto repair shop",
+      "address": "Fichtestraße 4",
+      "phone": null
+    },
+    {
+      "name": "Auto Linke Inh. Marco Neumann",
+      "maps_url": "https://www.google.com/maps/place/Auto+Linke+Inh.+Marco+Neumann/data=!4m7!3m6!1s0x4708743a4488a051:0xe385abf52374dea2!8m2!3d51.7667404!4d14.3595114!16s%2Fg%2F1hc1sp0kn!19sChIJUaCIRDp0CEcRot50I_WrheM?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Auto repair shop",
+      "address": "Merzdorfer Weg 36",
+      "phone": null
+    },
+    {
+      "name": "Autoreparatur M. Senkel Fahrzeug GmbH Autoreparatur",
+      "maps_url": "https://www.google.com/maps/place/Autoreparatur+M.+Senkel+Fahrzeug+GmbH+Autoreparatur/data=!4m7!3m6!1s0x47087426f7f50627:0xa5293101bcb608a9!8m2!3d51.7647936!4d14.3768437!16s%2Fg%2F1tmpj6mj!19sChIJJwb19yZ0CEcRqQi2vAExKaU?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Auto repair shop",
+      "address": "Dissenchener Str. 50"
+    },
+    {
+      "name": "Auto-Matzk-Cottbus , Inh. Martin Matzk",
+      "maps_url": "https://www.google.com/maps/place/Auto-Matzk-Cottbus+,+Inh.+Martin+Matzk/data=!4m7!3m6!1s0x4708741e9c7a9693:0xbd377fa54131183f!8m2!3d51.7514807!4d14.3673182!16s%2Fg%2F11btl_vblq!19sChIJk5Z6nB50CEcRPxgxQaV_N70?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Auto repair shop",
+      "address": "Liebermannstraße 1a"
+    },
+    {
+      "name": "PKW-Reparaturservice Senkel GmbH & Co.KG",
+      "maps_url": "https://www.google.com/maps/place/PKW-Reparaturservice+Senkel+GmbH+%26+Co.KG/data=!4m7!3m6!1s0x47087426f7f50627:0xe89766c2598e8191!8m2!3d51.7647824!4d14.376658!16s%2Fg%2F1vfp2bdw!19sChIJJwb19yZ0CEcRkYGOWcJml-g?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Auto repair shop",
+      "address": "Dissenchener Str. 50"
+    },
+    {
+      "name": "Car Service Sachsendorf GmbH",
+      "maps_url": "https://www.google.com/maps/place/Car+Service+Sachsendorf+GmbH/data=!4m7!3m6!1s0x4708738bb37b0da7:0x73c5123a9465816d!8m2!3d51.7374901!4d14.3283949!16s%2Fg%2F1x5f91q7!19sChIJpw17s4tzCEcRbYFllDoSxXM?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Closed",
+      "address": "+49 355 424041"
+    },
+    {
+      "name": "Fahrzeugservice Schulze",
+      "maps_url": "https://www.google.com/maps/place/Fahrzeugservice+Schulze/data=!4m7!3m6!1s0x470873bdcaa7970b:0xd3eb423f7ff0b21e!8m2!3d51.7177778!4d14.3138889!16s%2Fg%2F1vc80j5x!19sChIJC5enyr1zCEcRHrLwfz9C69M?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "Auto repair shop",
+      "address": "Am Seegraben 19a"
+    },
+    {
+      "name": "Torsten Eckert",
+      "maps_url": "https://www.google.com/maps/place/Torsten+Eckert/data=!4m7!3m6!1s0x47087155358e95e5:0xa4c5c7eeb46c357b!8m2!3d51.7354666!4d14.3656714!16s%2Fg%2F1tm__ydf!19sChIJ5ZWONVVxCEcRezVstO7HxaQ?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Auto repair shop",
+      "address": "An d. Aue 3"
+    },
+    {
+      "name": "Fix Auto Cottbus powered by LackPräsenz",
+      "maps_url": "https://www.google.com/maps/place/Fix+Auto+Cottbus+powered+by+LackPr%C3%A4senz/data=!4m7!3m6!1s0x4708769948430c57:0xf94b43983e9497b2!8m2!3d51.75899!4d14.38463!16s%2Fg%2F11f137m8sv!19sChIJVwxDSJl2CEcRspeUPphDS_k?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto painting",
+      "address": "Werner-von-Siemens-Straße 13"
+    },
+    {
+      "name": "Andreas Hübsch",
+      "maps_url": "https://www.google.com/maps/place/Andreas+H%C3%BCbsch/data=!4m7!3m6!1s0x470873b0a7adc97d:0x932a476e12ff0fab!8m2!3d51.7102348!4d14.3106774!16s%2Fg%2F1tfrl0zj!19sChIJfcmtp7BzCEcRqw__Em5HKpM?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Auto repair shop",
+      "address": "Siedlerstraße 5"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Autohaus Frunzke GbR",
+      "maps_url": "https://www.google.com/maps/place/Autohaus+Frunzke+GbR/data=!4m7!3m6!1s0x470874624a4af515:0x69c9dcf11d506a35!8m2!3d51.7564028!4d14.3157924!16s%2Fg%2F1th6ck23!19sChIJFfVKSmJ0CEcRNWpQHfHcyWk?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Auto repair shop",
+      "address": "Karl-Liebknecht-Straße 43",
+      "phone": null,
+      "old_or_no_website": "http://www.autohausfrunzke.de",
+      "email": "info@ute-stonner.de",
+      "branch": "Kfz Werkstatt",
+      "region": "Cottbus"
+    }
+  ]
+}

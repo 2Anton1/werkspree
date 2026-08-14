@@ -32,7 +32,8 @@
       "rating": 4.9,
       "category": "Beauty salon",
       "address": "Charlottenstraße 92",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Beauty Cosmetics Potsdam",
@@ -40,7 +41,8 @@
       "rating": 4.9,
       "category": "",
       "address": "",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "AURA & SKIN - Kosmetik Potsdam | Christiane Lapuhs",
@@ -48,11 +50,8 @@
       "rating": 5.0,
       "category": "",
       "address": "",
-      "phone": "+491632359202",
-      "old_or_no_website": "",
-      "email": "info@ute-stonner.de",
-      "branch": "Kosmetik",
-      "region": "Potsdam"
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Kosmetikstudio Kerstin Merkouris",
@@ -60,7 +59,8 @@
       "rating": 5.0,
       "category": "",
       "address": "",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "House of Beauty",
@@ -157,18 +157,5 @@
       "address": ""
     }
   ],
-  "hot_leads": [
-    {
-      "name": "AURA & SKIN - Kosmetik Potsdam | Christiane Lapuhs",
-      "maps_url": "https://www.google.com/maps/place/AURA+%26+SKIN+-+Kosmetik+Potsdam+%7C+Christiane+Lapuhs/data=!4m7!3m6!1s0x47a8f7548621b75d:0x299ea3ff8b0af09a!8m2!3d52.402918!4d13.0641275!16s%2Fg%2F11nl7kyr37!19sChIJXbchhlT3qEcRmvAKi_-jnik?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": "+491632359202",
-      "old_or_no_website": "",
-      "email": "info@ute-stonner.de",
-      "branch": "Kosmetik",
-      "region": "Potsdam"
-    }
-  ]
+  "hot_leads": []
 }
