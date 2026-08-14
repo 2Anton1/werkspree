@@ -1,7 +1,8 @@
 {
   "microsite_draft": {
-    "subject": "Kostenlose Demo-Website für {company_name} — fertig zum Ansehen",
-    "body": "Guten Tag,\n\nwir haben für {company_name} eine kostenlose Demo-Website erstellt — eine moderne, für Smartphones optimierte Seite, die wir anhand Ihrer öffentlichen Unternehmensdaten entworfen haben:\n\n{site_url}\n\nHintergrund: Bei unserem letzten Check hatten Sie keinen (aktuellen) eigenen Webauftritt, der in Google-Suchen erscheint. Eine eigene Website ist für Kunden oft der erste Vertrauenspunkt — und für Sie ein entscheidender Wettbewerbsvorteil.\n\nDie Demo ist komplett unverbindlich: Sagen Sie uns einfach kurz, ob Ihnen die Richtung gefällt. Wir richten sie dann gemeinsam mit Ihnen ein — inklusive Terminbuchung, WhatsApp-Anbindung oder Kontaktformular, wenn Sie möchten.\n\nMöchten Sie einen kurzen Termin? 15 Minuten genügen.\n\nBeste Grüße\nFinn Werksby\nWerkspree — KI-Automatisierung für kleine Unternehmen\nhttps://werkspree.bki-de.de/\n\nFalls Sie keine weiteren Nachrichten dieser Art erhalten möchten, lassen Sie es mich kurz wissen — ich trage Sie dann sofort aus."
-  },
-  "signature": "Finn Werksby | Werkspree | KI-Automatisierung für kleine Unternehmen | https://werkspree.bki-de.de/"
+    "subject": "Ihre neue Website ist fertig – ein Kostenloser Entwurf von Werkspree",
+    "greeting": "Sehr geehrte Damen und Herren",
+    "body": "wir haben uns Ihr Geschäft angesehen und festgestellt: Sie machen hervorragende Arbeit, aber Ihre Online-Präsenz fängt das nicht ein.\n\nDeshalb haben wir Ihnen eine fertige, professionelle Website gebaut – komplett kostenlos und ohne Verpflichtung. Sie liegt hier:\n\n{SITE_URL}\n\nWas Sie darauf sehen: eine saubere, mobile-optimierte Seite mit Ihren Öffnungszeiten, Ihren Kontaktdaten und Ihren Leistungen. Kein Baukasten-Look, kein Werbebanner – nur Ihr Betrieb, gut präsentiert.\n\nWenn Ihnen die Seite gefällt, können wir sie gemeinsam an Ihre Wünsche anpassen und Sie dabei entlasten: Anfragen beantworten, Rechnungen sortieren, Kunden strukturiert nachfassen. Sprechen Sie uns einfach an.\n\nMit freundlichen Grüßen\nFinn Werksby\nWerkspree – KI-Automatisierung für kleine Unternehmen\nBerlin & Brandenburg",
+    "opt_out": "Sie möchten keine weiteren Mails? Antworten Sie einfach mit 'Bitte nicht mehr' – wir halten uns zurück."
+  }
 }
