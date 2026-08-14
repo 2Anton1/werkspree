@@ -272,8 +272,10 @@ def main():
     print("Werkspree Lead Warmth Scorer")
     print("=" * 60)
 
-    # Load latest leads
-    lead_files = sorted(DATA_DIR.glob("leads_*.json"))
+    # Load latest leads (daily snapshot files only — leads_YYYYMMDD.json.
+    # leads_all_merged.json / leads_new_branches.json are legacy experiment
+    # files and must never be picked up by the glob.)
+    lead_files = sorted(f for f in DATA_DIR.glob("leads_*.json") if re.match(r"leads_\d{8}\.json$", f.name))
     if not lead_files:
         print("No leads found!")
         return 1

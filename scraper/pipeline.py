@@ -216,9 +216,12 @@ def find_email(website):
 
 
 def load_existing_leads():
-    """Load all existing leads."""
+    """Load all existing leads from daily snapshot files only
+    (leads_YYYYMMDD.json — NOT leads_all_merged.json, leads_new_branches.json etc.)."""
     all_leads = []
-    for f in DATA_DIR.glob("leads_*.json"):
+    for f in sorted(DATA_DIR.glob("leads_*.json")):
+        if not re.match(r"leads_\d{8}\.json$", f.name):
+            continue
         with open(f) as fh:
             all_leads.extend(json.load(fh))
     return all_leads

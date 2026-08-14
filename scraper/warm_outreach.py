@@ -31,8 +31,9 @@ def load_scored_leads():
         leads.sort(key=lambda x: x.get("warmth_score", 0), reverse=True)
         return leads
 
-    # Fallback: load raw leads
-    lead_files = sorted(DATA_DIR.glob("leads_*.json"))
+    # Fallback: load raw leads (daily snapshot files only)
+    import re as _re
+    lead_files = sorted(f for f in DATA_DIR.glob("leads_*.json") if _re.match(r"leads_\d{8}\.json$", f.name))
     if not lead_files:
         return []
     with open(lead_files[-1]) as f:
