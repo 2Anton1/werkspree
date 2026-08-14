@@ -189,8 +189,9 @@
 
 | Job ID | Name | Schedule | Zweck |
 |---|---|---|---|
-| e1e5b8283664 | Werkspree Lead Pipeline | Täglich 10:00 | Leads scrapen, qualifizieren und für CRM vorbereiten; Versand standardmäßig deaktiviert |
-| 8a0ea7b0e123 | GitHub Pages SSL Check | Alle 30 Min | SSL-Zertifikat prüfen + HTTPS aktivieren (12x wiederholend) |
+| df4d149e4f8f | Werkspree Lead Pipeline (Script Mode) | Täglich 10:00 | run_pipeline.py: pipeline.py → warmth_scorer.py → warm_outreach.py (AUTO-SEND) → Airtable-Sync. Exit≠0 bei Fehler. Report: reports/pipeline_YYYYMMDD.md |
+| e85d58d7915e | Werkspree Health Check | Alle 6h | ~/.hermes/scripts/health_check.py (no_agent): silent bei OK, nur Issues melden |
+| 251104e77a29 | Werkspree Hot-Lead Microsites (Poncho) | Alle 48h | Draft-only Microsite-Pipeline (workdir ~/werkspree) |
 
 ---
 
@@ -218,6 +219,19 @@ N8N_API_KEY=...        (eyJhbG...)
 
 ### Erledigt ✅
 - [x] Business-Name: Werkspree
+- [x] **Auto-Outreach freigegeben (14.08.2026)**: warm_outreach.py sendet standardmäßig (max 10/Tag, Score>=6, deep), `--dry-run` simuliert
+- [x] Lead-Pipeline auf EINEN Cron reduziert (df4d149e4f8f, Script-Mode; alter Agent-Cron e1e5b8283664 entfernt)
+- [x] Exit-Codes korrigiert: run_pipeline.py endet non-zero bei jedem Schritte-Fehler
+- [x] Tägliche Laufberichte: reports/pipeline_YYYYMMDD.md + reports/last_report.md
+- [x] Healthcheck-Cron (e85d58d7915e) für n8n, Stripe-Links, Landingpage, Pipeline, Env-Keys
+- [x] Lead-Filter: nur verifizierte Firmen-Websites; Portale/Branchenverzeichnisse/Bild-URLs raus (BLOCKED_DOMAINS)
+- [x] E-Mail NUR aus Impressum/Kontaktseite ("scraped"); info@-Guessing entfernt
+- [x] Max 2 Demo-Kandidaten pro Lauf (warmth_scorer, recommended_action=create_demo)
+- [x] Hunter-Validierung optional: HUNTER_API_KEY → Top 8 eligible verifizieren
+- [x] Neue Lead-Felder: source, last_checked, website_issue, automation_need, verified_email, next_step, response_status
+- [x] Conversion-Tracking: n8n-Workflow "Werkspree Tracking" (Webhook /werkspree-tracking → Code → Airtable-Table "Tracking")
+- [x] Einstiegsangebot "Automation Sprint" (890€ einmalig, 14-Tage-Sprint) auf Landingpage
+- [x] E-Rechnungsprüfer-CTA: "Möchten Sie, dass eingehende Rechnungen automatisch geprüft und vorsortiert werden?"
 - [x] Domain: werkspree.bki-de.de (CNAME bei Strato gesetzt)
 - [x] Landing Page deployed (GitHub Pages + Live-Stripe-Links + Individuelle Lösung)
 - [x] Landing Page im Apple-Design-Stil überarbeitet (08.08.2026, Commit `6fa1c69`)

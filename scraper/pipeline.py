@@ -4,16 +4,22 @@ Werkspree Lead Pipeline (Cron-tauglich)
 1. Scraped GelbeSeiten-Kategorieseite für eine Branche+Region
 2. Extrahiert Firmennamen + Telefon + URL
 3. Scraped Firmen-Websites /impressum + /kontakt für E-Mail-Adressen;
-   falls nichts gefunden wird, Fallback auf einen MX-validierten
-   info@domain-Guess (als "guessed" markiert, nicht "scraped")
+   NUR echte, aus dem Impressum/Kontaktseite gescrapte Adressen werden
+   übernommen ("scraped"). Geratene info@-Adressen sind deaktiviert.
 3b. Zweiter Pass: bestehende Leads ohne E-Mail werden mit demselben
     Verfahren erneut versucht (kleines Budget pro Lauf)
-4. Speichert alles als JSON
+4. Filter: Nur Leads mit verifizierter Firmen-Website werden behalten.
+   Booking-Portale, Branchenverzeichnisse und Bild-URLs fliegen raus.
+5. Speichert alles als JSON
 """
 
 import json, re, subprocess, sys, os
 from datetime import datetime
 from pathlib import Path
+
+# Ensure firecrawl is in PATH (cron doesn't have ~/.local/bin)
+FIRECRAWL_PATH = "/Users/anton/.local/bin/firecrawl"
+os.environ["PATH"] = os.environ.get("PATH", "") + ":/Users/anton/.local/bin"
 
 from email_extraction import (
     best_email,
@@ -46,6 +52,19 @@ BRANCHES = [
     ("Dachdecker", "Brandenburg"),
 ]
 
+# Domains that are never a company's real website (booking portals,
+# directories, aggregators, social, image hosts). Defense in depth on top of
+# is_real_company_website from email_extraction.
+BLOCKED_DOMAINS = [
+    "gelbeseiten.de", "golocal.de", "yelp", "tripadvisor", "booking.com",
+    "opentable", "zenchef", "quandoo", "resmio", "tebi.co", "delivery.",
+    "lieferando", "facebook.com", "instagram.com", "linkedin.com", "xing.com",
+    "googleusercontent.com", "google.com/maps", "wixsite.com", "webnode",
+    "jimdo.com", "onepage.me", "immonet", "immobilienscout",
+    "ebay-kleinanzeigen", "cylex", "firmenabc", "wer-kennt-wen", "kennstdu",
+]
+IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".ico")
+
 
 def firecrawl_scrape(url, output_path, timeout=60):
     """Scrape a URL with firecrawl CLI."""
@@ -63,6 +82,48 @@ def firecrawl_search(query, output_path, limit=10):
         capture_output=True, text=True, timeout=60
     )
     return result.returncode == 0
+
+
+def is_acceptable_website(website):
+    """True only for a real, company-owned website (no portals, directories,
+    image URLs or media subdomains)."""
+    if not is_real_company_website(website or ""):
+        return False
+    low = website.lower()
+    if any(b in low for b in BLOCKED_DOMAINS):
+        return False
+    if low.rstrip("/").endswith(IMAGE_EXTS):
+        return False
+    if re.search(r"\.(?:media|img|images|bilder|cdn)[.-]", low):
+        return False
+    return True
+
+
+def website_issue_label(website):
+    """Classify why a website URL was rejected."""
+    if not website:
+        return "no_website"
+    low = website.lower()
+    if not is_real_company_website(website):
+        return "not_company_website"
+    if any(b in low for b in BLOCKED_DOMAINS):
+        return "portal_or_directory"
+    if low.rstrip("/").endswith(IMAGE_EXTS):
+        return "image_url"
+    return "other"
+
+
+def init_lead_fields(lead):
+    """Fill the standardized CRM fields on every lead."""
+    now = datetime.now().isoformat()
+    lead.setdefault("source", "gelbeseiten")
+    lead.setdefault("last_checked", now)
+    lead.setdefault("website_issue", "")
+    lead.setdefault("verified_email", lead.get("email") if lead.get("email_source") == "scraped" else "")
+    lead.setdefault("automation_need", "")
+    lead.setdefault("next_step", "")
+    lead.setdefault("response_status", "none")
+    return lead
 
 
 def extract_listings(gs_path):
@@ -92,8 +153,8 @@ def extract_listings(gs_path):
             r'(https?://(?!(?:[\w-]+\.)?gelbeseiten\.de|ies\.v4all)[^\s)"\\]+)',
             details, re.IGNORECASE
         )
-        website = web_match.group(1).rstrip('\"') if web_match else ""
-        leads.append({
+        website = web_match.group(1).rstrip('\\"') if web_match else ""
+        leads.append(init_lead_fields({
             "company_name": name,
             "phone": phone,
             "gelbeseiten_url": find_gelbeseiten_profile_url(details),
@@ -104,7 +165,7 @@ def extract_listings(gs_path):
             "region": "",
             "scraped_at": datetime.now().isoformat(),
             "status": "new",
-        })
+        }))
     return leads
 
 
@@ -138,37 +199,10 @@ def get_email_from_imprint(website):
     return ""
 
 
-def has_mx_record(domain):
-    """Check via `dig` whether a domain has mail servers configured."""
-    try:
-        result = subprocess.run(
-            ["dig", "+short", "MX", domain],
-            capture_output=True, text=True, timeout=5
-        )
-        return bool(result.stdout.strip())
-    except Exception:
-        return False
-
-
-def guess_domain_email(website):
-    """Fallback: guess info@domain if the impressum/kontakt scrape found nothing.
-    Only returns a guess if the domain actually has mail servers (MX record) —
-    a guess without that check would just increase the bounce rate."""
-    if not website:
-        return ""
-    m = re.search(r'https?://(?:www\.)?([^/]+)', website)
-    if not m:
-        return ""
-    domain = m.group(1).lower()
-    if not has_mx_record(domain):
-        return ""
-    return f"info@{domain}"
-
-
 def find_email(website):
-    """Try to find a real email first, fall back to a validated domain guess.
-    Returns (email, source) where source is 'scraped' or 'guessed' — outreach
-    should be able to tell a confirmed address from an inferred one."""
+    """Scrape a real email from imprint/kontakt only. No guessed addresses —
+    only confirmed addresses from the company's own legal/contact pages are
+    accepted for outreach."""
     if not is_real_company_website(website):
         # Defense in depth: a gelbeseiten.de URL (e.g. stale data from before
         # the profile-page resolution existed) must never reach the guesser —
@@ -178,9 +212,6 @@ def find_email(website):
     email = get_email_from_imprint(website)
     if email:
         return email, "scraped"
-    guessed = guess_domain_email(website)
-    if guessed:
-        return guessed, "guessed"
     return "", ""
 
 
@@ -208,43 +239,45 @@ def main():
     # Pick today's branch based on day of year
     day_of_year = datetime.now().timetuple().tm_yday
     branch, region = BRANCHES[day_of_year % len(BRANCHES)]
-    
+
     print(f"Werkspree Lead Pipeline — {branch} in {region}")
-    
+
     # Step 1: Scrape GelbeSeiten category page
     gs_url = f"https://www.gelbeseiten.de/branchen/{branch.lower()}/{region.lower()}"
     gs_path = Path(f"/tmp/gs_{branch}_{region}.md")
-    
+
     if not firecrawl_scrape(gs_url, gs_path):
         print(f"Failed to scrape {gs_url}")
-        return
-    
+        return 1
+
     # Step 2: Extract listings
     new_leads = extract_listings(gs_path)
     print(f"Found {len(new_leads)} listings on GelbeSeiten")
-    
+
     # Set branch/region
     for l in new_leads:
         l["branch"] = branch
         l["region"] = region
-    
+
     # Step 3: Resolve the real company website, then find an email — for the
     # first 5 new leads (credit limit). The GelbeSeiten category page's
     # "Webseite" button has no static link, so `website` is almost always
     # still empty here; resolve it via the individual profile page first.
     for i, lead in enumerate(new_leads[:5]):
-        if not is_real_company_website(lead["website"]) and lead.get("gelbeseiten_url"):
+        if not is_acceptable_website(lead["website"]) and lead.get("gelbeseiten_url"):
             lead["website"] = resolve_real_website(lead["gelbeseiten_url"])
-        if is_real_company_website(lead["website"]):
+        if is_acceptable_website(lead["website"]):
             email, source = find_email(lead["website"])
             lead["email"] = email
             lead["email_source"] = source
+            lead["verified_email"] = email if source == "scraped" else ""
             if email:
                 print(f"  Found email ({source}): {lead['company_name']} -> {email}")
             else:
                 print(f"  No email: {lead['company_name']}")
         else:
-            print(f"  No website found: {lead['company_name']}")
+            lead["website_issue"] = website_issue_label(lead.get("website"))
+            print(f"  No usable website: {lead['company_name']} ({lead['website_issue']})")
 
     # Step 3b: Second pass — retry existing leads that never got an email
     # (previously only the current day's first 5 new leads were ever checked;
@@ -254,31 +287,44 @@ def main():
     existing = load_existing_leads()
     retry_candidates = [
         l for l in existing
-        if not l.get("email") and (is_real_company_website(l.get("website")) or l.get("gelbeseiten_url"))
+        if not l.get("email") and (is_acceptable_website(l.get("website")) or l.get("gelbeseiten_url"))
     ]
     for lead in retry_candidates[:5]:
-        if not is_real_company_website(lead.get("website")) and lead.get("gelbeseiten_url"):
+        if not is_acceptable_website(lead.get("website")) and lead.get("gelbeseiten_url"):
             lead["website"] = resolve_real_website(lead["gelbeseiten_url"])
-        if not is_real_company_website(lead.get("website")):
+        if not is_acceptable_website(lead.get("website")):
             continue
         email, source = find_email(lead["website"])
         if email:
             lead["email"] = email
             lead["email_source"] = source
+            lead["verified_email"] = email if source == "scraped" else ""
             print(f"  Retry found email ({source}): {lead['company_name']} -> {email}")
 
-    # Step 4: Save
-    today = datetime.now().strftime("%Y%m%d")
+    # Step 4: Normalize fields, keep only leads with a verified company
+    # website (booking portals, directories and image URLs are excluded).
     all_leads = deduplicate(existing + new_leads)
-    
+    for l in all_leads:
+        init_lead_fields(l)
+        if l.get("email") and l.get("email_source") == "scraped":
+            l["verified_email"] = l["email"]
+    kept = [l for l in all_leads if is_acceptable_website(l.get("website"))]
+    dropped = [l for l in all_leads if not is_acceptable_website(l.get("website"))]
+    for l in dropped:
+        l["website_issue"] = website_issue_label(l.get("website"))
+    all_leads = kept
+
+    today = datetime.now().strftime("%Y%m%d")
     out_path = DATA_DIR / f"leads_{today}.json"
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(all_leads, f, ensure_ascii=False, indent=2)
-    
-    print(f"Saved {len(all_leads)} total leads to {out_path}")
+
+    print(f"Saved {len(all_leads)} total leads (kept: verified website) to {out_path}")
+    print(f"Dropped {len(dropped)} leads without verified website")
     print(f"New today: {len(new_leads)}")
     print(f"With email: {sum(1 for l in all_leads if l.get('email'))}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
