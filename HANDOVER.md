@@ -289,6 +289,19 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
 - **Inbound-Banner (2 D)**: Auffälliges Alert-Banner direkt unter dem Hero-Bereich zur Verlinkung des E-Rechnungs-Prüfers.
 - **Qualitätssicherung**: Vollständige W3C-HTML-Konformität via `html-validate` sichergestellt (keine Fehler, keine Warnungen).
 
+### 14.08.2026 (Cron, Firecrawl-only) — Hot-Lead-Pipeline Segment 2 (Friseur/Potsdam) echt geprüft, 0 sendefähige Leads
+
+- Erster Lauf der neuen Poncho-freien Pipeline (siehe Skill-Update "Microsite-Enrichment ohne Poncho ab 14.08.2026"). Vor dem Lauf `latest_hot_leads_run.json`, `microsites/pipeline/data/microsite_sent_emails.json` (nicht vorhanden/leer) und `scraper/data/sent_emails.json` (14 Einträge, alle Elektriker/Berlin, keine Überschneidung) geprüft.
+- Segment/Region: **Friseur/Salon + Potsdam** (nächste ungenutzte Kombination nach Elektriker/Neukölln; der vorherige Friseur/Potsdam-Versuch war ein reiner Poncho-Provider-Fehler ohne echte Daten und zählte nicht als geprüft).
+- Discovery: Google-Maps-Suchergebnisseite direkt per `firecrawl scrape` abgerufen (Poncho/StableEnrich verlangt weiterhin einen bezahlten Wallet-Tier für Maps-Daten und ist laut Skill nicht mehr der Ausführungspfad). 20 Treffer geparst, alle 20 über der Rating-Schwelle 4.4 — Cap eingehalten (max 20 Maps-Ergebnisse).
+- Enrichment: Top 8 nach Rating/Reviews ausgewertet (Cap eingehalten). Für jeden Kandidaten offizielle Website per Firecrawl-Suche gesucht (Booking-/Social-Links ausgeschlossen) und bei Treffer die Seite gescraped.
+  - 3 Kandidaten (Konturzimmer denis puck, Friseur Henryk Braun, Friseuratelier Christine Wolff) haben eindeutig aktive, gepflegte eigene Websites mit vollständigem Impressum → **Block nach Regel 6**, obwohl bei zwei davon eine E-Mail im Footer sichtbar war (bewusst nicht kontaktiert, da keine Website-Lücke).
+  - 4 Kandidaten (FRISEUR SALON FIRAS, MYF BARBERSHOP, One cut Babershop, LEVANTE-Friseur-Salon) haben **keine eigene Firmenwebsite** — nur Buchungs-/Social-/Verzeichnislinks (fresha.com, termintiger.com, planity.com, Instagram etc.). Echte Website-Lücke, aber ohne eigene Website existiert keine Impressum-/Kontaktseite, aus der eine E-Mail nach Regel 5 entnommen werden könnte. Kein Raten von info@-Adressen.
+  - 1 Kandidat (Dreamir Aesthetic Hair Concept, dreamir.de) hat eine moderne eigene Domain, aber der Impressum-Link ist ein funktionsloser Platzhalter (`href="#"`), keine E-Mail auf der Seite, einziger Kontaktweg ist eine private WhatsApp-Mobilnummer — kein Regel-5-konformer E-Mail-Nachweis.
+- **Ergebnis: 0 von 8 Kandidaten erfüllen gleichzeitig Website-Lücke UND verifizierte öffentliche E-Mail aus Impressum/Kontaktseite.** Kein Lovable-Aufruf, keine Microsite, kein E-Mail-Versand. `data/latest_hot_leads_run.json` vollständig mit allen 8 Kandidaten, Begründungen und Firecrawl-Credit-Schätzung (~19 Credits) dokumentiert.
+- Empfehlung nächster Lauf: nächste ungenutzte Branche/Region-Kombination (z. B. Bäckerei/Café in einer Brandenburg-Kleinstadt wie Brandenburg/Havel oder Frankfurt (Oder)).
+- Keine anderen Werkspree-Dienste, Server oder Cronjobs verändert.
+
 ### 14.08.2026 (später Lauf) — Hot-Lead-Pipeline BLOCKIERT: Poncho-Provider-Fehler bei Segment 2 (Friseur/Potsdam)
 
 - Vor dem Lauf `latest_hot_leads_run.json`, `microsites/pipeline/data/microsite_sent_emails.json` und `scraper/data/sent_emails.json` geprüft — keine bereits kontaktierten/gebauten Leads in dieser Kombination.
