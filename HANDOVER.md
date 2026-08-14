@@ -289,6 +289,15 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
 - **Inbound-Banner (2 D)**: Auffälliges Alert-Banner direkt unter dem Hero-Bereich zur Verlinkung des E-Rechnungs-Prüfers.
 - **Qualitätssicherung**: Vollständige W3C-HTML-Konformität via `html-validate` sichergestellt (keine Fehler, keine Warnungen).
 
+### 14.08.2026 (später Lauf) — Hot-Lead-Pipeline BLOCKIERT: Poncho-Provider-Fehler bei Segment 2 (Friseur/Potsdam)
+
+- Vor dem Lauf `latest_hot_leads_run.json`, `microsites/pipeline/data/microsite_sent_emails.json` und `scraper/data/sent_emails.json` geprüft — keine bereits kontaktierten/gebauten Leads in dieser Kombination.
+- Segment-Rotation lt. Skill: Segment 1 (Elektriker) wurde bereits mit Berlin Neukölln probiert (0 qualifiziert, echter Poncho-Lauf). Für diesen Lauf gewählt: **Segment 2 (Friseur/Salon) mit Brandenburg-Kleinstadt Potsdam** (Kleinstädte werden laut Vorgabe bevorzugt, da dort eigene Websites seltener sind; Kombination war zuvor ungenutzt).
+- `poncho_enrichment.py "Friseur" "Potsdam"` mit exakt `max_results=20`/`max_detail=8` ausgeführt. Ergebnis diesmal: **kein echter Research** — der rohe Poncho-Chat-Transkript (`chat_id 9c69b2df-9ef1-4c0b-b9ba-a9f3a31ae179`) zeigt, dass beide von Poncho/StableEnrich versuchten Google-Maps-Datenquellen (`x402.openwebninja.com`, `places.use.x402atlas.com`) eine bezahlte/USDC-finanzierte "Advanced Wallet" verlangen, die auf dem aktuellen Poncho-Plan nicht verfügbar ist. Statt echter Daten lieferte Poncho ein Platzhalter-JSON (`maps_results=0`, `cost_usd=null`) und fragte, ob der Plan upgegradet, USDC eingezahlt oder auf rein kostenlose Quellen ausgewichen werden soll.
+- Damit Skill-Regel 8 einschlägig (Poncho-Lauf liefert kein nachvollziehbares Ergebnis/keine Kosten/keine qualifizierten Leads durch Providerfehler statt durch Sättigung): **nichts gebaut, nichts versendet.** `data/latest_hot_leads_run.json` als `run_blocked: true` mit vollständiger Fehlerbeschreibung geschrieben, damit Segment/Region NICHT fälschlich als "geprüft und leer" gilt.
+- **Für Anton/nächsten Agenten:** Der Poncho-Account braucht entweder ein Plan-Upgrade oder eine USDC-Einzahlung in die "Advanced Wallet", bevor die Google-Maps-Discovery über Poncho wieder funktioniert. Ohne das bricht jeder künftige Lauf mit derselben Meldung ab. Bis das geklärt ist, produziert der Cron `251104e77a29` nur Blocked-Runs, keinen echten Fortschritt in der Segment-Rotation.
+- Keine anderen Werkspree-Dienste, Server oder Cronjobs verändert.
+
 ### 14.08.2026 — Cron-Lauf Hot-Lead-Pipeline: Segment-Rotation auf Elektriker/Neukölln, keine qualifizierten Leads
 
 - Gemäß neuer Skill-Vorgabe (Segment-Rotation, da Restaurant in Berlin fast durchgängig aktive Websites hat: 3 Läufe im August 2026 mit 0 qualifizierten Leads) erstmals ein Nicht-Restaurant-Segment gewählt: **Elektriker / Berlin Neukölln** (erster Eintrag der vorgegebenen Rotation Elektriker → Friseur/Salon → Bäckerei/Café → Reinigung → Tischler/Schreiner → Kosmetik/Beauty → Fahrschule → Kfz-Werkstatt).
