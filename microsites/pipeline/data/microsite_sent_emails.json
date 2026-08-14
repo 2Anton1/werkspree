@@ -9,6 +9,13 @@
       "sent_at": "2026-08-14T19:02:00+02:00",
       "sent_by": "Finn Werksby (Werkspree, automatisiert via send_microsite_mail.py)",
       "template": "microsite_draft"
+    },
+    {
+      "company_name": "REWO Gebäudereinigungs und Service GmbH",
+      "email": "REWO-Cottbus@web.de",
+      "subject": "Ihre neue Website ist fertig – ein Kostenloser Entwurf von Werkspree",
+      "site_url": "https://werkspree.bki-de.de/microsites/sites/rewo-gebäudereinigungs-und-service-gmbh/",
+      "sent_at": "2026-08-14T19:50:37.127657+02:00"
     }
   ]
 }
