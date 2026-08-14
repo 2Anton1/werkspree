@@ -24,6 +24,10 @@ TZ = timezone(timedelta(hours=2))  # CEST
 
 
 def slugify(name: str) -> str:
+    # Umlaute normalisieren, dann nur [a-z0-9] behalten
+    import unicodedata
+    name = unicodedata.normalize("NFKD", name)
+    name = name.encode("ascii", "ignore").decode("ascii")
     s = name.lower()
     s = re.sub(r"[^a-z0-9]+", "-", s)
     return s.strip("-")[:40]

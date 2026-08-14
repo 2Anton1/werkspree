@@ -14,35 +14,23 @@
         "mailbox": "INBOX", "postProcessAction": "nothing", "customEmailConfig": {}
       },
       "id": "b1", "name": "Strato IMAP (kontakt@)", "type": "n8n-nodes-base.emailReadImap",
-      "typeVersion": 2, "position": [460, 300]
+      "typeVersion": 2, "position": [460, 300],
+      "credentials": { "imap": { "id": "LJiiuo55siAYbD69", "name": "strato_kontakt" } }
     },
     {
       "parameters": {
-        "functionCode": "// Extrahiere Absender + Betreff + Text\nconst m = $('Strato IMAP (kontakt@)').first().json;\nconst from = (m.from || m.sender || '');\nconst subject = m.subject || '';\nconst body = m.textPlain || m.textHtml || m.text || '';\n// Absender-Domain als Key fuer Airtable-Match (Email-Feld)\nconst emailMatch = (from.match(/[\\w.+-]+@[\\w-]+\\.[\\w.-]+/) || [''])[0];\nreturn [{ json: { from, emailMatch, subject, body, receivedAt: m.date } }];"
+        "functionCode": "// Extrahiere Absender + Betreff + Text\nconst m = $('Strato IMAP (kontakt@)').first().json;\nconst from = (m.from || m.sender || '');\nconst subject = m.subject || '';\nconst body = m.textPlain || m.textHtml || m.text || '';\nconst emailMatch = (from.match(/[\\w.+-]+@[\\w-]+\\.[\\w.-]+/) || [''])[0];\nreturn [{ json: { from, emailMatch, subject, body, receivedAt: m.date } }];"
       },
       "id": "c1", "name": "Parse Response", "type": "n8n-nodes-base.code",
       "typeVersion": 2, "position": [680, 300]
     },
     {
       "parameters": {
-        "method": "PATCH",
-        "url": "=https://api.airtable.com/v0/appyMLhXOMHpD5vfT/Leads",
-        "authentication": "genericCredentialType",
-        "genericAuthType": "httpHeaderAuth",
-        "sendHeaders": true,
-        "headerParameters": {
-          "parameters": [
-            { "name": "Authorization", "value": "={{ 'Bearer ' + $env.AIRTABLE_API_KEY }}" },
-            { "name": "Content-Type", "value": "application/json" }
-          ]
-        },
-        "sendBody": true,
-        "specifyBody": "json",
-        "jsonBody": "={\"performUpsert\":{\"fieldsToMergeOn\":[\"Email\"]},\"records\":[{\"fields\":{\"Email\":\"{{ $json.emailMatch }}\",\"responded\":true,\"last_response_at\":\"{{ $json.receivedAt }}\",\"response_summary\":\"{{ $json.body.slice(0,500) }}\"}}]}",
-        "options": {}
+        "functionCode": "// Schreibe Antwort in lokale JSON-Datei (lead_responses.json) fuer spaeteren Abgleich\nconst fs = require('fs');\nconst p = '/home/node/.n8n/lead_responses.json';\nlet arr = [];\nif (fs.existsSync(p)) { try { arr = JSON.parse(fs.readFileSync(p,'utf8')); } catch(e){} }\nconst r = $('Parse Response').first().json;\narr.push({\n  email: r.emailMatch, from: r.from, subject: r.subject,\n  body: r.body.slice(0,500), receivedAt: r.receivedAt, loggedAt: new Date().toISOString()\n});\nfs.writeFileSync(p, JSON.stringify(arr, null, 2));\nreturn [{ json: r }];",
+        "language": "javaScript"
       },
-      "id": "d1", "name": "Tag in Airtable (REST)", "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 4.2, "position": [900, 300]
+      "id": "d1", "name": "Log Response (local JSON)", "type": "n8n-nodes-base.code",
+      "typeVersion": 2, "position": [900, 300]
     },
     {
       "parameters": {
@@ -61,14 +49,15 @@
         "options": {}
       },
       "id": "e1", "name": "Notify Finn (Email)", "type": "n8n-nodes-base.emailSend",
-      "typeVersion": 2.1, "position": [1120, 300]
+      "typeVersion": 2.1, "position": [1120, 300],
+      "credentials": { "smtp": { "id": "pUnsuodplD2kptM7", "name": "strato_smtp" } }
     }
   ],
   "connections": {
     "Poll every 15min": { "main": [[{ "node": "Strato IMAP (kontakt@)", "type": "main", "index": 0 }]] },
     "Strato IMAP (kontakt@)": { "main": [[{ "node": "Parse Response", "type": "main", "index": 0 }]] },
-    "Parse Response": { "main": [[{ "node": "Tag in Airtable (REST)", "type": "main", "index": 0 }]] },
-    "Tag in Airtable (REST)": { "main": [[{ "node": "Notify Finn (Email)", "type": "main", "index": 0 }]] }
+    "Parse Response": { "main": [[{ "node": "Log Response (local JSON)", "type": "main", "index": 0 }]] },
+    "Log Response (local JSON)": { "main": [[{ "node": "Notify Finn (Email)", "type": "main", "index": 0 }]] }
   },
   "settings": { "executionOrder": "v1" }
 }
