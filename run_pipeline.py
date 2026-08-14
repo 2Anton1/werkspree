@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""
+Werkspree Lead Pipeline - Script mode for cron.
+Runs pipeline.py → warmth_scorer.py → warm_outreach.py (auto-send, user-approved).
+Writes a daily report to reports/ and exits non-zero on any step failure so the
+cron scheduler marks broken runs as errors instead of false successes.
+"""
+import subprocess
+import json
+import sys
+import os
+import urllib.request
+from pathlib import Path
+from datetime import datetime
+
+WORKDIR = Path("/Users/anton/work/werkspree")
+SCRAPER_DIR = WORKDIR / "scraper"
+DATA_DIR = SCRAPER_DIR / "data"
+REPORT_DIR = WORKDIR / "reports"
+REPORT_DIR.mkdir(exist_ok=True)
+
+# Airtable CRM
+AIRTABLE_BASE = "appyMLhXOMHpD5vfT"
+AIRTABLE_TABLE = "tbluCUpuCPxW1GcWD"
+AIRTABLE_STATUS_MAP = {
+    "none": "Neu",
+    "awaiting_reply": "Kontaktiert",
+    "followup_sent": "Kontaktiert",
+    "bounced": "Absage",
+    "replied": "Interessiert",
+}
+
+
+def load_env():
+    """Load ~/.hermes/.env into os.environ (without overriding existing)."""
+    env_path = Path.home() / ".hermes" / ".env"
+    if env_path.exists():
+        for line in env_path.read_text().splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+def run_cmd(cmd, cwd=WORKDIR, timeout=600):
+    """Run command and return (success, stdout, stderr)."""
+    try:
+        result = subprocess.run(
+            cmd, shell=True, cwd=cwd, capture_output=True, text=True, timeout=timeout
+        )
+        return result.returncode == 0, result.stdout.strip(), result.stderr.strip()
+    except subprocess.TimeoutExpired:
+        return False, "", f"Timeout after {timeout}s: {cmd}"
+    except Exception as e:
+        return False, "", str(e)
+
+
+def airtable_api(method, url, payload=None, token=""):
+    req = urllib.request.Request(url, method=method)
+    req.add_header("Authorization", f"Bearer {token}")
+    req.add_header("Content-Type", "application/json")
+    data = json.dumps(payload).encode() if payload else None
+    try:
+        with urllib.request.urlopen(req, data=data, timeout=30) as r:
+            return json.loads(r.read())
+    except Exception as e:
+        return {"error": str(e)}
+
+
+def sync_airtable(leads, token):
+    """Upsert leads into Airtable CRM (match by Company field)."""
+    if not token:
+        return "Airtable sync skipped (no AIRTABLE_API_KEY in .env)"
+    base_url = f"https://api.airtable.com/v0/{AIRTABLE_BASE}/{AIRTABLE_TABLE}"
+
+    # Fetch existing records (paginated)
+    existing = {}
+    offset = None
+    while True:
+        url = base_url + "?pageSize=100"
+        if offset:
+            url += f"&offset={offset}"
+        resp = airtable_api("GET", url, token=token)
+        if "error" in resp:
+            return f"Airtable read failed: {resp['error']}"
+        for rec in resp.get("records", []):
+            name = (rec.get("fields") or {}).get("Company", "")
+            if name:
+                existing[name] = rec["id"]
+        offset = resp.get("offset")
+        if not offset:
+            break
+
+    created = updated = 0
+    for lead in leads:
+        name = lead.get("company_name", "")
+        if not name:
+            continue
+        notes = "; ".join(filter(None, [
+            f"source={lead.get('source', '')}",
+            f"last_checked={lead.get('last_checked', '')}",
+            f"website_issue={lead.get('website_issue', '') or 'ok'}",
+            f"need={lead.get('automation_need', '')}",
+            f"next={lead.get('next_step', '')}",
+            f"signals={','.join((lead.get('warmth_signals') or [])[:4])}",
+        ]))
+        fields = {
+            "Company": name[:255],
+            "Branch": lead.get("branch", ""),
+            "Region": lead.get("region", ""),
+            "Website": lead.get("website", ""),
+            "Email": lead.get("verified_email") or lead.get("email", ""),
+            "Phone": lead.get("phone", ""),
+            "Status": AIRTABLE_STATUS_MAP.get(lead.get("response_status", "none"), "Neu"),
+            "Potential_Score": lead.get("warmth_score", 0),
+            "Notes": notes,
+        }
+        fields = {k: v for k, v in fields.items() if v not in (None, "")}
+        if name in existing:
+            airtable_api("PATCH", f"{base_url}/{existing[name]}", {"fields": fields}, token=token)
+            updated += 1
+        else:
+            airtable_api("POST", base_url, {"fields": fields}, token=token)
+            created += 1
+    return f"Airtable: {created} created, {updated} updated"
+
+
+def main():
+    load_env()
+    full_lines = []
+    compact = []
+
+    def log(msg=""):
+        print(msg)
+        full_lines.append(msg)
+
+    log("=" * 50)
+    log(f"WERKSPREE PIPELINE — {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    log("=" * 50)
+
+    steps = [
+        ("[1/4] pipeline.py (Scraping + Filter)", "python3 scraper/pipeline.py"),
+        ("[2/4] warmth_scorer.py (Scoring)", "python3 scraper/warmth_scorer.py"),
+        ("[3/4] warm_outreach.py (Auto-Send)", "python3 scraper/warm_outreach.py"),
+    ]
+    ok_all = True
+    for label, cmd in steps:
+        log(f"\n{label}")
+        ok, out, err = run_cmd(cmd)
+        log(out or err)
+        if not ok:
+            log(f"ERROR: {label} failed: {err}")
+            ok_all = False
+
+    # Step 4: Airtable CRM sync
+    log("\n[4/4] Airtable CRM sync")
+    scored_file = DATA_DIR / "scored_leads.json"
+    summary = {}
+    if scored_file.exists():
+        try:
+            leads = json.loads(scored_file.read_text())
+            summary = {
+                "total": len(leads),
+                "deep": sum(1 for l in leads if l.get("research_depth") == "deep"),
+                "demo_candidates": sum(1 for l in leads if l.get("recommended_action") == "create_demo"),
+                "with_email": sum(1 for l in leads if l.get("verified_email") or l.get("email")),
+            }
+            msg = sync_airtable(leads, os.environ.get("AIRTABLE_API_KEY", ""))
+            log(msg)
+        except Exception as e:
+            log(f"Airtable sync failed: {e}")
+            ok_all = False
+    else:
+        log("ERROR: scored_leads.json not found")
+        ok_all = False
+
+    # Report file (full log)
+    report = "\n".join(full_lines)
+    report_path = REPORT_DIR / f"pipeline_{datetime.now().strftime('%Y%m%d')}.md"
+    report_path.write_text(report)
+    (REPORT_DIR / "last_report.md").write_text(report)
+
+    # Compact stdout for chat delivery
+    print("\n" + "=" * 50)
+    print(f"WERKSPREE SUMMARY {datetime.now().strftime('%d.%m.%Y %H:%M')}")
+    print(f"Total Leads: {summary.get('total', '?')} | Deep: {summary.get('deep', '?')} | "
+          f"Demo-Kandidaten: {summary.get('demo_candidates', '?')} | Mit E-Mail: {summary.get('with_email', '?')}")
+    print(f"Full report: {report_path}")
+    print(f"Exit: {'OK' if ok_all else 'FAILED'}")
+    print("=" * 50)
+
+    sys.exit(0 if ok_all else 1)
+
+
+if __name__ == "__main__":
+    main()
