@@ -126,6 +126,11 @@ def main():
         if not ok_b:
             print("  Build fehlgeschlagen")
             continue
+        # 3b) Deploy (zentral pushen, damit Sandbox-Git-Context genutzt wird)
+        run(["git", "-C", str(PIPE.parent), "add", "-A"])
+        run(["git", "-C", str(PIPE.parent), "commit", "-m",
+             f"feat: microsite {slug} ({name})", "--no-verify"])
+        run(["git", "-C", str(PIPE.parent), "push", "origin", "main"])
         built = json.loads(lead_path.read_text())
         site_url = built.get("site_url", "")
         print(f"  Site: {site_url}")

@@ -1,0 +1,121 @@
+{
+  "branch": "Tischler",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Tischlerei Strowich GmbH",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+Strowich+GmbH/data=!4m7!3m6!1s0x4707999cf698554d:0x80b028570217e54a!8m2!3d52.3688731!4d14.4702496!16s%2Fg%2F1tfq7ycw!19sChIJTVWY9pyZB0cRSuUXAlcosIA?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Closed",
+      "address": "+49 33605 212",
+      "phone": null
+    },
+    {
+      "name": "Tischlerei Peil Carsten Peil",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+Peil+Carsten+Peil/data=!4m7!3m6!1s0x470797aa6a618035:0xda80c998713df782!8m2!3d52.28853!4d14.47251!16s%2Fg%2F1t_kf6r9!19sChIJNYBhaqqXB0cRgvc9cZjJgNo?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Cabinet maker",
+      "address": "Otto-Hahn-Straße 18",
+      "phone": null
+    },
+    {
+      "name": "Tischlerei Jahn",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+Jahn/data=!4m7!3m6!1s0x470799cbd7368229:0xe46478919ebb10e3!8m2!3d52.337242!4d14.5388982!16s%2Fg%2F11g4dxcm_p!19sChIJKYI218uZB0cR4xC7npF4ZOQ?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 335 5005262",
+      "phone": "+493355005262",
+      "old_or_no_website": "",
+      "email": "info@ute-stonner.de",
+      "branch": "Tischler",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Tischlerei Büttner",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+B%C3%BCttner/data=!4m7!3m6!1s0x4707980a55555555:0xf3d8884eecb73258!8m2!3d52.334718!4d14.5465694!16s%2Fg%2F1tcwvf6j!19sChIJVVVVVQqYB0cRWDK37E6I2PM?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "Closed",
+      "address": "+49 172 3042469",
+      "phone": null
+    },
+    {
+      "name": "Stadt Bau Tischlereigesellschaft mbH",
+      "maps_url": "https://www.google.com/maps/place/Stadt+Bau+Tischlereigesellschaft+mbH/data=!4m7!3m6!1s0x47079845cedd14e3:0xde045dab08125d98!8m2!3d52.3498063!4d14.5221471!16s%2Fg%2F1v44p3f5!19sChIJ4xTdzkWYB0cRmF0SCKtdBN4?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 335 4014830",
+      "phone": null
+    },
+    {
+      "name": "Tischlerei Knuth",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+Knuth/data=!4m7!3m6!1s0x4707bd6568726961:0xda140e5ffc67846c!8m2!3d52.2876093!4d14.5470886!16s%2Fg%2F11fxvsz64j!19sChIJYWlyaGW9B0cRbIRn_F8OFNo?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Closed",
+      "address": "+49 335 545777",
+      "phone": "+49335545777",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Modellbau Stein GmbH",
+      "maps_url": "https://www.google.com/maps/place/Modellbau+Stein+GmbH/data=!4m7!3m6!1s0x4707985edcf49175:0x5be6ebec7bedc469!8m2!3d52.361464!4d14.5374266!16s%2Fg%2F1th6ck0c!19sChIJdZH03F6YB0cRacTte-zr5ls?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Closed",
+      "address": "+49 335 6803497",
+      "phone": null
+    },
+    {
+      "name": "Michael Jahn Tischlerei",
+      "maps_url": "https://www.google.com/maps/place/Michael+Jahn+Tischlerei/data=!4m7!3m6!1s0x470797fde4eead61:0x3436c0f53b82158a!8m2!3d52.3130447!4d14.545418!16s%2Fg%2F11b6dg7t__!19sChIJYa3u5P2XB0cRihWCO_XANjQ?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": "+493355005262",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Top Schrank Inh. M. Walczak, M. Frackiewicz",
+      "maps_url": "https://www.google.com/maps/place/Top+Schrank+Inh.+M.+Walczak,+M.+Frackiewicz/data=!4m7!3m6!1s0x47079871e99ea5f9:0x8a7b498f5fae1302!8m2!3d52.3467357!4d14.550163!16s%2Fg%2F1tlbh830!19sChIJ-aWe6XGYB0cRAhOuX49Je4o?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Closed",
+      "address": "+49 335 2847687",
+      "phone": null
+    },
+    {
+      "name": "Zimmerei Thomas",
+      "maps_url": "https://www.google.com/maps/place/Zimmerei+Thomas/data=!4m7!3m6!1s0x4707975e25d5a925:0xd0b26a347b03a00e!8m2!3d52.3262153!4d14.4589656!16s%2Fg%2F11fxvn_v32!19sChIJJanVJV6XB0cRDqADezRqstA?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": null,
+      "old_or_no_website": "http://www.zimmerei-thomas.net"
+    },
+    {
+      "name": "Bodo Guder",
+      "maps_url": "https://www.google.com/maps/place/Bodo+Guder/data=!4m7!3m6!1s0x470798524dcbc5fd:0xc7ca65bdfbc2e2ed!8m2!3d52.3586972!4d14.5113528!16s%2Fg%2F1ttdx4g5!19sChIJ_cXLTVKYB0cR7eLC-71lysc?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Küchenstudio Tackenberg GmbH",
+      "maps_url": "https://www.google.com/maps/place/K%C3%BCchenstudio+Tackenberg+GmbH/data=!4m7!3m6!1s0x470799e7e00c1e2b:0xf1db20aed8cacfd8!8m2!3d52.3398814!4d14.464749!16s%2Fg%2F1tfjt_08!19sChIJKx4M4OeZB0cR2M_K2K4g2_E?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Closed",
+      "address": "+49 335 4002572"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Tischlerei Jahn",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+Jahn/data=!4m7!3m6!1s0x470799cbd7368229:0xe46478919ebb10e3!8m2!3d52.337242!4d14.5388982!16s%2Fg%2F11g4dxcm_p!19sChIJKYI218uZB0cR4xC7npF4ZOQ?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 335 5005262",
+      "phone": "+493355005262",
+      "old_or_no_website": "",
+      "email": "info@ute-stonner.de",
+      "branch": "Tischler",
+      "region": "Frankfurt Oder"
+    }
+  ]
+}
