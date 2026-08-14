@@ -1,0 +1,168 @@
+{
+  "branch": "restaurant",
+  "region": "Berlin Charlottenburg",
+  "all_entries": [
+    {
+      "name": "Luardi Cucina della mamma",
+      "maps_url": "https://www.google.com/maps/place/Luardi+Cucina+della+mamma/data=!4m7!3m6!1s0x47a850f946089815:0xb1366f42425d31ec!8m2!3d52.5020659!4d13.3292767!16s%2Fg%2F1pw3w_xr6!19sChIJFZgIRvlQqEcR7DFdQkJvNrE?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Ottenthal",
+      "maps_url": "https://www.google.com/maps/place/Ottenthal/data=!4m7!3m6!1s0x47a850fc4e8f97c1:0xf5198998aec1cfa9!8m2!3d52.5054006!4d13.3269158!16s%2Fg%2F1tcv5bjt!19sChIJwZePTvxQqEcRqc_BrpiJGfU?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Ristorante Arlecchino",
+      "maps_url": "https://www.google.com/maps/place/Ristorante+Arlecchino/data=!4m7!3m6!1s0x47a850f94f219d9d:0x123e170fc09dd25a!8m2!3d52.5023036!4d13.329315!16s%2Fg%2F1tdn33l7!19sChIJnZ0hT_lQqEcRWtKdwA8XPhI?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Schnitzelei",
+      "maps_url": "https://www.google.com/maps/place/Schnitzelei/data=!4m7!3m6!1s0x47a8511812d40881:0x8f72bd6d28df5f2b!8m2!3d52.519662!4d13.314517!16s%2Fg%2F1th5606z!19sChIJgQjUEhhRqEcRK1_fKG29co8?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Dicke Wirtin",
+      "maps_url": "https://www.google.com/maps/place/Dicke+Wirtin/data=!4m7!3m6!1s0x47a850fd2622a06f:0x884cf3a61764e842!8m2!3d52.5065268!4d13.3235691!16s%2Fg%2F1tdgz9zv!19sChIJb6AiJv1QqEcRQuhkF6bzTIg?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Buschbeck's Restaurant",
+      "maps_url": "https://www.google.com/maps/place/Buschbeck%27s+Restaurant/data=!4m7!3m6!1s0x47a850da7288887b:0x431bd08930054597!8m2!3d52.5056877!4d13.2920637!16s%2Fg%2F1tgdh00l!19sChIJe4iIctpQqEcRl0UFMInQG0M?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Österelli",
+      "maps_url": "https://www.google.com/maps/place/%C3%96sterelli/data=!4m7!3m6!1s0x47a851eae8933a3b:0x6771c412052a06a4!8m2!3d52.5126098!4d13.318305!16s%2Fg%2F11m8blplr8!19sChIJOzqT6OpRqEcRpAYqBRLEcWc?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "CHEZ NASSIB",
+      "maps_url": "https://www.google.com/maps/place/CHEZ+NASSIB/data=!4m7!3m6!1s0x47a851cfca242c97:0xcda0fdec09644ff8!8m2!3d52.4976817!4d13.3340756!16s%2Fg%2F11q95gjcs9!19sChIJlywkys9RqEcR-E9kCez9oM0?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "CaliBocca Restaurant & Wine Bar",
+      "maps_url": "https://www.google.com/maps/place/CaliBocca+Restaurant+%26+Wine+Bar/data=!4m7!3m6!1s0x47a850e47bdb5ad5:0x36cdd53c2aac969e!8m2!3d52.5038995!4d13.3168854!16s%2Fg%2F1tyzy06t!19sChIJ1Vrbe-RQqEcRnpasKjzVzTY?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Nuovo Mario Berlin Charlottenburg am Kurfürstendamm",
+      "maps_url": "https://www.google.com/maps/place/Nuovo+Mario+Berlin+Charlottenburg+am+Kurf%C3%BCrstendamm/data=!4m7!3m6!1s0x47a850fc4a316a09:0x35c0e7e69fb0232d!8m2!3d52.5052677!4d13.3276559!16s%2Fg%2F1tft_kz9!19sChIJCWoxSvxQqEcRLSOwn-bnwDU?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Marjellchen",
+      "maps_url": "https://www.google.com/maps/place/Marjellchen/data=!4m7!3m6!1s0x47a850e48c3433ef:0x38ee9ce445d4569b!8m2!3d52.5031687!4d13.3177558!16s%2Fg%2F1tt8b8xf!19sChIJ7zM0jORQqEcRm1bUReSc7jg?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Belmondo",
+      "maps_url": "https://www.google.com/maps/place/Belmondo/data=!4m7!3m6!1s0x47a8511d558332fd:0x83e722c22d30d24f!8m2!3d52.5090466!4d13.3232022!16s%2Fg%2F1wb8sqxs!19sChIJ_TKDVR1RqEcRT9IwLcIi54M?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Upper Burger Grill",
+      "maps_url": "https://www.google.com/maps/place/Upper+Burger+Grill/data=!4m7!3m6!1s0x47a850ff3ee0121b:0xde011c8e23e64532!8m2!3d52.5033326!4d13.3342994!16s%2Fg%2F11c44dwp59!19sChIJGxLgPv9QqEcRMkXmI44cAd4?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Don Camillo",
+      "maps_url": "https://www.google.com/maps/place/Don+Camillo/data=!4m7!3m6!1s0x47a85128a65d5b51:0x2557533985137ba1!8m2!3d52.5166809!4d13.2957003!16s%2Fg%2F1tdyk7c3!19sChIJUVtdpihRqEcRoXsThTlTVyU?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Gasthaus Kater Alex",
+      "maps_url": "https://www.google.com/maps/place/Gasthaus+Kater+Alex/data=!4m7!3m6!1s0x47a8512753e40eaf:0xe192fa57a71ebe93!8m2!3d52.5117861!4d13.3011651!16s%2Fg%2F11c6vzfhwh!19sChIJrw7kUydRqEcRk74ep1f6kuE?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "DAS KÖSTLICH-Berlin Charlottenburg",
+      "maps_url": "https://www.google.com/maps/place/DAS+K%C3%96STLICH-Berlin+Charlottenburg/data=!4m7!3m6!1s0x47a8511740de3f9f:0xb09bb1bd529673b5!8m2!3d52.5042168!4d13.3042591!16s%2Fg%2F11x8s9zktj!19sChIJnz_eQBdRqEcRtXOWUr2xm7A?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Zen Restaurant",
+      "maps_url": "https://www.google.com/maps/place/Zen+Restaurant/data=!4m7!3m6!1s0x47a850fbc97c28c3:0x38e91ff2ec2b3e41!8m2!3d52.5009029!4d13.3252628!16s%2Fg%2F11cnknd73r!19sChIJwyh8yftQqEcRQT4r7PIf6Tg?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Focaccino",
+      "maps_url": "https://www.google.com/maps/place/Focaccino/data=!4m7!3m6!1s0x47a850dc3b82757f:0x2d604b8593137ebb!8m2!3d52.505238!4d13.30104!16s%2Fg%2F1tcvyfw2!19sChIJf3WCO9xQqEcRu34Tk4VLYC0?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Französisches Restaurant \"Joynes Kitchen\" Charlottenburg",
+      "maps_url": "https://www.google.com/maps/place/Franz%C3%B6sisches+Restaurant+%22Joynes+Kitchen%22+Charlottenburg/data=!4m7!3m6!1s0x47a850e77ac211fd:0x673d0bc5734c3f55!8m2!3d52.5034453!4d13.306153!16s%2Fg%2F11c1s6xlt4!19sChIJ_RHCeudQqEcRVT9Mc8ULPWc?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    },
+    {
+      "name": "Palace",
+      "maps_url": "https://www.google.com/maps/place/Palace/data=!4m7!3m6!1s0x47a85117a3de1a99:0x49c1022fd846c69d!8m2!3d52.5192709!4d13.2988613!16s%2Fg%2F11fsqmwj_9!19sChIJmRreoxdRqEcRncZG2C8CwUk?authuser=0&hl=en&rclk=1",
+      "rating": null,
+      "reviews": null,
+      "price": "",
+      "category": ""
+    }
+  ],
+  "candidates": [],
+  "no_website": []
+}

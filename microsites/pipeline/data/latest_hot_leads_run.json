@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-08-14T00:00:00+00:00",
+  "run_type": "firecrawl_only_enrichment_no_poncho",
+  "segment_rotation_note": "Rotation lt. Skill: 1) Elektriker (verbraucht: Berlin Neukölln, 14.08.2026, 0 qualifiziert). 2) Friseur/Salon — dieser Lauf: Potsdam (Brandenburg-Kleinstadt, bevorzugt). Vorheriger Versuch dieser Kombination (Friseur/Potsdam via Poncho) war ein Provider-Fehler (0 echte Daten) und zählt laut vorherigem Eintrag NICHT als geprüft. Dieser Lauf verwendet die neue Poncho-freie Firecrawl-Pipeline und wertet Friseur/Salon + Potsdam damit erstmals ECHT aus.",
+  "search": {
+    "branch": "Friseur/Salon",
+    "region": "Potsdam",
+    "maps_result_limit": 20,
+    "enrichment_candidate_limit": 8,
+    "rating_threshold": 4.4,
+    "method": "firecrawl scrape von Google Maps Suchergebnisseite (https://www.google.com/maps/search/Friseur+Salon+Potsdam), da Poncho/StableEnrich fuer Google-Maps-Discovery weiterhin einen kostenpflichtigen Wallet-Tier verlangt (siehe vorheriger Lauf-Eintrag) und laut Skill ab 14.08.2026 nicht mehr der Ausfuehrungspfad ist."
+  },
+  "maps_results": 20,
+  "maps_results_rating_qualified": 20,
+  "enrichment_candidates_evaluated": 8,
+  "candidates": [
+    {
+      "name": "FRISEUR SALON FIRAS",
+      "rating": 5.0,
+      "reviews": 326,
+      "address": "Anna-Zielenziger-Straße 6, Potsdam",
+      "official_website_found": false,
+      "website_status": "no_website — nur Buchungs-/Social-Links gefunden (planity.com, mytreatwell.de, Instagram, Facebook), keine eigene Firmenwebsite",
+      "website_gap": true,
+      "email_source": null,
+      "email_verified": false,
+      "block_reason_if_any": "Kein verifizierbarer öffentlicher E-Mail-Nachweis aus Impressum/Kontaktseite vorhanden (keine eigene Website existiert)"
+    },
+    {
+      "name": "Dreamir Aesthetic Hair Concept",
+      "rating": 5.0,
+      "reviews": 175,
+      "address": "Lindenstraße 22, 14467 Potsdam",
+      "official_website_found": true,
+      "official_website_url": "https://dreamir.de/",
+      "website_status": "review_signal_website_gap — moderne eigene Domain, aber Impressum-/Datenschutz-Links sind Platzhalter (href=\"#\"), keine echte Impressum-Seite vorhanden; einziger Kontaktweg ist eine private WhatsApp-Mobilnummer",
+      "website_gap": true,
+      "email_source": null,
+      "email_verified": false,
+      "block_reason_if_any": "Keine E-Mail auf der Seite; Impressum-Link ist ein nicht funktionierender Platzhalter, kein Kontaktformular/E-Mail vorhanden. WhatsApp-Mobilnummer ist keine öffentliche Geschäfts-E-Mail und darf nach Regel 5 nicht verwendet/geraten werden."
+    },
+    {
+      "name": "MYF BARBERSHOP - Potsdam",
+      "rating": 4.9,
+      "reviews": 272,
+      "address": "Georg-Hermann-Allee 11, Potsdam",
+      "official_website_found": false,
+      "website_status": "no_website — nur Buchungs-/Social-/Verzeichnis-Links (fresha.com, termintiger.com, werkenntdenbesten.de, yandex maps, Instagram)",
+      "website_gap": true,
+      "email_source": null,
+      "email_verified": false,
+      "block_reason_if_any": "Kein verifizierbarer öffentlicher E-Mail-Nachweis (keine eigene Website existiert)"
+    },
+    {
+      "name": "Konturzimmer denis puck",
+      "rating": 4.9,
+      "reviews": 210,
+      "address": "Dortustraße 53, 14467 Potsdam",
+      "official_website_found": true,
+      "official_website_url": "https://www.konturzimmer-denispuck.de/",
+      "website_status": "aktiv_gepflegt — HTTPS, vollständiges Menü, Kontaktdaten, Impressum/AGB/Datenschutz-Links vorhanden (Jimdo-Baukasten, aber gepflegt und vollständig)",
+      "website_gap": false,
+      "email_source": null,
+      "email_verified": false,
+      "block_reason_if_any": "BLOCK: Website ist eindeutig aktiv und gepflegt (Regel 6) — kein Website-Lücken-Lead"
+    },
+    {
+      "name": "One cut Babershop - potsdam",
+      "rating": 4.9,
+      "reviews": 165,
+      "address": "Am Moosfenn 1, Potsdam",
+      "official_website_found": false,
+      "website_status": "no_website — nur Instagram/TikTok/Linktree-Links gefunden, keine eigene Firmenwebsite; Suchergebnisse zu 'One Cut' vermischen sich zudem mit gleichnamigen US-Betrieben (Springfield NJ, Palmyra)",
+      "website_gap": true,
+      "email_source": null,
+      "email_verified": false,
+      "block_reason_if_any": "Kein verifizierbarer öffentlicher E-Mail-Nachweis (keine eigene Website existiert)"
+    },
+    {
+      "name": "Friseur Henryk Braun",
+      "rating": 4.9,
+      "reviews": 56,
+      "address": "Hebbelstr. 44, 14467 Potsdam",
+      "official_website_found": true,
+      "official_website_url": "https://www.friseur-henryk-braun.de/",
+      "website_status": "aktiv_gepflegt — HTTPS, vollständige Leistungen/Preise/Team-Seite, echtes Impressum unter /impressum, Kontakt-E-Mail salon@friseur-henryk-braun.de im Footer sichtbar",
+      "website_gap": false,
+      "email_source": "kontaktseite (Footer/Impressum-Bereich der eigenen Website)",
+      "email_verified": false,
+      "block_reason_if_any": "BLOCK: Website ist eindeutig aktiv und gepflegt (Regel 6) — kein Website-Lücken-Lead, daher kein Versand trotz vorhandener E-Mail"
+    },
+    {
+      "name": "LEVANTE-Friseur-Salon",
+      "rating": 4.8,
+      "reviews": 447,
+      "address": "Friedrich-Ebert-Straße 95, Potsdam",
+      "official_website_found": false,
+      "website_status": "no_website — nur Buchungs-/Verzeichnis-/Social-Links (fresha.com, termintiger.com, salonify.eu, yandex maps, Instagram)",
+      "website_gap": true,
+      "email_source": null,
+      "email_verified": false,
+      "block_reason_if_any": "Kein verifizierbarer öffentlicher E-Mail-Nachweis (keine eigene Website existiert)"
+    },
+    {
+      "name": "Friseuratelier Christine Wolff",
+      "rating": 4.8,
+      "reviews": 210,
+      "address": "Gutenbergstraße 71/72, 14467 Potsdam",
+      "official_website_found": true,
+      "official_website_url": "https://www.friseuratelier-potsdam.de/",
+      "website_status": "aktiv_gepflegt — HTTPS, umfangreiche Seite (16 Unterseiten), vollständiges Impressum, Kontakt-E-Mail info@friseuratelier-potsdam.de im Footer sichtbar",
+      "website_gap": false,
+      "email_source": "impressum/footer der eigenen Website",
+      "email_verified": false,
+      "block_reason_if_any": "BLOCK: Website ist eindeutig aktiv und gepflegt (Regel 6) — kein Website-Lücken-Lead, daher kein Versand trotz vorhandener E-Mail"
+    }
+  ],
+  "qualification_summary": {
+    "blocked_active_website": 3,
+    "website_gap_no_official_site": 4,
+    "website_gap_domain_but_no_impressum": 1,
+    "qualified_with_verified_email": 0
+  },
+  "microsites_created": [],
+  "drafts_created": [],
+  "lovable_invoked": false,
+  "outbound_email_sent": false,
+  "firecrawl_credits_used_approx": 19,
+  "firecrawl_operations": [
+    "1x search 'Friseur Salon Potsdam' (limit 20, initial SERP-Test, ungenutzt fuer Endauswahl)",
+    "1x scrape Google-Maps-Suchergebnisseite (Kern-Discovery, 20 Eintraege geparst)",
+    "8x search Firmenname+Ort (offizielle Website-Suche fuer alle 8 Kandidaten)",
+    "5x search Firmenname+Impressum (Zweitversuch Website-Suche fuer die 5 ohne klaren Treffer)",
+    "4x scrape (konturzimmer-denispuck.de, friseur-henryk-braun.de, friseuratelier-potsdam.de, dreamir.de)"
+  ],
+  "run_blocked": true,
+  "block_reason": "8 Enrichment-Kandidaten (Cap eingehalten) ausgewertet: 3 haben eindeutig aktive/gepflegte eigene Websites (Regel 6 Block: Konturzimmer denis puck, Friseur Henryk Braun, Friseuratelier Christine Wolff — bei den letzten beiden existiert sogar eine im Impressum sichtbare E-Mail, aber der Lead ist wegen aktiver Website kein Website-Luecken-Kandidat und wird nicht kontaktiert). 4 Kandidaten haben keine eigene Firmenwebsite (nur Buchungs-/Social-/Verzeichnislinks: FRISEUR SALON FIRAS, MYF BARBERSHOP, One cut Babershop, LEVANTE-Friseur-Salon) — echter Website-Luecken-Fall, aber ohne eigene Website existiert keine Impressum-/Kontaktseite, aus der eine oeffentliche Geschaefts-E-Mail nach Regel 5 entnommen werden koennte; Raten/info@-Konstruktion ist ausdruecklich verboten. 1 Kandidat (Dreamir Aesthetic Hair Concept) hat eine eigene moderne Domain, aber der Impressum-Link ist ein funktionsloser Platzhalter (href=\"#\") ohne echten Inhalt und die einzige sichtbare Kontaktmoeglichkeit ist eine private WhatsApp-Mobilnummer, keine E-Mail — damit ebenfalls kein Regel-5-konformer E-Mail-Nachweis. Ergebnis: 0 von 8 Kandidaten erfuellen gleichzeitig Website-Luecke UND verifizierte oeffentliche E-Mail aus Impressum/Kontaktseite. Gemaess Regel 8: nichts gebaut, nichts versendet.",
+  "notes": "sent_emails.json (scraper, 14 Eintraege, alle Elektriker/Berlin) und microsite_sent_emails.json (nicht vorhanden/leer) vor dem Lauf geprueft — keine Ueberschneidung mit Friseur/Potsdam-Kandidaten, war ohnehin irrelevant da 0 Kandidaten qualifiziert. HUNTER_API_KEY ist NICHT in ~/.hermes/.env gesetzt — Hunter-Validierungsschritt entfaellt, konservative Regel (Impressum-Quelle + MX) war ohnehin nicht anwendbar mangels Impressum-Quelle. Naechster Lauf: naechste ungenutzte Branche/Region-Kombination waehlen (z.B. Baeckerei/Cafe in einer Brandenburg-Kleinstadt wie Brandenburg/Havel oder Frankfurt (Oder)), da Friseur/Potsdam jetzt als echt geprueft und (fuer diesen Durchlauf) ohne sendefaehigen Lead gilt."
+}

@@ -1,0 +1,44 @@
+{
+  "branch": "restaurant",
+  "region": "Berlin Mitte",
+  "all_candidates": [
+    {
+      "name": "Nante-Eck | Restaurant Berlin Mitte",
+      "maps_url": "https://www.google.com/maps/place/Nante-Eck+%7C+Restaurant+Berlin+Mitte/data=!4m7!3m6!1s0x47a851c4be9016e7:0x4174f7a2cb96cf37!8m2!3d52.5166722!4d13.388301!16s%2Fg%2F1v8y31rr!19sChIJ5xaQvsRRqEcRN8-Wy6L3dEE?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "German restaurant",
+      "address": "Unter den Linden 35",
+      "phone": null
+    },
+    {
+      "name": "Schnitzelei Mitte",
+      "maps_url": "https://www.google.com/maps/place/Schnitzelei+Mitte/data=!4m7!3m6!1s0x47a851ebe54807cb:0xa32f86cbc9fe5051!8m2!3d52.5285831!4d13.3878853!16s%2Fg%2F11c1tqz9ly!19sChIJywdI5etRqEcRUVD-ycuGL6M?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "German restaurant",
+      "address": "Chausseestr. 8 Hinterhof erreichbar über: Chausseestr. 8 oder, Novalisstraße 11",
+      "phone": null
+    },
+    {
+      "name": "NOUMI Mitte",
+      "maps_url": "https://www.google.com/maps/place/NOUMI+Mitte/data=!4m7!3m6!1s0x47a85102542881b3:0x6bfd99925f0d32b5!8m2!3d52.5143717!4d13.3976565!16s%2Fg%2F11htqygydm!19sChIJs4EoVAJRqEcRtTINX5KZ_Ws?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Asian restaurant",
+      "address": "Jägerstraße 35"
+    },
+    {
+      "name": "AMRIT - Indisches Restaurant Berlin Mitte",
+      "maps_url": "https://www.google.com/maps/place/AMRIT+-+Indisches+Restaurant+Berlin+Mitte/data=!4m7!3m6!1s0x47a851e90443d657:0x5a3de5e549fd2d99!8m2!3d52.5259176!4d13.3898183!16s%2Fg%2F12lspqz6r!19sChIJV9ZDBOlRqEcRmS39SeXlPVo?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Indian restaurant",
+      "address": "Oranienburger Str. 45"
+    },
+    {
+      "name": "Salamat",
+      "maps_url": "https://www.google.com/maps/place/Salamat/data=!4m7!3m6!1s0x47a851ef458ba3cb:0xb8b3aac055bd49b2!8m2!3d52.5287366!4d13.393801!16s%2Fg%2F11ddvcbbkr!19sChIJy6OLRe9RqEcRskm9VcCqs7g?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "",
+      "address": ""
+    }
+  ],
+  "hot_leads": []
+}

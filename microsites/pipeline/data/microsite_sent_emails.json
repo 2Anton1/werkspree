@@ -1,0 +1,14 @@
+{
+  "sent_emails": [
+    {
+      "company_name": "Bäckerei und Konditorei Ulrich von Kuhlnew & Sohn",
+      "email": "info@unsere-baeckerei.de",
+      "subject": "Kostenlose Demo-Website für Bäckerei und Konditorei Ulrich von Kuhlnew & Sohn — fertig zum Ansehen",
+      "gmail_message_id": "1a00136711294cdf",
+      "site_url": "https://kuhlnew-tradition-page.lovable.app",
+      "sent_at": "2026-08-14T19:02:00+02:00",
+      "sent_by": "Finn Werksby (Werkspree, automatisiert via send_microsite_mail.py)",
+      "template": "microsite_draft"
+    }
+  ]
+}

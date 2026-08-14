@@ -1,0 +1,27 @@
+{
+  "company_name": "Beispiel Bäckerei Mustermann",
+  "segment": "Bäckerei",
+  "region": "Brandenburg",
+  "website_issue": "Keine Website",
+  "email": "info@example.de",
+  "email_verified": "yes",
+  "phone": "03381 123456",
+  "owner": "Max Mustermann",
+  "address": "Musterstraße 1",
+  "city": "Brandenburg an der Havel",
+  "tagline": "Frisch gebacken seit 1990.",
+  "products": [
+    [
+      "Brot",
+      "Beschreibung"
+    ],
+    [
+      "Brötchen",
+      "Beschreibung"
+    ],
+    [
+      "Kuchen",
+      "Beschreibung"
+    ]
+  ]
+}

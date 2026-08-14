@@ -1,0 +1,153 @@
+{
+  "branch": "restaurant",
+  "region": "Berlin Prenzlauer Berg",
+  "all_candidates": [
+    {
+      "name": "Restaurant Pasternak",
+      "maps_url": "https://www.google.com/maps/place/Restaurant+Pasternak/data=!4m7!3m6!1s0x47a84f588c40ede5:0x79ab1df0a1e103ca!8m2!3d52.5348186!4d13.4186651!16s%2Fg%2F11gfcxj29n!19sChIJ5e1AjFhPqEcRygPhofAdq3k?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Vietnamese Restaurant Anjoy",
+      "maps_url": "https://www.google.com/maps/place/Vietnamese+Restaurant+Anjoy/data=!4m7!3m6!1s0x47a84e015b8f34cd:0x710d76b1611e9bf4!8m2!3d52.5361739!4d13.4205434!16s%2Fg%2F11cn8szf2q!19sChIJzTSPWwFOqEcR9JseYbF2DXE?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Zur Haxe",
+      "maps_url": "https://www.google.com/maps/place/Zur+Haxe/data=!4m7!3m6!1s0x47a84de48281b9c9:0x95e3eb8607c13167!8m2!3d52.5448106!4d13.4369117!16s%2Fg%2F12hk69ghl!19sChIJybmBguRNqEcRZzHBB4br45U?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Asteria",
+      "maps_url": "https://www.google.com/maps/place/Asteria/data=!4m7!3m6!1s0x47a851ff6f5e6885:0x691617eba9c13a78!8m2!3d52.5415419!4d13.4117448!16s%2Fg%2F11b6_v53vg!19sChIJhWheb_9RqEcReDrBqesXFmk?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": "",
+      "phone": "+493040053571",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Vegang Prenzlauer Berg",
+      "maps_url": "https://www.google.com/maps/place/Vegang+Prenzlauer+Berg/data=!4m7!3m6!1s0x47a851b50771138b:0x549abdf031ab8ec1!8m2!3d52.53865!4d13.40855!16s%2Fg%2F11s1bnvxqy!19sChIJixNxB7VRqEcRwY6rMfC9mlQ?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Masel Topf",
+      "maps_url": "https://www.google.com/maps/place/Masel+Topf/data=!4m7!3m6!1s0x47a84e03ed17d479:0xa64fa6ce3934dd3b!8m2!3d52.5348068!4d13.4195559!16s%2Fg%2F1q62md3c1!19sChIJedQX7QNOqEcRO900Oc6mT6Y?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Froindlichst Berlin Prenzlauer Berg",
+      "maps_url": "https://www.google.com/maps/place/Froindlichst+Berlin+Prenzlauer+Berg/data=!4m7!3m6!1s0x47a84fe022bb85db:0x1adfaf184bca271e!8m2!3d52.5329573!4d13.4231675!16s%2Fg%2F11rc04vtcs!19sChIJ24W7IuBPqEcRHifKSxiv3xo?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "häppies",
+      "maps_url": "https://www.google.com/maps/place/h%C3%A4ppies/data=!4m7!3m6!1s0x47a84dffd85e1a97:0x6b47e7524e715fe!8m2!3d52.5405962!4d13.4193455!16s%2Fg%2F12m9lrddr!19sChIJlxpe2P9NqEcR_hXnJHV-tAY?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Zum Schusterjungen",
+      "maps_url": "https://www.google.com/maps/place/Zum+Schusterjungen/data=!4m7!3m6!1s0x47a851ff96920a01:0x5db763c9311697a1!8m2!3d52.5409194!4d13.4141972!16s%2Fg%2F1w0qzyrb!19sChIJAQqSlv9RqEcRoZcWMcljt10?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "JÓMO Restaurant",
+      "maps_url": "https://www.google.com/maps/place/J%C3%93MO+Restaurant/data=!4m7!3m6!1s0x47a84fedb80ed3e1:0x74cff183c62b95c7!8m2!3d52.5366117!4d13.421101!16s%2Fg%2F11y6pvss6c!19sChIJ4dMOuO1PqEcRx5UrxoPxz3Q?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Osmans Töchter",
+      "maps_url": "https://www.google.com/maps/place/Osmans+T%C3%B6chter/data=!4m7!3m6!1s0x4165219dc6971787:0xb845c65aa67d5f21!8m2!3d52.5294549!4d13.4173599!16s%2Fg%2F11bbwl53p7!19sChIJhxeXxp0hZUERIV99plrGRbg?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Hako Ramen Prenzlauer Berg",
+      "maps_url": "https://www.google.com/maps/place/Hako+Ramen+Prenzlauer+Berg/data=!4m7!3m6!1s0x47a851a7debb808f:0xb6fadec5eac71350!8m2!3d52.538508!4d13.40932!16s%2Fg%2F11h1dctzx8!19sChIJj4C73qdRqEcRUBPH6sXe-rY?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Vedis Indisches Restaurant",
+      "maps_url": "https://www.google.com/maps/place/Vedis+Indisches+Restaurant/data=!4m7!3m6!1s0x47a851ff66725c5f:0x63e1b9a0c70f086c!8m2!3d52.5417968!4d13.4117033!16s%2Fg%2F11b8c2x_yh!19sChIJX1xyZv9RqEcRbAgPx6C54WM?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Mitho Cha! P-Berg",
+      "maps_url": "https://www.google.com/maps/place/Mitho+Cha!+P-Berg/data=!4m7!3m6!1s0x47a84e0116771fa7:0x6c5c971378c5d99b!8m2!3d52.5374212!4d13.4210038!16s%2Fg%2F11c1xdj6qx!19sChIJpx93FgFOqEcRm9nFeBOXXGw?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "MaMi's Food&Wine",
+      "maps_url": "https://www.google.com/maps/place/MaMi%27s+Food%26Wine/data=!4m7!3m6!1s0x47a85149d9af1b1f:0x7a46e3ecc8bd03f!8m2!3d52.539163!4d13.4087825!16s%2Fg%2F11nmclqbx2!19sChIJHxuv2UlRqEcRP9CLzD5upAc?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Sadhu Prenzlauer Berg",
+      "maps_url": "https://www.google.com/maps/place/Sadhu+Prenzlauer+Berg/data=!4m7!3m6!1s0x47a84d1af0b4cfc9:0xf3ae3fbdfa69ec88!8m2!3d52.5453541!4d13.4214104!16s%2Fg%2F11n18yrb76!19sChIJyc-08BpNqEcRiOxp-r0_rvM?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Restaurant Bricole",
+      "maps_url": "https://www.google.com/maps/place/Restaurant+Bricole/data=!4m7!3m6!1s0x47a84dfe20024041:0x35d40b4535d89651!8m2!3d52.5409912!4d13.4224641!16s%2Fg%2F11g6h_11nt!19sChIJQUACIP5NqEcRUZbYNUUL1DU?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Itarei Restaurant - Japanese x Italian Fusion",
+      "maps_url": "https://www.google.com/maps/place/Itarei+Restaurant+-+Japanese+x+Italian+Fusion/data=!4m7!3m6!1s0x47a84f007f5986c7:0x41743cc78ee3fded!8m2!3d52.5386225!4d13.4200916!16s%2Fg%2F11y3k_jbft!19sChIJx4ZZfwBPqEcR7f3jjsc8dEE?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Matthias Restaurant",
+      "maps_url": "https://www.google.com/maps/place/Matthias+Restaurant/data=!4m7!3m6!1s0x47a84f8158bdeeb5:0x11e33ba242bde92b!8m2!3d52.5383341!4d13.4199555!16s%2Fg%2F11lnn4fp05!19sChIJte69WIFPqEcRK-m9QqI74xE?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "",
+      "address": ""
+    }
+  ],
+  "hot_leads": []
+}

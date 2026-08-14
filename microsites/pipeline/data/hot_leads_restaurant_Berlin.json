@@ -1,0 +1,150 @@
+{
+  "branch": "restaurant",
+  "region": "Berlin",
+  "all_candidates": [
+    {
+      "name": "BLESS Restaurant",
+      "maps_url": "https://www.google.com/maps/place/BLESS+Restaurant/data=!4m7!3m6!1s0x47a8518e5446ed29:0x414b04762b9f4b36!8m2!3d52.5124086!4d13.3967904!16s%2Fg%2F11lkzg8dhv!19sChIJKe1GVI5RqEcRNkufK3YES0E?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Asian restaurant",
+      "address": "Hausvogteipl. 10",
+      "phone": null
+    },
+    {
+      "name": "Nante-Eck | Restaurant Berlin Mitte",
+      "maps_url": "https://www.google.com/maps/place/Nante-Eck+%7C+Restaurant+Berlin+Mitte/data=!4m7!3m6!1s0x47a851c4be9016e7:0x4174f7a2cb96cf37!8m2!3d52.5166722!4d13.388301!16s%2Fg%2F1v8y31rr!19sChIJ5xaQvsRRqEcRN8-Wy6L3dEE?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "German restaurant",
+      "address": "Unter den Linden 35",
+      "phone": null
+    },
+    {
+      "name": "Restaurant Trattoria Portofino",
+      "maps_url": "https://www.google.com/maps/place/Restaurant+Trattoria+Portofino/data=!4m7!3m6!1s0x47a84e43365ac997:0x513ecc8184fdc3fd!8m2!3d52.5123562!4d13.4484136!16s%2Fg%2F11byt5y2jm!19sChIJl8laNkNOqEcR_cP9hIHMPlE?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Closes soon",
+      "address": "Opens 11:30 AM Tue",
+      "phone": null
+    },
+    {
+      "name": "Restaurant Facil",
+      "maps_url": "https://www.google.com/maps/place/Restaurant+Facil/data=!4m7!3m6!1s0x47a8504a94b9e203:0x7b2115cb49fb6b1c!8m2!3d52.5089804!4d13.37369!16s%2Fg%2F1tjffwbb!19sChIJA-K5lEpQqEcRHGv7ScsVIXs?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Fine dining restaurant",
+      "address": "Potsdamer Str. 3",
+      "phone": null
+    },
+    {
+      "name": "Night Kitchen",
+      "maps_url": "https://www.google.com/maps/place/Night+Kitchen/data=!4m7!3m6!1s0x47a851e62a164b7f:0xe2fdc7df9c1c1ed8!8m2!3d52.5255777!4d13.3939795!16s%2Fg%2F11g8zxwbsf!19sChIJf0sWKuZRqEcR2B4cnN_H_eI?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Mediterranean restaurant",
+      "address": "Heckmann Höfe, Oranienburger Str. 32",
+      "phone": null,
+      "old_or_no_website": "https://live.tebi.co/ecom/reservations/227891_53a92a72cded9251d031c33f2f4f477c3587e146b08739433e3ca7d78255d35a"
+    },
+    {
+      "name": "Restaurant Dae Mon",
+      "maps_url": "https://www.google.com/maps/place/Restaurant+Dae+Mon/data=!4m7!3m6!1s0x47a851e74e032c31:0x25dc3e501793aacf!8m2!3d52.5227699!4d13.399358!16s%2Fg%2F11b6hwzkdv!19sChIJMSwDTudRqEcRz6qTF1A-3CU?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Fusion restaurant",
+      "address": "Monbijoupl. 11",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Skykitchen",
+      "maps_url": "https://www.google.com/maps/place/Skykitchen/data=!4m7!3m6!1s0x47a84e7a8142ae03:0xdb23205e08bf7595!8m2!3d52.528366!4d13.457008!16s%2Fg%2F11b76mcnwh!19sChIJA65CgXpOqEcRlXW_CF4gI9s?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Fine dining restaurant",
+      "address": "Landsberger Allee 106",
+      "phone": null
+    },
+    {
+      "name": "Ristorante Bocca Felice Berlin-Mitte",
+      "maps_url": "https://www.google.com/maps/place/Ristorante+Bocca+Felice+Berlin-Mitte/data=!4m7!3m6!1s0x47a84fa0466cf447:0x243749f6e2811123!8m2!3d52.5086731!4d13.4046246!16s%2Fg%2F11tj9lnj7m!19sChIJR_RsRqBPqEcRIxGB4vZJNyQ?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Italian restaurant",
+      "address": "Seydelstraße 16",
+      "phone": null
+    },
+    {
+      "name": "A Mano",
+      "maps_url": "https://www.google.com/maps/place/A+Mano/data=!4m7!3m6!1s0x47a84e1623b079cb:0xa355fb53a80d566c!8m2!3d52.5193916!4d13.4273865!16s%2Fg%2F1hc0s4f1h!19sChIJy3mwIxZOqEcRbFYNqFP7VaM?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Italian restaurant",
+      "address": "Strausberger Pl. 2"
+    },
+    {
+      "name": "Döner Restaurant Berlin Mitte",
+      "maps_url": "https://www.google.com/maps/place/D%C3%B6ner+Restaurant+Berlin+Mitte/data=!4m7!3m6!1s0x47a851cf98ce2f6f:0x166c851fa5664702!8m2!3d52.5117229!4d13.3835554!16s%2Fg%2F11c2pf5k18!19sChIJby_OmM9RqEcRAkdmpR-FbBY?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Doner kebab restaurant",
+      "address": "Wilhelmstraße 45"
+    },
+    {
+      "name": "Restaurant Maximilians Berlin",
+      "maps_url": "https://www.google.com/maps/place/Restaurant+Maximilians+Berlin/data=!4m7!3m6!1s0x47a851d07038fccd:0xee7212867d17fced!8m2!3d52.5114055!4d13.3892688!16s%2Fg%2F1v3dr4q3!19sChIJzfw4cNBRqEcR7fwXfYYScu4?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "Bavarian restaurant",
+      "address": "Friedrichstraße 185-190"
+    },
+    {
+      "name": "YOSOY TAPAS BERLIN",
+      "maps_url": "https://www.google.com/maps/place/YOSOY+TAPAS+BERLIN/data=!4m7!3m6!1s0x47a851e11fc11513:0x2bc58d18952ea185!8m2!3d52.5244334!4d13.4027616!16s%2Fg%2F1vc6cf29!19sChIJExXBH-FRqEcRhaEulRiNxSs?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Restaurant",
+      "address": "Rosenthaler Str. 37"
+    },
+    {
+      "name": "AMRIT - Indisches Restaurant Berlin Mitte",
+      "maps_url": "https://www.google.com/maps/place/AMRIT+-+Indisches+Restaurant+Berlin+Mitte/data=!4m7!3m6!1s0x47a851e90443d657:0x5a3de5e549fd2d99!8m2!3d52.5259176!4d13.3898183!16s%2Fg%2F12lspqz6r!19sChIJV9ZDBOlRqEcRmS39SeXlPVo?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Indian restaurant",
+      "address": "Oranienburger Str. 45"
+    },
+    {
+      "name": "meet me halfway Berlin",
+      "maps_url": "https://www.google.com/maps/place/meet+me+halfway+Berlin/data=!4m7!3m6!1s0x47a851b33fe90fa7:0x737cb203ff342511!8m2!3d52.5319419!4d13.3832472!16s%2Fg%2F11jmdf9_z0!19sChIJpw_pP7NRqEcRESU0_wOyfHM?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Persian restaurant",
+      "address": "Zinnowitzer Str. 5"
+    },
+    {
+      "name": "Vesuvio",
+      "maps_url": "https://www.google.com/maps/place/Vesuvio/data=!4m7!3m6!1s0x47a84e15fc75dc85:0xa1281f2c1aa479f7!8m2!3d52.5190864!4d13.429525!16s%2Fg%2F1hm30m5zf!19sChIJhdx1_BVOqEcR93mkGiwfKKE?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Italian restaurant",
+      "address": "Strausberger Pl. 8"
+    },
+    {
+      "name": "Monte Mente Restaurant",
+      "maps_url": "https://www.google.com/maps/place/Monte+Mente+Restaurant/data=!4m7!3m6!1s0x47a85100765413c1:0x605b1d99794e0910!8m2!3d52.5102647!4d13.3734707!16s%2Fg%2F11y68cph5s!19sChIJwRNUdgBRqEcREAlOeZkdW2A?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Mediterranean restaurant",
+      "address": "Bellevuestraße 5"
+    },
+    {
+      "name": "AMRIT",
+      "maps_url": "https://www.google.com/maps/place/AMRIT/data=!4m7!3m6!1s0x47a851c926adb9af:0x486e12db20958559!8m2!3d52.5105!4d13.37717!16s%2Fg%2F12hrjzg01!19sChIJr7mtJslRqEcRWYWVINsSbkg?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Indian restaurant",
+      "address": "Ebertstraße 14"
+    },
+    {
+      "name": "Steakhouse & Restaurant Las Malvinas",
+      "maps_url": "https://www.google.com/maps/place/Steakhouse+%26+Restaurant+Las+Malvinas/data=!4m7!3m6!1s0x47a84e1a4018ea25:0xf1d61ddd7a16651b!8m2!3d52.526168!4d13.4229174!16s%2Fg%2F1vxdx9s1!19sChIJJeoYQBpOqEcRG2UWet0d1vE?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Steak house",
+      "address": "Barnimstraße 18"
+    },
+    {
+      "name": "Schnitzelei Mitte",
+      "maps_url": "https://www.google.com/maps/place/Schnitzelei+Mitte/data=!4m7!3m6!1s0x47a851ebe54807cb:0xa32f86cbc9fe5051!8m2!3d52.5285831!4d13.3878853!16s%2Fg%2F11c1tqz9ly!19sChIJywdI5etRqEcRUVD-ycuGL6M?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "German restaurant",
+      "address": "Chausseestr. 8 Hinterhof erreichbar über: Chausseestr. 8 oder, Novalisstraße 11"
+    }
+  ],
+  "hot_leads": []
+}
