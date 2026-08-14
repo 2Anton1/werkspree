@@ -191,7 +191,7 @@
 |---|---|---|---|
 | df4d149e4f8f | Werkspree Lead Pipeline (Script Mode) | Täglich 10:00 | run_pipeline.py: pipeline.py → warmth_scorer.py → warm_outreach.py (AUTO-SEND) → Airtable-Sync. Exit≠0 bei Fehler. Report: reports/pipeline_YYYYMMDD.md |
 | e85d58d7915e | Werkspree Health Check | Alle 6h | ~/.hermes/scripts/health_check.py (no_agent): silent bei OK, nur Issues melden |
-| 251104e77a29 | Werkspree Hot-Lead Microsites (Poncho) | Alle 48h | Draft-only Microsite-Pipeline (workdir ~/werkspree) |
+| 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Firecrawl) → eigener Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `kontakt@werkspree.bki-de.de`) |
 
 ---
 
@@ -301,6 +301,17 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
 - **Ergebnis: 0 von 8 Kandidaten erfüllen gleichzeitig Website-Lücke UND verifizierte öffentliche E-Mail aus Impressum/Kontaktseite.** Kein Lovable-Aufruf, keine Microsite, kein E-Mail-Versand. `data/latest_hot_leads_run.json` vollständig mit allen 8 Kandidaten, Begründungen und Firecrawl-Credit-Schätzung (~19 Credits) dokumentiert.
 - Empfehlung nächster Lauf: nächste ungenutzte Branche/Region-Kombination (z. B. Bäckerei/Café in einer Brandenburg-Kleinstadt wie Brandenburg/Havel oder Frankfurt (Oder)).
 - Keine anderen Werkspree-Dienste, Server oder Cronjobs verändert.
+
+### 14.08.2026 (Abend) — Microsite-Pipeline komplett neu (eigener Generator, Strato-Mail, kein Lovable/Poncho)
+
+- **Lovable-OAuth nicht persistierbar:** `claude mcp login lovable` funktioniert in der Hermes-Terminal-Sandbox nicht (Token landet in anderer HOME/Sandbox, verschwindet; echter Tool-Call schlägt mit „OAuth session expired" fehl). 4 erfolglose Versuche.
+- **Entscheidung:** Lovable aus dem kritischen Pfad entfernt. Stattdessen **eigener statischer Microsite-Generator** (`microsites/pipeline/build_microsite.py`): rendert `microsite_template.html` mit verifizierten Lead-Daten, deployt nach `microsites/sites/<slug>/index.html` via Git-Push auf `main`. Live unter `https://werkspree.bki-de.de/microsites/sites/<slug>/`.
+- **GitHub Pages Fix:** `build_type: legacy` lieferte Unterordner nicht aus → `.nojekyll` im Repo-Root hinzugefügt (deaktiviert Jekyll komplett). Danach Unterordner 200 OK. WICHTIG: Bei künftigen Commits `.nojekyll` nicht löschen, sonst fallen alle `/microsites/`-URLs auf 404.
+- **Mail-Versand auf Strato SMTP umgestellt:** `send_mail.py` (zentral, in `microsites/pipeline/`) nutzt `kontakt@werkspree.bki-de.de` (SMTP `smtp.strato.de:465` SSL). Credentials aus `~/.hermes/.env` (`WERKSPREE_SMTP_*`); Gmail-OAuth als Fallback. Seriöser als Gmail, kein Google-OAuth-Risiko. Mobileconfig-Quelle: `~/.hermes/attachments/mail.mobileconfig` (IMAP/SMTP-Parameter, Password nicht enthalten — separat geliefert).
+- **Erster End-to-End-Erfolg:** Bäckerei Ulrich von Kuhlnew & Sohn (Brandenburg/Havel, Klein Kreutz) — qualifiziert (Website-Lücke + `info@unsere-baeckerei.de` verifiziert), Site gebaut + live (`/microsites/sites/kuhlnew-baeckerei-klein-kreutz/`), Mail versendet (Gmail-ID `1a00136711294cdf` am 14.08. ~19:02). Später auf den eigenen Generator umgestellt (Live-URL identisch strukturiert).
+- **n8n Lead-Response-Handler** (`n8n_lead_response_handler.json`): IMAP-Poll auf `kontakt@` alle 15 min → Airtable-Tag (responded=true) → Notify per Strato-SMTP an `a2807d@gmail.com`. Noch **inaktiv** (muss in n8n-UI importiert + Credentials verknüpft werden: `strato_kontakt` IMAP, `strato_smtp` SMTP, `werkspree_airtable` Airtable).
+- Poncho komplett aus der Pipeline entfernt (Kosten + Provider-Ausfälle weg). Workdir vom Cron entfernt (Lock-Timeout behoben).
+- Cron-Prompt (`251104e77a29`) auf Generator + Strato-Mail umgestellt, Segment-Rotation (Elektriker→Friseur→Bäckerei→Kleinstädte Brandenburg) aktiv.
 
 ### 14.08.2026 (später Lauf) — Hot-Lead-Pipeline BLOCKIERT: Poncho-Provider-Fehler bei Segment 2 (Friseur/Potsdam)
 

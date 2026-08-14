@@ -1,0 +1,82 @@
+{
+  "name": "Werkspree Lead-Response-Handler",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{"field": "seconds", "interval": 900}]
+        }
+      },
+      "name": "Poll every 15min",
+      "type": "n8n-nodes-base.schedule",
+      "typeVersion": 1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "host": "imap.strato.de",
+        "port": 993,
+        "secure": true,
+        "user": "kontakt@werkspree.bki-de.de",
+        "password": "={{ $env.STRATO_IMAP_PASS }}",
+        "mailbox": "INBOX",
+        "postProcessAction": "nothing",
+        "customEmailConfig": {"ignoreSSLIssues": false}
+      },
+      "name": "Strato IMAP (kontakt@)",
+      "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2,
+      "position": [460, 300],
+      "credentials": {"imap": "strato_kontakt"}
+    },
+    {
+      "parameters": {
+        "functionCode": "// Extrahiere Absender-Domain + prüfe ob Lead-Antwort\nconst mail = $('Strato IMAP (kontakt@)').first().json;\nconst from = mail.from || '';\nconst subject = mail.subject || '';\nconst body = mail.text || mail.html || '';\n// Match gegen bekannte Leads aus microsite_sent_emails.json (via Airtable)\nreturn [{ json: { from, subject, body, receivedAt: mail.date } }];"
+      },
+      "name": "Parse Response",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "table": "Leads",
+        "fields": {
+          "responded": true,
+          "last_response_at": "={{ $json.receivedAt }}",
+          "response_summary": "={{ $json.body.slice(0, 500) }}"
+        },
+        "matchBy": "email",
+        "matchValue": "={{ $json.from }}"
+      },
+      "name": "Tag in Airtable",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2,
+      "position": [900, 300],
+      "credentials": {"airtableApi": "werkspree_airtable"}
+    },
+    {
+      "parameters": {
+        "address": "a2807d@gmail.com",
+        "subject": "=?utf-8?B?{{ $json.subject }}?=",
+        "message": "Neue Antwort von Hot-Lead:\n\nVon: {{ $json.from }}\nBetreff: {{ $json.subject }}\n\n{{ $json.body.slice(0, 1000) }}\n\n--\nWerkspree Lead-Response-Handler",
+        "from": "Werkspree Bot <kontakt@werkspree.bki-de.de>"
+      },
+      "name": "Notify Finn (Email)",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [1120, 300],
+      "credentials": {"smtp": "strato_smtp"}
+    }
+  ],
+  "connections": {
+    "Poll every 15min": {"main": [["Strato IMAP (kontakt@)"]]},
+    "Strato IMAP (kontakt@)": {"main": [["Parse Response"]]},
+    "Parse Response": {"main": [["Tag in Airtable"]]},
+    "Tag in Airtable": {"main": [["Notify Finn (Email)"]]}
+  },
+  "settings": {},
+  "active": false,
+  "tags": ["werkspree", "hot-leads"]
+}
