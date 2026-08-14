@@ -123,19 +123,8 @@ def main():
     (out / "lead.json").write_text(json.dumps(lead, ensure_ascii=False, indent=2))
     print(f"INFO: Site gebaut -> {out/'index.html'}")
 
-    try:
-        subprocess.run(["git", "-C", str(REPO), "add", "-A"], check=True, capture_output=True)
-        msg = f"chore: microsite {slug} ({lead.get('company_name','')})"
-        subprocess.run(["git", "-C", str(REPO), "commit", "-m", msg, "--no-verify"],
-                       check=True, capture_output=True)
-        push = subprocess.run(["git", "-C", str(REPO), "push", "origin", "main"],
-                              capture_output=True, text=True)
-        if push.returncode != 0:
-            print("WARN: Git push fehlgeschlagen:", push.stderr[:200])
-            sys.exit(4)
-    except subprocess.CalledProcessError as e:
-        print("ERROR: Git fehlgeschlagen:", e.stderr.decode()[:200] if e.stderr else str(e))
-        sys.exit(4)
+    # Kein Push hier — der Orchestrator (run_microsite_pipeline.py) pushed
+    # zentral, damit der Sandbox-Git-Context genutzt wird.
 
     base = "https://werkspree.bki-de.de/microsites/sites"
     url = f"{base}/{slug}/"
