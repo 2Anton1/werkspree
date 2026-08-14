@@ -34,8 +34,14 @@ ROTATION = [
     ("Fahrschule", "Brandenburg an der Havel"),
     ("Kfz Werkstatt", "Cottbus"),
 ]
-# bereits gepruefte Kombinationen (nicht erneut)
-DONE = {("Elektriker", "Berlin Neukölln"), ("Friseur", "Potsdam"), ("Bäcker", "Brandenburg an der Havel")}
+# bereits gepruefte Kombinationen (nicht erneut) - Stand 14.08. abend
+DONE = {
+    ("Elektriker", "Berlin Neukölln"),
+    ("Friseur", "Potsdam"),
+    ("Bäcker", "Brandenburg an der Havel"),
+    ("Reinigung", "Cottbus"),
+    ("Tischler", "Frankfurt Oder"),
+}
 
 TZ = timezone(timedelta(hours=2))
 
