@@ -1,0 +1,151 @@
+{
+  "branch": "Maler",
+  "region": "Berlin Lichtenberg",
+  "all_candidates": [
+    {
+      "name": "Malermeisterei Aderhold",
+      "maps_url": "https://www.google.com/maps/place/Malermeisterei+Aderhold/data=!4m7!3m6!1s0x47a84ec82474029b:0xd6f60a01beb4a397!8m2!3d52.501888!4d13.4768052!16s%2Fg%2F1q65cxlxw!19sChIJmwJ0JMhOqEcRl6O0vgEK9tY?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 30 89759213",
+      "phone": null,
+      "old_or_no_website": "https://www.malermeisterei-aderhold.de",
+      "email": "kontakt@fahrschule-ulmann.de",
+      "branch": "Maler",
+      "region": "Berlin Lichtenberg"
+    },
+    {
+      "name": "Malermeister Kohls",
+      "maps_url": "https://www.google.com/maps/place/Malermeister+Kohls/data=!4m7!3m6!1s0x47a84f2afda8c25b:0x748429607af24d36!8m2!3d52.5310849!4d13.4930879!16s%2Fg%2F11j7l5yw_z!19sChIJW8Ko_SpPqEcRNk3yemAphHQ?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Fechner Malereifachbetrieb GmbH",
+      "maps_url": "https://www.google.com/maps/place/Fechner+Malereifachbetrieb+GmbH/data=!4m7!3m6!1s0x47a84f2ba536d997:0xbd5366ce5e78d8e2!8m2!3d52.4842402!4d13.5076973!16s%2Fg%2F11dftdyt87!19sChIJl9k2pStPqEcR4th4Xs5mU70?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 30 85619832",
+      "phone": null
+    },
+    {
+      "name": "Elite Malerei In Lichtenberg GmbH",
+      "maps_url": "https://www.google.com/maps/place/Elite+Malerei+In+Lichtenberg+GmbH/data=!4m7!3m6!1s0x47a84eb57a3957e7:0x572282460f6aede1!8m2!3d52.508455!4d13.5212609!16s%2Fg%2F11btlnn3kc!19sChIJ51c5erVOqEcR4e1qD0aCIlc?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Malermeister Daniel Gumpricht",
+      "maps_url": "https://www.google.com/maps/place/Malermeister+Daniel+Gumpricht/data=!4m7!3m6!1s0x47a84c47b4ae5511:0x59bd79009a3ba86c!8m2!3d52.5577517!4d13.5068736!16s%2Fg%2F1ygbbbpc7!19sChIJEVWutEdMqEcRbKg7mgB5vVk?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 163 4142455",
+      "phone": null
+    },
+    {
+      "name": "Torsten Blanke",
+      "maps_url": "https://www.google.com/maps/place/Torsten+Blanke/data=!4m7!3m6!1s0x47a84e96be727c29:0x5f3992128249460e!8m2!3d52.5177541!4d13.4922184!16s%2Fg%2F1tw_m81z!19sChIJKXxyvpZOqEcRDkZJghKSOV8?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Malereibetrieb Gadegast GmbH",
+      "maps_url": "https://www.google.com/maps/place/Malereibetrieb+Gadegast+GmbH/data=!4m7!3m6!1s0x47a84ea8b2519d63:0x6b6a621fa1033ede!8m2!3d52.5248952!4d13.5183636!16s%2Fg%2F1tczzj_6!19sChIJY51RsqhOqEcR3j4DoR9iams?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 30 9716297",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Malermeister Bennet Silensky",
+      "maps_url": "https://www.google.com/maps/place/Malermeister+Bennet+Silensky/data=!4m7!3m6!1s0x42a6b3782f1b4473:0x5318ef998c7f5600!8m2!3d52.517164!4d13.4797809!16s%2Fg%2F11lcpvs75z!19sChIJc0QbL3izpkIRAFZ_jJnvGFM?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Painter",
+      "address": "Möllendorffstraße 106",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Malermeister Thomas Altmann",
+      "maps_url": "https://www.google.com/maps/place/Malermeister+Thomas+Altmann/data=!4m7!3m6!1s0x47a84eee23feaaab:0x542c57f186386da!8m2!3d52.5058267!4d13.4772914!16s%2Fg%2F11gf5p8w7s!19sChIJq6r-I-5OqEcR2oZjGH_FQgU?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Closed",
+      "address": "+49 176 24076450",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Spektrum Malerwerkstatt GmbH",
+      "maps_url": "https://www.google.com/maps/place/Spektrum+Malerwerkstatt+GmbH/data=!4m7!3m6!1s0x47a84ea62ad530a3:0xdc559162a50265bd!8m2!3d52.5268726!4d13.5182414!16s%2Fg%2F1vpprk7k!19sChIJozDVKqZOqEcRvWUCpWKRVdw?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": "",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Malereibetrieb Nitschke",
+      "maps_url": "https://www.google.com/maps/place/Malereibetrieb+Nitschke/data=!4m7!3m6!1s0x47a84c16febe35c7:0x10adb1338c9d3013!8m2!3d52.5558316!4d13.5196542!16s%2Fg%2F1tzghnv1!19sChIJxzW-_hZMqEcREzCdjDOxrRA?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Maler-Schadow Raumdesign",
+      "maps_url": "https://www.google.com/maps/place/Maler-Schadow+Raumdesign/data=!4m7!3m6!1s0x47a84e969c849147:0x8fb1218b21b0a90a!8m2!3d52.5168319!4d13.4928282!16s%2Fg%2F1pzr3vsbs!19sChIJR5GEnJZOqEcRCqmwIYshsY8?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "D&M Maler GmbH",
+      "maps_url": "https://www.google.com/maps/place/D%26M+Maler+GmbH/data=!4m7!3m6!1s0x47a84eb62969c5b9:0x2d20d2ca41a2310b!8m2!3d52.5089723!4d13.5139336!16s%2Fg%2F1w345n1z!19sChIJucVpKbZOqEcRCzGiQcrSIC0?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Closed",
+      "address": "+49 30 81493758"
+    },
+    {
+      "name": "MalerTalent",
+      "maps_url": "https://www.google.com/maps/place/MalerTalent/data=!4m7!3m6!1s0x47a84faff8126461:0x8621972bacb9d0aa!8m2!3d52.528536!4d13.4682807!16s%2Fg%2F11j83rp0k8!19sChIJYWQS-K9PqEcRqtC5rCuXIYY?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 160 95116530"
+    },
+    {
+      "name": "FmB Innen und Aussen Malerei GmbH",
+      "maps_url": "https://www.google.com/maps/place/FmB+Innen+und+Aussen+Malerei+GmbH/data=!4m7!3m6!1s0x47a84e9e86e52c57:0xee5cac38e02c658a!8m2!3d52.5295231!4d13.4969256!16s%2Fg%2F11b6dpb6bf!19sChIJVyzlhp5OqEcRimUs4DisXO4?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Perfect Color Malermeister P.Ranft",
+      "maps_url": "https://www.google.com/maps/place/Perfect+Color+Malermeister+P.Ranft/data=!4m7!3m6!1s0x47a84d6fdbc7e073:0xc76fd06f6e7382a!8m2!3d52.5689!4d13.5252601!16s%2Fg%2F11px0kymdw!19sChIJc-DH229NqEcRKjjn9gb9dgw?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 172 1951836"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Malermeisterei Aderhold",
+      "maps_url": "https://www.google.com/maps/place/Malermeisterei+Aderhold/data=!4m7!3m6!1s0x47a84ec82474029b:0xd6f60a01beb4a397!8m2!3d52.501888!4d13.4768052!16s%2Fg%2F1q65cxlxw!19sChIJmwJ0JMhOqEcRl6O0vgEK9tY?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 30 89759213",
+      "phone": null,
+      "old_or_no_website": "https://www.malermeisterei-aderhold.de",
+      "email": "kontakt@fahrschule-ulmann.de",
+      "branch": "Maler",
+      "region": "Berlin Lichtenberg"
+    }
+  ]
+}

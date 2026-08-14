@@ -33,14 +33,25 @@ ROTATION = [
     ("Kosmetik", "Potsdam"),
     ("Fahrschule", "Brandenburg an der Havel"),
     ("Kfz Werkstatt", "Cottbus"),
+    ("Maler", "Berlin Lichtenberg"),
+    ("Zahnarzt", "Potsdam"),
+    ("Physiotherapie", "Cottbus"),
+    ("Metzgerei", "Frankfurt Oder"),
+    ("Optiker", "Brandenburg an der Havel"),
+    ("Florist", "Berlin Neukölln"),
+    ("Schlüsseldienst", "Potsdam"),
+    ("Heizung Sanitär", "Cottbus"),
 ]
-# bereits gepruefte Kombinationen (nicht erneut) - Stand 14.08. abend
+# bereits gepruefte Kombinationen (Stand 14.08. abend, nach 10x-Local-Lauf)
 DONE = {
     ("Elektriker", "Berlin Neukölln"),
     ("Friseur", "Potsdam"),
     ("Bäcker", "Brandenburg an der Havel"),
     ("Reinigung", "Cottbus"),
     ("Tischler", "Frankfurt Oder"),
+    ("Kosmetik", "Potsdam"),
+    ("Fahrschule", "Brandenburg an der Havel"),
+    ("Kfz Werkstatt", "Cottbus"),
 }
 
 TZ = timezone(timedelta(hours=2))
@@ -49,19 +60,23 @@ def load_state():
     p = DATA / "pipeline_state.json"
     if p.exists():
         return json.loads(p.read_text())
-    return {"last_idx": -1}
+    return {"last_idx": -1, "done": []}
 
-def save_state(idx):
-    (DATA / "pipeline_state.json").write_text(json.dumps({"last_idx": idx}))
+def save_state(idx, done=None):
+    state = {"last_idx": idx}
+    if done:
+        state["done"] = [list(d) for d in done]
+    (DATA / "pipeline_state.json").write_text(json.dumps(state))
 
 def next_segment():
     st = load_state()
     idx = st["last_idx"]
+    done = set(tuple(d) for d in st.get("done", [])) | DONE
     for _ in range(len(ROTATION)):
         idx = (idx + 1) % len(ROTATION)
-        if ROTATION[idx] not in DONE:
+        if ROTATION[idx] not in done:
             return idx, ROTATION[idx]
-    # alle done -> naechstes einfach
+    # alle done -> naechstes einfach (verhindert Deadlock)
     idx = (idx + 1) % len(ROTATION)
     return idx, ROTATION[idx]
 
@@ -104,12 +119,24 @@ def main():
     print(f"\n>>> {len(leads)} qualifizierte Hot-Leads")
 
     sent = []
+    # Globale Dubletten-Sperre: Adressen, die schon einmal kontaktiert wurden
+    logp = DATA / "microsite_sent_emails.json"
+    already = set()
+    if logp.exists():
+        try:
+            already = {e.get("email", "").lower() for e in json.loads(logp.read_text()).get("sent_emails", [])}
+        except Exception:
+            already = set()
+
     for lead in leads[:2]:  # max 2 pro Lauf
         name = lead.get("name", "Unbekannt")
         email = lead.get("email", "")
         print(f"\n--- Lead: {name} <{email}> ---")
         if not email:
             print("  keine E-Mail -> uebersprungen")
+            continue
+        if email.lower() in already:
+            print(f"  DUPLIKAT: {email} bereits kontaktiert -> uebersprungen (Spam-Schutz)")
             continue
 
         # 2) Lead-JSON fuer Generator aufbereiten
@@ -181,7 +208,10 @@ def main():
     print(f"\nReport: {rep_path}")
 
     if idx >= 0:
-        save_state(idx)
+        # Segment als done markieren (persistent, verhindert Dubletten ueber Laeufe)
+        done = set(tuple(d) for d in load_state().get("done", [])) | DONE
+        done.add((branch, region))
+        save_state(idx, done)
     return 0
 
 if __name__ == "__main__":

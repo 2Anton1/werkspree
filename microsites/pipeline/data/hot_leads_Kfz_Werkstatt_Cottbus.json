@@ -24,7 +24,8 @@
       "rating": 4.9,
       "category": "Car repair and maintenance service",
       "address": "Stadtring 3",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Car service Mende & Wiesner - Car Meisterbetrieb",
@@ -42,7 +43,7 @@
       "address": "Karl-Liebknecht-Straße 43",
       "phone": null,
       "old_or_no_website": "http://www.autohausfrunzke.de",
-      "email": "info@ute-stonner.de",
+      "email": "kontakt@fahrschule-ulmann.de",
       "branch": "Kfz Werkstatt",
       "region": "Cottbus"
     },
@@ -68,7 +69,8 @@
       "rating": 4.8,
       "category": "Auto repair shop",
       "address": "Drewitzer Str. 8a",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": "http://www.autokraft-cottbus.de"
     },
     {
       "name": "Jens Schomber Ströbitzer Boxengasse",
@@ -76,7 +78,8 @@
       "rating": 5.0,
       "category": "Auto repair shop",
       "address": "Fichtestraße 4",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Auto Linke Inh. Marco Neumann",
@@ -84,7 +87,8 @@
       "rating": 4.7,
       "category": "Auto repair shop",
       "address": "Merzdorfer Weg 36",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Autoreparatur M. Senkel Fahrzeug GmbH Autoreparatur",
@@ -152,7 +156,7 @@
       "address": "Karl-Liebknecht-Straße 43",
       "phone": null,
       "old_or_no_website": "http://www.autohausfrunzke.de",
-      "email": "info@ute-stonner.de",
+      "email": "kontakt@fahrschule-ulmann.de",
       "branch": "Kfz Werkstatt",
       "region": "Cottbus"
     }
