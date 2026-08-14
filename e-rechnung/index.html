@@ -257,5 +257,17 @@
 }
 </script>
 
+<script>
+/* Werkspree conversion tracking — fire-and-forget events to n8n webhook */
+(function(){
+  var API="https://n8n.anton-drooff.de/webhook/werkspree-tracking";
+  function sid(){try{var k="ws_sid";var v=localStorage.getItem(k);if(!v){v=Math.random().toString(36).slice(2);localStorage.setItem(k,v);}return v;}catch(e){return "anon";}}
+  function track(ev,meta){try{var p={event:ev,page:location.pathname,sid:sid(),ts:new Date().toISOString(),meta:meta||{}};if(navigator.sendBeacon){navigator.sendBeacon(API,new Blob([JSON.stringify(p)],{type:"application/json"}));}else{fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(p),keepalive:true}).catch(function(){});}}catch(e){}}
+  track("page_view");
+  document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a"):null;if(!a)return;var h=a.getAttribute("href")||"";if(h.indexOf("buy.stripe.com")>-1)track("stripe_click",{link:h});});
+  document.addEventListener("submit",function(e){track("form_submit",{form:(e.target&&(e.target.id||e.target.className||"unknown"))});},{capture:true});
+  document.addEventListener("change",function(e){var el=e.target;if(el&&el.type==="file")track("checker_used",{file:el.files&&el.files[0]?el.files[0].name:""});});
+})();
+</script>
 </body>
 </html>

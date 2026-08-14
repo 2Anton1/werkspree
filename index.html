@@ -1035,7 +1035,7 @@
     <div class="erechnung-banner container" data-reveal>
         <div class="erechnung-banner-inner">
             <span class="badge">Neu</span>
-            <p><strong>E-Rechnungspflicht 2025/2026:</strong> Erfüllt Ihr Betrieb bereits alle Vorgaben? Prüfen Sie Ihre Belege kostenlos &amp; 100% lokal direkt im Browser.</p>
+            <p><strong>E-Rechnungspflicht 2025/2026:</strong> Erfüllt Ihr Betrieb bereits alle Vorgaben? Prüfen Sie Ihre Belege kostenlos &amp; 100% lokal direkt im Browser — und lassen Sie eingehende Rechnungen künftig automatisch prüfen und vorsortieren.</p>
             <a href="e-rechnung-pruefen/" class="btn btn-sm btn-ghost">Rechnung prüfen</a>
         </div>
     </div>
@@ -1263,6 +1263,31 @@
                 </div>
             </div>
             <p class="ust-note" data-reveal>Alle Preise gemäß § 19 Abs. 1 UStG ohne Umsatzsteuerausweis (Kleinunternehmerregelung).</p>
+        </div>
+    </div>
+
+    <!-- Automation Sprint -->
+    <div class="section sprint-section" id="sprint">
+        <div class="container">
+            <span class="section-eyebrow" data-reveal>Der Einstieg</span>
+            <h2 class="section-title" data-reveal>Automation Sprint — 14 Tage, ein Prozess, messbares Ergebnis</h2>
+            <p data-reveal>Wir automatisieren in 14 Tagen genau einen Büroprozess bei Ihnen — mit menschlicher Freigabe und messbarer Zeitersparnis. Kein Rundum-Paket, kein IT-Projekt: ein konkreter Ablauf, der Ihnen ab Tag 15 Zeit spart.</p>
+            <div class="cards">
+                <div class="card featured" data-reveal>
+                    <h3>Automation Sprint</h3>
+                    <p class="desc">Der klar kalkulierte Einstieg für Handwerk &amp; Dienstleister in Berlin/Brandenburg.</p>
+                    <div class="price"><span class="accent-num">890€</span> <small>einmalig</small></div>
+                    <ul>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Prozessanalyse &amp; Zieldefinition</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Einrichtung eines Workflows (z. B. Rechnungs-OCR)</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Getestet mit 3 Normalfällen + 1 Fehlerfall</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Übergabe-Dokumentation &amp; Freigabeprozess</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>14-Tage-Erfolgsmessung — Zeitersparnis schwarz auf weiß</li>
+                    </ul>
+                    <a href="#kontakt" class="btn">Erstgespräch anfragen</a>
+                    <p class="sprint-note">Alle Aktionen laufen mit menschlicher Freigabe — finanziell &amp; irreversibel bleibt alles manuell.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -1511,5 +1536,17 @@
             });
         })();
     </script>
+<script>
+/* Werkspree conversion tracking — fire-and-forget events to n8n webhook */
+(function(){
+  var API="https://n8n.anton-drooff.de/webhook/werkspree-tracking";
+  function sid(){try{var k="ws_sid";var v=localStorage.getItem(k);if(!v){v=Math.random().toString(36).slice(2);localStorage.setItem(k,v);}return v;}catch(e){return "anon";}}
+  function track(ev,meta){try{var p={event:ev,page:location.pathname,sid:sid(),ts:new Date().toISOString(),meta:meta||{}};if(navigator.sendBeacon){navigator.sendBeacon(API,new Blob([JSON.stringify(p)],{type:"application/json"}));}else{fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(p),keepalive:true}).catch(function(){});}}catch(e){}}
+  track("page_view");
+  document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a"):null;if(!a)return;var h=a.getAttribute("href")||"";if(h.indexOf("buy.stripe.com")>-1)track("stripe_click",{link:h});});
+  document.addEventListener("submit",function(e){track("form_submit",{form:(e.target&&(e.target.id||e.target.className||"unknown"))});},{capture:true});
+  document.addEventListener("change",function(e){var el=e.target;if(el&&el.type==="file")track("checker_used",{file:el.files&&el.files[0]?el.files[0].name:""});});
+})();
+</script>
 </body>
 </html>
