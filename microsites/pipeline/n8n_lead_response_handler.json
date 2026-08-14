@@ -2,81 +2,73 @@
   "name": "Werkspree Lead-Response-Handler",
   "nodes": [
     {
-      "parameters": {
-        "rule": {
-          "interval": [{"field": "seconds", "interval": 900}]
-        }
-      },
-      "name": "Poll every 15min",
-      "type": "n8n-nodes-base.schedule",
-      "typeVersion": 1,
-      "position": [240, 300]
+      "parameters": { "rule": { "interval": [{ "field": "seconds", "interval": 900 }] } },
+      "id": "a1", "name": "Poll every 15min", "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2, "position": [240, 300]
     },
     {
       "parameters": {
-        "host": "imap.strato.de",
-        "port": 993,
-        "secure": true,
-        "user": "kontakt@werkspree.bki-de.de",
+        "host": "imap.strato.de", "port": 993, "secure": true,
+        "user": "kontakt@bki-de.de",
         "password": "={{ $env.STRATO_IMAP_PASS }}",
-        "mailbox": "INBOX",
-        "postProcessAction": "nothing",
-        "customEmailConfig": {"ignoreSSLIssues": false}
+        "mailbox": "INBOX", "postProcessAction": "nothing", "customEmailConfig": {}
       },
-      "name": "Strato IMAP (kontakt@)",
-      "type": "n8n-nodes-base.emailReadImap",
-      "typeVersion": 2,
-      "position": [460, 300],
-      "credentials": {"imap": "strato_kontakt"}
+      "id": "b1", "name": "Strato IMAP (kontakt@)", "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2, "position": [460, 300]
     },
     {
       "parameters": {
-        "functionCode": "// Extrahiere Absender-Domain + prüfe ob Lead-Antwort\nconst mail = $('Strato IMAP (kontakt@)').first().json;\nconst from = mail.from || '';\nconst subject = mail.subject || '';\nconst body = mail.text || mail.html || '';\n// Match gegen bekannte Leads aus microsite_sent_emails.json (via Airtable)\nreturn [{ json: { from, subject, body, receivedAt: mail.date } }];"
+        "functionCode": "// Extrahiere Absender + Betreff + Text\nconst m = $('Strato IMAP (kontakt@)').first().json;\nconst from = (m.from || m.sender || '');\nconst subject = m.subject || '';\nconst body = m.textPlain || m.textHtml || m.text || '';\n// Absender-Domain als Key fuer Airtable-Match (Email-Feld)\nconst emailMatch = (from.match(/[\\w.+-]+@[\\w-]+\\.[\\w.-]+/) || [''])[0];\nreturn [{ json: { from, emailMatch, subject, body, receivedAt: m.date } }];"
       },
-      "name": "Parse Response",
-      "type": "n8n-nodes-base.function",
-      "typeVersion": 1,
-      "position": [680, 300]
+      "id": "c1", "name": "Parse Response", "type": "n8n-nodes-base.code",
+      "typeVersion": 2, "position": [680, 300]
     },
     {
       "parameters": {
-        "operation": "update",
-        "table": "Leads",
-        "fields": {
-          "responded": true,
-          "last_response_at": "={{ $json.receivedAt }}",
-          "response_summary": "={{ $json.body.slice(0, 500) }}"
+        "method": "PATCH",
+        "url": "=https://api.airtable.com/v0/appyMLhXOMHpD5vfT/Leads",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Authorization", "value": "={{ 'Bearer ' + $env.AIRTABLE_API_KEY }}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
         },
-        "matchBy": "email",
-        "matchValue": "={{ $json.from }}"
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\"performUpsert\":{\"fieldsToMergeOn\":[\"Email\"]},\"records\":[{\"fields\":{\"Email\":\"{{ $json.emailMatch }}\",\"responded\":true,\"last_response_at\":\"{{ $json.receivedAt }}\",\"response_summary\":\"{{ $json.body.slice(0,500) }}\"}}]}",
+        "options": {}
       },
-      "name": "Tag in Airtable",
-      "type": "n8n-nodes-base.airtable",
-      "typeVersion": 2,
-      "position": [900, 300],
-      "credentials": {"airtableApi": "werkspree_airtable"}
+      "id": "d1", "name": "Tag in Airtable (REST)", "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2, "position": [900, 300]
     },
     {
       "parameters": {
-        "address": "a2807d@gmail.com",
-        "subject": "=?utf-8?B?{{ $json.subject }}?=",
-        "message": "Neue Antwort von Hot-Lead:\n\nVon: {{ $json.from }}\nBetreff: {{ $json.subject }}\n\n{{ $json.body.slice(0, 1000) }}\n\n--\nWerkspree Lead-Response-Handler",
-        "from": "Werkspree Bot <kontakt@werkspree.bki-de.de>"
+        "fromEmail": "kontakt@bki-de.de",
+        "toEmail": "a2807d@gmail.com",
+        "subject": "=?utf-8?B?{{ $items('Parse Response')[0].json.subject }}?=",
+        "emailFormat": "text",
+        "message": "Neue Antwort von Hot-Lead:\n\nVon: {{ $items('Parse Response')[0].json.from }}\nBetreff: {{ $items('Parse Response')[0].json.subject }}\n\n{{ $items('Parse Response')[0].json.body.slice(0,1000) }}\n\n--\nWerkspree Lead-Response-Handler",
+        "send": {
+          "smtpHost": "smtp.strato.de",
+          "smtpPort": 465,
+          "smtpUser": "kontakt@bki-de.de",
+          "smtpPassword": "={{ $env.STRATO_IMAP_PASS }}",
+          "secure": true
+        },
+        "options": {}
       },
-      "name": "Notify Finn (Email)",
-      "type": "n8n-nodes-base.emailSend",
-      "typeVersion": 2,
-      "position": [1120, 300],
-      "credentials": {"smtp": "strato_smtp"}
+      "id": "e1", "name": "Notify Finn (Email)", "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1, "position": [1120, 300]
     }
   ],
   "connections": {
-    "Poll every 15min": {"main": [["Strato IMAP (kontakt@)"]]},
-    "Strato IMAP (kontakt@)": {"main": [["Parse Response"]]},
-    "Parse Response": {"main": [["Tag in Airtable"]]},
-    "Tag in Airtable": {"main": [["Notify Finn (Email)"]]}
+    "Poll every 15min": { "main": [[{ "node": "Strato IMAP (kontakt@)", "type": "main", "index": 0 }]] },
+    "Strato IMAP (kontakt@)": { "main": [[{ "node": "Parse Response", "type": "main", "index": 0 }]] },
+    "Parse Response": { "main": [[{ "node": "Tag in Airtable (REST)", "type": "main", "index": 0 }]] },
+    "Tag in Airtable (REST)": { "main": [[{ "node": "Notify Finn (Email)", "type": "main", "index": 0 }]] }
   },
-  "settings": {},
-  "active": false,
-  "tags": ["werkspree", "hot-leads"]
+  "settings": { "executionOrder": "v1" }
 }
