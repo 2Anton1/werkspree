@@ -191,6 +191,7 @@
 |---|---|---|---|
 | e1e5b8283664 | Werkspree Lead Pipeline | Täglich 10:00 | Leads scrapen, qualifizieren und für CRM vorbereiten; Versand standardmäßig deaktiviert |
 | 8a0ea7b0e123 | GitHub Pages SSL Check | Alle 30 Min | SSL-Zertifikat prüfen + HTTPS aktivieren (12x wiederholend) |
+| 251104e77a29 | Werkspree Hot-Lead Microsites (Poncho Enrichment, Draft Only) | Alle 48 Stunden | Maps-Discovery → Poncho/StableEnrich-Enrichment → max. 2 Microsite-Kandidaten, nur lokale E-Mail-Entwürfe |
 
 ---
 
@@ -202,6 +203,7 @@ STRIPE_PUBLIC_KEY=...  (pk_live_...)
 STRIPE_SECRET_KEY=...  (sk_live_...)
 AIRTABLE_API_KEY=...   (pat...)
 N8N_API_KEY=...        (eyJhbG...)
+PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/ausgeben)
 ```
 
 ---
@@ -263,6 +265,48 @@ N8N_API_KEY=...        (eyJhbG...)
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 11.08.2026 — Design- & Inhalts-Upgrade der Landing-Page (index.html)
+
+- **Aisthesis & Typografie (1 A)**: Google Fonts Inter (Fließtext) & Plus Jakarta Sans (Überschriften) integriert. Globale Typografie harmonisiert.
+- **Interaktive Demos (1 B)**: Stilisierte, rein in CSS/HTML gebaute Visualisierungen für OCR-Scan, n8n-Workflow und WhatsApp-Kundenbot hinzugefügt.
+- **ROI-Rechner (1 C)**: Slider-basierter Ersparnisrechner zur Visualisierung von Zeit-/Geldersparnis mit Amortisationsanzeige für das Starter-Abo (290€/Mo).
+- **Ansprechpartner & Trust (2 A)**: Gründer-Profil von Finn Werksby mit CSS-Gradient-Avatar hinzugefügt.
+- **Conversion-Hebel (2 C)**: Direktbuchung über Cal.com sowie Callback-Optionen und Rufnummern-Platzhalter integriert.
+- **Inbound-Banner (2 D)**: Auffälliges Alert-Banner direkt unter dem Hero-Bereich zur Verlinkung des E-Rechnungs-Prüfers.
+- **Qualitätssicherung**: Vollständige W3C-HTML-Konformität via `html-validate` sichergestellt (keine Fehler, keine Warnungen).
+
+### 14.08.2026 — Cron-Lauf Hot-Lead-Pipeline: Segment-Rotation auf Elektriker/Neukölln, keine qualifizierten Leads
+
+- Gemäß neuer Skill-Vorgabe (Segment-Rotation, da Restaurant in Berlin fast durchgängig aktive Websites hat: 3 Läufe im August 2026 mit 0 qualifizierten Leads) erstmals ein Nicht-Restaurant-Segment gewählt: **Elektriker / Berlin Neukölln** (erster Eintrag der vorgegebenen Rotation Elektriker → Friseur/Salon → Bäckerei/Café → Reinigung → Tischler/Schreiner → Kosmetik/Beauty → Fahrschule → Kfz-Werkstatt).
+- Vor dem Lauf `latest_hot_leads_run.json`, `microsites/pipeline/data/microsite_sent_emails.json` (leer/nicht vorhanden) und `scraper/data/sent_emails.json` (Elektriker Berlin bereits per E-Mail kontaktiert, aber andere Firmen/Kiez — kein Konflikt) geprüft.
+- `poncho_enrichment.py "Elektriker" "Berlin Neukölln"` mit den vorgeschriebenen Caps (`max_results=20`, `max_detail=8`, Rating >= 4.4) ausgeführt. Ergebnis: 10 Maps-Treffer über der Rating-Schwelle, 8 Detailkandidaten tiefgeprüft (Cap exakt eingehalten), Kosten 0,50 USD (nachvollziehbar über Poncho-Chat-ID `7b379c11-30f7-4ef2-9a92-72560f65e230`).
+- Alle 8 tiefgeprüften Elektrobetriebe hatten eine aktuelle, aktive eigene Website (HTTP oder HTTPS, teils mit wenigen Reviews) — keiner erfüllte die Website-Lücken-Bedingung (`outdated`/`dead`/`no_website`). Damit 0 qualifizierte Leads.
+- Kein Lovable-Aufruf, keine Microsite, kein E-Mail-Entwurf, kein Versand. `data/latest_hot_leads_run.json` aktualisiert (Segment-Rotation-Notiz ergänzt: nächster Lauf soll Segment 2 = Friseur/Salon mit Kiez Wedding versuchen, falls dieser Lauf erneut leer bleibt).
+- Keine anderen Werkspree-Dienste, Server oder Cronjobs verändert.
+
+### 13.08.2026 — Cron-Lauf Hot-Lead-Pipeline: Live-Poncho-Lauf, keine qualifizierten Leads
+
+- Zweistufige Pipeline gemäß Skill ausgeführt: Discovery-Cap 20 Maps-Ergebnisse, Detail-Cap 8, Rating >= 4.4, `poncho_enrichment.py` mit genau `max_results=20`/`max_detail=8` aufgerufen.
+- Erster Versuch (`restaurant`/`Berlin Kreuzberg`) überschritt das interne Skript-Timeout von 240s, weil der Poncho-Chat länger lief. Statt eines zweiten (kostenpflichtigen) Laufs wurde dieselbe `chat_id` erneut mit längerem Timeout abgefragt — kein doppelter Research-Spend.
+- Ergebnis: valides JSON, Kosten nachvollziehbar (0,35 USD), 15 Maps-Ergebnisse, 9 Detailseiten geprüft (1 mehr als der angeforderte Cap von 8 — als Diskrepanz in `latest_hot_leads_run.json` vermerkt, aber ohne Auswirkung auf Bau-/Versandentscheidung). Alle 9 tief geprüften Kandidaten hatten eine aktuelle, aktive eigene Website — kein Lead erfüllte die Website-Lücken-Bedingung.
+- Damit: keine Microsite gebaut, kein Lovable-Aufruf, kein E-Mail-Entwurf, kein Versand. `sent_emails.json` und vorhandene Microsite-/Pipeline-Dateien wurden vorher geprüft (keine Überschneidung relevant, da 0 Kandidaten).
+- Frühere Testergebnisse (Carambar, Cantina Mexicana Que Pasa, Gaffel Haus Berlin) aus dem vorherigen Poncho-Test wurden gegen `sent_emails.json` und Microsite-Daten abgeglichen: keine Treffer, keine bestehenden Artefakte. Sie wurden in diesem Lauf nicht erneut aufgegriffen (andere Region).
+- `data/latest_hot_leads_run.json` aktualisiert (Poncho-Chat-ID, Kosten, Maps-/Detail-Zahlen, blockierte Leads mit Gründen, leere Kandidaten-/Microsite-/Entwurfslisten).
+- Keine anderen Werkspree-Dienste, Server oder Cronjobs verändert.
+- Nächster Schritt für den folgenden Lauf: andere Branch/Region-Kombination aus der Rotation wählen (Kreuzberg-Gastro ist gesättigt mit aktuellen Websites).
+
+### 11.08.2026 — Poncho/StableEnrich-Enrichment in Hot-Lead-Pipeline integriert
+
+- Anton hat einen Poncho-API-Key bereitgestellt. Der Key wurde sicher als `PONCHO_API_KEY` in `~/.hermes/.env` gespeichert (Dateimodus 0600); er steht nicht im Repository und wird in Logs nicht ausgegeben.
+- Die programmierbare Poncho-API läuft unter `https://tryponcho.com/api/v1`; das API-Schema wurde über `https://tryponcho.com/api/openapi.json` geprüft. Die native `/api/resources`-Route benötigt SIWX und ist nicht der richtige Pfad für den API-Key.
+- Neue Datei `microsites/pipeline/poncho_client.py`: token-armer Client für `POST /api/v1/chats` und Polling über `GET /api/v1/chats/{chatId}/result`; liest den Key aus Umgebung oder `~/.hermes/.env`, druckt ihn nicht.
+- Neue Datei `microsites/pipeline/poncho_enrichment.py`: strikte Qualifikation. Maximal 20 Maps-Ergebnisse, maximal 8 Deep-Enrichment-Kandidaten, Rating >= 4.4, Website-Status nur `outdated`/`dead`/`no_website`, öffentlich belegte E-Mail mit `email_verified == yes`, E-Mail-Quell-URL zwingend. Maximal 2 finale Leads. Schreibt `data/latest_hot_leads_run.json`.
+- Neue Datei `microsites/pipeline/test_poncho_enrichment.py`: 6 lokale Qualifikationstests bestanden. Zusätzlich `py_compile` für alle neuen Python-Dateien bestanden.
+- Cron `251104e77a29` aktualisiert: Name „Werkspree Hot-Lead Microsites (Poncho Enrichment, Draft Only)", alle 48 Stunden. Poncho ist nur Enrichment; Lovable bleibt auf maximal zwei qualifizierte Leads begrenzt; es werden ausschließlich lokale E-Mail-Entwürfe erzeugt, niemals gesendet.
+- Testreferenz: Poncho-Testlauf mit den gelieferten Artefakten kostete insgesamt 0,496 USD (Discovery 0,324 USD + Deep Verification 0,172 USD) und ergab drei verifizierte outdated/no-website Leads: Carambar, Cantina Mexicana Que Pasa, Gaffel Haus Berlin. Diese Namen sind nur Testergebnis, nicht automatisch als bereits freigegeben oder kontaktiert zu behandeln; vor jeder Aktion muss der aktuelle CRM-/Sent-Status geprüft werden.
+- Wichtig: Der neue Client wurde noch nicht durch einen kostenpflichtigen Live-API-Lauf aus der Pipeline getestet. Der erste Cronlauf muss Fehler, JSON-Vertrag und Kosten protokollieren und bei Unsicherheit blockieren.
+
 
 ### 09.08.2026 — Marketing: Inbound-Strategie aufgesetzt und erste zwei Bausteine live
 
