@@ -53,7 +53,9 @@ def save_sent(sent):
 
 def load_templates():
     with open(TEMPLATES_FILE, encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    # Templates are nested under "templates" in the JSON file
+    return data.get("templates", data)
 
 
 def get_eligible_leads(leads, sent):
@@ -210,7 +212,7 @@ def main():
         template = templates.get(action, templates["initial"])
 
         company = lead["company_name"]
-        to = lead.get("verified_email") or lead.get("email", "")
+        to = lead.get("verified_email") or lead.get("email") or sent.get(company, {}).get("email", "")
         score = lead.get("warmth_score", 0)
 
         if not to:
