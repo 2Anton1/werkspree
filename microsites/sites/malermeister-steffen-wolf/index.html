@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Malermeister Steffen Wolf | Cottbus</title>
+<meta name="description" content="Malermeister Steffen Wolf – Ihr Meisterbetrieb für Maler-, Tapezier- und Lackierarbeiten in Cottbus und Umgebung. Fachgerecht, sauber, termintreu.">
+<style>
+  :root {
+    --color-bg: #fafafa;
+    --color-surface: #ffffff;
+    --color-text: #1a1a2e;
+    --color-text-muted: #4a4a68;
+    --color-primary: #1e3a5f;      /* Tiefes Meister-Blau */
+    --color-primary-light: #2d5a8a;
+    --color-accent: #d4762e;       /* Warmer Ocker/Terracotta als Akzent */
+    --color-accent-hover: #b86426;
+    --color-border: #e0e0e8;
+    --color-shadow: rgba(30, 58, 95, 0.08);
+    --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --transition: 0.3s ease;
+    --container: 1120px;
+    --header-h: 72px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.65;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; transition: color var(--transition); }
+  a:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 3px; border-radius: 4px; }
+  ul { list-style: none; }
+  .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 1.5rem; }
+
+  /* Header / Hero */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    height: var(--header-h);
+  }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; height: 100%; }
+  .logo { display: flex; align-items: baseline; gap: 0.75rem; }
+  .logo-mark {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    display: grid; place-items: center; color: white; font-weight: 800; font-size: 1.1rem;
+    box-shadow: 0 4px 12px var(--color-shadow);
+  }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo-name { font-weight: 700; font-size: 1.15rem; color: var(--color-primary); letter-spacing: -0.02em; }
+  .logo-tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); font-weight: 600; }
+
+  .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+  .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.25rem; border-radius: var(--radius-sm); font-weight: 600; font-size: 0.9rem; border: 2px solid transparent; cursor: pointer; transition: all var(--transition); white-space: nowrap; }
+  .btn-primary { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+  .btn-primary:hover { background: var(--color-primary-light); border-color: var(--color-primary-light); transform: translateY(-1px); box-shadow: 0 4px 14px var(--color-shadow); }
+  .btn-accent { background: var(--color-accent); color: white; border-color: var(--color-accent); }
+  .btn-accent:hover { background: var(--color-accent-hover); border-color: var(--color-accent-hover); transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--color-primary); border-color: var(--color-primary); }
+  .btn-ghost:hover { background: var(--color-primary); color: white; }
+
+  /* Hero Section */
+  .hero { padding: 5rem 0 4rem; background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%); }
+  .hero-grid { display: grid; gap: 3rem; align-content: start; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.9rem; background: #fff3e8; color: var(--color-accent); border-radius: 100px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border: 1px solid #ffe0c2; width: fit-content; margin-bottom: 1.25rem; }
+  .hero-badge::before { content: ""; width: 8px; height: 8px; background: var(--color-accent); border-radius: 50%; }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.15; font-weight: 800; color: var(--color-primary); letter-spacing: -0.03em; margin-bottom: 1rem; }
+  .hero-lead { font-size: clamp(1.1rem, 2.5vw, 1.3rem); color: var(--color-text-muted); max-width: 55ch; margin-bottom: 2rem; font-weight: 400; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+  .hero-trust { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--color-border); font-size: 0.9rem; color: var(--color-text-muted); }
+  .trust-item { display: flex; align-items: center; gap: 0.4rem; font-weight: 500; }
+  .trust-item svg { color: var(--color-accent); flex-shrink: 0; }
+
+  /* Sections */
+  section { padding: 4.5rem 0; }
+  .section-header { text-align: center; max-width: 60ch; margin: 0 auto 3.5rem; }
+  .section-label { display: inline-block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: 700; color: var(--color-accent); margin-bottom: 0.75rem; }
+  .section-title { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; color: var(--color-primary); line-height: 1.2; letter-spacing: -0.02em; }
+  .section-divider { width: 60px; height: 4px; background: linear-gradient(90deg, var(--color-primary), var(--color-accent)); border-radius: 2px; margin: 1rem auto 0; }
+
+  /* About */
+  .about { background: var(--color-surface); }
+  .about-grid { display: grid; gap: 3rem; align-items: start; }
+  .about-text p { margin-bottom: 1.25rem; color: var(--color-text-muted); }
+  .about-text p:last-child { margin-bottom: 0; }
+  .about-text strong { color: var(--color-text); }
+  .about-highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+  .highlight-card { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 1.5rem; text-align: center; transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition); }
+  .highlight-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px var(--color-shadow); border-color: var(--color-primary); }
+  .highlight-icon { width: 56px; height: 56px; margin: 0 auto 1rem; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); border-radius: 14px; display: grid; place-items: center; color: white; }
+  .highlight-value { font-size: 1.8rem; font-weight: 800; color: var(--color-primary); line-height: 1; margin-bottom: 0.25rem; }
+  .highlight-label { font-size: 0.85rem; color: var(--color-text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  /* Services */
+  .services { background: var(--color-bg); }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+  .service-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 2rem; display: flex; flex-direction: column; transition: all var(--transition); position: relative; overflow: hidden; }
+  .service-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--color-primary), var(--color-accent)); transform: scaleX(0); transform-origin: left; transition: transform var(--transition); }
+  .service-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px var(--color-shadow); border-color: transparent; }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon { width: 56px; height: 56px; border-radius: 14px; background: #f0f3f8; color: var(--color-primary); display: grid; place-items: center; margin-bottom: 1.25rem; transition: all var(--transition); }
+  .service-card:hover .service-icon { background: var(--color-primary); color: white; }
+  .service-title { font-size: 1.2rem; font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem; }
+  .service-desc { color: var(--color-text-muted); font-size: 0.95rem; flex-grow: 1; }
+
+  /* Hours & Contact Combined Grid */
+  .info-section { background: var(--color-surface); }
+  .info-grid { display: grid; gap: 2.5rem; align-items: start; }
+  .info-card { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 2rem; }
+  .info-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--color-primary); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.6rem; }
+  .info-card h3 svg { color: var(--color-accent); }
+
+  /* Hours Table */
+  .hours-table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .hours-table th, .hours-table td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--color-border); }
+  .hours-table th { font-weight: 600; color: var(--color-text); width: 40%; }
+  .hours-table td { color: var(--color-text-muted); font-weight: 500; }
+  .hours-table tr:last-child th, .hours-table tr:last-child td { border-bottom: none; }
+  .hours-table tr:hover td { color: var(--color-primary); }
+  .closed { color: #c0392b; font-weight: 600; }
+
+  /* Contact List */
+  .contact-list { display: flex; flex-direction: column; gap: 1.25rem; }
+  .contact-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-sm); transition: all var(--transition); }
+  .contact-item:hover { border-color: var(--color-primary); box-shadow: 0 4px 16px var(--color-shadow); }
+  .contact-icon { width: 44px; height: 44px; border-radius: 10px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); color: white; display: grid; place-items: center; flex-shrink: 0; }
+  .contact-content { display: flex; flex-direction: column; gap: 0.15rem; }
+  .contact-label { font-size: 0.75rem; text-transform: uppercase; letter
