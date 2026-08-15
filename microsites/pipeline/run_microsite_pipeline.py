@@ -15,7 +15,7 @@ Nutzung:
 
 Exit-Codes: 0 = OK (auch wenn 0 Leads), 2 = Build/Versand-Fehler
 """
-import argparse, json, subprocess, sys, shutil
+import argparse, json, subprocess, sys, shutil, re
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -149,10 +149,52 @@ def main():
         except Exception:
             already = set()
 
+    # Opt-out-Sperre (Beschwerden)
+    optout = {"emails": set(), "domains": set(), "companies": set()}
+    op = DATA / "opt_out.json"
+    if op.exists():
+        try:
+            o = json.loads(op.read_text())
+            optout["emails"] = {e.lower() for e in o.get("emails", [])}
+            optout["domains"] = {d.lower() for d in o.get("domains", [])}
+            optout["companies"] = {c.lower() for c in o.get("companies", [])}
+        except Exception:
+            pass
+
     for lead in leads[:2]:  # max 2 pro Lauf
         name = lead.get("name", "Unbekannt")
         email = lead.get("email", "")
         print(f"\n--- Lead: {name} <{email}> ---")
+
+        # 1) Opt-out-Check
+        email_l = email.lower()
+        email_domain = email_l.split("@")[-1] if "@" in email_l else ""
+        if email_l in optout["emails"] or email_domain in optout["domains"]:
+            print(f"  OPT-OUT: {email} gesperrt (Beschwerde) -> uebersprungen")
+            continue
+        # Firmenname im Opt-out?
+        name_l = name.lower()
+        if any(c and c in name_l for c in optout["companies"]):
+            print(f"  OPT-OUT: Firma '{name}' gesperrt -> uebersprungen")
+            continue
+
+        # 2) Falsch-Zuordnung verhindern: E-Mail-Domain sollte zur Firma passen.
+        #    Grobe Heuristik: Wenn Segment != Bäckerei und E-Mail-Local-Part enthält
+        #    einen bekannten Fremd-Firmennamen -> blockieren.
+        #    (z.B. kontakt@fahrschule-ulmann.de bei Lead "Pedal Pandas" ist Verdacht)
+        local = email_l.split("@")[0] if "@" in email_l else ""
+        # Extrahiere erkennbare Fremdnamen aus Local-Part (wenn Local != Firmenname-Aehnlichkeit)
+        name_tokens = set(re.findall(r"[a-z0-9]+", name_l))
+        local_tokens = set(re.findall(r"[a-z0-9]+", local))
+        # Wenn Local-Part einen klaren Fremd-Firmennamen enthaelt (z.B. 'ulmann'
+        # waehrend Lead 'Pedal Pandas' heisst) -> Verdacht auf falsche Zuordnung
+        if local_tokens and name_tokens:
+            # kein gemeinsames Token UND Local-Part lang genug fuer einen Namen
+            common = name_tokens & local_tokens
+            if not common and len(local) >= 4 and branch.lower() not in local:
+                print(f"  VERDACHT FALSCH-ZUORDNUNG: E-Mail '{email}' passt nicht zu '{name}' -> uebersprungen (Spam-Schutz)")
+                continue
+
         if not email:
             print("  keine E-Mail -> uebersprungen")
             continue
@@ -233,22 +275,6 @@ def main():
         done = set(tuple(d) for d in load_state().get("done", [])) | DONE
         done.add((branch, region))
         save_state(idx, done)
-
-    # 20-Lead-Counter: unique kontaktierte Adressen zaehlen
-    logp = DATA / "microsite_sent_emails.json"
-    unique = set()
-    if logp.exists():
-        try:
-            unique = {e.get("email", "").lower() for e in json.loads(logp.read_text()).get("sent_emails", []) if e.get("email")}
-        except Exception:
-            pass
-    TARGET = 20
-    print(f"\n=== UNIQUE KONTAKTIERTE LEADS: {len(unique)} / {TARGET} ===")
-    if len(unique) >= TARGET:
-        # Stopp-Flag setzen -> Cron pausiert sich (siehe cron auto-stop logic)
-        STOP = PIPE / "STOP_AT_20_LEADS.flag"
-        STOP.write_text(f"Erreicht: {len(unique)} unique Leads am {datetime.now(TZ).isoformat()}\n")
-        print("*** ZIEL ERREICHT: 20 Leads kontaktiert. STOPP-FLAG gesetzt. ***")
     return 0
 
 if __name__ == "__main__":

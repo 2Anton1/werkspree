@@ -37,20 +37,69 @@ def render(template: str, lead: dict) -> str:
     oh = lead.get("opening_hours", {})
     rows = "".join(
         f"<tr><td>{d}</td><td>{t}</td></tr>" for d, t in [
-            ("Dienstag", oh.get("Di", "07:00–17:00")),
-            ("Mittwoch", oh.get("Mi", "07:00–17:00")),
-            ("Donnerstag", oh.get("Do", "07:00–13:00")),
-            ("Freitag", oh.get("Fr", "07:00–16:00")),
-            ("Samstag", oh.get("Sa", "07:00–10:00")),
+            ("Dienstag", oh.get("Di", "08:00–18:00")),
+            ("Mittwoch", oh.get("Mi", "08:00–18:00")),
+            ("Donnerstag", oh.get("Do", "08:00–18:00")),
+            ("Freitag", oh.get("Fr", "08:00–18:00")),
+            ("Samstag", oh.get("Sa", "08:00–13:00")),
             ("Sonntag", "geschlossen (Ruhetag)"),
             ("Montag", "geschlossen (Ruhetag)"),
         ]
     )
-    prods = lead.get("products") or [
-        ["Brot & Brötchen", "Frisch gebackenes Brot und knusprige Brötchen aus eigener Herstellung – täglich für Sie gebacken."],
-        ["Torten & Konditorei", "Handwerkliche Torten und feine Konditoreiwaren für Feste, Familienfeiern und Genussmomente."],
-        ["Stehcafé", "Kurze Rast mit Kaffee und einem frischen Gebäck – einladend und unkompliziert."],
-    ]
+    # Segment-spezifische Produkte/Leistungen (KEIN Bäckerei-Default!)
+    segment = (lead.get("segment") or "").lower()
+    prods_map = {
+        "bäckerei": [["Brot & Brötchen", "Frisch gebackenes Brot und knusprige Brötchen aus eigener Herstellung – täglich für Sie gebacken."],
+                     ["Torten & Konditorei", "Handwerkliche Torten und feine Konditoreiwaren für Feste, Familienfeiern und Genussmomente."],
+                     ["Stehcafé", "Kurze Rast mit Kaffee und einem frischen Gebäck – einladend und unkompliziert."]],
+        "bäcker": [["Brot & Brötchen", "Frisch gebackenes Brot und knusprige Brötchen aus eigener Herstellung – täglich für Sie gebacken."],
+                    ["Torten & Konditorei", "Handwerkliche Torten und feine Konditoreiwaren für Feste, Familienfeiern und Genussmomente."],
+                    ["Stehcafé", "Kurze Rast mit Kaffee und einem frischen Gebäck – einladend und unkompliziert."]],
+        "friseur": [["Herrenhaarschnitt", "Präzise Schnitte und klassische Rasur – individuell nach Ihrem Stil."],
+                    ["Damenhaarschnitt", "Moderne Trends und zeitlose Looks, die zu Ihnen passen."],
+                    ["Färbung & Pflege", "Schonende Farbtechnik und intensive Haarpflege für gesundes Volumen."]],
+        "fahrschule": [["Pkw-Ausbildung", "Strukturierte Fahrausbildung von der Theorie bis zur Prüfung – geduldig und verbindlich."],
+                       ["Begleitetes Fahren", "Führerschein ab 17 mit persönlicher Betreuung durch erfahrene Fahrlehrer."],
+                       ["Auffrischung", "Praxisnahe Trainings für Wiedereinsteiger und Verkehrssicherheitstrainings."]],
+        "elektriker": [["Installation", "Sicherheitstechnik, Unterverteilungen und Elektro-Installationen nach VDE-Norm."],
+                       ["Reparatur & Wartung", "Schnelle Fehlerbehebung und vorbeugende Wartung Ihrer Anlagen."],
+                       ["Notdienst", "Erreichbar bei Störungen – zügige Hilfe, wenn es brennt (im übertragenen Sinne)."]],
+        "tischler": [["Möbelbau", "Maßgefertigte Möbel aus Massivholz – vom Regal bis zur Einbauküche."],
+                     ["Türen & Fenster", "Passgenaue Türen, Fenster und Reparaturen mit handwerklicher Präzision."],
+                     ["Restaurierung", "Wertige Holzobjekte fachgerecht aufarbeiten und erhalten."]],
+        "reinigung": [["Unterhaltsreinigung", "Regelmäßige Gebäudereinigung für Büro, Praxis und Gewerbe."],
+                      ["Glasreinigung", "Streifenfreie Fenster- und Glasreinigung auch in der Höhe."],
+                      ["Grundreinigung", "Gründliche Erst- und Endreinigung nach Bau oder Umzug."]],
+        "kosmetik": [["Gesichtsbehandlung", "Hautbild verbessernde Treatments – entspannend und wirksam."],
+                     ["Wimpern & Brows", "Gezieltes Styling für einen frischen, gepflegten Look."],
+                     ["Beratung", "Individuelle Hautanalyse und Produktempfehlung."]],
+        "metzgerei": [["Frischfleisch", "Handwerklich zerlegtes Fleisch aus regionaler Herkunft – täglich frisch."],
+                      ["Wurstwaren", "Eigenhergestellte Brat- und Kochwürste nach Hausrezept."],
+                      ["Feinkost", "Salate, Aufschnitt und Partyservice für jeden Anlass."]],
+        "tischlerei": [["Möbelbau", "Maßgefertigte Möbel aus Massivholz – vom Regal bis zur Einbauküche."],
+                       ["Türen & Fenster", "Passgenaue Türen, Fenster und Reparaturen mit handwerklicher Präzision."],
+                       ["Restaurierung", "Wertige Holzobjekte fachgerecht aufarbeiten und erhalten."]],
+        "kfz": [["Inspektion", "Regelmäßige Wartung und HU/AU-Vorbereitung nach Herstellervorgabe."],
+                ["Reparatur", "Motorservice, Bremsen und Fahrwerk – schnell und verbindlich."],
+                ["Reifen", "Wechsel, Lagerung und Auswuchten für sichere Fahrt."]],
+        "autowerkstatt": [["Inspektion", "Regelmäßige Wartung und HU/AU-Vorbereitung nach Herstellervorgabe."],
+                          ["Reparatur", "Motorservice, Bremsen und Fahrwerk – schnell und verbindlich."],
+                          ["Reifen", "Wechsel, Lagerung und Auswuchten für sichere Fahrt."]],
+        "dachdecker": [["Dacheindeckung", "Neueindeckung und Sanierung mit Ziegel, Schiefer oder Metalldeckung."],
+                       ["Dachsanierung", "Dämmung, Unterspannbahn und Gaubenbau aus einer Hand."],
+                       ["Notdienst", "Schnelle Hilfe bei Sturmschäden und Undichtheiten."]],
+        "sanitär": [["Installation", "Bäder, Heizungen und Rohrleitungen nach aktuellem Standard."],
+                    ["Reparatur", "Verstopfungen, Undichtigkeiten und Armaturen-Tausch."],
+                    ["Wartung", "Anlagencheck für effiziente und lange Lebensdauer."]],
+        "gartenbau": [["Gartengestaltung", "Planung und Anlage von Beeten, Rabatten und Terrassen."],
+                      ["Pflege", "Regelmäßiger Schnitt und Saisonpflege Ihrer Grünflächen."],
+                      ["Baumschnitt", "Fachgerechter Schnitt und Sicherung von Gehölzen."]],
+    }
+    prods = lead.get("products") or prods_map.get(segment, [
+        ["Leistungen", "Wir bieten unsere Kernleistungen mit handwerklicher Sorgfalt und persönlicher Betreuung."],
+        ["Beratung", "Individuelle Beratung – wir nehmen uns Zeit für Ihr Anliegen."],
+        ["Kontakt", "Erreichbar für Terminanfragen und Rückfragen."],
+    ])
     cards = "".join(
         f'<div class="card"><h3>{p[0]}</h3><p>{p[1]}</p></div>' for p in prods
     )
@@ -62,18 +111,21 @@ def render(template: str, lead: dict) -> str:
     owner = lead.get("owner", "Inhaber")
     about = lead.get("about", "")
     if not about:
+        # Generic, segment-neutral (KEIN Bäckerei-Claim!)
         about = (
-            f"Die {lead.get('company_name','Bäckerei')} ist eine Traditionsbäckerei in "
-            f"{city}, eingetragen in der Handwerksrolle der Handwerkskammer Potsdam. "
-            "Seit über 36 Jahren stehen wir für handwerklich hergestellte Backwaren, "
-            "bei denen Frische und Qualität an erster Stelle stehen."
+            f"{lead.get('company_name', 'Unser Betrieb')} ist ein etablierter "
+            f"Handwerks- und Dienstleistungsbetrieb in {city}. "
+            "Wir verbinden handwerkliche Sorgfalt mit persönlicher Kundenbetreuung "
+            "und freuen uns, Sie bei Ihrem Anliegen zu unterstützen."
         )
+    tagline = lead.get("tagline", "Ihr verlässlicher Partner vor Ort in " + city)
     replacements = {
         "{{COMPANY}}": lead.get("company_name", ""),
-        "{{TAGLINE}}": lead.get("tagline", "Seit über 36 Jahren ein Begriff für Qualität und Genuss."),
+        "{{TAGLINE}}": tagline,
         "{{ABOUT}}": about,
         "{{OWNER}}": owner,
         "{{CARDS}}": cards,
+        "{{SORTIMENT_CARDS}}": cards,
         "{{ROWS}}": rows,
         "{{ADDR}}": addr,
         "{{CITY}}": city,
@@ -82,7 +134,7 @@ def render(template: str, lead: dict) -> str:
         "{{PHONE_HREF}}": f"tel:{re.sub(r'[^0-9+]', '', phone)}",
         "{{EMAIL}}": email,
         "{{EMAIL_HREF}}": f"mailto:{email}",
-        "{{HANDWERK}}": lead.get("handwerksrolle", "Eingetragen in der Handwerksrolle der Handwerkskammer Potsdam"),
+        "{{HANDWERK}}": lead.get("handwerksrolle", "Eingetragen im lokalen Handelsregister"),
     }
     html = template
     for k, v in replacements.items():

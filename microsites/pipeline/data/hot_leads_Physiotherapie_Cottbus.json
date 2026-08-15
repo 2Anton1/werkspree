@@ -1,0 +1,158 @@
+{
+  "branch": "Physiotherapie",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "Physio Klemp",
+      "maps_url": "https://www.google.com/maps/place/Physio+Klemp/data=!4m7!3m6!1s0x470875671395fd91:0x1e47b41970926035!8m2!3d51.7611912!4d14.3279727!16s%2Fg%2F11r9vwwtlj!19sChIJkf2VE2d1CEcRNWCScBm0Rx4?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Physical therapist",
+      "address": "Bahnhofstraße 1",
+      "phone": "+4935552935606",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "provita Physio - Praxis für Physiotherapie",
+      "maps_url": "https://www.google.com/maps/place/provita+Physio+-+Praxis+f%C3%BCr+Physiotherapie/data=!4m7!3m6!1s0x4708746980dc35c9:0xdcd5cc57eb0b31ea!8m2!3d51.7584577!4d14.3372554!16s%2Fg%2F113h9d739!19sChIJyTXcgGl0CEcR6jEL61fM1dw?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Physical therapist",
+      "address": "Rosenstraße 4",
+      "phone": null
+    },
+    {
+      "name": "Physio Aktiv | Inh. Grit Gärtner",
+      "maps_url": "https://www.google.com/maps/place/Physio+Aktiv+%7C+Inh.+Grit+G%C3%A4rtner/data=!4m7!3m6!1s0x470875ad8a8e2221:0xbf5edcb96f1eefca!8m2!3d51.7623983!4d14.3263153!16s%2Fg%2F1ttdlptj!19sChIJISKOiq11CEcRyu8eb7ncXr8?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Physical therapist",
+      "address": "Lieberoser Str. 35-36",
+      "phone": null
+    },
+    {
+      "name": "Physiotherapie Mensch für Mensch",
+      "maps_url": "https://www.google.com/maps/place/Physiotherapie+Mensch+f%C3%BCr+Mensch/data=!4m7!3m6!1s0x470875195f419b9f:0x406c25d60610af88!8m2!3d51.7723758!4d14.3358385!16s%2Fg%2F11z7jqt7bh!19sChIJn5tBXxl1CEcRiK8QBtYlbEA?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Physical therapist",
+      "address": "Karlstraße 60",
+      "phone": null
+    },
+    {
+      "name": "Meldevilla Physiotherapie",
+      "maps_url": "https://www.google.com/maps/place/Meldevilla+Physiotherapie/data=!4m7!3m6!1s0x470874614ae2719b:0xf4f5030f154ae2fe!8m2!3d51.75844!4d14.32183!16s%2Fg%2F11h54_dg5t!19sChIJm3HiSmF0CEcR_uJKFQ8D9fQ?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Physiotherapie in Cottbus",
+      "maps_url": "https://www.google.com/maps/place/Physiotherapie+in+Cottbus/data=!4m7!3m6!1s0x4708746c10f198c9:0x5a4dc70139d1e049!8m2!3d51.754569!4d14.336446!16s%2Fg%2F11dyyjqlj0!19sChIJyZjxEGx0CEcRSeDROQHHTVo?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Physical therapy clinic",
+      "address": "Feigestraße 1",
+      "phone": null
+    },
+    {
+      "name": "Physio Maxima",
+      "maps_url": "https://www.google.com/maps/place/Physio+Maxima/data=!4m7!3m6!1s0x470873bf2a2fffff:0x958eeefb61cca836!8m2!3d51.7150081!4d14.3189883!16s%2Fg%2F11fkf7g6cr!19sChIJ__8vKr9zCEcRNqjMYfvujpU?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Physical therapist",
+      "address": "Sachsendorfer Str. 2c",
+      "phone": null
+    },
+    {
+      "name": "Physiotherapie Liebezeit",
+      "maps_url": "https://www.google.com/maps/place/Physiotherapie+Liebezeit/data=!4m7!3m6!1s0x47087581e0abf601:0x4171f4ddb2701de9!8m2!3d51.7559453!4d14.3249146!16s%2Fg%2F11z1gh9bl_!19sChIJAfar4IF1CEcR6R1wst30cUE?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Physical therapist",
+      "address": "Schillerstraße 22",
+      "phone": null
+    },
+    {
+      "name": "Physio Pakulla",
+      "maps_url": "https://www.google.com/maps/place/Physio+Pakulla/data=!4m7!3m6!1s0x470873974c40a759:0xd6f6a65ebf17eebf!8m2!3d51.7206846!4d14.340993!16s%2Fg%2F11s4sydbsv!19sChIJWadATJdzCEcRv-4Xv16m9tY?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Physical therapist",
+      "address": "Hänchener Str. 18",
+      "phone": null
+    },
+    {
+      "name": "Physiotherapie Martina Schmidt",
+      "maps_url": "https://www.google.com/maps/place/Physiotherapie+Martina+Schmidt/data=!4m7!3m6!1s0x4708738d86071bed:0x31862ca577294330!8m2!3d51.7300403!4d14.3254777!16s%2Fg%2F11dftypqj8!19sChIJ7RsHho1zCEcRMEMpd6UshjE?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Physical therapist",
+      "address": "Thierbacher Str. 1",
+      "phone": null
+    },
+    {
+      "name": "Physio Plus Cottbus",
+      "maps_url": "https://www.google.com/maps/place/Physio+Plus+Cottbus/data=!4m7!3m6!1s0x470875ebeddfdb75:0x79968c2083f7891c!8m2!3d51.7600063!4d14.3173788!16s%2Fg%2F11mcvb7zpk!19sChIJddvf7et1CEcRHIn3gyCMlnk?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Closed",
+      "address": "+49 355 3554990"
+    },
+    {
+      "name": "Physiotherapie Tim Reinke",
+      "maps_url": "https://www.google.com/maps/place/Physiotherapie+Tim+Reinke/data=!4m7!3m6!1s0x470875657efd8f9d:0xd949b4da97616cb4!8m2!3d51.7484038!4d14.3406908!16s%2Fg%2F11sjp8j597!19sChIJnY_9fmV1CEcRtGxhl9q0Sdk?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 355 48573765"
+    },
+    {
+      "name": "PhysioPuschkinPromenade",
+      "maps_url": "https://www.google.com/maps/place/PhysioPuschkinPromenade/data=!4m7!3m6!1s0x4708745d4a3e2cfb:0x8cbfb59a39c4ef83!8m2!3d51.7627022!4d14.3317071!16s%2Fg%2F1tfrfgmt!19sChIJ-yw-Sl10CEcRg-_EOZq1v4w?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Physical therapy clinic",
+      "address": "Puschkinpromenade 2"
+    },
+    {
+      "name": "Physio Kettlitz Cottbus",
+      "maps_url": "https://www.google.com/maps/place/Physio+Kettlitz+Cottbus/data=!4m7!3m6!1s0x417018faf7e25439:0xdd581ac6ccf6f7e8!8m2!3d51.7586086!4d14.3411194!16s%2Fg%2F1v1tlt0x!19sChIJOVTi9_oYcEER6Pf2zMYaWN0?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Physical therapist",
+      "address": "Franz-Mehring-Straße 55"
+    },
+    {
+      "name": "BMFP Physiotherapie OHG",
+      "maps_url": "https://www.google.com/maps/place/BMFP+Physiotherapie+OHG/data=!4m7!3m6!1s0x4708758d390fd3cd:0x581647fccd0427bb!8m2!3d51.7588308!4d14.3409317!16s%2Fg%2F11mq2dzd7z!19sChIJzdMPOY11CEcRuycEzfxHFlg?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Physical therapy clinic",
+      "address": "Franz-Mehring-Straße 12"
+    },
+    {
+      "name": "Die Praxis - ganzheitliche Physiotherapie",
+      "maps_url": "https://www.google.com/maps/place/Die+Praxis+-+ganzheitliche+Physiotherapie/data=!4m7!3m6!1s0x47087598d1b3722d:0x6e201cb966c28189!8m2!3d51.7844838!4d14.3492449!16s%2Fg%2F11sdcj69_q!19sChIJLXKz0Zh1CEcRiYHCZrkcIG4?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 355 860772"
+    },
+    {
+      "name": "Physiotherapie Roland Niedworok",
+      "maps_url": "https://www.google.com/maps/place/Physiotherapie+Roland+Niedworok/data=!4m7!3m6!1s0x470874762ecfe117:0x79f09ba40aa3aacf!8m2!3d51.74108!4d14.32506!16s%2Fg%2F11fzfhsn5h!19sChIJF-HPLnZ0CEcRz6qjCqSb8Hk?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Physiatrist",
+      "address": "Thiemstraße 63"
+    },
+    {
+      "name": "Physiotherapie Jenser",
+      "maps_url": "https://www.google.com/maps/place/Physiotherapie+Jenser/data=!4m7!3m6!1s0x470875b8ffc30ea7:0xbcfdba64147caa40!8m2!3d51.7594652!4d14.3514731!16s%2Fg%2F11h5fn1xvl!19sChIJpw7D_7h1CEcRQKp8FGS6_bw?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Closed",
+      "address": "+49 355 7557777"
+    },
+    {
+      "name": "Physiotherapie Balzer",
+      "maps_url": "https://www.google.com/maps/place/Physiotherapie+Balzer/data=!4m7!3m6!1s0x4708748963aa58d3:0x2dfb823f0a05d3e8!8m2!3d51.7615417!4d14.3172589!16s%2Fg%2F1tdzdq1n!19sChIJ01iqY4l0CEcR6NMFCj-C-y0?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Physical therapist",
+      "address": "Schweriner Str. 3"
+    },
+    {
+      "name": "Physioteam Börner & Mahling",
+      "maps_url": "https://www.google.com/maps/place/Physioteam+B%C3%B6rner+%26+Mahling/data=!4m7!3m6!1s0x417018f09c3024f7:0xc289f58de5a7b4b4!8m2!3d51.7565467!4d14.3232466!16s%2Fg%2F1vknn262!19sChIJ9yQwnPAYcEERtLSn5Y31icI?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Physical therapist",
+      "address": "Karl-Liebknecht-Straße 29"
+    }
+  ],
+  "hot_leads": []
+}
