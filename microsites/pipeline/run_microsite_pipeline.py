@@ -41,6 +41,27 @@ ROTATION = [
     ("Florist", "Berlin Neukölln"),
     ("Schlüsseldienst", "Potsdam"),
     ("Heizung Sanitär", "Cottbus"),
+    # Erweiterung: Kleinstaedte Brandenburg (lead-reich, viele ohne Website)
+    ("Elektriker", "Cottbus"),
+    ("Friseur", "Frankfurt Oder"),
+    ("Bäcker", "Cottbus"),
+    ("Reinigung", "Brandenburg an der Havel"),
+    ("Tischler", "Cottbus"),
+    ("Kosmetik", "Frankfurt Oder"),
+    ("Fahrschule", "Cottbus"),
+    ("Kfz Werkstatt", "Frankfurt Oder"),
+    ("Maler", "Cottbus"),
+    ("Dachdecker", "Brandenburg an der Havel"),
+    ("Sanitär", "Frankfurt Oder"),
+    ("Gartenbau", "Cottbus"),
+    ("Autowerkstatt", "Brandenburg an der Havel"),
+    ("Friseur", "Cottbus"),
+    ("Bäckerei", "Frankfurt Oder"),
+    ("Reinigung", "Frankfurt Oder"),
+    ("Tischlerei", "Brandenburg an der Havel"),
+    ("Kosmetikstudio", "Cottbus"),
+    ("Fahrschule", "Frankfurt Oder"),
+    ("Kfz", "Brandenburg an der Havel"),
 ]
 # bereits gepruefte Kombinationen (Stand 14.08. abend, nach 10x-Local-Lauf)
 DONE = {
@@ -212,6 +233,22 @@ def main():
         done = set(tuple(d) for d in load_state().get("done", [])) | DONE
         done.add((branch, region))
         save_state(idx, done)
+
+    # 20-Lead-Counter: unique kontaktierte Adressen zaehlen
+    logp = DATA / "microsite_sent_emails.json"
+    unique = set()
+    if logp.exists():
+        try:
+            unique = {e.get("email", "").lower() for e in json.loads(logp.read_text()).get("sent_emails", []) if e.get("email")}
+        except Exception:
+            pass
+    TARGET = 20
+    print(f"\n=== UNIQUE KONTAKTIERTE LEADS: {len(unique)} / {TARGET} ===")
+    if len(unique) >= TARGET:
+        # Stopp-Flag setzen -> Cron pausiert sich (siehe cron auto-stop logic)
+        STOP = PIPE / "STOP_AT_20_LEADS.flag"
+        STOP.write_text(f"Erreicht: {len(unique)} unique Leads am {datetime.now(TZ).isoformat()}\n")
+        print("*** ZIEL ERREICHT: 20 Leads kontaktiert. STOPP-FLAG gesetzt. ***")
     return 0
 
 if __name__ == "__main__":
