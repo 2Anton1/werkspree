@@ -1,0 +1,180 @@
+{
+  "branch": "Maler",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "Maler Klecks Cottbus",
+      "maps_url": "https://www.google.com/maps/place/Maler+Klecks+Cottbus/data=!4m7!3m6!1s0x4708753cd2a72463:0xaed808934e9094aa!8m2!3d51.757326!4d14.2959587!16s%2Fg%2F11mw5rtx45!19sChIJYySn0jx1CEcRqpSQTpMI2K4?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Malermeister Meritz",
+      "maps_url": "https://www.google.com/maps/place/Malermeister+Meritz/data=!4m7!3m6!1s0x4bdbd6c036b74c15:0x90331312e3a6a8ea!8m2!3d51.7916774!4d14.3545064!16s%2Fg%2F11zcs2yqz2!19sChIJFUy3NsDW20sR6qim4xITM5A?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 172 7514199",
+      "phone": null,
+      "old_or_no_website": "https://www.malermeistermeritz.de",
+      "email": "malermeister-meritz@outlook.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum (Impressum https://www.malermeistermeritz.de/impressum): Match: 'malermeister' in domain/local",
+      "branch": "Maler",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Maler-und Lackierermeister Andreas Kühne",
+      "maps_url": "https://www.google.com/maps/place/Maler-und+Lackierermeister+Andreas+K%C3%BChne/data=!4m7!3m6!1s0x470875f86a3109cb:0x1765a3ff336e5522!8m2!3d51.78492!4d14.34015!16s%2Fg%2F11g4cggf7g!19sChIJywkxavh1CEcRIlVuM_-jZRc?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Open",
+      "address": "+49 1520 3112576",
+      "phone": null
+    },
+    {
+      "name": "Malermeister Steffen Wolf",
+      "maps_url": "https://www.google.com/maps/place/Malermeister+Steffen+Wolf/data=!4m7!3m6!1s0x47087164969480c1:0x687ad4f59336602d!8m2!3d51.7064043!4d14.3593791!16s%2Fg%2F119v57dp3!19sChIJwYCUlmRxCEcRLWA2k_XUemg?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Closed",
+      "address": "+49 175 5616334",
+      "phone": null,
+      "old_or_no_website": "https://www.wolf-malermeister.de",
+      "email": "info@wolf-malermeister.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum (Impressum https://www.wolf-malermeister.de/impressum): Match: 'malermeister' in domain/local",
+      "branch": "Maler",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Malerfirma Zinder GmbH",
+      "maps_url": "https://www.google.com/maps/place/Malerfirma+Zinder+GmbH/data=!4m7!3m6!1s0x47087485c441d6f9:0x32dd8c16cea0b0fb!8m2!3d51.7523725!4d14.3023659!16s%2Fg%2F1tz94g0h!19sChIJ-dZBxIV0CEcR-7CgzhaM3TI?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Brillant Maler- und Service GmbH",
+      "maps_url": "https://www.google.com/maps/place/Brillant+Maler-+und+Service+GmbH/data=!4m7!3m6!1s0x47087418c60afd37:0x33ab3d1fa1e01c3c!8m2!3d51.7815511!4d14.3390101!16s%2Fg%2F11d_tjq12j!19sChIJN_0Kxhh0CEcRPBzgoR89qzM?authuser=0&hl=en&rclk=1",
+      "rating": 4.4,
+      "category": "Closed",
+      "address": "+49 171 5020423",
+      "phone": null
+    },
+    {
+      "name": "Komolka, Ingo Maler Meister Bodenleger Cottbus",
+      "maps_url": "https://www.google.com/maps/place/Komolka,+Ingo+Maler+Meister+Bodenleger+Cottbus/data=!4m7!3m6!1s0x4708715504afd6df:0xe0dece66093bc378!8m2!3d51.7613747!4d14.3255136!16s%2Fg%2F1tfm04z9!19sChIJ39avBFVxCEcReMM7CWbO3uA?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 355 8628880",
+      "phone": null,
+      "old_or_no_website": "http://www.komolka.de"
+    },
+    {
+      "name": "Maik Kuhlmann",
+      "maps_url": "https://www.google.com/maps/place/Maik+Kuhlmann/data=!4m7!3m6!1s0x4708759dbfb6b161:0x5eace544cf85eb10!8m2!3d51.8099377!4d14.3434326!16s%2Fg%2F1tfl8c4v!19sChIJYbG2v511CEcREOuFz0TlrF4?authuser=0&hl=en&rclk=1",
+      "rating": 4.4,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "AH Malerbetrieb Andreas Herzig | Ihr Maler in Cottbus",
+      "maps_url": "https://www.google.com/maps/place/AH+Malerbetrieb+Andreas+Herzig+%7C+Ihr+Maler+in+Cottbus/data=!4m7!3m6!1s0x4708757fe0f5fa09:0x9df354fc63163440!8m2!3d51.75959!4d14.296696!16s%2Fg%2F11qrtpds2g!19sChIJCfr14H91CEcRQDQWY_xU850?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 172 3616726",
+      "phone": null,
+      "old_or_no_website": "https://ah-malerbetrieb.de"
+    },
+    {
+      "name": "Malerfachbetrieb Andreas Penk",
+      "maps_url": "https://www.google.com/maps/place/Malerfachbetrieb+Andreas+Penk/data=!4m7!3m6!1s0x470871309ae1425d:0x29c06a6342fa5dc0!8m2!3d51.7214405!4d14.3975025!16s%2Fg%2F11btltn8ms!19sChIJXULhmjBxCEcRwF36QmNqwCk?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Scholz & Gerasch Malerbetrieb GbR",
+      "maps_url": "https://www.google.com/maps/place/Scholz+%26+Gerasch+Malerbetrieb+GbR/data=!4m7!3m6!1s0x470873a032d069e1:0x79cb3028052c502e!8m2!3d51.72032!4d14.32696!16s%2Fg%2F11h519s7xc!19sChIJ4WnQMqBzCEcRLlAsBSgwy3k?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Roland & Jürgen Gehrmann Malermeisterbetrieb GmbH",
+      "maps_url": "https://www.google.com/maps/place/Roland+%26+J%C3%BCrgen+Gehrmann+Malermeisterbetrieb+GmbH/data=!4m7!3m6!1s0x4708769bfd4c4e55:0x996d3e718e44bcdb!8m2!3d51.7601573!4d14.3853789!16s%2Fg%2F1tdbpl3t!19sChIJVU5M_Zt2CEcR27xEjnE-bZk?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "UniGlobal Maler & Objektgestaltung",
+      "maps_url": "https://www.google.com/maps/place/UniGlobal+Maler+%26+Objektgestaltung/data=!4m7!3m6!1s0x470874481bb37939:0x9e34d3159688155d!8m2!3d51.77072!4d14.35081!16s%2Fg%2F11f71mndyx!19sChIJOXmzG0h0CEcRXRWIlhXTNJ4?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 355 2892256"
+    },
+    {
+      "name": "Timo Laschke",
+      "maps_url": "https://www.google.com/maps/place/Timo+Laschke/data=!4m7!3m6!1s0x4708769c40378929:0xaaaa57ef31ef25f9!8m2!3d51.7618059!4d14.3831906!16s%2Fg%2F1tgwqzkw!19sChIJKYk3QJx2CEcR-SXvMe9Xqqo?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Closed",
+      "address": "+49 355 7293353"
+    },
+    {
+      "name": "Horst Gehrmann",
+      "maps_url": "https://www.google.com/maps/place/Horst+Gehrmann/data=!4m7!3m6!1s0x47087466479f90b3:0xf149c51fb8e43ab9!8m2!3d51.7584!4d14.32762!16s%2Fg%2F1tfj1wrf!19sChIJs5CfR2Z0CEcRuTrkuB_FSfE?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Malermeister Jan Düring",
+      "maps_url": "https://www.google.com/maps/place/Malermeister+Jan+D%C3%BCring/data=!4m7!3m6!1s0x4708748e8b8a27a3:0x78d42ad0f86a8e01!8m2!3d51.7629328!4d14.3548348!16s%2Fg%2F1tjxdc6j!19sChIJoyeKi450CEcRAY5q-NAq1Hg?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Arslan Hermann Malerbetrieb",
+      "maps_url": "https://www.google.com/maps/place/Arslan+Hermann+Malerbetrieb/data=!4m7!3m6!1s0x4708742c2d2593e7:0xb5eb71040a4c824b!8m2!3d51.7729863!4d14.3720959!16s%2Fg%2F1tdghzhn!19sChIJ55MlLSx0CEcRS4JMCgRx67U?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Malermeister Meritz",
+      "maps_url": "https://www.google.com/maps/place/Malermeister+Meritz/data=!4m7!3m6!1s0x4bdbd6c036b74c15:0x90331312e3a6a8ea!8m2!3d51.7916774!4d14.3545064!16s%2Fg%2F11zcs2yqz2!19sChIJFUy3NsDW20sR6qim4xITM5A?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 172 7514199",
+      "phone": null,
+      "old_or_no_website": "https://www.malermeistermeritz.de",
+      "email": "malermeister-meritz@outlook.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum (Impressum https://www.malermeistermeritz.de/impressum): Match: 'malermeister' in domain/local",
+      "branch": "Maler",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Malermeister Steffen Wolf",
+      "maps_url": "https://www.google.com/maps/place/Malermeister+Steffen+Wolf/data=!4m7!3m6!1s0x47087164969480c1:0x687ad4f59336602d!8m2!3d51.7064043!4d14.3593791!16s%2Fg%2F119v57dp3!19sChIJwYCUlmRxCEcRLWA2k_XUemg?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Closed",
+      "address": "+49 175 5616334",
+      "phone": null,
+      "old_or_no_website": "https://www.wolf-malermeister.de",
+      "email": "info@wolf-malermeister.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum (Impressum https://www.wolf-malermeister.de/impressum): Match: 'malermeister' in domain/local",
+      "branch": "Maler",
+      "region": "Cottbus"
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "branch": "Friseur",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "Euro Salon - Cottbus",
+      "maps_url": "https://www.google.com/maps/place/Euro+Salon+-+Cottbus/data=!4m7!3m6!1s0x47087469b00cbc3b:0xa70415ecda86279e!8m2!3d51.7592583!4d14.3351785!16s%2Fg%2F11bxc5fldt!19sChIJO7wMsGl0CEcRnieG2uwVBKc?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "Hair salon",
+      "address": "Schloßkirchstraße 1",
+      "phone": null
+    },
+    {
+      "name": "Roma Salon Barbershop Cottbus Friseur",
+      "maps_url": "https://www.google.com/maps/place/Roma+Salon+Barbershop+Cottbus+Friseur/data=!4m7!3m6!1s0x470875648fabead5:0xfce976b22b6c08b5!8m2!3d51.7570384!4d14.3299769!16s%2Fg%2F11h1yd2b5f!19sChIJ1eqrj2R1CEcRtQhsK7J26fw?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "",
+      "address": "",
+      "phone": "+4935552989133",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Legende Style Frisur & Barbershop",
+      "maps_url": "https://www.google.com/maps/place/Legende+Style+Frisur+%26+Barbershop/data=!4m7!3m6!1s0x4708759728c4eb9f:0xf43e23f8c30c9c4c!8m2!3d51.7732948!4d14.3429548!16s%2Fg%2F11k3v5ll5w!19sChIJn-vEKJd1CEcRTJwMw_gjPvQ?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Hair salon",
+      "address": "Gerhart-Hauptmann-Straße 15",
+      "phone": "+4935512110875",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Salon Richter & Sohn Gbr",
+      "maps_url": "https://www.google.com/maps/place/Salon+Richter+%26+Sohn+Gbr/data=!4m7!3m6!1s0x47087468a83facc7:0xce0f64618d0145!8m2!3d51.756938!4d14.3290357!16s%2Fg%2F1ths81fd!19sChIJx6w_qGh0CEcRRQGNYWQPzgA?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Hairdresser",
+      "address": "Karl-Liebknecht-Straße 14",
+      "phone": null
+    },
+    {
+      "name": "Cottbus Hair Team GmbH",
+      "maps_url": "https://www.google.com/maps/place/Cottbus+Hair+Team+GmbH/data=!4m7!3m6!1s0x470874688181fbdd:0x68b1cd4ca285f757!8m2!3d51.75877!4d14.33216!16s%2Fg%2F1tfk33yn!19sChIJ3fuBgWh0CEcRV_eFokzNsWg?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "Hair salon",
+      "address": "Stadtpromenade 6",
+      "phone": null
+    },
+    {
+      "name": "Azzam Barbershop",
+      "maps_url": "https://www.google.com/maps/place/Azzam+Barbershop/data=!4m7!3m6!1s0x4708750037138a3d:0x93eac844e87e665a!8m2!3d51.783282!4d14.3171932!16s%2Fg%2F11vrkb7907!19sChIJPYoTNwB1CEcRWmZ-6ETI6pM?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Cottbus Hair Team GmbH - Salon Altmarkt",
+      "maps_url": "https://www.google.com/maps/place/Cottbus+Hair+Team+GmbH+-+Salon+Altmarkt/data=!4m7!3m6!1s0x47087469d550f8f9:0xc0ce1c01ef4a9754!8m2!3d51.7609442!4d14.3349896!16s%2Fg%2F1tgpr9yz!19sChIJ-fhQ1Wl0CEcRVJdK7wEczsA?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Hair salon",
+      "address": "Altmarkt 16",
+      "phone": null
+    },
+    {
+      "name": "Friseursalon reine Kopfsache",
+      "maps_url": "https://www.google.com/maps/place/Friseursalon+reine+Kopfsache/data=!4m7!3m6!1s0x4708754645e5a511:0x547910dc994817!8m2!3d51.7558899!4d14.3332026!16s%2Fg%2F11j6h96_mr!19sChIJEaXlRUZ1CEcRF0iZ3BB5VAA?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "KaDee Friseure",
+      "maps_url": "https://www.google.com/maps/place/KaDee+Friseure/data=!4m7!3m6!1s0x470874693623795f:0x3745a0b7bb0c798d!8m2!3d51.7560673!4d14.3341795!16s%2Fg%2F11bw66kjc9!19sChIJX3kjNml0CEcRjXkMu7egRTc?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Hair salon",
+      "address": "Ostrower Str. 18/Eingang Rechts",
+      "phone": null
+    },
+    {
+      "name": "Gursch - Der Friseur",
+      "maps_url": "https://www.google.com/maps/place/Gursch+-+Der+Friseur/data=!4m7!3m6!1s0x47087469cf719055:0x2b9065411ea90ca9!8m2!3d51.7601!4d14.33527!16s%2Fg%2F1tdbvgcs!19sChIJVZBxz2l0CEcRqQypHkFlkCs?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "",
+      "address": "",
+      "phone": null,
+      "old_or_no_website": "http://www.friseur-gursch.de"
+    },
+    {
+      "name": "Zahra Salon - Barbershop - Cottbus",
+      "maps_url": "https://www.google.com/maps/place/Zahra+Salon+-+Barbershop+-+Cottbus/data=!4m7!3m6!1s0x47087567715adbdd:0x9c8962a7a3e99865!8m2!3d51.7634475!4d14.3314574!16s%2Fg%2F11v62ynsjw!19sChIJ3dtacWd1CEcRZZjpo6diiZw?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Hair salon",
+      "address": "Friedrich-Ebert-Straße 15"
+    },
+    {
+      "name": "Friseur Hairconcept",
+      "maps_url": "https://www.google.com/maps/place/Friseur+Hairconcept/data=!4m7!3m6!1s0x4708746784b64711:0x676db673c49935af!8m2!3d51.7610877!4d14.327851!16s%2Fg%2F11c5x6zs18!19sChIJEUe2hGd0CEcRrzWZxHO2bWc?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Friseur Die Haarschneiderei Inh. K. Liebeskind",
+      "maps_url": "https://www.google.com/maps/place/Friseur+Die+Haarschneiderei+Inh.+K.+Liebeskind/data=!4m7!3m6!1s0x47087466ea39ccb3:0x3d1421cbe0263968!8m2!3d51.758581!4d14.3241593!16s%2Fg%2F1hbpwq93d!19sChIJs8w56mZ0CEcRaDkm4MshFD0?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Hair salon",
+      "address": "Schillerstraße 62"
+    },
+    {
+      "name": "Mandy Sprejz - Lockenexpress \"Mein neues ICH\"",
+      "maps_url": "https://www.google.com/maps/place/Mandy+Sprejz+-+Lockenexpress+%22Mein+neues+ICH%22/data=!4m7!3m6!1s0x470874688c2fa535:0xda75c9aa178aa54d!8m2!3d51.7499353!4d14.3392465!16s%2Fg%2F1vfzcwnc!19sChIJNaUvjGh0CEcRTaWKF6rJddo?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Hair salon",
+      "address": "Ackerstraße 7"
+    },
+    {
+      "name": "Cottbuser Hair Team GmbH - Salon Ströbitz",
+      "maps_url": "https://www.google.com/maps/place/Cottbuser+Hair+Team+GmbH+-+Salon+Str%C3%B6bitz/data=!4m7!3m6!1s0x470874604ce2290b:0x78b0e1e1b96ed09!8m2!3d51.7604927!4d14.3180592!16s%2Fg%2F1tvw3n3w!19sChIJCyniTGB0CEcRCe2WGx4Oiwc?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Closes soon",
+      "address": "Opens 8 AM Mon"
+    },
+    {
+      "name": "Der Altstadt Friseur - zertifizierter Farbprofi & Extensions für sie und ihn",
+      "maps_url": "https://www.google.com/maps/place/Der+Altstadt+Friseur+-+zertifizierter+Farbprofi+%26+Extensions+f%C3%BCr+sie+und+ihn/data=!4m7!3m6!1s0x4708744214933abb:0xc0824dc2cf8192d8!8m2!3d51.7618059!4d14.3373747!16s%2Fg%2F11c555whcj!19sChIJuzqTFEJ0CEcR2JKBz8JNgsA?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Hair salon",
+      "address": "Oberkirchpl. 10"
+    },
+    {
+      "name": "Cottbuser Hair Team GmbH - Salon Leipziger Straße",
+      "maps_url": "https://www.google.com/maps/place/Cottbuser+Hair+Team+GmbH+-+Salon+Leipziger+Stra%C3%9Fe/data=!4m7!3m6!1s0x4708747f1647b85f:0x250c4235d78e5b84!8m2!3d51.7441213!4d14.3114317!16s%2Fg%2F1thp_f6d!19sChIJX7hHFn90CEcRhFuO1zVCDCU?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "Hair salon",
+      "address": "Leipziger Str. 13"
+    },
+    {
+      "name": "Friseur VIKTORIAS Meistersalon",
+      "maps_url": "https://www.google.com/maps/place/Friseur+VIKTORIAS+Meistersalon/data=!4m7!3m6!1s0x470875beb8a49bdb:0x436dabd7a1a93483!8m2!3d51.7601714!4d14.3367793!16s%2Fg%2F11h4zklgck!19sChIJ25ukuL51CEcRgzSpoderbUM?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Hair salon",
+      "address": "Mühlenstraße 31"
+    },
+    {
+      "name": "Darwish Salon",
+      "maps_url": "https://www.google.com/maps/place/Darwish+Salon/data=!4m7!3m6!1s0x4708755fa5140e43:0x8aea52053594ea7c!8m2!3d51.7624826!4d14.3428916!16s%2Fg%2F11x6fknt84!19sChIJQw4UpV91CEcRfOqUNQVS6oo?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "",
+      "address": ""
+    }
+  ],
+  "hot_leads": []
+}
