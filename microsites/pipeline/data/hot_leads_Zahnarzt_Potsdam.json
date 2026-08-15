@@ -1,0 +1,157 @@
+{
+  "branch": "Zahnarzt",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "KU64 Zahnarzt Potsdam - Zahnärzte Dr. Ziegler & Partner",
+      "maps_url": "https://www.google.com/maps/place/KU64+Zahnarzt+Potsdam+-+Zahn%C3%A4rzte+Dr.+Ziegler+%26+Partner/data=!4m7!3m6!1s0x47a8f5ed4071102f:0x436c98a5ff7e6c36!8m2!3d52.4030066!4d13.0700884!16s%2Fg%2F11hzyz46x3!19sChIJLxBxQO31qEcRNmx-_6WYbEM?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Dentist",
+      "address": "Berliner Str. 139",
+      "phone": null
+    },
+    {
+      "name": "Buenger & Meißner Zahnheilkunde Potsdam",
+      "maps_url": "https://www.google.com/maps/place/Buenger+%26+Mei%C3%9Fner+Zahnheilkunde+Potsdam/data=!4m7!3m6!1s0x47a8f7b05fab93c9:0x3571e783e4921c9a!8m2!3d52.4146263!4d13.0503387!16s%2Fg%2F11mmb9p6md!19sChIJyZOrX7D3qEcRmhyS5IPncTU?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Dentist",
+      "address": "Georg-Hermann-Allee 26",
+      "phone": null
+    },
+    {
+      "name": "MEINDENTIST-Praxis Potsdam",
+      "maps_url": "https://www.google.com/maps/place/MEINDENTIST-Praxis+Potsdam/data=!4m7!3m6!1s0x47a8f51eadffae3d:0x12889dd5f2aa4ac7!8m2!3d52.3896691!4d13.0735297!16s%2Fg%2F11h7v04rmc!19sChIJPa7_rR71qEcRx0qq8tWdiBI?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Dentist",
+      "address": "Friedrich-Engels-Straße 80",
+      "phone": null
+    },
+    {
+      "name": "Zahnzentrum Potsdam - V. Siemund und M. A. Hashemi",
+      "maps_url": "https://www.google.com/maps/place/Zahnzentrum+Potsdam+-+V.+Siemund+und+M.+A.+Hashemi/data=!4m7!3m6!1s0x47a8f5e9e2540ba3:0x1e69d6392d0ec979!8m2!3d52.3923953!4d13.067294!16s%2Fg%2F1ptxwzd2c!19sChIJowtU4un1qEcReckOLTnWaR4?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Dentist",
+      "address": "Babelsberger Str. 16",
+      "phone": null
+    },
+    {
+      "name": "Dentist Dr. Rosin & Partner",
+      "maps_url": "https://www.google.com/maps/place/Dentist+Dr.+Rosin+%26+Partner/data=!4m7!3m6!1s0x47a8f5d13df08e0b:0xfeb12bfcc3684d2c!8m2!3d52.40286!4d13.0513299!16s%2Fg%2F1tj6sw6v!19sChIJC47wPdH1qEcRLE1ow_wrsf4?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Closed",
+      "address": "+49 331 2016769",
+      "phone": null
+    },
+    {
+      "name": "The dental Gallery - Dr. Antje Hottelmann & ZÄ Lisa Hottelmann",
+      "maps_url": "https://www.google.com/maps/place/The+dental+Gallery+-+Dr.+Antje+Hottelmann+%26+Z%C3%84+Lisa+Hottelmann/data=!4m7!3m6!1s0x47a8f5dea72f5a5f:0x8066cdf0e8a097f9!8m2!3d52.3997922!4d13.0587957!16s%2Fg%2F1txfn5f_!19sChIJX1ovp971qEcR-Zeg6PDNZoA?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Dentist",
+      "address": "Charlottenstraße 42",
+      "phone": null
+    },
+    {
+      "name": "Zahnarztpraxis in der Remise - Dr. Ron Schubert & Kollegen",
+      "maps_url": "https://www.google.com/maps/place/Zahnarztpraxis+in+der+Remise+-+Dr.+Ron+Schubert+%26+Kollegen/data=!4m7!3m6!1s0x47a8f5ce42e5855d:0x39cacc99e6059098!8m2!3d52.4068654!4d13.0547421!16s%2Fg%2F1tph0sdd!19sChIJXYXlQs71qEcRmJAF5pnMyjk?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Dentist",
+      "address": "Jägerallee 16",
+      "phone": null
+    },
+    {
+      "name": "Dr. Manina Knobloch - Zahnarztpraxis Am Neuen Garten",
+      "maps_url": "https://www.google.com/maps/place/Dr.+Manina+Knobloch+-+Zahnarztpraxis+Am+Neuen+Garten/data=!4m7!3m6!1s0x47a8f5aec4aec2b3:0x5c867a0b6763d38e!8m2!3d52.4071638!4d13.0645721!16s%2Fg%2F11nxfmm5q3!19sChIJs8KuxK71qEcRjtNjZwt6hlw?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Dentist",
+      "address": "Am Neuen Garten 3",
+      "phone": null
+    },
+    {
+      "name": "Dr. Harald Koep M.Sc. M.Sc.",
+      "maps_url": "https://www.google.com/maps/place/Dr.+Harald+Koep+M.Sc.+M.Sc./data=!4m7!3m6!1s0x47a85f1b993a49b9:0x4bbf244d030e2c68!8m2!3d52.3700644!4d13.1399496!16s%2Fg%2F1td7b5p5!19sChIJuUk6mRtfqEcRaCwOA00kv0s?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Dentist",
+      "address": "Hans-Albers-Straße 1",
+      "phone": null
+    },
+    {
+      "name": "POTSDAMDENT | Praxis für ganzheitliche Zahnmedizin",
+      "maps_url": "https://www.google.com/maps/place/POTSDAMDENT+%7C+Praxis+f%C3%BCr+ganzheitliche+Zahnmedizin/data=!4m7!3m6!1s0x47a85fc64200e0e3:0xe6851a732a1eb0de!8m2!3d52.379538!4d13.1413627!16s%2Fg%2F11z3p8s2zc!19sChIJ4-AAQsZfqEcR3rAeKnMaheY?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Closed",
+      "address": "+49 331 6009323",
+      "phone": null
+    },
+    {
+      "name": "Zahnarztpraxis Dr. Fuchs",
+      "maps_url": "https://www.google.com/maps/place/Zahnarztpraxis+Dr.+Fuchs/data=!4m7!3m6!1s0x47a8f4357342b849:0xdd4a87843bf2a72b!8m2!3d52.391298!4d13.0325072!16s%2Fg%2F11b7j_gsgn!19sChIJSbhCczX0qEcRK6fyO4SHSt0?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Dentist",
+      "address": "Zeppelinstraße 49"
+    },
+    {
+      "name": "Zahnarztpraxis Am Krongut",
+      "maps_url": "https://www.google.com/maps/place/Zahnarztpraxis+Am+Krongut/data=!4m7!3m6!1s0x47a8f69d3f614e69:0x777e9ad3f063b518!8m2!3d52.413234!4d13.029669!16s%2Fg%2F1tfrqz09!19sChIJaU5hP532qEcRGLVj8NOafnc?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Dentist",
+      "address": "Potsdamer Str. 196"
+    },
+    {
+      "name": "Dentists on Jaegertor and Implantologen",
+      "maps_url": "https://www.google.com/maps/place/Dentists+on+Jaegertor+and+Implantologen/data=!4m7!3m6!1s0x47a8f5d0fff90951:0x2a6a264c2fab39c6!8m2!3d52.4013938!4d13.0519809!16s%2Fg%2F1tfjpr4l!19sChIJUQn5_9D1qEcRxjmrL0wmaio?authuser=0&hl=en&rclk=1",
+      "rating": 4.4,
+      "category": "Dentist",
+      "address": "Lindenstraße 7"
+    },
+    {
+      "name": "Dr. Szabadi Zahnarztpraxis",
+      "maps_url": "https://www.google.com/maps/place/Dr.+Szabadi+Zahnarztpraxis/data=!4m7!3m6!1s0x47a8f53d67d2337b:0x77835a24206ff8ab!8m2!3d52.4030851!4d13.0663927!16s%2Fg%2F11n03p97s6!19sChIJezPSZz31qEcRq_hvICRag3c?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Dentist",
+      "address": "Gutenbergstraße 60"
+    },
+    {
+      "name": "Zahnarztpraxis und Oralchirurgie Potsdam, MVZ Dres.Grote&Kirchheim",
+      "maps_url": "https://www.google.com/maps/place/Zahnarztpraxis+und+Oralchirurgie+Potsdam,+MVZ+Dres.Grote%26Kirchheim/data=!4m7!3m6!1s0x47a8f6814cbcbddb:0x7b235cb07546b022!8m2!3d52.4136566!4d13.0392132!16s%2Fg%2F11f0wjfb0d!19sChIJ2728TIH2qEcRIrBGdbBcI3s?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Dentist",
+      "address": "Erich-Mendelsohn-Allee 4a"
+    },
+    {
+      "name": "Zahnarztpraxis & Praxisdentallabor Dr. Wertmann",
+      "maps_url": "https://www.google.com/maps/place/Zahnarztpraxis+%26+Praxisdentallabor+Dr.+Wertmann/data=!4m7!3m6!1s0x47a8f5de35b4380f:0x212678702ccbbc39!8m2!3d52.4044242!4d13.0710543!16s%2Fg%2F12m9998ln!19sChIJDzi0Nd71qEcRObzLLHB4JiE?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "Dentist",
+      "address": "Behlertstraße 3A/Haus B1"
+    },
+    {
+      "name": "Dr. Maria Csides - Zahnheilkunde am Heiligen See",
+      "maps_url": "https://www.google.com/maps/place/Dr.+Maria+Csides+-+Zahnheilkunde+am+Heiligen+See/data=!4m7!3m6!1s0x47a8f79469b4da69:0xfb7bc8434047c465!8m2!3d52.409055!4d13.07388!16s%2Fg%2F11h_4jzhh9!19sChIJadq0aZT3qEcRZcRHQEPIe_s?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Dentist",
+      "address": "Mangerstraße 25"
+    },
+    {
+      "name": "Zahnarzt Hannes Rehfeld",
+      "maps_url": "https://www.google.com/maps/place/Zahnarzt+Hannes+Rehfeld/data=!4m7!3m6!1s0x47a8f5ea7188125f:0xce9f3f80d500a591!8m2!3d52.3889757!4d13.0665094!16s%2Fg%2F11b7rnbs_6!19sChIJXxKIcer1qEcRkaUA1YA_n84?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Dentist",
+      "address": "Heinrich-Mann-Allee 3b"
+    },
+    {
+      "name": "Ingrun Schmors/Rüdiger Dorka Gemeinschaftspraxis Zahnärzte",
+      "maps_url": "https://www.google.com/maps/place/Ingrun+Schmors%2FR%C3%BCdiger+Dorka+Gemeinschaftspraxis+Zahn%C3%A4rzte/data=!4m7!3m6!1s0x47a8f5daf1e3ebfd:0xbd38de8e5bd0f28e!8m2!3d52.40009!4d13.05786!16s%2Fg%2F1th27fd4!19sChIJ_evj8dr1qEcRjvLQW47eOL0?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Dentist",
+      "address": "Friedrich-Ebert-Straße 10"
+    },
+    {
+      "name": "Potsdams Zähne | Zahnarztpraxis Luisa Behrendt",
+      "maps_url": "https://www.google.com/maps/place/Potsdams+Z%C3%A4hne+%7C+Zahnarztpraxis+Luisa+Behrendt/data=!4m7!3m6!1s0x47a8f5d93ec832c5:0xd06bca7dceb18eda!8m2!3d52.4041!4d13.06196!16s%2Fg%2F1th7xcsg!19sChIJxTLIPtn1qEcR2o6xzn3Ka9A?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Dentist",
+      "address": "Kurfürstenstraße 18"
+    }
+  ],
+  "hot_leads": []
+}
