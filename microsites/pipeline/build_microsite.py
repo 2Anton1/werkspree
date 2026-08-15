@@ -100,8 +100,26 @@ def render(template: str, lead: dict) -> str:
         ["Beratung", "Individuelle Beratung – wir nehmen uns Zeit für Ihr Anliegen."],
         ["Kontakt", "Erreichbar für Terminanfragen und Rückfragen."],
     ])
+    # Normalisiere: Pipeline liefert Strings (Leistungsnamen), Map liefert [titel,beschreibung]
+    norm_prods = []
+    for p in prods:
+        if isinstance(p, (list, tuple)) and len(p) >= 2:
+            norm_prods.append([p[0], p[1]])
+        elif isinstance(p, str):
+            # String -> suche passende Beschreibung in prods_map, sonst generic
+            desc = ""
+            for seg_prods in prods_map.values():
+                for tp, td in seg_prods:
+                    if tp.lower() == p.lower():
+                        desc = td
+                        break
+                if desc:
+                    break
+            norm_prods.append([p, desc or "Gerne informieren wir Sie detailiert zu dieser Leistung auf Anfrage."])
+        else:
+            continue
     cards = "".join(
-        f'<div class="card"><h3>{p[0]}</h3><p>{p[1]}</p></div>' for p in prods
+        f'<div class="card"><h3>{p[0]}</h3><p>{p[1]}</p></div>' for p in norm_prods
     )
     addr = lead.get("address", "")
     city = lead.get("city", "Brandenburg an der Havel")

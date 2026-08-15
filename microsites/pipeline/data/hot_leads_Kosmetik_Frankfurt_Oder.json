@@ -1,0 +1,198 @@
+{
+  "branch": "Kosmetik",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Die Kosmetik-Eule Anika Breetsch",
+      "maps_url": "https://www.google.com/maps/place/Die+Kosmetik-Eule+Anika+Breetsch/data=!4m7!3m6!1s0x4707980bb4ad9131:0x3b24a3a50592b7c0!8m2!3d52.3357589!4d14.5547043!16s%2Fg%2F11cmnpwfw_!19sChIJMZGttAuYB0cRwLeSBaWjJDs?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Beauty salon",
+      "address": "Walter-Korsing-Straße 22",
+      "phone": null
+    },
+    {
+      "name": "The Beauty Institute Swetlana Baldauf",
+      "maps_url": "https://www.google.com/maps/place/The+Beauty+Institute+Swetlana+Baldauf/data=!4m7!3m6!1s0x47079874f66f3b65:0xeea122da34226e78!8m2!3d52.343783!4d14.5578168!16s%2Fg%2F1tw_lysk!19sChIJZTtv9nSYB0cReG4iNNoioe4?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Beauty salon",
+      "address": "Uferstraße 3",
+      "phone": null
+    },
+    {
+      "name": "db cosmetics",
+      "maps_url": "https://www.google.com/maps/place/db+cosmetics/data=!4m7!3m6!1s0x4165384a6c7e2285:0xc33a7712bda9295d!8m2!3d52.3429084!4d14.5507066!16s%2Fg%2F1tflwlm_!19sChIJhSJ-bEo4ZUERXSmpvRJ3OsM?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Beauty salon",
+      "address": "Karl-Marx-Straße 193",
+      "phone": "+493353870551",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Kosmetikinstitut Heike Dawidowski Silence Beauty",
+      "maps_url": "https://www.google.com/maps/place/Kosmetikinstitut+Heike+Dawidowski+Silence+Beauty/data=!4m7!3m6!1s0x470798717e10d121:0xf1d6c703bae7848!8m2!3d52.345661!4d14.552145!16s%2Fg%2F11dfh6285s!19sChIJIdEQfnGYB0cRSHiuO3BsHQ8?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Cosmetics store",
+      "address": "Fußgängerzone, Große Scharrnstraße 20A",
+      "phone": null
+    },
+    {
+      "name": "Beauty in Town (Kosmetik, Fußpflege, Microneedling, Aqua Facial, Massage, Love Rose Effect)",
+      "maps_url": "https://www.google.com/maps/place/Beauty+in+Town+%28Kosmetik,+Fu%C3%9Fpflege,+Microneedling,+Aqua+Facial,+Massage,+Love+Rose+Effect%29/data=!4m7!3m6!1s0x47079974ee87296b:0x39d33f35dafce398!8m2!3d52.3379434!4d14.5397551!16s%2Fg%2F11yx66r5hy!19sChIJaymH7nSZB0cRmOP82jU_0zk?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "House Of Beauty Frankfurt Oder",
+      "maps_url": "https://www.google.com/maps/place/House+Of+Beauty+Frankfurt+Oder/data=!4m7!3m6!1s0x47079958abfffbc5:0x66b36705af9cfa6b!8m2!3d52.3375982!4d14.547106!16s%2Fg%2F11vywgzyrn!19sChIJxfv_q1iZB0cRa_qcrwVns2Y?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "House of Beauty( Nägel, Wimpern, Microblading, Wax, Aquafacial)",
+      "maps_url": "https://www.google.com/maps/place/House+of+Beauty%28+N%C3%A4gel,+Wimpern,+Microblading,+Wax,+Aquafacial%29/data=!4m7!3m6!1s0x470799a845e0d4b3:0x1dd814856685ac34!8m2!3d52.3370362!4d14.5474826!16s%2Fg%2F11s596wmzg!19sChIJs9TgRaiZB0cRNKyFZoUU2B0?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Beauty salon",
+      "address": "Direkt im Bahnhof",
+      "phone": null
+    },
+    {
+      "name": "Princess deluxe",
+      "maps_url": "https://www.google.com/maps/place/Princess+deluxe/data=!4m7!3m6!1s0x470798108bca3d89:0x9b305e45f38a0270!8m2!3d52.33731!4d14.52333!16s%2Fg%2F12hxp3f18!19sChIJiT3KixCYB0cRcAKK80VeMJs?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "",
+      "address": "",
+      "phone": "+491744681086",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "CARESSE Beauty Center",
+      "maps_url": "https://www.google.com/maps/place/CARESSE+Beauty+Center/data=!4m7!3m6!1s0x470799d94c680fbf:0x34f6848fea73e998!8m2!3d52.3341674!4d14.5236655!16s%2Fg%2F11h3965kkn!19sChIJvw9oTNmZB0cRmOlz6o-E9jQ?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": "+493355006110",
+      "old_or_no_website": "",
+      "email": "caresse@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Match: 'caresse' in domain/local",
+      "about": "[![Gelbe Seiten Unternehmen finden](https://www.gelbeseiten.de/webgs/images/gelbe-seiten-logo.svg)](https://www.gelbeseiten.de/)",
+      "products": [
+        "Suchen",
+        "Service",
+        "FÜR SIE",
+        "FÜR FIRMENINHABER",
+        "Ratgeber",
+        "Meinen Standort verwenden"
+      ],
+      "opening_hours": {
+        "Mo": "0:00 – 18:00",
+        "Di": "0:00 – 18:00",
+        "Mi": "0:00 – 18:00",
+        "Do": "0:00 – 18:00",
+        "Fr": "9:00 – 15:00"
+      },
+      "branch": "Kosmetik",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Kosmetik & Pediküre Regine Jeske",
+      "maps_url": "https://www.google.com/maps/place/Kosmetik+%26+Pedik%C3%BCre+Regine+Jeske/data=!4m7!3m6!1s0x470798040817f83b:0x65cc05e9205d44f!8m2!3d52.3342522!4d14.5390882!16s%2Fg%2F1tnhx0vx!19sChIJO_gXCASYB0cRT9QFkl7AXAY?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Anke Mähnert - ganzheitliche Hautpflege, Fitness & Ernährung",
+      "maps_url": "https://www.google.com/maps/place/Anke+M%C3%A4hnert+-+ganzheitliche+Hautpflege,+Fitness+%26+Ern%C3%A4hrung/data=!4m7!3m6!1s0x4707995b4d1dbe35:0x2fd8a550b38db48e!8m2!3d52.3348635!4d14.5413247!16s%2Fg%2F11vbqsq5hp!19sChIJNb4dTVuZB0cRjrSNs1Cl2C8?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "BaliOase - Odette Kitzing-Fleischer",
+      "maps_url": "https://www.google.com/maps/place/BaliOase+-+Odette+Kitzing-Fleischer/data=!4m7!3m6!1s0x4707986ad89cf21f:0xfe9459d9fc1ca885!8m2!3d52.3428974!4d14.5348103!16s%2Fg%2F12hlqn_h8!19sChIJH_Kc2GqYB0cRhagc_NlZlP4?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Beauty salon",
+      "address": "Fürstenwalder Str. 22/23"
+    },
+    {
+      "name": "Nagel- und Wimpernzauber",
+      "maps_url": "https://www.google.com/maps/place/Nagel-+und+Wimpernzauber/data=!4m7!3m6!1s0x4707986938fd3c5d:0x6f241e4790a49161!8m2!3d52.34827!4d14.54051!16s%2Fg%2F11dym8hq53!19sChIJXTz9OGmYB0cRYZGkkEceJG8?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Beauty salon",
+      "address": "Grüner Weg 7"
+    },
+    {
+      "name": "H.Nails & Spa (Nagelstudio, Headspa, Wimpernverlängerung,…)",
+      "maps_url": "https://www.google.com/maps/place/H.Nails+%26+Spa+%28Nagelstudio,+Headspa,+Wimpernverl%C3%A4ngerung,%E2%80%A6%29/data=!4m7!3m6!1s0x4707990022de3aab:0x7ac04e64ebf9fff5!8m2!3d52.3431586!4d14.5506474!16s%2Fg%2F11w4gf5tj4!19sChIJqzreIgCZB0cR9f_562ROwHo?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "VILANCE Vitalbalance & Beauty GmbH",
+      "maps_url": "https://www.google.com/maps/place/VILANCE+Vitalbalance+%26+Beauty+GmbH/data=!4m7!3m6!1s0x470799f2ec8c437b:0x96d79ca8a429d40a!8m2!3d52.3369712!4d14.538788!16s%2Fg%2F11jrt3189l!19sChIJe0OM7PKZB0cRCtQppKic15Y?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Permanent make-up clinic",
+      "address": "Dresdener Str. 33"
+    },
+    {
+      "name": "bixx Sun and Beauty Frankfurt-Oder",
+      "maps_url": "https://www.google.com/maps/place/bixx+Sun+and+Beauty+Frankfurt-Oder/data=!4m7!3m6!1s0x4707992d305c342b:0x6e65cc0c374e4326!8m2!3d52.3628639!4d14.5248316!16s%2Fg%2F11lg7ssjyj!19sChIJKzRcMC2ZB0cRJkNONwzMZW4?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Tanning salon",
+      "address": "Spitzkrugring 1/1b"
+    },
+    {
+      "name": "Blickfang",
+      "maps_url": "https://www.google.com/maps/place/Blickfang/data=!4m7!3m6!1s0x470799be9e3967b5:0xbd860f6c0e513ccb!8m2!3d52.3365102!4d14.5383208!16s%2Fg%2F11fksrq7gb!19sChIJtWc5nr6ZB0cRyzxRDmwPhr0?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Friseur Maske und Schnitt",
+      "maps_url": "https://www.google.com/maps/place/Friseur+Maske+und+Schnitt/data=!4m7!3m6!1s0x4707986b5abd649b:0x1f0053586acf4559!8m2!3d52.34817!4d14.54372!16s%2Fg%2F11ckvh63nd!19sChIJm2S9WmuYB0cRWUXPalhTAB8?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Hair salon",
+      "address": "Sophienstraße 9"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "CARESSE Beauty Center",
+      "maps_url": "https://www.google.com/maps/place/CARESSE+Beauty+Center/data=!4m7!3m6!1s0x470799d94c680fbf:0x34f6848fea73e998!8m2!3d52.3341674!4d14.5236655!16s%2Fg%2F11h3965kkn!19sChIJvw9oTNmZB0cRmOlz6o-E9jQ?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": "+493355006110",
+      "old_or_no_website": "",
+      "email": "caresse@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Match: 'caresse' in domain/local",
+      "about": "[![Gelbe Seiten Unternehmen finden](https://www.gelbeseiten.de/webgs/images/gelbe-seiten-logo.svg)](https://www.gelbeseiten.de/)",
+      "products": [
+        "Suchen",
+        "Service",
+        "FÜR SIE",
+        "FÜR FIRMENINHABER",
+        "Ratgeber",
+        "Meinen Standort verwenden"
+      ],
+      "opening_hours": {
+        "Mo": "0:00 – 18:00",
+        "Di": "0:00 – 18:00",
+        "Mi": "0:00 – 18:00",
+        "Do": "0:00 – 18:00",
+        "Fr": "9:00 – 15:00"
+      },
+      "branch": "Kosmetik",
+      "region": "Frankfurt Oder"
+    }
+  ]
+}

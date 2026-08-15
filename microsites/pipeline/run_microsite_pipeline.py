@@ -178,22 +178,13 @@ def main():
             print(f"  OPT-OUT: Firma '{name}' gesperrt -> uebersprungen")
             continue
 
-        # 2) Falsch-Zuordnung verhindern: E-Mail-Domain sollte zur Firma passen.
-        #    Grobe Heuristik: Wenn Segment != Bäckerei und E-Mail-Local-Part enthält
-        #    einen bekannten Fremd-Firmennamen -> blockieren.
-        #    (z.B. kontakt@fahrschule-ulmann.de bei Lead "Pedal Pandas" ist Verdacht)
-        local = email_l.split("@")[0] if "@" in email_l else ""
-        # Extrahiere erkennbare Fremdnamen aus Local-Part (wenn Local != Firmenname-Aehnlichkeit)
-        name_tokens = set(re.findall(r"[a-z0-9]+", name_l))
-        local_tokens = set(re.findall(r"[a-z0-9]+", local))
-        # Wenn Local-Part einen klaren Fremd-Firmennamen enthaelt (z.B. 'ulmann'
-        # waehrend Lead 'Pedal Pandas' heisst) -> Verdacht auf falsche Zuordnung
-        if local_tokens and name_tokens:
-            # kein gemeinsames Token UND Local-Part lang genug fuer einen Namen
-            common = name_tokens & local_tokens
-            if not common and len(local) >= 4 and branch.lower() not in local:
-                print(f"  VERDACHT FALSCH-ZUORDNUNG: E-Mail '{email}' passt nicht zu '{name}' -> uebersprungen (Spam-Schutz)")
-                continue
+        # 2) E-Mail-Verifizierung: Nur senden, wenn im Scraper als verifiziert markiert
+        #    (Domain passt zur Firma) ODER Freemailer mit Firmen-Match im Local-Part.
+        #    Das verhindert Ulmann-Faelle (falsche Aggregator-E-Mail).
+        if not lead.get("email_verified", False):
+            reason = lead.get("email_verify_reason", "nicht verifiziert")
+            print(f"  E-MAIL NICHT VERIFIZIERT ({reason}) -> uebersprungen (Spam-Schutz)")
+            continue
 
         if not email:
             print("  keine E-Mail -> uebersprungen")
@@ -212,6 +203,13 @@ def main():
             "email_verified": "yes",
             "phone": lead.get("phone", ""),
             "website_issue": "keine/veraltete eigene Website",
+            # ECHTE Firmendetails aus GelbeSeiten (kein generischer Default!)
+            "about": lead.get("about", ""),
+            "products": lead.get("products", []),
+            "opening_hours": lead.get("opening_hours", {}),
+            "owner": lead.get("owner", ""),
+            "address": lead.get("address", ""),
+            "city": region,
             "slug": slug,
         }
         lead_path = DATA / f"lead_{slug}.json"

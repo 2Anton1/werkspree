@@ -1,0 +1,31 @@
+{
+  "company_name": "CARESSE Beauty Center",
+  "segment": "Kosmetik",
+  "region": "Frankfurt Oder",
+  "email": "caresse@t-online.de",
+  "email_verified": "yes",
+  "phone": "+493355006110",
+  "website_issue": "keine/veraltete eigene Website",
+  "about": "[![Gelbe Seiten Unternehmen finden](https://www.gelbeseiten.de/webgs/images/gelbe-seiten-logo.svg)](https://www.gelbeseiten.de/)",
+  "products": [
+    "Suchen",
+    "Service",
+    "FÜR SIE",
+    "FÜR FIRMENINHABER",
+    "Ratgeber",
+    "Meinen Standort verwenden"
+  ],
+  "opening_hours": {
+    "Mo": "0:00 – 18:00",
+    "Di": "0:00 – 18:00",
+    "Mi": "0:00 – 18:00",
+    "Do": "0:00 – 18:00",
+    "Fr": "9:00 – 15:00"
+  },
+  "owner": "",
+  "address": "",
+  "city": "Frankfurt Oder",
+  "slug": "caresse-beauty-center",
+  "site_url": "https://werkspree.bki-de.de/microsites/sites/caresse-beauty-center/",
+  "built_at": "2026-08-15T11:34:11.462201+02:00"
+}

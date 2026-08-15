@@ -25,10 +25,7 @@
       "category": "Closed",
       "address": "+49 335 5005262",
       "phone": "+493355005262",
-      "old_or_no_website": "",
-      "email": "info@ute-stonner.de",
-      "branch": "Tischler",
-      "region": "Frankfurt Oder"
+      "old_or_no_website": ""
     },
     {
       "name": "Tischlerei Büttner",
@@ -44,7 +41,8 @@
       "rating": 5.0,
       "category": "Closed",
       "address": "+49 335 4014830",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Tischlerei Knuth",
@@ -52,7 +50,7 @@
       "rating": 4.8,
       "category": "Closed",
       "address": "+49 335 545777",
-      "phone": "+49335545777",
+      "phone": null,
       "old_or_no_website": ""
     },
     {
@@ -61,7 +59,8 @@
       "rating": 4.9,
       "category": "Closed",
       "address": "+49 335 6803497",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Michael Jahn Tischlerei",
@@ -69,7 +68,7 @@
       "rating": 5.0,
       "category": "",
       "address": "",
-      "phone": "+493355005262",
+      "phone": null,
       "old_or_no_website": ""
     },
     {
@@ -78,7 +77,8 @@
       "rating": 4.8,
       "category": "Closed",
       "address": "+49 335 2847687",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Zimmerei Thomas",
@@ -87,7 +87,7 @@
       "category": "",
       "address": "",
       "phone": null,
-      "old_or_no_website": "http://www.zimmerei-thomas.net"
+      "old_or_no_website": ""
     },
     {
       "name": "Bodo Guder",
@@ -104,18 +104,5 @@
       "address": "+49 335 4002572"
     }
   ],
-  "hot_leads": [
-    {
-      "name": "Tischlerei Jahn",
-      "maps_url": "https://www.google.com/maps/place/Tischlerei+Jahn/data=!4m7!3m6!1s0x470799cbd7368229:0xe46478919ebb10e3!8m2!3d52.337242!4d14.5388982!16s%2Fg%2F11g4dxcm_p!19sChIJKYI218uZB0cR4xC7npF4ZOQ?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 335 5005262",
-      "phone": "+493355005262",
-      "old_or_no_website": "",
-      "email": "info@ute-stonner.de",
-      "branch": "Tischler",
-      "region": "Frankfurt Oder"
-    }
-  ]
+  "hot_leads": []
 }
