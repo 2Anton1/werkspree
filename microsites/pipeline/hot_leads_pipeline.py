@@ -162,14 +162,21 @@ def extract_company_details_gelbeseiten(profile_url, company_name):
     details = {}
 
     # Beschreibung: Textblock nach "Über uns" / "Beschreibung" / erster längerer Absatz
-    desc_m = re.search(r'(?:Über\s+uns|Bescheibung|Beschreibung|Profil)\s*[:\n-]+(.*?)(?:\n\n|\Z)', md, re.IGNORECASE | re.DOTALL)
+    # ACHTUNG: GelbeSeiten-Seitennavigation (Logo-Alt-Text, "Suchen", "Service") filtern!
+    NAV_NOISE = ["gelbe seiten", "gelbeseiten", "suchen", "service", "für sie", "für firmen",
+                 "ratgeber", "standort verwenden", "unternehmen finden", "cookie", "menü", "navigation"]
+    desc_m = re.search(r'(?:Über\s+uns|Bescheibung|Beschreibung|Profil|Vorstellung)\s*[:\n-]+(.*?)(?:\n\n|\Z)', md, re.IGNORECASE | re.DOTALL)
     if desc_m:
-        details["about"] = " ".join(desc_m.group(1).split())[:600]
-    else:
-        # erster Absatz mit >= 80 Zeichen
+        candidate = " ".join(desc_m.group(1).split())[:600]
+        if not any(n in candidate.lower() for n in NAV_NOISE):
+            details["about"] = candidate
+    if "about" not in details:
         for para in re.split(r'\n\s*\n', md):
-            if len(para.strip()) >= 80 and not para.strip().startswith("http"):
-                details["about"] = para.strip()[:600]
+            p = para.strip()
+            if (80 <= len(p) <= 600 and not p.startswith("http")
+                    and not any(n in p.lower() for n in NAV_NOISE)
+                    and p[0].isupper()):
+                details["about"] = p
                 break
 
     # Leistungen: Zeilen mit Aufzählung (•, -, *) oder "Leistungen" Abschnitt
@@ -180,16 +187,22 @@ def extract_company_details_gelbeseiten(profile_url, company_name):
     if not leist:
         for line in md.splitlines():
             s = line.strip(" •-*–")
-            if 3 <= len(s) <= 60 and not s.startswith("http") and s[0].isupper():
+            if (3 <= len(s) <= 60 and not s.startswith("http") and s[0].isupper()
+                    and not any(n in s.lower() for n in NAV_NOISE)):
                 leist.append(s)
-    details["products"] = leist[:6]
+    # Leistungen filtern: echte Leistungsnamen (nicht Navigation)
+    leist = [l for l in leist if not any(n in l.lower() for n in NAV_NOISE)][:6]
+    details["products"] = leist
 
-    # Öffnungszeiten
+    # Öffnungszeiten: echte Zeiten (nicht 0:00 – 18:00 Default)
     hours = {}
     for tag in ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]:
         m = re.search(rf'{tag}\w*\.?\s*[:\-]?\s*(\d{{1,2}}[:.]\d{{2}}\s*[-–]\s*\d{{1,2}}[:.]\d{{2}})', md)
         if m:
-            hours[tag] = m.group(1).replace(".", ":")
+            h = m.group(1).replace(".", ":")
+            if h.startswith("0:00") or h.startswith("00:00"):
+                continue  # GelbeSeiten-Default, ignorieren
+            hours[tag] = h
     if hours:
         details["opening_hours"] = hours
 
@@ -224,10 +237,15 @@ def validate_email_for_company(email, company_name):
     for tok in comp_tokens:
         if tok in domain_base or tok in local:
             return True, f"Match: '{tok}' in domain/local"
-    # bekannte freie Mailer -> trotzdem ok, aber als "nicht verifiziert" markieren
+    # bekannte freie Mailer -> NUR akzeptieren, wenn Local-Part einen Firmen-Token enthaelt
+    # (sonst waere es eine falsche Zuordnung, z.B. caresse@t-online.de bei fremdem Friseur)
     free = ["gmail", "web.de", "gmx", "yahoo", "outlook", "hotmail", "icloud", "t-online", "mail.de", "freenet"]
     if any(f in domain for f in free):
-        return True, "Freemailer (nicht firmenspezifisch, aber plausibel)"
+        # Freemailer: nur OK, wenn Local-Part einen Firmen-Token enthaelt
+        for tok in comp_tokens:
+            if tok in local:
+                return True, f"Freemailer mit Firmen-Match '{tok}' in local"
+        return False, f"Freemailer '{domain}' ohne Firmen-Match im Local-Part '{local}' (falsche Zuordnung?)"
     return False, f"kein Firmen-Token in '{domain}' / '{local}'"
 
 
