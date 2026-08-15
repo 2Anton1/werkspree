@@ -1,5 +1,31 @@
 # Werkspree — KI-Automatisierung für kleine Unternehmen
-## Vollständiger Projekt-Handover (Stand: 11.08.2026)
+## Vollständiger Projekt-Handover (Stand: 15.08.2026)
+
+---
+
+## Kritischer Vorfall: Opt-out / Falsch-Zuordnung (15.08.2026)
+
+**Beschwerde von P. Ulmann (kontakt@fahrschule-ulmann.de):**
+- Email wurde im Fahrschule-Lauf an `kontakt@fahrschule-ulmann.de` gesendet, aber der
+  Lead hieß "Fahrschule Pedal Pandas" — **falsche Zuordnung** (Ulmann ist andere Fahrschule).
+- Die generierte Microsite enthielt **hartkodierten Bäckerei-Text** ("Traditionsbäckerei
+  seit 36 Jahren", "Handwerksrolle Potsdam") auf einer Fahrschule-Site.
+- Ulmann forderte: keine weitere Kontaktaufnahme, keine Veröffentlichung mit seiner Adresse.
+
+**Fixes ( gleicher Tag, gepusht d4c8d6c ):**
+1. `build_microsite.py` `render()`: Segment-spezifische Produkte/About (Map pro Branche),
+   **kein Bäckerei-Default mehr**. Generic About statt "Traditionsbäckerei".
+2. `opt_out.json` (microsites/pipeline/data/): gesperrte Emails/Domains/Companies.
+   Orchestrator überspringt diese vor dem Versand.
+3. Falsch-Zuordnungs-Heuristik: Wenn E-Mail-Local-Part keine Token mit Firmenname teilt
+   UND Local-Part >= 4 Zeichen UND Branche nicht im Local-Part -> Verdacht, übersprungen.
+4. Entschuldigungs- + Opt-out-Bestätigungs-Mail an Ulmann gesendet (Strato, 15.08.).
+
+**Opt-out-Policy (ab sofort):**
+- Jede Beschwerde/Ablehnung -> sofort `opt_out.json` ergänzen (email/domain/company).
+- Orchestrator prüft vor jedem Versand gegen `opt_out.json`.
+- Keine Veröffentlichung von Microsites mit gesperrten Adressen.
+- Double-Opt-in nicht nötig (Kaltakquise freigegeben), aber **jede Beschwerde = sofortiger Stopp**.
 
 ---
 
