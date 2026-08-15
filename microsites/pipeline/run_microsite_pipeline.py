@@ -25,43 +25,25 @@ REPORTS = PIPE / "reports"
 REPORTS.mkdir(exist_ok=True)
 
 ROTATION = [
-    ("Elektriker", "Berlin Neukölln"),
-    ("Friseur", "Potsdam"),
-    ("Bäcker", "Brandenburg an der Havel"),
-    ("Reinigung", "Cottbus"),
-    ("Tischler", "Frankfurt Oder"),
+    # Branchen mit nachgewiesenen Leads (Website-Luecken + verifizierbare E-Mails)
     ("Kosmetik", "Potsdam"),
     ("Fahrschule", "Brandenburg an der Havel"),
     ("Kfz Werkstatt", "Cottbus"),
-    ("Maler", "Berlin Lichtenberg"),
-    ("Zahnarzt", "Potsdam"),
-    ("Physiotherapie", "Cottbus"),
-    ("Metzgerei", "Frankfurt Oder"),
-    ("Optiker", "Brandenburg an der Havel"),
-    ("Florist", "Berlin Neukölln"),
-    ("Schlüsseldienst", "Potsdam"),
-    ("Heizung Sanitär", "Cottbus"),
-    # Erweiterung: Kleinstaedte Brandenburg (lead-reich, viele ohne Website)
-    ("Elektriker", "Cottbus"),
-    ("Friseur", "Frankfurt Oder"),
-    ("Bäcker", "Cottbus"),
-    ("Reinigung", "Brandenburg an der Havel"),
-    ("Tischler", "Cottbus"),
+    ("Reinigung", "Cottbus"),
     ("Kosmetik", "Frankfurt Oder"),
     ("Fahrschule", "Cottbus"),
     ("Kfz Werkstatt", "Frankfurt Oder"),
-    ("Maler", "Cottbus"),
-    ("Dachdecker", "Brandenburg an der Havel"),
-    ("Sanitär", "Frankfurt Oder"),
-    ("Gartenbau", "Cottbus"),
-    ("Autowerkstatt", "Brandenburg an der Havel"),
-    ("Friseur", "Cottbus"),
-    ("Bäckerei", "Frankfurt Oder"),
-    ("Reinigung", "Frankfurt Oder"),
-    ("Tischlerei", "Brandenburg an der Havel"),
-    ("Kosmetikstudio", "Cottbus"),
+    ("Reinigung", "Brandenburg an der Havel"),
+    ("Kosmetik", "Cottbus"),
     ("Fahrschule", "Frankfurt Oder"),
-    ("Kfz", "Brandenburg an der Havel"),
+    ("Kfz Werkstatt", "Brandenburg an der Havel"),
+    ("Reinigung", "Frankfurt Oder"),
+    ("Friseur", "Potsdam"),
+    ("Friseur", "Cottbus"),
+    ("Maler", "Cottbus"),
+    ("Gartenbau", "Cottbus"),
+    ("Tischlerei", "Cottbus"),
+    ("Metzgerei", "Cottbus"),
 ]
 # bereits gepruefte Kombinationen (Stand 14.08. abend, nach 10x-Local-Lauf)
 DONE = {
@@ -215,10 +197,10 @@ def main():
         lead_path = DATA / f"lead_{slug}.json"
         lead_path.write_text(json.dumps(lead_json, ensure_ascii=False, indent=2))
 
-        # 3) Build
-        ok_b, _ = run([sys.executable, "build_microsite.py", "--lead", str(lead_path)])
+        # 3) Build (AGENT: maßgeschneiderte Site pro Lead)
+        ok_b, _ = run([sys.executable, "agent_build_microsite.py", "--lead", str(lead_path)])
         if not ok_b:
-            print("  Build fehlgeschlagen")
+            print("  Build fehlgeschlagen (Agent)")
             continue
         # 3b) Deploy (zentral pushen, damit Sandbox-Git-Context genutzt wird)
         run(["git", "-C", str(PIPE.parent), "add", "-A"])
