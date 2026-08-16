@@ -1,0 +1,42 @@
+{
+  "branch": "Metzgerei",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "Fleischerei Lars Speer e.K.",
+      "maps_url": "https://www.google.com/maps/place/Fleischerei+Lars+Speer+e.K./data=!4m7!3m6!1s0x4708745d29d65543:0x1d49fb400976b929!8m2!3d51.7641068!4d14.3319772!16s%2Fg%2F1tpc6p26!19sChIJQ1XWKV10CEcRKbl2CUD7SR0?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Butcher shop",
+      "address": "Friedrich-Ebert-Straße 20",
+      "phone": null,
+      "old_or_no_website": "http://www.fleischerei-speer.de"
+    },
+    {
+      "name": "Abu El-Ezz Fleischerei",
+      "maps_url": "https://www.google.com/maps/place/Abu+El-Ezz+Fleischerei/data=!4m7!3m6!1s0x47087518c68d852d:0x1a9eb75dcefabd0b!8m2!3d51.7580343!4d14.3340594!16s%2Fg%2F11r3lt2c6x!19sChIJLYWNxhh1CEcRC736zl23nho?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Open",
+      "address": "+49 176 86969506",
+      "phone": "+4917686969506",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Fleischerei Kadach - Filiale Cottbus Center",
+      "maps_url": "https://www.google.com/maps/place/Fleischerei+Kadach+-+Filiale+Cottbus+Center/data=!4m7!3m6!1s0x470875d343511ecf:0xe65b823c4529b69e!8m2!3d51.7836458!4d14.3167224!16s%2Fg%2F11fks3y53f!19sChIJzx5RQ9N1CEcRnrYpRTyCW-Y?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Butcher shop",
+      "address": "Sielower Ch 38",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Konrad Speer",
+      "maps_url": "https://www.google.com/maps/place/Konrad+Speer/data=!4m7!3m6!1s0x470875ade8ffd82d:0x705a6ff25640453!8m2!3d51.7860784!4d14.3423251!16s%2Fg%2F1td_9d0w!19sChIJLdj_6K11CEcRUwRkJf-mBQc?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Butcher shop",
+      "address": "Zuschka Cužka 36",
+      "phone": null
+    }
+  ],
+  "hot_leads": []
+}

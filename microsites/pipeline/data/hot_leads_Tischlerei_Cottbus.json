@@ -1,0 +1,102 @@
+{
+  "branch": "Tischlerei",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "Möbel-u. Bautischlerei Robert Totzke",
+      "maps_url": "https://www.google.com/maps/place/M%C3%B6bel-u.+Bautischlerei+Robert+Totzke/data=!4m7!3m6!1s0x4708740cffc90373:0xf774a609ae9f509c!8m2!3d51.7465952!4d14.3424209!16s%2Fg%2F1tplp08l!19sChIJcwPJ_wx0CEcRnFCfrgmmdPc?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": "+493554302460",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Tischlerei Bosse",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+Bosse/data=!4m7!3m6!1s0x47087412b9deabab:0xff579c7263a6ebdf!8m2!3d51.7502261!4d14.3414841!16s%2Fg%2F11gjmrvq6g!19sChIJq6veuRJ0CEcR3-umY3KcV_8?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": null
+    },
+    {
+      "name": "Marko Kobelt Tischlermeister",
+      "maps_url": "https://www.google.com/maps/place/Marko+Kobelt+Tischlermeister/data=!4m7!3m6!1s0x4708751e98e7934b:0x5952d04bf821e1ba!8m2!3d51.7898396!4d14.3069484!16s%2Fg%2F1xfsmf_f!19sChIJS5PnmB51CEcRuuEh-EvQUlk?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 355 870587",
+      "phone": null
+    },
+    {
+      "name": "Uwe Schurig Tischlerei",
+      "maps_url": "https://www.google.com/maps/place/Uwe+Schurig+Tischlerei/data=!4m7!3m6!1s0x4708744498b4b875:0xdab9e98934a5675!8m2!3d51.7665762!4d14.3360009!16s%2Fg%2F11btm9mm1w!19sChIJdbi0mER0CEcRdVZKk5ieqw0?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": "+49355860325",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Erdmann Peter u. Erdmann Jens GbR",
+      "maps_url": "https://www.google.com/maps/place/Erdmann+Peter+u.+Erdmann+Jens+GbR/data=!4m7!3m6!1s0x470873de89901981:0x8f2716b0244d4823!8m2!3d51.7115706!4d14.3473755!16s%2Fg%2F1tfpszst!19sChIJgRmQid5zCEcRI0hNJLAWJ48?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": "+49355522668",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Kurt During Tischlereibedarf",
+      "maps_url": "https://www.google.com/maps/place/Kurt+During+Tischlereibedarf/data=!4m7!3m6!1s0x417018fa709df74d:0x64339f91e82dbfcb!8m2!3d51.7572053!4d14.3349563!16s%2Fg%2F1td70qcx!19sChIJTfedcPoYcEERy78t6JGfM2Q?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "",
+      "address": "",
+      "phone": "+4935524313",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Bautischlerei Schulerowitz",
+      "maps_url": "https://www.google.com/maps/place/Bautischlerei+Schulerowitz/data=!4m7!3m6!1s0x4708751bdb5aa4f5:0xa0724ea00966f915!8m2!3d51.7927157!4d14.3101403!16s%2Fg%2F1thpvjyx!19sChIJ9aRa2xt1CEcRFflmCaBOcqA?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": "+49355871845",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Tischlerei Gaglower Eiche",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+Gaglower+Eiche/data=!4m7!3m6!1s0x470873a0a70a3e07:0x67c3c89d0b6a111b!8m2!3d51.7185076!4d14.2927413!16s%2Fg%2F1hhk604s_!19sChIJBz4Kp6BzCEcRGxFqC53Iw2c?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 355 534044",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Montagetischler Cottbus - Lukas Schwarz",
+      "maps_url": "https://www.google.com/maps/place/Montagetischler+Cottbus+-+Lukas+Schwarz/data=!4m7!3m6!1s0x4708756c6a1965df:0xa47e3f8c548b8cbd!8m2!3d51.7960106!4d14.3043717!16s%2Fg%2F11rbbvc0bw!19sChIJ32UZamx1CEcRvYyLVIw_fqQ?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 172 5228895",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Tischlerei Hagen Städter",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+Hagen+St%C3%A4dter/data=!4m7!3m6!1s0x47087070a816478f:0xcd29afd3d3197aa7!8m2!3d51.6718825!4d14.445008!16s%2Fg%2F11g8wvhw86!19sChIJj0cWqHBwCEcRp3oZ09OvKc0?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": "",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Tischlerei Frank Krummheuer",
+      "maps_url": "https://www.google.com/maps/place/Tischlerei+Frank+Krummheuer/data=!4m7!3m6!1s0x40f38ff4b8eface5:0xcce2632fe9bb47fc!8m2!3d51.7783976!4d14.3872856!16s%2Fg%2F11ttb0j60d!19sChIJ5azvuPSP80AR_Ee76S9j4sw?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    }
+  ],
+  "hot_leads": []
+}

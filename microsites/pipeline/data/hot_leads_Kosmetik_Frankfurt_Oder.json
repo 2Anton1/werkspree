@@ -41,7 +41,8 @@
       "rating": 5.0,
       "category": "",
       "address": "",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "House Of Beauty Frankfurt Oder",
@@ -49,7 +50,8 @@
       "rating": 4.8,
       "category": "",
       "address": "",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "House of Beauty( Nägel, Wimpern, Microblading, Wax, Aquafacial)",
@@ -57,7 +59,8 @@
       "rating": 4.8,
       "category": "Beauty salon",
       "address": "Direkt im Bahnhof",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Princess deluxe",
@@ -65,7 +68,7 @@
       "rating": 4.8,
       "category": "",
       "address": "",
-      "phone": "+491744681086",
+      "phone": null,
       "old_or_no_website": ""
     },
     {
@@ -74,29 +77,8 @@
       "rating": 5.0,
       "category": "",
       "address": "",
-      "phone": "+493355006110",
-      "old_or_no_website": "",
-      "email": "caresse@t-online.de",
-      "email_verified": true,
-      "email_verify_reason": "Match: 'caresse' in domain/local",
-      "about": "[![Gelbe Seiten Unternehmen finden](https://www.gelbeseiten.de/webgs/images/gelbe-seiten-logo.svg)](https://www.gelbeseiten.de/)",
-      "products": [
-        "Suchen",
-        "Service",
-        "FÜR SIE",
-        "FÜR FIRMENINHABER",
-        "Ratgeber",
-        "Meinen Standort verwenden"
-      ],
-      "opening_hours": {
-        "Mo": "0:00 – 18:00",
-        "Di": "0:00 – 18:00",
-        "Mi": "0:00 – 18:00",
-        "Do": "0:00 – 18:00",
-        "Fr": "9:00 – 15:00"
-      },
-      "branch": "Kosmetik",
-      "region": "Frankfurt Oder"
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Kosmetik & Pediküre Regine Jeske",
@@ -104,7 +86,8 @@
       "rating": 5.0,
       "category": "",
       "address": "",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": ""
     },
     {
       "name": "Anke Mähnert - ganzheitliche Hautpflege, Fitness & Ernährung",
@@ -163,36 +146,5 @@
       "address": "Sophienstraße 9"
     }
   ],
-  "hot_leads": [
-    {
-      "name": "CARESSE Beauty Center",
-      "maps_url": "https://www.google.com/maps/place/CARESSE+Beauty+Center/data=!4m7!3m6!1s0x470799d94c680fbf:0x34f6848fea73e998!8m2!3d52.3341674!4d14.5236655!16s%2Fg%2F11h3965kkn!19sChIJvw9oTNmZB0cRmOlz6o-E9jQ?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": "+493355006110",
-      "old_or_no_website": "",
-      "email": "caresse@t-online.de",
-      "email_verified": true,
-      "email_verify_reason": "Match: 'caresse' in domain/local",
-      "about": "[![Gelbe Seiten Unternehmen finden](https://www.gelbeseiten.de/webgs/images/gelbe-seiten-logo.svg)](https://www.gelbeseiten.de/)",
-      "products": [
-        "Suchen",
-        "Service",
-        "FÜR SIE",
-        "FÜR FIRMENINHABER",
-        "Ratgeber",
-        "Meinen Standort verwenden"
-      ],
-      "opening_hours": {
-        "Mo": "0:00 – 18:00",
-        "Di": "0:00 – 18:00",
-        "Mi": "0:00 – 18:00",
-        "Do": "0:00 – 18:00",
-        "Fr": "9:00 – 15:00"
-      },
-      "branch": "Kosmetik",
-      "region": "Frankfurt Oder"
-    }
-  ]
+  "hot_leads": []
 }

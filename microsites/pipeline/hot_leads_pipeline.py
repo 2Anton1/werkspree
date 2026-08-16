@@ -50,14 +50,39 @@ EXCLUDE_DOMAINS = [
 
 GENERIC_EMAIL_BLOCKLIST = ["example", "spam", "meinungsmeister", "webmaster@", "sentry.io", "wixpress.com"]
 
+# Branchen-/Rechtsform-Wörter ohne Unterscheidungskraft: Sie stehen in fast
+# jedem Firmennamen der Branche und dürfen NIE als Firmen-Token-Match zählen
+# (Ulmann-Vorfall 15.08.: 'fahrschule' matchte fremde Fahrschul-E-Mail).
+# Nur unterscheidende Tokens (z.B. 'grueneberg', 'hennig') gelten als Match.
+GENERIC_COMPANY_TOKENS = {
+    "fahrschule", "fahrs", "kosmetik", "beauty", "salon", "barber", "nails",
+    "malermeister", "maler", "tischlerei", "tischler", "schreinerei",
+    "bäckerei", "baeckerei", "konditorei", "restaurant", "cafe", "café",
+    "gastronomie", "imbiss", "reinigung", "gebaudereinigung",
+    "gebäudereinigung", "physiotherapie", "physio", "zahnarzt", "zahn",
+    "elektriker", "elektro", "kfz", "auto", "werkstatt", "metzgerei",
+    "fleischerei", "optiker", "augenoptik", "florist", "blumen",
+    "schlüsseldienst", "schluesseldienst", "heizung", "sanitär", "sanitaer",
+    "gartenbau", "gmbh", "ug", "kg", "e.k.", "eg", "center", "studio",
+    "service", "betrieb", "gesellschaft", "team", "schule", "institut",
+    "friseur", "frisör", "frisoer", "hair", "lifestyle", "kosmetikstudio",
+}
+
 
 def firecrawl_scrape(url, out_path, wait_for=4000, formats="markdown,links", timeout=60):
-    result = subprocess.run(
-        ["firecrawl", "scrape", url, "--wait-for", str(wait_for),
-         "-f", formats, "-o", str(out_path)],
-        capture_output=True, text=True, timeout=timeout,
-    )
-    return result.returncode == 0
+    try:
+        result = subprocess.run(
+            ["firecrawl", "scrape", url, "--wait-for", str(wait_for),
+             "-f", formats, "-o", str(out_path)],
+            capture_output=True, text=True, timeout=timeout,
+        )
+        return result.returncode == 0
+    except subprocess.TimeoutExpired:
+        print(f"  (firecrawl_scrape timeout {timeout}s: {url[:80]})")
+        return False
+    except Exception as e:
+        print(f"  (firecrawl_scrape Fehler: {e})")
+        return False
 
 
 def parse_maps_search(markdown):
@@ -221,10 +246,21 @@ def extract_company_details_gelbeseiten(profile_url, company_name):
     return details
 
 
+def _norm_token(s):
+    """Normalisiert für den Vergleich: lowercase + Umlaut-Transliteration
+    (grüneberg == grueneberg, bäckerei == baeckerei)."""
+    return (s.lower()
+            .replace("ä", "ae").replace("ö", "oe").replace("ü", "ue")
+            .replace("ß", "ss"))
+
+
 def validate_email_for_company(email, company_name):
     """Prüft, ob die E-Mail plausibel zur Firma gehört.
-    Heuristik: Domain-Teil enthält >= 1 Token des Firmennamens (oder umgekehrt),
-    ODER die E-Mail-Local-Part enthält einen Firmen-Token.
+    HARTE REGEL (Ulmann-Fix 15.08.): Nur UNTERSCHEIDENDE Firmen-Tokens zählen
+    als Match — generische Branchenwörter (fahrschule, kosmetik, ...) und
+    Rechtsform-Suffixe (gmbh, ug, ...) werden ausgeschlossen. Ohne Match wird
+    die E-Mail verworfen (Spam-Schutz, keine falschen Zuordnungen).
+    Umlaute werden transliteriert (grüneberg == grueneberg).
     Gibt (is_valid, reason) zurück."""
     if not email or "@" not in email:
         return False, "keine E-Mail"
@@ -233,20 +269,27 @@ def validate_email_for_company(email, company_name):
     comp_tokens = [t for t in re.findall(r"[a-z0-9äöüß]+", company_name.lower()) if len(t) >= 3]
     if not comp_tokens:
         return False, "Firmenname unparsebar"
-    # Token im Domain-Base?
-    for tok in comp_tokens:
-        if tok in domain_base or tok in local:
-            return True, f"Match: '{tok}' in domain/local"
+    # Nur unterscheidende Tokens (keine generischen Branchenwörter/Rechtsformen)
+    distinct = [t for t in comp_tokens if t not in GENERIC_COMPANY_TOKENS]
+    if not distinct:
+        return False, f"kein unterscheidender Firmen-Token in '{company_name}' (nur generisch)"
+    distinct_norm = {_norm_token(t): t for t in distinct}
+    domain_base_norm = _norm_token(domain_base)
+    local_norm = _norm_token(local)
+    # Token im Domain-Base oder Local-Part?
+    for dn, orig in distinct_norm.items():
+        if dn in domain_base_norm or dn in local_norm:
+            return True, f"Match: '{orig}' in domain/local"
     # bekannte freie Mailer -> NUR akzeptieren, wenn Local-Part einen Firmen-Token enthaelt
     # (sonst waere es eine falsche Zuordnung, z.B. caresse@t-online.de bei fremdem Friseur)
     free = ["gmail", "web.de", "gmx", "yahoo", "outlook", "hotmail", "icloud", "t-online", "mail.de", "freenet"]
     if any(f in domain for f in free):
-        # Freemailer: nur OK, wenn Local-Part einen Firmen-Token enthaelt
-        for tok in comp_tokens:
-            if tok in local:
-                return True, f"Freemailer mit Firmen-Match '{tok}' in local"
+        # Freemailer: nur OK, wenn Local-Part einen unterscheidenden Token enthaelt
+        for dn, orig in distinct_norm.items():
+            if dn in local_norm:
+                return True, f"Freemailer mit Firmen-Match '{orig}' in local"
         return False, f"Freemailer '{domain}' ohne Firmen-Match im Local-Part '{local}' (falsche Zuordnung?)"
-    return False, f"kein Firmen-Token in '{domain}' / '{local}'"
+    return False, f"kein unterscheidender Firmen-Token in '{domain}' / '{local}'"
 
 
 
