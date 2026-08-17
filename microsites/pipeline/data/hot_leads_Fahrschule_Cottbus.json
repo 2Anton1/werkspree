@@ -54,21 +54,7 @@
       "category": "Driving school",
       "address": "Schillerstraße 79",
       "phone": null,
-      "old_or_no_website": "",
-      "email": "info@fahrschule-grueneberg.de",
-      "email_verified": true,
-      "email_verify_reason": "Match: 'grüneberg' in domain/local",
-      "about": "Geben Sie links Ihre Rufnummer incl. Vorwahl ein und klicken Sie auf \"Anrufen\". Es wird zunächst eine Verbindung zu Ihrer Rufnummer hergestellt. Dann wird der von Ihnen gewünschte\nTeilnehmer angerufen.",
-      "products": [
-        "Finden",
-        "Fahrschulen",
-        "Schillerstr. 79, 03046 Cottbus-Mitte",
-        "Jetzt geschlossen–Öffnet Montag um 10:00",
-        "Gratis anrufen",
-        "E-Mail"
-      ],
-      "branch": "Fahrschule",
-      "region": "Cottbus"
+      "old_or_no_website": ""
     },
     {
       "name": "City Fahrschule Cottbus",
@@ -111,29 +97,5 @@
       "address": "+49 173 3822735"
     }
   ],
-  "hot_leads": [
-    {
-      "name": "Fahrschule Grüneberg GmbH",
-      "maps_url": "https://www.google.com/maps/place/Fahrschule+Gr%C3%BCneberg+GmbH/data=!4m7!3m6!1s0x47087467361a4ce7:0x8f8caafec710acf6!8m2!3d51.7610813!4d14.3239265!16s%2Fg%2F1tdm2fl4!19sChIJ50waNmd0CEcR9qwQx_6qjI8?authuser=0&hl=en&rclk=1",
-      "rating": 4.6,
-      "category": "Driving school",
-      "address": "Schillerstraße 79",
-      "phone": null,
-      "old_or_no_website": "",
-      "email": "info@fahrschule-grueneberg.de",
-      "email_verified": true,
-      "email_verify_reason": "Match: 'grüneberg' in domain/local",
-      "about": "Geben Sie links Ihre Rufnummer incl. Vorwahl ein und klicken Sie auf \"Anrufen\". Es wird zunächst eine Verbindung zu Ihrer Rufnummer hergestellt. Dann wird der von Ihnen gewünschte\nTeilnehmer angerufen.",
-      "products": [
-        "Finden",
-        "Fahrschulen",
-        "Schillerstr. 79, 03046 Cottbus-Mitte",
-        "Jetzt geschlossen–Öffnet Montag um 10:00",
-        "Gratis anrufen",
-        "E-Mail"
-      ],
-      "branch": "Fahrschule",
-      "region": "Cottbus"
-    }
-  ]
+  "hot_leads": []
 }

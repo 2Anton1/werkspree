@@ -251,10 +251,17 @@ def main():
     print(f"\nReport: {rep_path}")
 
     if idx >= 0:
-        # Segment als done markieren (persistent, verhindert Dubletten ueber Laeufe)
-        done = set(tuple(d) for d in load_state().get("done", [])) | DONE
-        done.add((branch, region))
-        save_state(idx, done)
+        # Segment NUR als done markieren, wenn die Recherche echte Kandidaten
+        # geliefert hat. Bei 0 Kandidaten war die Maps-Suche vermutlich ein
+        # transienter Firecrawl-Fehler -> Segment NICHT verbrennen (wird beim
+        # naechsten Durchlauf der Rotation erneut versucht).
+        if hl.get("all_candidates"):
+            done = set(tuple(d) for d in load_state().get("done", [])) | DONE
+            done.add((branch, region))
+            save_state(idx, done)
+        else:
+            print("WARN: Recherche ohne Kandidaten (transienter Fehler?) "
+                  "-> Segment NICHT als done markiert")
     return 0
 
 if __name__ == "__main__":
