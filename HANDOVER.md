@@ -305,6 +305,43 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 17.08.2026 — Lead-Pipeline-Fixes (Strato-Versand, guessed-Filter, Timeout-Toleranz, Airtable)
+
+- **Gmail-Token defekt (Root Cause gefunden):** `google_token.json` hatte `expiry` als Float
+  (Unix-Timestamp) statt ISO-String → `google_api.py` crashte bei JEDEM Aufruf mit
+  `AttributeError: 'float' object has no attribute 'rstrip'`. Zusätzlich Refresh-Token revoked
+  (`invalid_grant`). Fix: Float→ISO-Konvertierung in `_normalize_authorized_user_payload` +
+  `get_credentials()` (kein Crash mehr); echter OAuth-Re-Login bleibt manuell offen (Browser).
+- **warm_outreach.py sendet jetzt via `send_mail.py` (Strato SMTP `kontakt@bki-de.de`)** statt
+  google_api.py/Gmail — konsistent mit der Microsite-Pipeline, Gmail nur noch Fallback.
+  Verifiziert 17.08.: 4/4 Follow-ups via Strato gesendet (kanzlei-barz, recht-web,
+  ra-gerd-engelmann, ruspravo) — vorher 0/5 via Gmail (Token-Crash).
+- **email_source-Filter:** `guessed`-E-Mails (info@-Geraten) werden NIE mehr versendet
+  (ELEKTRO REIBSCH, HKF, Cafe a la Russe, Wolter GmbH jetzt geskippt).
+- **Follow-up-Zyklus-Reparatur:** Fehlgeschlagene Sends speicherten `_failed`-Status, der nie
+  wieder in den Zyklus kam → 5 Follow-ups waren „verbrannt". Fix: Fehlschläge speichern KEINEN
+  Status; `sent_emails.json` wurde repariert (5× `followup_3days_failed` → `initial_sent`).
+  `sent_ok`-Zähler meldet jetzt echte Erfolge statt „Sent to N".
+- **warmth_scorer.py:** Firecrawl-Timeout crashte das ganze Scoring → try/except in
+  `scrape_website()` (gibt None zurück, Lead wird ohne Content gescort).
+- **Airtable-Schema-Korrektur (live verifiziert):** `tbluCUpuCPxW1GcWD` EXISTIERT doch — es ist
+  die interne ID von `Table 1` (gleiche Felder). Kein `Email`-Feld → `sync_airtable` legt E-Mail
+  in `Notes` ab; `airtable_api()` mit timeout=60 + bis zu 3 Versuchen (vorher 30s ohne Retry).
+- Commits: `~/werkspree` `0717771`, `~/work/werkspree` `8297448` (nach rebase). Beide Klone
+  synchron mit origin/main.
+
+### 16.08.2026 — Microsite-Pipeline: Hennig-Falschzuordnung verhindert, Segment-Verbrennung gefixt
+
+- **Ulmann-Fall in neu verhindert:** `validate_email_for_company` akzeptierte generische
+  Branchen-Tokens („fahrschule") als Match → Fahrschule Hennig bekam `info@fahrschule-grueneberg.de`
+  zugeordnet. Fix: `GENERIC_COMPANY_TOKENS`-Blocklist + Umlaut-Normalisierung `_norm_token()`.
+  Test-Batterie grün (Grüneberg ✓, Hennig ✗, Ulmann ✗, Caresse ✓).
+- **Segment-Verbrennung:** Orchestrator markierte Segmente auch bei transientem Firecrawl-Fehler
+  als done → `run_microsite_pipeline.py` markiert nur noch bei `all_candidates` nicht leer.
+- **firecrawl_scrape:** try/except (TimeoutExpired crashte den Lauf mit Exit 2).
+- **Parallel-Cron-Hinweis:** 3h-Cron d6e7e5202ac1 kann parallel zu manuellen Läufen feuern und
+  spült mit `git add -A` alle Working-Tree-Änderungen in seinen Commit.
+
 ### 11.08.2026 — Design- & Inhalts-Upgrade der Landing-Page (index.html)
 
 - **Aisthesis & Typografie (1 A)**: Google Fonts Inter (Fließtext) & Plus Jakarta Sans (Überschriften) integriert. Globale Typografie harmonisiert.
