@@ -48,12 +48,15 @@ WICHTIG — Design-Anforderungen:
 - Footer mit "Demo-Website von Werkspree (KI-Automatisierung)".
 
 INHALTE:
-- Nutze NUR die echten Lead-Daten. Wenn "Beschreibung" oder "Leistungen" offensichtlicher Spam/Menü-Text ist (z.B. "Suchen", "Service", "Gelbe Seiten", "FÜR SIE", "Ratgeber", Logo-Alt-Texte), DANN IGNORIERE diese und schreibe stattdessen eine kurze, plausible, branchentypische Beschreibung selbst.
+- Nutze NUR die echten Lead-Daten. Wenn "Beschreibung" oder "Leistungen" offensichtlicher Spam/Menü-Text ist (z.B. "Suchen", "Service", "Gelbe Seiten", "FÜR SIE", "Ratgeber", "Gratis anrufen", "Finden", "Jetzt geschlossen", "E-Mail", "Website", Logo-Alt-Texte, Telefonvermittlungs-Anleitungen), DANN IGNORIERE diese und schreibe stattdessen eine kurze, plausible, branchentypische Beschreibung selbst.
 - Keine Platzhalter wie {{XYZ}} — alle Inhalte echt füllen.
 - Kein englischer Text, keine erfundenen Zitate, keine Fake-Bewertungen, keine erfundenen Inhaber.
 - Reine, valide HTML5. Kein Markdown, kein Code-Block-Wrapper.
 
-Gib NUR den HTML-Code zurück, sonst nichts."""
+ANTWORTFORMAT (zwingend):
+- Antworte AUSSCHLIESSLICH mit der fertigen HTML-Datei.
+- Die Antwort beginnt mit <!DOCTYPE html> und endet mit </html>.
+- Kein Markdown-Code-Block (kein ```html ... ```), keine Erklärungen, kein Plan, keine Zwischenüberschriften, kein Text vor oder nach dem HTML."""
 
 
 def build_prompt(lead):
@@ -136,7 +139,20 @@ def extract_html(text):
         return m.group(0)
     if "<!DOCTYPE" in text or "<html" in text:
         return text
-    return text
+    return None  # kein HTML erkannt -> kein Schreiben, Retry/Fehler
+
+
+def is_valid_html(html):
+    """Muss echte HTML-Struktur sein, nicht Plan-Text/Reasoning."""
+    if not html:
+        return False
+    if not re.search(r"<html[\s\S]*?</html>", html, re.IGNORECASE):
+        return False
+    if not re.search(r"<body[\s\S]*?</body>", html, re.IGNORECASE):
+        return False
+    if "{{" in html or "}}" in html:
+        return False
+    return True
 
 
 def slugify(name):
@@ -166,15 +182,24 @@ def main():
 
     print(f"  Agent baut Site für: {lead.get('company_name')} (Branch: {lead.get('segment')})")
     user_prompt = build_prompt(lead)
-    try:
-        html = call_openrouter(SYSTEM_PROMPT, user_prompt)
-    except Exception as e:
-        print(f"  Agent-Fehler: {e}")
-        sys.exit(2)
-
-    html = extract_html(html)
-    if "{{" in html or "}}" in html:
-        print("  WARN: Template-Platzhalter übrig — Builder unvollständig")
+    html = None
+    last_err = ""
+    for attempt in range(1, 4):  # bis zu 3 Versuche (transiente Modellfehler)
+        try:
+            raw = call_openrouter(SYSTEM_PROMPT, user_prompt)
+        except Exception as e:
+            last_err = f"Agent-Fehler: {e}"
+            print(f"  {last_err} (Versuch {attempt}/3)")
+            continue
+        html = extract_html(raw)
+        if not is_valid_html(html):
+            last_err = "Antwort enthält kein gültiges HTML (Plan-Text/Reasoning?)"
+            print(f"  {last_err} (Versuch {attempt}/3)")
+            html = None
+            continue
+        break
+    if not html:
+        print(f"  Build fehlgeschlagen nach 3 Versuchen: {last_err}")
         sys.exit(2)
 
     (out / "index.html").write_text(html, encoding="utf-8")
