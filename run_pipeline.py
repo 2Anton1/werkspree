@@ -60,11 +60,15 @@ def airtable_api(method, url, payload=None, token=""):
     req.add_header("Authorization", f"Bearer {token}")
     req.add_header("Content-Type", "application/json")
     data = json.dumps(payload).encode() if payload else None
-    try:
-        with urllib.request.urlopen(req, data=data, timeout=30) as r:
-            return json.loads(r.read())
-    except Exception as e:
-        return {"error": str(e)}
+    # Retry (bis zu 2x) bei Timeout/Netzwerkfehlern — Airtable-API ist oft langsam
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, data=data, timeout=60) as r:
+                return json.loads(r.read())
+        except Exception as e:
+            if attempt == 2:
+                return {"error": str(e)}
+    return {"error": "unreachable"}
 
 
 def sync_airtable(leads, token):
@@ -103,13 +107,15 @@ def sync_airtable(leads, token):
             f"need={lead.get('automation_need', '')}",
             f"next={lead.get('next_step', '')}",
             f"signals={','.join((lead.get('warmth_signals') or [])[:4])}",
+            f"email={(lead.get('verified_email') or lead.get('email', ''))}",
         ]))
         fields = {
             "Company": name[:255],
             "Branch": lead.get("branch", ""),
             "Region": lead.get("region", ""),
             "Website": lead.get("website", ""),
-            "Email": lead.get("verified_email") or lead.get("email", ""),
+            # KEIN "Email"-Feld: Die Tabelle (Table 1 / tbluCUpuCPxW1GcWD) hat
+            # keine Email-Spalte — E-Mail wird in Notes abgelegt (422-Schutz).
             "Phone": lead.get("phone", ""),
             "Status": AIRTABLE_STATUS_MAP.get(lead.get("response_status", "none"), "Neu"),
             "Potential_Score": lead.get("warmth_score", 0),

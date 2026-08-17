@@ -64,10 +64,17 @@ def scrape_website(url, timeout=30):
 
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-    result = subprocess.run(
-        ["firecrawl", "scrape", url, "-o", str(cache_path)],
-        capture_output=True, text=True, timeout=timeout
-    )
+    try:
+        result = subprocess.run(
+            ["firecrawl", "scrape", url, "-o", str(cache_path)],
+            capture_output=True, text=True, timeout=timeout
+        )
+    except subprocess.TimeoutExpired:
+        print(f"  (Scrape-Timeout {timeout}s: {url[:60]})")
+        return None
+    except Exception as e:
+        print(f"  (Scrape-Fehler: {e})")
+        return None
 
     if result.returncode == 0 and cache_path.exists():
         return cache_path.read_text()

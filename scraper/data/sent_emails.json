@@ -1,109 +1,128 @@
 {
   "Blachnierz & Söhne Elektroinstallationsges. mbH": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-09T10:02:19.633946",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-14T16:46:57.081061",
     "email": "info@elektro-bs.de",
     "branch": "Elektriker",
-    "region": "Berlin"
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
   },
   "Griesbach Elektroanlagen": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-09T10:02:20.225469",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-14T16:46:57.637667",
     "email": "info@elektro-griesbach.de",
     "branch": "Elektriker",
-    "region": "Berlin"
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
   },
   "ELEKTRO REIBSCH Andreas König": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-09T10:02:20.867092",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-14T16:46:58.487125",
     "email": "info@elektro-reibsch.de",
     "branch": "Elektriker",
-    "region": "Berlin"
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
   },
   "EF-ES-WE Elektroanlagen GmbH": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-09T10:02:21.431930",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-14T16:46:59.087787",
     "email": "kontakt@efeswe.de",
     "branch": "Elektriker",
-    "region": "Berlin"
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
   },
   "Herzog Elektro-Anlagen GmbH": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-09T10:02:21.971048",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-14T16:46:59.680916",
     "email": "info@herzog-elektro.de",
     "branch": "Elektriker",
-    "region": "Berlin"
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
   },
   "livinginberlin.de": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-10T08:44:32.325278",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-14T16:46:55.147630",
     "email": "info@livinginberlin.de",
     "branch": "Immobilienmakler",
     "region": "Berlin",
-    "warmth_score": 10
+    "warmth_score": 7,
+    "response_status": "followup_sent"
   },
   "duwe-immobilien.de": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-10T08:44:32.987207",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-14T16:46:55.891921",
     "email": "info@duwe-immobilien.de",
     "branch": "Immobilienmakler",
     "region": "Berlin",
-    "warmth_score": 10
+    "warmth_score": 7,
+    "response_status": "followup_sent"
   },
   "HKF Hergenröther Kurka Steuerberatungsgesellschaft mbH": {
     "status": "initial_sent",
-    "last_sent": "2026-08-10T08:44:33.587929",
+    "last_sent": "2026-08-14T12:00:00",
     "email": "info@hkf.de",
     "branch": "Steuerberater",
     "region": "Potsdam",
-    "warmth_score": 10
+    "warmth_score": 6,
+    "response_status": "awaiting_reply"
   },
   "kanzlei-barz.de": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-10T08:44:34.312247",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-17T12:41:21.994745",
     "email": "mail@kanzlei-barz.de",
     "branch": "Anwalt",
     "region": "Berlin",
-    "warmth_score": 10
+    "warmth_score": 6,
+    "response_status": "followup_sent"
   },
   "oehmcke-immobilien.de": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-10T08:44:34.938980",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-14T16:46:54.486794",
     "email": "immo@oehmcke.eu",
     "branch": "Immobilienmakler",
     "region": "Berlin",
-    "warmth_score": 9
+    "warmth_score": 7,
+    "response_status": "followup_sent"
   },
   "kensington-international.com": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-10T08:44:35.546759",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-14T16:46:56.535856",
     "email": "headoffice@kensington-international.com",
     "branch": "Immobilienmakler",
     "region": "Berlin",
-    "warmth_score": 9
+    "warmth_score": 7,
+    "response_status": "followup_sent"
   },
   "recht-web.de": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-10T08:44:36.223872",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-17T12:41:22.595502",
     "email": "kanzlei@recht-web.de",
     "branch": "Anwalt",
     "region": "Berlin",
-    "warmth_score": 8
+    "warmth_score": 6,
+    "response_status": "followup_sent"
   },
   "ra-gerd-engelmann.de": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-10T08:44:37.043674",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-17T12:41:23.133294",
     "email": "ra.gerd.engelmann@t-online.de",
     "branch": "Anwalt",
     "region": "Berlin",
-    "warmth_score": 8
+    "warmth_score": 6,
+    "response_status": "followup_sent"
   },
   "ruspravo.de": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-10T08:44:37.657908",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-17T12:41:23.769542",
     "email": "anod@ruspravo.de",
     "branch": "Anwalt",
     "region": "Berlin",
-    "warmth_score": 8
+    "warmth_score": 6,
+    "response_status": "followup_sent"
   }
 }

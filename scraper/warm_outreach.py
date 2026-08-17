@@ -73,6 +73,17 @@ def get_eligible_leads(leads, sent):
         company = lead["company_name"]
         score = lead.get("warmth_score", 0)
 
+        # E-Mail-Quellen-Filter (Spam-Schutz): Nur E-Mails, die wirklich zur
+        # Firma gehören. "scraped" = aus Impressum/Kontaktseite (erlaubt),
+        # "guessed" = info@-Geraten (NIE versenden), sonst nur mit verified_email.
+        src = (lead.get("email_source") or "").lower()
+        has_email = bool(lead.get("verified_email") or lead.get("email"))
+        if not has_email:
+            continue
+        if src == "guessed":
+            print(f"  SKIP {company}: email_source=guessed (info@-Geraten) -> nie versenden")
+            continue
+
         if company not in sent:
             if score >= MIN_WARMTH_SCORE and lead.get("research_depth") == "deep":
                 lead["next_action"] = "initial"
@@ -130,13 +141,17 @@ def personalize(template, lead, sent_data=None):
 
 
 def send_email(to, subject, body):
+    # Primär: Strato SMTP via send_mail.py (wie Microsite-Pipeline, funktioniert
+    # nachweislich). Gmail-OAuth (google_api.py) ist dort nur Fallback und wird
+    # vom Skript selbst probiert, wenn Strato scheitert.
+    send_mail_py = HERMES_HOME / ".." / "werkspree" / "microsites" / "pipeline" / "send_mail.py"
+    if not send_mail_py.exists():
+        send_mail_py = Path("/Users/anton/werkspree/microsites/pipeline/send_mail.py")
     cmd = [
-        "python", str(HERMES_HOME / "skills/productivity/google-workspace/scripts/google_api.py"),
-        "gmail", "send",
+        "python", str(send_mail_py),
         "--to", to,
         "--subject", subject,
-        "--body", body,
-        "--from", '"Finn Werksby" <a2807d@gmail.com>',
+        "--body-text", body,
     ]
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, timeout=90)
@@ -208,6 +223,7 @@ def main():
 
     templates = load_templates()
 
+    sent_ok = 0
     for lead in eligible:
         action = lead.get("next_action", "initial")
         template = templates.get(action, templates["initial"])
@@ -248,22 +264,16 @@ def main():
                 "warmth_score": score,
                 "response_status": "awaiting_reply" if action == "initial" else "followup_sent",
             }
+            sent_ok += 1
             print(f"  ✅ Sent to {company}")
         else:
-            sent[company] = {
-                "status": f"{action}_failed",
-                "last_sent": datetime.now().isoformat(),
-                "email": to,
-                "branch": lead.get("branch", ""),
-                "region": lead.get("region", ""),
-                "warmth_score": score,
-                "response_status": "bounced",
-                "error": output[:200],
-            }
-            print(f"  ❌ Failed: {output[:200]}")
+            # Fehlschlag NICHT als Status speichern: Der bisherige Eintrag
+            # (initial_sent/followup_3days_sent) bleibt stehen, damit der Lead
+            # im nächsten Lauf erneut in den Follow-up-Zyklus kommt.
+            print(f"  ❌ Failed: {output[:300]}")
 
     save_sent(sent)
-    print(f"\nDone. Sent to {len(eligible)} leads today.")
+    print(f"\nDone. {sent_ok} von {len(eligible)} Leads erfolgreich gesendet.")
     return 0
 
 
