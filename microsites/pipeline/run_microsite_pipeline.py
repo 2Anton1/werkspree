@@ -25,7 +25,6 @@ REPORTS = PIPE / "reports"
 REPORTS.mkdir(exist_ok=True)
 
 ROTATION = [
-    # Branchen mit nachgewiesenen Leads (Website-Luecken + verifizierbare E-Mails)
     ("Kosmetik", "Potsdam"),
     ("Fahrschule", "Brandenburg an der Havel"),
     ("Kfz Werkstatt", "Cottbus"),
@@ -40,10 +39,37 @@ ROTATION = [
     ("Reinigung", "Frankfurt Oder"),
     ("Friseur", "Potsdam"),
     ("Friseur", "Cottbus"),
+    ("Friseur", "Brandenburg an der Havel"),
     ("Maler", "Cottbus"),
+    ("Maler", "Brandenburg an der Havel"),
     ("Gartenbau", "Cottbus"),
+    ("Gartenbau", "Potsdam"),
     ("Tischlerei", "Cottbus"),
+    ("Tischlerei", "Brandenburg an der Havel"),
     ("Metzgerei", "Cottbus"),
+    ("Metzgerei", "Brandenburg an der Havel"),
+    ("Elektriker", "Berlin Neukölln"),
+    ("Elektriker", "Berlin Mitte"),
+    ("Elektriker", "Berlin Lichtenberg"),
+    ("Elektriker", "Potsdam"),
+    ("Heizung Sanitär", "Berlin Neukölln"),
+    ("Heizung Sanitär", "Cottbus"),
+    ("Heizung Sanitär", "Brandenburg an der Havel"),
+    ("Zahnarzt", "Potsdam"),
+    ("Zahnarzt", "Brandenburg an der Havel"),
+    ("Zahnarzt", "Cottbus"),
+    ("Physiotherapie", "Potsdam"),
+    ("Physiotherapie", "Cottbus"),
+    ("Physiotherapie", "Brandenburg an der Havel"),
+    ("Optiker", "Potsdam"),
+    ("Optiker", "Brandenburg an der Havel"),
+    ("Bäcker", "Cottbus"),
+    ("Bäcker", "Brandenburg an der Havel"),
+    ("Schlüsseldienst", "Berlin Mitte"),
+    ("Schlüsseldienst", "Berlin Neukölln"),
+    ("Schlüsseldienst", "Potsdam"),
+    ("Florist", "Potsdam"),
+    ("Florist", "Brandenburg an der Havel"),
 ]
 # bereits gepruefte Kombinationen (Stand 14.08. abend, nach 10x-Local-Lauf)
 DONE = {
