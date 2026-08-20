@@ -86,6 +86,20 @@
       "subject": "Ihre neue Website ist fertig – ein Kostenloser Entwurf von Werkspree",
       "site_url": "https://werkspree.bki-de.de/microsites/sites/scoopex-gmbh--dach---fassadenbau/",
       "sent_at": "2026-08-20T13:22:13.790515+02:00"
+    },
+    {
+      "company_name": "Dachdeckerei D. Jung",
+      "email": "dachdeckerei.d.jung@gmx.de",
+      "site_url": "https://werkspree.bki-de.de/microsites/sites/dachdeckerei-d--jung/",
+      "sent_at": "2026-08-20T14:00:00+02:00",
+      "sent_by": "Finn Werksby (Werkspree, Gemini-Site)"
+    },
+    {
+      "company_name": "Malerbetrieb Frenkel",
+      "email": "info@malerbetrieb-frenkel.de",
+      "site_url": "https://werkspree.bki-de.de/microsites/sites/malerbetrieb-frenkel/",
+      "sent_at": "2026-08-20T14:00:00+02:00",
+      "sent_by": "Finn Werksby (Werkspree, Gemini-Site)"
     }
   ]
 }
