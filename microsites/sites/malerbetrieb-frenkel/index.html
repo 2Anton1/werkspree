@@ -1,69 +1,344 @@
-<!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Malerbetrieb Frenkel</title>
-<style>
-:root { --primary: #122c4d; --accent: #1f9d74; --bg: #fafafa; --surface: #fff; --text: #1d2939; }
-* { box-sizing:border-box; margin:0; padding:0; }
-body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-header { background:linear-gradient(135deg,var(--primary),var(--accent)); color:#fff; padding:4rem 1.5rem; text-align:center; }
-header h1 { font-size:2.2rem; margin-bottom:.5rem; }
-header p { font-size:1.2rem; opacity:.95; }
-.cta { margin-top:1.5rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
-.btn { background:#fff; color:var(--primary); padding:.7rem 1.4rem; border-radius:30px; text-decoration:none; font-weight:600; }
-section { max-width:900px; margin:0 auto; padding:3rem 1.5rem; }
-h2 { color:var(--primary); margin-bottom:1rem; }
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem; }
-.card { background:var(--surface); border-radius:12px; padding:1.5rem; box-shadow:0 2px 12px rgba(0,0,0,.06); }
-.card h3 { color:var(--accent); margin-bottom:.5rem; }
-table { width:100%; border-collapse:collapse; margin-top:1rem; }
-th,td { text-align:left; padding:.6rem; border-bottom:1px solid #eee; }
-.contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
-footer { background:var(--primary); color:#fff; text-align:center; padding:2rem 1.5rem; font-size:.9rem; }
-a { color:var(--primary); }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malerbetrieb Frenkel | Ihr Malermeister in Potsdam</title>
+    <style>
+        :root {
+            --primary-color: #1a3a5f; /* Dunkelblau */
+            --secondary-color: #f39200; /* Orange */
+            --text-color: #333;
+            --light-bg: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.8)), url('https://images.unsplash.com/photo-1589939705384-5185138a047a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #d68100;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            background: var(--secondary-color);
+            height: 3px;
+            width: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-info {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .opening-hours {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .opening-hours h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        footer {
+            background: #222;
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 1rem;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<header>
-  <h1>Malerbetrieb Frenkel</h1>
-  <p> in Potsdam</p>
-  <div class="cta">
-    <a class="btn" href="tel:01522 4060507">Anrufen</a>
-    <a class="btn" href="#kontakt">Kontakt</a>
-  </div>
-</header>
-<section>
-  <h2>Über uns</h2>
-  <p>Malerbetrieb Frenkel ist ein etablierter Betrieb in Potsdam.</p>
-</section>
-<section>
-  <h2>Unsere Leistungen</h2>
-  <div class="cards"><div class="card"><h3>Leistungen</h3><p> Auf Anfrage</p></div></div>
-</section>
-<section>
-  <h2>Öffnungszeiten</h2>
-  <table><tbody><tr><td colspan='2'>Auf Anfrage</td></tr></tbody></table>
-</section>
-<section id="kontakt">
-  <h2>Kontakt & Anfahrt</h2>
-  <div class="contact-grid">
-    <div>
-      <p><strong>Adresse</strong></p>
-      <p>Döberitzer Str. 23, 14476 Potsdam-Fahrland, Deutschland</p>
-      
-    </div>
-    <div>
-      <p><strong>Direktkontakt</strong></p>
-      <p><a href="tel:01522 4060507">01522 4060507</a></p>
-      <p><a href="mailto:info@malerbetrieb-frenkel.de">info@malerbetrieb-frenkel.de</a></p>
-    </div>
-  </div>
-</section>
-<footer>
-  <p>Malerbetrieb Frenkel · Potsdam</p>
-  <p style="margin-top:1rem; opacity:.7;">Demo-Website von Werkspree (KI-Automatisierung)</p>
-</footer>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Malerbetrieb <span>Frenkel</span></div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#ueber-uns">Über uns</a></li>
+                    <li><a href="#leistungen">Leistungen</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Qualität, die Farbe bekennt</h1>
+        <p>Ihr zuverlässiger Partner für Malerarbeiten und Fassadengestaltung in Potsdam.</p>
+        <a href="#kontakt" class="btn">Jetzt Angebot anfragen</a>
+    </section>
+
+    <section id="ueber-uns" class="container">
+        <div class="section-title">
+            <h2>Über uns</h2>
+        </div>
+        <div class="about-content">
+            <p>Der Malerbetrieb Frenkel steht für meisterliche Handwerksarbeit in Potsdam und Umgebung. Als Fachbetrieb legen wir höchsten Wert auf Präzision, Sauberkeit und die Verwendung hochwertiger Materialien. Ob private Wohnräume oder gewerbliche Objekte – wir bringen frischen Wind in Ihre Räumlichkeiten und schützen Ihre Fassaden nachhaltig. Vertrauen Sie auf unsere Erfahrung und unsere Leidenschaft für Farbe und Gestaltung.</p>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Malerarbeiten</h3>
+                    <p>Professionelle Innenanstriche mit hochwertigen Farben für ein gesundes Raumklima.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tapezierarbeiten</h3>
+                    <p>Von der klassischen Raufaser bis hin zu exklusiven Mustertapeten – wir kleben perfekt.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fassadengestaltung</h3>
+                    <p>Schutz und Ästhetik für Ihr Haus. Wir sanieren und streichen Ihre Fassade fachgerecht.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Lackierarbeiten</h3>
+                    <p>Türen, Fenster oder Heizkörper – wir sorgen für glänzende Oberflächen und optimalen Schutz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="container">
+        <div class="section-title">
+            <h2>Kontakt & Anfahrt</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>So erreichen Sie uns</h3>
+                <p><strong>Adresse:</strong><br>Döberitzer Str. 23<br>14476 Potsdam-Fahrland</p>
+                <p><strong>Telefon:</strong>&nbsp;<a href="tel:015224060507">01522 4060507</a></p>
+                <p><strong>E-Mail:</strong>&nbsp;<a href="mailto:info@malerbetrieb-frenkel.de">info@malerbetrieb-frenkel.de</a></p>
+            </div>
+            <div class="opening-hours">
+                <h3>Öffnungszeiten</h3>
+                <table>
+                    <tr><td>Montag - Freitag</td><td>07:00 - 17:00 Uhr</td></tr>
+                    <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                    <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Malerbetrieb Frenkel. Alle Rechte vorbehalten.</p>
+            <p><small>Potsdam-Fahrland | Ihr Profi für Farbe und Design</small></p>
+        </div>
+    </footer>
+
 </body>
 </html>
