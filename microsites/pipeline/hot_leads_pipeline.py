@@ -201,6 +201,146 @@ def is_outdated_website(website):
         return True
 
 
+def is_low_quality_website(website):
+    """
+    Check if website is of low quality (good enough for Microsite replacement).
+    
+    Criteria:
+    - No SSL (HTTP only)
+    - Very short content (< 800 words)
+    - No contact page / imprint
+    - Free hosting platforms (Wix Free, Jimdo, WordPress.com, Weebly, etc.)
+    - Only Facebook/social media as "website"
+    
+    Returns: True if website is low quality (Microsite makes sense)
+    """
+    if not website:
+        return True
+    
+    # HTTP only = low quality
+    if website.startswith("http://"):
+        return True
+    
+    # Check for free hosting platforms
+    low_quality_domains = [
+        "wixsite.com", "jimdo.com", "weebly.com", "wordpress.com", "mozello.com",
+        "site123.com", "webnode.at", "webnode.com", "webnode.de",
+        "one.com", "oneandone.com", " ionos.com", "ionos.at", "1und1.de",
+        "1und1.com", "home.pl", "home.eu", "fortishosting.com",
+    ]
+    domain = website.split("//")[-1].split("/")[0].lower()
+    if any(lqd in domain for lqd in low_quality_domains):
+        return True
+    
+    try:
+        r = requests.get(website, headers=HEADERS, timeout=10)
+        if r.status_code != 200:
+            return True
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(r.text, "html.parser")
+        for tag in soup(["script", "style", "nav", "footer"]):
+            tag.decompose()
+        text = soup.get_text(strip=True).lower()
+        
+        # Very short content
+        words = text.split()
+        if len(words) < 150:
+            return True
+        
+        # No contact/imprint links
+        links = [a.get("href", "").lower() for a in soup.find_all("a", href=True)]
+        has_contact = any(p in " ".join(links) for p in ["/kontakt", "/impressum", "/contact", "/imprint", "/about", "/ueber"])
+        has_phone = any("tel:" in l for l in links)
+        
+        if not has_contact and not has_phone:
+            return True
+        
+        return False
+    except Exception:
+        return True
+
+
+def check_website_quality(website):
+    """
+    Comprehensive website quality check.
+    Returns: (quality_score, quality_label, needs_microsite)
+    
+    quality_score: 0-10
+    quality_label: "high", "medium", "low", "none"
+    needs_microsite: True if Microsite makes sense
+    """
+    if not website:
+        return 0, "none", True
+    
+    score = 10
+    issues = []
+    
+    # HTTP = -3
+    if website.startswith("http://"):
+        score -= 3
+        issues.append("no-ssl")
+    
+    # Free hosting = -4
+    domain = website.split("//")[-1].split("/")[0].lower()
+    free_hosting = ["wixsite.com", "jimdo.com", "weebly.com", "wordpress.com", "webnode"]
+    if any(fh in domain for fh in free_hosting):
+        score -= 4
+        issues.append("free-hosting")
+    
+    try:
+        r = requests.get(website, headers=HEADERS, timeout=10)
+        if r.status_code != 200:
+            return 0, "none", True
+        
+        from bs4 import BeautifulSoup
+        soup = BeautifulSoup(r.text, "html.parser")
+        for tag in soup(["script", "style", "nav", "footer"]):
+            tag.decompose()
+        text = soup.get_text(strip=True).lower()
+        words = text.split()
+        
+        # Short content
+        if len(words) < 150:
+            score -= 3
+            issues.append("short-content")
+        elif len(words) < 500:
+            score -= 1
+            issues.append("medium-content")
+        
+        # No contact
+        links = [a.get("href", "").lower() for a in soup.find_all("a", href=True)]
+        has_contact = any(p in " ".join(links) for p in ["/kontakt", "/impressum", "/contact", "/imprint"])
+        has_phone = any("tel:" in l for l in links)
+        
+        if not has_contact:
+            score -= 2
+            issues.append("no-contact")
+        if not has_phone:
+            score -= 1
+            issues.append("no-phone")
+        
+        # No images
+        if len(soup.find_all("img")) < 2:
+            score -= 1
+            issues.append("no-images")
+        
+    except Exception:
+        return 0, "none", True
+    
+    score = max(0, score)
+    
+    if score >= 7:
+        label = "high"
+    elif score >= 4:
+        label = "medium"
+    else:
+        label = "low"
+    
+    needs_microsite = score < 6
+    
+    return score, label, needs_microsite
+
+
 def scrape_gelbeseiten_profile(gsbiz_url):
     """Scrape GelbeSeiten profile page using Direct Scraper."""
     if not gsbiz_url or "gelbeseiten.de" not in gsbiz_url:
@@ -335,6 +475,8 @@ def main():
 
     hot_leads = []
     checked = 0
+    website_stats = {"high": 0, "medium": 0, "low": 0, "none": 0}
+    
     for e in hot_candidates:
         if checked >= max_checks:
             break
@@ -348,11 +490,25 @@ def main():
         e["phone"] = phone
         time.sleep(0.5)
 
-        if website and not is_outdated_website(website):
-            print(f"  -> hat aktuelle Website ({website}) — kein Kandidat")
-            continue
+        if website:
+            # Check website quality
+            score, quality, needs_microsite = check_website_quality(website)
+            website_stats[quality] += 1
+            print(f"  -> Website: {website}")
+            print(f"     Qualität: {quality} ({score}/10), Microsite sinnvoll: {needs_microsite}")
+            
+            if not needs_microsite:
+                print(f"     -> hochwertige Website — kein Kandidat")
+                continue
+            
+            e["website_quality"] = quality
+            e["website_quality_score"] = score
+        else:
+            website_stats["none"] += 1
+            print(f"  -> keine Website")
+            e["website_quality"] = "none"
+            e["website_quality_score"] = 0
 
-        print(f"  -> keine/veraltete Website" + (f" ({website})" if website else ""))
         e["old_or_no_website"] = website or ""
 
         # Find email via Gelbeseiten
@@ -367,6 +523,13 @@ def main():
                 if ok:
                     email, reason = imp_email, f"Impressum: {v_reason}"
                     details = {}
+        
+        # Fallback 2: Gelbeseiten-Suche verbessern
+        if not email:
+            # Suche auf GelbeSeiten nach Profil
+            gs_email, gs_details, gs_reason = find_email_and_details_on_gelbeseiten(e["name"], region)
+            if gs_email:
+                email, details, reason = gs_email, gs_details, gs_reason
         
         if not email:
             print(f"  -> keine verifizierte E-Mail ({reason}) — verwerfen")
@@ -389,9 +552,9 @@ def main():
         json.dump(out, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*50}")
-    print(f"🔥 {len(hot_leads)} heiße Leads (kein/veraltete Website + E-Mail vorhanden)")
+    print(f"🔥 {len(hot_leads)} heiße Leads (Website-Qualität niedrig + E-Mail vorhanden)")
     for l in hot_leads:
-        print(f"  {l['rating']}⭐ {l['name']} | {l['email']} | {l.get('phone','')}")
+        print(f"  {l.get('rating', '?')}⭐ {l.get('name', '')} | {l.get('email', '')} | {l.get('phone', '')}")
     print(f"\nGespeichert: {out_path}")
 
 
