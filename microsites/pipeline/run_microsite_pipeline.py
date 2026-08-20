@@ -223,10 +223,11 @@ def main():
         lead_path = DATA / f"lead_{slug}.json"
         lead_path.write_text(json.dumps(lead_json, ensure_ascii=False, indent=2))
 
-        # 3) Build (AGENT: maßgeschneiderte Site pro Lead)
-        ok_b, _ = run([sys.executable, "agent_build_microsite.py", "--lead", str(lead_path)])
+        # 3) Build (STATISCH: robuster als LLM-Agent)
+        lead_path.write_text(json.dumps(lead_json, ensure_ascii=False, indent=2))
+        ok_b, _ = run([sys.executable, "build_microsite.py", "--lead", str(lead_path)])
         if not ok_b:
-            print("  Build fehlgeschlagen (Agent)")
+            print("  Build fehlgeschlagen (Statisch)")
             continue
         # 3b) Deploy (zentral pushen, damit Sandbox-Git-Context genutzt wird)
         run(["git", "-C", str(PIPE.parent), "add", "-A"])

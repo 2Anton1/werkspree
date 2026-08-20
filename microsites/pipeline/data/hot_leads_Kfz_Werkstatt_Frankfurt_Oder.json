@@ -1,0 +1,152 @@
+{
+  "branch": "Kfz Werkstatt",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Joker Autoservice - Frankfurt (Oder)",
+      "maps_url": "https://www.google.com/maps/place/Joker+Autoservice+-+Frankfurt+%28Oder%29/data=!4m7!3m6!1s0x4707986a5cb1c373:0x6739be2bac36a5!8m2!3d52.3454!4d14.53479!16s%2Fg%2F1tf_rl3g!19sChIJc8OxXGqYB0cRpTasK745ZwA?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Closed",
+      "address": "+49 335 24539",
+      "phone": null
+    },
+    {
+      "name": "Matthias Junghanns Kfz- Meisterbetrieb",
+      "maps_url": "https://www.google.com/maps/place/Matthias+Junghanns+Kfz-+Meisterbetrieb/data=!4m7!3m6!1s0x4707986a84f43ad3:0x2ff5bfbf290e776d!8m2!3d52.3445041!4d14.5325629!16s%2Fg%2F1pty4_yqj!19sChIJ0zr0hGqYB0cRbXcOKb-_9S8?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto repair shop",
+      "address": "Karl-Liebknecht-Straße 59",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Ziegel Straße Werkstatt",
+      "maps_url": "https://www.google.com/maps/place/Ziegel+Stra%C3%9Fe+Werkstatt/data=!4m7!3m6!1s0x470798653f050803:0x2f3e7cec687bffac!8m2!3d52.35246!4d14.5502199!16s%2Fg%2F1tn4wwhr!19sChIJAwgFP2WYB0cRrP97aOx8Pi8?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Closed",
+      "address": "+49 335 6802522",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Autoservice Schulze",
+      "maps_url": "https://www.google.com/maps/place/Autoservice+Schulze/data=!4m7!3m6!1s0x470799b48759d651:0xc1149a9bd3734e24!8m2!3d52.3490207!4d14.5012268!16s%2Fg%2F1tdqmc0_!19sChIJUdZZh7SZB0cRJE5z05uaFME?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Closed",
+      "address": "+49 335 4000100",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "KFZ Meisterbetrieb Auto Service Schewsky",
+      "maps_url": "https://www.google.com/maps/place/KFZ+Meisterbetrieb+Auto+Service+Schewsky/data=!4m7!3m6!1s0x470799b7b464c965:0x509f6c17303d6cc3!8m2!3d52.3488948!4d14.4917696!16s%2Fg%2F1ptx3xzwb!19sChIJZclktLeZB0cRw2w9MBdsn1A?authuser=0&hl=en&rclk=1",
+      "rating": 4.4,
+      "category": "Auto repair shop",
+      "address": "Fürstenwalder Poststraße 86",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Auto Service Fricke",
+      "maps_url": "https://www.google.com/maps/place/Auto+Service+Fricke/data=!4m7!3m6!1s0x470797fae253e0f1:0x49253493fe7b1467!8m2!3d52.3112722!4d14.5331928!16s%2Fg%2F1hc4np1kg!19sChIJ8eBT4vqXB0cRZxR7_pM0JUk?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto repair shop",
+      "address": "Krumme Str. 10",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Dietmar Doerge KFZ-Meisterbetrieb",
+      "maps_url": "https://www.google.com/maps/place/Dietmar+Doerge+KFZ-Meisterbetrieb/data=!4m7!3m6!1s0x4707983144ef4baf:0x358dcde3d4dfff35!8m2!3d52.3400573!4d14.5062162!16s%2Fg%2F1v_vrmc0!19sChIJr0vvRDGYB0cRNf_f1OPNjTU?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto repair shop",
+      "address": "Nuhnenstraße 23",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Die Werkstatt",
+      "maps_url": "https://www.google.com/maps/place/Die+Werkstatt/data=!4m7!3m6!1s0x470798605617e447:0xbdd0e4ce5eea9699!8m2!3d52.3521427!4d14.517693!16s%2Fg%2F1hc581578!19sChIJR-QXVmCYB0cRmZbqXs7k0L0?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Auto repair shop",
+      "address": "Georg-Richter-Straße 18",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Thomas Linke",
+      "maps_url": "https://www.google.com/maps/place/Thomas+Linke/data=!4m7!3m6!1s0x470798472b816c79:0x3de84bc7a95193c1!8m2!3d52.3452239!4d14.5240398!16s%2Fg%2F1tgj_bgk!19sChIJeWyBK0eYB0cRwZNRqcdL6D0?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Auto repair shop",
+      "address": "August- Bebel- Str. 5B",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Auto Car-Check-Point",
+      "maps_url": "https://www.google.com/maps/place/Auto+Car-Check-Point/data=!4m7!3m6!1s0x47079840c9b97fed:0x561024a5127dd838!8m2!3d52.35049!4d14.52059!16s%2Fg%2F1tjt0mxk!19sChIJ7X-5yUCYB0cRONh9EqUkEFY?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Closed",
+      "address": "+49 335 4001104",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Eastside Carservice Dany Miekeley",
+      "maps_url": "https://www.google.com/maps/place/Eastside+Carservice+Dany+Miekeley/data=!4m7!3m6!1s0x47079915d75b4b63:0x5ebc009a28774527!8m2!3d52.3532445!4d14.5089047!16s%2Fg%2F11h3lf66q2!19sChIJY0tb1xWZB0cRJ0V3KJoAvF4?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Car repair and maintenance service",
+      "address": "Georg-Richter-Straße 6"
+    },
+    {
+      "name": "Elvis-Autotechnik",
+      "maps_url": "https://www.google.com/maps/place/Elvis-Autotechnik/data=!4m7!3m6!1s0x470799c371afe21d:0xf70e61e202c6f641!8m2!3d52.3650002!4d14.5247957!16s%2Fg%2F11s3wx0cb7!19sChIJHeKvccOZB0cRQfbGAuJhDvc?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Car repair and maintenance service",
+      "address": "Berliner Ch 99"
+    },
+    {
+      "name": "pitstop.de Frankfurt/Oder",
+      "maps_url": "https://www.google.com/maps/place/pitstop.de+Frankfurt%2FOder/data=!4m7!3m6!1s0x47079857e0758f35:0x118190efc860829b!8m2!3d52.3640533!4d14.5270102!16s%2Fg%2F1tdk3wp0!19sChIJNY914FeYB0cRm4JgyO-QgRE?authuser=0&hl=en&rclk=1",
+      "rating": 4.4,
+      "category": "Auto repair shop",
+      "address": "Berliner Ch 102"
+    },
+    {
+      "name": "Oliver Böhme KFZ-Werkstatt",
+      "maps_url": "https://www.google.com/maps/place/Oliver+B%C3%B6hme+KFZ-Werkstatt/data=!4m7!3m6!1s0x4707994b3652864b:0xdfc5186c0f8f9c60!8m2!3d52.3640924!4d14.5285358!16s%2Fg%2F11fn42h503!19sChIJS4ZSNkuZB0cRYJyPD2wYxd8?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Closed",
+      "address": "+49 335 6066804"
+    },
+    {
+      "name": "Autohaus Werkmeister, Inh. Sebastian Werkmeister",
+      "maps_url": "https://www.google.com/maps/place/Autohaus+Werkmeister,+Inh.+Sebastian+Werkmeister/data=!4m7!3m6!1s0x47079845d9ede213:0xca42ada2f05ab794!8m2!3d52.3496114!4d14.5216859!16s%2Fg%2F1ptxshk12!19sChIJE-Lt2UWYB0cRlLda8KKtQso?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Auto repair shop",
+      "address": "Goethestraße 14"
+    },
+    {
+      "name": "Henrik Löhde",
+      "maps_url": "https://www.google.com/maps/place/Henrik+L%C3%B6hde/data=!4m7!3m6!1s0x4707997581c634eb:0x2c3d2a027277929f!8m2!3d52.3712125!4d14.4795088!16s%2Fg%2F1tdf9tl9!19sChIJ6zTGgXWZB0cRn5J3cgIqPSw?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Siegfried Puls",
+      "maps_url": "https://www.google.com/maps/place/Siegfried+Puls/data=!4m7!3m6!1s0x470797e537ff06cd:0xea1ab4ee34b7532a!8m2!3d52.30927!4d14.53071!16s%2Fg%2F1tdcf23b!19sChIJzQb_N-WXB0cRKlO3NO60Guo?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "Auto repair shop",
+      "address": "Krumme Str. 14"
+    },
+    {
+      "name": "AUTOMAGIC-FF",
+      "maps_url": "https://www.google.com/maps/place/AUTOMAGIC-FF/data=!4m7!3m6!1s0x470799db58165b77:0xbbd5ba5cde2b84f1!8m2!3d52.3403599!4d14.5058696!16s%2Fg%2F11j7l8n2f1!19sChIJd1sWWNuZB0cR8YQr3ly61bs?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto repair shop",
+      "address": "Nuhnenstraße 23"
+    }
+  ],
+  "hot_leads": []
+}

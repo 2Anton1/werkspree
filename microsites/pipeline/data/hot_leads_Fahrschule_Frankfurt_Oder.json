@@ -1,0 +1,40 @@
+{
+  "branch": "Fahrschule",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Mario's Fahrschule PKW- Motorrad- Aufbauseminare",
+      "maps_url": "https://www.google.com/maps/place/Mario%27s+Fahrschule+PKW-+Motorrad-+Aufbauseminare/data=!4m7!3m6!1s0x4707980d4d97d357:0xf355905250db19d5!8m2!3d52.3370883!4d14.5422031!16s%2Fg%2F1tj31v0k!19sChIJV9OXTQ2YB0cR1RnbUFKQVfM?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Closed",
+      "address": "+49 172 3758256",
+      "phone": null,
+      "old_or_no_website": "http://www.fahrschule-klasse.de"
+    },
+    {
+      "name": "Fahrschule Pintschovius",
+      "maps_url": "https://www.google.com/maps/place/Fahrschule+Pintschovius/data=!4m7!3m6!1s0x4707981240368f17:0xfaf9359d1f33f427!8m2!3d52.33724!4d14.54154!16s%2Fg%2F1tfvfy1j!19sChIJF482QBKYB0cRJ_QzH501-fo?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Driving school",
+      "address": "Fürstenberger Str. 15",
+      "phone": null
+    },
+    {
+      "name": "Arnold´s Fahrschule - PKW & Motorrad & Anhänger Ausbildung und Aufbauseminare",
+      "maps_url": "https://www.google.com/maps/place/Arnold%C2%B4s+Fahrschule+-+PKW+%26+Motorrad+%26+Anh%C3%A4nger+Ausbildung+und+Aufbauseminare/data=!4m7!3m6!1s0x470799116a991c43:0x7a42530cc2262285!8m2!3d52.3370134!4d14.5423183!16s%2Fg%2F11q3w_dfs4!19sChIJQxyZahGZB0cRhSImwgxTQno?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Closed",
+      "address": "+49 173 9870636",
+      "phone": null
+    },
+    {
+      "name": "Hans-Joachim Schücke Fahrschule",
+      "maps_url": "https://www.google.com/maps/place/Hans-Joachim+Sch%C3%BCcke+Fahrschule/data=!4m7!3m6!1s0x4707983d59370c47:0x5eb76b7fa01b749a!8m2!3d52.3332887!4d14.5255696!16s%2Fg%2F1vr3bwpf!19sChIJRww3WT2YB0cRmnQboH9rt14?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Driving school",
+      "address": "Siedlerweg 19",
+      "phone": null
+    }
+  ],
+  "hot_leads": []
+}

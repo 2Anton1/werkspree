@@ -1,0 +1,24 @@
+{
+  "name": "Malerbetrieb Frenkel",
+  "address": "Döberitzer Str. 23, 14476 Potsdam-Fahrland, Deutschland",
+  "rating": 5,
+  "place_id": "ChIJ-bwoe8vwqEcRhZ_gXuLb2Ws",
+  "types": [
+    "establishment",
+    "painter",
+    "point_of_interest"
+  ],
+  "phone": "01522 4060507",
+  "website_quality": "low",
+  "website_quality_score": 0,
+  "old_or_no_website": "http://www.malerbetrieb-frenkel.de/",
+  "email": "info@malerbetrieb-frenkel.de",
+  "email_verified": true,
+  "email_verify_reason": "Impressum: Match: 'malerbetrieb' in domain/local",
+  "branch": "Maler",
+  "region": "Potsdam",
+  "site_url": "https://werkspree.bki-de.de/microsites/sites/lead/",
+  "built_at": "2026-08-20T13:20:50.343523+02:00",
+  "slug": "malerbetrieb-frenkel",
+  "company_name": "Malerbetrieb Frenkel"
+}

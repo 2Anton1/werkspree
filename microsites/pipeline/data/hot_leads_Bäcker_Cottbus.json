@@ -1,0 +1,199 @@
+{
+  "branch": "Bäcker",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "Bäckerei Heinrich",
+      "address": "Adolph-Kolping-Straße 2, 03046 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJZ_FKGm90CEcR3kFubt8lOZo",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 24238",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Heinrich Bäckerei",
+      "address": "Lausitzer Str. 8, 03046 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJcYy-SGF0CEcR8bpo5h0qYyU",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 2889364"
+    },
+    {
+      "name": "Bäckerei Hanuschka",
+      "address": "Goyatzer Str. 3, 03044 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ_aIEu1d0CEcRoeN_W-clfkE",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 49948871",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Bäcker Wahn",
+      "address": "Friedrich-Ebert-Straße 18, 03044 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJd3woL110CEcRi3mjSRVFtZ4",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 49459284"
+    },
+    {
+      "name": "Hardy Hoffmann",
+      "address": "Str. der Jugend 18, 03046 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJvTzVfG50CEcRv6Je9KGXNfU",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 23185",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Bäckerei Wolf-Oliver Sowoidnich",
+      "address": "Calauer Str. 26, 03048 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJA2RHFXp0CEcRsSLD94OSyJk",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 421594",
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Bäckerei Bubner",
+      "address": "Rosenstraße 4, 03046 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJv3zkaTJ1CEcRB5sPxSqsA0U",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "meal_takeaway",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "0355 49486254"
+    },
+    {
+      "name": "Arlt's Backstuben GmbH & Co. KG",
+      "address": "Kahrener Str. 11, 03042 Cottbus, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJyYjU0hV0CEcRQ2A4hCIUhYg",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 712986"
+    },
+    {
+      "name": "Bäckerei & Konditorei Cindy Lohse",
+      "address": "Forster Str. 71, 03042 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJvWgV_Bt0CEcRmVUtdROI9mU",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "0355 713572"
+    },
+    {
+      "name": "Heimat & Herz",
+      "address": "Mühlenstraße 7, 03046 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ-RIcSGh0CEcRGce8qfQI0sc",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "",
+      "old_or_no_website": "https://www.facebook.com/HeimatundHerz/"
+    },
+    {
+      "name": "Bäcker Wahn",
+      "address": "Leuthener Str. 7, 03050 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJffBA68R1CEcRAWalTS19d68",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Feinbäckerei L. Hanuschka",
+      "address": "Gallinchener Hauptstraße 45, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJR4FpZWFxCEcR0Nu78DrClX4",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ]
+    },
+    {
+      "name": "Bio-Bäckerei Schmidt Laden & 24/7 Brotautomat",
+      "address": "Str. der Jugend 83, 03046 Cottbus, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJVwgP_nF0CEcR6Ejo_fpD9Z8",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "grocery_or_supermarket",
+        "point_of_interest",
+        "store"
+      ]
+    }
+  ],
+  "hot_leads": []
+}

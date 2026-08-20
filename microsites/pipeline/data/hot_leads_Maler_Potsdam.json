@@ -1,0 +1,271 @@
+{
+  "branch": "Maler",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "Maler Potsdam - PMP GmbH",
+      "address": "Hermann-Elflein-Straße 23, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJY64_0NH1qEcRxZne4gOLj3E",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.malerfirma-potsdam.de/"
+    },
+    {
+      "name": "Malerbetrieb Frenkel",
+      "address": "Döberitzer Str. 23, 14476 Potsdam-Fahrland, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ-bwoe8vwqEcRhZ_gXuLb2Ws",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "01522 4060507",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.malerbetrieb-frenkel.de/",
+      "email": "mehr...info@malerbetrieb-frenkel.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'malerbetrieb' in domain/local",
+      "branch": "Maler",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Malermeister Torsten Baumgarten",
+      "address": "Ringstraße 23, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNfEAGuj2qEcRS9IpmfVLm9Y",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0160 6115413"
+    },
+    {
+      "name": "Andreas Brose Malermeister",
+      "address": "Thaerstraße 17, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ823lPJz2qEcR4EkbSkFOcy8",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0331 5811350"
+    },
+    {
+      "name": "Malermeister Stephan Jachmann",
+      "address": "Pietschkerstraße 22, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJv1SJvxVfqEcRr8eO3SFQ3_M",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0177 2829214",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Deine Lieblingsmaler KRAFT BAU GmbH",
+      "address": "August-Bebel-Str. 26, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJwToWA5NfqEcRfGb8U9kBx6Q",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "01520 6667767"
+    },
+    {
+      "name": "Malerfachbetrieb Potsdam",
+      "address": "Gartenstraße 45, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJqZxit0JfqEcRcKQ1Hiinpug",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0173 2314994"
+    },
+    {
+      "name": "Jörg Ziemer, Malermeister",
+      "address": "Nedlitzer Str. 8, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJU5razzT3qEcRxzr5wQYREI0",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0171 4812780",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.malerbetrieb-ziemer.de/"
+    },
+    {
+      "name": "Karl-Heinz Breilich Malerfachbetrieb",
+      "address": "Kirschallee 33, 14469 Potsdam Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJJ9lJiZ72qEcRde2SmOaDMDg",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0331 5053587",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Malerei Dreilich",
+      "address": "Haeckelstraße 41, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJm9VWoEn0qEcR2tWT39OfHmY",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Malermeister Schulz & Kersten GbR",
+      "address": "Am Buchhorst 13, 14558 Nuthetal-Bergholz-Rehbrücke, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ6ZVCrmtfqEcRT3I7kb6AE28",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Frank Nasick Malermeister",
+      "address": "Hans-Albers-Straße 4, 14480 Potsdam Südost, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJRZwCcRlfqEcRw492EW-cK28",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "F. Naue Malerei GmbH",
+      "address": "Zum Kahleberg 93, 14478 Potsdam Süd, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJe08smYD1qEcR_syBlkVSYoc",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Malermeister Thomas Metzdorf",
+      "address": "Dieselstraße 13, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJh-8G0_X1qEcRXgcNUbgweBw",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Matthias Boehlke",
+      "address": "Friedrich-Engels-Straße 39, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJt-Asb_H1qEcRHARji6oWxL4",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Roundabout Iffouzar",
+      "address": "Anni-von-Gottberg-Straße 8B, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJXaDPJ6BfqEcR-e6IoXZcxJ4",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Malerbetrieb Kasperowski",
+      "address": "Jägerallee 37 B, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJh7HMRZD1qEcRGQ-bbbXmc1w",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Zacharias Klaus",
+      "address": "Stadtheide 2, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJiY9fFE_0qEcRfGFzI4JyvHk",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Malerbetrieb Eschholz",
+      "address": "Eichenring 10, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJm5KYZwT0qEcRCslS1q5dAKA",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Malerbetrieb Frenkel",
+      "address": "Döberitzer Str. 23, 14476 Potsdam-Fahrland, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ-bwoe8vwqEcRhZ_gXuLb2Ws",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "01522 4060507",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.malerbetrieb-frenkel.de/",
+      "email": "mehr...info@malerbetrieb-frenkel.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'malerbetrieb' in domain/local",
+      "branch": "Maler",
+      "region": "Potsdam"
+    }
+  ]
+}

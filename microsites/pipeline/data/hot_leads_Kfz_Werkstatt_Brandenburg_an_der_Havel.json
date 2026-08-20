@@ -1,0 +1,178 @@
+{
+  "branch": "Kfz Werkstatt",
+  "region": "Brandenburg an der Havel",
+  "all_candidates": [
+    {
+      "name": "Autohaus Roitzsch",
+      "maps_url": "https://www.google.com/maps/place/Autohaus+Roitzsch/data=!4m7!3m6!1s0x47a8c0d6e4a05357:0x7d3685444cdf928b!8m2!3d52.4220153!4d12.5115096!16s%2Fg%2F1thx7n2f!19sChIJV1Og5NbAqEcRi5LfTESFNn0?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Auto repair shop",
+      "address": "Narzissenweg 35",
+      "phone": null
+    },
+    {
+      "name": "Auto Punkt GmbH",
+      "maps_url": "https://www.google.com/maps/place/Auto+Punkt+GmbH/data=!4m7!3m6!1s0x47a8c7887d49d2d5:0x2643ba3ef3aebd3b!8m2!3d52.3957196!4d12.4116366!16s%2Fg%2F1tg_8h_n!19sChIJ1dJJfYjHqEcRO72u8z66QyY?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Auto repair shop",
+      "address": "Unter den Platanen 15",
+      "phone": null,
+      "old_or_no_website": "http://www.auto-punkt.de"
+    },
+    {
+      "name": "Kfz-Werkstatt",
+      "maps_url": "https://www.google.com/maps/place/Kfz-Werkstatt/data=!4m7!3m6!1s0x47a8c73ad0513d33:0xaa3a96e43d02c70a!8m2!3d52.4172424!4d12.4796017!16s%2Fg%2F11f4ld3cq6!19sChIJMz1R0DrHqEcRCscCPeSWOqo?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Auto repair shop",
+      "address": "Am Heidekrug 1000",
+      "phone": null,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Be-Ka Inh.Bernd Näther",
+      "maps_url": "https://www.google.com/maps/place/Be-Ka+Inh.Bernd+N%C3%A4ther/data=!4m7!3m6!1s0x47a8c0c54eed5705:0xcbe6d679d928d27c!8m2!3d52.4139803!4d12.5135951!16s%2Fg%2F1td_xms3!19sChIJBVftTsXAqEcRfNIo2XnW5ss?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Car repair and maintenance service",
+      "address": "Carl-Reichstein-Straße 21",
+      "phone": null,
+      "old_or_no_website": "http://www.be-ka-brandenburg.de"
+    },
+    {
+      "name": "Pro Car GmbH",
+      "maps_url": "https://www.google.com/maps/place/Pro+Car+GmbH/data=!4m7!3m6!1s0x47a8c13de7c348f5:0x355324b788d63a!8m2!3d52.43834!4d12.536929!16s%2Fg%2F1tcxyv__!19sChIJ9UjD5z3BqEcROtaItyRTNQA?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Auto repair shop",
+      "address": "Friedrichshafener Str. 20",
+      "phone": "+493381710909",
+      "old_or_no_website": "",
+      "email": "pro-car-gmbh@gmx.de",
+      "email_verified": true,
+      "email_verify_reason": "Match: 'pro' in domain/local",
+      "about": "Geben Sie links Ihre Rufnummer incl. Vorwahl ein und klicken Sie auf \"Anrufen\". Es wird zunächst eine Verbindung zu Ihrer Rufnummer hergestellt. Dann wird der von Ihnen gewünschte\nTeilnehmer angerufen.",
+      "products": [
+        "Finden",
+        "Autoreparaturen",
+        "Jetzt geschlossen–Öffnet Dienstag um 07:00",
+        "Gratis anrufen",
+        "E-Mail",
+        "Website"
+      ],
+      "opening_hours": {
+        "Mo": "7:00 – 18:00",
+        "Di": "7:00 – 18:00",
+        "Mi": "7:00 – 18:00",
+        "Do": "7:00 – 18:00",
+        "Fr": "7:00 – 18:00"
+      },
+      "branch": "Kfz Werkstatt",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "REHBRA GmbH Kfz-Meisterbetrieb seit 1992",
+      "maps_url": "https://www.google.com/maps/place/REHBRA+GmbH+Kfz-Meisterbetrieb+seit+1992/data=!4m7!3m6!1s0x47a8c08c34f12e51:0x6e07f950de17e838!8m2!3d52.3963534!4d12.5386807!16s%2Fg%2F1tdjq5cf!19sChIJUS7xNIzAqEcROOgX3lD5B24?authuser=0&hl=en&rclk=1",
+      "rating": 4.5,
+      "category": "Auto repair shop",
+      "address": "Meyerstraße 16",
+      "phone": null
+    },
+    {
+      "name": "Automobile Service Robert Heymann",
+      "maps_url": "https://www.google.com/maps/place/Automobile+Service+Robert+Heymann/data=!4m7!3m6!1s0x47a8c0ea66e01c3d:0x8181ec956ad108e0!8m2!3d52.4053352!4d12.5251713!16s%2Fg%2F1tf6wcw5!19sChIJPRzgZurAqEcR4AjRapXsgYE?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Auto repair shop",
+      "address": "Friedrich-Engels-Straße 6",
+      "phone": null
+    },
+    {
+      "name": "Pro Rep",
+      "maps_url": "https://www.google.com/maps/place/Pro+Rep/data=!4m7!3m6!1s0x47a8c14623a78db3:0x5d25c6af1890e149!8m2!3d52.4305171!4d12.5308966!16s%2Fg%2F11hsxx8vdl!19sChIJs42nI0bBqEcRSeGQGK_GJV0?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Auto repair shop",
+      "address": "Warschauer Str. 23",
+      "phone": null
+    },
+    {
+      "name": "KP FAHRZEUGTECHNIK - KFZ Meisterwerkstatt",
+      "maps_url": "https://www.google.com/maps/place/KP+FAHRZEUGTECHNIK+-+KFZ+Meisterwerkstatt/data=!4m7!3m6!1s0x47a8c1e5b78aa0d9:0x1dbe5ec9970a1339!8m2!3d52.3884864!4d12.6004752!16s%2Fg%2F11m0qg_fh_!19sChIJ2aCKt-XBqEcRORMKl8levh0?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Car repair and maintenance service",
+      "address": "Rietzer Str. 17a",
+      "phone": null
+    },
+    {
+      "name": "KFZ Servicepark Suck",
+      "maps_url": "https://www.google.com/maps/place/KFZ+Servicepark+Suck/data=!4m7!3m6!1s0x47a8c0dd24225509:0x63ae1ad9542e2f5d!8m2!3d52.420096!4d12.502338!16s%2Fg%2F1hf3syfbk!19sChIJCVUiJN3AqEcRXS8uVNkarmM?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Car repair and maintenance service",
+      "address": "Am Elisabethhof 15",
+      "phone": null
+    },
+    {
+      "name": "MMW Kfz-Technik Mario Schimpf",
+      "maps_url": "https://www.google.com/maps/place/MMW+Kfz-Technik+Mario+Schimpf/data=!4m7!3m6!1s0x47a8c7dbe1c930b1:0x1dbc1bb853c0a2d5!8m2!3d52.4174202!4d12.4795616!16s%2Fg%2F11hyt6y8dr!19sChIJsTDJ4dvHqEcR1aLAU7gbvB0?authuser=0&hl=en&rclk=1",
+      "rating": 4.8,
+      "category": "Auto repair shop",
+      "address": "Plauer Landstraße 44"
+    },
+    {
+      "name": "Kfz-Reparatur- und Klimaservice",
+      "maps_url": "https://www.google.com/maps/place/Kfz-Reparatur-+und+Klimaservice/data=!4m7!3m6!1s0x47a8c7d5bac2da89:0x3e23b2473826739d!8m2!3d52.40733!4d12.3998472!16s%2Fg%2F11w4dz_hzp!19sChIJidrCutXHqEcRnXMmOEeyIz4?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "",
+      "address": ""
+    },
+    {
+      "name": "Autohaus Gentz GbR",
+      "maps_url": "https://www.google.com/maps/place/Autohaus+Gentz+GbR/data=!4m7!3m6!1s0x47a8c05bedea98dd:0xbc3d30b6760942c6!8m2!3d52.4044792!4d12.5625498!16s%2Fg%2F1vs1qxjl!19sChIJ3Zjq7VvAqEcRxkIJdrYwPbw?authuser=0&hl=en&rclk=1",
+      "rating": 4.7,
+      "category": "Auto repair shop",
+      "address": "Kirchhofstraße 35"
+    },
+    {
+      "name": "AC Jechow GmbH Brandenburg / TESLA Approved Bodyshop",
+      "maps_url": "https://www.google.com/maps/place/AC+Jechow+GmbH+Brandenburg+%2F+TESLA+Approved+Bodyshop/data=!4m7!3m6!1s0x47a8c13c312e5857:0x42b5334aa9ce18f6!8m2!3d52.4378791!4d12.5333971!16s%2Fg%2F1hc243lc3!19sChIJV1guMTzBqEcR9hjOqUoztUI?authuser=0&hl=en&rclk=1",
+      "rating": 4.9,
+      "category": "Auto repair shop",
+      "address": "Friedrichshafener Str. 6/8"
+    },
+    {
+      "name": "Cem-Tuning",
+      "maps_url": "https://www.google.com/maps/place/Cem-Tuning/data=!4m7!3m6!1s0x47a8524a2e5e43a3:0x8c829a23b5de96f9!8m2!3d52.4036016!4d12.5500652!16s%2Fg%2F1hc7h4m7h!19sChIJo0NeLkpSqEcR-ZbetSOagow?authuser=0&hl=en&rclk=1",
+      "rating": 5.0,
+      "category": "Auto tune up service",
+      "address": "Gutenbergstraße 33"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Pro Car GmbH",
+      "maps_url": "https://www.google.com/maps/place/Pro+Car+GmbH/data=!4m7!3m6!1s0x47a8c13de7c348f5:0x355324b788d63a!8m2!3d52.43834!4d12.536929!16s%2Fg%2F1tcxyv__!19sChIJ9UjD5z3BqEcROtaItyRTNQA?authuser=0&hl=en&rclk=1",
+      "rating": 4.6,
+      "category": "Auto repair shop",
+      "address": "Friedrichshafener Str. 20",
+      "phone": "+493381710909",
+      "old_or_no_website": "",
+      "email": "pro-car-gmbh@gmx.de",
+      "email_verified": true,
+      "email_verify_reason": "Match: 'pro' in domain/local",
+      "about": "Geben Sie links Ihre Rufnummer incl. Vorwahl ein und klicken Sie auf \"Anrufen\". Es wird zunächst eine Verbindung zu Ihrer Rufnummer hergestellt. Dann wird der von Ihnen gewünschte\nTeilnehmer angerufen.",
+      "products": [
+        "Finden",
+        "Autoreparaturen",
+        "Jetzt geschlossen–Öffnet Dienstag um 07:00",
+        "Gratis anrufen",
+        "E-Mail",
+        "Website"
+      ],
+      "opening_hours": {
+        "Mo": "7:00 – 18:00",
+        "Di": "7:00 – 18:00",
+        "Mi": "7:00 – 18:00",
+        "Do": "7:00 – 18:00",
+        "Fr": "7:00 – 18:00"
+      },
+      "branch": "Kfz Werkstatt",
+      "region": "Brandenburg an der Havel"
+    }
+  ]
+}

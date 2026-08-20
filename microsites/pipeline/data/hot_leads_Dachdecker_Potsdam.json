@@ -1,0 +1,253 @@
+{
+  "branch": "Dachdecker",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "Schildhauer Dachdeckermeister GmbH",
+      "address": "Alt Drewitz 15, 14480 Potsdam Südost, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJXRm-2QhfqEcRwVVp5ngI6j0",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 622659"
+    },
+    {
+      "name": "DaBeSa Dachdecker und Dachklempner GmbH",
+      "address": "Postanschrift: Rückertstraße 27 A Büro über Toreinfahrt, Marquardter Ch, 14469 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJOYLexbH2qEcRxVuyakA43KQ",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 520391"
+    },
+    {
+      "name": "Nicole Grube Dachdeckermeisterin",
+      "address": "Reiherbergstraße 37A, 14476 Potsdam Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJCxdpIfHzqEcRCJqjJH8gA_w",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 500531",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.dachdecker-grube.de/"
+    },
+    {
+      "name": "SCOOPEX GmbH. Dach & Fassadenbau",
+      "address": "Goethestraße 69, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ6cyAYkdfqEcRe-UCyZgByNs",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 7305095",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.scoopex-dachbau.de/",
+      "email": "info@scoopex-dachbau.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'scoopex' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "DachDesign & Dachbeschichtung GmbH Potsdam",
+      "address": "Behlertstraße 3A, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ2aZJWl31qEcRVjIrqyYJgnE",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 58503517"
+    },
+    {
+      "name": "Mehl Dachdecker & Bauklempnerei",
+      "address": "Trebbiner Str. 18, 14480 Potsdam Südost, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ86dDvQdfqEcRJAaaAVNmfbA",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 618062",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.mehl-dach-bau.de/"
+    },
+    {
+      "name": "Dachdeckerei D. Jung",
+      "address": "Goethestraße 6, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNTtll1lfqEcRX9_x3RAU9Z0",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 713153",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.dachdeckerpotsdam.com/",
+      "email": "dachdeckerei.d.jung@gmx.deFunk",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'dachdeckerei' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Dachdeckerei Torsten Neumann",
+      "address": "Pasteurstraße 23, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJj-wZN0BfqEcRcv0ArpvhpQs",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 7405929",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.dachdeckerei-neumann-siegel.com/"
+    },
+    {
+      "name": "Zimmerei | Dachdeckerei Haberland Pechstein",
+      "address": "Ketziner Str. 122, 14476 Potsdam-Fahrland, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJwaIQlbjxqEcR7sVARd5X4lI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "015678 271300"
+    },
+    {
+      "name": "Dachdecker-Einkauf Potsdam",
+      "address": "Erich-Arendt-Str. 1, 14469 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJl-GYhHf2qEcRrW0OSl_LC54",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 233680",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.dachdecker1kauf.de/"
+    },
+    {
+      "name": "Blank Dachdeckerei GmbH",
+      "address": "Schmerberger Weg 16, 14548 Schwielowsee-Caputh, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJb7G2esT0qEcRv9Qh0vxOe5M",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Bauwerkstätten - Dachdecker und Dachklempner - Dach & Bauwerkstätten Roland Schulze GmbH",
+      "address": "Friedrich-Engels-Straße 41, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJAQA0b_H1qEcRbMkuRg-4ib8",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Heiko Ebert Dachdeckermeister | Stahnsdorf",
+      "address": "Priesterweg 3D, 14532 Stahnsdorf, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ6a4dhl9ZqEcRESan75exPUQ",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Tschörner & Jonen Gbr",
+      "address": "Hasensprung 9, 14478 Potsdam Süd, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ4ZM6I4f1qEcRu68mZRqkZ3o",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Andreas Kühne Dachdeckermeisterbetrieb",
+      "address": "Str. des Friedens 83, 14552 Michendorf-Langerwisch, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJt067DANgqEcRfMnPu4rDlmo",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "SCOOPEX GmbH. Dach & Fassadenbau",
+      "address": "Goethestraße 69, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ6cyAYkdfqEcRe-UCyZgByNs",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 7305095",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.scoopex-dachbau.de/",
+      "email": "info@scoopex-dachbau.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'scoopex' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Dachdeckerei D. Jung",
+      "address": "Goethestraße 6, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNTtll1lfqEcRX9_x3RAU9Z0",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0331 713153",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.dachdeckerpotsdam.com/",
+      "email": "dachdeckerei.d.jung@gmx.deFunk",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'dachdeckerei' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Potsdam"
+    }
+  ]
+}

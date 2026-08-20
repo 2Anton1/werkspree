@@ -53,8 +53,7 @@
       "rating": 4.6,
       "category": "Driving school",
       "address": "Schillerstraße 79",
-      "phone": null,
-      "old_or_no_website": ""
+      "phone": null
     },
     {
       "name": "City Fahrschule Cottbus",
@@ -87,7 +86,8 @@
       "rating": 4.7,
       "category": "Closed",
       "address": "+49 3562 983688",
-      "phone": null
+      "phone": null,
+      "old_or_no_website": "https://www.verkehrsinstitut-starick.de"
     },
     {
       "name": "Fahrschule Andreas Schöbel",
