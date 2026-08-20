@@ -1,0 +1,336 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrschule Lets Drive Lausitz GmbH | Cottbus</title>
+    <style>
+        :root {
+            --primary-color: #004a99;
+            --secondary-color: #e30613;
+            --dark-color: #1a1a1a;
+            --light-color: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: var(--white);
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 74, 153, 0.8), rgba(0, 74, 153, 0.8)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=1920') center/cover;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .btn:hover {
+            background: #c20510;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info a {
+            color: var(--dark-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-color);
+        }
+
+        .opening-hours {
+            background: var(--light-color);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 5px 0;
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        footer {
+            background: var(--dark-color);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .section-title h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Lets Drive Lausitz</a>
+                <ul class="nav-links">
+                    <li><a href="#ueber-uns">Über uns</a></li>
+                    <li><a href="#leistungen">Leistungen</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+                <a href="tel:03555270692" class="btn">Jetzt anrufen</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Dein Weg zum Führerschein in Cottbus</h1>
+            <p>Sicher, modern und professionell – Die Fahrschule Lets Drive Lausitz GmbH begleitet dich zur erfolgreichen Prüfung.</p>
+            <a href="#kontakt" class="btn">Beratungstermin vereinbaren</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Über uns</h2>
+                    </div>
+                    <p>Willkommen bei der Fahrschule Lets Drive Lausitz GmbH in Cottbus. Wir sind dein kompetenter Ansprechpartner für eine moderne und stressfreie Führerscheinausbildung. Unser Ziel ist es, dich nicht nur schnell zur Prüfung zu führen, sondern dich zu einem sicheren und verantwortungsbewussten Teilnehmer am Straßenverkehr auszubilden.</p>
+                    <br>
+                    <p>Mit zentralen Standorten in der Bahnhofstraße bieten wir dir optimale Erreichbarkeit und eine angenehme Lernatmosphäre. Unsere erfahrenen Fahrlehrer gehen individuell auf deine Bedürfnisse ein und unterstützen dich mit modernsten Lehrmethoden in Theorie und Praxis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+                <p>Umfassende Ausbildung für alle gängigen Klassen</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Klasse B / BF17</h3>
+                    <p>Die klassische PKW-Ausbildung. Wir begleiten dich vom ersten Mal am Steuer bis zur erfolgreichen praktischen Prüfung.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Zweirad-Klassen</h3>
+                    <p>Egal ob Mofa, A1, A2 oder die offene Klasse A – wir machen dich fit für die Freiheit auf zwei Rädern.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Theorie-Unterricht</h3>
+                    <p>Interaktiver Unterricht in unseren Schulungsräumen. Wir bereiten dich gezielt auf die theoretische Prüfung vor.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Auffrischung</h3>
+                    <p>Lange nicht gefahren? Wir helfen dir, deine Sicherheit im Straßenverkehr zurückzugewinnen und Ängste abzubauen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background-color: var(--light-color);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontakt & Anfahrt</h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>So erreichst du uns</h3>
+                    <p><strong>Adresse:</strong></p>
+                    <p>Bahnhofstraße 2 & Bahnhofstraße 1<br>03046 Cottbus</p>
+                    <br>
+                    <p><strong>Telefon:</strong>&nbsp;<a href="tel:03555270692">0355 5270692</a></p>
+                    <p><strong>E-Mail:</strong>&nbsp;<a href="mailto:kontakt@fs-lets-drive.de">kontakt@fs-lets-drive.de</a></p>
+                </div>
+                <div class="opening-hours">
+                    <h3>Bürozeiten</h3>
+                    <table>
+                        <tr><td>Montag - Freitag</td><td>10:00 - 18:00 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                    <p style="margin-top: 15px; font-size: 0.9rem; font-style: italic;">Fahrstunden finden individuell nach Absprache statt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Fahrschule Lets Drive Lausitz GmbH</h3>
+                <p>Deine Fahrschule im Herzen von Cottbus.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Fahrschule Lets Drive Lausitz GmbH. Alle Rechte vorbehalten.</p>
+                <p><a href="#" style="color: #ccc; text-decoration: none;">Impressum</a> | <a href="#" style="color: #ccc; text-decoration: none;">Datenschutz</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

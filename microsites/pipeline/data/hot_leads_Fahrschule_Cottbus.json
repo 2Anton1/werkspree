@@ -3,99 +3,247 @@
   "region": "Cottbus",
   "all_candidates": [
     {
-      "name": "Driving School Lets Drive Cottbus Store 2",
-      "maps_url": "https://www.google.com/maps/place/Driving+School+Lets+Drive+Cottbus+Store+2/data=!4m7!3m6!1s0x470874679a4e0a4f:0x49010e38ceb5d882!8m2!3d51.7611912!4d14.3279727!16s%2Fg%2F11_sg97xv!19sChIJTwpOmmd0CEcRgti1zjgOAUk?authuser=0&hl=en&rclk=1",
+      "name": "Fahrschule Lets Drive Lausitz GmbH",
+      "address": "Bahnhofstraße 2, Bahnhofstraße 1, 03046 Cottbus, Deutschland",
       "rating": 4.8,
-      "category": "Driving school",
-      "address": "Bahnhofstraße 2, Bahnhofstraße 1",
-      "phone": null,
-      "old_or_no_website": "http://www.lets-drive-lausitz.de/Fahrschule-Cottbus-Umgebung/Termine"
-    },
-    {
-      "name": "Fahrschule Easy Drive",
-      "maps_url": "https://www.google.com/maps/place/Fahrschule+Easy+Drive/data=!4m7!3m6!1s0x470875058cb910fd:0x5ebe182b9d384b08!8m2!3d51.7558884!4d14.3356254!16s%2Fg%2F11p3jb7186!19sChIJ_RC5jAV1CEcRCEs4nSsYvl4?authuser=0&hl=en&rclk=1",
-      "rating": 4.9,
-      "category": "Drivers license training school",
-      "address": "Ostrower Str. 14",
-      "phone": null,
-      "old_or_no_website": ""
+      "place_id": "ChIJTwpOmmd0CEcRgti1zjgOAUk",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 5270692",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.fs-lets-drive.de/",
+      "email": "kontakt@fs-lets-drive.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'lets' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Cottbus"
     },
     {
       "name": "Fahrschule Intakt",
-      "maps_url": "https://www.google.com/maps/place/Fahrschule+Intakt/data=!4m7!3m6!1s0x4708745ca940071d:0x80ddf4377828632c!8m2!3d51.7663381!4d14.3331964!16s%2Fg%2F1tf68rt1!19sChIJHQdAqVx0CEcRLGMoeDf03YA?authuser=0&hl=en&rclk=1",
+      "address": "Deffkestraße 14, 03044 Cottbus, Deutschland",
       "rating": 4.9,
-      "category": "Driving school",
-      "address": "Deffkestraße 14",
-      "phone": null,
-      "old_or_no_website": ""
+      "place_id": "ChIJHQdAqVx0CEcRLGMoeDf03YA",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 29071051"
+    },
+    {
+      "name": "Fahrschule Easy Drive",
+      "address": "Ostrower Str. 14, 03046 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ_RC5jAV1CEcRCEs4nSsYvl4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01575 2794572",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "https://www.instagram.com/easydrive_cottbus/?hl=de"
     },
     {
       "name": "Fahrschule Classic Plus-Cottbus",
-      "maps_url": "https://www.google.com/maps/place/Fahrschule+Classic+Plus-Cottbus/data=!4m7!3m6!1s0x470875adc374e73d:0x16936dd984e4b4d8!8m2!3d51.7562634!4d14.3339931!16s%2Fg%2F11crzxntjw!19sChIJPed0w611CEcR2LTkhNltkxY?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Driving school",
-      "address": "Ostrower Str. 19",
-      "phone": null,
-      "old_or_no_website": ""
-    },
-    {
-      "name": "FAHRSCHULE AM AW WIEGAND",
-      "maps_url": "https://www.google.com/maps/place/FAHRSCHULE+AM+AW+WIEGAND/data=!4m7!3m6!1s0x47087489a426c157:0x4f4963d5865686d4!8m2!3d51.756956!4d14.3100596!16s%2Fg%2F1tr7h2c3!19sChIJV8EmpIl0CEcR1IZWhtVjSU8?authuser=0&hl=en&rclk=1",
-      "rating": 4.8,
-      "category": "Driving school",
-      "address": "Berliner Str. 71",
-      "phone": null,
-      "old_or_no_website": ""
-    },
-    {
-      "name": "Fahrschule Grüneberg GmbH",
-      "maps_url": "https://www.google.com/maps/place/Fahrschule+Gr%C3%BCneberg+GmbH/data=!4m7!3m6!1s0x47087467361a4ce7:0x8f8caafec710acf6!8m2!3d51.7610813!4d14.3239265!16s%2Fg%2F1tdm2fl4!19sChIJ50waNmd0CEcR9qwQx_6qjI8?authuser=0&hl=en&rclk=1",
-      "rating": 4.6,
-      "category": "Driving school",
-      "address": "Schillerstraße 79",
-      "phone": null
+      "address": "Ostrower Str. 19, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJPed0w611CEcR2LTkhNltkxY",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 29054284",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fahrschulen-classicplus.de/",
+      "email": "info@fahrschulen-classicplus.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'classic' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Cottbus"
     },
     {
       "name": "City Fahrschule Cottbus",
-      "maps_url": "https://www.google.com/maps/place/City+Fahrschule+Cottbus/data=!4m7!3m6!1s0x470874420ddd8ce1:0x187144b17e6b5925!8m2!3d51.7613185!4d14.3375541!16s%2Fg%2F1tj2gljd!19sChIJ4YzdDUJ0CEcRJVlrfrFEcRg?authuser=0&hl=en&rclk=1",
+      "address": "Sandower Str. 46, 03046 Cottbus, Deutschland",
       "rating": 4.6,
-      "category": "Closed",
-      "address": "+49 355 792505",
-      "phone": null
+      "place_id": "ChIJ4YzdDUJ0CEcRJVlrfrFEcRg",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 792505",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.city-fahrschule-cottbus.de/"
+    },
+    {
+      "name": "FAHRSCHULE AM AW WIEGAND",
+      "address": "Berliner Str. 71, 03046 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJV8EmpIl0CEcR1IZWhtVjSU8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0172 9239043"
+    },
+    {
+      "name": "Fahrschule Grüneberg GmbH",
+      "address": "Schillerstraße 79, 03046 Cottbus, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ50waNmd0CEcR9qwQx_6qjI8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 3830701",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.fahrschule-grueneberg.de/",
+      "email": "info@fahrschule-grueneberg.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'grüneberg' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Cottbus"
     },
     {
       "name": "Fahrschule Hennig, Eckehard",
-      "maps_url": "https://www.google.com/maps/place/Fahrschule+Hennig,+Eckehard/data=!4m7!3m6!1s0x470874151e34e1ed:0x5c7d80b4f64e7227!8m2!3d51.7570897!4d14.3465686!16s%2Fg%2F1tfhy94s!19sChIJ7eE0HhV0CEcRJ3JO9rSAfVw?authuser=0&hl=en&rclk=1",
+      "address": "Willy-Brandt-Straße 19 B, 03042 Cottbus, Deutschland",
       "rating": 4.8,
-      "category": "Driving school",
-      "address": "Willy-Brandt-Straße 19 B",
-      "phone": "+491603633111",
+      "place_id": "ChIJ7eE0HhV0CEcRJ3JO9rSAfVw",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0160 3633111",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
     },
     {
       "name": "Fahrschule Lothar Kühnel + Autozubehör - Ersatzteile",
-      "maps_url": "https://www.google.com/maps/place/Fahrschule+Lothar+K%C3%BChnel+%2B+Autozubeh%C3%B6r+-+Ersatzteile/data=!4m7!3m6!1s0x4708745d8b1bea8d:0x886e9146f0fdf169!8m2!3d51.7622627!4d14.3260069!16s%2Fg%2F1wg5wqf7!19sChIJjeobi110CEcRafH98EaRbog?authuser=0&hl=en&rclk=1",
+      "address": "Lieberoser Str. 6, 03046 Cottbus, Deutschland",
       "rating": 4.7,
-      "category": "Driving school",
-      "address": "Lieberoser Str. 6",
-      "phone": null
+      "place_id": "ChIJjeobi110CEcRafH98EaRbog",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 23872",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.fahrschulekuehnel.de/",
+      "email": "fahrschule-kuehnel@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'kühnel' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Cottbus"
     },
     {
       "name": "Wolfgang Starick",
-      "maps_url": "https://www.google.com/maps/place/Wolfgang+Starick/data=!4m7!3m6!1s0x470875adec7a7ebd:0xd4b143a191302789!8m2!3d51.7561631!4d14.3278632!16s%2Fg%2F1v8kz9s0!19sChIJvX567K11CEcRiScwkaFDsdQ?authuser=0&hl=en&rclk=1",
+      "address": "Bahnhofstraße 53, 03046 Cottbus, Deutschland",
       "rating": 4.7,
-      "category": "Closed",
-      "address": "+49 3562 983688",
-      "phone": null,
-      "old_or_no_website": "https://www.verkehrsinstitut-starick.de"
+      "place_id": "ChIJvX567K11CEcRiScwkaFDsdQ",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03562 983688"
     },
     {
       "name": "Fahrschule Andreas Schöbel",
-      "maps_url": "https://www.google.com/maps/place/Fahrschule+Andreas+Sch%C3%B6bel/data=!4m7!3m6!1s0x4708750063b61ff9:0x4c41c6ca2458b697!8m2!3d51.7853668!4d14.3271798!16s%2Fg%2F11c6rgfv9g!19sChIJ-R-2YwB1CEcRl7ZYJMrGQUw?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 173 3822735"
+      "address": "Nordparkstraße 30, 03044 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ-R-2YwB1CEcRl7ZYJMrGQUw",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
     }
   ],
-  "hot_leads": []
+  "hot_leads": [
+    {
+      "name": "Fahrschule Lets Drive Lausitz GmbH",
+      "address": "Bahnhofstraße 2, Bahnhofstraße 1, 03046 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJTwpOmmd0CEcRgti1zjgOAUk",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 5270692",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.fs-lets-drive.de/",
+      "email": "kontakt@fs-lets-drive.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'lets' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Fahrschule Classic Plus-Cottbus",
+      "address": "Ostrower Str. 19, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJPed0w611CEcR2LTkhNltkxY",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 29054284",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fahrschulen-classicplus.de/",
+      "email": "info@fahrschulen-classicplus.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'classic' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Fahrschule Grüneberg GmbH",
+      "address": "Schillerstraße 79, 03046 Cottbus, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ50waNmd0CEcR9qwQx_6qjI8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 3830701",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.fahrschule-grueneberg.de/",
+      "email": "info@fahrschule-grueneberg.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'grüneberg' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Fahrschule Lothar Kühnel + Autozubehör - Ersatzteile",
+      "address": "Lieberoser Str. 6, 03046 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJjeobi110CEcRafH98EaRbog",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 23872",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.fahrschulekuehnel.de/",
+      "email": "fahrschule-kuehnel@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'kühnel' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Cottbus"
+    }
+  ]
 }
