@@ -41,6 +41,15 @@
 
 ## 2. INFRASTRUKTUR
 
+### 2.0 Google Places API (Wichtig!)
+- **API Key:** `GOOGLE_PLACES_API_KEY` in `~/.hermes/.env`
+- **Preis:** 0$ im Free-Tier (200$ Credit/Monat für neue Kunden)
+- **DANACH:** $0.032/Suche (Text Search) + $0.017/Details
+- **WICHTIG:** User will **NICHTS** für Places API zahlen!
+- **Budget-Limit:** Max 1-2 Suchanfragen pro Pipeline-Lauf (automatisch begrenzt)
+- **Alternative:** Direct Scraper (requests + BeautifulSoup) für Firmen-Websites (kostenlos)
+- **Aktiviert am:** 20.08.2026
+
 ### 2.1 GitHub Repo
 - **Repo:** https://github.com/2Anton1/werkspree
 - **Branch:** main
