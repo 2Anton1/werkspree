@@ -185,11 +185,11 @@ def main():
     else:
         lead = json.loads(Path(args.lead).read_text())
 
-    if not args.demo and lead.get("email_verified") != "yes":
+    if not args.demo and not lead.get("email_verified"):
         print("ERROR: Lead nicht qualifiziert (email_verified != yes)")
         sys.exit(2)
 
-    slug = lead.get("slug") or slugify(lead.get("company_name", "lead"))
+    slug = lead.get("slug") or slugify(lead.get("company_name") or lead.get("name", "lead"))
     html = render(TEMPLATE.read_text(), lead)
     out = OUT_DIR / slug
     out.mkdir(parents=True, exist_ok=True)
