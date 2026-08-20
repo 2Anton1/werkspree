@@ -172,6 +172,13 @@ def main():
     for lead in leads[:2]:  # max 2 pro Lauf
         name = lead.get("name", "Unbekannt")
         email = lead.get("email", "")
+        # E-Mail-Validierung: Korrigiere erkennbare Fehler
+        if email and "@" in email:
+            # Extrahiere E-Mail mit lowercase TLD (stoppt bei Großbuchstaben im TLD)
+            match = re.search(r'[\w.\-+]+@[\w\-]+\.[a-z]{2,6}', email)
+            if match:
+                email = match.group(0)
+            lead["email"] = email
         print(f"\n--- Lead: {name} <{email}> ---")
 
         # 1) Opt-out-Check
@@ -223,11 +230,11 @@ def main():
         lead_path = DATA / f"lead_{slug}.json"
         lead_path.write_text(json.dumps(lead_json, ensure_ascii=False, indent=2))
 
-        # 3) Build (STATISCH: robuster als LLM-Agent)
+        # 3) Build (Gemini API - professionelle Microsite)
         lead_path.write_text(json.dumps(lead_json, ensure_ascii=False, indent=2))
-        ok_b, _ = run([sys.executable, "build_microsite.py", "--lead", str(lead_path)])
+        ok_b, _ = run([sys.executable, "gemini_builder.py", str(lead_path)])
         if not ok_b:
-            print("  Build fehlgeschlagen (Statisch)")
+            print("  Build fehlgeschlagen (Gemini)")
             continue
         # 3b) Deploy (zentral pushen, damit Sandbox-Git-Context genutzt wird)
         run(["git", "-C", str(PIPE.parent), "add", "-A"])

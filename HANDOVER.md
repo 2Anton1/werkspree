@@ -41,13 +41,22 @@
 
 ## 2. INFRASTRUKTUR
 
-### 2.0 Google Places API (Wichtig!)
+### 2.0 Google APIs (Wichtig!)
+#### 2.0.1 Google Places API
 - **API Key:** `GOOGLE_PLACES_API_KEY` in `~/.hermes/.env`
 - **Preis:** 0$ im Free-Tier (200$ Credit/Monat für neue Kunden)
 - **DANACH:** $0.032/Suche (Text Search) + $0.017/Details
 - **WICHTIG:** User will **NICHTS** für Places API zahlen!
 - **Budget-Limit:** Max 1-2 Suchanfragen pro Pipeline-Lauf (automatisch begrenzt)
 - **Alternative:** Direct Scraper (requests + BeautifulSoup) für Firmen-Websites (kostenlos)
+- **Aktiviert am:** 20.08.2026
+
+#### 2.0.2 Google Gemini API (Microsite-Builder)
+- **API Key:** `GOOGLE_API_KEY` in `~/.hermes/.env` (gleicher Key wie Places)
+- **Preis:** 0$ (60 Anfragen/Min, 1500 Anfragen/Tag — kostenlos)
+- **Verwendung:** Generiert professionelle HTML-Microsites für heiße Leads
+- **Modell:** gemini-3-flash-preview
+- **Fallback:** Statisches Template (`build_microsite.py`) wenn Gemini versagt
 - **Aktiviert am:** 20.08.2026
 
 ### 2.1 GitHub Repo

@@ -1,0 +1,317 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCOOPEX GmbH | Dach & Fassadenbau Potsdam</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #d35400;
+            --accent-color: #ecf0f1;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #ffffff;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1635424710928-0544e8512eae?auto=format&fit=crop&q=80&w=1200') center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            background: var(--secondary-color);
+            height: 3px;
+            width: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .contact-item {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item strong {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .contact-item a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .opening-hours {
+            background: var(--accent-color);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #bf4600;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SCOOPEX <span>GmbH</span></div>
+                <div class="contact-quick">
+                    <a href="tel:03317305095" style="color: white; text-decoration: none;">📞 0331 7305095</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Ihr Meisterbetrieb in Potsdam</h1>
+        <p>Professionelle Lösungen für Dach und Fassade. Qualität, Beständigkeit und handwerkliche Präzision aus Babelsberg.</p>
+        <a href="#kontakt" class="btn">Jetzt Angebot anfragen</a>
+    </section>
+
+    <section id="ueber-uns" class="container">
+        <div class="section-title">
+            <h2>Über uns</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Die SCOOPEX GmbH ist Ihr zuverlässiger Partner für alle Arbeiten rund um die Gebäudehülle in Potsdam und Umgebung. Mit langjähriger Erfahrung im Dach- und Fassadenbau stehen wir für höchste Qualitätsstandards und termingerechte Ausführung.</p>
+                <br>
+                <p>Unser Team aus qualifizierten Fachkräften kombiniert traditionelles Handwerk mit modernster Technik, um Ihr Gebäude optimal vor Witterungseinflüssen zu schützen und energetisch auf den neuesten Stand zu bringen. Ob Neubau, Sanierung oder Reparatur – wir realisieren Ihr Projekt mit Leidenschaft und Expertise.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Dachdeckung</h3>
+                    <p>Eindeckung von Steildächern mit Ziegeln, Schiefer oder Betonsteinen sowie professionelle Flachdachabdichtungen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fassadenbau</h3>
+                    <p>Hochwertige Fassadengestaltung und energetische Sanierung für eine ansprechende Optik und niedrige Heizkosten.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Dachsanierung</h3>
+                    <p>Komplette Erneuerung alter Dachstühle inklusive Dämmung nach aktuellen energetischen Standards (GEG).</p>
+                </div>
+                <div class="service-card">
+                    <h3>Dachklempnerei</h3>
+                    <p>Montage von Dachrinnen, Fallrohren und individuellen Blechverkleidungen aus Kupfer, Zink oder Aluminium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="container">
+        <div class="section-title">
+            <h2>Kontakt & Anfahrt</h2>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>So erreichen Sie uns</h3>
+                <div class="contact-item">
+                    <strong>Adresse:</strong> 
+                    <span>Goethestraße 69, 14482 Potsdam-Babelsberg</span>
+                </div>
+                <div class="contact-item">
+                    <strong>Telefon:</strong> 
+                    <a href="tel:03317305095">0331 7305095</a>
+                </div>
+                <div class="contact-item">
+                    <strong>E-Mail:</strong> 
+                    <a href="mailto:info@scoopex-dachbau.de">info@scoopex-dachbau.de</a>
+                </div>
+                <br>
+                <div class="opening-hours">
+                    <h3>Öffnungszeiten</h3>
+                    <p>Montag - Donnerstag: 07:00 - 16:30 Uhr</p>
+                    <p>Freitag: 07:00 - 14:00 Uhr</p>
+                    <p>Samstag - Sonntag: Geschlossen</p>
+                </div>
+            </div>
+            <div class="contact-map">
+                <div style="width: 100%; height: 300px; background: #eee; display: flex; align-items: center; justify-content: center; border-radius: 8px; border: 1px solid #ccc;">
+                    <p style="text-align: center; padding: 20px;">
+                        <strong>SCOOPEX GmbH</strong><br>
+                        Goethestraße 69<br>
+                        14482 Potsdam<br><br>
+                        <a href="https://www.google.com/maps/search/Goethestra%C3%9Fe+69,+14482+Potsdam" target="_blank" style="color: var(--secondary-color);">In Google Maps öffnen</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 SCOOPEX GmbH. Dach & Fassadenbau. Alle Rechte vorbehalten.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Goethestraße 69 | 14482 Potsdam-Babelsberg</p>
+        </div>
+    </footer>
+
+</body>
+</html>
