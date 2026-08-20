@@ -1,0 +1,31 @@
+{
+  "name": "Pro Car GmbH",
+  "maps_url": "https://www.google.com/maps/place/Pro+Car+GmbH/data=!4m7!3m6!1s0x47a8c13de7c348f5:0x355324b788d63a!8m2!3d52.43834!4d12.536929!16s%2Fg%2F1tcxyv__!19sChIJ9UjD5z3BqEcROtaItyRTNQA?authuser=0&hl=en&rclk=1",
+  "rating": 4.6,
+  "category": "Auto repair shop",
+  "address": "Friedrichshafener Str. 20",
+  "phone": "+493381710909",
+  "old_or_no_website": "",
+  "email": "pro-car-gmbh@gmx.de",
+  "email_verified": true,
+  "email_verify_reason": "Match: 'pro' in domain/local",
+  "about": "Geben Sie links Ihre Rufnummer incl. Vorwahl ein und klicken Sie auf \"Anrufen\". Es wird zunächst eine Verbindung zu Ihrer Rufnummer hergestellt. Dann wird der von Ihnen gewünschte\nTeilnehmer angerufen.",
+  "products": [
+    "Finden",
+    "Autoreparaturen",
+    "Jetzt geschlossen–Öffnet Dienstag um 07:00",
+    "Gratis anrufen",
+    "E-Mail",
+    "Website"
+  ],
+  "opening_hours": {
+    "Mo": "7:00 – 18:00",
+    "Di": "7:00 – 18:00",
+    "Mi": "7:00 – 18:00",
+    "Do": "7:00 – 18:00",
+    "Fr": "7:00 – 18:00"
+  },
+  "branch": "Kfz Werkstatt",
+  "region": "Brandenburg an der Havel",
+  "company_name": "Pro Car GmbH"
+}
