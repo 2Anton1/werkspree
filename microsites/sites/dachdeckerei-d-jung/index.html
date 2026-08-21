@@ -1,0 +1,327 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dachdeckerei D. Jung | Ihr Dachdecker in Potsdam</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50; /* Schiefergrau */
+            --secondary-color: #c0392b; /* Ziegelrot */
+            --accent-color: #ecf0f1;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1635424710928-0544e8512eae?auto=format&fit=crop&q=80&w=1200') center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a93226;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+            margin: 10px auto;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: var(--accent-color);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item strong {
+            width: 100px;
+            display: inline-block;
+        }
+
+        .contact-item a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .opening-hours {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 5px 0;
+        }
+
+        footer {
+            background-color: #1a252f;
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .about-content { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">Dachdeckerei <span>D. Jung</span></div>
+            <ul class="nav-links">
+                <li><a href="#ueber-uns">Über uns</a></li>
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Qualität über Ihrem Kopf</h1>
+    <p>Ihr zuverlässiger Partner für Dacharbeiten in Potsdam und Umgebung.</p>
+    <a href="#kontakt" class="btn">Jetzt beraten lassen</a>
+</section>
+
+<section id="ueber-uns" class="container">
+    <h2 class="section-title">Über uns</h2>
+    <div class="about-content">
+        <div class="about-text">
+            <p>Die Dachdeckerei D. Jung steht für handwerkliche Präzision und langjährige Erfahrung im Dachdeckerhandwerk. Ansässig in der Goethestraße in Potsdam, betreuen wir private und gewerbliche Kunden bei allen Projekten rund um das Dach.</p>
+            <br>
+            <p>Unser Fokus liegt auf Langlebigkeit, Sicherheit und einer ästhetischen Ausführung. Ob Neueindeckung, energetische Sanierung oder kleine Reparaturen – wir sorgen dafür, dass Ihr Gebäude optimal vor Witterungseinflüssen geschützt ist. Vertrauen Sie auf einen Fachbetrieb aus Ihrer Region.</p>
+        </div>
+    </div>
+</section>
+
+<section id="leistungen" style="background-color: #f9f9f9;">
+    <div class="container">
+        <h2 class="section-title">Unsere Leistungen</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Dachdeckung</h3>
+                <p>Professionelle Eindeckung von Steildächern mit Ziegeln, Schiefer oder modernen Verbundstoffen.</p>
+            </div>
+            <div class="service-card">
+                <h3>Flachdachbau</h3>
+                <p>Sichere Abdichtung und Dämmung von Flachdächern für Garagen, Wohnhäuser und Gewerbeobjekte.</p>
+            </div>
+            <div class="service-card">
+                <h3>Dachreparatur</h3>
+                <p>Schnelle Hilfe bei Sturmschäden, undichten Stellen oder defekten Dachrinnen.</p>
+            </div>
+            <div class="service-card">
+                <h3>Dachfenster</h3>
+                <p>Einbau und Austausch von Dachflächenfenstern für mehr Licht und Wohnqualität im Dachgeschoss.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="kontakt" class="container">
+    <h2 class="section-title">Kontakt & Anfahrt</h2>
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            <h3>So erreichen Sie uns</h3>
+            <div class="contact-item">
+                <strong>Adresse:</strong> Goethestraße 6, 14482 Potsdam
+            </div>
+            <div class="contact-item">
+                <strong>Telefon:</strong> <a href="tel:0331713153">0331 713153</a>
+            </div>
+            <div class="contact-item">
+                <strong>E-Mail:</strong> <a href="mailto:dachdeckerei.d.jung@gmx.de">dachdeckerei.d.jung@gmx.de</a>
+            </div>
+            <br>
+            <div class="opening-hours">
+                <h3>Öffnungszeiten</h3>
+                <table>
+                    <tr><td>Montag - Donnerstag:</td><td>07:00 - 16:00 Uhr</td></tr>
+                    <tr><td>Freitag:</td><td>07:00 - 14:00 Uhr</td></tr>
+                    <tr><td>Samstag - Sonntag:</td><td>Geschlossen</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="contact-map">
+            <p><strong>Standort Potsdam:</strong></p>
+            <p>Unser Betrieb befindet sich zentral in Potsdam Babelsberg. Wir sind schnell bei Ihnen vor Ort, um Ihr Vorhaben zu besprechen.</p>
+            <br>
+            <p><em>Gerne vereinbaren wir einen individuellen Besichtigungstermin direkt an Ihrem Objekt.</em></p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Dachdeckerei D. Jung - Potsdam. Alle Rechte vorbehalten.</p>
+    </div>
+</footer>
+
+</body>
+</html>

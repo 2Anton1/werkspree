@@ -1,0 +1,22 @@
+{
+  "name": "Dachdeckerei D. Jung",
+  "address": "Goethestraße 6, 14482 Potsdam, Deutschland",
+  "rating": 5,
+  "place_id": "ChIJNTtll1lfqEcRX9_x3RAU9Z0",
+  "types": [
+    "establishment",
+    "point_of_interest",
+    "roofing_contractor"
+  ],
+  "phone": "0331 713153",
+  "website_quality": "low",
+  "website_quality_score": 1,
+  "old_or_no_website": "http://www.dachdeckerpotsdam.com/",
+  "email": "dachdeckerei.d.jung@gmx.deFunk",
+  "email_verified": true,
+  "email_verify_reason": "Impressum: Match: 'dachdeckerei' in domain/local",
+  "branch": "Dachdecker",
+  "region": "Potsdam",
+  "company_name": "Dachdeckerei D. Jung",
+  "slug": "dachdeckerei-d-jung"
+}
