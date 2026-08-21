@@ -128,6 +128,13 @@
       "subject": "Ihre neue Website ist fertig – ein Kostenloser Entwurf von Werkspree",
       "site_url": "",
       "sent_at": "2026-08-21T11:19:04.992485+02:00"
+    },
+    {
+      "company_name": "Fahrschule Lothar Kühnel + Autozubehör",
+      "email": "fahrschule-kuehnel@t-online.de",
+      "site_url": "https://werkspree.bki-de.de/microsites/sites/fahrschule-lothar-kuehnel--autozubehoer/",
+      "sent_at": "2026-08-21T15:00:00+02:00",
+      "sent_by": "Finn Werksby (Werkspree, Gemini-Site)"
     }
   ]
 }
