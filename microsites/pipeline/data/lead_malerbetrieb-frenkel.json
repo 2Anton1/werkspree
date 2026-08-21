@@ -12,13 +12,11 @@
   "website_quality": "low",
   "website_quality_score": 0,
   "old_or_no_website": "http://www.malerbetrieb-frenkel.de/",
-  "email": "info@malerbetrieb-frenkel.de",
+  "email": "mehr...info@malerbetrieb-frenkel.de",
   "email_verified": true,
   "email_verify_reason": "Impressum: Match: 'malerbetrieb' in domain/local",
   "branch": "Maler",
   "region": "Potsdam",
-  "site_url": "https://werkspree.bki-de.de/microsites/sites/malerbetrieb-frenkel/",
-  "built_at": "2026-08-20T13:21:12.959890+02:00",
-  "slug": "malerbetrieb-frenkel",
-  "company_name": "Malerbetrieb Frenkel"
+  "company_name": "Malerbetrieb Frenkel",
+  "slug": "malerbetrieb-frenkel"
 }
