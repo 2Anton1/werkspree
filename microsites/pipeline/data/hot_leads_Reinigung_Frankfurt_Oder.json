@@ -4,109 +4,133 @@
   "all_candidates": [
     {
       "name": "Rainer Wöllner Textilreinigungsservice",
-      "maps_url": "https://www.google.com/maps/place/Rainer+W%C3%B6llner+Textilreinigungsservice/data=!4m7!3m6!1s0x4165384a03cf772b:0xd01de58768f99a41!8m2!3d52.3424598!4d14.5333073!16s%2Fg%2F1tf397bw!19sChIJK3fPA0o4ZUERQZr5aIflHdA?authuser=0&hl=en&rclk=1",
+      "address": "Fürstenwalder Str. 33, 15234 Frankfurt (Oder)-Obere Stadt, Deutschland",
       "rating": 4.5,
-      "category": "Laundry service",
-      "address": "Fürstenwalder Str. 33",
-      "phone": "+4933524610",
+      "place_id": "ChIJK3fPA0o4ZUERQZr5aIflHdA",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest"
+      ],
+      "phone": "0335 24610",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
     },
     {
       "name": "IFM Service – Hausmeisterservice & Reinigung Frankfurt (Oder)",
-      "maps_url": "https://www.google.com/maps/place/IFM+Service+%E2%80%93+Hausmeisterservice+%26+Reinigung+Frankfurt+%28Oder%29/data=!4m7!3m6!1s0x470797dbe02a4811:0x52f4362382696312!8m2!3d52.2971379!4d14.4714337!16s%2Fg%2F11ym8814t2!19sChIJEUgq4NuXB0cREmNpgiM29FI?authuser=0&hl=en&rclk=1",
+      "address": "Bauernhilfe 1, 15236 Frankfurt (Oder)-Markendorf, Deutschland",
       "rating": 4.7,
-      "category": "Open",
-      "address": "+49 1514 7358321",
-      "phone": null
+      "place_id": "ChIJEUgq4NuXB0cREmNpgiM29FI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01514 7358321"
     },
     {
       "name": "Wäscherei Stübchen",
-      "maps_url": "https://www.google.com/maps/place/W%C3%A4scherei+St%C3%BCbchen/data=!4m7!3m6!1s0x4707992024dd4891:0xa2e3bd6a3772c2b4!8m2!3d52.333321!4d14.5476933!16s%2Fg%2F11wxx2_06g!19sChIJkUjdJCCZB0cRtMJyN2q946I?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 173 3770715",
-      "phone": null,
-      "old_or_no_website": "https://www.wsffo.de"
-    },
-    {
-      "name": "Wittum Dienstleistung",
-      "maps_url": "https://www.google.com/maps/place/Wittum+Dienstleistung/data=!4m7!3m6!1s0x4707981190b0fa3b:0x8d117729e6041482!8m2!3d52.3318995!4d14.5396299!16s%2Fg%2F1tfvrnn4!19sChIJO_qwkBGYB0cRghQE5il3EY0?authuser=0&hl=en&rclk=1",
-      "rating": 4.6,
-      "category": "Cleaners",
-      "address": "Johann-Eichorn-Straße 15",
-      "phone": null
-    },
-    {
-      "name": "Zwei Schwestern Reinigungsservice",
-      "maps_url": "https://www.google.com/maps/place/Zwei+Schwestern+Reinigungsservice/data=!4m7!3m6!1s0x47079906a4b819b5:0x6ee54e0b649d8a0e!8m2!3d52.35816!4d14.54629!16s%2Fg%2F11yv_d9dyr!19sChIJtRm4pAaZB0cRDoqdZAtO5W4?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 172 6757896",
-      "phone": null,
-      "old_or_no_website": "https://zweischwestern.dienst.de"
-    },
-    {
-      "name": "Glas & Gebäudereinigung Dreger",
-      "maps_url": "https://www.google.com/maps/place/Glas+%26+Geb%C3%A4udereinigung+Dreger/data=!4m7!3m6!1s0x416538382942ede3:0x1f0a7bcb59497912!8m2!3d52.3621!4d14.5277199!16s%2Fg%2F1th5b8p3!19sChIJ4-1CKTg4ZUEREnlJWct7Ch8?authuser=0&hl=en&rclk=1",
-      "rating": 4.7,
-      "category": "Cleaners",
-      "address": "Spitzkrugring 10",
-      "phone": null
-    },
-    {
-      "name": "Lange Dienstleistungs GmbH",
-      "maps_url": "https://www.google.com/maps/place/Lange+Dienstleistungs+GmbH/data=!4m7!3m6!1s0x4707980b77b7eddf:0x3a7fe940e6c0f5a9!8m2!3d52.3370533!4d14.5526092!16s%2Fg%2F1thd0j5d!19sChIJ3-23dwuYB0cRqfXA5kDpfzo?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": null
+      "address": "Große Müllroser Str. 72, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJkUjdJCCZB0cRtMJyN2q946I",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest"
+      ],
+      "phone": "0173 3770715"
     },
     {
       "name": "Queen Clean ADL GmbH",
-      "maps_url": "https://www.google.com/maps/place/Queen+Clean+ADL+GmbH/data=!4m7!3m6!1s0x47a82b2a439adaa5:0x34736d6044cdf447!8m2!3d52.3374174!4d14.5516068!16s%2Fg%2F11p3bvkdwm!19sChIJpdqaQyorqEcRR_TNRGBtczQ?authuser=0&hl=en&rclk=1",
+      "address": "Gubener Str. 35b, 15230 Frankfurt (Oder), Deutschland",
       "rating": 4.6,
-      "category": "Closed",
-      "address": "+49 335 60698866",
-      "phone": null
+      "place_id": "ChIJpdqaQyorqEcRR_TNRGBtczQ",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 60698866",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "https://queenclean-adl.eu/"
     },
     {
-      "name": "Appelt Reinigungsdienst",
-      "maps_url": "https://www.google.com/maps/place/Appelt+Reinigungsdienst/data=!4m7!3m6!1s0x416539b412831ed7:0xb4879e579d56c7bd!8m2!3d52.35057!4d14.47713!16s%2Fg%2F1tncrly7!19sChIJ1x6DErQ5ZUERvcdWnVeeh7Q?authuser=0&hl=en&rclk=1",
-      "rating": 4.8,
-      "category": "Closed",
-      "address": "+49 335 531029",
-      "phone": null,
-      "old_or_no_website": "http://www.appelt-service.de"
-    },
-    {
-      "name": "LEHGRA GmbH",
-      "maps_url": "https://www.google.com/maps/place/LEHGRA+GmbH/data=!4m7!3m6!1s0x4707987115b7e7d1:0xeead469be63617a2!8m2!3d52.3723061!4d14.4888411!16s%2Fg%2F1td4ht_g!19sChIJ0ee3FXGYB0cRohc25ptGre4?authuser=0&hl=en&rclk=1",
-      "rating": 4.5,
-      "category": "Closed",
-      "address": "+49 33605 526153",
-      "phone": null,
-      "old_or_no_website": "http://www.lehgra.de"
+      "name": "GLASKLAR Glas- und Fensterreinigung Frankfurt (Oder)",
+      "address": "Große Scharrnstraße, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJv1lvbI-ZB0cRjNMOlR1Pjzg",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01522 7012755"
     },
     {
       "name": "Rohloff Reinigungsservice",
-      "maps_url": "https://www.google.com/maps/place/Rohloff+Reinigungsservice/data=!4m7!3m6!1s0x60d8be9d049150c9:0xb25db9b8fb1c286c!8m2!3d52.3489416!4d14.545737!16s%2Fg%2F11t49fsdg5!19sChIJyVCRBJ2-2GARbCgc-7i5XbI?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": ""
+      "address": "Sophienstraße 2, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyVCRBJ2-2GARbCgc-7i5XbI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": ""
     },
     {
-      "name": "Wäscherei und Ladenwerkstatt Gronenfelder Werkstätten gGmbH",
-      "maps_url": "https://www.google.com/maps/place/W%C3%A4scherei+und+Ladenwerkstatt+Gronenfelder+Werkst%C3%A4tten+gGmbH/data=!4m7!3m6!1s0x555555545100005:0xa9bfbed49bf5b974!8m2!3d52.3522946!4d14.5499516!16s%2Fg%2F119wwnmy3!19sChIJBQAQRVVVVQURdLn1m9S-v6k?authuser=0&hl=en&rclk=1",
+      "name": "Wittum Dienstleistung",
+      "address": "Johann-Eichorn-Straße 15, 15232 Frankfurt (Oder), Deutschland",
       "rating": 4.6,
-      "category": "Laundry service",
-      "address": "Oderturm, Ziegelstraße 39"
+      "place_id": "ChIJO_qwkBGYB0cRghQE5il3EY0",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest"
+      ],
+      "phone": "0335 4008980",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.gebaeudereinigung-wittum.de/"
     },
     {
-      "name": "SchönSauber Reinigungs- u. Service Team, Inh. Manuel Gebauer",
-      "maps_url": "https://www.google.com/maps/place/Sch%C3%B6nSauber+Reinigungs-+u.+Service+Team,+Inh.+Manuel+Gebauer/data=!4m7!3m6!1s0x4707990c8d1b101b:0x19a63399b0680af0!8m2!3d52.3599031!4d14.5362153!16s%2Fg%2F11sy014564!19sChIJGxAbjQyZB0cR8AposJkzphk?authuser=0&hl=en&rclk=1",
+      "name": "LEHGRA GmbH",
+      "address": "Lebuser Weg 27a, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ0ee3FXGYB0cRohc25ptGre4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "033605 526153"
+    },
+    {
+      "name": "Lange Dienstleistungs GmbH",
+      "address": "Lindenstraße 21, 15230 Frankfurt (Oder)-Gubener Vorstadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ3-23dwuYB0cRqfXA5kDpfzo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 4011078",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.lange-dienstleistung.de/"
+    },
+    {
+      "name": "Glas & Gebäudereinigung Dreger",
+      "address": "Spitzkrugring 10, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
       "rating": 4.7,
-      "category": "Closed",
-      "address": "+49 172 1787815"
+      "place_id": "ChIJ4-1CKTg4ZUEREnlJWct7Ch8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 524404",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.gg-ffo.de/"
     }
   ],
   "hot_leads": []
