@@ -248,8 +248,8 @@ def main():
         # 4) Versand
         template = json.loads((PIPE / "email_templates_microsite.json").read_text())
         t = template["microsite_draft"]
-        body = t["body"].replace("{SITE_URL}", site_url)
-        subject = t["subject"]
+        body = t["body"].replace("{SITE_URL}", site_url).replace("{COMPANY}", name)
+        subject = t["subject"].replace("{COMPANY}", name)
         # send_mail.py erwartet --to --subject --body-text
         ok_s, _ = run([
             sys.executable, "send_mail.py",

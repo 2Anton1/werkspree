@@ -1,8 +1,8 @@
 {
   "microsite_draft": {
-    "subject": "Ihre neue Website ist fertig – ein Kostenloser Entwurf von Werkspree",
+    "subject": "{COMPANY}: Ihre neue Website ist fertig",
     "greeting": "Sehr geehrte Damen und Herren",
-    "body": "wir haben uns Ihr Geschäft angesehen und festgestellt: Sie machen hervorragende Arbeit, aber Ihre Online-Präsenz fängt das nicht ein.\n\nDeshalb haben wir Ihnen eine fertige, professionelle Website gebaut – komplett kostenlos und ohne Verpflichtung. Sie liegt hier:\n\n{SITE_URL}\n\nWas Sie darauf sehen: eine saubere, mobile-optimierte Seite mit Ihren Öffnungszeiten, Ihren Kontaktdaten und Ihren Leistungen. Kein Baukasten-Look, kein Werbebanner – nur Ihr Betrieb, gut präsentiert.\n\nWenn Ihnen die Seite gefällt, können wir sie gemeinsam an Ihre Wünsche anpassen und Sie dabei entlasten: Anfragen beantworten, Rechnungen sortieren, Kunden strukturiert nachfassen. Sprechen Sie uns einfach an.\n\nMit freundlichen Grüßen\nFinn Werksby\nWerkspree – KI-Automatisierung für kleine Unternehmen\nBerlin & Brandenburg",
-    "opt_out": "Sie möchten keine weiteren Mails? Antworten Sie einfach mit 'Bitte nicht mehr' – wir halten uns zurück."
+    "body": "wir haben uns Ihr Geschäft angesehen und Ihnen eine professionelle Website gebaut – kostenlos und ohne Verpflichtung.\n\n{SITE_URL}\n\nIhre neue Seite ist mobil-optimiert und zeigt Ihre Leistungen, Öffnungszeiten und Kontaktdaten im besten Licht.\n\nWenn Sie möchten, können wir sie gemeinsam anpassen. Sprechen Sie uns einfach an.\n\nMit freundlichen Grüßen\nFinn Werksby\nWerkspree – KI-Automatisierung für kleine Unternehmen\n\nPS: Wenn Sie keine weitere Kommunikation wünschen, löschen wir die Beispiel-Seite gerne wieder.",
+    "opt_out": "Sie möchten keine weiteren Mails? Antworten Sie einfach mit 'Bitte nicht mehr'."
   }
 }

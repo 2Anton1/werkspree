@@ -176,7 +176,12 @@ if __name__ == "__main__":
     lead = json.loads(lead_path.read_text())
     
     name = lead.get("company_name") or lead.get("name", "lead")
-    slug = name.lower().replace(" ", "-")[:40]
+    # Kürzeren, URL-freundlichen Slug (nur erste 3 Wörter, keine Sonderzeichen)
+    words = name.split()[:3]
+    s = " ".join(words).lower()
+    s = s.replace("ä", "ae").replace("ö", "oe").replace("ü", "ue").replace("ß", "ss")
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")[:30]
+    slug = lead.get("slug") or (s if s else "site")
     out = OUT_DIR / slug
     out.mkdir(parents=True, exist_ok=True)
     
