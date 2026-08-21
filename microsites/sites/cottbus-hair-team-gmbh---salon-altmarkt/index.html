@@ -1,0 +1,368 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cottbus Hair Team GmbH - Salon Altmarkt | Ihr Friseur in Cottbus</title>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #c5a059;
+            --text-color: #333;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #b08d48;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            background: var(--secondary-color);
+            height: 3px;
+            width: 50px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light-bg);
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+
+        .opening-hours {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 8px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 50px;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #444;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .about-content, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">COTTBUS HAIR TEAM</div>
+            <ul class="nav-links">
+                <li><a href="#ueber-uns">Über uns</a></li>
+                <li><a href="#leistungen">Leistungen</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Salon Altmarkt</h1>
+        <p>Ihr exklusiver Friseursalon im Herzen von Cottbus. Wir vereinen Handwerk, Stil und Leidenschaft für Ihr perfektes Aussehen.</p>
+        <a href="tel:035523381" class="btn">Jetzt Termin vereinbaren</a>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="section-title">
+            <h2>Über uns</h2>
+        </div>
+        <div class="about-content">
+            <div>
+                <p>Willkommen beim Cottbus Hair Team GmbH im Salon Altmarkt. Seit vielen Jahren sind wir die erste Adresse in Cottbus für alle, die Wert auf Qualität und eine individuelle Beratung legen. Unser erfahrenes Team aus Stylisten setzt Ihre Wünsche mit höchster Präzision um.</p>
+                <br>
+                <p>In entspannter Atmosphäre direkt am historischen Altmarkt bieten wir Ihnen eine Auszeit vom Alltag. Ob klassischer Haarschnitt oder moderne Farbveränderung – bei uns stehen Sie und Ihr Haar im Mittelpunkt.</p>
+            </div>
+            <div style="background-color: var(--light-bg); padding: 40px; border-radius: 8px; text-align: center;">
+                <h3 style="color: var(--secondary-color); font-size: 2rem;">Qualität</h3>
+                <p>die man sieht und fühlt.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: var(--light-bg); max-width: 100%;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Haarschnitt</h3>
+                    <p>Individuelle Schnitte für Damen, Herren und Kinder. Von klassisch bis trendbewusst.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Färbung</h3>
+                    <p>Brillante Farben, Balayage, Highlights und Tönungen mit hochwertigen Produkten.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Styling</h3>
+                    <p>Professionelles Föhnen, Glätten oder Hochsteckfrisuren für besondere Anlässe.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Rasur & Pflege</h3>
+                    <p>Traditionelle Bartpflege und präzise Rasuren für den modernen Gentleman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="section-title">
+            <h2>Kontakt & Anfahrt</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>So finden Sie uns</h3>
+                <p><strong>Adresse:</strong>&nbsp;Altmarkt 16, 03046 Cottbus</p>
+                <p><strong>Telefon:</strong>&nbsp;<a href="tel:035523381">0355 23381</a></p>
+                <p><strong>E-Mail:</strong>&nbsp;<a href="mailto:info@cottbuser-hair-team.de">info@cottbuser-hair-team.de</a></p>
+                <br>
+                <p>Wir freuen uns auf Ihren Besuch in unserem Salon direkt am Altmarkt.</p>
+            </div>
+            <div class="opening-hours">
+                <h3>Öffnungszeiten</h3>
+                <table>
+                    <tr>
+                        <td>Montag</td>
+                        <td>Geschlossen</td>
+                    </tr>
+                    <tr>
+                        <td>Dienstag</td>
+                        <td>09:00 - 18:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Mittwoch</td>
+                        <td>09:00 - 18:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Donnerstag</td>
+                        <td>09:00 - 19:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Freitag</td>
+                        <td>09:00 - 18:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Samstag</td>
+                        <td>08:00 - 13:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Sonntag</td>
+                        <td>Geschlossen</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo" style="margin-bottom: 20px;">COTTBUS HAIR TEAM GMBH</div>
+        <p>Salon Altmarkt | Altmarkt 16 | 03046 Cottbus</p>
+        <div class="footer-bottom">
+            &copy; 2023 Cottbus Hair Team GmbH. Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+</body>
+</html>
