@@ -1,6 +1,141 @@
 {
   "branch": "Reinigung",
   "region": "Brandenburg an der Havel",
-  "all_candidates": [],
+  "all_candidates": [
+    {
+      "name": "Textilpflege Krause GmbH",
+      "address": "Wilhelmsdorfer Str. 4/6, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJl7NOmfXAqEcRWxj-mncbVbw",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest"
+      ],
+      "phone": "03381 702601"
+    },
+    {
+      "name": "Fischbeck Clean",
+      "address": "Neuendorfer Str. 64, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJExwNhzDBqEcRirTTdPL9FAY",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0173 4397590",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Chemische Reinigung glänzen",
+      "address": "Wilhelmsdorfer Str. 4-6, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJS4ajwt3BqEcRgsspPf58hgA",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest"
+      ],
+      "phone": "965 802 305"
+    },
+    {
+      "name": "RB Gebäudereinigung",
+      "address": "Warschauer Str. 7, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ18r1CaR3O6ERanocvpy70Bk",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 3286867"
+    },
+    {
+      "name": "CLEAN DEIN STEIN",
+      "address": "Havel-Center, Raum: 422, Am Industriegelände 3, 14772 Brandenburg an der Havel-Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJm2rP9-nBqEcRlL3B3Hpp1uk",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01517 2959133"
+    },
+    {
+      "name": "JELOW Dienstleistungsservice",
+      "address": "Am Industriegelände 3, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ0RUqv4rBqEcRqSiX17GKP4k",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 2086514",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "N. Polatov Service - Hausmeisterservice, Umzüge & Küchenmontage",
+      "address": "Carl-Reichstein-Straße 4, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJBdU6-uKW5w8RSHUrmi5Z-A0",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0177 7993677"
+    },
+    {
+      "name": "Cleanforce Havel",
+      "address": "Friedrich-Engels-Straße 6, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJPRzgZurAqEcRqf8yF7m5l0s",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01511 4129238",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.cleanforce-havel.de/79/kontakt-formular"
+    },
+    {
+      "name": "Wischperten Facility & Service UG (haftungsbeschränkt)",
+      "address": "Im Havel-Center Office 530, Am Industriegelände 3, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJnfn0EoboHkIRiUKYU-y4f5A",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "030 921087061"
+    },
+    {
+      "name": "Hausmeisterservice Pantel",
+      "address": "Prager Str. 30, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJC2lr5s7BqEcRYbDR-1WXcWg",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0176 46000664",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "CleanStar Gebäudereinigung",
+      "address": "Venise-Gosnat-Straße 34, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJHUmyT3nBqEcRnE3vWJGjbUE",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    }
+  ],
   "hot_leads": []
 }
