@@ -1,0 +1,325 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobilservice Robert Heymann | Ihre Kfz-Werkstatt in Brandenburg an der Havel</title>
+    <style>
+        :root {
+            --primary-color: #0d2c54;
+            --secondary-color: #c0392b;
+            --accent-color: #7f8c8d;
+            --light-bg: #f4f7f6;
+            --white: #ffffff;
+            --dark-text: #2c3e50;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: var(--white);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(13, 44, 84, 0.8), rgba(13, 44, 84, 0.8)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title .underline {
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 0 auto;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border-bottom: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        .opening-hours {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: var(--white);
+            text-align: center;
+            padding: 40px 10%;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #a93226;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 50px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Robert Heymann</div>
+        <nav>
+            <a href="#ueber-uns">Über uns</a>
+            <a href="#leistungen">Leistungen</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Automobilservice Robert Heymann</h1>
+        <p>Ihre kompetente Kfz-Meisterwerkstatt in Brandenburg an der Havel. Qualität, Transparenz und Zuverlässigkeit für Ihr Fahrzeug.</p>
+        <a href="tel:03381315777" class="btn">Jetzt anrufen</a>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="section-title">
+            <h2>Über uns</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Willkommen beim Automobilservice Robert Heymann. Als etablierter Fachbetrieb in Brandenburg an der Havel stehen wir für erstklassigen Service rund um Ihr Kraftfahrzeug. Unser Team aus erfahrenen Mechanikern kombiniert traditionelles Handwerk mit modernster Diagnosetechnik.</p>
+                <br>
+                <p>Ob Inspektion, Reparatur oder Wartung – wir behandeln jedes Fahrzeug mit höchster Sorgfalt, als wäre es unser eigenes. Bei uns stehen der Kunde und die Sicherheit seines Fahrzeugs an erster Stelle. Wir legen großen Wert auf eine ehrliche Beratung und faire Preise.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: var(--light-bg);">
+        <div class="section-title">
+            <h2>Unsere Leistungen</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Inspektion & Wartung</h3>
+                <p>Regelmäßige Wartung nach Herstellervorgaben für alle Fahrzeugmarken zur Erhaltung Ihrer Garantie und Sicherheit.</p>
+            </div>
+            <div class="service-card">
+                <h3>Reparaturen</h3>
+                <p>Fachgerechte Instandsetzung von Motor, Getriebe, Fahrwerk und Auspuffanlagen mit Ersatzteilen in Erstausrüsterqualität.</p>
+            </div>
+            <div class="service-card">
+                <h3>HU / AU Service</h3>
+                <p>Wir bereiten Ihr Fahrzeug optimal auf die Haupt- und Abgasuntersuchung vor und führen diese direkt bei uns im Haus durch.</p>
+            </div>
+            <div class="service-card">
+                <h3>Bremsenservice</h3>
+                <p>Sicherheit geht vor: Prüfung, Wartung und Austausch von Bremsscheiben, Belägen und Bremsflüssigkeit.</p>
+            </div>
+            <div class="service-card">
+                <h3>Reifenservice</h3>
+                <p>Reifenwechsel, Auswuchten und Beratung beim Neureifenkauf für jede Saison.</p>
+            </div>
+            <div class="service-card">
+                <h3>Diagnose</h3>
+                <p>Fehlerauslese mit modernsten Diagnosegeräten zur schnellen und präzisen Identifikation von elektronischen Problemen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="section-title">
+            <h2>Kontakt & Anfahrt</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>So erreichen Sie uns</h3>
+                <p><strong>Adresse:</strong> Friedrich-Engels-Straße 6, 14770 Brandenburg an der Havel</p>
+                <p><strong>Telefon:</strong>&nbsp;<a href="tel:03381315777" class="contact-link">03381 315777</a></p>
+                <p><strong>E-Mail:</strong>&nbsp;<a href="mailto:info@automobilservice-brb.de" class="contact-link">info@automobilservice-brb.de</a></p>
+                <br>
+                <p>Kommen Sie direkt vorbei oder rufen Sie uns an, um einen Termin zu vereinbaren. Wir freuen uns auf Ihren Besuch!</p>
+            </div>
+            <div class="opening-hours">
+                <h3>Öffnungszeiten</h3>
+                <table>
+                    <tr><td>Montag - Freitag</td><td>08:00 - 17:00 Uhr</td></tr>
+                    <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                    <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                </table>
+                <p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8;">* Termine außerhalb der Öffnungszeiten nach telefonischer Absprache möglich.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Automobilservice Robert Heymann. Alle Rechte vorbehalten.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">Friedrich-Engels-Straße 6 | 14770 Brandenburg an der Havel</p>
+    </footer>
+
+</body>
+</html>
