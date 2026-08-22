@@ -1,0 +1,329 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malerfirma Zinder GmbH | Ihr Malermeister in Cottbus</title>
+    <style>
+        :root {
+            --primary-blue: #1a3a5f;
+            --accent-orange: #f39c12;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-orange);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-orange);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.8)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+        }
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-orange);
+        }
+
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light-gray);
+            padding: 30px;
+            border-radius: 8px;
+            border-bottom: 5px solid var(--primary-blue);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-bottom-color: var(--accent-orange);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent-orange);
+        }
+
+        .opening-hours {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-orange);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            background-color: #111;
+            color: #ccc;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 50px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Zinder <span>GmbH</span></div>
+        <nav>
+            <a href="#ueber-uns">Über uns</a>
+            <a href="#leistungen">Leistungen</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Qualität und Farbe für Ihr Zuhause</h1>
+        <p>Ihr zuverlässiger Partner für Malerarbeiten, Fassadengestaltung und moderne Raumkonzepte in Cottbus und Umgebung.</p>
+        <a href="#kontakt" class="btn">Jetzt Angebot anfragen</a>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="section-title">
+            <h2>Über uns</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Die Malerfirma Zinder GmbH ist Ihr kompetenter Fachbetrieb aus Cottbus. Seit vielen Jahren stehen wir für handwerkliche Präzision, Zuverlässigkeit und eine individuelle Beratung. Unser Ziel ist es, Ihre Wohnträume mit hochwertigen Materialien und fachgerechter Ausführung zu verwirklichen.</p>
+                <br>
+                <p>Ob private Wohnräume, gewerbliche Objekte oder die Sanierung Ihrer Fassade – wir bringen frischen Wind in Ihre Immobilien. Als lokaler Meisterbetrieb legen wir großen Wert auf Sauberkeit, Termintreue und ein faires Preis-Leistungs-Verhältnis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: var(--light-gray);">
+        <div class="section-title">
+            <h2>Unsere Leistungen</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Malerarbeiten</h3>
+                <p>Professionelle Anstriche für Innenwände und Decken mit hochwertigen, langlebigen Farben.</p>
+            </div>
+            <div class="service-card">
+                <h3>Fassaden</h3>
+                <p>Schutz und Gestaltung Ihrer Außenwände – wetterfest, langlebig und optisch ansprechend.</p>
+            </div>
+            <div class="service-card">
+                <h3>Tapezieren</h3>
+                <p>Von der klassischen Raufaser bis hin zu modernen Mustertapeten und exklusiven Wandbelägen.</p>
+            </div>
+            <div class="service-card">
+                <h3>Lackieren</h3>
+                <p>Fachgerechte Lackierung von Türen, Fenstern, Heizkörpern und Holzelementen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="section-title">
+            <h2>Kontakt</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Malerfirma Zinder GmbH</h3>
+                <div class="contact-item">
+                    Mittelstraße 16<br>
+                    03046 Cottbus
+                </div>
+                <div class="contact-item">
+                    Telefon: &nbsp; <a href="tel:03557842774">0355 7842774</a>
+                </div>
+                <div class="contact-item">
+                    E-Mail: &nbsp; <a href="mailto:info@zinder.de">info@zinder.de</a>
+                </div>
+                <div class="opening-hours">
+                    <h3>Öffnungszeiten</h3>
+                    <p>Montag - Freitag: 07:00 - 16:00 Uhr</p>
+                    <p>Samstag: Nach Vereinbarung</p>
+                    <p>Sonntag: Geschlossen</p>
+                </div>
+            </div>
+            <div class="contact-map">
+                <p><strong>So finden Sie uns:</strong></p>
+                <p>Unser Betrieb befindet sich im Herzen von Cottbus, zentral gelegen in der Mittelstraße 16. Wir freuen uns auf Ihren Besuch oder Ihren Anruf für ein unverbindliches Beratungsgespräch direkt bei Ihnen vor Ort.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mittelstraße+16+03046+Cottbus" target="_blank" class="btn">In Google Maps öffnen</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Malerfirma Zinder GmbH - Mittelstraße 16, 03046 Cottbus</p>
+        <p>Ihr Fachbetrieb für Maler- und Lackierarbeiten in der Lausitz.</p>
+    </footer>
+
+</body>
+</html>
