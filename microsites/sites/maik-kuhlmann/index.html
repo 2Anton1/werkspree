@@ -1,0 +1,336 @@
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maik Kuhlmann | Malermeister in Cottbus-Döbbrick</title>
+    <meta name="description" content="Ihr zuverlässiger Malerbetrieb in Cottbus. Maik Kuhlmann bietet professionelle Anstriche, Fassadengestaltung, Tapezierarbeiten und Lackierungen.">
+    <style>
+        :root {
+            --primary-color: #003366; /* Dunkelblau */
+            --accent-color: #ff8c00; /* Orange */
+            --text-color: #333333;
+            --light-bg: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1589939705384-5185138a047a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            color: var(--white);
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e67e00;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        /* Über uns */
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Kontakt */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .contact-details {
+            list-style: none;
+        }
+
+        .contact-details li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-details a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-details a:hover {
+            color: var(--accent-color);
+        }
+
+        .opening-hours {
+            background: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 15px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">Maik <span>Kuhlmann</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Start</a></li>
+                    <li><a href="#ueber-uns">Über uns</a></li>
+                    <li><a href="#leistungen">Leistungen</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Meisterhafte Malerarbeiten in Cottbus</h1>
+            <p>Ihr Fachbetrieb für Farben, Fassaden und moderne Raumgestaltung.</p>
+            <a href="#kontakt" class="btn">Jetzt Angebot anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <h2>Über uns</h2>
+            <div class="about-text">
+                <p>Der Malerbetrieb Maik Kuhlmann steht für handwerkliche Präzision und kreative Gestaltung in Cottbus und Umgebung. Als erfahrener Fachbetrieb bringen wir Farbe in Ihr Leben – egal ob im Innenbereich oder an der Fassade. Wir legen großen Wert auf Sauberkeit, Pünktlichkeit und die Verwendung hochwertiger Materialien, um langlebige und ästhetische Ergebnisse für unsere Kunden zu erzielen. Von der ersten Beratung bis zum fertigen Anstrich sind wir Ihr verlässlicher Partner im Döbbricker Weg.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: var(--white);">
+        <div class="container">
+            <h2>Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Malerarbeiten</h3>
+                    <p>Professionelle Anstriche für Wände und Decken mit hochwertigen Dispersions- oder Silikatfarben.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tapezierarbeiten</h3>
+                    <p>Fachgerechtes Anbringen von Raufaser, Vliestapeten oder exklusiven Mustertapeten für Ihr Zuhause.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fassadengestaltung</h3>
+                    <p>Schutz und Verschönerung Ihrer Immobilie durch wetterfeste Fassadenanstriche und Sanierungen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Lackierarbeiten</h3>
+                    <p>Präzise Lackierungen von Türen, Fenstern, Heizkörpern und Holzelementen für perfekten Glanz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background-color: var(--light-bg);">
+        <div class="container">
+            <h2>Kontakt & Anfahrt</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>So erreichen Sie uns</h3>
+                    <ul class="contact-details">
+                        <li><strong>Adresse:</strong>&nbsp;Dissener Weg 32, 03054 Cottbus-Döbbrick</li>
+                        <li><strong>Telefon:</strong>&nbsp;<a href="tel:0355822224">0355 822224</a></li>
+                        <li><strong>E-Mail:</strong>&nbsp;<a href="mailto:info@malermeister-kuhlmann.de">info@malermeister-kuhlmann.de</a></li>
+                    </ul>
+                </div>
+                <div class="opening-hours">
+                    <h3>Öffnungszeiten</h3>
+                    <p>Montag - Freitag: 07:00 - 16:00 Uhr</p>
+                    <p>Sowie Termine nach individueller Vereinbarung.</p>
+                    <p style="margin-top: 15px; font-style: italic;">Gerne besichtigen wir Ihr Projekt vor Ort für ein unverbindliches Angebot.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo">Maik <span>Kuhlmann</span></div>
+            <p>Ihr Malermeister in Cottbus-Döbbrick</p>
+            <div class="footer-bottom">
+                &copy; 2023 Maik Kuhlmann Malerbetrieb. Alle Rechte vorbehalten. | <a href="#" style="color: white; text-decoration: none;">Impressum</a> | <a href="#" style="color: white; text-decoration: none;">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
