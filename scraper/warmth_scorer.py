@@ -51,34 +51,28 @@ AUTOMATION_NEEDS = {
 }
 
 
-def scrape_website(url, timeout=30):
-    """Scrape a website and return the content."""
+def scrape_website(url, timeout=15):
+    """Scrape a website and return the content.
+    Nutzt requests + BeautifulSoup statt Firecrawl CLI —
+    Firecrawl-Timeouts haben ~90% der Scrapes scheitern lassen."""
     if not url or "gelbeseiten.de" in url:
         return None
-
-    cache_key = re.sub(r'[^a-zA-Z0-9]', '_', url)[:50]
-    cache_path = CACHE_DIR / f"{cache_key}.md"
-
-    if cache_path.exists():
-        return cache_path.read_text()
-
-    CACHE_DIR.mkdir(parents=True, exist_ok=True)
-
     try:
-        result = subprocess.run(
-            ["firecrawl", "scrape", url, "-o", str(cache_path)],
-            capture_output=True, text=True, timeout=timeout
-        )
-    except subprocess.TimeoutExpired:
-        print(f"  (Scrape-Timeout {timeout}s: {url[:60]})")
+        import requests as _requests
+    except ImportError:
         return None
-    except Exception as e:
-        print(f"  (Scrape-Fehler: {e})")
+    HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7",
+    }
+    try:
+        r = _requests.get(url, headers=HEADERS, timeout=timeout, allow_redirects=True)
+        if r.status_code != 200:
+            return None
+        return r.text[:50000]  # Cap bei 50k Zeichen
+    except Exception:
         return None
-
-    if result.returncode == 0 and cache_path.exists():
-        return cache_path.read_text()
-    return None
 
 
 def score_lead(lead, website_content=None):
