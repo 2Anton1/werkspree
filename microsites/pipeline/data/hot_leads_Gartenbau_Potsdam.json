@@ -1,0 +1,268 @@
+{
+  "branch": "Gartenbau",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "Garten und Landschaftsbau Leitner",
+      "address": "Gartenstraße 38, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ80ENRktfqEcRnFqHxuHCLWQ",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0331 60060280"
+    },
+    {
+      "name": "KANIA Garten- und Landschaftsbau | Services",
+      "address": "Ganghoferstraße 5, 14476 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJDe0iUeP2qEcRC7DyAAcvZPw",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "01575 2753625"
+    },
+    {
+      "name": "Gartenbau Buba Inh. Christian Buba",
+      "address": "Potsdamer Chaussee 51, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJTWqdmqj3qEcR_WKSH4bIeoE",
+      "types": [
+        "establishment",
+        "florist",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "033208 20799",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.blumenbuba.de/",
+      "email": "info@blumenbuba.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'buba' in domain/local",
+      "branch": "Gartenbau",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Garten- und Landschaftsbau Andreas Röhle",
+      "address": "Zum Jagenstein 3, 14478 Potsdam Süd, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJj30wyH5fqEcRzyNQrW79vMc",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0173 6090700",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.garten-potsdam.de/"
+    },
+    {
+      "name": "Ralf Krickow Garten- & Landschaftsbau",
+      "address": "Grüner Weg 16, 14476 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJZbQKyl0jZUER8q74C9FdKNo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "033201 31506",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.krickow.com/"
+    },
+    {
+      "name": "Gärtnerei Peter Schultz",
+      "address": "Kladower Str. 26, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ-V6X5m07ZUERppHlyxJwcg0",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 503864",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Pflasterarbeiten und Gartenbau Potsdam",
+      "address": "Hans-Albers-Straße 8, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ5_4zJOpfqEcR9BtnoayUO9c",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "01525 9566399"
+    },
+    {
+      "name": "Stadtgrün Potsdam GmbH",
+      "address": "Friedrich-Engels-Straße 35, 14482 Potsdam, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJZ2RAdvH1qEcRudgGVzLP5bg",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0331 7481717"
+    },
+    {
+      "name": "Gartenpflege & Gartenbau Potsdam - Garten und Landschaftbau",
+      "address": "Geschwister-Scholl-Straße 76-77, 14471 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJBWigYT71qEcR1SUMP1LXsCg",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0163 1028502"
+    },
+    {
+      "name": "100proBau® Garten- und Landschaftsbau Firma",
+      "address": "Ketziner Str. 106, 14476 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ8QYibxD3qEcRGFOdadYDZUE",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0176 71693497"
+    },
+    {
+      "name": "GPL Ingo Kunde GmbH",
+      "address": "Kirschweg 7b, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJW9n25EHwqEcRx4iGKdO3R50",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Karl Foerster Haus und Garten",
+      "address": "Am Raubfang 7, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJB0mmhJj2qEcR8Xg1qMLwQ-U",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "tourist_attraction"
+      ]
+    },
+    {
+      "name": "PGG Potsdamer Gartengestaltung. Wo Grün begeistert",
+      "address": "Otto-Lilienthal-Straße 35, 14542 Werder (Havel), Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJNXJkrZz0qEcRomMsAQ2B9iQ",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "B & K Garten- und Landschaftsbau GmbH",
+      "address": "Drewitzer Str. 50, 14478 Potsdam Süd, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ1aqBDXVfqEcRRZPMaoW5nwk",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "S&K Gartenpflege",
+      "address": "Vogelsang 15, 14478 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJWWGVFAD1qEcRmaBWl8NfuOY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Baum und Park Landschaftsbau GmbH Potsdam",
+      "address": "Baumschulallee 1, 14558 Nuthetal, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJSXGYuh9eqEcRdaLU2qXBhdg",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Baum- und Gartenpflege Schifelbein GmbH",
+      "address": "Clara-Schumann-Straße 20, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJRSpVXdJfqEcRy0jmWJL06ro",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Garten- und Landschaftsbau Reichelt",
+      "address": "Am Stichkanal 34-36, 14167 Berlin-Bezirk Steglitz-Zehlendorf, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJE_euFL5bqEcRCbRB-I0-BtU",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Tobias Becker Gartenservice",
+      "address": "Friedrich-Engels-Straße 42A, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJcWoB9Nb1qEcR2fSxZKQZQrU",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Gartenbau Buba Inh. Christian Buba",
+      "address": "Potsdamer Chaussee 51, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJTWqdmqj3qEcR_WKSH4bIeoE",
+      "types": [
+        "establishment",
+        "florist",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "033208 20799",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.blumenbuba.de/",
+      "email": "info@blumenbuba.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'buba' in domain/local",
+      "branch": "Gartenbau",
+      "region": "Potsdam"
+    }
+  ]
+}

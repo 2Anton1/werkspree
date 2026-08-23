@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gartenbau Buba | Ihr Experte für Gartenpflege in Potsdam</title>
+    <meta name="description" content="Gartenbau Buba in Potsdam – Professionelle Gartengestaltung, Pflege und Baumschnitt. Ihr Partner für grüne Oasen in der Region Potsdam.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #2D6A4F;
+            --primary-dark: #1B4332;
+            --accent: #95D5B2;
+            --bg-sand: #F4F1DE;
+            --text-dark: #2D3436;
+            --white: #FFFFFF;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-sand);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary-dark);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 20px 0;
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            margin-bottom: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: var(--white);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* --- About Us --- */
+        .about-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* --- Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+        }
+
+        /* --- Pflanzenwelt --- */
+        .plants-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .plants-list li {
+            background: var(--white);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--primary-dark);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid var(--accent);
+        }
+
+        /* --- Saisonkalender Table --- */
+        .calendar-wrapper {
+            overflow-x: auto;
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: left;
+            padding: 15px;
+        }
+
+        td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background-color: #f9fdfb;
+        }
+
+        .season-tag {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .tag-spring { background: #d1fae5; color: #065f46; }
+        .tag-summer { background: #fef3c7; color: #92400e; }
+        .tag-autumn { background: #ffedd5; color: #9a3412; }
+        .tag-winter { background: #e0f2fe; color: #075985; }
+
+        /* --- Contact & Hours --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .opening-hours {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .contact-item:hover {
+            color: var(--primary);
+        }
+
+        .contact-item i {
+            width: 45px;
+            height: 45px;
+            background: var(--bg-sand);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary);
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        .werkspree {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            opacity: 0.5;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .hero { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Gartenbau <span>Buba</span></div>
+                <div class="contact-link">
+                    <a href="tel:03320820799" style="color: white; text-decoration: none; font-weight: 600;">
+                        <i class="fas fa-phone-alt"></i> 033208 20799
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Ihr Garten in besten Händen</h1>
+            <p>Meisterhafte Gartenpflege und kreative Gestaltung für Potsdam und Umgebung. Wir lassen Ihre grüne Vision Wirklichkeit werden.</p>
+            <a href="#kontakt" class="cta-button">Beratung anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="section-title">
+                <h2>Über uns</h2>
+            </div>
+            <div class="about-content">
+                <p>Willkommen bei Gartenbau Buba, Ihrem zuverlässigen Partner für professionelle Gartenkultur in Potsdam. Inhaber Christian Buba und sein Team stehen für Leidenschaft, Fachkompetenz und Liebe zum Detail. Seit vielen Jahren gestalten und pflegen wir die Gärten der Region Potsdam-Nördliche Ortsteile mit dem Ziel, natürliche Rückzugsorte von höchster Qualität zu schaffen. Ob privater Hausgarten oder gewerbliche Grünfläche – wir vereinen traditionelles Handwerk mit modernen Gestaltungsideen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-seedling"></i>
+                    <h3>Gartengestaltung</h3>
+                    <p>Individuelle Neuanlage und Umgestaltung Ihrer Außenanlagen nach Ihren Wünschen.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-broom"></i>
+                    <h3>Gartenpflege</h3>
+                    <p>Regelmäßige Pflege, Unkrautentfernung und Düngung für ein dauerhaft schönes Erscheinungsbild.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tree"></i>
+                    <h3>Baumschnitt</h3>
+                    <p>Fachgerechter Rückschnitt, Kronenpflege und Fällungen unter Einhaltung aller Sicherheitsstandards.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h3>Saisonarbeit</h3>
+                    <p>Frühjahrsputz, Laubentfernung im Herbst und Vorbereitung Ihres Gartens auf den Winter.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h3>Rasenpflege</h3>
+                    <p>Vertikutieren, Nachsaat oder das Verlegen von hochwertigem Rollrasen für sattes Grün.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-fence"></i>
+                    <h3>Zaun- & Wegebau</h3>
+                    <p>Stilvolle Einfriedungen und Pflasterarbeiten, die sich harmonisch in Ihren Garten einfügen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pflanzenwelt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Pflanzenwelt</h2>
+            </div>
+            <ul class="plants-list">
+                <li>Stauden & Gräser</li>
+                <li>Heckenpflanzen</li>
+                <li>Obstgehölze</li>
+                <li>Zierbäume</li>
+                <li>Saisonale Blumen</li>
+                <li>Bodendecker</li>
+                <li>Exotische Solitäre</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="saisonkalender">
+        <div class="container">
+            <div class="section-title">
+                <h2>Saisonkalender</h2>
+            </div>
+            <div class="calendar-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Zeitraum</th>
+                            <th>Fokus & Angebot</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>März - Mai</td>
+                            <td>Neupflanzungen, Rasen-Kur & Düngung</td>
+                            <td><span class="season-tag tag-spring">Frühling</span></td>
+                        </tr>
+                        <tr>
+                            <td>Juni - August</td>
+                            <td>Heckenschnitt, Bewässerungssysteme & Formgehölze</td>
+                            <td><span class="season-tag tag-summer">Sommer</span></td>
+                        </tr>
+                        <tr>
+                            <td>Sept - Nov</td>
+                            <td>Laubbeseitigung, Pflanzzeit für Zwiebeln & Gehölzschnitt</td>
+                            <td><span class="season-tag tag-autumn">Herbst</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dez - Feb</td>
+                            <td>Winterdienst, Baumfällungen & Gartenplanung</td>
+                            <td><span class="season-tag tag-winter">Winter</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Kontakt aufnehmen</h3>
+                    <p style="margin-bottom: 30px;">Haben Sie Fragen oder wünschen Sie ein unverbindliches Angebot? Wir freuen uns auf Ihre Nachricht.</p>
+                    
+                    <a href="https://maps.google.com/?q=Potsdamer+Chaussee+51,14476+Potsdam" target="_blank" class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Potsdamer Chaussee 51, 14476 Potsdam</span>
+                    </a>
+                    
+                    <a href="tel:03320820799" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>033208 20799</span>
+                    </a>
+                    
+                    <a href="mailto:info@blumenbuba.de" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@blumenbuba.de</span>
+                    </a>
+                </div>
+
+                <div class="opening-hours">
+                    <h3>Öffnungszeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag - Freitag</span> <span>08:00 - 17:00 Uhr</span></li>
+                        <li><span>Samstag</span> <span>09:00 - 13:00 Uhr</span></li>
+                        <li><span>Sonntag</span> <span>Geschlossen</span></li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.9rem; font-style: italic; color: #666;">
+                        Termine vor Ort nach individueller telefonischer Vereinbarung.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">Gartenbau <strong>Buba</strong></div>
+            <p>Inhaber: Christian Buba</p>
+            <div class="copyright">
+                &copy; 2023 Gartenbau Buba. Alle Rechte vorbehalten.
+            </div>
+            <div class="werkspree">
+                Erstellt mit Leidenschaft für das Handwerk – Werkspree
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
