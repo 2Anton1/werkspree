@@ -242,7 +242,9 @@ def main():
              f"feat: microsite {slug} ({name})", "--no-verify"])
         run(["git", "-C", str(PIPE.parent), "push", "origin", "main"])
         built = json.loads(lead_path.read_text())
-        site_url = built.get("site_url", "")
+        # Fix (22.08.): gemini_builder.py schreibt site_url NICHT zurück ins lead.json
+        # → Mails gingen ohne Link raus. URL aus Slug konstruieren, wenn fehlt.
+        site_url = built.get("site_url") or f"https://werkspree.bki-de.de/microsites/sites/{slug}/"
         print(f"  Site: {site_url}")
 
         # 4) Versand

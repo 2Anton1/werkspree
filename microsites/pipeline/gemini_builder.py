@@ -187,7 +187,11 @@ if __name__ == "__main__":
     
     success = generate_microsite(lead, out / "index.html")
     if success:
+        site_url = f"https://werkspree.bki-de.de/microsites/sites/{slug}/"
+        lead["site_url"] = site_url
+        lead_path.write_text(json.dumps(lead, ensure_ascii=False, indent=2))
         print(f"✓ Microsite erstellt: {out / 'index.html'}")
+        print(f"✓ Site-URL: {site_url}")
     else:
         print("✗ Gemini-Build fehlgeschlagen")
         sys.exit(1)
