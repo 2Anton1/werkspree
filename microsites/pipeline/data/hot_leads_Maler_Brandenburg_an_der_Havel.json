@@ -1,0 +1,253 @@
+{
+  "branch": "Maler",
+  "region": "Brandenburg an der Havel",
+  "all_candidates": [
+    {
+      "name": "Sonderhoff & Pritschow GmbH",
+      "address": "Krakauer Str. 59, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJyTeMCFPAqEcRunJRxo7WqsA",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "03381 3278283"
+    },
+    {
+      "name": "Müller & Inter GbR",
+      "address": "Upstallstraße 2A, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ3ZrwFAXBqEcRhY2ifi_AtXA",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "03381 710356",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.mueller-u-inter.de/",
+      "email": "mueller_und_inter_gbr@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'müller' in domain/local",
+      "branch": "Maler",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "SK Malerwerkstatt GmbH Stefan Kulczynski",
+      "address": "Caasmannstraße 2, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJiZ9NRcHAqEcRVMSEuCwr7OQ",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "03381 3252153"
+    },
+    {
+      "name": "Art of Colors BRB",
+      "address": "Spittastraße 19, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJC8m57F_AqEcR2BxDGMAVF_8",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "03381 798373",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.artofcolors.net/",
+      "email": "brandenburg@artofcolors.net",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'art' in domain/local",
+      "branch": "Maler",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Ing. Jürgen Krüger Malerfachbetrieb",
+      "address": "Bredowstraße 3, 14774 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJUy9SvKM7ZUERZ0F5AjbZZls",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "03381 403662",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.malerkrueger-brandenburg.de/",
+      "email": "62malerkrueger-brandenburg@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'krüger' in domain/local",
+      "branch": "Maler",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Raumausstatter Mahlow",
+      "address": "Gewerbehof im 1Stock, Bäckerstraße 22, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJScIF9_jAqEcRw7bC9NXSIu0",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0173 3152819"
+    },
+    {
+      "name": "Malerei Braun",
+      "address": "Mahlerstraße 7, 14772 Brandenburg an der Havel-Görden, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJvUmGqJfBqEcRnqggu9e8DQ0",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0176 31655108"
+    },
+    {
+      "name": "SCHÖNFELDS Raumgestaltung",
+      "address": "Parduin 14, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJSeUP2vjAqEcRdYjqB6JYhIo",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "03381 2587460",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://die-malers.de/"
+    },
+    {
+      "name": "Malermeisterin Susann Düker",
+      "address": "Franz-Ziegler-Straße 28D, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ1SsPOvTAqEcRxp8aN2YuGzc",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0162 1049629"
+    },
+    {
+      "name": "Jähnke die Wohnraumprofis",
+      "address": "Upstallstraße 21, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJRQQGHjnBqEcRknVjzcaHj8A",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "painter",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 714284"
+    },
+    {
+      "name": "Günter Wlosnewski Malerbetrieb",
+      "address": "Geranienweg 26B, 14772 Brandenburg an der Havel-Görden, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ6yBtw3Q7ZUERztxMRfyT2ho",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Maler- und Lackierermeister Stefan Tabor",
+      "address": "Am Kiefernwald 10, 14550 Groß Kreutz (Havel)-Jeserig, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJsUjD4Z_rqEcRPvEg_uCTr-k",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Olaf Starre Maler- u. Lackierermeister",
+      "address": "Hauffstraße 26, 14548 Schwielowsee-Geltow, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJYcX-a530qEcR-LNbcFrZI_k",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Müller & Inter GbR",
+      "address": "Upstallstraße 2A, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ3ZrwFAXBqEcRhY2ifi_AtXA",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "03381 710356",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.mueller-u-inter.de/",
+      "email": "mueller_und_inter_gbr@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'müller' in domain/local",
+      "branch": "Maler",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Art of Colors BRB",
+      "address": "Spittastraße 19, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJC8m57F_AqEcR2BxDGMAVF_8",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "03381 798373",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.artofcolors.net/",
+      "email": "brandenburg@artofcolors.net",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'art' in domain/local",
+      "branch": "Maler",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Ing. Jürgen Krüger Malerfachbetrieb",
+      "address": "Bredowstraße 3, 14774 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJUy9SvKM7ZUERZ0F5AjbZZls",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "03381 403662",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.malerkrueger-brandenburg.de/",
+      "email": "62malerkrueger-brandenburg@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'krüger' in domain/local",
+      "branch": "Maler",
+      "region": "Brandenburg an der Havel"
+    }
+  ]
+}
