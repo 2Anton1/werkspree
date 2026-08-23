@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tischlerei Gaglower Eiche | Maßarbeit aus Cottbus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B6F47;
+            --primary-dark: #4A3C28;
+            --bg-light: #FAF6EF;
+            --text-dark: #2D2419;
+            --accent-wood: repeating-linear-gradient(90deg, #8B6F47, #8B6F47 2px, #967b55 2px, #967b55 4px);
+            --shadow: 0 10px 30px rgba(74, 60, 40, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2 22V20H22V22H2M12 2L4.5 20H19.5L12 2Z'/%3E%3C/svg%3E") no-repeat center;
+            -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M2 22V20H22V22H2M12 2L4.5 20H19.5L12 2Z'/%3E%3C/svg%3E") no-repeat center;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(rgba(250, 246, 239, 0.8), rgba(250, 246, 239, 0.8)), url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=2070') center/cover;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--accent-wood);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: #555;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(139, 111, 71, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            background: var(--primary-dark);
+            height: 400px;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        /* Services Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            border-top: 5px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Materials List */
+        .materials-section {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .materials-section h2 {
+            color: white;
+        }
+
+        .materials-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .material-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* References */
+        .reference-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .reference-box {
+            height: 250px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: white;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #8B6F47 0%, #4A3C28 100%);
+        }
+
+        .reference-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--accent-wood);
+            opacity: 0.1;
+        }
+
+        .reference-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            z-index: 1;
+        }
+
+        .reference-box p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        /* Contact & Hours */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info a {
+            display: block;
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a150f;
+            color: #999;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-line {
+            width: 100%;
+            height: 1px;
+            background: rgba(255,255,255,0.1);
+            margin: 40px 0 20px;
+        }
+
+        .werkspree-note {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .about-grid, .contact-container { grid-template-columns: 1fr; }
+            .about-image { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Gaglower Eiche</a>
+                <div class="contact-quick">
+                    <a href="tel:0355534044" style="color: var(--primary-dark); text-decoration: none; font-weight: 600;">📞 0355 534044</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Maßarbeit aus Holz</h1>
+            <p>Ihre Tischlerei in Cottbus für individuellen Möbelbau, hochwertige Türen und traditionelles Handwerk mit Liebe zum Detail.</p>
+            <a href="#kontakt" class="cta-button">Angebot anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Tradition trifft Präzision</h2>
+                    </div>
+                    <p>Willkommen bei der Tischlerei Gaglower Eiche. Mitten im Herzen der Lausitz, in Cottbus-Gaglow, verbinden wir jahrelange handwerkliche Erfahrung mit modernen Gestaltungsideen. Unser Betrieb steht für Beständigkeit und Qualität – genau wie die Eiche in unserem Namen.</p>
+                    <br>
+                    <p>Ob Einzelstück oder kompletter Innenausbau: Wir hören Ihnen zu und verwandeln Ihre Wünsche in massives Handwerk. Wir nutzen regionale Hölzer und modernste Technik, um für Sie Werte zu schaffen, die Generationen überdauern.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=2069" alt="Werkstatt">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background: #fdfbf7;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Individueller Möbelbau</h3>
+                    <p>Vom begehbaren Kleiderschrank bis zum massiven Esstisch – wir fertigen Unikate nach Ihren Maßen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Türen & Fenster</h3>
+                    <p>Sicherheit, Wärmeschutz und Ästhetik perfekt vereint in hochwertigen Holz-Elementen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Innenausbau</h3>
+                    <p>Ganzheitliche Konzepte für Ihre Wohnräume, Praxen oder Büros aus Meisterhand.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Restaurierung</h3>
+                    <p>Wir erhalten Werte und bringen alte Holzschätze mit Fachwissen zurück zu neuem Glanz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="materials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Materialien</h2>
+            </div>
+            <ul class="materials-list">
+                <li class="material-item">🌳 Massivholz</li>
+                <li class="material-item">🍂 Eiche</li>
+                <li class="material-item">🌲 Buche</li>
+                <li class="material-item">🪵 Esche</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="referenzen">
+        <div class="container">
+            <div class="section-title">
+                <h2>Referenzen</h2>
+            </div>
+            <div class="reference-grid">
+                <div class="reference-box">
+                    <h4>Eichentisch "Gaglow"</h4>
+                    <p>Massiver Esstisch mit natürlicher Baumkante für ein Wohnhaus in Cottbus.</p>
+                </div>
+                <div class="reference-box">
+                    <h4>Landhaustüren</h4>
+                    <p>Sonderanfertigung von Innentüren aus Kiefer für einen Altbau-Umbau.</p>
+                </div>
+                <div class="reference-box">
+                    <h4>Modernes Loft-Regal</h4>
+                    <p>Kombination aus Esche und Schwarzstahl für ein lokales Architekturbüro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Kontakt</h2>
+                    </div>
+                    <p style="margin-bottom: 30px;">Lassen Sie uns über Ihr Projekt sprechen. Besuchen Sie uns in unserer Werkstatt oder rufen Sie uns an.</p>
+                    <p><strong>Adresse:</strong><br>Drebkauer Str. 32<br>03099 Kolkwitz-Klein Gaglow</p>
+                    <br>
+                    <a href="tel:0355534044">📞 0355 534044</a>
+                    <a href="mailto:tischlerei-gaglower-eiche@web.de">✉️ tischlerei-gaglower-eiche@web.de</a>
+                </div>
+                <div class="opening-hours">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Öffnungszeiten</h2>
+                    </div>
+                    <table class="hours-table">
+                        <tr><td>Montag - Donnerstag</td><td>07:00 - 16:30 Uhr</td></tr>
+                        <tr><td>Freitag</td><td>07:00 - 14:00 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Tischlerei Gaglower Eiche. Alle Rechte vorbehalten.</p>
+            <p>Drebkauer Str. 32, 03099 Kolkwitz-Klein Gaglow</p>
+            <div class="footer-line"></div>
+            <p class="werkspree-note">DESIGNED BY WERKSPREE</p>
+        </div>
+    </footer>
+
+</body>
+</html>

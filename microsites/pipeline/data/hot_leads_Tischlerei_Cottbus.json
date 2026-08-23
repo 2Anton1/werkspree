@@ -4,99 +4,195 @@
   "all_candidates": [
     {
       "name": "Möbel-u. Bautischlerei Robert Totzke",
-      "maps_url": "https://www.google.com/maps/place/M%C3%B6bel-u.+Bautischlerei+Robert+Totzke/data=!4m7!3m6!1s0x4708740cffc90373:0xf774a609ae9f509c!8m2!3d51.7465952!4d14.3424209!16s%2Fg%2F1tplp08l!19sChIJcwPJ_wx0CEcRnFCfrgmmdPc?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": "+493554302460",
+      "address": "Parzellenstraße 56, 03050 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJcwPJ_wx0CEcRnFCfrgmmdPc",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 4302460",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
-    },
-    {
-      "name": "Tischlerei Bosse",
-      "maps_url": "https://www.google.com/maps/place/Tischlerei+Bosse/data=!4m7!3m6!1s0x47087412b9deabab:0xff579c7263a6ebdf!8m2!3d51.7502261!4d14.3414841!16s%2Fg%2F11gjmrvq6g!19sChIJq6veuRJ0CEcR3-umY3KcV_8?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": null
     },
     {
       "name": "Marko Kobelt Tischlermeister",
-      "maps_url": "https://www.google.com/maps/place/Marko+Kobelt+Tischlermeister/data=!4m7!3m6!1s0x4708751e98e7934b:0x5952d04bf821e1ba!8m2!3d51.7898396!4d14.3069484!16s%2Fg%2F1xfsmf_f!19sChIJS5PnmB51CEcRuuEh-EvQUlk?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 355 870587",
-      "phone": null
+      "address": "Striesower Str. 4, 03055 Cottbus-Sielow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJS5PnmB51CEcRuuEh-EvQUlk",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 870587"
     },
     {
-      "name": "Uwe Schurig Tischlerei",
-      "maps_url": "https://www.google.com/maps/place/Uwe+Schurig+Tischlerei/data=!4m7!3m6!1s0x4708744498b4b875:0xdab9e98934a5675!8m2!3d51.7665762!4d14.3360009!16s%2Fg%2F11btm9mm1w!19sChIJdbi0mER0CEcRdVZKk5ieqw0?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": "+49355860325",
-      "old_or_no_website": ""
+      "name": "Montagetischler Cottbus - Lukas Schwarz",
+      "address": "Sielower Ch 10, 03055 Cottbus-Sielow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ32UZamx1CEcRvYyLVIw_fqQ",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0172 5228895"
     },
     {
       "name": "Erdmann Peter u. Erdmann Jens GbR",
-      "maps_url": "https://www.google.com/maps/place/Erdmann+Peter+u.+Erdmann+Jens+GbR/data=!4m7!3m6!1s0x470873de89901981:0x8f2716b0244d4823!8m2!3d51.7115706!4d14.3473755!16s%2Fg%2F1tfpszst!19sChIJgRmQid5zCEcRI0hNJLAWJ48?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": "+49355522668",
-      "old_or_no_website": ""
-    },
-    {
-      "name": "Kurt During Tischlereibedarf",
-      "maps_url": "https://www.google.com/maps/place/Kurt+During+Tischlereibedarf/data=!4m7!3m6!1s0x417018fa709df74d:0x64339f91e82dbfcb!8m2!3d51.7572053!4d14.3349563!16s%2Fg%2F1td70qcx!19sChIJTfedcPoYcEERy78t6JGfM2Q?authuser=0&hl=en&rclk=1",
-      "rating": 4.5,
-      "category": "",
-      "address": "",
-      "phone": "+4935524313",
-      "old_or_no_website": ""
-    },
-    {
-      "name": "Bautischlerei Schulerowitz",
-      "maps_url": "https://www.google.com/maps/place/Bautischlerei+Schulerowitz/data=!4m7!3m6!1s0x4708751bdb5aa4f5:0xa0724ea00966f915!8m2!3d51.7927157!4d14.3101403!16s%2Fg%2F1thpvjyx!19sChIJ9aRa2xt1CEcRFflmCaBOcqA?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": "+49355871845",
+      "address": "Gaglower Str. 37, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJgRmQid5zCEcRI0hNJLAWJ48",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 522668",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
     },
     {
       "name": "Tischlerei Gaglower Eiche",
-      "maps_url": "https://www.google.com/maps/place/Tischlerei+Gaglower+Eiche/data=!4m7!3m6!1s0x470873a0a70a3e07:0x67c3c89d0b6a111b!8m2!3d51.7185076!4d14.2927413!16s%2Fg%2F1hhk604s_!19sChIJBz4Kp6BzCEcRGxFqC53Iw2c?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 355 534044",
-      "phone": null,
+      "address": "Drebkauer Str. 32, 03099 Kolkwitz-Klein Gaglow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJBz4Kp6BzCEcRGxFqC53Iw2c",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 534044",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.tischlerei-gaglower-eiche.de/",
+      "email": "tischlerei-gaglower-eiche@web.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'gaglower' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Tischlerei Bosse",
+      "address": "Stromstraße 13, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJq6veuRJ0CEcR3-umY3KcV_8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 43090114",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.bosse-tischlerei.de/kontakt-und-anfahrt.html"
+    },
+    {
+      "name": "Bautischlerei Schulerowitz",
+      "address": "Eschenweg 4, 03055 Cottbus-Sielow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ9aRa2xt1CEcRFflmCaBOcqA",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 871845",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
     },
     {
-      "name": "Montagetischler Cottbus - Lukas Schwarz",
-      "maps_url": "https://www.google.com/maps/place/Montagetischler+Cottbus+-+Lukas+Schwarz/data=!4m7!3m6!1s0x4708756c6a1965df:0xa47e3f8c548b8cbd!8m2!3d51.7960106!4d14.3043717!16s%2Fg%2F11rbbvc0bw!19sChIJ32UZamx1CEcRvYyLVIw_fqQ?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 172 5228895",
-      "phone": null,
+      "name": "Tischlerei -Möbel - Innenausbau Vater GmbH & Co. KG",
+      "address": "Oßniger Dorfstraße 14, 03058 Neuhausen/Spree-Groß Oßnig, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJQw5P9r1xCEcRrD7K-Uv9TAw",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "035608 332"
+    },
+    {
+      "name": "Kurt During Tischlereibedarf",
+      "address": "Brandenburger Pl. 56, 03046 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJTfedcPoYcEERy78t6JGfM2Q",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 24313",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
     },
     {
       "name": "Tischlerei Hagen Städter",
-      "maps_url": "https://www.google.com/maps/place/Tischlerei+Hagen+St%C3%A4dter/data=!4m7!3m6!1s0x47087070a816478f:0xcd29afd3d3197aa7!8m2!3d51.6718825!4d14.445008!16s%2Fg%2F11g8wvhw86!19sChIJj0cWqHBwCEcRp3oZ09OvKc0?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": null,
-      "old_or_no_website": ""
+      "address": "Laubsdorfer Hauptstraße 21, 03058 Neuhausen/Spree, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJj0cWqHBwCEcRp3oZ09OvKc0",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "035605 424574",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.tischlerei-staedter.de/"
     },
     {
-      "name": "Tischlerei Frank Krummheuer",
-      "maps_url": "https://www.google.com/maps/place/Tischlerei+Frank+Krummheuer/data=!4m7!3m6!1s0x40f38ff4b8eface5:0xcce2632fe9bb47fc!8m2!3d51.7783976!4d14.3872856!16s%2Fg%2F11ttb0j60d!19sChIJ5azvuPSP80AR_Ee76S9j4sw?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": ""
+      "name": "Erdmann GmbH | Fenster - Türen - Tischlerei",
+      "address": "Kahseler Hauptstraße 18, 03058 Neuhausen/Spree-Drieschnitz-Kahsel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJPxdb0pd6CEcRRknGppwZCb0",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Tischlerei Hartmut Kühn",
+      "address": "Am Pflanzenberg 13A, 03116 Drebkau-Schorbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJQU5Ay4pyCEcRBB0JZEx0MRk",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "HolzAs - Kaminholzhandel und weitere Holzbrennstoffe",
+      "address": "Merzdorfer Weg 4, 03042 Cottbus-Merzdorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJd3yiTml0CEcRNspZIjoWsk8",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
     }
   ],
-  "hot_leads": []
+  "hot_leads": [
+    {
+      "name": "Tischlerei Gaglower Eiche",
+      "address": "Drebkauer Str. 32, 03099 Kolkwitz-Klein Gaglow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJBz4Kp6BzCEcRGxFqC53Iw2c",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 534044",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.tischlerei-gaglower-eiche.de/",
+      "email": "tischlerei-gaglower-eiche@web.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'gaglower' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Cottbus"
+    }
+  ]
 }
