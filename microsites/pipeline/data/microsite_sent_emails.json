@@ -184,6 +184,13 @@
       "subject": "Maik Kuhlmann: Ihre neue Website ist fertig",
       "site_url": "",
       "sent_at": "2026-08-22T15:02:24.425507+02:00"
+    },
+    {
+      "company_name": "Müller & Inter GbR",
+      "email": "mueller_und_inter_gbr@t-online.de",
+      "subject": "Müller & Inter GbR: Ihre neue Website ist fertig",
+      "site_url": "https://werkspree.bki-de.de/microsites/sites/müller---inter-gbr/",
+      "sent_at": "2026-08-23T17:05:46.928975+02:00"
     }
   ]
 }
