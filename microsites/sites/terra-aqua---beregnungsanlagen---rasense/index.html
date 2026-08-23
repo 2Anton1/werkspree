@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra-Aqua | Beregnungsanlagen & Rasenservice Cottbus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2D6A4F;
+            --accent: #95D5B2;
+            --bg-sand: #F4F1DE;
+            --text-dark: #1B4332;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-sand);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Hero */
+        header {
+            background: linear-gradient(135deg, #2D6A4F 0%, #40916C 100%);
+            color: var(--white);
+            padding: 100px 0 140px;
+            text-align: center;
+            border-bottom-left-radius: 50% 20px;
+            border-bottom-right-radius: 50% 20px;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--text-dark);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background-color: var(--white);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: var(--primary);
+        }
+
+        /* Über uns */
+        .about-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 800px;
+            margin: -60px auto 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Pflanzenwelt Liste */
+        .plant-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .plant-item {
+            background: var(--accent);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        /* Saisonkalender Tabelle */
+        .calendar-wrapper {
+            overflow-x: auto;
+        }
+
+        .season-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .season-table th {
+            background: var(--primary);
+            color: var(--white);
+            padding: 15px;
+            text-align: left;
+        }
+
+        .season-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .season-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .season-table tr:hover {
+            background-color: #f9fdfb;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info, .opening-hours {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--primary);
+            text-decoration: none;
+            margin: 10px 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        .werkspree {
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 1.8rem; }
+            header { padding: 60px 0 100px; }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container hero animate">
+            <h1>Ihr Garten in besten Händen</h1>
+            <p>Terra-Aqua | Professionelle Beregnungsanlagen & Rasenservice in Cottbus</p>
+            <a href="#kontakt" class="cta-button">Beratung anfragen</a>
+        </div>
+    </header>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-box animate">
+                <h2 style="color: var(--primary); margin-bottom: 20px;">Über Terra-Aqua</h2>
+                <p>Willkommen bei Terra-Aqua, Ihrem Experten für lebendige Grünflächen in Cottbus und der Lausitz. Wir verstehen, dass ein perfekter Rasen mehr ist als nur Gras – er ist das Herzstück Ihres Gartens. Mit modernster Bewässerungstechnik und fachgerechter Pflege sorgen wir dafür, dass Ihre Außenanlage auch in trockenen Sommern strahlt. Bodenständig, zuverlässig und mit dem Blick fürs Detail kümmern wir uns um die Vitalität Ihrer Pflanzenwelt.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Beregnungsanlagen</h3>
+                    <p>Planung und Installation automatischer Bewässerungssysteme für eine effiziente Wasserversorgung.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Rasenservice</h3>
+                    <p>Von der Neuanlage über das Vertikutieren bis hin zur professionellen Düngung für sattes Grün.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gartengestaltung</h3>
+                    <p>Individuelle Planung und Umsetzung Ihrer Gartenträume mit Fokus auf nachhaltige Bepflanzung.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Baumschnitt</h3>
+                    <p>Fachgerechter Form- und Erhaltungsschnitt sowie die sichere Entfernung von Totholz.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Saisonarbeit</h3>
+                    <p>Frühjahrsputz im Beet oder winterfeste Vorbereitung – wir begleiten Ihren Garten durch das Jahr.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Pflegeservice</h3>
+                    <p>Regelmäßige Unterhaltspflege, damit Sie Ihren Feierabend entspannt im Grünen genießen können.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pflanzenwelt" style="background-color: rgba(45, 106, 79, 0.05);">
+        <div class="container">
+            <h2 class="section-title">Unsere Pflanzenwelt</h2>
+            <ul class="plant-list">
+                <li class="plant-item">Rollrasen</li>
+                <li class="plant-item">Heckenpflanzen</li>
+                <li class="plant-item">Ziersträucher</li>
+                <li class="plant-item">Stauden</li>
+                <li class="plant-item">Hausbäume</li>
+                <li class="plant-item">Bodendecker</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="saisonkalender">
+        <div class="container">
+            <h2 class="section-title">Saisonkalender</h2>
+            <div class="calendar-wrapper">
+                <table class="season-table">
+                    <thead>
+                        <tr>
+                            <th>Zeitraum</th>
+                            <th>Empfohlene Maßnahmen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Frühling (März - Mai)</strong></td>
+                            <td>Vertikutieren, Düngung, Inbetriebnahme der Bewässerung, Neupflanzungen.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sommer (Juni - Aug)</strong></td>
+                            <td>Optimierung der Bewässerungszeiten, Rasenschnitt, Heckenschnitt.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Herbst (Sept - Nov)</strong></td>
+                            <td>Laubentfernung, Herbstdüngung, Winterschutz für empfindliche Pflanzen.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Winter (Dez - Feb)</strong></td>
+                            <td>Baumschnitt, Planung von Neuanlagen, Wartung von Mährobotern.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 style="color: var(--primary); margin-bottom: 20px;">Kontakt</h2>
+                    <p><strong>Terra-Aqua</strong><br>
+                    Kiefernstraße 3<br>
+                    03051 Cottbus-Gallinchen</p>
+                    
+                    <div style="margin-top: 20px;">
+                        <a href="tel:017664305148" class="contact-link">📞 0176 64305148</a>
+                        <a href="mailto:info@terra-aqua-lausitz.de" class="contact-link">✉️ info@terra-aqua-lausitz.de</a>
+                    </div>
+                </div>
+                <div class="opening-hours">
+                    <h2 style="color: var(--primary); margin-bottom: 20px;">Öffnungszeiten</h2>
+                    <ul class="hours-list">
+                        <li><span>Montag - Freitag</span> <span>08:00 - 17:00 Uhr</span></li>
+                        <li><span>Samstag</span> <span>09:00 - 13:00 Uhr</span></li>
+                        <li><span>Sonntag</span> <span>Geschlossen</span></li>
+                    </ul>
+                    <p style="margin-top: 15px; font-size: 0.85rem; font-style: italic;">Termine vor Ort nach telefonischer Vereinbarung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Terra-Aqua | Beregnungsanlagen & Rasenservice Cottbus</p>
+            <p class="werkspree">Design & Realisierung durch Werkspree Microsites</p>
+        </div>
+    </footer>
+
+</body>
+</html>

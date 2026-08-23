@@ -4,91 +4,180 @@
   "all_candidates": [
     {
       "name": "Andreas Raunick Gartenbau",
-      "maps_url": "https://www.google.com/maps/place/Andreas+Raunick+Gartenbau/data=!4m7!3m6!1s0x4708749a544c49f7:0x16ed090d45b493cf!8m2!3d51.7530554!4d14.2920456!16s%2Fg%2F1tz94g0j!19sChIJ90lMVJp0CEcRz5O0RQ0J7RY?authuser=0&hl=en&rclk=1",
+      "address": "Kolkwitzer Str. 103, 03046 Cottbus, Deutschland",
       "rating": 4.6,
-      "category": "Landscape designer",
-      "address": "Kolkwitzer Str. 103",
-      "phone": null
-    },
-    {
-      "name": "Pschuskel Gartenbau",
-      "maps_url": "https://www.google.com/maps/place/Pschuskel+Gartenbau/data=!4m7!3m6!1s0x470875c3b0f37eb7:0xa01d31f89b2f969e!8m2!3d51.79585!4d14.37507!16s%2Fg%2F1wt3m2_d!19sChIJt37zsMN1CEcRnpYvm_gxHaA?authuser=0&hl=en&rclk=1",
-      "rating": 4.7,
-      "category": "",
-      "address": "",
-      "phone": null,
-      "old_or_no_website": "http://www.pschuskel.de"
-    },
-    {
-      "name": "Garten- und Land- schaftsbau Tietz",
-      "maps_url": "https://www.google.com/maps/place/Garten-+und+Land-+schaftsbau+Tietz/data=!4m7!3m6!1s0x4708742e5509e841:0xfb980ca5faa22da1!8m2!3d51.7714116!4d14.3722374!16s%2Fg%2F1tmqdxxr!19sChIJQegJVS50CEcRoS2i-qUMmPs?authuser=0&hl=en&rclk=1",
-      "rating": 4.8,
-      "category": "",
-      "address": "",
-      "phone": null,
-      "old_or_no_website": ""
+      "place_id": "ChIJ90lMVJp0CEcRz5O0RQ0J7RY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 792325",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.raunick-gaertnerei.de/kontakt.html"
     },
     {
       "name": "Frank Davin, Gartenpflege & Landschaftsbau",
-      "maps_url": "https://www.google.com/maps/place/Frank+Davin,+Gartenpflege+%26+Landschaftsbau/data=!4m7!3m6!1s0x470874856a0af803:0xf5d96369b000b523!8m2!3d51.7536776!4d14.2984028!16s%2Fg%2F1vcjkz1v!19sChIJA_gKaoV0CEcRI7UAsGlj2fU?authuser=0&hl=en&rclk=1",
+      "address": "Kolkwitzer Str. 65, 03046 Cottbus, Deutschland",
       "rating": 4.8,
-      "category": "Closed",
-      "address": "+49 355 33178",
-      "phone": null,
-      "old_or_no_website": ""
-    },
-    {
-      "name": "alpina ag, Garten-, Landschaft-, Sportplatzbau",
-      "maps_url": "https://www.google.com/maps/place/alpina+ag,+Garten-,+Landschaft-,+Sportplatzbau/data=!4m7!3m6!1s0x4708716321b41bc7:0x8f26b185e93a841c!8m2!3d51.7062462!4d14.3524527!16s%2Fg%2F1tknj4mp!19sChIJxxu0IWNxCEcRHIQ66YWxJo8?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 355 4309190",
-      "phone": null,
-      "old_or_no_website": ""
+      "place_id": "ChIJA_gKaoV0CEcRI7UAsGlj2fU",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 33178"
     },
     {
       "name": "Gartenpflege-Cottbus",
-      "maps_url": "https://www.google.com/maps/place/Gartenpflege-Cottbus/data=!4m7!3m6!1s0x470875c92102a4fd:0xad9addbad6116f93!8m2!3d51.7589117!4d14.305837!16s%2Fg%2F11f7p3gh4l!19sChIJ_aQCIcl1CEcRk28R1rrdmq0?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 176 32563682",
-      "phone": null
+      "address": "Saarstraße 13, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ_aQCIcl1CEcRk28R1rrdmq0",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0176 32563682",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.gartenpflege-cottbus.de/"
     },
     {
       "name": "Michael Max Garten- und Landschaftsbau",
-      "maps_url": "https://www.google.com/maps/place/Michael+Max+Garten-+und+Landschaftsbau/data=!4m7!3m6!1s0x470876802c78c251:0xedf4e7b6cf886faa!8m2!3d51.7738191!4d14.3845459!16s%2Fg%2F1vc80j62!19sChIJUcJ4LIB2CEcRqm-Iz7bn9O0?authuser=0&hl=en&rclk=1",
+      "address": "Merzdorfer Bahnhofstraße 18, 03042 Cottbus-Merzdorf, Deutschland",
       "rating": 4.5,
-      "category": "",
-      "address": "",
-      "phone": null
+      "place_id": "ChIJUcJ4LIB2CEcRqm-Iz7bn9O0",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 712359"
+    },
+    {
+      "name": "Garten- und Land- schaftsbau Tietz",
+      "address": "Merzdorfer Weg 3, 03042 Cottbus-Merzdorf, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJQegJVS50CEcRoS2i-qUMmPs",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 4309923",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.galabau-tietz.de/"
+    },
+    {
+      "name": "Pschuskel Gartenbau",
+      "address": "Lakomaer Ch 4, 03053 Cottbus-Willmersdorf, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJt37zsMN1CEcRnpYvm_gxHaA",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 860613",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.pschuskel.de/"
+    },
+    {
+      "name": "alpina ag, Garten-, Landschaft-, Sportplatzbau",
+      "address": "Am Gewerbepark 3, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJxxu0IWNxCEcRHIQ66YWxJo8",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 4309190"
     },
     {
       "name": "Grün- und Parkanlagen der Stadt Cottbus",
-      "maps_url": "https://www.google.com/maps/place/Gr%C3%BCn-+und+Parkanlagen+der+Stadt+Cottbus/data=!4m7!3m6!1s0x470873f50182474d:0xa3c9b211e926a3cc!8m2!3d51.7366982!4d14.3370736!16s%2Fg%2F1wcxbt1n!19sChIJTUeCAfVzCEcRzKMm6RGyyaM?authuser=0&hl=en&rclk=1",
+      "address": "Dresdener Str. 34, 03050 Cottbus, Deutschland",
       "rating": 4.7,
-      "category": "",
-      "address": "",
-      "phone": "+4935531008",
+      "place_id": "ChIJTUeCAfVzCEcRzKMm6RGyyaM",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 31008",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
     },
     {
       "name": "F. Garten",
-      "maps_url": "https://www.google.com/maps/place/F.+Garten/data=!4m7!3m6!1s0x47087469490862f9:0x423d991d34a226a2!8m2!3d51.756147!4d14.3344932!16s%2Fg%2F11b6d1mdy6!19sChIJ-WIISWl0CEcRoiaiNB2ZPUI?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": "+493557842705",
+      "address": "Ostrower Str. 6, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ-WIISWl0CEcRoiaiNB2ZPUI",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 7842705",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
     },
     {
-      "name": "Dietmar Hauck",
-      "maps_url": "https://www.google.com/maps/place/Dietmar+Hauck/data=!4m7!3m6!1s0x470873ba13a8a71b:0x845497e304076fb7!8m2!3d51.7110603!4d14.3107633!16s%2Fg%2F11bzymsxdg!19sChIJG6eoE7pzCEcRt28HBOOXVIQ?authuser=0&hl=en&rclk=1",
-      "rating": 4.8,
-      "category": "Gardener",
-      "address": "Siedlerstraße 4A",
-      "phone": null,
-      "old_or_no_website": "http://www.seerosenparadies.de"
+      "name": "Terra-Aqua | Beregnungsanlagen & Rasenservice",
+      "address": "Kiefernstraße 3, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJlWFVJW9zCEcRSR6CmB1HURY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0176 64305148",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "https://www.terra-aqua-lausitz.de/",
+      "email": "info@terra-aqua-lausitz.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'terra' in domain/local",
+      "branch": "Gartenbau",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Baumpflegeservice Hellwig",
+      "address": "Alte Lindenstraße 1, 03053 Cottbus-Willmersdorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJw2cnl-91CEcR1SCCnK1UKdQ",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
     }
   ],
-  "hot_leads": []
+  "hot_leads": [
+    {
+      "name": "Terra-Aqua | Beregnungsanlagen & Rasenservice",
+      "address": "Kiefernstraße 3, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJlWFVJW9zCEcRSR6CmB1HURY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0176 64305148",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "https://www.terra-aqua-lausitz.de/",
+      "email": "info@terra-aqua-lausitz.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'terra' in domain/local",
+      "branch": "Gartenbau",
+      "region": "Cottbus"
+    }
+  ]
 }
