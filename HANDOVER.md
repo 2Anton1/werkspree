@@ -1,5 +1,5 @@
 # Werkspree — KI-Automatisierung für kleine Unternehmen
-## Vollständiger Projekt-Handover (Stand: 15.08.2026)
+## Vollständiger Projekt-Handover (Stand: 23.08.2026)
 
 ---
 
@@ -322,6 +322,69 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 23.08.2026 — Pipeline-Fixes + Microsite-Builder v3 (branchenspezifisches Design)
+
+#### Lead-Pipeline (`df4d149e4f8f`)
+- **warmth_scorer.py — Firecrawl → requests+BS4:** `scrape_website()` nutzte die
+  `firecrawl scrape` CLI, die bei ~90% der Websites timeoutete (30s). Umgestellt auf
+  `requests` + BeautifulSoup (dieselbe Methode wie `direct_scraper.py` und `pipeline.py`).
+  Test: 19/20 Scrapes erfolgreich (vorher ~2/20). Timeout 15s, Cap 50k Zeichen.
+  Commit `c1a1daf`.
+- **`~/.hermes/scripts/run_pipeline.py` aktualisiert:** Der Cron-Job nutzte eine
+  veraltete Version aus `~/.hermes/scripts/` (ohne `warm_outreach.py` + Airtable-Sync),
+  statt die aktuelle aus `~/work/werkspree/run_pipeline.py`. Kopiert — jetzt laufen
+  `warm_outreach.py` (10 Follow-up-Mails) + Airtable-Sync (9 created, 52 updated) korrekt.
+- **warm_outreach.py:** 10 Follow-up-7days-Mails via Strato SMTP versendet (vorher 0 —
+  falsche Script-Version hatte keinen Outreach-Schritt). 3 neue Initial-Mails an
+  Steuerberater (Score 10/10).
+
+#### Microsite-Pipeline (`d6e7e5202ac1` → `3778ad6ca1e7`)
+- **Provider von Nous → OpenRouter umgestellt:** Der alte Cron-Job `d6e7e5202ac1` lief
+  auf `provider: nous` — bei Provider-Ausfällen ("Hermes can't reach the model provider")
+  scheiterten alle 8 Läufe seit 22.08. 18:00. Neuer Job `3778ad6ca1e7` auf OpenRouter
+  (gratis, unabhängig). Alter Job pausiert. `cronjob update` übernimmt provider nicht
+  zuverlässig → Job neu erstellt statt aktualisiert.
+- **gemini_builder.py schreibt site_url zurück:** `gemini_builder.py` schrieb `site_url`
+  nicht ins Lead-JSON → 11 Mails ohne URL im Sent-Log. Fix: `site_url` wird nach erfolgreichem
+  Build ins Lead-JSON geschrieben. Zusätzlicher Guard im Orchestrator: bei fehlender
+  `site_url` wird URL aus Slug konstruiert. Commit `50f286c`.
+- **gemini_builder.py v3 — branchenspezifisches Design (HAUPT-UPGRADE):** Vorher hatten
+  alle Sites dasselbe Layout (Header → Über uns → Karten-Grid → Öffnungszeiten → Kontakt),
+  nur mit leicht unterschiedlichen Farben. Jetzt gibt es **17 Branchen-Profile** mit
+  jeweils eigenem Design:
+  - Eigener Farbpalette (CSS-Variablen, branchenspezifisch)
+  - Eigener Sektionen (Preisliste beim Friseur, Projektgalerie beim Maler, nummerierte
+    Steps bei der Fahrschule, Notdienst-Box beim Dachdecker, Saisonkalender beim Gärtner, etc.)
+  - Eigener Stimmung/Layout (edel-minimalistisch für Friseur, technisch-robust für Kfz,
+    sanft-luxuriös für Kosmetik, dynamisch-jugendlich für Fahrschule)
+  - Eigenen CSS-Extras (CSS-Avatare mit Initialen, Pulse-Animationen für Notdienst,
+    Holz-Gradient für Tischler, Wellen für Reinigung)
+  - Google Fonts (Poppins/Montserrat), responsive Breakpoints, Hover-Effekte
+  - Mindestgröße 3000 Zeichen für valides HTML (kein Stub)
+  - `max_tokens` von 4000 → 8000 (reichhaltigere Sites)
+  Commit `4632719`.
+  **Test verifiziert (23.08.):** 3 Test-Sites (Maler, Friseur, Fahrschule) mit jeweils
+  eigenem Design, Farben, branchenspezifischen Sektionen. Alle live (HTTP 200).
+  **Produktiver Lauf:** Terra-Aqua (Gartenbau/Cottbus) — Site mit Saisonkalender,
+  Pflanzenwelt-Liste, branchenspezifischen Grün-Farben. Mail versendet ✅.
+
+#### Antwort-Mails
+- **1 positive Antwort von Living in Berlin** (info@livinginberlin.de, Immobilienmakler,
+  Score 10/10): *"vielen Dank für Ihre Nachricht. Gern melden wir uns Anfang der
+  kommenden Woche bei Ihnen."* — heißer Lead, kommt nächste Woche zurück.
+
+#### Beide Klone synchron
+- `~/werkspree` und `~/work/werkspree` auf `origin/main` Stand `ff55035` synchron.
+- Test-Sites nach Verifikation entfernt (nur Design-Test, nicht für Leads).
+
+#### Cron-Job-Status (Stand 23.08. 17:35)
+| Job ID | Name | Schedule | Provider | Status |
+|---|---|---|---|---|
+| `df4d149e4f8f` | Lead Pipeline (Script Mode) | Täglich 10:00 | no_agent (script) | ✅ aktiv |
+| `3778ad6ca1e7` | Microsite-Pipeline (OpenRouter) | Alle 3h | openrouter | ✅ aktiv (neu) |
+| `d6e7e5202ac1` | Microsite-Pipeline (alt, Nous) | Alle 3h | nous | ⏸️ pausiert |
+| `e85d58d7915e` | Health Check | Alle 6h | no_agent | ✅ aktiv |
 
 ### 17.08.2026 — Lead-Pipeline-Fixes (Strato-Versand, guessed-Filter, Timeout-Toleranz, Airtable)
 
