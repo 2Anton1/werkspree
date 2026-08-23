@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrschule Test Cottbus | Dein Weg zum Führerschein</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0B1D3A;
+            --signal-blue: #0066CC;
+            --signal-red: #D9232D;
+            --bg-light: #F0F4FA;
+            --white: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header --- */
+        header {
+            background: var(--navy);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--signal-red);
+        }
+
+        /* --- Hero --- */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #162e55 100%);
+            color: var(--white);
+            padding: 100px 0 120px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--signal-blue);
+            color: var(--white);
+            padding: 18px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* --- Über uns --- */
+        .section {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .instructor-card {
+            background: var(--white);
+            padding: 30px;
+            border-left: 5px solid var(--signal-red);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* --- Fahrzeug-Klassen --- */
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .class-card {
+            background: var(--white);
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            transition: var(--transition);
+            border-bottom: 4px solid var(--navy);
+        }
+
+        .class-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--signal-blue);
+        }
+
+        .class-badge {
+            display: inline-block;
+            background: var(--navy);
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        /* --- Warum wir? --- */
+        .usp-section {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .usp-item h3 {
+            color: var(--signal-blue);
+            margin-bottom: 15px;
+        }
+
+        /* --- Ablauf --- */
+        .steps-container {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 0 auto 20px;
+            border: 4px solid var(--signal-blue);
+        }
+
+        /* --- Kontakt & Öffnungszeiten --- */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info a {
+            color: var(--signal-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .opening-hours {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            opacity: 0.5;
+            margin-top: 20px;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-grid, .contact-layout { grid-template-columns: 1fr; }
+            .hero { clip-path: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FAHRSCHULE <span>TEST</span></div>
+                <div style="color: white; font-weight: 600;">Cottbus</div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Dein Weg zum Führerschein in Cottbus</h1>
+            <p>Sicher, schnell und professionell ans Ziel mit Peter Brandt.</p>
+            <a href="#kontakt" class="cta-button">Jetzt Durchstarten</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div>
+                    <h2 style="margin-bottom: 20px;">Über uns</h2>
+                    <p style="font-size: 1.2rem; color: var(--signal-blue); font-weight: 600; margin-bottom: 15px;">
+                        Ihr Partner für den Führerschein in Cottbus.
+                    </p>
+                    <p>
+                        Seit Jahren begleiten wir Fahrschüler erfolgreich auf ihrem Weg zur Mobilität. 
+                        Bei uns stehst du als Mensch im Mittelpunkt. Wir kombinieren modernste Lehrmethoden 
+                        mit einer entspannten Atmosphäre.
+                    </p>
+                </div>
+                <div class="instructor-card">
+                    <h3>Dein Ausbilder</h3>
+                    <p style="font-size: 1.5rem; font-weight: 800; color: var(--navy);">Peter Brandt</p>
+                    <p>Inhaber & Fahrlehrer aus Leidenschaft</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: #e9eff7;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Unsere Fahrzeug-Klassen</h2>
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="class-badge">Klasse B</div>
+                    <h3>Pkw-Ausbildung</h3>
+                    <p>Der klassische Autoführerschein für volle Freiheit.</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-badge">Klasse A</div>
+                    <h3>Motorrad</h3>
+                    <p>Freiheit auf zwei Rädern – vom Einstieg bis zum Profi.</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-badge">Klasse BE</div>
+                    <h3>Anhänger</h3>
+                    <p>Mehr Kapazität: Sicher fahren mit schweren Anhängern.</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-badge">BF17</div>
+                    <h3>Begleitetes Fahren</h3>
+                    <p>Schon mit 17 Jahren sicher hinter das Steuer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section usp-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Warum wir?</h2>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <h3>Hohe Bestehensquote</h3>
+                    <p>Unsere gezielte Vorbereitung sorgt für Sicherheit in der Prüfung.</p>
+                </div>
+                <div class="usp-item">
+                    <h3>Moderne Fahrzeuge</h3>
+                    <p>Lerne auf den neuesten Modellen mit topaktueller Technik.</p>
+                </div>
+                <div class="usp-item">
+                    <h3>Flexible Zeiten</h3>
+                    <p>Theorie und Praxis, die in deinen Alltag passen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 50px;">Dein Ablauf zum Erfolg</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Anmeldung</h3>
+                    <p>Komm vorbei und wir planen gemeinsam.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Theorie</h3>
+                    <p>Spannender Unterricht in unseren Räumen.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Praxis</h3>
+                    <p>Fahrstunden mit Geduld und Know-how.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Prüfung</h3>
+                    <p>Der letzte Schritt zu deinem Führerschein!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="kontakt" style="background: var(--white);">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h2 style="margin-bottom: 30px;">Kontakt</h2>
+                    <p style="margin-bottom: 10px;"><strong>Adresse:</strong><br> Testweg 10, 03046 Cottbus</p>
+                    <p style="margin-bottom: 10px;"><strong>Telefon:</strong><br> <a href="tel:0355654321">0355 654321</a></p>
+                    <p style="margin-bottom: 10px;"><strong>E-Mail:</strong><br> <a href="mailto:test@fahrschule-test-cottbus.de">test@fahrschule-test-cottbus.de</a></p>
+                    <p style="margin-top: 20px;"><strong>Inhaber:</strong> Peter Brandt</p>
+                </div>
+                <div class="opening-hours">
+                    <h3 style="margin-bottom: 20px; color: var(--navy);">Öffnungszeiten</h3>
+                    <table>
+                        <tr><td>Montag</td><td>10:00 - 18:00</td></tr>
+                        <tr><td>Dienstag</td><td>10:00 - 18:00</td></tr>
+                        <tr><td>Mittwoch</td><td>10:00 - 18:00</td></tr>
+                        <tr><td>Donnerstag</td><td>10:00 - 18:00</td></tr>
+                        <tr><td>Freitag</td><td>10:00 - 16:00</td></tr>
+                        <tr><td>Sa / So</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Fahrschule Test Cottbus. Alle Rechte vorbehalten.</p>
+            <p class="footer-line">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>

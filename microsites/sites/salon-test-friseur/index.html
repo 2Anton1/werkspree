@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Test Friseur | Cottbus - Exklusive Haarkunst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #C5A059;
+            --dark-gold: #8E6E3A;
+            --black: #1A1A1A;
+            --off-white: #F8F5F0;
+            --text-gray: #4A4A4A;
+            --white: #FFFFFF;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--off-white);
+            color: var(--black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.7)), 
+                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--primary-gold);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background-color: var(--primary-gold);
+            color: var(--black);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: 1px solid var(--primary-gold);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--primary-gold);
+            transform: translateY(-3px);
+        }
+
+        /* --- About Section --- */
+        .about {
+            text-align: center;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 50px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-gold);
+        }
+
+        .about-text {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        /* --- Price List Table --- */
+        .prices {
+            background-color: var(--off-white);
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: var(--white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .price-table tr {
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+        }
+
+        .price-table tr:hover {
+            background-color: #fafafa;
+        }
+
+        .price-table td {
+            padding: 25px;
+            font-size: 1.1rem;
+        }
+
+        .price-item {
+            font-weight: 500;
+            color: var(--black);
+        }
+
+        .price-value {
+            text-align: right;
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        /* --- Services Cards --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border: 1px solid #e0e0e0;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* --- Team Section --- */
+        .team {
+            background-color: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 20px;
+            border: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .avatar {
+            transform: scale(1.1);
+            border-color: var(--white);
+        }
+
+        .team-member span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        /* --- Contact & Hours --- */
+        .contact-hours {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background-color: var(--white);
+        }
+
+        .info-box h3 {
+            margin-bottom: 30px;
+            font-size: 1.5rem;
+        }
+
+        .info-link {
+            display: block;
+            color: var(--black);
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .info-link:hover {
+            color: var(--primary-gold);
+            padding-left: 5px;
+        }
+
+        .opening-hours-list {
+            list-style: none;
+        }
+
+        .opening-hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .day { font-weight: 600; }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--black);
+            color: #666;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+        }
+
+        footer a {
+            color: var(--primary-gold);
+            text-decoration: none;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .contact-hours {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 60px 0;
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p>Willkommen bei</p>
+            <h1>Salon Test Friseur</h1>
+            <p>Exzellenz & Stil in Cottbus</p>
+            <a href="#kontakt" class="cta-button">Termin buchen</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <p class="about-text">"Edler Friseursalon im Herzen von Cottbus."</p>
+        </div>
+    </section>
+
+    <!-- Price List Section -->
+    <section class="prices">
+        <div class="container">
+            <h2 class="section-title">Preisliste</h2>
+            <table class="price-table">
+                <tr>
+                    <td class="price-item">Herrenhaarschnitt</td>
+                    <td class="price-value">ab 25€</td>
+                </tr>
+                <tr>
+                    <td class="price-item">Damenhaarschnitt</td>
+                    <td class="price-value">ab 35€</td>
+                </tr>
+                <tr>
+                    <td class="price-item">Färben</td>
+                    <td class="price-value">ab 45€</td>
+                </tr>
+                <tr>
+                    <td class="price-item">Bartpflege</td>
+                    <td class="price-value">ab 15€</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Styling</h3>
+                    <p>Individuelle Beratung und moderne Schnitte für Ihren perfekten Look.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Coloration</h3>
+                    <p>Brillante Farben und schonende Techniken für lebendiges Haar.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Grooming</h3>
+                    <p>Exklusive Bartpflege und klassische Rasuren für den modernen Herrn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Unser Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar">AS</div>
+                    <span>Anna Schmidt</span>
+                    <small style="color: var(--primary-gold)">Inhaberin & Master Stylist</small>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">LM</div>
+                    <span>Lisa Müller</span>
+                    <small style="color: var(--primary-gold)">Color Expert</small>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">MK</div>
+                    <span>Marc Klein</span>
+                    <small style="color: var(--primary-gold)">Barber Specialist</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Opening Hours -->
+    <section class="contact-hours" id="kontakt">
+        <div class="container" style="display: contents;">
+            <div class="info-box" style="padding: 40px;">
+                <h2 class="section-title">Kontakt</h2>
+                <p style="margin-bottom: 20px;">Besuchen Sie uns am Altmarkt.</p>
+                <address style="font-style: normal; margin-bottom: 30px;">
+                    Altmarkt 5<br>
+                    03046 Cottbus
+                </address>
+                <a href="tel:0355123456" class="info-link">Tel: 0355 123456</a>
+                <a href="mailto:test@salon-test-friseur.de" class="info-link">test@salon-test-friseur.de</a>
+            </div>
+            <div class="info-box" style="padding: 40px; background-color: var(--off-white);">
+                <h2 class="section-title">Öffnungszeiten</h2>
+                <ul class="opening-hours-list">
+                    <li><span class="day">Montag</span> <span>09:00 - 18:00</span></li>
+                    <li><span class="day">Dienstag</span> <span>09:00 - 18:00</span></li>
+                    <li><span class="day">Mittwoch</span> <span>09:00 - 18:00</span></li>
+                    <li><span class="day">Donnerstag</span> <span>09:00 - 18:00</span></li>
+                    <li><span class="day">Freitag</span> <span>09:00 - 18:00</span></li>
+                    <li><span class="day">Samstag</span> <span>09:00 - 14:00</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Salon Test Friseur - Inhaberin Anna Schmidt</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Erstellt von <a href="https://werkspree.de" target="_blank">Werkspree</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
