@@ -1,0 +1,135 @@
+{
+  "branch": "Metzgerei",
+  "region": "Brandenburg an der Havel",
+  "all_candidates": [
+    {
+      "name": "Fleischerei K & F",
+      "address": "Wilhelmsdorfer Landstraße 40, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ1fWAoo7AqEcR14Oss8pYx0I",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 663536",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fleischerei-schlachthof.de/"
+    },
+    {
+      "name": "Fleischerei Zimmermann GmbH",
+      "address": "Ziesarer Landstraße 101, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJcT1B9p3AqEcRfvDWgYRiCXU",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 2586595",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://metzgerei-zimmermann-goerzke.de//"
+    },
+    {
+      "name": "Fleischerei am Gorrenberg",
+      "address": "Gorrenberg 4, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJYYl_M1jAqEcRi2SegutrR9Y",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 522218",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Fleischerei Kraus -Inh.Susanne Kraus - mobiler Verkaufswagen",
+      "address": "Wusterwitzer Str. 32, 14774 Brandenburg an der Havel-Kirchmöser, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJW4JYtCrHqEcRdi80XSFiH-s",
+      "types": [
+        "establishment",
+        "food",
+        "grocery_or_supermarket",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "039345 263",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.fleischerei-kraus.de/"
+    },
+    {
+      "name": "Mario Schmurr Fleischermeister",
+      "address": "Brandenburger Str. 7, 14641 Retzow, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ04lUGXXeqEcRr6Sakb1pbCw",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "033237 89560",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Fleischer Metzger Catering Bothe",
+      "address": "Hauffstraße 81, 14548 Schwielowsee, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJC5ybvJr0qEcRi9CXLl5OEUc",
+      "types": [
+        "establishment",
+        "food",
+        "meal_takeaway",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "03327 56084",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://metzgerbothe.com/",
+      "email": "info@metzgerbothe.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'metzger' in domain/local",
+      "branch": "Metzgerei",
+      "region": "Brandenburg an der Havel"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Fleischer Metzger Catering Bothe",
+      "address": "Hauffstraße 81, 14548 Schwielowsee, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJC5ybvJr0qEcRi9CXLl5OEUc",
+      "types": [
+        "establishment",
+        "food",
+        "meal_takeaway",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "03327 56084",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://metzgerbothe.com/",
+      "email": "info@metzgerbothe.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'metzger' in domain/local",
+      "branch": "Metzgerei",
+      "region": "Brandenburg an der Havel"
+    }
+  ]
+}

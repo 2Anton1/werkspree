@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleischer Metzger Catering Bothe | Traditionshandwerk in Schwielowsee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #9B2D2D; /* Kräftiges Rot */
+            --accent: #D4A843;  /* Warmes Gold */
+            --bg-light: #FAF6EF; /* Cremeweiß */
+            --text-dark: #2D2D2D;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1607623814075-e512199b028b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Tradition Banner */
+        .tradition-banner {
+            background: var(--white);
+            border: 3px solid var(--accent);
+            padding: 20px;
+            max-width: 800px;
+            margin: -40px auto 60px;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .tradition-banner span {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* About Us */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* Assortment Cards */
+        .assortment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--accent);
+            background-color: #fffdfa;
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Specialties Pills */
+        .specialties-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .pill {
+            background: var(--accent);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 10px rgba(212, 168, 67, 0.3);
+            transition: var(--transition);
+        }
+
+        .pill:hover {
+            transform: scale(1.05);
+            background: var(--primary);
+        }
+
+        /* Info Section (Address & Hours) */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .info-box h3 {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+        }
+
+        .opening-hours table {
+            width: 100%;
+        }
+
+        .opening-hours td {
+            padding: 8px 0;
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid, .info-grid { grid-template-columns: 1fr; }
+            .hero { height: 60vh; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">Metzger Bothe</div>
+            <div class="contact-quick">
+                <a href="tel:0332756084" class="contact-link" style="margin:0">📞 03327 56084</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Fleisch & Wurst aus eigener Herstellung</h1>
+            <p>Qualität, die man schmeckt. Ihr Traditionsmetzger in Schwielowsee und Brandenburg an der Havel.</p>
+            <a href="mailto:info@metzgerbothe.com" class="cta-button">Jetzt Bestellen</a>
+        </div>
+    </header>
+
+    <div class="tradition-banner">
+        <span>Meisterbetrieb seit Generationen – Echtes Handwerk</span>
+    </div>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Unsere Geschichte</h2>
+                    </div>
+                    <p>Willkommen bei der Fleischerei Bothe. Als tief verwurzelter Familienbetrieb in Schwielowsee stehen wir für Fleisch- und Wurstwaren höchster Güte. In einer Zeit der Massenproduktion setzen wir bewusst auf das traditionelle Fleischerhandwerk und regionale Verbundenheit.</p>
+                    <p>Unsere Leidenschaft gilt der Veredelung ausgesuchter Rohstoffe zu Spezialitäten, die Ihren Gaumen verwöhnen. Ob für den täglichen Genuss oder Ihren besonderen Anlass – bei uns erhalten Sie Qualität aus Meisterhand, persönlich und ehrlich.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1551028150-64b9f398f678?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Metzgerei Handwerk" style="width:100%; border-radius: 10px; box-shadow: 20px 20px 0 var(--accent);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sortiment" style="background-color: #f2ede4;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Sortiment</h2>
+            </div>
+            <div class="assortment-grid">
+                <div class="card">
+                    <span class="card-icon">🥩</span>
+                    <h3>Frischfleisch</h3>
+                    <p>Erstklassige Teilstücke vom Rind, Schwein und Geflügel aus kontrollierter regionaler Herkunft.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🌭</span>
+                    <h3>Wurstwaren</h3>
+                    <p>Über 50 Sorten hausgemachte Wurst nach überlieferten Familienrezepten frisch im Rauch.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🥗</span>
+                    <h3>Feinkost</h3>
+                    <p>Täglich frische Salate, hausgemachte Sülzen und küchenfertig vorbereitete Spezialitäten.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🍽️</span>
+                    <h3>Partyservice</h3>
+                    <p>Professionelles Catering für Ihre Feier – von rustikalen Platten bis zum warmen Buffet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="spezialitaeten">
+        <div class="container">
+            <div class="section-title">
+                <h2>Bothes Spezialitäten</h2>
+            </div>
+            <p style="text-align: center; max-width: 600px; margin: -30px auto 30px;">Probieren Sie unsere preisgekrönten Highlights, die uns weit über die Grenzen von Brandenburg hinaus bekannt machen.</p>
+            <div class="specialties-container">
+                <div class="pill">Havelländer Apfelschwein</div>
+                <div class="pill">Hausmacher Leberwurst</div>
+                <div class="pill">Dry Aged Rumpsteak</div>
+                <div class="pill">Bothes Grillknacker</div>
+                <div class="pill">Wildspezialitäten aus der Region</div>
+                <div class="pill">Eingelegte Nackensteaks</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Wo gibt's uns?</h3>
+                    <p><strong>Fleischer Metzger Catering Bothe</strong></p>
+                    <p>Hauffstraße 81</p>
+                    <p>14548 Schwielowsee (bei Brandenburg an der Havel)</p>
+                    <br>
+                    <a href="tel:0332756084" class="contact-link">📞 03327 56084</a>
+                    <a href="mailto:info@metzgerbothe.com" class="contact-link">✉️ info@metzgerbothe.com</a>
+                </div>
+                <div class="info-box opening-hours">
+                    <h3>Öffnungszeiten</h3>
+                    <table>
+                        <tr><td>Montag - Freitag</td><td>08:00 - 18:00 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>07:30 - 12:30 Uhr</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2023 Fleischer Metzger Catering Bothe. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Erstellt mit Leidenschaft für das Handwerk | <a href="#" style="color: white; text-decoration: underline;">Impressum</a> | <a href="#" style="color: white; text-decoration: underline;">Datenschutz</a></p>
+            <p style="margin-top: 20px; font-size: 0.7rem; opacity: 0.5;">Ein Projekt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
