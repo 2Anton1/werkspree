@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tischlerei Raik Schlusche | Maßarbeit aus Holz in Brandenburg</title>
+    <meta name="description" content="Ihr Experte für individuellen Möbelbau, Restaurierung und Innenausbau in Brandenburg an der Havel.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-wood: #8B6F47;
+            --dark-ash: #4A3C28;
+            --cream-white: #FAF6EF;
+            --accent-gold: #C5A059;
+            --text-dark: #2D241A;
+            --wood-gradient: repeating-linear-gradient(
+                90deg,
+                #8B6F47,
+                #8B6F47 40px,
+                #967b55 41px,
+                #8B6F47 42px
+            );
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark-ash);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--dark-ash);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--primary-wood);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(74, 60, 40, 0.85), rgba(74, 60, 40, 0.85)), 
+                        url('https://images.unsplash.com/photo-1581447100595-3a8135973465?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--wood-gradient);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: white;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-wood);
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0px var(--dark-ash);
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px var(--dark-ash);
+            background-color: #9d7e52;
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary-wood);
+        }
+
+        /* --- Über uns --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            background: var(--wood-gradient);
+            padding: 15px;
+            box-shadow: 15px 15px 0px var(--dark-ash);
+        }
+
+        .about-image img {
+            width: 100%;
+            display: block;
+            filter: sepia(20%);
+        }
+
+        /* --- Leistungen --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-bottom: 5px solid var(--primary-wood);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* --- Materialien --- */
+        .materials-section {
+            background-color: var(--dark-ash);
+            color: white;
+        }
+
+        .materials-section h2 {
+            color: white;
+        }
+
+        .materials-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .materials-list li {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border: 1px solid var(--primary-wood);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* --- Referenzen --- */
+        .reference-box {
+            background: linear-gradient(135deg, #8B6F47 0%, #4A3C28 100%);
+            color: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-left: 10px solid var(--accent-gold);
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .reference-box h4 {
+            font-family: 'Poppins', sans-serif;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        /* --- Kontakt & Öffnungszeiten --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .info-block {
+            margin-bottom: 30px;
+        }
+
+        .info-block h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: var(--primary-wood);
+        }
+
+        .info-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .info-link:hover {
+            color: var(--primary-wood);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #1a1a1a;
+            color: #888;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-grid, .contact-container { grid-template-columns: 1fr; }
+            .about-image { order: -1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">TISCHLEREI <span>SCHLUSCHE</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Maßarbeit aus Holz</h1>
+            <p>Präzision, Leidenschaft und traditionelles Handwerk aus Brandenburg an der Havel. Wir verwirklichen Ihre Wohnträume aus edlen Hölzern.</p>
+            <a href="#kontakt" class="cta-button">Angebot anfragen</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Über uns</h2>
+                    </div>
+                    <p>Willkommen in der Tischlerei Raik Schlusche. Seit vielen Jahren stehen wir in Brandenburg an der Havel für höchste Qualität im Holzhandwerk. In unserer Werkstatt am Domkietz verbinden wir traditionelle Techniken mit modernem Design.</p>
+                    <br>
+                    <p>Ob individueller Möbelbau oder die fachgerechte Aufarbeitung alter Schätze – wir nehmen uns Zeit für Ihre Wünsche und beraten Sie umfassend bei der Materialwahl und Umsetzung. Jedes Stück, das unsere Werkstatt verlässt, ist ein Unikat, gefertigt mit Liebe zum Detail und handwerklichem Stolz.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=800" alt="Tischler Werkstatt">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background-color: #f2ede4;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Individueller Möbelbau</h3>
+                    <p>Maßgefertigte Schränke, Tische und Regale, die exakt in Ihre Räumlichkeiten und zu Ihrem Lebensstil passen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fenster & Türen</h3>
+                    <p>Einbau und Wartung von hochwertigen Holzfenstern und Haustüren für ein natürliches Wohnklima und Sicherheit.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Innenausbau</h3>
+                    <p>Komplettlösungen für Ihren Wohnraum – von Wandverkleidungen bis hin zu passgenauen Treppenlösungen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Restaurierung</h3>
+                    <p>Wir erhalten Werte. Fachgerechte Aufarbeitung und Restaurierung antiker Möbel und historischer Bauteile.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="materials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Materialien</h2>
+            </div>
+            <ul class="materials-list">
+                <li>Massivholz</li>
+                <li>Eiche</li>
+                <li>Buche</li>
+                <li>Esche</li>
+                <li>Nussbaum</li>
+                <li>Kiefer</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="references">
+        <div class="container">
+            <div class="section-title">
+                <h2>Referenzprojekte</h2>
+            </div>
+            <div class="reference-box">
+                <h4>Massivholztisch aus märkischer Eiche</h4>
+                <p>Ein 3 Meter langer Esstisch mit natürlicher Baumkante, geölt und auf einem handgeschmiedeten Stahlgestell montiert.</p>
+            </div>
+            <div class="reference-box">
+                <h4>Restaurierung einer historischen Villentür</h4>
+                <p>Vollständige Entlackung, Ergänzung fehlender Schnitzereien und energetische Aufarbeitung einer Haustür aus der Gründerzeit.</p>
+            </div>
+            <div class="reference-box">
+                <h4>Moderner Dachausbau</h4>
+                <p>Passgenaue Einbauschränke unter extremen Dachschrägen zur optimalen Stauraumnutzung in einem Brandenburger Altbau.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-container">
+                <div>
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Kontakt</h2>
+                    </div>
+                    <div class="info-block">
+                        <h3>Adresse</h3>
+                        <p>Domkietz 7-8<br>14776 Brandenburg an der Havel</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Direktkontakt</h3>
+                        <a href="tel:01714703957" class="info-link">0171 4703957</a>
+                        <a href="mailto:raik@tischlerei-schlusche.de" class="info-link">raik@tischlerei-schlusche.de</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Öffnungszeiten</h2>
+                    </div>
+                    <table class="hours-table">
+                        <tr><td>Montag - Donnerstag</td><td>07:00 - 16:30 Uhr</td></tr>
+                        <tr><td>Freitag</td><td>07:00 - 13:00 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                    <p style="margin-top: 20px; font-style: italic; font-size: 0.9rem;">
+                        Hinweis: Da wir oft auf Montage sind, bitten wir um vorherige telefonische Terminabsprache.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Tischlerei Raik Schlusche</span>
+            <p>&copy; 2023 Raik Schlusche. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
