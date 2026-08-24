@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tischlerei Ribguth GbR | Maßarbeit aus Brandenburg an der Havel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B6F47; /* Holz-Braun */
+            --accent: #4A3C28;  /* Dunkles Esche */
+            --bg-light: #FAF6EF; /* Cremeweiß */
+            --text-dark: #2D2419;
+            --white: #ffffff;
+            --wood-gradient: repeating-linear-gradient(
+                90deg,
+                #8B6F47 0px,
+                #8B6F47 1px,
+                #967b55 2px,
+                #8B6F47 40px
+            );
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--accent);
+            line-height: 1.1;
+        }
+
+        .logo span {
+            color: var(--primary);
+            display: block;
+            font-size: 0.8rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(74, 60, 40, 0.7), rgba(74, 60, 40, 0.7)), 
+                        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--wood-gradient);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto 0;
+        }
+
+        /* Über uns */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 10px 10px 0px var(--primary);
+            transition: transform 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .service-card:hover {
+            transform: translate(-5px, -5px);
+        }
+
+        .service-card h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* Materialien */
+        .materials-section {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        .materials-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .materials-list li {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border-radius: 50px;
+            border: 1px solid var(--primary);
+            font-weight: 600;
+        }
+
+        /* Referenzen */
+        .reference-box {
+            background: linear-gradient(135deg, #8B6F47 0%, #4A3C28 100%);
+            color: var(--white);
+            padding: 30px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reference-box::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--wood-gradient);
+            opacity: 0.05;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            height: 100%;
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--accent);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .about-grid, .contact-container { grid-template-columns: 1fr; }
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    TISCHLEREI RIBGUTH
+                    <span>Fenster & Türen GbR</span>
+                </div>
+                <a href="#kontakt" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content container">
+            <h1>Maßarbeit aus Holz</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 30px;">Qualitätshandwerk aus Brandenburg an der Havel – Tradition trifft Präzision.</p>
+            <a href="#kontakt" class="cta-button">Angebot anfragen</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 style="margin-bottom: 20px; color: var(--accent);">Handwerk mit Leidenschaft</h2>
+                    <p>Willkommen bei der Tischlerei Ribguth GbR. Als inhabergeführter Meisterbetrieb in Brandenburg an der Havel stehen wir für höchste Qualität und individuelle Lösungen rund um den natürlichen Werkstoff Holz.</p>
+                    <br>
+                    <p>Seit vielen Jahren verbinden wir traditionelle Handwerkstechniken mit moderner Fertigung, um für unsere Kunden Fenster, Türen und Möbelstücke zu schaffen, die Generationen überdauern. Unser Fokus liegt auf Langlebigkeit, Ästhetik und einer persönlichen Beratung direkt vor Ort.</p>
+                </div>
+                <div style="background: var(--wood-gradient); height: 300px; border-radius: 8px; box-shadow: 20px 20px 0 var(--bg-light), 20px 20px 0 2px var(--primary);"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background-color: #f2ede4;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Fensterbau</h3>
+                    <p>Hochwertige Holzfenster nach Maß – energetisch optimiert und stilistisch passend zu Ihrem Gebäude.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Haustüren</h3>
+                    <p>Individuelle Eingangstüren, die Sicherheit, Dämmung und ein einladendes Design vereinen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Möbelbau</h3>
+                    <p>Einzelstücke nach Ihren Wünschen: Vom Einbauschrank bis zum massiven Esstisch.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Restaurierung</h3>
+                    <p>Fachgerechte Aufarbeitung historischer Bauelemente unter Erhalt der originalen Substanz.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Innenausbau</h3>
+                    <p>Ganzheitliche Lösungen für Ihre Wohnräume – von Wandverkleidungen bis zu Deckenkonstruktionen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reparaturservice</h3>
+                    <p>Schnelle und zuverlässige Instandsetzung von Fenstern, Türen und Holzelementen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="materials-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: var(--white);">Unsere Materialien</h2>
+                <p>Wir verarbeiten nur ausgesuchte Hölzer für beste Ergebnisse</p>
+            </div>
+            <ul class="materials-list">
+                <li>Eiche</li>
+                <li>Buche</li>
+                <li>Esche</li>
+                <li>Kiefer</li>
+                <li>Lärche</li>
+                <li>Massivholz</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="referenzen">
+        <div class="container">
+            <div class="section-title">
+                <h2>Aktuelle Projekte</h2>
+            </div>
+            <div class="reference-box">
+                <h3>Denkmalgeschützte Villa</h3>
+                <p>Nachbau historischer Kastenfenster inklusive moderner Isolierverglasung in Brandenburg.</p>
+            </div>
+            <div class="reference-box">
+                <h3>Modernes Einfamilienhaus</h3>
+                <p>Anfertigung einer massiven Haustür aus Eiche mit integrierten Sicherheitselementen.</p>
+            </div>
+            <div class="reference-box">
+                <h3>Individuelle Loft-Küche</h3>
+                <p>Kombination aus Altholz und modernen Oberflächen für ein einzigartiges Wohnerlebnis.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background-color: #f2ede4;">
+        <div class="container">
+            <div class="contact-container">
+                <div class="info-box">
+                    <h2 style="margin-bottom: 20px;">Kontakt</h2>
+                    <p><strong>Tischlerei Ribguth GbR</strong></p>
+                    <p>Grabower Weg 4</p>
+                    <p>14776 Brandenburg an der Havel</p>
+                    <br>
+                    <a href="tel:03381524338" class="contact-link">📞 03381 524338</a>
+                    <a href="mailto:info@tischlerei-ribguth.de" class="contact-link">✉️ info@tischlerei-ribguth.de</a>
+                </div>
+                <div class="info-box opening-hours">
+                    <h2 style="margin-bottom: 20px;">Öffnungszeiten</h2>
+                    <table>
+                        <tr><td>Montag - Donnerstag</td><td>07:00 - 16:30 Uhr</td></tr>
+                        <tr><td>Freitag</td><td>07:00 - 13:00 Uhr</td></tr>
+                        <tr><td>Samstag & Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                    <p style="margin-top: 20px; font-size: 0.85rem; font-style: italic;">Termine außerhalb der Öffnungszeiten nach telefonischer Vereinbarung möglich.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Tischlerei Ribguth GbR. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; font-size: 0.7rem;">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
