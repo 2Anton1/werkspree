@@ -4,39 +4,134 @@
   "all_candidates": [
     {
       "name": "Fleischerei Lars Speer e.K.",
-      "maps_url": "https://www.google.com/maps/place/Fleischerei+Lars+Speer+e.K./data=!4m7!3m6!1s0x4708745d29d65543:0x1d49fb400976b929!8m2!3d51.7641068!4d14.3319772!16s%2Fg%2F1tpc6p26!19sChIJQ1XWKV10CEcRKbl2CUD7SR0?authuser=0&hl=en&rclk=1",
+      "address": "Friedrich-Ebert-Straße 20, 03044 Cottbus, Deutschland",
       "rating": 4.7,
-      "category": "Butcher shop",
-      "address": "Friedrich-Ebert-Straße 20",
-      "phone": null,
-      "old_or_no_website": "http://www.fleischerei-speer.de"
+      "place_id": "ChIJQ1XWKV10CEcRKbl2CUD7SR0",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 33530",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.fleischerei-speer.de/"
     },
     {
-      "name": "Abu El-Ezz Fleischerei",
-      "maps_url": "https://www.google.com/maps/place/Abu+El-Ezz+Fleischerei/data=!4m7!3m6!1s0x47087518c68d852d:0x1a9eb75dcefabd0b!8m2!3d51.7580343!4d14.3340594!16s%2Fg%2F11r3lt2c6x!19sChIJLYWNxhh1CEcRC736zl23nho?authuser=0&hl=en&rclk=1",
+      "name": "ABU-EL-EZZ Fleischerei ملحمة ابو العز",
+      "address": "Burgstraße 26, 03046 Cottbus, Deutschland",
       "rating": 4.9,
-      "category": "Open",
-      "address": "+49 176 86969506",
-      "phone": "+4917686969506",
+      "place_id": "ChIJLYWNxhh1CEcRC736zl23nho",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0176 86969506",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
     },
     {
       "name": "Fleischerei Kadach - Filiale Cottbus Center",
-      "maps_url": "https://www.google.com/maps/place/Fleischerei+Kadach+-+Filiale+Cottbus+Center/data=!4m7!3m6!1s0x470875d343511ecf:0xe65b823c4529b69e!8m2!3d51.7836458!4d14.3167224!16s%2Fg%2F11fks3y53f!19sChIJzx5RQ9N1CEcRnrYpRTyCW-Y?authuser=0&hl=en&rclk=1",
+      "address": "Sielower Ch 38, 03044 Cottbus, Deutschland",
       "rating": 4.7,
-      "category": "Butcher shop",
-      "address": "Sielower Ch 38",
-      "phone": null,
-      "old_or_no_website": ""
+      "place_id": "ChIJzx5RQ9N1CEcRnrYpRTyCW-Y",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 86696200",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.fleischerei-kadach.de/",
+      "email": "info@fleischerei-kadach.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'kadach' in domain/local",
+      "branch": "Metzgerei",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Fleischerei Kadach - Filiale Kaufland Südeck",
+      "address": "Hardenbergstraße 5, 03050 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJGUwZnvRzCEcRw81awL0-Ygs",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 5296821",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.fleischerei-kadach.de/",
+      "email": "info@fleischerei-kadach.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'kadach' in domain/local",
+      "branch": "Metzgerei",
+      "region": "Cottbus"
     },
     {
       "name": "Konrad Speer",
-      "maps_url": "https://www.google.com/maps/place/Konrad+Speer/data=!4m7!3m6!1s0x470875ade8ffd82d:0x705a6ff25640453!8m2!3d51.7860784!4d14.3423251!16s%2Fg%2F1td_9d0w!19sChIJLdj_6K11CEcRUwRkJf-mBQc?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Butcher shop",
-      "address": "Zuschka Cužka 36",
-      "phone": null
+      "address": "Zuschka Cužka 36, 03044 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJLdj_6K11CEcRUwRkJf-mBQc",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 870809"
     }
   ],
-  "hot_leads": []
+  "hot_leads": [
+    {
+      "name": "Fleischerei Kadach - Filiale Cottbus Center",
+      "address": "Sielower Ch 38, 03044 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJzx5RQ9N1CEcRnrYpRTyCW-Y",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 86696200",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.fleischerei-kadach.de/",
+      "email": "info@fleischerei-kadach.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'kadach' in domain/local",
+      "branch": "Metzgerei",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Fleischerei Kadach - Filiale Kaufland Südeck",
+      "address": "Hardenbergstraße 5, 03050 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJGUwZnvRzCEcRw81awL0-Ygs",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 5296821",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.fleischerei-kadach.de/",
+      "email": "info@fleischerei-kadach.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'kadach' in domain/local",
+      "branch": "Metzgerei",
+      "region": "Cottbus"
+    }
+  ]
 }

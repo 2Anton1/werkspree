@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleischerei Kadach | Filiale Cottbus Center - Traditionelles Handwerk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #9B2D2D;
+            --accent: #D4A843;
+            --bg-light: #FAF6EF;
+            --text-dark: #2D2A26;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1607623814075-e512199500d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: var(--transition);
+            border: 2px solid var(--primary);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+            margin: 15px auto 0;
+        }
+
+        /* About Us */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .tradition-banner {
+            border: 2px solid var(--accent);
+            padding: 30px;
+            position: relative;
+            background-color: var(--white);
+        }
+
+        .tradition-banner::before {
+            content: 'Seit Generationen';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--accent);
+            color: var(--white);
+            padding: 2px 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Sortiment Cards */
+        .sortiment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            text-align: center;
+            border-bottom: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        /* Specialties Pills */
+        .specialties-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .pill {
+            background-color: var(--white);
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: default;
+        }
+
+        .pill:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* Info Section (Location & Hours) */
+        .info-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .info-box {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .info-box h3 {
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .info-box p, .info-box a {
+            color: var(--white);
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .werkspree-note {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .about-grid, .info-wrapper { grid-template-columns: 1fr; }
+            section { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">KADACH</a>
+            <div class="contact-quick">
+                <a href="tel:035586696200" style="color: var(--primary); text-decoration: none; font-weight: 600;">📞 0355 86696200</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Fleisch & Wurst aus eigener Herstellung</h1>
+            <p>Ihr Traditionsmetzger im Cottbus Center. Wir vereinen Lausitzer Handwerkskunst mit höchster Frische und bestem Geschmack.</p>
+            <a href="tel:035586696200" class="cta-button">JETZT BESTELLEN</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2 style="display: block;">Unsere Tradition</h2>
+                    </div>
+                    <p>Willkommen bei der Fleischerei Kadach in Cottbus. Als regional verwurzelter Meisterbetrieb stehen wir für Fleisch- und Wurstwaren, die noch nach echter Handwerkstradition gefertigt werden. In unserer Filiale im Cottbus Center bieten wir Ihnen täglich frische Spezialitäten aus eigener Schlachtung und Produktion.</p>
+                    <br>
+                    <p>Qualität, die man schmeckt: Wir beziehen unsere Tiere von ausgewählten Landwirten aus der Region und garantieren so kurze Wege und maximale Transparenz. Besuchen Sie uns und lassen Sie sich von unserem fachkundigen Team beraten.</p>
+                </div>
+                <div class="tradition-banner">
+                    <h3>Ehrliches Handwerk</h3>
+                    <p>Bei uns wird noch selbst gewürzt, geräuchert und veredelt. Ohne unnötige Zusatzstoffe – dafür mit viel Liebe zum Detail und Rezepten, die über Generationen perfektioniert wurden.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sortiment" style="background-color: #fdfcf9;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Sortiment</h2>
+            </div>
+            <div class="sortiment-grid">
+                <div class="card">
+                    <h3>Frischfleisch</h3>
+                    <p>Premium-Zuschnitte vom Rind, Schwein und Geflügel in Meisterqualität für Ihre Küche.</p>
+                </div>
+                <div class="card">
+                    <h3>Wurstwaren</h3>
+                    <p>Über 100 Sorten aus eigener Herstellung – von der Knacker bis zur feinen Leberwurst.</p>
+                </div>
+                <div class="card">
+                    <h3>Feinkost</h3>
+                    <p>Hausgemachte Salate, küchenfertige Gerichte und edle Beilagen für den schnellen Genuss.</p>
+                </div>
+                <div class="card">
+                    <h3>Partyservice</h3>
+                    <p>Individuelle Platten und warme Buffets für Ihre Feierlichkeiten in und um Cottbus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="specialties">
+        <div class="container">
+            <div class="section-title">
+                <h2>Spezialitäten des Hauses</h2>
+            </div>
+            <div class="specialties-container">
+                <span class="pill">Original Lausitzer Knacker</span>
+                <span class="pill">Hausmacher Leberwurst</span>
+                <span class="pill">Spreewälder Grützwurst</span>
+                <span class="pill">Zartes Rumpsteak</span>
+                <span class="pill">Eigener Schinkenspeck</span>
+                <span class="pill">Täglicher Mittagstisch</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="info-wrapper">
+                <div class="info-box">
+                    <h3>Wo gibt's uns?</h3>
+                    <p><strong>Fleischerei Kadach</strong><br>Filiale Cottbus Center</p>
+                    <p>Sielower Ch 38<br>03044 Cottbus, Deutschland</p>
+                    <p>Telefon: <a href="tel:035586696200">0355 86696200</a></p>
+                    <p>E-Mail: <a href="mailto:info@fleischerei-kadach.de">info@fleischerei-kadach.de</a></p>
+                </div>
+                <div class="info-box" style="background-color: var(--white); color: var(--text-dark); border: 1px solid #eee;">
+                    <h3 style="color: var(--primary);">Öffnungszeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag - Freitag</span> <span>08:00 - 20:00 Uhr</span></li>
+                        <li><span>Samstag</span> <span>08:00 - 20:00 Uhr</span></li>
+                        <li><span>Sonntag</span> <span>Geschlossen</span></li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">* Abweichungen an Feiertagen möglich.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Fleischerei Kadach - Filiale Cottbus Center. Alle Rechte vorbehalten.</p>
+            <p class="werkspree-note">Erstellt für Fleischerei Kadach | Werkspree Referenz</p>
+        </div>
+    </footer>
+
+</body>
+</html>
