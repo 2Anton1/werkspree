@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma Roger Laube | Heizung & Sanitär Berlin Neukölln</title>
+    <meta name="description" content="Ihr zuverlässiger Partner für Heizungsbau und Sanitärinstallationen in Berlin Neukölln. Installation, Wartung und 24h Notdienst.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #2C5F7F; /* Stahl-Blau */
+            --accent-color: #A8C8E0;  /* Wasser-Blau */
+            --bg-color: #F0F4F8;      /* Helles Grau */
+            --text-dark: #1A2B34;
+            --white: #ffffff;
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1a3a4f 100%);
+            color: var(--white);
+            padding: 100px 0 120px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 15px 35px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: var(--white);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Über uns */
+        .about-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary-color);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Notdienst Box */
+        .emergency-box {
+            background: #e74c3c;
+            color: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin-top: 40px;
+            position: relative;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+
+        .emergency-box h2 { margin-bottom: 10px; }
+        .emergency-box a {
+            color: var(--white);
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        /* Warum wir? USPs */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .usp-item .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border: 5px solid var(--accent-color);
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .hours-info {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .contact-link {
+            display: block;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-link:hover { text-decoration: underline; }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background: #1A2B34;
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .werkspree-note {
+            margin-top: 20px;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .contact-layout { grid-template-columns: 1fr; }
+            .hero { clip-path: none; padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Firma Roger Laube</a>
+                <div class="header-contact">
+                    <a href="tel:03069597990" style="text-decoration: none; color: var(--primary-color); font-weight: 600;">📞 030 69597990</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Installation & Wartung vom Profi in Neukölln</h1>
+            <p>Ihr kompetenter Meisterbetrieb für Heizungstechnik und Sanitäranlagen. Wir sorgen für Wärme und Komfort in Ihrem Zuhause – zuverlässig, sauber und fachgerecht.</p>
+            <a href="#kontakt" class="cta-button">Termin anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <div class="about-content">
+                <p>Willkommen bei der <strong>Firma Roger Laube</strong>, Ihrem Experten für Heizung und Sanitär im Herzen von Berlin Neukölln. Seit vielen Jahren stehen wir für handwerkliche Präzision und kundenorientierten Service. Unser Team verbindet traditionelles Handwerk mit modernster Technik, um für unsere Kunden in Berlin und Umgebung die besten Lösungen zu realisieren. Ob moderne Heizungsanlagen, barrierefreie Traumbäder oder schnelle Reparaturen – wir sind Ihr verlässlicher Partner direkt vor Ort.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #eef2f6;">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Heizungsbau</h3>
+                    <p>Installation modernster Heizsysteme, Gas-Etagenheizungen und Brennwerttechnik für effiziente Wärme.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Badsanierung</h3>
+                    <p>Von der Planung bis zur Fertigstellung: Wir gestalten Ihr neues Bad – modern, funktional und ästhetisch.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Wartung</h3>
+                    <p>Regelmäßige Überprüfung Ihrer Anlagen zur Sicherung der Langlebigkeit und Vermeidung hoher Energiekosten.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reparaturen</h3>
+                    <p>Schnelle Hilfe bei defekten Armaturen, Rohrbrüchen oder Heizungsausfällen durch unsere Fachkräfte.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Trinkwasserhygiene</h3>
+                    <p>Sicherung der Wasserqualität durch fachgerechte Installation und regelmäßige Kontrollen nach DIN-Norm.</p>
+                </div>
+            </div>
+
+            <div class="emergency-box">
+                <h2>24h Notdienst</h2>
+                <p>Heizungsausfall oder Wasserschaden? Wir lassen Sie nicht im Stich!</p>
+                <a href="tel:03069597990">Jetzt anrufen: 030 69597990</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="warum-wir">
+        <div class="container">
+            <h2 class="section-title">Warum wir?</h2>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <div class="icon-circle">01</div>
+                    <h3>Lokale Expertise</h3>
+                    <p>Als Betrieb aus Neukölln sind wir schnell bei Ihnen vor Ort und kennen die baulichen Gegebenheiten im Kiez.</p>
+                </div>
+                <div class="usp-item">
+                    <div class="icon-circle">02</div>
+                    <h3>Fachkompetenz</h3>
+                    <p>Qualifizierte Mitarbeiter und stetige Weiterbildung garantieren Ihnen Technik auf dem neuesten Stand.</p>
+                </div>
+                <div class="usp-item">
+                    <div class="icon-circle">03</div>
+                    <h3>Transparenz</h3>
+                    <p>Klare Angebote, faire Preise und eine ehrliche Beratung sind das Fundament unserer Kundenbeziehungen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <h2 class="section-title">Kontakt & Öffnungszeiten</h2>
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h3>Nehmen Sie Kontakt auf</h3>
+                    <p style="margin-bottom: 20px;">Haben Sie ein Projekt oder benötigen Sie eine Wartung? Wir freuen uns auf Ihre Nachricht.</p>
+                    <p><strong>Adresse:</strong><br>Neuköllnische Allee 154<br>12057 Berlin-Bezirk Neukölln</p>
+                    <br>
+                    <a href="tel:03069597990" class="contact-link">📞 030 69597990</a>
+                    <a href="mailto:info@roger-laube.de" class="contact-link">✉️ info@roger-laube.de</a>
+                </div>
+                <div class="hours-info">
+                    <h3>Bürozeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag - Donnerstag:</span> <span>07:30 - 16:30 Uhr</span></li>
+                        <li><span>Freitag:</span> <span>07:30 - 14:00 Uhr</span></li>
+                        <li><span>Samstag:</span> <span>Nach Vereinbarung</span></li>
+                        <li><span>Sonntag:</span> <span>Geschlossen</span></li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.85rem; color: #666;">* Außerhalb der Bürozeiten steht unser Notdienst für Bestandskunden zur Verfügung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Firma Roger Laube</span>
+            <p>&copy; 2023 Firma Roger Laube - Heizung & Sanitär Berlin. Alle Rechte vorbehalten.</p>
+            <p class="werkspree-note">Erstellt für das Werkspree Branchenverzeichnis</p>
+        </div>
+    </footer>
+
+</body>
+</html>
