@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hans Wiese GmbH | Heizung - Sanitär - Gas Berlin Neukölln</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2C5F7F;
+            --accent: #A8C8E0;
+            --bg-light: #F0F4F8;
+            --text-dark: #1A2B36;
+            --white: #ffffff;
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Hero */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a3a4f 100%);
+            color: var(--white);
+            padding: 80px 0 100px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background-color: var(--white);
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background: var(--accent);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Über uns */
+        .about-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--primary);
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-card .icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        /* Notdienst Box */
+        .emergency-box {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emergency-box h2 {
+            margin-bottom: 15px;
+        }
+
+        .emergency-phone {
+            font-size: 2rem;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            display: block;
+            margin: 15px 0;
+        }
+
+        .pulse-animation {
+            animation: pulse-red 2s infinite;
+            border-radius: var(--radius);
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(168, 200, 224, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(168, 200, 224, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(168, 200, 224, 0); }
+        }
+
+        /* Warum wir? */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .usp-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .usp-circle {
+            min-width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .opening-hours {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--primary);
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--bg-light);
+        }
+
+        /* Footer */
+        footer {
+            background: #1A2B36;
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .werkspree-hint {
+            margin-top: 20px;
+            opacity: 0.5;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container hero">
+            <h1>Hans Wiese GmbH</h1>
+            <p>Ihr Meisterbetrieb für Heizung, Sanitär & Gas in Berlin Neukölln</p>
+            <a href="#kontakt" class="btn">Termin anfragen</a>
+        </div>
+    </header>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <div class="about-content">
+                <p>Seit vielen Jahren steht die Hans Wiese GmbH für erstklassiges Handwerk und technische Präzision in Berlin Neukölln. Als regional verwurzelter Fachbetrieb sind wir Ihr zuverlässiger Partner für alle Fragen rund um moderne Heizsysteme, Sanitärinstallationen und Gastechnik. Unser Anspruch ist es, durch saubere Arbeit, pünktlichen Service und individuelle Beratung nachhaltige Lösungen für Ihr Zuhause oder Gewerbe zu schaffen. Ob kleiner Reparaturauftrag oder komplexe Neuinstallation – wir sorgen dafür, dass bei Ihnen alles reibungslos fließt und wohlig warm bleibt.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #e6edf3;">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">♨️</div>
+                    <h3>Heizungsbau</h3>
+                    <p>Installation, Austausch und Modernisierung effizienter Heizungsanlagen.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🚿</div>
+                    <h3>Sanitär & Bad</h3>
+                    <p>Komplette Badmodernisierung und professionelle Sanitärinstallationen.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🔥</div>
+                    <h3>Gastechnik</h3>
+                    <p>Sichere Wartung und Installation von Gas-Etagenheizungen und Thermen.</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🔧</div>
+                    <h3>Wartung & Reparatur</h3>
+                    <p>Regelmäßige Prüfung und schnelle Instandsetzung Ihrer Haustechnik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="emergency-box pulse-animation">
+                <h2>24h Notdienst</h2>
+                <p>Rohrbruch oder Heizungsausfall? Wir lassen Sie nicht im Kalten stehen!</p>
+                <a href="tel:0307039606" class="emergency-phone">030 7039606</a>
+                <p>Rufen Sie uns direkt an – schnell & zuverlässig.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="warum-wir">
+        <div class="container">
+            <h2 class="section-title">Warum Hans Wiese GmbH?</h2>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <div class="usp-circle">✓</div>
+                    <div>
+                        <h3>Lokale Expertise</h3>
+                        <p>Tief verwurzelt in Berlin Neukölln kennen wir die Gegebenheiten vor Ort genau.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-circle">✓</div>
+                    <div>
+                        <h3>Meisterqualität</h3>
+                        <p>Höchste Standards bei Material und Ausführung durch qualifizierte Fachkräfte.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-circle">✓</div>
+                    <div>
+                        <h3>Transparente Preise</h3>
+                        <p>Klare Angebote ohne versteckte Kosten für eine vertrauensvolle Zusammenarbeit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 style="margin-bottom: 20px; color: var(--primary);">Kontakt</h2>
+                    <p><strong>Hans Wiese GmbH</strong><br>Buckower Damm 30<br>12349 Berlin</p>
+                    <br>
+                    <a href="tel:0307039606" class="contact-link">📞 030 7039606</a>
+                    <a href="mailto:info@wiese-service.de" class="contact-link">📧 info@wiese-service.de</a>
+                </div>
+                <div class="opening-hours">
+                    <h2 style="margin-bottom: 20px; color: var(--primary);">Öffnungszeiten</h2>
+                    <ul class="hours-list">
+                        <li><span>Montag - Donnerstag</span> <span>07:30 - 16:30 Uhr</span></li>
+                        <li><span>Freitag</span> <span>07:30 - 14:00 Uhr</span></li>
+                        <li><span>Samstag & Sonntag</span> <span>Notdienst</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Hans Wiese GmbH</span>
+            <p>&copy; 2023 Hans Wiese GmbH Heizung-Sanitär-Gas. Alle Rechte vorbehalten.</p>
+            <p>Buckower Damm 30, 12349 Berlin | Tel: 030 7039606</p>
+            <div class="werkspree-hint">Erstellt mit Professionalität für das Berliner Handwerk.</div>
+        </div>
+    </footer>
+
+</body>
+</html>

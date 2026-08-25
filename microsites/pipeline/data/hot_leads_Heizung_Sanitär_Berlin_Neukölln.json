@@ -1,0 +1,254 @@
+{
+  "branch": "Heizung Sanitär",
+  "region": "Berlin Neukölln",
+  "all_candidates": [
+    {
+      "name": "Hans Wiese GmbH Heizung-Sanitär-Gas",
+      "address": "Buckower Damm 30, 12349 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJKyKzaHBFqEcR6NjMXlSQGN0",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 7039606",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.wiese-service.de/",
+      "email": "info@wiese-service.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'wiese' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Berlin Neukölln"
+    },
+    {
+      "name": "Klempner Berlin - Notdienst RohrBlitz",
+      "address": "Gockelweg 23A, 12355 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJNzghQoZGqEcRnZmGyZUVygU",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 20989854"
+    },
+    {
+      "name": "KORAB Heizung Sanitär",
+      "address": "Emser Str. 86, 12051 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJV7HzZrFPqEcRzzK60YbILSI",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0176 60482961"
+    },
+    {
+      "name": "Ditec Versorgungstechnik, Heizung - Sanitär",
+      "address": "Lucy-Lameck-Straße 46, 12049 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ85ZJFc1PqEcRAMPOOEOjsV8",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0176 61419992"
+    },
+    {
+      "name": "Torsten Lauschke GmbH",
+      "address": "Rudower Str. 7, 12351 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJo6UJKARFqEcRyQPBuCks1I4",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "030 74309531"
+    },
+    {
+      "name": "Klemz GmbH",
+      "address": "Bürknerstraße 15, 12047 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJS7fbD8pPqEcReQWg5UKQ2Ik",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 6935596",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Firma Roger Laube",
+      "address": "Neuköllnische Allee 154, 12057 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJxWmHhEJPqEcRD_Kg18637Vo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "030 69597990",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://roger-laube.de/",
+      "email": "info@roger-laube.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'roger' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Berlin Neukölln"
+    },
+    {
+      "name": "SeYoRa GmbH - Gas Wasser Heizung Installateur in Berlin",
+      "address": "Glasower Str. 6, 12051 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ9cky6utPqEcR6Fqo7SdcRAA",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 20929200"
+    },
+    {
+      "name": "Meisterbetrieb Marcus Bonin | HEIZUNG - SANITÄR - SOLAR",
+      "address": "Leinestraße 5, 12049 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJqW-_tiFPqEcRGMwQLXpBNeA",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 56732153",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://mb-heizung.net/"
+    },
+    {
+      "name": "Sanitär-Schnelldienst Mark Petzhold",
+      "address": "Alt-Buckow 29, 12349 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJv5eFz1dFqEcRAUY7rDne5Es",
+      "types": [
+        "car_repair",
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0178 4900939"
+    },
+    {
+      "name": "Hauptstadtbäder Dreßler",
+      "address": "Am Brandpfuhl 8k, 12347 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJLxNEEghFqEcRQKVb4tP_Vvc",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Kuzey Haustechnik Sanitär & Rohrreinigung Notdienst",
+      "address": "Großbeerenstraße 2-10, 12107 Berlin-Bezirk Tempelhof-Schöneberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJixH481_uCAgRdBlWS4WbUXU",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "MADA Gebäudetechnik GmbH Sanitär und Heizungsinstallation",
+      "address": "Scheveninger Str. 9A, 12359 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJvZPDq3xPqEcRqtbeXlIUUdo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "M. Schulze Sanitärinstallation",
+      "address": "Blücherstraße 57A, 10961 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJt6pBtNZPqEcRQx_erJQ3BJs",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Hans Wiese GmbH Heizung-Sanitär-Gas",
+      "address": "Buckower Damm 30, 12349 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJKyKzaHBFqEcR6NjMXlSQGN0",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 7039606",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.wiese-service.de/",
+      "email": "info@wiese-service.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'wiese' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Berlin Neukölln"
+    },
+    {
+      "name": "Firma Roger Laube",
+      "address": "Neuköllnische Allee 154, 12057 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJxWmHhEJPqEcRD_Kg18637Vo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "030 69597990",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://roger-laube.de/",
+      "email": "info@roger-laube.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'roger' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Berlin Neukölln"
+    }
+  ]
+}
