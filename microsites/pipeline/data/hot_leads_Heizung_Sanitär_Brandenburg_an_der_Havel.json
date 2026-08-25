@@ -1,0 +1,226 @@
+{
+  "branch": "Heizung Sanitär",
+  "region": "Brandenburg an der Havel",
+  "all_candidates": [
+    {
+      "name": "Albert, Dirk Heizung & Sanitär",
+      "address": "Briester Str. 31, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNfKSuszAqEcRMUAwXJDO7mA",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "03381 551368"
+    },
+    {
+      "name": "DHS Depot Heizung Sanitär GmbH Schmieding Tosch",
+      "address": "Meyerstraße 15, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJUS7xNIzAqEcRMfHlb0rYFWI",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 629410"
+    },
+    {
+      "name": "Lohn Heiztechnik & Installation in Brandenburg",
+      "address": "Mittelstraße 10, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ9WuzS5TBqEcR7wolnTnomeE",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "03381 2181820"
+    },
+    {
+      "name": "Laminski Bäder & Heizung",
+      "address": "Carolinenring 50, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ86nkNiPBqEcRLj6RkE73PQY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0174 4161186",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.laminski-bäder-heizung.de/"
+    },
+    {
+      "name": "Stefan Kriegs",
+      "address": "Genthiner Str. 91, 14774 Brandenburg an der Havel-Plaue, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJQ6CC55DHqEcRUvoXLcEGh1U",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 223944",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://kriegs-heizung.de/",
+      "email": "info@kriegs-heizung.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'kriegs' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "LENZE & SERAPHIM Sanitär-Heizung-Klimatechnik GbR",
+      "address": "Friedrichshafener Str. 16, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJAQDQC9vAqEcRZR1zDH-fyxo",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "03381 3468870"
+    },
+    {
+      "name": "Schwedler Haustechnik Ingenieurbetrieb GmbH",
+      "address": "Str. zum Gut 11, 14776 Brandenburg an der Havel-Klein Kreutz, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJoyIg9ODBqEcRsluE5oN-Pyk",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 524860"
+    },
+    {
+      "name": "PERKER SHS GmbH",
+      "address": "Friedrich-Engels-Straße 6, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJPRzgZurAqEcRZVFpLOrEx1M",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "03381 335030",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.perker-shs.de/",
+      "email": "patrick.born@perker-shs.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'perker' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "DHS Depot Heizung-Sanitär GmbH Fachgroßhandel",
+      "address": "Meyerstraße 15, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJWWMrDlrBqEcR_fBG4IEBB2Y",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "03381 629410"
+    },
+    {
+      "name": "ökotherm Brandenburg GmbH & Co.KG",
+      "address": "Wilhelmsdorfer Str. 72, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ94q8udvBqEcRvnbAtyJTMa0",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 208260"
+    },
+    {
+      "name": "NOWAWESER Brandenburg - Partner für Technik",
+      "address": "Friedrich-Franz-Straße 3, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ029W29zAqEcRiaP1-U0znug",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "HB Heizung + Bad GmbH",
+      "address": "August-Bebel-Straße 21, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJsbpVI47BqEcRNipfWcQUoX8",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Stefan Kriegs",
+      "address": "Genthiner Str. 91, 14774 Brandenburg an der Havel-Plaue, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJQ6CC55DHqEcRUvoXLcEGh1U",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 223944",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://kriegs-heizung.de/",
+      "email": "info@kriegs-heizung.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'kriegs' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "PERKER SHS GmbH",
+      "address": "Friedrich-Engels-Straße 6, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJPRzgZurAqEcRZVFpLOrEx1M",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "03381 335030",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.perker-shs.de/",
+      "email": "patrick.born@perker-shs.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'perker' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Brandenburg an der Havel"
+    }
+  ]
+}

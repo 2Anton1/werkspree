@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefan Kriegs | Heizung & Sanitär Brandenburg an der Havel</title>
+    <meta name="description" content="Ihr zuverlässiger Partner für Heizungsbau, Badsanierung und Wartung in Brandenburg an der Havel. Stefan Kriegs – Qualität aus Meisterhand.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #2C5F7F; /* Stahl-Blau */
+            --accent: #A8C8E0;  /* Wasser-Blau */
+            --bg-light: #F0F4F8; /* Hellgrau */
+            --text-dark: #1A2B34;
+            --white: #ffffff;
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a3a4f 100%);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* About Us */
+        .about-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Services Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Emergency Box */
+        .emergency-box {
+            background: #fff;
+            border: 2px solid #e74c3c;
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emergency-box h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+
+        .pulse-btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(231, 76, 60, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+
+        /* Why Us (USPs) */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .usp-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .icon-circle {
+            min-width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        /* Contact & Hours */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-list i {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        .info-list a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .info-list a:hover {
+            color: var(--primary);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .hours-table td {
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .footer-bottom {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">STEFAN <span>KRIEGS</span></a>
+                <div class="contact-quick">
+                    <a href="tel:03381223944" style="text-decoration:none; color:var(--primary); font-weight:600;">
+                        <i class="fas fa-phone"></i> 03381 223944
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Installation & Wartung aus Meisterhand</h1>
+            <p>Ihr zuverlässiger Fachbetrieb für Heizung und Sanitär in Brandenburg an der Havel.</p>
+            <a href="#kontakt" class="btn">Termin anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="section-title">
+                <h2>Über uns</h2>
+            </div>
+            <div class="about-content">
+                <p>
+                    Stefan Kriegs ist Ihr kompetenter Ansprechpartner für moderne Haustechnik in Brandenburg an der Havel. 
+                    Als regional verwurzelter Fachbetrieb im Stadtteil Plaue stehen wir für technische Präzision, 
+                    Sauberkeit und absolute Zuverlässigkeit. Ob Heizungsmodernisierung oder Traumbad – wir begleiten 
+                    Sie von der Planung bis zur fertigen Installation mit fachlichem Know-how und persönlichem Service.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #e9eff5;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-faucet"></i>
+                    <h3>Bad-Installation</h3>
+                    <p>Moderne Badkonzepte und professionelle Sanierung für Ihre Wohlfühloase.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Heizungsbau</h3>
+                    <p>Installation und Austausch effizienter Heizsysteme (Gas, Öl, Wärmepumpen).</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Reparatur</h3>
+                    <p>Schnelle Hilfe bei Defekten an Armaturen, Leitungen oder Heizkörpern.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Wartung</h3>
+                    <p>Regelmäßige Prüfung Ihrer Anlagen für maximale Lebensdauer und Sicherheit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="notdienst">
+        <div class="container">
+            <div class="emergency-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> Notdienst benötigt?</h3>
+                <p>Bei Rohrbruch oder Heizungsausfall lassen wir Sie nicht im Kalten sitzen.</p>
+                <br>
+                <a href="tel:03381223944" class="pulse-btn">
+                    <i class="fas fa-phone-alt"></i> Jetzt anrufen: 03381 223944
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="warum-wir">
+        <div class="container">
+            <div class="section-title">
+                <h2>Warum Stefan Kriegs?</h2>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h3>Regional vor Ort</h3>
+                        <p>Kurze Anfahrtswege in Brandenburg an der Havel und Umgebung.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <div class="icon-circle"><i class="fas fa-user-shield"></i></div>
+                    <div>
+                        <h3>Fachkompetenz</h3>
+                        <p>Langjährige Erfahrung und technisches Know-how in jedem Projekt.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <div class="icon-circle"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <h3>Termintreue</h3>
+                        <p>Wir halten unsere Zusagen ein – pünktlich, sauber und zuverlässig.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background-color: #e9eff5;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontakt & Öffnungszeiten</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>So erreichen Sie uns</h3>
+                    <br>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Genthiner Str. 91,<br>14774 Brandenburg an der Havel-Plaue</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:03381223944">03381 223944</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@kriegs-heizung.de">info@kriegs-heizung.de</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="opening-hours">
+                    <h3>Bürozeiten</h3>
+                    <br>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Montag - Donnerstag</td>
+                            <td>07:30 - 16:30 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Freitag</td>
+                            <td>07:30 - 13:00 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Samstag - Sonntag</td>
+                            <td>Geschlossen</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3>Stefan Kriegs – Heizung & Sanitär</h3>
+                <p>Genthiner Str. 91 | 14774 Brandenburg an der Havel</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Stefan Kriegs. Alle Rechte vorbehalten. | Erstellt von Werkspree</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
