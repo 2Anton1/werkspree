@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schallmann GmbH | Heizung - Sanitär - Solar Cottbus</title>
+    <meta name="description" content="Ihr zuverlässiger Partner für Heizungsbau, Sanitärinstallationen und Solartechnik in Cottbus-Kiekebusch.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #2C5F7F;
+            --accent: #A8C8E0;
+            --bg-light: #F0F4F8;
+            --text-dark: #1A2B38;
+            --white: #ffffff;
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a3a4f 100%);
+            color: var(--white);
+            padding: 100px 0 80px;
+            text-align: center;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            display: block;
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* Über uns */
+        .about-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border-left: 5px solid var(--primary);
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            text-align: center;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 3px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        /* Notdienst Box */
+        .emergency-box {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .emergency-box h2 {
+            margin-bottom: 15px;
+        }
+
+        .emergency-phone {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* Warum wir? USPs */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .usp-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--radius);
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-circle i {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info h3, .hours h3 {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #e1e8ed;
+        }
+
+        /* Footer */
+        footer {
+            background: #1A2B38;
+            color: #8fa3b0;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #2c3e50;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero { padding: 60px 0 60px; }
+            .section-title { margin-bottom: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <i class="fas fa-tools"></i> Schallmann GmbH
+                </a>
+                <div class="header-contact">
+                    <a href="tel:0355721981" style="text-decoration:none; color:var(--primary); font-weight:600;">
+                        <i class="fas fa-phone"></i> 0355 721981
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Installation & Wartung vom Fachmann in Cottbus</h1>
+            <p>Ihr kompetenter Partner für moderne Heizsysteme, barrierefreie Bäder und nachhaltige Solartechnik. Zuverlässig, sauber und technisch auf dem neuesten Stand.</p>
+            <a href="#kontakt" class="btn">Termin anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="section-title">
+                <h2>Über uns</h2>
+            </div>
+            <div class="about-content">
+                <p>Seit vielen Jahren ist die Schallmann GmbH Ihr zuverlässiger Partner in Cottbus und Umgebung. Wir stehen für handwerkliche Präzision, modernste Technik und nachhaltige Lösungen in den Bereichen Heizung, Sanitär und Solar. Unser Team aus erfahrenen Fachkräften sorgt dafür, dass Ihr Zuhause warm, sicher und komfortabel bleibt. Als lokaler Meisterbetrieb in Cottbus-Kiekebusch legen wir besonderen Wert auf eine persönliche Beratung und langfristige Kundenzufriedenheit.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background: #e9eff5;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-fire-alt"></i>
+                    <h3>Heizungsbau</h3>
+                    <p>Modernisierung und Neuinstallation von Gas-, Öl- und Brennwertanlagen sowie Wärmepumpen.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bath"></i>
+                    <h3>Bad-Installation</h3>
+                    <p>Von der Planung bis zum fertigen Traumbad – auch barrierefrei und altersgerecht.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>Solartechnik</h3>
+                    <p>Nutzen Sie die Kraft der Sonne für Warmwasser und Heizungsunterstützung.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Wartung & Reparatur</h3>
+                    <p>Regelmäßige Checks und schnelle Hilfe bei Defekten an Ihren Anlagen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="emergency-box">
+            <h2><i class="fas fa-exclamation-triangle"></i> 24h Notdienst</h2>
+            <p>Heizungsausfall oder Rohrbruch? Wir lassen Sie nicht im Kalten sitzen!</p>
+            <a href="tel:0355721981" class="emergency-phone">
+                <i class="fas fa-phone-alt"></i> 0355 721981
+            </a>
+        </div>
+    </section>
+
+    <section id="warum-wir">
+        <div class="container">
+            <div class="section-title">
+                <h2>Warum wir?</h2>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <div class="icon-circle"><i class="fas fa-check"></i></div>
+                    <div>
+                        <strong>Regionale Expertise</strong>
+                        <p>Tief verwurzelt in Cottbus-Kiekebusch.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <div class="icon-circle"><i class="fas fa-user-shield"></i></div>
+                    <div>
+                        <strong>Meisterqualität</strong>
+                        <p>Zertifizierte Facharbeit nach DIN-Normen.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <div class="icon-circle"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <strong>Termintreue</strong>
+                        <p>Pünktlich, sauber und zuverlässig.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background: var(--white);">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3><i class="fas fa-map-marker-alt" style="color:var(--primary)"></i> Kontakt</h3>
+                    <p><strong>Schallmann GmbH</strong><br>
+                    Bahnhofstraße 17<br>
+                    03051 Cottbus-Kiekebusch</p>
+                    <br>
+                    <a href="tel:0355721981" class="contact-link"><i class="fas fa-phone"></i> 0355 721981</a>
+                    <a href="mailto:info@schallmann.de" class="contact-link"><i class="fas fa-envelope"></i> info@schallmann.de</a>
+                </div>
+                <div class="hours">
+                    <h3><i class="fas fa-clock" style="color:var(--primary)"></i> Öffnungszeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag - Donnerstag:</span> <span>07:30 - 16:30 Uhr</span></li>
+                        <li><span>Freitag:</span> <span>07:30 - 14:00 Uhr</span></li>
+                        <li><span>Samstag - Sonntag:</span> <span>Geschlossen</span></li>
+                    </ul>
+                    <p style="margin-top:10px; font-size:0.85rem; color:#666;">* Außerhalb der Zeiten ist unser Notdienst erreichbar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Schallmann GmbH Heizung-Sanitär-Solartechnik. Alle Rechte vorbehalten.</p>
+            <div class="footer-line">
+                <p>Erstellt mit Professionalität für das Handwerk | <span style="color:var(--accent)">Werkspree</span></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
