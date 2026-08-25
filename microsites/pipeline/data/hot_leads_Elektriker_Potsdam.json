@@ -1,0 +1,296 @@
+{
+  "branch": "Elektriker",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "K + S Elektroservice GmbH",
+      "address": "Am Silbergraben 25, 14480 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJKQx9yghfqEcRic4DqKtqV5I",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 613880"
+    },
+    {
+      "name": "Elektro-Gehre Anlagenbau GmbH",
+      "address": "Benzstraße 25, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJMQnTMVxfqEcR0HpZK4yRYWI",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 864504"
+    },
+    {
+      "name": "Michael Schmidt",
+      "address": "Haselnussring 43, 14469 Potsdam Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJR8kx-KT2qEcRSO1Wqwqwg50",
+      "types": [
+        "electrician",
+        "electronics_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0172 3920449",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.ems-potsdam.de/"
+    },
+    {
+      "name": "Elektro Beißert",
+      "address": "Dieselstraße 7, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJx3iXOMxRqEcRzwim6Vg65dE",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 707522",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.elektro-beissert.de/",
+      "email": "elektro-beissert@potsdam.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'beißert' in domain/local",
+      "branch": "Elektriker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "BeDeWo Plus UG - Elektriker Potsdam | Elektro Notdienst",
+      "address": "Erlenhof 29, 14478 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJGVCQg-BfqEcRB6DzubfUdC4",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01516 1279874"
+    },
+    {
+      "name": "Elektro Niese & Heinrich GmbH",
+      "address": "Weinmeisterweg 1, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJhzSWljz2qEcRyfLHY51o52E",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 500004"
+    },
+    {
+      "name": "Elektrotechnik Sippel GmbH",
+      "address": "Gerlachstraße 10, 14480 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJNd8sHxBfqEcR6_cz5k9TAl4",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 6003828",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.elektrotechnik-sippel.de/",
+      "email": "elektrotechnik-sippel@arcor.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'elektrotechnik' in domain/local",
+      "branch": "Elektriker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Elektro Jahn GmbH & Co. KG Büro Potsdam",
+      "address": "Am Buchhorst 34, 14478 Potsdam Süd, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJZ3C8_Z9fqEcRcuHDWhkKzvY",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 88728440"
+    },
+    {
+      "name": "M&Y Elektro GmbH- Elektro Notdienst",
+      "address": "Siemensstraße 15, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJgWgjYi71qEcRDf0NRJl5mvY",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0178 8337500",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://my-elektrik.de/"
+    },
+    {
+      "name": "HVT Elektro GmbH",
+      "address": "Gewerbegebiet Gartenstraße-Ost, Großbeerenstraße 139, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ-eMMNkNfqEcRNv77zYOunZw",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 55099582",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.hvt-elektro.de/",
+      "email": "elektro@hvt-elektro.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hvt' in domain/local",
+      "branch": "Elektriker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Elektro Latosinszky",
+      "address": "Alt Nowawes 85, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJnSEcf7z1qEcRCDnpyrOXwiI",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Meisterbetrieb Elektrotechnik Boss",
+      "address": "Dorothea-Schneider-Straße, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ-dlCW-JkNYIRtyz84CNpGg8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "TGM GmbH",
+      "address": "Kaiser-Friedrich-Straße 68C, 14469 Potsdam Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJk3f8sAn0qEcRgflaB9twCB8",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Elektro Priegnitz",
+      "address": "Bäckerstraße 8, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJHZfJkiz1qEcR-mcrztwsWA0",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Dennis Sekula",
+      "address": "Am Gutstor 10c, 14476 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ25grwn_3qEcRqIqpxY7i4Ls",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Werner Neumann",
+      "address": "Schlaatzweg 6, 14473 Potsdam, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJzWSLtO31qEcRdxb0XO5BG3Q",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Ritter & Grimm Elektrotechnik GmbH",
+      "address": "Bruno-H.-Bürgel-Straße 44, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJvTHkjlVfqEcRAJNAtJVFACU",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Elektro Beißert",
+      "address": "Dieselstraße 7, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJx3iXOMxRqEcRzwim6Vg65dE",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 707522",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.elektro-beissert.de/",
+      "email": "elektro-beissert@potsdam.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'beißert' in domain/local",
+      "branch": "Elektriker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Elektrotechnik Sippel GmbH",
+      "address": "Gerlachstraße 10, 14480 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJNd8sHxBfqEcR6_cz5k9TAl4",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 6003828",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.elektrotechnik-sippel.de/",
+      "email": "elektrotechnik-sippel@arcor.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'elektrotechnik' in domain/local",
+      "branch": "Elektriker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "HVT Elektro GmbH",
+      "address": "Gewerbegebiet Gartenstraße-Ost, Großbeerenstraße 139, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ-eMMNkNfqEcRNv77zYOunZw",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 55099582",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.hvt-elektro.de/",
+      "email": "elektro@hvt-elektro.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hvt' in domain/local",
+      "branch": "Elektriker",
+      "region": "Potsdam"
+    }
+  ]
+}

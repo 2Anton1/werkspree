@@ -1,0 +1,202 @@
+{
+  "branch": "Elektriker",
+  "region": "Berlin Lichtenberg",
+  "all_candidates": [
+    {
+      "name": "Herd anschließen Berlin Elektro Pawlowski",
+      "address": "Landsberger Allee 394, 12681 Berlin-Bezirk Marzahn-Hellersdorf, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJERtmVgRMqEcRZQIzHPJBR2E",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "030 89659947",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "https://www.berliner-elektronotdienst.de/herdanschluss/"
+    },
+    {
+      "name": "Reta Elektrotechnik GmbH",
+      "address": "Rigaer Str. 13, 10247 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJUfNDXTxPqEcRoMKwkobjuCk",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0176 43243432"
+    },
+    {
+      "name": "Sünkel elektro GmbH",
+      "address": "Franz-Jacob-Straße 1, 10369 Berlin-Bezirk Lichtenberg, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJI29rSWNOqEcRjD_Vy0XTGZs",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 92795454"
+    },
+    {
+      "name": "AD Elektrotechnik & Service | Meisterbetrieb Alexander Dubs",
+      "address": "Herzbergstraße 19, 10365 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJDUs2oE1LqEcRo_uyXNzlRdw",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0179 7807820"
+    },
+    {
+      "name": "Elektro Notdienst Berlin Friedrichshain Kreuzberg Prenzlauer Berg und benachbarte Bezirke",
+      "address": "Ebertystraße 32, 10249 Berlin-Bezirk Friedrichshain-Kreuzberg, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJEeFfimVOqEcRWssncyWxF_8",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "030 89659947"
+    },
+    {
+      "name": "Buzz Elektrotechnik GmbH",
+      "address": "John-Schehr-Straße 20A, 10407 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJFyVJ8nFPqEcR2srLrVz1vCY",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0162 1534521"
+    },
+    {
+      "name": "Elektro Pawlowski Berlin Lichtenberg Marzahn Hohenschönhausen",
+      "address": "Berliner-Elektroservice, Landsberger Allee 394, 12681 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJM7cIUwRMqEcRRzc7eXG3Mx0",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "030 89659947"
+    },
+    {
+      "name": "M&Y Elektro GmbH - Elektriker Mitte | Elektro Notdienst",
+      "address": "Dircksenstraße 41, 10178 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJDyeZguJRqEcRRz2mkh9bsM8",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0178 8337500",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://my-elektrik.de/"
+    },
+    {
+      "name": "Hauptstadt-Elektriker Sofort service",
+      "address": "Kommandantenstraße 56, 10969 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNYPEyyFPqEcRCpaAoSAIQ3c",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "030 45977067"
+    },
+    {
+      "name": "Elektro Reibsch Andreas König",
+      "address": "Seumestraße 27, 10245 Berlin-Bezirk Friedrichshain-Kreuzberg, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJmRupvlhOqEcRvptKGp4JwvA",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "030 2914332"
+    },
+    {
+      "name": "Bala24 UG - Elektroinstallation Berlin",
+      "address": "Ziegelstraße 2, 10117 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ8W7OVQpRqEcRW-2y7R1Bwlo",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "AC/DC Elektroinstallation und Elektrosteuerungen GmbH",
+      "address": "Josef-Orlopp-Straße 89, 10365 Berlin-Bezirk Lichtenberg, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJp2z4tplOqEcR__Ex0YoO7K4",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Likosys GmbH Elektroanlagen",
+      "address": "Gundelfinger Str. 45, 10318 Berlin-Bezirk Lichtenberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJvy73HrlIqEcRXTvuyKwEAeY",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Klötzing Elektro und Wärme GmbH",
+      "address": "Dorotheastraße 7, 10318 Berlin-Bezirk Lichtenberg, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJZ49QOtZIqEcRkBVNY_i3iQ8",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Elektro- Ullrich Inh. Ulf Ullrich",
+      "address": "Alt-Friedrichsfelde 94, 10315 Berlin-Bezirk Lichtenberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJRyUcb7ZOqEcREiNRuHzbVXs",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "eMax Elektrotechnik",
+      "address": "Siegfriedstraße 52, 10365 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJP9lRTfVPqEcRvCPEXIg0Ado",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": []
+}
