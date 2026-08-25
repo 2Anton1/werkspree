@@ -1,0 +1,264 @@
+{
+  "branch": "Heizung Sanitär",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "Müller - Rother Heizung Sanitär GmbH",
+      "address": "Drebkauer Str. 68, 03050 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJB03AJnR0CEcRKpL9gsqp1lY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 537200",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.mueller-rother.de/",
+      "email": "mail@mueller-rother.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'müller' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Schallmann GmbH Heizung- Sanitär-Solartechnik",
+      "address": "Bahnhofstraße 17, 03051 Cottbus-Kiekebusch, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ-9OWZFVxCEcRMnhUkPCRC9U",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "0355 721981",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.schallmann.de/",
+      "email": "info@schallmann.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'schallmann' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Cottbus"
+    },
+    {
+      "name": "WWI-Cottbus GmbH",
+      "address": "Dissenchener Str. 59, 03042 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJRbS_0jp0CEcRPZlYWBbnjJA",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": ""
+    },
+    {
+      "name": "Thirling und Patzig GbR",
+      "address": "Merzdorfer Weg 33, 03042 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJO0kfATB0CEcRp7MNpW0u9D0",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 7299982"
+    },
+    {
+      "name": "Andreas Stracke Heizungs-, Lüftungs- und Sanitärinstallation",
+      "address": "Schmogrower Weg 26, 03044 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJnY91n_l0CEcRd2SPqrVUpoc",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "0355 700926",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Fred Kuba Installateur und Heizungsbau",
+      "address": "Erlensteg 8, 03054 Cottbus-Döbbrick, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJM4UahX11CEcRrsSJCdiAUdI",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "0355 8628801",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "KLIN GmbH",
+      "address": "Kolkwitzer Str. 47, 03046 Cottbus, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJW4dFioV0CEcR1tldm5NrPWs",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 22731",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Dirk Ehrecke",
+      "address": "Byhlener Str. 17, 03044 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJY9swsFN0CEcRHHZJTTRw_Us",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "0355 824200",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.haustechnik-ehrecke.de/"
+    },
+    {
+      "name": "Schandog HK-Technik GmbH",
+      "address": "Kolkwitzer Str. 67, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJc77NaoV0CEcRXaDtp8YQl8c",
+      "types": [
+        "electrician",
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 791928",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.waermepumpenfuchs.de/"
+    },
+    {
+      "name": "Heizungs- und Sanitärbau Konzack GmbH",
+      "address": "Döbbricker Str. 15, 03055 Cottbus-Sielow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJf7HWoxV1CEcRUGYjCp-jAlU",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "0355 861734",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.heizung-konzack.de/"
+    },
+    {
+      "name": "Schwager`s Geräteservice GmbH",
+      "address": "Stephanstraße 6, 03044 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ6yRzBPx0CEcRT6LJp4GtpiA",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Bernd Walter Heizung und Sanitär",
+      "address": "Madlower Hauptstraße 15, 03050 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJcdCLwu9zCEcRz53sv0kr3kg",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "bäderinsel GmbH",
+      "address": "Madlower Hauptstraße 65, 03050 Cottbus-Gallinchen, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJAVyIdJAicEERgs93Q4GqUZk",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "PTI Pomorin & Tonn Installations GmbH",
+      "address": "Dissenchener Str. 85, 03042 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJoUofnD50CEcRCS6MYj9nbVo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Müller - Rother Heizung Sanitär GmbH",
+      "address": "Drebkauer Str. 68, 03050 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJB03AJnR0CEcRKpL9gsqp1lY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 537200",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.mueller-rother.de/",
+      "email": "mail@mueller-rother.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'müller' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Schallmann GmbH Heizung- Sanitär-Solartechnik",
+      "address": "Bahnhofstraße 17, 03051 Cottbus-Kiekebusch, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ-9OWZFVxCEcRMnhUkPCRC9U",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "0355 721981",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.schallmann.de/",
+      "email": "info@schallmann.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'schallmann' in domain/local",
+      "branch": "Heizung Sanitär",
+      "region": "Cottbus"
+    }
+  ]
+}

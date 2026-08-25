@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müller - Rother Heizung Sanitär GmbH | Cottbus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C5F7F;
+            --accent: #A8C8E0;
+            --bg-light: #F0F4F8;
+            --text-dark: #1A2B36;
+            --white: #ffffff;
+            --radius: 10px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a3a4f 100%);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            background: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* About Us */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        /* Services Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+            background: var(--white);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        /* Emergency Box */
+        .emergency-box {
+            background: #e74c3c;
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+
+        .emergency-box h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .emergency-box a {
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        /* Why Us */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .usp-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .usp-icon {
+            background: var(--primary);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Contact & Opening Hours */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .hours-info {
+            background: var(--bg-light);
+            padding: 40px;
+            border-radius: var(--radius);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .info-item i {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .info-item a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .info-item a:hover {
+            color: var(--primary);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .werkspree-note {
+            margin-top: 20px;
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-grid, .contact-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <i class="fas fa-tools"></i>
+                Müller - Rother
+            </a>
+            <div class="header-contact">
+                <a href="tel:0355537200" style="text-decoration: none; color: var(--primary); font-weight: 600;">
+                    <i class="fas fa-phone"></i> 0355 537200
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Installation & Wartung vom Profi in Cottbus</h1>
+            <p>Ihre Experten für moderne Heizsysteme und barrierefreie Sanitärlösungen. Zuverlässig, sauber und fachgerecht.</p>
+            <a href="#kontakt" class="btn">Termin anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Über uns</h2>
+                    </div>
+                    <p>Willkommen bei der Müller - Rother Heizung Sanitär GmbH, Ihrem traditionsbewussten Fachbetrieb direkt in Cottbus. Seit vielen Jahren stehen wir für höchste Qualität im Bereich der Haus- und Gebäudetechnik.</p>
+                    <p>Unser Team kombiniert handwerkliche Präzision mit modernster Technik, um für unsere Kunden in Cottbus und Umgebung nachhaltige Lösungen zu schaffen. Ob effiziente Heizungsmodernisierung oder die Planung Ihres Traumbades – wir begleiten Sie von der ersten Beratung bis zur finalen Abnahme.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1581094288338-2314dddb7ec3?auto=format&fit=crop&q=80&w=800" alt="Handwerk" style="width: 100%; border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Heizungsbau</h3>
+                    <p>Moderne Gas-, Öl- oder Pelletheizungen sowie Wärmepumpen für effiziente Wärme.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-bath"></i>
+                    <h3>Sanitär & Bad</h3>
+                    <p>Komplette Bad-Sanierungen, barrierefreie Umbauten und moderne Armaturentechnik.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Wartung</h3>
+                    <p>Regelmäßige Inspektion Ihrer Anlagen zur Sicherung der Langlebigkeit und Effizienz.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-faucet"></i>
+                    <h3>Reparaturen</h3>
+                    <p>Schnelle Hilfe bei Rohrbrüchen, tropfenden Hähnen oder Heizungsausfällen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="emergency-box">
+            <h3><i class="fas fa-exclamation-triangle"></i> Sanitär-Notdienst</h3>
+            <p>Heizung kalt oder Wasserschaden? Wir sind für Sie da!</p>
+            <a href="tel:0355537200"><i class="fas fa-phone-alt"></i> 0355 537200</a>
+        </div>
+    </section>
+
+    <section id="warum-wir">
+        <div class="container">
+            <div class="section-title">
+                <h2>Warum Müller - Rother?</h2>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h3>Lokal in Cottbus</h3>
+                        <p>Kurze Anfahrtswege und schnelle Reaktionszeiten für alle Kunden im Stadtgebiet.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-check-circle"></i></div>
+                    <div>
+                        <h3>Meisterqualität</h3>
+                        <p>Zertifizierter Fachbetrieb mit langjähriger Erfahrung und geschultem Personal.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-leaf"></i></div>
+                    <div>
+                        <h3>Zukunftssicher</h3>
+                        <p>Wir beraten Sie kompetent zu erneuerbaren Energien und Fördermöglichkeiten.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontakt & Öffnungszeiten</h2>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h3>Nehmen Sie Kontakt auf</h3>
+                    <p style="margin-bottom: 30px;">Haben Sie Fragen oder benötigen Sie ein Angebot? Rufen Sie uns an oder schreiben Sie uns eine E-Mail.</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Drebkauer Str. 68, 03050 Cottbus</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:0355537200">0355 537200</a>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:mail@mueller-rother.de">mail@mueller-rother.de</a>
+                    </div>
+                </div>
+                <div class="hours-info">
+                    <h3>Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag</td><td>07:30 – 16:30</td></tr>
+                        <tr><td>Dienstag</td><td>07:30 – 16:30</td></tr>
+                        <tr><td>Mittwoch</td><td>07:30 – 16:30</td></tr>
+                        <tr><td>Donnerstag</td><td>07:30 – 16:30</td></tr>
+                        <tr><td>Freitag</td><td>07:30 – 14:00</td></tr>
+                        <tr><td>Samstag/Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Müller - Rother Heizung Sanitär GmbH</span>
+            <p>&copy; 2023 Müller - Rother Heizung Sanitär GmbH. Alle Rechte vorbehalten.</p>
+            <p class="werkspree-note">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
