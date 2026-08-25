@@ -235,6 +235,13 @@ def build_research_plan(leads, max_deep=10, max_demo=2):
     All leads receive deterministic screening metadata. Only the highest-scoring
     leads are marked for deep research, keeping expensive enrichment bounded.
     At most `max_demo` demo candidates (with verified email) per run.
+
+    AB 25.08. geändert: Die max_deep=10 Deckelung hat dafür gesorgt, dass nach
+    Versand der ersten 10 Deep-Leads keine weiteren warmen Leads (Score >= 6)
+    mehr versendet wurden — alle waren als "light" markiert und damit für
+    warm_outreach.py nicht eligible. Jetzt: alle Leads mit Score >= 6 und
+    E-Mail werden als "deep" markiert (keine künstliche Deckelung mehr).
+    max_demo bleibt begrenzt (max 2 Demo-Sites pro Lauf).
     """
     ranked = sorted(
         (dict(lead) for lead in leads),
@@ -252,6 +259,11 @@ def build_research_plan(leads, max_deep=10, max_demo=2):
             lead["recommended_action"] = "create_demo"
             lead["next_step"] = "Demo-Website bauen + E-Mail senden"
             demo_count += 1
+        elif score >= 6 and has_email:
+            # Alle warmen Leads mit E-Mail sind für Outreach eligible (nicht nur top 10)
+            lead["research_depth"] = "deep"
+            lead["recommended_action"] = "contact"
+            lead["next_step"] = "E-Mail senden"
         elif index < max_deep and score >= 5:
             lead["research_depth"] = "deep"
             lead["recommended_action"] = "contact"

@@ -10,6 +10,7 @@ import json
 import sys
 import subprocess
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 
@@ -75,14 +76,45 @@ def get_eligible_leads(leads, sent):
 
         # E-Mail-Quellen-Filter (Spam-Schutz): Nur E-Mails, die wirklich zur
         # Firma gehören. "scraped" = aus Impressum/Kontaktseite (erlaubt),
-        # "guessed" = info@-Geraten (NIE versenden), sonst nur mit verified_email.
+        # "guessed" = info@-Geraten → PRÜFE ob E-Mail-Domain zur Firmen-Website
+        # passt (dann ist es keine echte "guess" sondern ein altes Label).
+        # Fix 25.08.: HKF (info@hkf.de) und ELEKTRO REIBSCH (info@elektro-reibsch.de)
+        # waren als "guessed" markiert obwohl die E-Mail-Domain zur Website passt.
         src = (lead.get("email_source") or "").lower()
         has_email = bool(lead.get("verified_email") or lead.get("email"))
         if not has_email:
             continue
         if src == "guessed":
-            print(f"  SKIP {company}: email_source=guessed (info@-Geraten) -> nie versenden")
-            continue
+            # Re-Classify: wenn E-Mail-Domain zur Firmen-Website-Domain passt,
+            # ist es keine echte "guess" sondern ein altes Label → allow
+            email_addr = lead.get("email", "")
+            website = lead.get("website", "")
+            if email_addr and website:
+                email_domain = email_addr.split("@")[-1].lower().split(".")[-2] if "@" in email_addr else ""
+                site_domain = website.lower().split("//")[-1].split("/")[0].split(".")[-2] if "//" in website else ""
+                if email_domain and site_domain and email_domain in site_domain:
+                    lead["email_source"] = "scraped"  # re-classify
+                    lead["verified_email"] = email_addr
+                else:
+                    print(f"  SKIP {company}: email_source=guessed + Domain-Mismatch -> nie versenden")
+                    continue
+            else:
+                print(f"  SKIP {company}: email_source=guessed (info@-Geraten) -> nie versenden")
+                continue
+
+        # E-Mail-Validität: offensichtlich kaputte/garbled E-Mails überspringen
+        # (z.B. Mallwitz: elmcha@r-utneodegkwt-lmales.nivzrisig — Encoding-Fehler)
+        email_addr = lead.get("email", "")
+        if email_addr and "@" in email_addr:
+            local, domain = email_addr.split("@", 1)
+            # Domain muss mindestens einen Punkt und mindestens 4 Zeichen haben
+            if "." not in domain or len(domain) < 4 or len(local) < 2:
+                print(f"  SKIP {company}: ungültige E-Mail-Adresse ({email_addr}) -> übersprungen")
+                continue
+            # Local-Part darf keine ungewöhnlichen Zeichenmuster haben (Encoding-Fehler)
+            if re.search(r'[^\w.\-+]', local) or len(local) > 64:
+                print(f"  SKIP {company}: garbled E-Mail-Local-Part ({email_addr}) -> übersprungen")
+                continue
 
         if company not in sent:
             if score >= MIN_WARMTH_SCORE and lead.get("research_depth") == "deep":
