@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahnarztpraxis Riedel & Kollegen | Brandenburg an der Havel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4A9EAB;
+            --accent: #B8E0E6;
+            --bg-light: #F8FAFA;
+            --text-dark: #2C3E50;
+            --text-muted: #546E7A;
+            --white: #FFFFFF;
+            --shadow: 0 10px 30px rgba(74, 158, 171, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            padding: 100px 0;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background: var(--bg-light);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* About Us */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Services Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .avatar-box {
+            width: 120px;
+            height: 120px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .team-member h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* For Patients */
+        .patients-list {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .check-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .check-item::before {
+            content: '✓';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        /* Contact & Hours */
+        .contact-hours-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .info-box h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .info-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+
+        .info-link:hover {
+            color: var(--primary);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-credit {
+            margin-top: 10px;
+            opacity: 0.6;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .contact-hours-container { grid-template-columns: 1fr; }
+            .hero { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    RIEDEL & KOLLEGEN
+                    <span>Zahnarztpraxis Brandenburg</span>
+                </div>
+                <a href="tel:03381301183" class="info-link" style="font-weight: 600;">☏ 03381 301183</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Ihre Zahngesundheit in besten Händen.</h1>
+            <p>Moderne Zahnheilkunde für die ganze Familie. Wir kombinieren fachliche Expertise mit einer einfühlsamen Betreuung im Herzen von Brandenburg an der Havel.</p>
+            <a href="#kontakt" class="cta-button">Termin buchen</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Willkommen in unserer Praxis</h2>
+            </div>
+            <div class="about-content">
+                <p>In der Zahnarztpraxis Riedel & Kollegen stehen Sie als Patient im Mittelpunkt. Dipl.-Stom. Dorith Riedel, Dr. Saskia Kappler und unser engagiertes Team bieten Ihnen in Brandenburg an der Havel eine umfassende zahnmedizinische Versorgung auf höchstem Niveau. Unser Ziel ist es, Ihre natürlichen Zähne ein Leben lang gesund zu erhalten. In einer entspannten und modernen Atmosphäre nehmen wir uns Zeit für Ihre individuellen Bedürfnisse und beraten Sie transparent zu allen Behandlungsmöglichkeiten.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background-color: #f0f7f8;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Prophylaxe</h3>
+                    <p>Professionelle Zahnreinigung und Vorsorge für ein dauerhaft strahlendes Lächeln und gesundes Zahnfleisch.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Zahnerhaltung</h3>
+                    <p>Hochwertige Füllungstherapie und Wurzelbehandlungen unter Einsatz modernster Technik.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Implantologie</h3>
+                    <p>Festsitzender Zahnersatz, der sich anfühlt wie die eigenen Zähne – für mehr Lebensqualität.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ästhetik</h3>
+                    <p>Bleaching, Veneers und ästhetische Korrekturen für ein harmonisches und natürliches Zahnbild.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Parodontologie</h3>
+                    <p>Systematische Behandlung von Zahnfleischerkrankungen zum Schutz Ihres Zahnhalteapparates.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Kinderzahnheilkunde</h3>
+                    <p>Einfühlsame Behandlung unserer kleinsten Patienten für einen angstfreien Besuch beim Zahnarzt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar-box">DR</div>
+                    <h4>Dipl.-Stom. Dorith Riedel</h4>
+                    <p>Zahnärztin / Inhaberin</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar-box">SK</div>
+                    <h4>Dr. Saskia Kappler</h4>
+                    <p>Zahnärztin</p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar-box">RK</div>
+                    <h4>Team</h4>
+                    <p>Assistenz & Prophylaxe</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="patients" style="background-color: #f0f7f8;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Für unsere Patienten</h2>
+            </div>
+            <div class="patients-list">
+                <div class="check-item">Recall-Service für Ihre Vorsorgetermine</div>
+                <div class="check-item">Barrierefreier Zugang zur Praxis</div>
+                <div class="check-item">Kurze Wartezeiten durch effizientes Zeitmanagement</div>
+                <div class="check-item">Ausführliche Beratung zu Heil- und Kostenplänen</div>
+                <div class="check-item">Notfalltermine am selben Tag (nach tel. Anmeldung)</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-hours-container">
+                <div class="info-box">
+                    <h3>Kontakt</h3>
+                    <p><strong>Zahnarztpraxis Riedel & Kollegen</strong></p>
+                    <p>Hochstraße 19</p>
+                    <p>14770 Brandenburg an der Havel</p>
+                    <br>
+                    <a href="tel:03381301183" class="info-link">Telefon: 03381 301183</a>
+                    <a href="mailto:info@riedel-zahnarzt.de" class="info-link">E-Mail: info@riedel-zahnarzt.de</a>
+                </div>
+                <div class="info-box">
+                    <h3>Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag</td><td>08:00 – 18:00</td></tr>
+                        <tr><td>Dienstag</td><td>08:00 – 19:00</td></tr>
+                        <tr><td>Mittwoch</td><td>08:00 – 13:00</td></tr>
+                        <tr><td>Donnerstag</td><td>08:00 – 18:00</td></tr>
+                        <tr><td>Freitag</td><td>08:00 – 13:00</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Zahnarztpraxis Riedel & Kollegen. Alle Rechte vorbehalten.</p>
+            <p class="footer-credit">Design & Realisierung durch Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
