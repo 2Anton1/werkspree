@@ -1,115 +1,115 @@
 {
   "Blachnierz & Söhne Elektroinstallationsges. mbH": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-14T16:46:57.081061",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-23T17:07:36.922823",
     "email": "info@elektro-bs.de",
     "branch": "Elektriker",
     "region": "Berlin",
-    "warmth_score": 6,
+    "warmth_score": 8,
     "response_status": "followup_sent"
   },
   "Griesbach Elektroanlagen": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-14T16:46:57.637667",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-23T17:07:37.586669",
     "email": "info@elektro-griesbach.de",
     "branch": "Elektriker",
     "region": "Berlin",
-    "warmth_score": 6,
+    "warmth_score": 7,
     "response_status": "followup_sent"
   },
   "ELEKTRO REIBSCH Andreas König": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-14T16:46:58.487125",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-25T10:24:23.758893",
     "email": "info@elektro-reibsch.de",
     "branch": "Elektriker",
     "region": "Berlin",
-    "warmth_score": 6,
+    "warmth_score": 8,
     "response_status": "followup_sent"
   },
   "EF-ES-WE Elektroanlagen GmbH": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-14T16:46:59.087787",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-23T17:07:38.214400",
     "email": "kontakt@efeswe.de",
     "branch": "Elektriker",
     "region": "Berlin",
-    "warmth_score": 6,
+    "warmth_score": 7,
     "response_status": "followup_sent"
   },
   "Herzog Elektro-Anlagen GmbH": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-14T16:46:59.680916",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-24T10:00:48.649590",
     "email": "info@herzog-elektro.de",
     "branch": "Elektriker",
     "region": "Berlin",
-    "warmth_score": 6,
+    "warmth_score": 7,
     "response_status": "followup_sent"
   },
   "livinginberlin.de": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-14T16:46:55.147630",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-23T17:07:32.335608",
     "email": "info@livinginberlin.de",
     "branch": "Immobilienmakler",
     "region": "Berlin",
-    "warmth_score": 7,
+    "warmth_score": 10,
     "response_status": "followup_sent"
   },
   "duwe-immobilien.de": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-14T16:46:55.891921",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-23T17:07:35.667275",
     "email": "info@duwe-immobilien.de",
     "branch": "Immobilienmakler",
     "region": "Berlin",
-    "warmth_score": 7,
+    "warmth_score": 8,
     "response_status": "followup_sent"
   },
   "HKF Hergenröther Kurka Steuerberatungsgesellschaft mbH": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-14T12:00:00",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-25T10:24:23.136998",
     "email": "info@hkf.de",
     "branch": "Steuerberater",
     "region": "Potsdam",
-    "warmth_score": 6,
-    "response_status": "awaiting_reply"
+    "warmth_score": 10,
+    "response_status": "followup_sent"
   },
   "kanzlei-barz.de": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-17T12:41:21.994745",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-25T10:00:28.426824",
     "email": "mail@kanzlei-barz.de",
     "branch": "Anwalt",
     "region": "Berlin",
-    "warmth_score": 6,
+    "warmth_score": 10,
     "response_status": "followup_sent"
   },
   "oehmcke-immobilien.de": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-14T16:46:54.486794",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-23T17:07:35.076475",
     "email": "immo@oehmcke.eu",
     "branch": "Immobilienmakler",
     "region": "Berlin",
-    "warmth_score": 7,
+    "warmth_score": 9,
     "response_status": "followup_sent"
   },
   "kensington-international.com": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-14T16:46:56.535856",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-23T17:07:36.258109",
     "email": "headoffice@kensington-international.com",
     "branch": "Immobilienmakler",
+    "region": "Berlin",
+    "warmth_score": 8,
+    "response_status": "followup_sent"
+  },
+  "recht-web.de": {
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-25T10:00:28.863154",
+    "email": "kanzlei@recht-web.de",
+    "branch": "Anwalt",
     "region": "Berlin",
     "warmth_score": 7,
     "response_status": "followup_sent"
   },
-  "recht-web.de": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-17T12:41:22.595502",
-    "email": "kanzlei@recht-web.de",
-    "branch": "Anwalt",
-    "region": "Berlin",
-    "warmth_score": 6,
-    "response_status": "followup_sent"
-  },
   "ra-gerd-engelmann.de": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-17T12:41:23.133294",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-25T10:00:29.333795",
     "email": "ra.gerd.engelmann@t-online.de",
     "branch": "Anwalt",
     "region": "Berlin",
@@ -117,12 +117,93 @@
     "response_status": "followup_sent"
   },
   "ruspravo.de": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-17T12:41:23.769542",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-08-25T10:00:29.723501",
     "email": "anod@ruspravo.de",
     "branch": "Anwalt",
     "region": "Berlin",
     "warmth_score": 6,
     "response_status": "followup_sent"
+  },
+  "Steuerberaterin Zimniok, Claudia": {
+    "status": "initial_sent",
+    "last_sent": "2026-08-23T17:07:33.264835",
+    "email": "c.zimniok@steuerberatung-zimniok.de",
+    "branch": "Steuerberater",
+    "region": "Potsdam",
+    "warmth_score": 10,
+    "response_status": "awaiting_reply"
+  },
+  "Schuch, Melanie Steuerberaterin": {
+    "status": "initial_sent",
+    "last_sent": "2026-08-23T17:07:33.906547",
+    "email": "melanie.schuch@steuerberater-schuch.de",
+    "branch": "Steuerberater",
+    "region": "Potsdam",
+    "warmth_score": 10,
+    "response_status": "awaiting_reply"
+  },
+  "Zimniok Claudia Steuerberaterin": {
+    "status": "initial_sent",
+    "last_sent": "2026-08-23T17:07:34.477575",
+    "email": "c.zimniok@steuerberatung-zimniok.de",
+    "branch": "Steuerberater",
+    "region": "Potsdam",
+    "warmth_score": 10,
+    "response_status": "awaiting_reply"
+  },
+  "H+P Steuerberatungsgesellschaft Wirtschaftsberatungsgesellschaft mbH": {
+    "status": "initial_sent",
+    "last_sent": "2026-08-25T10:24:24.459627",
+    "email": "hallodetmold@sutter-media.de",
+    "branch": "Steuerberater",
+    "region": "Potsdam",
+    "warmth_score": 8,
+    "response_status": "awaiting_reply"
+  },
+  "Christl Bernd": {
+    "status": "initial_sent",
+    "last_sent": "2026-08-25T10:24:25.053443",
+    "email": "christl@stb-christl.de",
+    "branch": "Steuerberater",
+    "region": "Potsdam",
+    "warmth_score": 7,
+    "response_status": "awaiting_reply"
+  },
+  "K.u.A. Münster Sanitec Sanitär- u. Bauklempnerei": {
+    "status": "initial_sent",
+    "last_sent": "2026-08-25T10:24:27.661353",
+    "email": "info@sanitec-muenster.de",
+    "branch": "Sanitär",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "awaiting_reply"
+  },
+  "Pfister Sanitär & Heizung": {
+    "status": "initial_sent",
+    "last_sent": "2026-08-26T10:01:15.149867",
+    "email": "info@pfister-berlin.de",
+    "branch": "Sanitär",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "awaiting_reply"
+  },
+  "Bock GmbH Versorgungstechnik": {
+    "status": "initial_sent",
+    "last_sent": "2026-08-26T10:01:15.730156",
+    "email": "info@bock-versorgungstechnik.de",
+    "branch": "Sanitär",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "awaiting_reply"
+  },
+  "La Choza de la Anaconda": {
+    "status": "initial_sent",
+    "last_sent": "2026-08-26T10:01:16.298703",
+    "email": "info@lachozadelaanaconda.de",
+    "branch": "Restaurant",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "awaiting_reply"
   }
 }
