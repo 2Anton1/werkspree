@@ -1,0 +1,299 @@
+{
+  "branch": "Zahnarzt",
+  "region": "Brandenburg an der Havel",
+  "all_candidates": [
+    {
+      "name": "Zahnarztpraxis Alexander Schulze",
+      "address": "Jacobstraße 14, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJhWwbO1_AqEcRUd3MQtJfazU",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 521100",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.zahnarzt-brandenburg-alexander-schulze.de/"
+    },
+    {
+      "name": "Dr. Martin Deichsel, Zahnarzt",
+      "address": "Luckenberger Str. 3, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ5x9qMffAqEcR7K2A8oWhjS4",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 223711",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.dr-deichsel.de/",
+      "email": "info@dr-deichsel.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'deichsel' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Denthouse | Zahnarztpraxis Dr. Willi Bach | Zahnarzt Brandenburg",
+      "address": "Sankt-Annen-Straße 38, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ73kFbVrAqEcR7z2dZShfuW4",
+      "types": [
+        "dentist",
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 226581",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.dent-house.com/"
+    },
+    {
+      "name": "Zahnarztpraxis Barge",
+      "address": "Sankt-Annen-Straße 17, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ-wiYEzfBqEcRWqEiGy_QRJ4",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 524184"
+    },
+    {
+      "name": "Zahnarztpraxis Riedel & Kollegen: Dipl.-Stom. Dorith Riedel, Dr. Saskia Kappler",
+      "address": "Hochstraße 19, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ-zqba_rAqEcRh48sTfO1ew0",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 301183",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.riedel-zahnarzt.de/",
+      "email": "info@riedel-zahnarzt.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'riedel' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Zahnarztpraxis an der Stadtschleuse",
+      "address": "An d. Stadtschleuse 11, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJSVKjlFjAqEcRYc46f1wHb94",
+      "types": [
+        "dentist",
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 521042"
+    },
+    {
+      "name": "Zahnarzt Dr. Robert Mey",
+      "address": "Nicolaipl. 8, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJWZst9vnAqEcRirJWFvsS7h4",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 300933",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.mey-zahnarzt.de/",
+      "email": "info@mey-zahnarzt.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'mey' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Oralchirurgie am Bollmannbrunnen - Mario Augustin",
+      "address": "Hauptstraße 22, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJy9IMY1fAqEcRqELdg0dx5NY",
+      "types": [
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 2866592"
+    },
+    {
+      "name": "Dr. med. dent. Frank Schwerin",
+      "address": "Lilienweg 7, 14772 Brandenburg an der Havel-Görden, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJy0LNaNjAqEcRV-U9O-c3R3k",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 701878",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.zahnarztpraxis-drschwerin.de/team/dr-frank-schwerin/",
+      "email": "za.praxis-schwerin@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'schwerin' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Zahnarztpraxis Luisa Vintila",
+      "address": "Steinstraße 10, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJH5JllkzBqEcRwzOr-KXPuEM",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 524415"
+    },
+    {
+      "name": "Frau Dipl.-Stom. Heidrun Uckert",
+      "address": "Wilhelm-Gottschalk-Straße 6, 14774 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ-Sdi8Iu4qEcRqLkH7hbmDJk",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Dr. med. Dr. med. dent. Tobias Ulbricht // MKG-Brandenburg //",
+      "address": "Neustädtischer Markt 23, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJxSdnx1DAqEcRRvf01BRLvAk",
+      "types": [
+        "dentist",
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Praxis Dr. Eigenwillig",
+      "address": "Kurstraße 14, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJhSCgtVnAqEcRp5Xu08yE85M",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Dr. Martin Deichsel, Zahnarzt",
+      "address": "Luckenberger Str. 3, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ5x9qMffAqEcR7K2A8oWhjS4",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 223711",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.dr-deichsel.de/",
+      "email": "info@dr-deichsel.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'deichsel' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Zahnarztpraxis Riedel & Kollegen: Dipl.-Stom. Dorith Riedel, Dr. Saskia Kappler",
+      "address": "Hochstraße 19, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ-zqba_rAqEcRh48sTfO1ew0",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 301183",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.riedel-zahnarzt.de/",
+      "email": "info@riedel-zahnarzt.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'riedel' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Zahnarzt Dr. Robert Mey",
+      "address": "Nicolaipl. 8, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJWZst9vnAqEcRirJWFvsS7h4",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 300933",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.mey-zahnarzt.de/",
+      "email": "info@mey-zahnarzt.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'mey' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Dr. med. dent. Frank Schwerin",
+      "address": "Lilienweg 7, 14772 Brandenburg an der Havel-Görden, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJy0LNaNjAqEcRV-U9O-c3R3k",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 701878",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.zahnarztpraxis-drschwerin.de/team/dr-frank-schwerin/",
+      "email": "za.praxis-schwerin@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'schwerin' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Brandenburg an der Havel"
+    }
+  ]
+}
