@@ -25,17 +25,15 @@ COLD SIGNALS:
 
 import json
 import re
-import subprocess
 import os
 import time
 from pathlib import Path
 
-# Ensure firecrawl is in PATH (cron doesn't have ~/.local/bin)
-os.environ["PATH"] = os.environ.get("PATH", "") + ":/Users/anton/.local/bin"
+from scrapling.fetchers import Fetcher
 
 DATA_DIR = Path(__file__).parent / "data"
 SCORED_FILE = DATA_DIR / "scored_leads.json"
-CACHE_DIR = Path(__file__).parent / ".." / ".firecrawl" / "warmth"
+CACHE_DIR = Path(__file__).parent / "data" / "warmth_cache"
 
 AUTOMATION_NEEDS = {
     "Steuerberater": "Rechnungs- und Belegverarbeitung",
@@ -53,24 +51,14 @@ AUTOMATION_NEEDS = {
 
 def scrape_website(url, timeout=15):
     """Scrape a website and return the content.
-    Nutzt requests + BeautifulSoup statt Firecrawl CLI —
-    Firecrawl-Timeouts haben ~90% der Scrapes scheitern lassen."""
+    Nutzt Scrapling Fetcher (anti-bot, adaptiv) statt requests+BS4."""
     if not url or "gelbeseiten.de" in url:
         return None
     try:
-        import requests as _requests
-    except ImportError:
-        return None
-    HEADERS = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7",
-    }
-    try:
-        r = _requests.get(url, headers=HEADERS, timeout=timeout, allow_redirects=True)
-        if r.status_code != 200:
+        page = Fetcher.get(url, timeout=timeout)
+        if page.status != 200:
             return None
-        return r.text[:50000]  # Cap bei 50k Zeichen
+        return page.get_all_text()[:50000]  # Cap bei 50k Zeichen
     except Exception:
         return None
 

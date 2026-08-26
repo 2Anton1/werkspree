@@ -20,9 +20,10 @@ import re
 import sys
 import time
 import os
-import requests
 from pathlib import Path
 from urllib.parse import quote
+
+from scrapling.fetchers import Fetcher
 
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
@@ -52,12 +53,6 @@ GENERIC_COMPANY_TOKENS = {
     "gartenbau", "gmbh", "ug", "kg", "e.k.", "eg", "center", "studio",
     "service", "betrieb", "gesellschaft", "team", "schule", "institut",
     "friseur", "frisör", "frisoer", "hair", "lifestyle", "kosmetikstudio",
-}
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "de-DE,de;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
 EMAIL_PATHS = ["/", "/kontakt", "/kontakt/", "/impressum", "/imprint", "/ueber-uns", "/about", "/contact"]
@@ -98,13 +93,14 @@ def search_places(query, api_key, max_results=10):
     """Google Places API Text Search."""
     if not api_key:
         return []
+    import urllib.request
+    import urllib.parse
     url = "https://maps.googleapis.com/maps/api/place/textsearch/json"
-    params = {"query": query, "key": api_key, "language": "de"}
+    params = urllib.parse.urlencode({"query": query, "key": api_key, "language": "de"})
     try:
-        r = requests.get(url, params=params, timeout=15)
-        if r.status_code != 200:
-            return []
-        data = r.json()
+        req = urllib.request.Request(f"{url}?{params}")
+        with urllib.request.urlopen(req, timeout=15) as r:
+            data = json.loads(r.read())
         if data.get("status") != "OK":
             return []
         results = []
@@ -125,18 +121,19 @@ def get_place_details(place_id, api_key):
     """Google Place Details — Website + Telefon."""
     if not api_key or not place_id:
         return {}
+    import urllib.request
+    import urllib.parse
     url = "https://maps.googleapis.com/maps/api/place/details/json"
-    params = {
+    params = urllib.parse.urlencode({
         "place_id": place_id,
         "key": api_key,
         "language": "de",
         "fields": "name,website,formatted_phone_number,formatted_address",
-    }
+    })
     try:
-        r = requests.get(url, params=params, timeout=15)
-        if r.status_code != 200:
-            return {}
-        data = r.json()
+        req = urllib.request.Request(f"{url}?{params}")
+        with urllib.request.urlopen(req, timeout=15) as r:
+            data = json.loads(r.read())
         if data.get("status") != "OK":
             return {}
         result = data.get("result", {})
@@ -151,25 +148,24 @@ def get_place_details(place_id, api_key):
 
 
 def find_email_on_website(website_url):
-    """Find email on company website using Direct Scraper."""
+    """Find email on company website using Scrapling Fetcher."""
     if not website_url or not website_url.startswith("http"):
         return "", ""
     base = website_url.rstrip("/")
     for path in EMAIL_PATHS:
         try:
-            r = requests.get(base + path, headers=HEADERS, timeout=8, allow_redirects=True)
-            if r.status_code != 200:
+            page = Fetcher.get(base + path, timeout=10)
+            if page.status != 200:
                 continue
-            from bs4 import BeautifulSoup
-            soup = BeautifulSoup(r.text, "html.parser")
-            mailto = soup.find("a", href=re.compile(r"mailto:", re.I))
-            if mailto:
-                href = mailto.get("href", "")
+            # mailto links
+            for a in page.css('a[href^="mailto:"]'):
+                href = a.attrib.get("href", "")
                 if href:
-                    email = str(href).replace("mailto:", "").split("?")[0].strip()
+                    email = href.replace("mailto:", "").split("?")[0].strip()
                     if is_valid_email(email):
                         return email, "scraped"
-            text = soup.get_text()
+            # emails in text
+            text = page.get_all_text()
             emails = re.findall(r"[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}", text)
             for e in emails:
                 if is_valid_email(e):
@@ -180,18 +176,14 @@ def find_email_on_website(website_url):
 
 
 def is_outdated_website(website):
-    """Check if website is outdated/empty using Direct Scraper."""
+    """Check if website is outdated/empty using Scrapling Fetcher."""
     if not website:
         return True
     try:
-        r = requests.get(website, headers=HEADERS, timeout=10)
-        if r.status_code != 200:
+        page = Fetcher.get(website, timeout=10)
+        if page.status != 200:
             return True
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup(r.text, "html.parser")
-        for tag in soup(["script", "style", "nav", "footer"]):
-            tag.decompose()
-        text = soup.get_text(strip=True).lower()
+        text = page.get_all_text().lower()
         if len(text) < 400:
             return True
         outdated_signals = ["diese website wird nicht mehr betreut", "under construction",
@@ -204,23 +196,23 @@ def is_outdated_website(website):
 def is_low_quality_website(website):
     """
     Check if website is of low quality (good enough for Microsite replacement).
-    
+
     Criteria:
     - No SSL (HTTP only)
     - Very short content (< 800 words)
     - No contact page / imprint
     - Free hosting platforms (Wix Free, Jimdo, WordPress.com, Weebly, etc.)
     - Only Facebook/social media as "website"
-    
+
     Returns: True if website is low quality (Microsite makes sense)
     """
     if not website:
         return True
-    
+
     # HTTP only = low quality
     if website.startswith("http://"):
         return True
-    
+
     # Check for free hosting platforms
     low_quality_domains = [
         "wixsite.com", "jimdo.com", "weebly.com", "wordpress.com", "mozello.com",
@@ -231,30 +223,26 @@ def is_low_quality_website(website):
     domain = website.split("//")[-1].split("/")[0].lower()
     if any(lqd in domain for lqd in low_quality_domains):
         return True
-    
+
     try:
-        r = requests.get(website, headers=HEADERS, timeout=10)
-        if r.status_code != 200:
+        page = Fetcher.get(website, timeout=10)
+        if page.status != 200:
             return True
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup(r.text, "html.parser")
-        for tag in soup(["script", "style", "nav", "footer"]):
-            tag.decompose()
-        text = soup.get_text(strip=True).lower()
-        
+        text = page.get_all_text().lower()
+
         # Very short content
         words = text.split()
         if len(words) < 150:
             return True
-        
+
         # No contact/imprint links
-        links = [a.get("href", "").lower() for a in soup.find_all("a", href=True)]
+        links = [a.attrib.get("href", "").lower() for a in page.css("a[href]")]
         has_contact = any(p in " ".join(links) for p in ["/kontakt", "/impressum", "/contact", "/imprint", "/about", "/ueber"])
         has_phone = any("tel:" in l for l in links)
-        
+
         if not has_contact and not has_phone:
             return True
-        
+
         return False
     except Exception:
         return True
@@ -264,41 +252,37 @@ def check_website_quality(website):
     """
     Comprehensive website quality check.
     Returns: (quality_score, quality_label, needs_microsite)
-    
+
     quality_score: 0-10
     quality_label: "high", "medium", "low", "none"
     needs_microsite: True if Microsite makes sense
     """
     if not website:
         return 0, "none", True
-    
+
     score = 10
     issues = []
-    
+
     # HTTP = -3
     if website.startswith("http://"):
         score -= 3
         issues.append("no-ssl")
-    
+
     # Free hosting = -4
     domain = website.split("//")[-1].split("/")[0].lower()
     free_hosting = ["wixsite.com", "jimdo.com", "weebly.com", "wordpress.com", "webnode"]
     if any(fh in domain for fh in free_hosting):
         score -= 4
         issues.append("free-hosting")
-    
+
     try:
-        r = requests.get(website, headers=HEADERS, timeout=10)
-        if r.status_code != 200:
+        page = Fetcher.get(website, timeout=10)
+        if page.status != 200:
             return 0, "none", True
-        
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup(r.text, "html.parser")
-        for tag in soup(["script", "style", "nav", "footer"]):
-            tag.decompose()
-        text = soup.get_text(strip=True).lower()
+
+        text = page.get_all_text().lower()
         words = text.split()
-        
+
         # Short content
         if len(words) < 150:
             score -= 3
@@ -306,72 +290,70 @@ def check_website_quality(website):
         elif len(words) < 500:
             score -= 1
             issues.append("medium-content")
-        
+
         # No contact
-        links = [a.get("href", "").lower() for a in soup.find_all("a", href=True)]
+        links = [a.attrib.get("href", "").lower() for a in page.css("a[href]")]
         has_contact = any(p in " ".join(links) for p in ["/kontakt", "/impressum", "/contact", "/imprint"])
         has_phone = any("tel:" in l for l in links)
-        
+
         if not has_contact:
             score -= 2
             issues.append("no-contact")
         if not has_phone:
             score -= 1
             issues.append("no-phone")
-        
+
         # No images
-        if len(soup.find_all("img")) < 2:
+        if len(page.css("img")) < 2:
             score -= 1
             issues.append("no-images")
-        
+
     except Exception:
         return 0, "none", True
-    
+
     score = max(0, score)
-    
+
     if score >= 7:
         label = "high"
     elif score >= 4:
         label = "medium"
     else:
         label = "low"
-    
+
     needs_microsite = score < 6
-    
+
     return score, label, needs_microsite
 
 
 def scrape_gelbeseiten_profile(gsbiz_url):
-    """Scrape GelbeSeiten profile page using Direct Scraper."""
+    """Scrape GelbeSeiten profile page using Scrapling Fetcher."""
     if not gsbiz_url or "gelbeseiten.de" not in gsbiz_url:
         return {}
     try:
-        r = requests.get(gsbiz_url, headers=HEADERS, timeout=10)
-        if r.status_code != 200:
+        page = Fetcher.get(gsbiz_url, timeout=15)
+        if page.status != 200:
             return {}
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup(r.text, "html.parser")
         result = {}
-        h1 = soup.find("h1")
+        h1 = page.css("h1")
         if h1:
-            result["company_name"] = h1.get_text().strip()
-        phone = soup.find("a", href=re.compile(r"tel:"))
-        if phone:
-            result["phone"] = phone.get_text().strip()
-        address = soup.find("address") or soup.find(class_=re.compile(r"address", re.I))
-        if address:
-            result["address"] = address.get_text(separator=", ", strip=True)
-        for a in soup.find_all("a", href=True):
-            href = a.get("href", "")
+            result["company_name"] = h1[0].get_all_text().strip()
+        for a in page.css('a[href^="tel:"]'):
+            result["phone"] = a.get_all_text().strip()
+            break
+        addr = page.css("address") or page.css('[class*="address"]')
+        if addr:
+            result["address"] = addr[0].get_all_text(separator=", ", strip=True)
+        for a in page.css("a[href]"):
+            href = a.attrib.get("href", "")
             if href.startswith("http") and "gelbeseiten" not in href:
                 result["website"] = href
                 break
         # E-Mail
-        mailto = soup.find("a", href=re.compile(r"mailto:", re.I))
-        if mailto:
-            href = mailto.get("href", "")
+        for a in page.css('a[href^="mailto:"]'):
+            href = a.attrib.get("href", "")
             if href:
-                result["email"] = str(href).replace("mailto:", "").split("?")[0].strip()
+                result["email"] = href.replace("mailto:", "").split("?")[0].strip()
+                break
         return result
     except Exception:
         return {}
@@ -412,42 +394,39 @@ def validate_email_for_company(email, company_name):
 
 
 def find_email_and_details_on_gelbeseiten(company_name, region):
-    """Search Gelbeseiten for company profile, extract details + verified email."""
-    # Direct search on GelbeSeiten
+    """Search Gelbeseiten for company profile, extract details + verified email.
+    Uses Scrapling Fetcher instead of requests+BS4."""
     query = f"{company_name} {region}"
     search_url = f"https://www.gelbeseiten.de/suche/{quote(query)}"
-    
+
     try:
-        r = requests.get(search_url, headers=HEADERS, timeout=15)
-        if r.status_code != 200:
+        page = Fetcher.get(search_url, timeout=15)
+        if page.status != 200:
             return "", {}, "keine GelbeSeiten-Suche"
-        
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup(r.text, "html.parser")
-        
+
         # Find profile links
         profile_links = []
-        for a in soup.find_all("a", href=True):
-            href = a.get("href", "")
+        for a in page.css("a[href]"):
+            href = a.attrib.get("href", "")
             if "/gsbiz/" in href:
                 profile_links.append(href)
-        
+
         if not profile_links:
             return "", {}, "keine Profilseite"
-        
+
         # Scrape first profile
         profile_url = profile_links[0]
         if not profile_url.startswith("http"):
             profile_url = "https://www.gelbeseiten.de" + profile_url
-        
+
         details = scrape_gelbeseiten_profile(profile_url)
         email = details.pop("email", "")
-        
+
         if email:
             ok, reason = validate_email_for_company(email, company_name)
             if ok:
                 return email, details, reason
-        
+
         return "", details, "keine verifizierte E-Mail"
     except Exception as e:
         return "", {}, f"Fehler: {e}"

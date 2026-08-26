@@ -17,11 +17,12 @@ die NICHT zu google/facebook/instagram/opentable/etc. gehört).
 
 import json
 import re
-import subprocess
 import sys
 import time
 from pathlib import Path
 from urllib.parse import quote
+
+from scrapling.fetchers import DynamicFetcher
 
 DATA_DIR = Path(__file__).parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
@@ -34,13 +35,16 @@ EXCLUDE_DOMAINS = [
 ]
 
 
-def firecrawl_scrape_json(url, out_path, wait_for=4000, timeout=60):
-    result = subprocess.run(
-        ["firecrawl", "scrape", url, "--wait-for", str(wait_for),
-         "-f", "markdown,links", "-o", str(out_path)],
-        capture_output=True, text=True, timeout=timeout,
-    )
-    return result.returncode == 0
+def scrapling_scrape_maps(url, timeout=60):
+    """Scrape a Google Maps URL with Scrapling DynamicFetcher (headless Chromium).
+    Returns the page Adaptor or None."""
+    try:
+        page = DynamicFetcher.fetch(url, headless=True, network_idle=True, timeout=timeout)
+        if page.status == 200:
+            return page
+        return None
+    except Exception:
+        return None
 
 
 def parse_search_results(markdown):
@@ -104,38 +108,31 @@ def is_payment_capable(entry):
     return False
 
 
-def get_website_from_place(maps_url, tmp_path):
+def get_website_from_place(maps_url):
     """Scraped die Maps-Detailseite und sucht nach einer externen Website."""
-    if not firecrawl_scrape_json(maps_url, tmp_path, wait_for=3500, timeout=45):
+    page = scrapling_scrape_maps(maps_url, timeout=45)
+    if not page:
         return None
-    try:
-        data = json.loads(tmp_path.read_text())
-    except Exception:
-        return None
-    links = data.get("links", [])
-    for link in links:
-        low = link.lower()
+    for a in page.css("a[href]"):
+        href = a.attrib.get("href", "")
+        low = href.lower()
         if low.startswith("tel:") or low.startswith("mailto:"):
             continue
         if any(dom in low for dom in EXCLUDE_DOMAINS):
             continue
         if low.startswith("http") and "google.com" not in low:
-            return link.rstrip("/")
+            return href.rstrip("/")
     return None
 
 
 def search_maps(query, limit=20):
     url = f"https://www.google.com/maps/search/{quote(query)}"
-    tmp = Path("/tmp/maps_search_tmp.md")
-    if not firecrawl_scrape_json(url, tmp, wait_for=4500, timeout=60):
+    page = scrapling_scrape_maps(url, timeout=60)
+    if not page:
         print(f"Scrape fehlgeschlagen: {url}")
         return []
-    try:
-        data = json.loads(tmp.read_text())
-        markdown = data.get("markdown", "")
-    except Exception:
-        markdown = tmp.read_text()
-    entries = parse_search_results(markdown)
+    text = page.get_all_text()
+    entries = parse_search_results(text)
     return entries[:limit]
 
 
@@ -148,8 +145,7 @@ def enrich_with_website(entries, max_checks=15, sleep_s=2):
         if checked >= max_checks:
             e["website_checked"] = False
             continue
-        tmp = Path(f"/tmp/place_detail_{checked}.json")
-        website = get_website_from_place(e["maps_url"], tmp)
+        website = get_website_from_place(e["maps_url"])
         e["website"] = website or ""
         e["website_checked"] = True
         print(f"  {e['name'][:35]:35s} | {'Website: ' + website if website else 'KEINE Website'}")

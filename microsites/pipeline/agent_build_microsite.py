@@ -14,8 +14,9 @@ import re
 import sys
 import urllib.request
 import os
-import requests
 from pathlib import Path
+
+from scrapling.fetchers import Fetcher
 
 PIPE = Path(__file__).parent
 ROOT = PIPE.parent
@@ -30,10 +31,6 @@ for line in ENV_PATH.read_text().splitlines():
         OPENROUTER_KEY = line.split("=", 1)[1].strip()
     if line.startswith("OPENROUTER_MODEL="):
         OPENROUTER_MODEL = line.split("=", 1)[1].strip()
-
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-}
 
 
 def enrich_lead(lead):
@@ -55,20 +52,18 @@ def enrich_lead(lead):
 
 
 def scrape_gelbeseiten_for_lead(name, region):
-    """Suche auf GelbeSeiten nach Firmenprofil."""
+    """Suche auf GelbeSeiten nach Firmenprofil. Nutzt Scrapling Fetcher."""
     try:
+        from urllib.parse import quote
         query = f"{name} {region}"
-        search_url = f"https://www.gelbeseiten.de/suche/{requests.utils.quote(query)}"
-        r = requests.get(search_url, headers=HEADERS, timeout=15)
-        if r.status_code != 200:
+        search_url = f"https://www.gelbeseiten.de/suche/{quote(query)}"
+        page = Fetcher.get(search_url, timeout=15)
+        if page.status != 200:
             return {}
-        
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup(r.text, "html.parser")
-        
+
         # Profil-Link finden
-        for a in soup.find_all("a", href=True):
-            href = a.get("href", "")
+        for a in page.css("a[href]"):
+            href = a.attrib.get("href", "")
             if "/gsbiz/" in href:
                 if not href.startswith("http"):
                     href = "https://www.gelbeseiten.de" + href
@@ -79,35 +74,34 @@ def scrape_gelbeseiten_for_lead(name, region):
 
 
 def scrape_gelbeseiten_profile(url):
-    """GelbeSeiten-Profil scrapen."""
+    """GelbeSeiten-Profil scrapen. Nutzt Scrapling Fetcher."""
     try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        if r.status_code != 200:
+        page = Fetcher.get(url, timeout=15)
+        if page.status != 200:
             return {}
-        
-        from bs4 import BeautifulSoup
-        soup = BeautifulSoup(r.text, "html.parser")
+
         details = {}
-        
+
         # Beschreibung
-        desc = soup.find(class_=re.compile(r"description|beschreibung|profil", re.I))
+        desc = page.css('[class*="description"]') or page.css('[class*="beschreibung"]') or page.css('[class*="profil"]')
         if desc:
-            details["about"] = desc.get_text(strip=True)[:500]
-        
+            details["about"] = desc[0].get_all_text(strip=True)[:500]
+
         # Öffnungszeiten
         hours = {}
+        text = page.get_all_text()
         for tag in ["Mo", "Di", "Mi", "Do", "Fr", "Sa", "So"]:
-            m = re.search(rf'{tag}\w*\.?\s*[\.:-]?\s*(\d{{1,2}}[.:]\d{{2}}\s*[-–]\s*\d{{1,2}}[.:]\d{{2}})', soup.get_text())
+            m = re.search(rf'{tag}\w*\.?\s*[\.:-]?\s*(\d{{1,2}}[.:]\d{{2}}\s*[-–]\s*\d{{1,2}}[.:]\d{{2}})', text)
             if m:
                 hours[tag] = m.group(1).replace(".", ":")
         if hours:
             details["opening_hours"] = hours
-        
+
         # Inhaber
-        inh = re.search(r'(?:Inhaber|Geschäftsführer)[\.:-]\s*([A-ZÄÖÜ][a-zäöüß]+(?:\s+[A-ZÄÖÜ][a-zäöüß]+){0,3})', soup.get_text())
+        inh = re.search(r'(?:Inhaber|Geschäftsführer)[\.:-]\s*([A-ZÄÖÜ][a-zäöüß]+(?:\s+[A-ZÄÖÜ][a-zäöüß]+){0,3})', text)
         if inh:
             details["owner"] = inh.group(1).strip()
-        
+
         return details
     except Exception:
         return {}

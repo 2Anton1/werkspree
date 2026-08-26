@@ -13,13 +13,11 @@ Werkspree Lead Pipeline (Cron-tauglich)
 5. Speichert alles als JSON
 """
 
-import json, re, subprocess, sys, os
+import json, re, sys, os
 from datetime import datetime
 from pathlib import Path
 
-# Ensure firecrawl is in PATH (cron doesn't have ~/.local/bin)
-FIRECRAWL_PATH = "/Users/anton/.local/bin/firecrawl"
-os.environ["PATH"] = os.environ.get("PATH", "") + ":/Users/anton/.local/bin"
+from scrapling.fetchers import Fetcher
 
 from email_extraction import (
     best_email,
@@ -66,22 +64,32 @@ BLOCKED_DOMAINS = [
 IMAGE_EXTS = (".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg", ".ico")
 
 
-def firecrawl_scrape(url, output_path, timeout=60):
-    """Scrape a URL with firecrawl CLI."""
-    result = subprocess.run(
-        ["firecrawl", "scrape", url, "-o", str(output_path)],
-        capture_output=True, text=True, timeout=timeout
-    )
-    return result.returncode == 0
+def scrapling_scrape(url, timeout=30):
+    """Scrape a URL with Scrapling Fetcher (anti-bot, adaptive).
+    Returns the Adaptor page object or None on failure."""
+    try:
+        page = Fetcher.get(url, timeout=timeout)
+        if page.status == 200:
+            return page
+        return None
+    except Exception:
+        return None
 
 
-def firecrawl_search(query, output_path, limit=10):
-    """Search with firecrawl CLI."""
-    result = subprocess.run(
-        ["firecrawl", "search", query, "--limit", str(limit), "-o", str(output_path), "--json"],
-        capture_output=True, text=True, timeout=60
-    )
-    return result.returncode == 0
+def scrapling_scrape_text(url, timeout=30):
+    """Scrape a URL and return its text content, or '' on failure."""
+    page = scrapling_scrape(url, timeout)
+    if page:
+        return page.get_all_text()
+    return ""
+
+
+def scrapling_scrape_html(url, timeout=30):
+    """Scrape a URL and return its HTML content, or '' on failure."""
+    page = scrapling_scrape(url, timeout)
+    if page:
+        return page.html_content or ""
+    return ""
 
 
 def is_acceptable_website(website):
@@ -126,38 +134,60 @@ def init_lead_fields(lead):
     return lead
 
 
-def extract_listings(gs_path):
-    """Extract business listings from GelbeSeiten markdown."""
-    content = Path(gs_path).read_text()
-    listings = re.findall(
-        r'\*\*([^*]+)\*\*[\\]+.*?\n(.*?)(?=\*\*[^*]+\*\*[\\]|$)',
-        content, re.DOTALL
-    )
+def extract_listings(page):
+    """Extract business listings from a GelbeSeiten category page (Scrapling Adaptor).
+    Uses CSS selectors instead of fragile regex on markdown.
+    Returns a list of lead dicts."""
+    if not page:
+        return []
     leads = []
-    for name, details in listings:
-        name = name.strip().rstrip('\\').strip()
+    # GelbeSeiten listings: each company name is an h2, profile link contains gsbiz
+    for h2 in page.css("h2"):
+        name = h2.get_all_text().strip()
         if len(name) < 3 or name in ['Gelbe Seiten Unternehmen finden', 'Suchen']:
             continue
+        # Skip navigation/header h2s
+        if name.lower() in ('branchenkatalog', 'service', 'für sie', 'für sie\nenergieberatung\nneu'):
+            continue
+
+        # Walk up to the parent listing container to extract phone + profile URL
+        parent = h2.parent
+        detail_text = parent.get_all_text(separator=" ", strip=True) if parent else ""
+
+        # Phone: look for tel: links within the listing
         phone = ""
-        phone_match = re.search(r'(\d{3,4}\s+[\d\s]{6,})', details)
-        if phone_match:
-            phone = phone_match.group(1).strip()
-        # Look for external website URL in the GS page (any gelbeseiten.de
-        # subdomain is excluded, not just "www." -- the profile page itself
-        # is not the company's real website). This almost never finds
-        # anything on the category page -- the per-listing "Webseite" button
-        # there is JS-driven with no static href. It's kept as a free/cheap
-        # first attempt; the real resolution path is the GelbeSeiten profile
-        # page (see gelbeseiten_url + resolve_real_website below).
-        web_match = re.search(
-            r'(https?://(?!(?:[\w-]+\.)?gelbeseiten\.de|ies\.v4all)[^\s)"\\]+)',
-            details, re.IGNORECASE
-        )
-        website = web_match.group(1).rstrip('\\"') if web_match else ""
+        for tel_link in (parent.css('a[href^="tel:"]') if parent else []):
+            href = tel_link.attrib.get("href", "")
+            if href:
+                phone = href.replace("tel:", "").strip()
+                break
+        if not phone:
+            m = re.search(r'(\d{3,4}\s+[\d\s]{6,})', detail_text)
+            if m:
+                phone = m.group(1).strip()
+
+        # GelbeSeiten profile URL (gsbiz link)
+        gelbeseiten_url = ""
+        for a in (parent.css('a[href*="gelbeseiten.de/gsbiz/"]') if parent else []):
+            gelbeseiten_url = a.attrib.get("href", "")
+            if gelbeseiten_url:
+                break
+
+        # External website (rare on category page — JS-driven — but check anyway)
+        website = ""
+        if parent:
+            for a in parent.css("a[href]"):
+                href = a.attrib.get("href", "")
+                if (href.startswith("http") and
+                        "gelbeseiten.de" not in href and
+                        "ies.v4all" not in href):
+                    website = href.rstrip('/"\\')
+                    break
+
         leads.append(init_lead_fields({
             "company_name": name,
             "phone": phone,
-            "gelbeseiten_url": find_gelbeseiten_profile_url(details),
+            "gelbeseiten_url": gelbeseiten_url,
             "website": website,
             "email": "",
             "email_source": "",
@@ -172,12 +202,30 @@ def extract_listings(gs_path):
 def resolve_real_website(gelbeseiten_url):
     """Findet die echte Firmen-Website über die GelbeSeiten-Profilseite
     (der 'Webseite'-Button auf der Kategorieseite hat keinen statischen
-    Link, auf der Profilseite des Unternehmens steht er aber normal)."""
+    Link, auf der Profilseite des Unternehmens steht er aber normal).
+    Nutzt Scrapling CSS-Extraktion statt Markdown-Regex."""
     if not gelbeseiten_url:
         return ""
-    tmp = Path("/tmp/gsbiz_tmp.md")
-    if firecrawl_scrape(gelbeseiten_url, tmp, timeout=30):
-        return find_real_website_on_profile_page(tmp.read_text())
+    page = scrapling_scrape(gelbeseiten_url, timeout=30)
+    if not page:
+        return ""
+    # Auf der Profilseite gibt es externe Links mit dem Text "Website" oder "Webseite"
+    for a in page.css("a[href]"):
+        href = a.attrib.get("href", "")
+        text = a.get_all_text().strip()
+        if (href.startswith("http") and
+                "gelbeseiten.de" not in href and
+                text.lower() in ("website", "webseite", "homepage")):
+            return href.rstrip("/")
+    # Fallback: erste externe http-Link, die nicht gelbeseiten/social ist
+    for a in page.css("a[href]"):
+        href = a.attrib.get("href", "")
+        if (href.startswith("http") and
+                "gelbeseiten.de" not in href and
+                not any(s in href for s in ["instagram", "facebook", "twitter",
+                                            "xing.com", "linkedin.com", "apple.com",
+                                            "dastelefonbuch", "dasoertliche"])):
+            return href.rstrip("/")
     return ""
 
 
@@ -190,10 +238,9 @@ def get_email_from_imprint(website):
     base = website.rstrip("/")
     for path in EMAIL_SEARCH_PATHS:
         url = base + path
-        tmp = Path("/tmp/imprint_tmp.md")
-        if firecrawl_scrape(url, tmp, timeout=30):
-            content = tmp.read_text()
-            email = best_email(content)
+        text = scrapling_scrape_text(url, timeout=30)
+        if text:
+            email = best_email(text)
             if email:
                 return email
     return ""
@@ -245,16 +292,16 @@ def main():
 
     print(f"Werkspree Lead Pipeline — {branch} in {region}")
 
-    # Step 1: Scrape GelbeSeiten category page
+    # Step 1: Scrape GelbeSeiten category page with Scrapling
     gs_url = f"https://www.gelbeseiten.de/branchen/{branch.lower()}/{region.lower()}"
-    gs_path = Path(f"/tmp/gs_{branch}_{region}.md")
 
-    if not firecrawl_scrape(gs_url, gs_path):
+    page = scrapling_scrape(gs_url, timeout=30)
+    if not page:
         print(f"Failed to scrape {gs_url}")
         return 1
 
-    # Step 2: Extract listings
-    new_leads = extract_listings(gs_path)
+    # Step 2: Extract listings (Scrapling CSS-based)
+    new_leads = extract_listings(page)
     print(f"Found {len(new_leads)} listings on GelbeSeiten")
 
     # Set branch/region
@@ -284,9 +331,9 @@ def main():
 
     # Step 3b: Second pass — retry existing leads that never got an email
     # (previously only the current day's first 5 new leads were ever checked;
-    # everyone else stayed empty forever). Small budget so we don't blow the
-    # Firecrawl credit limit on retries alone. Also resolves a real website
-    # for old leads that only ever had a gelbeseiten_url on file.
+    # everyone else stayed empty forever). Small budget so we don't spend
+    # too long on retries alone. Also resolves a real website for old leads
+    # that only ever had a gelbeseiten_url on file.
     existing = load_existing_leads()
     retry_candidates = [
         l for l in existing
