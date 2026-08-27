@@ -154,10 +154,13 @@
 | Attachments | multipleAttachments | (ungenutzt, Standardfeld) |
 | Attachment Summary | aiText | (ungenutzt, Standardfeld) |
 
-### 2.7 Firecrawl (Web-Scraping)
-- **CLI:** firecrawl (installiert, authentifiziert)
-- **Credits:** ~1.024 remaining
-- **Verwendung:** `firecrawl scrape URL -o output.md` / `firecrawl search "query" --limit N -o output.json --json`
+### 2.7 Scrapling (Web-Scraping, ersetzt Firecrawl + requests+BS4)
+- **Installiert:** scrapling 0.4.15 (+ curl_cffi, playwright, patchright, browserforge, Chromium)
+- **Verwendung:** `from scrapling.fetchers import Fetcher; page = Fetcher.get(url, timeout=30); page.css("h2"); page.get_all_text()`
+- **Vorteile:** Anti-Bot (umgeht Cloudflare Turnstile), adaptive CSS-Selektoren (überlebt Layout-Änderungen), keine API-Keys, keine Credits, keine Rate-Limits
+- **DynamicFetcher** (für JS-heavy Seiten wie Google Maps): `DynamicFetcher.fetch(url, headless=True, network_idle=True)`
+- **Eingesetzt in:** scraper/pipeline.py, scraper/direct_scraper.py, scraper/warmth_scorer.py, microsites/pipeline/hot_leads_pipeline.py, microsites/pipeline/agent_build_microsite.py, microsites/pipeline/maps_scraper.py
+- **Firecrawl CLI** war vorher installiert (`~/.local/bin/firecrawl`) — jetzt nur noch als Fallback für manuelle Scrapes, nicht mehr in Pipeline-Code eingebunden
 
 ---
 
@@ -191,7 +194,8 @@
 ### 4.3 Lead-Scraper Pipeline
 - **Pfad:** ~/werkspree/scraper/pipeline.py
 - **Funktion:** Scraped GelbeSeiten-Kategorieseiten für eine Branche+Region pro Tag
-- **Pipeline:** GelbeSeiten scrape → Firmennamen+Telefon extrahieren → Firmenwebsite /impressum scrape → E-Mail finden → JSON speichern
+- **Scraping:** Scrapling `Fetcher.get()` + CSS-Selektoren (`h2`, `a[href^="tel:"]`, `a[href*="gsbiz"]`) — kein Firecrawl, keine Temp-Dateien
+- **Pipeline:** GelbeSeiten scrape → Firmennamen+Telefon per CSS extrahieren → Firmenwebsite per GelbeSeiten-Profilseite auflösen → /impressum scrape → E-Mail finden → JSON speichern
 - **Branchen-Rotation:** 16 (Branche, Region)-Paare rotieren täglich (Elektriker Berlin, Dachdecker Berlin, etc.)
 - **Ausgabe:** ~/werkspree/scraper/data/leads_YYYYMMDD.json
 
@@ -236,6 +240,7 @@
 | df4d149e4f8f | Werkspree Lead Pipeline (Script Mode) | Täglich 10:00 | run_pipeline.py: pipeline.py → warmth_scorer.py → warm_outreach.py (AUTO-SEND) → Airtable-Sync. Exit≠0 bei Fehler. Report: reports/pipeline_YYYYMMDD.md |
 | e85d58d7915e | Werkspree Health Check | Alle 6h | ~/.hermes/scripts/health_check.py (no_agent): silent bei OK, nur Issues melden |
 | 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Firecrawl) → eigener Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `kontakt@werkspree.bki-de.de`) |
+| b68eea7332bc | Werkspree Reply Checker | 2x täglich 09:00 + 18:00 | ~/.hermes/scripts/check_replies.py (no_agent): prüft Strato IMAP + Gmail API auf Antworten versendeter Mails. Bei neuen Antworten → WhatsApp-Benachrichtigung. Keine Antwort → still (leere stdout). |
 
 ---
 
@@ -322,6 +327,52 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 26.08.2026 — Reply Checker Cron + Scrapling-Migration
+
+#### Reply Checker (`b68eea7332bc`)
+- **2x täglich (09:00 + 18:00):** `~/.hermes/scripts/check_replies.py` (no_agent) prüft
+  Strato IMAP (`kontakt@bki-de.de`) + Gmail API (`a2807d@gmail.com`) auf Antworten von
+  Adressen, an die Werkspree Mails versendet hat (aus `sent_emails.json` +
+  `microsite_sent_emails.json`, aktuell 68 Adressen). Auto-Responder/Noreply werden
+  gefiltert. Bei neuen Antworten → WhatsApp-Benachrichtigung (`deliver=all`). Keine
+  Antwort → leere stdout → still. Erster Test: 1 Antwort von Fa. Roger Laube erkannt.
+
+### 26.08.2026 — Scrapling-Migration: Firecrawl + requests + BS4 ersetzt
+
+**Alle Scraping-Funktionen in beiden Pipelines auf Scrapling umgestellt.** Firecrawl CLI
+und `requests`+`BeautifulSoup` vollständig entfernt. 6 Dateien geändert, Commit `b341469`.
+
+#### Lead-Pipeline (`scraper/`)
+- **pipeline.py:** `firecrawl_scrape()`/`firecrawl_search()` → `scrapling_scrape()` mit
+  `Fetcher.get()`. `extract_listings()` nutzt CSS-Selektoren (`h2`, `a[href^="tel:"]`,
+  `a[href*="gsbiz"]`) statt der `**Name**\\`-Regex. `resolve_real_website()` extrahiert
+  den "Website"-Link per CSS statt Markdown-Regex. Keine Temp-Dateien mehr.
+- **direct_scraper.py:** Komplett auf Scrapling umgestellt (`find_email_on_website`,
+  `find_phone_on_website`, `scrape_gelbeseiten_profile`).
+- **warmth_scorer.py:** `scrape_website()` nutzt `Fetcher.get()` statt `requests`.
+  `CACHE_DIR` von `.firecrawl/warmth` → `data/warmth_cache`.
+
+#### Microsite-Pipeline (`microsites/pipeline/`)
+- **hot_leads_pipeline.py:** 8 Funktionen umgestellt (`search_places`, `get_place_details`,
+  `find_email_on_website`, `is_outdated_website`, `is_low_quality_website`,
+  `check_website_quality`, `scrape_gelbeseiten_profile`, `find_email_and_details_on_gelbeseiten`).
+  Places API auf `urllib.request` (war `requests`).
+- **agent_build_microsite.py:** `scrape_gelbeseiten_for_lead` + `scrape_gelbeseiten_profile`
+  auf Scrapling.
+- **maps_scraper.py:** `firecrawl_scrape_json()` → `scrapling_scrape_maps()` mit
+  `DynamicFetcher.fetch(url, headless=True, network_idle=True)` für Google Maps (JS-heavy).
+
+#### Smoke-Test
+- 52 Leads aus GelbeSeiten (vorher ~10-20 mit alter Regex). 4/5 mit E-Mail.
+- `check_website_quality`: score=10/high. `scrape_gelbeseiten_profile`: Name+Phone+Adresse+Website.
+- Alle 6 Dateien: `py_compile` bestanden.
+
+#### Entfernt
+- Firecrawl CLI-Abhängigkeit aus allen Pipeline-Dateien
+- `requests` + `BeautifulSoup` als direkte Dependencies
+- `subprocess`-Aufrufe für Scrapes, Temp-Dateien (`/tmp/gsbiz_tmp.md` etc.)
+- `os.environ["PATH"]`-Hack für Cron
 
 ### 23.08.2026 — Pipeline-Fixes + Microsite-Builder v3 (branchenspezifisches Design)
 

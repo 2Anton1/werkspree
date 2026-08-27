@@ -1,0 +1,251 @@
+{
+  "branch": "Zahnarzt",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "21dental Kunschke Stutzmann Koschitzke Zahnärzte",
+      "address": "Vom-Stein-Straße 21, 03050 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJZzKbB4tzCEcRD2j5Td6AeDw",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 4300244",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.21dental.de/",
+      "email": "info@21dental.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: '21dental' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Zahnarztpraxis Frau Dipl.med. Ulrike Klingberg, Frau Dr. Marika Klingberg",
+      "address": "Lieberoser Str. 38, 03046 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJbezTmV10CEcRcYhYWzrIXnQ",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 23204"
+    },
+    {
+      "name": "Zahnarztpraxis Dr. Krautz & Kollegen - Einzelpraxis",
+      "address": "Karl-Liebknecht-Straße 102/Haus G - 2. OG, 03046 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJNcT5wWF0CEcRIOvyoZZ_vms",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 23100"
+    },
+    {
+      "name": "Dental Exzellenz - Zahnarztpraxis Abdul Rahman Hamsho (Nachfolger von Dr. Burkhardt)",
+      "address": "Thiemstraße 112, 03050 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJq_4t5HZ0CEcRkJqysCZPbqc",
+      "types": [
+        "dentist",
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 425811"
+    },
+    {
+      "name": "Herr Holger Zaruba",
+      "address": "Weinbergstraße 10, 03050 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJTwpOmmd0CEcRtIWhf7yn1Hk",
+      "types": [
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 791841"
+    },
+    {
+      "name": "Zahnarztpraxis Wiesenstraße, Zahnärztin Juliana Abraham",
+      "address": "Wiesenstraße 15, 03048 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJwQOD_YVzCEcRL3RG3wRnt6E",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 530072",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.zap-wiesenstrasse.de/",
+      "email": "info@zap-wiesenstrasse.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'wiesenstraße' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Herr Stefan Oniga",
+      "address": "Sielower Ch 86, 03055 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ5Xi5RD11CEcRLdeoPhhhjZU",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 870455"
+    },
+    {
+      "name": "Carsten Neumann & Kristin Thoss",
+      "address": "Neustädter Str. 5, 03046 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJtRXJxml0CEcRjs3lKsx5lSY",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 703331",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Zahnarztpraxis Zittlau und Roschke",
+      "address": "Berliner Str. 57, 03046 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJJeAq_2F0CEcRxxTJV5ops0Q",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 792125",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.zahnarztpraxen-cottbus.de/sprech_zittlau.htm"
+    },
+    {
+      "name": "Herr Claudius Just",
+      "address": "Thiemstraße 124, 03050 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJVXfV1XZ0CEcRnM7g98wZKBE",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 425626"
+    },
+    {
+      "name": "Zahnarztpraxis Karina Dubrau",
+      "address": "Karina Dubrau Ärztehaus, Schweriner Str. 3, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJHfhBPmB0CEcR3O9GICO1FtE",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Herr Matthias Münzer - Cottbus",
+      "address": "Burgstraße 11, 03046 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJTwnqv2l0CEcRDFsBCccTsyg",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Zahnarztpraxis Dipl.-Stomat. Olaf Becker - Fachzahnarzt für Allg. Stomatologie in Cottbus",
+      "address": "Bahnhofstraße 49, 03046 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJGf959WV0CEcR_UnmT5BDLMo",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Dr.med.dent. Kathrin Schwarz Zahnärztin",
+      "address": "Rudolf-Breitscheid-Straße 69A, 03046 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJl4A4Tm90CEcRnSog1vPcA8U",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "21dental Kunschke Stutzmann Koschitzke Zahnärzte",
+      "address": "Vom-Stein-Straße 21, 03050 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJZzKbB4tzCEcRD2j5Td6AeDw",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 4300244",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.21dental.de/",
+      "email": "info@21dental.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: '21dental' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Zahnarztpraxis Wiesenstraße, Zahnärztin Juliana Abraham",
+      "address": "Wiesenstraße 15, 03048 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJwQOD_YVzCEcRL3RG3wRnt6E",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 530072",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.zap-wiesenstrasse.de/",
+      "email": "info@zap-wiesenstrasse.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'wiesenstraße' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Cottbus"
+    }
+  ]
+}
