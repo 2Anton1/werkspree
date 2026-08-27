@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahnarztpraxis Wiesenstraße | Juliana Abraham Cottbus</title>
+    <meta name="description" content="Ihre Zahnarztpraxis in Cottbus. Zahnärztin Juliana Abraham bietet moderne Zahnheilkunde, Prophylaxe und Ästhetik in der Wiesenstraße.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #4A9EAB; /* Sanftes Mint-Blau */
+            --accent: #B8E0E6;  /* Helles Aqua */
+            --bg-light: #F8FAFA; /* Sehr helles Weiß */
+            --text-dark: #2C3E50;
+            --text-light: #FFFFFF;
+            --shadow: 0 10px 30px rgba(74, 158, 171, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 400;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            padding: 120px 0 100px;
+            color: var(--text-light);
+            text-align: center;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hero h1 {
+            color: var(--text-light);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background: var(--bg-light);
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* Über uns */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .avatar-box {
+            width: 120px;
+            height: 120px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 15px;
+            border: 4px solid white;
+            box-shadow: var(--shadow);
+        }
+
+        .team-member p {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .team-member span {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+        }
+
+        /* Für Patienten List */
+        .patient-info {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .info-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .info-list li {
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .info-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+            background: var(--accent);
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-box, .hours-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #2C3E50;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .werkspree {
+            margin-top: 20px;
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-content, .contact-wrapper, .info-list {
+                grid-template-columns: 1fr;
+            }
+            .nav-links { display: none; }
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">ZAP Wiesenstraße</a>
+            <div class="nav-links">
+                <a href="#ueber-uns">Über uns</a>
+                <a href="#leistungen">Leistungen</a>
+                <a href="#team">Team</a>
+                <a href="#kontakt">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Ihre Zahngesundheit in Cottbus</h1>
+            <p>In der Zahnarztpraxis Wiesenstraße verbinden wir moderne Zahnheilkunde mit einer einfühlsamen Betreuung für Ihr strahlendes Lächeln.</p>
+            <a href="tel:0355530072" class="cta-button">Termin buchen</a>
+        </div>
+    </header>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Willkommen in unserer Praxis</h2>
+                    </div>
+                    <p>Mitten im Herzen von Cottbus begrüßt Sie Zahnärztin Juliana Abraham und ihr Team in der Wiesenstraße 15. Unsere Praxis steht für eine patientenorientierte Zahnmedizin, bei der der Mensch im Mittelpunkt steht.</p>
+                    <p>Wir legen großen Wert auf eine entspannte Atmosphäre und modernste Behandlungsmethoden. Ob Vorsorge oder komplexer Zahnersatz – wir nehmen uns Zeit für Ihre individuelle Beratung und sorgen dafür, dass Sie sich bei uns gut aufgehoben fühlen.</p>
+                </div>
+                <div class="about-image">
+                    <div style="background: var(--accent); width: 100%; height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: var(--primary); font-style: italic;">
+                        Modernste Praxisausstattung in Cottbus
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Prophylaxe</h3>
+                    <p>Professionelle Zahnreinigung und Vorsorge für dauerhaft gesunde Zähne und festes Zahnfleisch.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Zahnerhalt</h3>
+                    <p>Moderne Füllungstherapie und Wurzelbehandlungen mit höchster Präzision für Ihre natürlichen Zähne.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Zahnersatz</h3>
+                    <p>Hochwertige Kronen, Brücken und Prothetik – funktional perfekt und ästhetisch anspruchsvoll.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Ästhetik</h3>
+                    <p>Bleaching und Veneers für ein strahlendes, weißes Lächeln, das zu Ihrer Persönlichkeit passt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar-box">JA</div>
+                    <p>Juliana Abraham</p>
+                    <span>Zahnärztin & Inhaberin</span>
+                </div>
+                <div class="team-member">
+                    <div class="avatar-box">SH</div>
+                    <p>Praxis-Team</p>
+                    <span>Zahnmedizinische Fachangestellte</span>
+                </div>
+                <div class="team-member">
+                    <div class="avatar-box">PZ</div>
+                    <p>Prophylaxe-Team</p>
+                    <span>Spezialisten für Vorsorge</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="patienten">
+        <div class="container">
+            <div class="patient-info">
+                <div class="section-title">
+                    <h2>Für unsere Patienten</h2>
+                </div>
+                <ul class="info-list">
+                    <li>Recall-Service für Ihre Vorsorge</li>
+                    <li>Barrierefreier Zugang zur Praxis</li>
+                    <li>Kurze Wartezeiten durch Terminmanagement</li>
+                    <li>Individuelle Heil- und Kostenpläne</li>
+                    <li>Zusammenarbeit mit regionalen Laboren</li>
+                    <li>Notdienst-Informationen vor Ort</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-box">
+                    <h3>Kontakt</h3>
+                    <p>Zahnarztpraxis Wiesenstraße<br>Juliana Abraham</p>
+                    <p style="margin: 20px 0;">Wiesenstraße 15<br>03048 Cottbus</p>
+                    <a href="tel:0355530072" class="contact-link">📞 0355 530072</a>
+                    <a href="mailto:info@zap-wiesenstrasse.de" class="contact-link">✉️ info@zap-wiesenstrasse.de</a>
+                </div>
+                <div class="hours-box">
+                    <h3>Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag</td><td>08:00 – 12:00 & 14:00 – 18:00</td></tr>
+                        <tr><td>Dienstag</td><td>08:00 – 12:00 & 14:00 – 18:00</td></tr>
+                        <tr><td>Mittwoch</td><td>08:00 – 13:00</td></tr>
+                        <tr><td>Donnerstag</td><td>08:00 – 12:00 & 14:00 – 18:00</td></tr>
+                        <tr><td>Freitag</td><td>08:00 – 12:00</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Zahnarztpraxis Wiesenstraße</span>
+            <p>&copy; 2023 Juliana Abraham. Alle Rechte vorbehalten.</p>
+            <p>Impressum | Datenschutz</p>
+            <div class="werkspree">Design & Realisierung durch Werkspree</div>
+        </div>
+    </footer>
+
+</body>
+</html>
