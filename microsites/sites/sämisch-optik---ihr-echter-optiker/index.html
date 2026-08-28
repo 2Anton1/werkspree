@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sämisch Optik | Ihr echter Optiker in Potsdam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@300;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3D3D6B;
+            --accent: #B8A9D9;
+            --bg-warm: #F5F5F8;
+            --text-dark: #2D2D2D;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- Glasses CSS Visual --- */
+        .glasses-icon {
+            display: flex;
+            align-items: center;
+        }
+        .lens {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+        }
+        .bridge {
+            width: 8px;
+            height: 2px;
+            background: var(--primary);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #5a5a8f 100%);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: var(--white);
+        }
+
+        /* --- Section Styling --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin: 15px auto 0;
+        }
+
+        /* --- About Us --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .visual-element {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--white);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .big-glasses {
+            display: flex;
+            align-items: center;
+        }
+        .big-glasses .lens {
+            width: 80px;
+            height: 80px;
+            border-width: 4px;
+            border-color: var(--accent);
+        }
+        .big-glasses .bridge {
+            width: 30px;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        /* --- Services Cards --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--accent);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* --- Brands --- */
+        .brands-flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .brand-pill {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            padding: 10px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .brand-pill:hover {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* --- Contact & Hours --- */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            height: 100%;
+        }
+
+        .info-box h3 {
+            margin-bottom: 25px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            color: var(--white);
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .footer-logo .lens { border-color: var(--white); }
+        .footer-logo .bridge { background: var(--white); }
+
+        .werkspree-note {
+            margin-top: 20px;
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .about-grid, .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .visual-element {
+                display: none;
+            }
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <div class="glasses-icon">
+                        <div class="lens"></div>
+                        <div class="bridge"></div>
+                        <div class="lens"></div>
+                    </div>
+                    Sämisch Optik
+                </a>
+                <div style="font-size: 0.8rem; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 1px;">
+                    Potsdam
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="animate">Klares Sicht, klarer Stil</h1>
+            <p class="animate">Ihr kompetenter Partner für präzise Augenoptik und exklusive Brillenmode im Herzen von Potsdam.</p>
+            <a href="#kontakt" class="cta-button animate">Jetzt Beratung vereinbaren</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Über uns</h2>
+                    <p>Mitten im historischen Zentrum von Potsdam, direkt an der Friedrich-Ebert-Straße, vereinen wir traditionelles Handwerk mit modernster Technik. Als "Ihr echter Optiker" steht bei Sämisch Optik die persönliche und fachkundige Beratung an erster Stelle.</p>
+                    <p>Wir nehmen uns Zeit für Ihre Augen. Ob modernste Sehanalyse oder die Auswahl der perfekten Fassung, die Ihren Typ unterstreicht – wir sorgen dafür, dass Sie nicht nur besser sehen, sondern auch besser aussehen.</p>
+                </div>
+                <div class="visual-element">
+                    <div class="big-glasses">
+                        <div class="lens"></div>
+                        <div class="bridge"></div>
+                        <div class="lens"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #ffffff;">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Präzisions-Sehtest</h3>
+                    <p>Exakte Vermessung Ihrer Sehstärke mit modernster Technologie für optimalen Sehkomfort.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gleitsicht-Expertise</h3>
+                    <p>Spezialisierte Anpassung von Gleitsichtgläsern für stufenloses Sehen in allen Entfernungen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Kontaktlinsen</h3>
+                    <p>Individuelle Anpassung und Probetragen von weichen und formstabilen Kontaktlinsen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Stilberatung</h3>
+                    <p>Große Auswahl an Designer-Fassungen und kompetente Beratung zu Form und Farbe.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Werkstatt-Service</h3>
+                    <p>Eigene Meisterwerkstatt für schnelle Reparaturen, Anpassungen und Glaseinschleifung.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Sportoptik</h3>
+                    <p>Spezialbrillen für optimalen Schutz und beste Sicht bei Ihren sportlichen Aktivitäten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="marken">
+        <div class="container">
+            <h2 class="section-title">Unsere Marken</h2>
+            <div class="brands-flex">
+                <div class="brand-pill">Ray-Ban</div>
+                <div class="brand-pill">Oakley</div>
+                <div class="brand-pill">Silhouette</div>
+                <div class="brand-pill">Lindberg</div>
+                <div class="brand-pill">Zeiss</div>
+                <div class="brand-pill">Rodenstock</div>
+                <div class="brand-pill">Escada</div>
+                <div class="brand-pill">Persol</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Kontakt</h3>
+                    <p style="margin-bottom: 20px;"><strong>Sämisch Optik</strong><br>
+                    Friedrich-Ebert-Straße 8<br>
+                    14467 Potsdam</p>
+                    
+                    <a href="tel:03312985060" class="contact-link">📞 0331 2985060</a>
+                    <a href="mailto:info@saemisch-optik.de" class="contact-link">✉️ info@saemisch-optik.de</a>
+                </div>
+                <div class="info-box opening-hours">
+                    <h3>Öffnungszeiten</h3>
+                    <table>
+                        <tr><td>Montag - Freitag</td><td>09:30 – 18:30 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>10:00 – 14:00 Uhr</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                    <p style="margin-top: 20px; font-size: 0.85rem; font-style: italic;">Termine außerhalb der Öffnungszeiten nach Vereinbarung möglich.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo footer-logo">
+                <div class="glasses-icon">
+                    <div class="lens"></div>
+                    <div class="bridge"></div>
+                    <div class="lens"></div>
+                </div>
+                Sämisch Optik
+            </div>
+            <p>&copy; 2023 Sämisch Optik | Ihr echter Optiker in Potsdam. Alle Rechte vorbehalten.</p>
+            <div class="werkspree-note">
+                Erstellt von Werkspree
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
