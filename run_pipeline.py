@@ -20,6 +20,15 @@ REPORT_DIR = WORKDIR / "reports"
 REPORT_DIR.mkdir(exist_ok=True)
 SENT_FILE = DATA_DIR / "sent_emails.json"
 
+# Scrapling (pipeline.py, warmth_scorer.py) ist NUR in /usr/local/bin/python3
+# installiert. Der Cron-Script-Runner nutzt ein anderes Python ohne scrapling
+# → absolute Pfade verwenden, sonst ModuleNotFoundError (7 Fehlschläge 26.-28.08.).
+# Fallback auf shutil.which("python3") falls /usr/local/bin/python3 fehlt.
+import shutil
+PYTHON = "/usr/local/bin/python3"
+if not os.path.exists(PYTHON):
+    PYTHON = shutil.which("python3") or "python3"
+
 # Airtable CRM
 AIRTABLE_BASE = "appyMLhXOMHpD5vfT"
 AIRTABLE_TABLE = "tbluCUpuCPxW1GcWD"
@@ -191,9 +200,9 @@ def main():
     log("=" * 50)
 
     steps = [
-        ("[1/4] pipeline.py (Scraping + Filter)", "python3 scraper/pipeline.py"),
-        ("[2/4] warmth_scorer.py (Scoring)", "python3 scraper/warmth_scorer.py"),
-        ("[3/4] warm_outreach.py (Auto-Send)", "python3 scraper/warm_outreach.py"),
+        ("[1/4] pipeline.py (Scraping + Filter)", f"{PYTHON} scraper/pipeline.py"),
+        ("[2/4] warmth_scorer.py (Scoring)", f"{PYTHON} scraper/warmth_scorer.py"),
+        ("[3/4] warm_outreach.py (Auto-Send)", f"{PYTHON} scraper/warm_outreach.py"),
     ]
     ok_all = True
     for label, cmd in steps:
