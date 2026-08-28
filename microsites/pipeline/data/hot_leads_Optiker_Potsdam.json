@@ -1,0 +1,281 @@
+{
+  "branch": "Optiker",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "City Optik Scharnbeck",
+      "address": "Brandenburger Str. 46, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ0SpFiNr1qEcRXxrZUZprC8M",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 293448"
+    },
+    {
+      "name": "eyes + more - Optiker Potsdam",
+      "address": "Brandenburger Str. 12, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJX8Zvy9H1qEcRPUNGox2d4b0",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 2008977"
+    },
+    {
+      "name": "Augenoptik Schauss e. K.",
+      "address": "Brandenburger Str. 10, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJC3ws8Nr1qEcRBHuFsbMwx70",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 291793",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.augenoptik-schauss.de/",
+      "email": "info@augenoptik-schauss.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'schauss' in domain/local",
+      "branch": "Optiker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Optiker Bode",
+      "address": "Stern-Center 1-10, 14480 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ_____xNfqEcRNxfEwzK5ZX0",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 625006"
+    },
+    {
+      "name": "Brillenhaus im Holländischen Viertel - Ihr Optiker",
+      "address": "Mittelstraße 16, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJf3zc19v1qEcRy7zcbjw_e78",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 2800604"
+    },
+    {
+      "name": "Robin Look Potsdam",
+      "address": "Breite Str. 25-27, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJIfyegM71qEcR501UPvj1g4E",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 962971"
+    },
+    {
+      "name": "Sämisch Optik | Ihr echter Optiker",
+      "address": "Friedrich-Ebert-Straße 8, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJuf4f79r1qEcRDToEH2-tvDc",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 2985060",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.saemisch-optik.de/",
+      "email": "info@saemisch-optik.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'sämisch' in domain/local",
+      "branch": "Optiker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Doro-Optik",
+      "address": "Friedrich-Ebert-Straße 14, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJq19j9tr1qEcRFwPcigM1YtI",
+      "types": [
+        "establishment",
+        "health",
+        "jewelry_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 2708623"
+    },
+    {
+      "name": "Apollo-Optik - Potsdam Bahnhofspassagen Potsdam",
+      "address": "Babelsberger Str. 16, 14473 Potsdam, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJzU0Y4un1qEcRktTVSiVv8RU",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 8871385"
+    },
+    {
+      "name": "Augenoptik Mathiebe",
+      "address": "Friedrich-Ebert-Straße 10, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJC3ws8Nr1qEcRvV3XuK9txi8",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 291521"
+    },
+    {
+      "name": "KRASS Optik",
+      "address": "Stern-Center 1-10, 14480 Potsdam Südost, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJXVADNxpfqEcR4Wz792MSCSY",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Apollo-Optik & Hörakustik - Potsdam - Brandenburger Str.",
+      "address": "Brandenburger Str. 56, 14467 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJy2BCb9D1qEcRbKmXQMCdCQw",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "DOBE - sehen & hören",
+      "address": "Zum Springbruch 9, 14558 Nuthetal-Bergholz-Rehbrücke, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ2TtSFHtfqEcREnByGK1rLBM",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "brillen.de & The Good Brand Opticians",
+      "address": "Friedrich-Ebert-Straße 16, 14467 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJWbBweJj1qEcRoOFaupEErQA",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "brillen.de",
+      "address": "Gerlachstraße 27, 14480 Potsdam Südost, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJfQKNlhpfqEcRPlXdgklTjFo",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Kollark Augenoptik GmbH",
+      "address": "Friedrich-Ebert-Straße 90, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJSUJZa9r1qEcRwigo5Txp12g",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Stern Optik Scharnbeck & Klotzek",
+      "address": "Johannes-Kepler-Platz 5, 14480 Potsdam Südost, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJuwgIhRZfqEcRvU0ZKYcDeN4",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Augenoptik Schauss e. K.",
+      "address": "Brandenburger Str. 10, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJC3ws8Nr1qEcRBHuFsbMwx70",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 291793",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.augenoptik-schauss.de/",
+      "email": "info@augenoptik-schauss.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'schauss' in domain/local",
+      "branch": "Optiker",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Sämisch Optik | Ihr echter Optiker",
+      "address": "Friedrich-Ebert-Straße 8, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJuf4f79r1qEcRDToEH2-tvDc",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 2985060",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.saemisch-optik.de/",
+      "email": "info@saemisch-optik.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'sämisch' in domain/local",
+      "branch": "Optiker",
+      "region": "Potsdam"
+    }
+  ]
+}

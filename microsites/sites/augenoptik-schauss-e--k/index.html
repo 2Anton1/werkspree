@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augenoptik Schauss e. K. | Ihr Optiker in Potsdam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3D3D6B;
+            --accent: #B8A9D9;
+            --bg-light: #F5F5F8;
+            --text-dark: #2D2D2D;
+            --white: #ffffff;
+            --gradient: linear-gradient(135deg, #3D3D6B 0%, #5A5A8F 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Brillen Visualisierung */
+        .glasses-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .lens {
+            width: 60px;
+            height: 60px;
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .bridge {
+            width: 30px;
+            height: 3px;
+            background: var(--accent);
+            margin: 0 -5px;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 40px 30px;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        /* Brands Section */
+        .brands {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .brand-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .brand-pill {
+            background: var(--white);
+            border: 1px solid #ddd;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .brand-pill:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Contact & Hours */
+        .contact-info {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .contact-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+
+        .contact-box, .hours-box {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .contact-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-note {
+            margin-top: 10px;
+            opacity: 0.6;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .contact-flex { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">Augenoptik Schauss</a>
+            <div class="contact-trigger">
+                <a href="tel:0331291793" style="text-decoration:none; color:var(--primary); font-weight:600;">📞 0331 291793</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="glasses-icon">
+                <div class="lens"></div>
+                <div class="bridge"></div>
+                <div class="lens"></div>
+            </div>
+            <h1>Klare Sicht, klarer Stil</h1>
+            <p>Ihr Meisterbetrieb für präzise Augenoptik und exklusive Brillenmode im Herzen von Potsdam.</p>
+            <a href="#kontakt" class="cta-button">Beratung vereinbaren</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container about-content">
+            <h2 class="section-title">Über uns</h2>
+            <p>Willkommen bei Augenoptik Schauss e. K. – Ihrem Experten für besseres Sehen in der Brandenburger Straße. Seit vielen Jahren verbinden wir traditionelles Handwerk mit modernster Technik und einem feinen Gespür für Ästhetik. In unserer Potsdamer Meisterwerkstatt nehmen wir uns Zeit für Ihre Augen, denn individuelles Sehen erfordert individuelle Lösungen. Ob modische Fassung oder hochpräzise Kontaktlinsen: Wir sorgen dafür, dass Sie nicht nur perfekt sehen, sondern auch so aussehen.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Präzisions-Sehtest</h3>
+                    <p>Modernste Messtechnik für Ihre exakte Sehstärke und optimale Augengesundheit.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Exklusive Brillen</h3>
+                    <p>Eine kuratierte Auswahl an Designer-Fassungen und zeitlosen Klassikern.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Kontaktlinsen</h3>
+                    <p>Individuelle Anpassung von weichen und formstabilen Linsen für höchsten Tragekomfort.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gleitsicht-Expertise</h3>
+                    <p>Spezialisierte Beratung für stufenloses Sehen in allen Entfernungen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Eigene Werkstatt</h3>
+                    <p>Schnelle Reparaturen und präzise Einarbeitung Ihrer Gläser direkt vor Ort.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Stilberatung</h3>
+                    <p>Wir finden gemeinsam die Brille, die perfekt zu Ihrer Gesichtsform und Ihrem Typ passt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands">
+        <div class="container">
+            <h2 class="section-title">Unsere Marken</h2>
+            <div class="brand-list">
+                <div class="brand-pill">Zeiss</div>
+                <div class="brand-pill">Ray-Ban</div>
+                <div class="brand-pill">Silhouette</div>
+                <div class="brand-pill">Rodenstock</div>
+                <div class="brand-pill">Oakley</div>
+                <div class="brand-pill">Lindberg</div>
+                <div class="brand-pill">Gucci</div>
+                <div class="brand-pill">Esprit</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info" id="kontakt">
+        <div class="container">
+            <div class="contact-flex">
+                <div class="contact-box">
+                    <h2 class="section-title">Kontakt</h2>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <p>Brandenburger Str. 10, 14467 Potsdam</p>
+                    </div>
+                    <div class="contact-item">
+                        <span>📞</span>
+                        <a href="tel:0331291793">0331 291793</a>
+                    </div>
+                    <div class="contact-item">
+                        <span>✉️</span>
+                        <a href="mailto:info@augenoptik-schauss.de">info@augenoptik-schauss.de</a>
+                    </div>
+                </div>
+                <div class="hours-box">
+                    <h2 class="section-title">Öffnungszeiten</h2>
+                    <table class="hours-table">
+                        <tr><td>Montag - Freitag</td><td>09:00 - 18:30 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>10:00 - 16:00 Uhr</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Augenoptik Schauss e. K. – Alle Rechte vorbehalten.</p>
+            <p class="footer-note">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
