@@ -34,8 +34,7 @@
 **Werkspree** ist ein B2B-Service-Business, das konkrete Büroprozesse für kleine Handwerks- und Dienstleistungsbetriebe in Berlin/Brandenburg automatisiert. Die neue Kernpositionierung lautet: ein Prozess, klare Regeln, messbare Entlastung — mit menschlicher Kontrolle bei Entwürfen, finanziellen und irreversiblen Aktionen.
 
 **Pseudonym:** Finn Werksby (NIEMALS den echten Namen verwenden)
-**Absender-E-Mail:** werkspree@bki-de.de (Display Name: "Finn Werksby") — Strato SMTP/IMAP, vorher kontakt@bki-de.de (umgestellt 31.08.2026)
-**Backup-E-Mail:** a2807d@gmail.com (Gmail OAuth, Fallback)
+**Absender-E-Mail:** a2807d@gmail.com (Display Name: "Finn Werksby")
 **Domain:** werkspree.bki-de.de (Subdomain von bki-de.de, gekauft bei Strato)
 
 ---
@@ -55,9 +54,9 @@
 #### 2.0.2 Google Gemini API (Microsite-Builder)
 - **API Key:** `GOOGLE_API_KEY` in `~/.hermes/.env` (gleicher Key wie Places)
 - **Preis:** 0$ (60 Anfragen/Min, 1500 Anfragen/Tag — kostenlos)
-- **Verwendung:** Optionaler Experimentpfad für Inhalte; der produktive Bau nutzt seit 01.09.2026 das deterministische, geprüfte HTML-Template
+- **Verwendung:** Generiert professionelle HTML-Microsites für heiße Leads
 - **Modell:** gemini-3-flash-preview
-- **Fallback/Produktion:** Statisches Template (`build_microsite.py`); unvollständige Gemini-Ausgaben werden verworfen
+- **Fallback:** Statisches Template (`build_microsite.py`) wenn Gemini versagt
 - **Aktiviert am:** 20.08.2026
 
 ### 2.1 GitHub Repo
@@ -71,10 +70,6 @@
 - **Custom Domain:** https://werkspree.bki-de.de (CNAME gesetzt bei Strato, DNS propagiert, SSL-Zertifikat pending)
 - **Quelle:** ~/werkspree/index.html (im Root des Repos)
 - **Positionierung (11.08.2026):** Hero und Leistungsargumentation auf Rechnungs-OCR, Postfachentlastung, Lead-Nachfassung und Freigaben umgestellt. Paketnamen lauten jetzt Automation Starter/Growth/Enterprise; Leistungsumfang wurde auf konkrete, produktisierte Prozess-Sprints ausgerichtet.
-- **Conversion-Fokus (01.09.2026):** Der Hero führt nun auf den Automation Sprint
-  (890 € einmalig): Rechnungseingang als konkreter Einstieg, 14-Tage-Ablauf und
-  qualifizierbares Prozess-Check-Formular. Das vorhandene n8n-Tracking erhält
-  bei Formular-Absendung zusätzlich Angebot und ausgewählten Prozess.
 - **SSL:** GitHub Pages auto-SSL, HTTPS enforcement noch nicht aktiv (Zertifikat wird von GitHub ausgestellt, dauert 5-15 Min)
 - **Cron-Job "GitHub Pages SSL Check" (8a0ea7b0e123):** prüft alle 30 Min ob SSL bereit ist und aktiviert es automatisch. Wiederholt 12x; nach erfolgreicher Aktivierung pausieren/entfernen.
 
@@ -97,9 +92,7 @@
 - **Extrahiert:** Rechnungsnummer, Datum, Betrag, USt, IBAN, BIC, Absender, Konfidenz-Score
 - **Airtable Credential ID:** PxHtJTQCVZN6cO82 (in n8n gespeichert)
 - **Test:** Erfolgreich, Execution Status = success, Airtable Record erstellt
-- **JSON-String-Fix:** Der Parser entpackt inzwischen rohe JSON-Strings,
-  verschachtelte Webhook-Bodies und escaped Newlines; lokale Node-Tests decken
-  diese Fälle ab.
+- **Bekanntes Issue:** Code-Node extrahiert Daten unvollständig wenn JSON als String gesendet wird (RegEx greift nicht auf \n in JSON). Pipeline funktioniert prinzipiell.
 
 ### 2.4 Stripe (Zahlungen)
 - **Modus:** LIVE (echte Zahlungen möglich)
@@ -118,10 +111,7 @@
 | Werkspree KI Starter | prod_V2GDkXbLtFIUpQ | price_1U2BhLENKo4xUXGetkUVrFmX | https://buy.stripe.com/fZu00j9VfgTde5j0L1gnK03 |
 | Werkspree KI Growth | prod_V2GDomqOfi78LM | price_1U2BhNENKo4xUXGewr7xIwcO | https://buy.stripe.com/4gMaEX1oJ46rbXbctJgnK04 |
 | Werkspree KI Enterprise | prod_V2GDuHgQi450Cg | price_1U2BhPENKo4xUXGe2KiaAqHO | https://buy.stripe.com/3cI4gzebv5avaT71P5gnK05 |
-| Individuelle Lösung | — (kein Stripe-Produkt) | — | mailto:werkspree@bki-de.de |
-| E-Rechnungs-Prüfer Pro | prod_VAn4FUwSclDBJ0 | price_1UARUHENKo4xUXGefJovtl4o | https://buy.stripe.com/8x214n3wR0UfaT70L1gnK06 |
-| Microsite-Generator | prod_VAn4ivWl8zOFM7 | price_1UARUIENKo4xUXGeiZmj9qAW | https://buy.stripe.com/bje3cv6J30Uf1ix65lgnK07 |
-| Rechnungs-OCR Mail-Service | prod_VAnHo9GckzBcPl | price_1UARh0ENKo4xUXGe16nxOZUE | https://buy.stripe.com/5kQ9AT3wR7iD0et9hxgnK08 |
+| Individuelle Lösung | — (kein Stripe-Produkt) | — | mailto:a2807d@gmail.com |
 
 ### 2.5 Gmail (E-Mail-Versand)
 - **Konto:** a2807d@gmail.com
@@ -164,13 +154,10 @@
 | Attachments | multipleAttachments | (ungenutzt, Standardfeld) |
 | Attachment Summary | aiText | (ungenutzt, Standardfeld) |
 
-### 2.7 Scrapling (Web-Scraping, ersetzt Firecrawl + requests+BS4)
-- **Installiert:** scrapling 0.4.15 (+ curl_cffi, playwright, patchright, browserforge, Chromium)
-- **Verwendung:** `from scrapling.fetchers import Fetcher; page = Fetcher.get(url, timeout=30); page.css("h2"); page.get_all_text()`
-- **Vorteile:** Anti-Bot (umgeht Cloudflare Turnstile), adaptive CSS-Selektoren (überlebt Layout-Änderungen), keine API-Keys, keine Credits, keine Rate-Limits
-- **DynamicFetcher** (für JS-heavy Seiten wie Google Maps): `DynamicFetcher.fetch(url, headless=True, network_idle=True)`
-- **Eingesetzt in:** scraper/pipeline.py, scraper/direct_scraper.py, scraper/warmth_scorer.py, microsites/pipeline/hot_leads_pipeline.py, microsites/pipeline/agent_build_microsite.py, microsites/pipeline/maps_scraper.py
-- **Firecrawl CLI** war vorher installiert (`~/.local/bin/firecrawl`) — jetzt nur noch als Fallback für manuelle Scrapes, nicht mehr in Pipeline-Code eingebunden
+### 2.7 Firecrawl (Web-Scraping)
+- **CLI:** firecrawl (installiert, authentifiziert)
+- **Credits:** ~1.024 remaining
+- **Verwendung:** `firecrawl scrape URL -o output.md` / `firecrawl search "query" --limit N -o output.json --json`
 
 ---
 
@@ -195,10 +182,6 @@
 - **Footer:** "Werkspree — KI-Automatisierung für kleine Unternehmen | Berlin & Brandenburg | Finn Werksby"
 - **E-Mail-Link:** mailto:a2807d@gmail.com
 - **Erledigt (08.08.2026):** Die verwaiste Duplikat-Seite `~/werkspree/landing/index.html` (falsche Kontakt-Mail, keine Stripe-Links) wurde gelöscht. `index.html` im Repo-Root ist jetzt die einzige Landing Page.
-- **Branchen-Seiten:** `website-bau/<slug>/index.html` enthält 17 branchenspezifische
-  SEO-Landingpages (Elektriker, Dachdecker, Maler, Friseur, Kfz sowie seit
-  01.09.2026 Tischlerei, Kosmetik, Physio, Gartenbau, Sanitär, Reinigung,
-  Steuerberater, Immobilien, Zahnarzt, Fahrschule, Bäckerei und Allgemein).
 
 ### 4.2 CRM Template
 - **Pfad:** ~/werkspree/crm/crm_template.json
@@ -208,8 +191,7 @@
 ### 4.3 Lead-Scraper Pipeline
 - **Pfad:** ~/werkspree/scraper/pipeline.py
 - **Funktion:** Scraped GelbeSeiten-Kategorieseiten für eine Branche+Region pro Tag
-- **Scraping:** Scrapling `Fetcher.get()` + CSS-Selektoren (`h2`, `a[href^="tel:"]`, `a[href*="gsbiz"]`) — kein Firecrawl, keine Temp-Dateien
-- **Pipeline:** GelbeSeiten scrape → Firmennamen+Telefon per CSS extrahieren → Firmenwebsite per GelbeSeiten-Profilseite auflösen → /impressum scrape → E-Mail finden → JSON speichern
+- **Pipeline:** GelbeSeiten scrape → Firmennamen+Telefon extrahieren → Firmenwebsite /impressum scrape → E-Mail finden → JSON speichern
 - **Branchen-Rotation:** 16 (Branche, Region)-Paare rotieren täglich (Elektriker Berlin, Dachdecker Berlin, etc.)
 - **Ausgabe:** ~/werkspree/scraper/data/leads_YYYYMMDD.json
 
@@ -231,32 +213,6 @@
 - **Pfad:** `PROZESSE.md`
 - **Inhalt:** Automation-Sicherheitsstufen, Automation-Sprint, Rechnungs-OCR-Referenzprozess, CRM-/Lead-Regeln und Monatsbetreuung.
 
-### 4.10 Tests und Demo-Dokumentation
-- **Pfad:** `tests/automation_starter_demo.py`, `docs/automation-starter-demo.md`
-- **Inhalt:** Netzwerkfreier Smoke-Test und reproduzierbare Anleitung für den
-  Automation-Starter-Ablauf.
-- **OCR-Tests:** `n8n-workflows/rechnungs-ocr-parser.test.js` prüft Webhook-
-  Objekt, rohe JSON-Strings, verschachtelte `body`-Strings und Rechnungsformate.
-- **Vertrieb:** `docs/automation-sprint-sales-playbook.md` beschreibt den
-  einwilligungsbasierten Weg von der Sprint-Anfrage bis zu Angebot, Kunde und
-  wöchentlichem Umsatz-Review.
-
-### 4.11 CRM-Erfassung von Sprint-Anfragen
-- **Pfad:** `n8n-workflows/werkspree-sprint-lead-capture.json`
-- **Produktiv:** n8n-Workflow `IkvCTz0fSWiqjcGg` nimmt ausschließlich nach
-  erfolgreicher Formspree-Übermittlung freiwillige Prozess-Check-Anfragen an,
-  validiert sie und legt sie als `Inbound · [Betrieb]` mit Status `Neu` in
-  Airtable an. Die versionierte JSON-Datei enthält keine Zugangsdaten.
-
-### 4.12 Microsite-Qualität
-- **Template:** `microsites/pipeline/microsite_template.html` — responsives,
-  branchengestyltes Static-Template mit korrekten Datenfeldern.
-- **Prüfung:** `microsites/pipeline/site_quality.py` und
-  `microsites/pipeline/test_build_microsite.py` — geschlossene HTML-Struktur,
-  sichtbarer Inhalt, Escaping, Platzhalter- und Opt-out-Schutz.
-- **Branchen-Ratgeber:** `scripts/generate_branch_blog_pages.py` erzeugt die
-  zwölf ergänzten Seiten unter `blog/website-*/` reproduzierbar.
-
 ### 4.6 n8n Workflow-Datei
 - **Pfad:** ~/werkspree/n8n-workflows/rechnungs-ocr-demo.json
 - **Inhalt:** n8n-Workflow-JSON für Rechnungs-OCR
@@ -277,11 +233,9 @@
 
 | Job ID | Name | Schedule | Zweck |
 |---|---|---|---|
-| df4d149e4f8f | Werkspree Lead Pipeline (Script Mode) | Täglich 10:00 | `~/.hermes/scripts/run_pipeline.py` in der Produktionskopie `/Users/anton/work/werkspree`: Pipeline → Scoring → Outreach → Airtable-Sync. Der Sync übernimmt `sent_emails.json`; aktuelle Airtable-Statuswerte sind nur `Neu` und `Kontaktiert`. Exit≠0 bei Fehler. |
+| df4d149e4f8f | Werkspree Lead Pipeline (Script Mode) | Täglich 10:00 | run_pipeline.py: pipeline.py → warmth_scorer.py → warm_outreach.py (AUTO-SEND) → Airtable-Sync. Exit≠0 bei Fehler. Report: reports/pipeline_YYYYMMDD.md |
 | e85d58d7915e | Werkspree Health Check | Alle 6h | ~/.hermes/scripts/health_check.py (no_agent): silent bei OK, nur Issues melden |
-| 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Scrapling) → geprüfter Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `werkspree@bki-de.de`) |
-| b68eea7332bc | Werkspree Reply Checker | 2x täglich 09:00 + 18:00 | ~/.hermes/scripts/check_replies.py (no_agent): prüft Strato IMAP + Gmail API auf Antworten versendeter Mails. Bei neuen Antworten → WhatsApp-Benachrichtigung. Keine Antwort → still (leere stdout). |
-| 3d145f5ac7af | Werkspree Tagesreport | Täglich 09:00 | ~/.hermes/scripts/werkspree_daily_summary.py (no_agent): sammelt Leads, Outreach-Mails, Microsites, Antworten, Pipeline-Report und sendet Zusammenfassung an anton.drooff@icloud.com via Strato SMTP. |
+| 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Firecrawl) → eigener Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `kontakt@werkspree.bki-de.de`) |
 
 ---
 
@@ -334,55 +288,32 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 - [x] Lead-Scraper Pipeline (pipeline.py)
 - [x] Outreach-Engine (outreach.py) + E-Mail-Templates
 - [x] Cron-Job: tägliche Lead-Pipeline um 10:00
-- [x] Pseudonym: Finn Werksby für Marketing und Demo-Inhalte; rechtliche Pflichtangaben führen die verantwortliche Person korrekt
+- [x] Pseudonym: Finn Werksby (überall, kein echter Name)
 - [x] Positionierung auf konkrete Büroprozesse, produktisierte Sprints und menschliche Freigaben ausgerichtet (11.08.2026)
 - [x] Liefer- und Sicherheitsprozesse in `PROZESSE.md` dokumentiert (11.08.2026)
 - [x] Outbound-E-Mail-Versand in `outreach.py` und `warm_outreach.py` standardmäßig deaktiviert; Aktivierung nur mit `--send` (11.08.2026)
 
 ### Ausstehend ⏳
-#### KI-Generierte Inhalte (ChatGPT-Workflow)
-Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und alle Details sind in HANDOVER.md dokumentiert.
-
-- [x] **n8n Respond-Node** für `werkspree-microsite-generator` konfiguriert und aktiv (01.09.2026; geprüft im Workflow `tZOlY46EecN1BRsd`). JSON-Antwort, Status 200 und CORS-Header sind gesetzt.
-
-- [x] **12 weitere Branchen-Landingpages** generiert (01.09.2026): Tischlerei,
-  Kosmetik, Physiotherapie, Gartenbau, Sanitär, Reinigung, Steuerberater,
-  Immobilien, Zahnarzt, Fahrschule, Bäckerei und Allgemein. Alle Seiten sind
-  von `website-bau/index.html` verlinkt und in `sitemap.xml` enthalten.
-
-- [x] **Blog-Artikel** für die 12 neuen Branchen ergänzt (01.09.2026; `blog/website-*/`)
-  - SEO-Metadaten, Canonicals, Article-JSON-LD, Conversion-CTA
-  - Cross-Selling-Links zu Website-Bau, Rechnungs-OCR und E-Rechnungs-Prüfer
-
-#### Technische Aufgaben
-- [x] HTTPS enforcement geprüft (HTTP → HTTPS auf `werkspree.bki-de.de`, 01.09.2026)
-- [x] Impressum & Datenschutzerklärung vorhanden und verlinkt (`impressum.html`, `datenschutz.html`)
-- [x] E-Mail-Yield verbessert: Die Pipeline prüft neben Standardpfaden nun auch
-  same-host Kontakt-/Impressum-Links, die sie auf der Startseite findet
-  (01.09.2026)
-- [ ] WhatsApp-Alternative einrichten (Twilio-Nummer ~1€/Monat)
-- [ ] Outreach rechtlich prüfen und mit `--send` aktivieren
-- [ ] Airtable-DPA/AVV vor dem ersten echten Inbound-Lead unterzeichnen (externer Vertrag)
-- [ ] Alten n8n-Tracking-Workflow `Ax3Kl8MCYm7Isykd` mit berechtigtem n8n-Konto deaktivieren (API-Key hat dafür 403)
-- [x] CRM-Statuswerte vereinheitlicht: Mapping und Funnel unterstützen
-  Qualifiziert, Eingehend, Demo, Angebot und Nicht kontaktieren; Vorlage und
-  README dokumentieren das Modell (01.09.2026)
-- [x] Automation-Starter-Demo als reproduzierbarer, netzwerkfreier Testlauf
-  dokumentiert (`docs/automation-starter-demo.md` + Test) (01.09.2026)
-- [x] Rechnungs-OCR für JSON-String-Eingaben abgesichert; verschachtelter
-  `body`-String und escaped Newlines sind getestet (01.09.2026)
+- [x] SSL-Zertifikat für werkspree.bki-de.de — **erledigt.** Am 09.08.2026 live über HTTPS geprüft, Zertifikat ist da. Cron `8a0ea7b0e123` kann abgeschaltet werden.
+- [ ] HTTPS enforcement aktivieren (sobald Zertifikat da — kann laut GitHub-API erst gesetzt werden, wenn das Zertifikat existiert)
+- [ ] **Impressum & Datenschutzerklärung fehlen komplett** — rechtlich verpflichtend, siehe Abschnitt 11.1 (kritisch, blockiert nichts technisch, aber Abmahnrisiko)
+- [ ] E-Mail-Yield der Lead-Pipeline verbessern (aktuell nur 2 von 50 Leads mit E-Mail = 4%) — siehe Abschnitt 11.2
+- [ ] WhatsApp-Alternative (keine 2. Handynummer; Option: Twilio-Nummer ~1€/Monat)
+- [ ] Outreach rechtlich prüfen und nur bei zulässiger Grundlage/Einwilligung mit `--send` aktivieren
 - [x] Hybrid-Lead-Plan eingeführt: günstiges Screening für alle, Deep-Research nur für maximal 10 Top-Leads, maximal 5 Outreach-Kandidaten pro Lauf (11.08.2026)
 - [x] Werkspree-Cron `e1e5b8283664` auf `gemini / models/gemini-3.5-flash` gepinnt, Versand deaktiviert und Zustellung auf `local` gestellt (11.08.2026)
-- [x] `crm/crm_template.json` als Archiv gekennzeichnet; `crm/README.md` erklärt,
-  dass Airtable Base `appyMLhXOMHpD5vfT` das produktive CRM ist (01.09.2026)
+- [ ] CRM-Statuswerte um Qualifiziert, Eingehend, Demo, Angebot und Nicht kontaktieren ergänzen
+- [ ] Automation-Starter-Demo als reproduzierbaren Testlauf mit anonymisierten Rechnungen dokumentieren
+- [ ] Feintuning Rechnungs-OCR (RegEx-Anpassung für JSON-String-Eingabe)
+- [ ] `crm/crm_template.json` ist veraltet (echtes CRM ist in Airtable) — entfernen oder klar als Archiv kennzeichnen
 
 ---
 
 ## 9. SICHERHEITSREGELN
 
-1. In Marketing-Kommunikation und Demo-Inhalten ausschließlich "Finn Werksby" verwenden. Rechtliche Pflichtangaben, Verträge und Rechnungen sind davon ausdrücklich ausgenommen und müssen die verantwortliche Person korrekt nennen.
+1. **NIEMALS** den echten Namen verwenden — immer "Finn Werksby"
 2. **NIEMALS** pv-ki.de, anton-drooff.de oder career-tool.pv-ki.de auf dem Hetzner-Server anfassen
-3. **Stripe-Schlüssel** nicht in Commits pushen (sind in .env, nicht im Repo)
+3. **Stripschüssel** nicht in Commits pushen (sind in .env, nicht im Repo)
 4. **Server-Passwort** nicht in Skripten hardcoden
 5. SSH zum Server nur via sshpass oder expect (sudo -S wird blockiert)
 
@@ -392,335 +323,23 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
-### 01.09.2026 — Microsite-Generator stabilisiert und offene Punkte abgearbeitet
-- Ursache der schlecht aussehenden Microsites behoben: Das alte Template hatte
-  nicht passende Platzhalter, die Fallback-Seiten enthielten leere Kontakt-
-  und Zeitfelder, und der LLM-Pfad konnte mitten im CSS abbrechen. Der
-  produktive Orchestrator nutzt nun `build_microsite.py` mit einem vollständigen,
-  responsiven Branch-Template; Daten werden escaped und störende Scraper-/Markdown-
-  Fragmente herausgefiltert.
-- `microsites/pipeline/site_quality.py` prüft geschlossene HTML-Strukturen,
-  sichtbaren Inhalt, Platzhalter und abgebrochene Style-/Script-Blöcke. Ein
-  unvollständiger LLM-Output wird nicht veröffentlicht. Slugs sind jetzt
-  ASCII-normalisiert und stabil.
-- Neun vorhandene Lead-Seiten wurden neu gerendert. Zwei abgeschnittene Seiten
-  wurden repariert; die alte Fahrschul-Demo mit gesperrter Kontaktadresse ist
-  durch eine `noindex`-Hinweisseite ersetzt, ihre öffentliche `lead.json` wurde
-  entfernt. Neue Builds legen keine Lead-Daten mehr in den Website-Ordner.
-- Zwölf fehlende Branchen-Ratgeberseiten unter `blog/website-*/` ergänzt und
-  in `sitemap.xml` aufgenommen. Der Generator-Smoke-Test deckt Escaping,
-  Segment-Texte, Slugs und die Ablehnung abgeschnittener HTML-Dateien ab.
-- HTTPS-Weiterleitung geprüft: HTTP landet auf `https://werkspree.bki-de.de/`.
+### 28.08.2026 — Lead-Pipeline-Cron-Fix: Scrapling-Python im Script-Mode
 
-### 01.09.2026 — Responsive Conversion-Audit der Landingpage
-- Live visuell geprüft bei 1.440 × 900, 768 × 1.024 und 390 × 844 px. Es gibt
-  keinen horizontalen Seitenüberlauf. Bei 768 px bleibt jedoch die komplette
-  Desktop-Navigation aktiv; ihre rechten Einträge werden sichtbar abgeschnitten.
-  **Priorität P0:** Ab etwa 900 px auf ein klar beschriftetes Menü umstellen,
-  damit Kontakt und die Produktwege erreichbar bleiben.
-- Der Hero ist inhaltlich klar, führt mobil aber drei gleichwertig wirkende
-  Handlungsoptionen vor. Der kostenlose E-Rechnungs-Prüfer steht erst an dritter
-  Stelle; die zugehörige Nutzenkarte beginnt erst nach dem ersten Viewport.
-  **Priorität P1:** Zwei Wege als Entscheidungsblock bündeln: „Rechnung kostenlos
-  prüfen (sofort, ohne Anmeldung)“ für kalten Traffic und „15-Minuten-
-  Prozess-Check“ für hohe Kaufabsicht. Der Prozess-Check bleibt der
-  vertriebliche Primärweg, der kostenlose Test wird aber sichtbar als Risiko-
-  freier Einstieg erklärt.
-- Auf 390 px liegt das Kontaktformular erst bei rund 13.400 px Seitenlänge. Es
-  verlangt Name, E-Mail, Prozess, Nachricht und Datenschutzhinweis. **P1:**
-  nach der ersten Wertprobe einen kurzen, wiederholten Einstieg anbieten und
-  den Check auf zwei Schritte reduzieren (zunächst E-Mail + Prozess; Details
-  freiwillig danach). Kein Pflichtfeld ohne unmittelbaren Nutzen.
-- Die beiden Produktwege wurden ebenfalls geprüft: Der E-Rechnungs-Prüfer ist
-  sinnvoll ohne Anmeldung und verarbeitet die Datei lokal; der Microsite-
-  Generator nimmt die E-Mail nur optional vor der Vorschau entgegen. **P1:**
-  erst nach einem Ergebnis eine freiwillige, nicht blockierende Auswahl
-  anbieten, z. B. „Ergebnis und 3-Schritte-Plan per E-Mail“. Der Eintrag muss
-  mit Quelle `E-Rechnung` bzw. `Microsite` ins CRM gehen und darf nur mit
-  passendem Datenschutzhinweis/AVV produktiv werden.
-- **P2:** Vor Preisen ein konkretes, eindeutig als Beispiel gekennzeichnetes
-  Ergebnis (Prüfresultat bzw. Microsite-Vorschau) und die nächsten zwei Schritte
-  zeigen; keine erfundenen Kundenstimmen. Für die spätere Optimierung nur
-  datensparsame, transparent erklärte Funnel-Kennzahlen (Teststart,
-  Ergebnisansicht, freiwillige E-Mail, Pro-Klick) einführen; die Website nutzt
-  derzeit keine Besucheranalyse.
+**Problem (7 Fehlschläge in Folge, 26.–28.08.):** `run_pipeline.py` (Cron-Job `df4d149e4f8f`,
+no-agent Script-Mode) rief die Unterschritte als `python3 scraper/pipeline.py` auf. Der
+Cron-Script-Runner nutzt ein anderes Python als `/usr/local/bin/python3` → `ModuleNotFoundError:
+No module named 'scrapling'` in `pipeline.py` + `warmth_scorer.py`. Nur `warm_outreach.py`
+(ohne scrapling) lief noch durch und sendete vereinzelt.
 
-### 01.09.2026 — Umsatzsignal gegengeprüft
-- Im Werkspree-Postfach lagen in den letzten sieben Tagen keine ungelesenen
-  Antworten; die Stripe-Live-Abfrage ergab keine erfolgreichen Zahlungen.
-  Der Funnel hat daher noch keinen belegten Inbound- oder Umsatzimpuls.
-- Das vorhandene Airtable-Tracking enthält im selben Zeitraum einen
-  Seitenaufruf und keine Formularaktion. Der unmittelbare Engpass ist daher
-  qualifizierter Traffic. Das Tracking speichert derzeit nur Ereignisse, keine
-  konkreten Sprint-Anfragen im CRM.
+**Fix (Commit `32e1dc2`):** `run_pipeline.py` nutzt jetzt absolute `PYTHON = /usr/local/bin/python3`
+(fällt auf `shutil.which("python3")` zurück). Verifiziert 28.08. 17:04: pipeline.py EXIT 0
+(65 Leads, 52 neu, 48 mit E-Mail), warmth_scorer EXIT 0, warm_outreach `--dry-run` zeigt
+4 Kandidaten. Nächster regulärer Lauf 29.08. 10:00.
 
-### 01.09.2026 — Partnerpaket für Empfehlungs-Traffic
-- `docs/partner-kooperationspaket.md` stellt ein Gesprächs- und
-  Nachfasspaket für Steuerkanzleien, Lohnbüros und IT-Systemhäuser bereit.
-  Es setzt auf persönliche, einwilligungsbasierte Einführungen und lässt
-  Vermittlungskonditionen bewusst vor der ersten Empfehlung schriftlich
-  vereinbaren.
-
-### 01.09.2026 — Angebotsvorlage für Sprint-Abschlüsse
-- `docs/automation-sprint-angebot-vorlage.md` bündelt den nach einem
-  qualifizierten Check bestätigten Umfang, Abnahmekriterien, Mitwirkung und
-  Preis des 890-€-Sprints. Zahlungsweg und Fälligkeit bleiben bewusst
-  kundenspezifisch festzulegen; die Vorlage ist kein Vertrag oder eine Rechnung.
-
-### 01.09.2026 — IndexNow für Suchmaschinen-Discovery
-- Die öffentliche Suche hatte keine indexierten Werkspree-Treffer, obwohl
-  `robots.txt`, Sitemap und Canonicals erreichbar sind. Die Root-Datei
-  `66cfddf7-e60c-4203-8c92-130427ee0c11.txt` verifiziert den Host für die
-  kostenfreie IndexNow-Einreichung der wichtigsten Einstiegsseiten.
-- Startseite, E-Rechnungs-Ratgeber, E-Rechnungs-Prüfer, Rechnungs-OCR und
-  Website-Bau wurden am 01.09.2026 eingereicht; der offizielle Endpunkt
-  antwortete mit HTTP 202 (angenommen, Verifikation/Crawling ausstehend).
-
-### 01.09.2026 — E-Rechnungs-Prüfer verifiziert
-- Die vorhandenen Browserpfad-Tests für XRechnung-XML, ZUGFeRD-CII, fehlerhafte
-  XML und ZUGFeRD-PDF mit eingebettetem XML wurden lokal vollständig bestanden.
-  Sie verwenden ausschließlich erfundene Beispieldaten und keinen Upload.
-
-### 01.09.2026 — CRM-Erfassung freiwilliger Sprint-Anfragen
-- `index.html`: Nach erfolgreicher Formspree-Annahme sendet das Formular die
-  freiwillig eingegebenen Anfrageangaben an den separaten n8n-Webhook
-  `werkspree-sprint-lead`; die bisherige sitzungsübergreifende Besucheranalyse
-  wurde entfernt.
-- `datenschutz.html` dokumentiert Formspree, den n8n-Server in Deutschland und
-  Airtable als CRM sowie die Datenkategorien, Zweck und Drittlandhinweis. Der
-  Formulartest bestätigt die Kenntnisnahme dieser Hinweise statt eine pauschale
-  Einwilligung einzuholen.
-- n8n-Workflow `IkvCTz0fSWiqjcGg` („Werkspree Sprint Lead Capture“) ist aktiv.
-  Er prüft Formularkennung, E-Mail, Prozessauswahl, Datenschutzhinweis und
-  Honeypot, bevor er einen Datensatz `Inbound · [Betrieb]` mit Status `Neu` in
-  Airtable anlegt. Die sanitisierte Definition liegt unter
-  `n8n-workflows/werkspree-sprint-lead-capture.json`; sie enthält keine Secrets.
-- End-to-End geprüft: Fiktive valide Anfrage erzeugte einen CRM-Eintrag mit
-  Status `Neu` und Score 10; der exakt identifizierte Testdatensatz wurde danach
-  gelöscht. Ungültige Testnutzlast erreichte den CRM-Schritt nicht.
-- **Offen:** Vor dem ersten echten Lead den Airtable Data Processing Addendum
-  (DPA/AVV) unterzeichnen; Airtable stellt ihn separat bereit.
-- Der ältere Tracking-Workflow `Ax3Kl8MCYm7Isykd` ließ sich mit dem vorhandenen
-  API-Schlüssel nicht deaktivieren (HTTP 403). Er wird von der aktualisierten
-  Website nicht mehr aufgerufen, sollte aber mit einem berechtigten n8n-Konto
-  deaktiviert werden.
-
-### 01.09.2026 — Sprint-Angebot und Umsatz-Ziel geschärft
-- `goal-ledger.md` ergänzt: Ziel sind drei bezahlte Automation Sprints in 90
-  Tagen (2.670 € einmalig) und mindestens ein Betreuungsauftrag (290 € MRR).
-- `index.html`: Der Hero, die Navigation und der Kontaktbereich führen zum
-  Automation Sprint (890 €). Das Kontaktformular fragt den gewünschten
-  Prozess ab und übergibt Angebot/Prozess an Formspree bzw. das n8n-Tracking;
-  die Events unterscheiden Absendeversuch und erfolgreiche Anfrage.
-- Der Sprint erklärt nun einen konkreten 14-Tage-Ablauf; die vorhandenen
-  Paketpreise und Stripe-Links wurden nicht verändert. Der Ersparnis-Rechner
-  rechnet konsistent mit dem Sprintpreis statt mit dem Starter-Abo.
-- `docs/automation-sprint-sales-playbook.md` ergänzt den Ablauf für freiwillige
-  Anfragen: Reaktionsvorlage, Qualifizierung, Angebotsgrenze und CRM-Status.
-- Commit `9cd4a1d` wurde auf `main` gepusht; der öffentliche Abruf von
-  `https://werkspree.bki-de.de/` bestätigte Hero, Prozess-Check-CTA und
-  Erfolgs-Tracking der neuen Sprint-Strecke.
-
-### 01.09.2026 — Funnel-Audit und produktiver CRM-Sync
-- Reale Airtable-Prüfung: 347 Leads, 29 nachweislich kontaktiert, 0 Antworten
-  und 0 Kunden. Zuvor standen alle Kontakte wegen einer fehlenden Rückführung
-  aus `sent_emails.json` im Eingangszustand.
-- Der produktive Cron läuft aus `/Users/anton/work/werkspree`, nicht aus dem
-  Git-Checkout `/Users/anton/werkspree`. Seine `run_pipeline.py` übernimmt nun
-  Versandstatus vor dem Airtable-Abgleich und schützt bestehende Kontaktstatus.
-- Das produktive Airtable-Statusfeld enthält aktuell nur `Neu` und
-  `Kontaktiert`; die Automation nutzt deshalb keine nicht vorhandenen Werte.
-  Für `Qualifiziert`, `Angebot` und `Kunde` muss die Airtable-Auswahlliste
-  separat erweitert werden.
-- `~/.hermes/scripts/werkspree_daily_summary.py` prüft nun reale neue
-  Reply-Checker-Hinweise; Follow-ups werden nicht mehr als Antworten gezählt.
-
-### 01.09.2026 — Branchen-Landingpages und CRM-Archivkennzeichnung
-- Die 12 noch fehlenden Branchen-Seiten unter `website-bau/` angelegt, jeweils
-  mit individuellen SEO-Metadaten, Breadcrumbs, JSON-LD, Nutzenargumenten und
-  CTAs zum Generator bzw. Rechnungs-OCR.
-- Die 17 Branchen-Chips im Generator sind jetzt direkt auf die jeweiligen Seiten
-  verlinkt; `sitemap.xml` enthält die 12 neuen URLs.
-- `crm/crm_template.json` als historische Vorlage markiert und `crm/README.md`
-  mit Hinweis auf das produktive Airtable-CRM ergänzt.
-- n8n Respond-Node geprüft (01.09.2026): Im Workflow `tZOlY46EecN1BRsd`
-  („Werkspree Microsite Gen v4“) steht der Webhook auf „Using 'Respond to
-  Webhook' Node“. Respond ist JSON mit Body
-  `{{ JSON.stringify({html: $json.html, success: $json.success}) }}`, Status 200
-  und den vier benötigten CORS-/Content-Type-Headern. Workflow ist veröffentlicht
-  und aktiv; kein weiterer UI-Schritt offen.
-
-### 01.09.2026 — Pipeline-Ausbeute, CRM-Status, Starter-Demo und OCR
-- Die Lead-Pipeline erkennt neben Standardpfaden nun same-host Kontakt-,
-  Impressum- und Legal-Links aus der Startseite; E-Mail-Guessing bleibt
-  deaktiviert.
-- CRM-Sync, Funnel und Archivvorlage unterstützen die Statuswerte Eingehend,
-  Kontaktiert, Nachfassen, Qualifiziert, Demo, Angebot und Nicht kontaktieren.
-  Die Live-Auswahlliste in Airtable konnte wegen fehlender Netzwerkauflösung
-  aus dieser Sitzung nicht gelesen werden und sollte vor dem nächsten
-  Produktivlauf einmal abgeglichen werden.
-- Reproduzierbarer, netzwerkfreier Starter-Smoke-Test und Dokumentation unter
-  `tests/automation_starter_demo.py` und `docs/automation-starter-demo.md`.
-- OCR-Parser für verschachtelte JSON-String-Bodies mit Node-Test abgesichert.
-
-### 31.08.2026 — SaaS-Produkte, Branchen-Pages, Blog, Stripe-Onboarding, DNS-Fix
-
-#### DNS: CNAME auf GitHub Pages aktiviert
-- Strato hatte einen A-Record (217.160.0.191) auf der Subdomain `werkspree` — blockierte GitHub Pages.
-- A-Record gelöscht, CNAME `werkspree → 2anton1.github.io.` aktiviert (Strato-Warnung ignoriert — Mail läuft über `bki-de.de` MX, nicht Subdomain).
-- Alle Seiten jetzt HTTP 200 via GitHub Pages SSL.
-
-#### 3 SaaS-Produkte gebaut
-- **E-Rechnungs-Prüfer Pro** (`/e-rechnung-pruefen/`): Free (Browser) → Pro 29€/Mo (Auto-Mail-Forward). Stripe: `prod_VAn4FUwSclDBJ0`, Payment Link `8x214n3wR0UfaT70L1gnK06`.
-- **Microsite-Generator** (`/website-bau/`): Free (Vorschau+Wasserzeichen) → Pro 19€/Mo (eigene Domain). Stripe: `prod_VAn4ivWl8zOFM7`, Payment Link `bje3cv6J30Uf1ix65lgnK07`.
-- **Rechnungs-OCR Mail-Service** (`/rechnungs-ocr/`): Free (→ Prüfer) → Pro 39€/Mo (Mail-Forward+CSV). Stripe: `prod_VAnHo9GckzBcPl`, Payment Link `5kQ9AT3wR7iD0et9hxgnK08`.
-
-#### 5 Branchen-Landingpages (`/website-bau/<branche>/`)
-- Elektriker, Dachdecker, Maler, Friseur, Kfz — je mit SEO-Keywords, Benefits, JSON-LD, Breadcrumb, Cross-Selling-CTA.
-
-#### 3 Blog-Artikel (`/blog/<slug>/`)
-- `e-rechnungspflicht-2027/` (29KB), `e-rechnung-kleinunternehmer/` (24KB), `website-fuer-handwerker/` (22KB) — je mit BlogPosting-Schema, Meta-Tags, Conversion-Tracking, CTA.
-
-#### Stripe Onboarding-Webhook (automatisiert)
-- Stripe Webhook Endpoint `we_1UARo9ENKo4xUXGeoVXevGFq` (Events: `checkout.session.completed`, `invoice.paid`).
-- n8n Workflow `vlBfdOzUUMJlDgY8` (aktiv): Empfängt Stripe-Event → extrahiert Kunden-Mail/Produkt → sendet Onboarding-Mail via `send_mail.py`.
-- Stripe Secret kann nicht in n8n Env Variables (Enterprise-only) — wird bei Bedarf im Code-Node hardcoded.
-
-#### n8n Microsite-Generator-Webhook
-- Workflow `tZOlY46EecN1BRsd` (v4) aktiv, aber Respond-Node gibt leer zurück (n8n-API-Bug bei per API erstellten Workflows).
-- Workflow-JSON in `/n8n-workflows/microsite_generator.json` zum manuellen Import im n8n-UI.
-- Website nutzt client-seitigen Fallback (statische Vorschau mit Wasserzeichen) bis Respond-Node im UI funktioniert.
-- Vorherige Workflow-Versionen (`W1rkg94IIjYdtofn`, `oND7FMUw7mLWHpfp`, `bucANjxEfLqKkyGk`, `M3yNVOAaeQvXl4U5`) deaktiviert/umbenannt.
-
-#### Marketing-Strategie (`MARKETING.md`)
-- Vollständige Strategie-Doku: SEO-Keywords pro Produkt, Content-Plan, Cross-Selling-Pfade, KPIs, Automatisierungs-Pipeline.
-
-#### Sitemap erweitert
-- 8 neue URLs: 5 Branchen-Pages (0.8) + 3 Blog-Artikel (0.7).
-
-#### Offen
-- n8n Respond-Node manuell im UI konfigurieren (Microsite-Generator).
-- 12 weitere Branchen-Landingpages (Tischlerei, Kosmetik, Physio, Gartenbau, Sanitär, Reinigung, Steuerberater, Immobilien, Zahnarzt, Fahrschule, Bäckerei, Allgemein).
-- Google Search Console: Sitemap eingereicht (bestätigt durch User).
-
-### 31.08.2026 — E-Mail-Umstellung, Website-SEO/UX, Tagesreport-Cron
-
-#### E-Mail-Adresse umgestellt: kontakt@bki-de.de → werkspree@bki-de.de
-- **~/.hermes/.env:** `WERKSPREE_SMTP_USER`, `WERKSPREE_SMTP_FROM`, `WERKSPREE_IMAP_USER` alle auf `werkspree@bki-de.de` aktualisiert.
-- **check_replies.py:** `OWN_ADDRESSES` aktualisiert (werkspree@bki-de.de + kontakt@bki-de.de als Old-Adresse), Default-IMAP-User angepasst.
-- **n8n_lead_response_handler.json:** 3 Vorkommen (IMAP user, fromEmail, smtpUser) aktualisiert.
-- **send_mail.py:** Docstring aktualisiert.
-- **index.html, impressum.html, datenschutz.html:** Bereits `werkspree@bki-de.de` in allen Referenzen (war korrekt).
-
-#### Website-SEO & UX-Verbesserungen (index.html)
-- **Meta-Tags erweitert:** `description` aussagekräftiger, `author` und `keywords` hinzugefügt.
-- **FAQ-Schema (JSON-LD):** `FAQPage` Schema mit 6 Fragen/Antworten für Rich Snippets in Google.
-- **Mobile Navigation:** Hamburger-Menü für <720px mit Toggle-Animation, zugänglich (aria-expanded, aria-label).
-- **Sitemap aktualisiert:** `lastmod` auf 2026-08-31, `changefreq` Homepage → weekly, Prioritäten angepasst.
-- **Impressum/Datenschutz:** Stand-Datum auf 31.08.2026 aktualisiert.
-
-#### Tagesreport-Cron (3d145f5ac7af)
-- **Skript:** `~/.hermes/scripts/werkspree_daily_summary.py` (no_agent).
-- **Schedule:** Täglich 09:00.
-- **Funktion:** Sammelt Leads (total, with_email, hot, deep), Outreach-Mails (initial, followups, awaiting, replies), Microsites (Anzahl + letzte 10 mit Link), letzten Pipeline-Report, Verbesserungsvorschläge. Sendet Zusammenfassung an `anton.drooff@icloud.com` via Strato SMTP.
-- **Erster Test:** Erfolbrig — 73 Leads, 29 Outreach-Mails, 48 Microsites, 22 Antworten. Mail gesendet ✅.
-
-#### SaaS-Produkte: E-Rechnungs-Prüfer Pro + Microsite-Generator
-
-**E-Rechnungs-Prüfer Pro** (`e-rechnung-pruefen/index.html`)
-- Free vs Pro Sektion auf der bestehenden Prüfer-Seite.
-- **Free:** Einzeldatei im Browser (wie bisher, kostenlos).
-- **Pro (29€/Monat):** Automatische Prüfung per Mail-Forward, strukturierte Daten als CSV/Excel, Vorsortierung, monatliche Übersicht.
-- **Stripe-Produkt:** `prod_VAn4FUwSclDBJ0` · **Price:** `price_1UARUHENKo4xUXGefJovtl4o` (29,00€ / month)
-- **Payment Link:** `https://buy.stripe.com/8x214n3wR0UfaT70L1gnK06`
-
-**Microsite-Generator** (`website-bau/index.html` — neue Seite)
-- Landingpage mit Formular: Branche, Firmenname, Ort, E-Mail, Beschreibung → n8n-Webhook (`werkspree-microsite-generator`) → Gemini → Vorschau.
-- Fallback: Client-seitige statische Vorschau mit Wasserzeichen.
-- 17 Branchen-Profile als Auswahl.
-- **Free:** Vorschau mit Wasserzeichen.
-- **Pro (19€/Monat):** Eigene Domain, ohne Wasserzeichen, Anpassung, Hosting, SSL, Support.
-- **Stripe-Produkt:** `prod_VAn4ivWl8zOFM7` · **Price:** `price_1UARUIENKo4xUXGeiZmj9qAW` (19,00€ / month)
-- **Payment Link:** `https://buy.stripe.com/bje3cv6J30Uf1ix65lgnK07`
-- **Navigation:** In `index.html` und `e-rechnung-pruefen/index.html` Nav verlinkt.
-- **Sitemap:** `website-bau/` hinzugefügt.
-- **n8n-Webhook:** `POST https://n8n.anton-drooff.de/webhook/werkspree-microsite-generator` — Workflow `W1rkg94IIjYdtofn` per API erstellt, Respond-Node funktioniert per API nicht (n8n-Bug). Workflow-JSON in `/n8n-workflows/microsite_generator.json` zum manuellen Import im n8n-UI. Bis dahin greift der client-seitige Fallback (statische Vorschau mit Wasserzeichen).
-
-**Rechnungs-OCR Mail-Service** (`rechnungs-ocr/index.html` — neue Seite)
-- Landingpage mit Flussdiagramm (Mail → KI → Prüfung → CSV), Was erfasst wird, Was Sie bekommen, Pricing.
-- **Free:** Einzelprüfung im Browser (Verweis auf /e-rechnung-pruefen/).
-- **Pro (39€/Monat):** Mail-Forward, automatische Erfassung, CSV/Excel-Export, Vorsortierung, E-Mail-Benachrichtigung, Archiv.
-- **Stripe-Produkt:** `prod_VAnHo9GckzBcPl` · **Price:** `price_1UARh0ENKo4xUXGe16nxOZUE` (39,00€ / month)
-- **Payment Link:** `https://buy.stripe.com/5kQ9AT3wR7iD0et9hxgnK08`
-
-**Marketing-Strategie** (`MARKETING.md`)
-- Vollständige Strategie-Doku: SEO-Keywords pro Produkt, On-Page SEO, Content-Plan, Lead-Pipeline-Anpassung, Cross-Selling-Pfade, Automatisierungs-Pipeline, KPIs.
-- Cross-Selling: Free (19-39€) → Upsell zu KI-Paketen (290-1900€).
-- 3 Produkte als "Fuß-in-der-Tür": günstiges SaaS führt zu teurem Service-Paket.
-
-**Branchen-Landingpages** (`website-bau/<branche>/index.html`)
-- 5 Branchen-Seiten: `elektriker`, `dachdecker`, `maler`, `friseur`, `kfz` — jede mit eigenem SEO-Keyword-Set, Benefits, JSON-LD, Breadcrumb.
-- Jede Seite verlinkt zum Microsite-Generator (Free) und zum Stripe-Payment-Link (Pro 19€/Mo).
-- Cross-Selling: Jede Branchen-Seite hat einen CTA zum Rechnungs-OCR-Service (39€/Mo).
-
-**Blog-Artikel** (`blog/<slug>/index.html`)
-- `blog/website-fuer-handwerker/` — "Website für Handwerker: Warum jeder Betrieb eine braucht" (1200+ Wörter, BlogPosting-Schema).
-- `blog/e-rechnungspflicht-2027/` — "E-Rechnungspflicht 2027" (in Arbeit, Subagent).
-- `blog/e-rechnung-kleinunternehmer/` — "E-Rechnung für Kleinunternehmer" (in Arbeit, Subagent).
-- Jeder Artikel: JSON-LD BlogPosting, Meta description, og-tags, Conversion-Tracking, CTA zum jeweiligen Produkt.
-
-**Stripe Onboarding-Webhook** (`vlBfdOzUUMJlDgY8` in n8n)
-- **Stripe Webhook Endpoint:** `we_1UARo9ENKo4xUXGeoVXevGFq` — URL `https://n8n.anton-drooff.de/webhook/werkspree-stripe`, Events: `checkout.session.completed`, `invoice.paid`.
-- **n8n Workflow:** Empfängt Stripe-Event → extrahiert Kunden-E-Mail, Produkt, Betrag → sendet Onboarding-Mail via `send_mail.py` (Strato SMTP) → return `{ status: "ok" }`.
-- **Onboarding-Mail:** Produkt-spezifische Einrichtungs-Anleitung (Rechnungs-OCR: Weiterleitungsregel, Microsite: Domain-Setup, E-Rechnungs-Prüfer: Prüfdienst-Adresse).
-- **Secret:** `whsec_EOwddhgK8BW2R7mP2H...` (in Stripe Dashboard unter Webhooks zu finden).
-- **Status:** Workflow aktiv, Stripe-Webhook aktiv. Bei Zahlung wird automatisch Onboarding-Mail gesendet.
-
-### 26.08.2026 — Reply Checker Cron + Scrapling-Migration
-
-#### Reply Checker (`b68eea7332bc`)
-- **2x täglich (09:00 + 18:00):** `~/.hermes/scripts/check_replies.py` (no_agent) prüft
-  Strato IMAP (`werkspree@bki-de.de`) + Gmail API (`a2807d@gmail.com`) auf Antworten von
-  Adressen, an die Werkspree Mails versendet hat (aus `sent_emails.json` +
-  `microsite_sent_emails.json`, aktuell 68 Adressen). Auto-Responder/Noreply werden
-  gefiltert. Bei neuen Antworten → WhatsApp-Benachrichtigung (`deliver=all`). Keine
-  Antwort → leere stdout → still. Erster Test: 1 Antwort von Fa. Roger Laube erkannt.
-
-### 26.08.2026 — Scrapling-Migration: Firecrawl + requests + BS4 ersetzt
-
-**Alle Scraping-Funktionen in beiden Pipelines auf Scrapling umgestellt.** Firecrawl CLI
-und `requests`+`BeautifulSoup` vollständig entfernt. 6 Dateien geändert, Commit `b341469`.
-
-#### Lead-Pipeline (`scraper/`)
-- **pipeline.py:** `firecrawl_scrape()`/`firecrawl_search()` → `scrapling_scrape()` mit
-  `Fetcher.get()`. `extract_listings()` nutzt CSS-Selektoren (`h2`, `a[href^="tel:"]`,
-  `a[href*="gsbiz"]`) statt der `**Name**\\`-Regex. `resolve_real_website()` extrahiert
-  den "Website"-Link per CSS statt Markdown-Regex. Keine Temp-Dateien mehr.
-- **direct_scraper.py:** Komplett auf Scrapling umgestellt (`find_email_on_website`,
-  `find_phone_on_website`, `scrape_gelbeseiten_profile`).
-- **warmth_scorer.py:** `scrape_website()` nutzt `Fetcher.get()` statt `requests`.
-  `CACHE_DIR` von `.firecrawl/warmth` → `data/warmth_cache`.
-
-#### Microsite-Pipeline (`microsites/pipeline/`)
-- **hot_leads_pipeline.py:** 8 Funktionen umgestellt (`search_places`, `get_place_details`,
-  `find_email_on_website`, `is_outdated_website`, `is_low_quality_website`,
-  `check_website_quality`, `scrape_gelbeseiten_profile`, `find_email_and_details_on_gelbeseiten`).
-  Places API auf `urllib.request` (war `requests`).
-- **agent_build_microsite.py:** `scrape_gelbeseiten_for_lead` + `scrape_gelbeseiten_profile`
-  auf Scrapling.
-- **maps_scraper.py:** `firecrawl_scrape_json()` → `scrapling_scrape_maps()` mit
-  `DynamicFetcher.fetch(url, headless=True, network_idle=True)` für Google Maps (JS-heavy).
-
-#### Smoke-Test
-- 52 Leads aus GelbeSeiten (vorher ~10-20 mit alter Regex). 4/5 mit E-Mail.
-- `check_website_quality`: score=10/high. `scrape_gelbeseiten_profile`: Name+Phone+Adresse+Website.
-- Alle 6 Dateien: `py_compile` bestanden.
-
-#### Entfernt
-- Firecrawl CLI-Abhängigkeit aus allen Pipeline-Dateien
-- `requests` + `BeautifulSoup` als direkte Dependencies
-- `subprocess`-Aufrufe für Scrapes, Temp-Dateien (`/tmp/gsbiz_tmp.md` etc.)
-- `os.environ["PATH"]`-Hack für Cron
+**Merke:** Scrapling (inkl. curl_cffi/playwright/patchright/browserforge) ist NUR in
+`/usr/local/bin/python3` installiert — NICHT in `/usr/bin/python3`, NICHT in der
+Hermes-Venv (`~/.hermes/hermes-agent/venv`). Agent-Mode-Crons (`3778ad6ca1e7`) funktionieren,
+weil ihr Terminal die normale PATH hat; no-agent Script-Mode nicht.
 
 ### 23.08.2026 — Pipeline-Fixes + Microsite-Builder v3 (branchenspezifisches Design)
 
@@ -792,7 +411,7 @@ und `requests`+`BeautifulSoup` vollständig entfernt. 6 Dateien geändert, Commi
   `AttributeError: 'float' object has no attribute 'rstrip'`. Zusätzlich Refresh-Token revoked
   (`invalid_grant`). Fix: Float→ISO-Konvertierung in `_normalize_authorized_user_payload` +
   `get_credentials()` (kein Crash mehr); echter OAuth-Re-Login bleibt manuell offen (Browser).
-- **warm_outreach.py sendet jetzt via `send_mail.py` (Strato SMTP `werkspree@bki-de.de`)** statt
+- **warm_outreach.py sendet jetzt via `send_mail.py` (Strato SMTP `kontakt@bki-de.de`)** statt
   google_api.py/Gmail — konsistent mit der Microsite-Pipeline, Gmail nur noch Fallback.
   Verifiziert 17.08.: 4/4 Follow-ups via Strato gesendet (kanzlei-barz, recht-web,
   ra-gerd-engelmann, ruspravo) — vorher 0/5 via Gmail (Token-Crash).
