@@ -1,0 +1,255 @@
+{
+  "branch": "Schlüsseldienst",
+  "region": "Berlin Neukölln",
+  "all_candidates": [
+    {
+      "name": "Schlüsseldienst Berlin Neukölln",
+      "address": "Treptower Str. 97, 12043 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ6Rl4dy5PqEcRSx7jgjEdcw4",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0179 2490256"
+    },
+    {
+      "name": "Schlüsseldienst Hauptstadt Berlin",
+      "address": "Silbersteinstraße 1, 12051 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJT0NtonpPqEcRmqZDdyZgNqc",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0179 2490256"
+    },
+    {
+      "name": "Schlüsseldienst KD",
+      "address": "Reuterstraße 2, 12053 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJfVhrAVZQMIcRQmTyImqlzjM",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 754396163"
+    },
+    {
+      "name": "Schlossmann",
+      "address": "Kottbusser Damm 79, 10967 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJI9M5jEVPqEcRrKJkazK2t8E",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0176 62368872"
+    },
+    {
+      "name": "BADURA Schlüsseldienst & Sicherheitstechnik",
+      "address": "Mareschstraße 17, 12055 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJj5pgD89PqEcRR84OHtTV-RY",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 75512944"
+    },
+    {
+      "name": "Schlüsseldienst Hillemeyer",
+      "address": "Hermannstraße 128, 12051 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJp1g-MSBbdKcRaRw21fqKdeg",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0176 62741746"
+    },
+    {
+      "name": "Jack' s Schlüsseldienst & Sicherheitstechnik",
+      "address": "Boddinstraße 65, 12053 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJoeBLt6RPqEcRFNPTmlpv3n4",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 61743098",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.jacks-schluesseldienst.de/",
+      "email": "info@jacks-schluesseldienst.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'jack' in domain/local",
+      "branch": "Schlüsseldienst",
+      "region": "Berlin Neukölln"
+    },
+    {
+      "name": "Redzi's Schlüsseldienst",
+      "address": "Joachim-Gottschalk-Weg 21, 12353 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJPbKBmt5FqEcRmRU6x7U2v70",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 71570949"
+    },
+    {
+      "name": "Piko Schlüsseldienst",
+      "address": "Mariannenstraße 49, 10997 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJIUoFTTROqEcRrx2UwtF20Qw",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 6112361",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.pikoberlin.de/"
+    },
+    {
+      "name": "BSD Schlüsseldienst",
+      "address": "Friedrichstraße 155, 10117 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJFRse94tRqEcRPGmhqp71jBk",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 754396160"
+    },
+    {
+      "name": "Walter Heise Schloss- und Schlüsseldienst Berlin",
+      "address": "Emser Str. 27, 12051 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJo0GXC2tPqEcRBiWWvUazOtc",
+      "types": [
+        "electronics_store",
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Adam´s Schlüsseldienst",
+      "address": "Jessnerstraße 54, 10247 Berlin-Bezirk Friedrichshain-Kreuzberg, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJI0njcvROqEcRH9X4sN-BtFE",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Service Punkt Schuh- und Schlüsseldienst",
+      "address": "Hermannplatz 5-10, 10967 Berlin, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJid7kRcJPqEcRZhKx8zqEkEc",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Schlüsselmann CC",
+      "address": "Liegnitzer Str. 12, 10999 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJMWgNe3xzsYYRYPKZOtbPRhU",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Jack's Schlüsseldienst & Sicherheitstechnik",
+      "address": "Karl-Marx-Straße 160, 12043 Berlin, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJt1d32wdPqEcRGvThMkM032M",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Der Schlüsseldienst",
+      "address": "Blankenburger Str. 1, 13089 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJJaQKDNNNqEcRvO8Pr0p4xv0",
+      "types": [
+        "electronics_store",
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Schlüsseldienst am Hermannplatz",
+      "address": "U Hermannplatz (Berlin) [Bus Ostseite, Hermannplatz, 10967 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ5-pZewBPqEcRdYov-ebX11s",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Fritz Schlüsseldienst Inhaber Dirk Matthias Börtz e.K.",
+      "address": "Bremer Str. 71, 10551 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJnxka6QxRqEcRW69NqFGkXpc",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Jack' s Schlüsseldienst & Sicherheitstechnik",
+      "address": "Boddinstraße 65, 12053 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJoeBLt6RPqEcRFNPTmlpv3n4",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 61743098",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.jacks-schluesseldienst.de/",
+      "email": "info@jacks-schluesseldienst.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'jack' in domain/local",
+      "branch": "Schlüsseldienst",
+      "region": "Berlin Neukölln"
+    }
+  ]
+}

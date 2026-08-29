@@ -1,0 +1,242 @@
+{
+  "branch": "Schlüsseldienst",
+  "region": "Berlin Mitte",
+  "all_candidates": [
+    {
+      "name": "BSD Schlüsseldienst",
+      "address": "Friedrichstraße 155, 10117 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJFRse94tRqEcRPGmhqp71jBk",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 754396160"
+    },
+    {
+      "name": "Kent Schlüsseldienst & Sicherheitstechnik",
+      "address": "Müllerstraße 159a, 13353 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNV35IAFRqEcRjOlNN11WS5s",
+      "types": [
+        "electronics_store",
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 93913917"
+    },
+    {
+      "name": "Schlüsseldienst Herrmann Sicherheitstechnik",
+      "address": "Turmstr. 9, 10559 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJe3uEMwpRqEcRKC6EG_42AlM",
+      "types": [
+        "electronics_store",
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 3948539"
+    },
+    {
+      "name": "Falke Schuh- und Schlüsseldienst",
+      "address": "Karl-Liebknecht-Str. 13, 10178 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ_RVb9OZPqEcR_ZeXwXAkhv4",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 58739016"
+    },
+    {
+      "name": "Aktiv Schlüsseldienst & Türöffnung Berlin",
+      "address": "Bastianstraße 2, 13357 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyxXb851TqEcRdPsj3Q39Rhc",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 46607419",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "https://www.aktivschluesseldienst.de/"
+    },
+    {
+      "name": "Schlüssel Discount - Schlüsseldienst und Shop für Sicherheitstechnik",
+      "address": "Brunnenstraße 8, 10119 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ2WjD4-RRqEcRVNk9n3veH_U",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 25055118"
+    },
+    {
+      "name": "Exakt Sicherheitstechnik Inh. Capgulas & Baskin GbR",
+      "address": "Brüsseler Str. 51, 13353 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ2_qCI35RqEcR5Vjbt5084m4",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 22185644"
+    },
+    {
+      "name": "Noor Schuh- und Schlüsselservice",
+      "address": "Leipziger Pl. 12/13, 10117 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJben9krdRqEcREz7YKk-0g20",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 49916027",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Trust Schlüsseldienst",
+      "address": "Ramlerstraße 2a, 13355 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJc4AWViArJogRvv9c_lcdX3o",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 40563878"
+    },
+    {
+      "name": "Fritz Schlüsseldienst Inhaber Dirk Matthias Börtz e.K.",
+      "address": "Bremer Str. 71, 10551 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJnxka6QxRqEcRW69NqFGkXpc",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "030 3952174",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "https://www.schluesselfritz.de/"
+    },
+    {
+      "name": "Hazin Schlüsseldienst Autoschlüssel Türöffnung",
+      "address": "Reinickendorfer Str. 44, 13347 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJraIioilSqEcRiYVvZw6sOBY",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Keskin Schlüsseldienst",
+      "address": "Amsterdamer Str. 3, 13347 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJbY70-8FTqEcRcya3MvVhgYE",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "AV Service | Schlüsseldienst und mehr",
+      "address": "Beusselstraße 77, 10553 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJqw_OWYlRqEcR1bKDq6ePUnU",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Arino Schlüsseldienst",
+      "address": "Seestraße 26, 13353 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJexwHROG8qiARMSygRZj15jQ",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "BSS Schlüsseldienst & Sicherheitstechnik",
+      "address": "Paul-Robeson-Straße 3, 10439 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJoRmmB6hTqEcRDwmNUMdGIp0",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Mr Express Schlüsseldienst & Schuhreparaturen",
+      "address": "Müllerstraße 133, 13349 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ-QLsM1tTqEcRw9XHi5dKYlE",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Der Schlüsseldienst",
+      "address": "Blankenburger Str. 1, 13089 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJJaQKDNNNqEcRvO8Pr0p4xv0",
+      "types": [
+        "electronics_store",
+        "establishment",
+        "locksmith",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Discount Schlüsseldienst & Türöffnung Berlin",
+      "address": "Katzlerstraße 11, 10829 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJYRQx6-FRqEcRp0xwHH4SVio",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Smile Schlüsseldienst & Sicherheitstechnik",
+      "address": "Geisbergstraße 14, 10777 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJa0Dx9BZRqEcRYtleROKbyV0",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": []
+}
