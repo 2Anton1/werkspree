@@ -1,6 +1,238 @@
 {
   "branch": "Fahrschule",
   "region": "Brandenburg an der Havel",
-  "all_candidates": [],
-  "hot_leads": []
+  "all_candidates": [
+    {
+      "name": "Hendrik’s Fahrschule",
+      "address": "Wilhelmsdorfer Str. 25, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJExvfM_XAqEcRJbECbRLU7qg",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 222216",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://hendriks-fahrschule.de/",
+      "email": "info@hendriks-fahrschule.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hendrik' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Fahrschule Ralf Tastler",
+      "address": "Gördenallee 74A, 14772 Brandenburg an der Havel-Görden, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ346iwCnBqEcRA24x34qfe6E",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 700665"
+    },
+    {
+      "name": "Fahrschule Lamm",
+      "address": "Nicolaipl. 4, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJj_xF8vnAqEcRAQRVDqAwJfU",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 5516987",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://fahrschule-lamm.de/"
+    },
+    {
+      "name": "Fahrschule Pedal PandaS eGbR",
+      "address": "Blumenstraße 2, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ43BYmIbBqEcRKmkc3d0KNvo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0172 6299619",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Fahrschule Hatzius",
+      "address": "Geschwister-Scholl-Straße 32, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJTUusM1vAqEcRzQuNOTMCtRM",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0173 8975485",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fahrschule-hatzius.de/",
+      "email": "info@fahrschule-hatzius.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hatzius' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Fahrschule Ulmann",
+      "address": "Trauerberg 15a, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJW3i_Brg7ZUERwoAtohoeBSc",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 522396",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fahrschule-ulmann.de/"
+    },
+    {
+      "name": "Fahrschule Hatzius",
+      "address": "Brandenburger Str. 82A, 14778 Golzow, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJu3ZvygWTqEcRFlIoqOxCY7U",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0173 8975485",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fahrschule-hatzius.de/",
+      "email": "info@fahrschule-hatzius.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hatzius' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Fahrschule Matthias Riethmüller",
+      "address": "Potsdamer Str. 43, 14669 Ketzin/Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJA8dlFk3uqEcRcY5ei7Ar0D0",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "033233 80389"
+    },
+    {
+      "name": "Fahrschule Pegasus | Rathenow",
+      "address": "Goethestraße 17, 14712 Rathenow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ2xuWCfzfZEERZNC9ba6pSvw",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03385 512893",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.fahrschule-pegasus.de/"
+    },
+    {
+      "name": "Fahrschule Reeger",
+      "address": "Plantagenstraße 21, 14669 Ketzin/Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJWelGpVLuqEcRpnGle5mFco4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "033233 730970",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fahrschulereeger.de/",
+      "email": "info@fahrschulereeger.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'reeger' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Hendrik’s Fahrschule",
+      "address": "Wilhelmsdorfer Str. 25, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJExvfM_XAqEcRJbECbRLU7qg",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 222216",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://hendriks-fahrschule.de/",
+      "email": "info@hendriks-fahrschule.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hendrik' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Fahrschule Hatzius",
+      "address": "Geschwister-Scholl-Straße 32, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJTUusM1vAqEcRzQuNOTMCtRM",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0173 8975485",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fahrschule-hatzius.de/",
+      "email": "info@fahrschule-hatzius.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hatzius' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Fahrschule Hatzius",
+      "address": "Brandenburger Str. 82A, 14778 Golzow, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJu3ZvygWTqEcRFlIoqOxCY7U",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0173 8975485",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fahrschule-hatzius.de/",
+      "email": "info@fahrschule-hatzius.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hatzius' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Fahrschule Reeger",
+      "address": "Plantagenstraße 21, 14669 Ketzin/Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJWelGpVLuqEcRpnGle5mFco4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "033233 730970",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.fahrschulereeger.de/",
+      "email": "info@fahrschulereeger.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'reeger' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Brandenburg an der Havel"
+    }
+  ]
 }
