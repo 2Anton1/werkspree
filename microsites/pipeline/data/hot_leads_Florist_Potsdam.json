@@ -1,0 +1,217 @@
+{
+  "branch": "Florist",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "emmy Floristik&Dekoration",
+      "address": "Georg-Hermann-Allee 13, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJlcixsn_2qEcRITTIJtVnZ5I",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 2373611"
+    },
+    {
+      "name": "Blütenmeer Vierke GbR, Potsdam",
+      "address": "Dortustraße 53, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJbw9VFtD1qEcRUiSawkuM8IQ",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 2709781"
+    },
+    {
+      "name": "Blumen-Sühr",
+      "address": "Dortustraße 66, 14467 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJC9VZTElfqEcRz0enBXokL0E",
+      "types": [
+        "establishment",
+        "florist",
+        "furniture_store",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 20064077",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.blumen-suehr.de/",
+      "email": "info@blumen-suehr.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'sühr' in domain/local",
+      "branch": "Florist",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Gartenbau Buba Inh. Christian Buba",
+      "address": "Potsdamer Chaussee 51, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJTWqdmqj3qEcR_WKSH4bIeoE",
+      "types": [
+        "establishment",
+        "florist",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "033208 20799",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.blumenbuba.de/",
+      "email": "info@blumenbuba.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'buba' in domain/local",
+      "branch": "Florist",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Blumenhaus Zur Rose",
+      "address": "Hebbelstraße 45, 14467 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJL-i0btn1qEcRsIJz1HIdZlw",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 2703018"
+    },
+    {
+      "name": "Potsdamer Staudenkulturen",
+      "address": "Golmer Ch 47, 14469 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJw5aZ5FLxqEcReTyQsAH3Pyw",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 503337"
+    },
+    {
+      "name": "Ingo Salzmann Blumen und Mehr",
+      "address": "Potsdamer Str. 33C, 14558 Nuthetal, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJncgv9NFfqEcRNe1X8N2E8UA",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0178 8360871"
+    },
+    {
+      "name": "Blumenhaus Lavendel",
+      "address": "Charlottenstraße 42, 14467 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJt2hi4tr1qEcRt_aqaQsxzEU",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 2805716"
+    },
+    {
+      "name": "Blumen-Sühr",
+      "address": "Rudolf-Breitscheid-Straße 178, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJR8Ev54RfqEcREICMp_PBuGQ",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 97990685"
+    },
+    {
+      "name": "Blumen Und Pflanzen",
+      "address": "Großbeerenstraße 208, 14480 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJmY8CilpfqEcRBdVw95NlbzQ",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "01523 7283027",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Blumenkunst, Annika Jethon",
+      "address": "Friedrich-Ebert-Straße 83, 14469 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJkxSq5Nn1qEcRxLMMTSwtQqU",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Blumen-Sühr",
+      "address": "Dortustraße 66, 14467 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJC9VZTElfqEcRz0enBXokL0E",
+      "types": [
+        "establishment",
+        "florist",
+        "furniture_store",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 20064077",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.blumen-suehr.de/",
+      "email": "info@blumen-suehr.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'sühr' in domain/local",
+      "branch": "Florist",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Gartenbau Buba Inh. Christian Buba",
+      "address": "Potsdamer Chaussee 51, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJTWqdmqj3qEcR_WKSH4bIeoE",
+      "types": [
+        "establishment",
+        "florist",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "033208 20799",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.blumenbuba.de/",
+      "email": "info@blumenbuba.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'buba' in domain/local",
+      "branch": "Florist",
+      "region": "Potsdam"
+    }
+  ]
+}
