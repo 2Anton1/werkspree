@@ -1,6 +1,325 @@
 {
   "branch": "Kosmetik",
   "region": "Potsdam",
-  "all_candidates": [],
-  "hot_leads": []
+  "all_candidates": [
+    {
+      "name": "My Perfect Face | kosmetisches Fachinstitut",
+      "address": "Dortustraße 21, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJHTXVSjT1qEcRKgYnJlvL4W8",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 64721685"
+    },
+    {
+      "name": "Ashamal - Naturkosmetik Potsdam",
+      "address": "Friedrich-Ebert-Straße 51, 14469 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJCRgNHYj1qEcRLbHWQPiS_Gk",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest",
+        "spa"
+      ],
+      "phone": ""
+    },
+    {
+      "name": "Permanent Make up - Dandelion Kosmetikstudio Potsdam",
+      "address": "Charlottenstraße 92, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJW0QQdw31qEcRsFqoJNHVvsI",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ],
+      "phone": "0331 58148310"
+    },
+    {
+      "name": "Skinlounge Potsdam",
+      "address": "Gutenbergstraße 107, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJKZ1N49D1qEcRZk_8ZIEpQ4g",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest",
+        "spa"
+      ],
+      "phone": "0331 2438790",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.skin-lounge.de/",
+      "email": "info@skinlounge.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'skinlounge' in domain/local",
+      "branch": "Kosmetik",
+      "region": "Potsdam"
+    },
+    {
+      "name": "House of Beauty",
+      "address": "Breite Str. 25-27, 14471 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJZUcD4TP1qEcRq77XEyOF0b4",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0176 36188888"
+    },
+    {
+      "name": "Kosmetikstudio Pamela Lawrenz",
+      "address": "Arthur-Scheunert-Allee 2/Haus 7, 14558 Nuthetal, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJl0sRzu5fqEcR9xcHfnDfWUY",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "health",
+        "point_of_interest",
+        "spa",
+        "store"
+      ],
+      "phone": "0176 81366535"
+    },
+    {
+      "name": "Beauty Cosmetics Potsdam",
+      "address": "Jägerstraße 31, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJSR-6eNr1qEcRLIzdFYwXYiU",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa",
+        "store"
+      ],
+      "phone": "0331 293537"
+    },
+    {
+      "name": "Kosmetik in der kleinen Gasse",
+      "address": "Kleine G. 2, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJC8xyJ9D1qEcR3_CT56RpZeg",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ],
+      "phone": "0331 70431686"
+    },
+    {
+      "name": "Kosmetik Shine Skin Care",
+      "address": "Garnstraße 12, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ997WLC_1qEcR3JkPDME6Uo8",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 23161890"
+    },
+    {
+      "name": "Beautylogie Hair Care Spa",
+      "address": "Marlene-Dietrich-Allee 17, 14482 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ5zydiYpfqEcR4zfm9RxF5y8",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0331 90142456",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.beautylogie.de/",
+      "email": "info@beautylogie.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'beautylogie' in domain/local",
+      "branch": "Kosmetik",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Silktouch Beauty und Waxing",
+      "address": "Georg-Hermann-Allee 26, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJDz8y47v3qEcRt4omus9_u-Q",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "AURA & SKIN - Kosmetik Potsdam | Christiane Lapuhs",
+      "address": "Gutenbergstraße 65, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJXbchhlT3qEcRmvAKi_-jnik",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "Kosmetikwerk Ronny Gallandi",
+      "address": "Großbeerenstraße 230, 14480 Potsdam Südost, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJgdWrW79fqEcRiPshAh8W9VI",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "Crème de la Crème",
+      "address": "Großbeerenstraße 48, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJnQ_3rE5fqEcRIiDb2zPb2tY",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "Kosmetikstudio Kerstin Merkouris",
+      "address": "Hebbelstraße 39, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJAQB0nN_1qEcRf9ip0yQEDRA",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "Kosmetikstudio hautnah - Potsdam",
+      "address": "Potsdamer Str. 18 - 20, 14469 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJsUBqTJz2qEcRZj2lZ7z8qNc",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "BEWEI Lounge Potsdam",
+      "address": "Georg-Hermann-Allee 26, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJT6UG15j3qEcR9pAzG5qeyMw",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "Schönheitszauber Potsdam UG",
+      "address": "Kaiser-Friedrich-Straße 24, 14469 Potsdam Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ0Yj7v6P1qEcRYeIO6TDmU4g",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa",
+        "store"
+      ]
+    },
+    {
+      "name": "Oak Hills Kosmetikstudio Johana Mendez",
+      "address": "Altes Rad 2C, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNS8xwZL1qEcR-y0bLHJAl_Y",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "Kosmetikstudio Susanne Rücker",
+      "address": "Mies-van-der-Rohe-Straße 2, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJZ8jLWMv1qEcR_CqjYVGmtoY",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Skinlounge Potsdam",
+      "address": "Gutenbergstraße 107, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJKZ1N49D1qEcRZk_8ZIEpQ4g",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest",
+        "spa"
+      ],
+      "phone": "0331 2438790",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.skin-lounge.de/",
+      "email": "info@skinlounge.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'skinlounge' in domain/local",
+      "branch": "Kosmetik",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Beautylogie Hair Care Spa",
+      "address": "Marlene-Dietrich-Allee 17, 14482 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ5zydiYpfqEcR4zfm9RxF5y8",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0331 90142456",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.beautylogie.de/",
+      "email": "info@beautylogie.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'beautylogie' in domain/local",
+      "branch": "Kosmetik",
+      "region": "Potsdam"
+    }
+  ]
 }

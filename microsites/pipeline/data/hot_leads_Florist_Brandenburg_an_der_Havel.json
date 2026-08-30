@@ -1,0 +1,227 @@
+{
+  "branch": "Florist",
+  "region": "Brandenburg an der Havel",
+  "all_candidates": [
+    {
+      "name": "Blumen-Hampel",
+      "address": "Steinstraße 15, 14776 Brandenburg an der Havel-Göttin, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJifoTuLs7ZUERGmMpFO3dEVQ",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 222480"
+    },
+    {
+      "name": "Blumenhandel Zahn GbR Sophienstraße",
+      "address": "Sophienstraße 54, 14772 Brandenburg an der Havel-Görden, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJFWFKbS7BqEcRwO7Y_AOICG0",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 715301"
+    },
+    {
+      "name": "Blumenparadies Bianca Nauen",
+      "address": "Thüringer Str. 7, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJQ-kp6K_BqEcRLC8nxpj9sgw",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 7961196",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Blumenhandel Zahn GbR Hauptstraße",
+      "address": "Hauptstraße 51, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJbQIv61fAqEcRoLVPUfPCFqE",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 220916"
+    },
+    {
+      "name": "Blumenkiste",
+      "address": "Jacobstraße 9, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyz1XzVjAqEcRkFMCvIwCsNM",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 619894"
+    },
+    {
+      "name": "Blumenhandel Zahn GbR Generation Z",
+      "address": "Werner-Seelenbinder-Straße 53, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJwVhAQ6XBqEcRU6JsUQqWSZo",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 300359"
+    },
+    {
+      "name": "Blumenwerk Sylke Priewisch",
+      "address": "Fouquestraße 7, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ0zrTCeXAqEcRxFJjRAZPo9U",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0177 7793436",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Blumenladen \"Fliedners Blumenland\"",
+      "address": "Belziger Ch 6, 14776 Brandenburg an der Havel-Schmerzke, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJDR1flVvAqEcRaIb3EflhCSo",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 529566"
+    },
+    {
+      "name": "Pluta Gartencenter Brandenburg/Havel GmbH",
+      "address": "Krakauer Landstraße 52, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ_3wEcrHBqEcRahdzEnYKTk0",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 224312"
+    },
+    {
+      "name": "Gartenbau Jany",
+      "address": "Am Rehhagen 24, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJNYkiD2S_qEcRnhVxbB-wQnM",
+      "types": [
+        "establishment",
+        "florist",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 662874"
+    },
+    {
+      "name": "Gartenfachgeschäft Edda Ehrich Inh. Ines Puhl",
+      "address": "Wilhelmsdorfer Landstraße 67, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJIwFBZIXAqEcRwYhhcIA38cs",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "gabriel's lieblingsblumen",
+      "address": "Genthiner Str. 47, 14774 Brandenburg an der Havel-Plaue, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJL7QeU5fHqEcR4ayvkBnEt4g",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Blumen selber schneiden",
+      "address": "Wenzlower Str. 5-1, 14778 Wollin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJA2cvKmi9qEcRM2X-AgOSQKM",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Floristik Flair",
+      "address": "Am Südtor 1 c, 14774 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJhbZCBJG5qEcR-ivwDjWYsfY",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "WunschTisch",
+      "address": "Walther-Rathenau-Straße 42a, 14789 Wusterwitz, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJVVVlsxq4qEcRhSJ6iiaEi0M",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "mplant",
+      "address": "Seestraße 6, 14778 Beetzsee, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJtwytKE_DqEcRp7Lv0_lJaH8",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "BluGeSa Floristik und Gartenbau GmbH",
+      "address": "Seestraße 2, 14778 Beetzsee-Brielow, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJVy5L1NvDqEcRo6GPQnpX5yw",
+      "types": [
+        "establishment",
+        "florist",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ]
+    }
+  ],
+  "hot_leads": []
+}
