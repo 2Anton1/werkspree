@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effenberger Fahrzeuge & Service | Kfz-Werkstatt Cottbus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3A4A5C; /* Stahlgrau */
+            --accent: #F5A623;  /* Warnendes Orange */
+            --bg-light: #EEF1F4; /* Hintergrund */
+            --text-dark: #1A202C;
+            --text-light: #FFFFFF;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 6px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: var(--primary);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(58, 74, 92, 0.85), rgba(58, 74, 92, 0.85)), 
+                        url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            padding: 120px 0 100px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: var(--radius);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 0px #C4841A;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: #ffb845;
+        }
+
+        /* --- About Section --- */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 5px;
+            background: var(--accent);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        /* --- Services Section --- */
+        .services {
+            background: #fff;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 40px;
+            border-left: 5px solid var(--primary);
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-left-color: var(--accent);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        /* --- Service Badges --- */
+        .features-section {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--accent);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .badge::before {
+            content: '✓';
+            margin-right: 10px;
+            color: var(--accent);
+        }
+
+        /* --- Process Section --- */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 20px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        .step h4 {
+            margin-bottom: 10px;
+        }
+
+        /* --- Contact & Hours --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td {
+            padding: 15px;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #1a1a1a;
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            margin-bottom: 10px;
+        }
+
+        .werkspree {
+            color: #555;
+            text-decoration: none;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <div class="logo">EFFENBERGER<span>.SERVICE</span></div>
+            <a href="tel:035575218300" class="btn" style="padding: 10px 20px; font-size: 0.8rem;">Anrufen</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Ihr Kfz-Experte am Stadtring Cottbus</h1>
+            <p>Professionelle Fahrzeugwartung, modernste Diagnose und erstklassiger Service für alle Marken. Wir bringen Sie sicher zurück auf die Straße.</p>
+            <a href="#kontakt" class="btn">Termin vereinbaren</a>
+        </div>
+    </section>
+
+    <section class="section-padding container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2 class="section-title">Über uns</h2>
+                <p>Willkommen bei <strong>Effenberger Fahrzeuge & Service</strong> in Cottbus. Als moderner Kfz-Meisterbetrieb stehen wir für technische Kompetenz und absolute Zuverlässigkeit direkt am Stadtring.</p>
+                <p>Unser Team aus erfahrenen Spezialisten kümmert sich mit Leidenschaft um Ihr Fahrzeug. Ob routinemäßige Inspektion oder komplexe Reparatur – wir setzen auf Präzision, faire Beratung und transparente Preise. In Cottbus sind wir Ihre erste Adresse für Mobilität mit Handschlagqualität.</p>
+            </div>
+            <div style="background: var(--primary); height: 300px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: var(--accent);">
+                <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding services">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Inspektion & Wartung</h3>
+                    <p>Fachgerechte Wartung nach Herstellervorgaben inklusive Erhalt der Garantie und Eintrag ins Serviceheft.</p>
+                </div>
+                <div class="service-card">
+                    <h3>HU / AU Service</h3>
+                    <p>Haupt- und Abgasuntersuchung direkt bei uns im Haus. Wir checken Ihr Fahrzeug vorab auf Mängel.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Bremsenservice</h3>
+                    <p>Sicherheit geht vor. Wir prüfen und erneuern Bremsbeläge, Scheiben und Flüssigkeiten mit Marken-Ersatzteilen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reifenservice</h3>
+                    <p>Reifenwechsel, Wuchten und fachgerechte Einlagerung Ihrer Saisonreifen in unserem Reifenlager.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Diagnose & Elektronik</h3>
+                    <p>Fehlerspeicher auslesen und präzise Diagnose modernster Bordelektronik mit neuester Software.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reparaturen</h3>
+                    <p>Von Auspuff bis Zahnriemen – wir reparieren Schäden aller Art schnell, zuverlässig und fachmännisch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding features-section">
+        <div class="container">
+            <h2 style="color: white; margin-bottom: 10px;">Zusatz-Services</h2>
+            <p>Wir machen es Ihnen so bequem wie möglich</p>
+            <div class="badge-container">
+                <div class="badge">Hol- und Bringservice</div>
+                <div class="badge">Ersatzwagen verfügbar</div>
+                <div class="badge">Express-Reparatur</div>
+                <div class="badge">Unfall-Ersatzwagen</div>
+                <div class="badge">Klimaservice</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding container">
+        <h2 class="section-title" style="text-align: center; margin: 0 auto 40px; display: block;">So arbeiten wir</h2>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h4>Annahme</h4>
+                <p>Persönliche Beratung und Aufnahme Ihres Anliegens.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h4>Check</h4>
+                <p>Gründliche Diagnose und Kostenvoranschlag.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h4>Reparatur</h4>
+                <p>Fachmännische Ausführung durch unsere Profis.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h4>Übergabe</h4>
+                <p>Qualitätskontrolle und fahrbereite Rückgabe.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" class="section-padding services">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title">Kontakt</h2>
+                    <p style="margin-bottom: 30px;">Besuchen Sie uns am Stadtring oder rufen Sie uns direkt an, um einen Termin zu vereinbaren.</p>
+                    <p><strong>Adresse:</strong><br>Stadtring 3, 03042 Cottbus</p>
+                    <br>
+                    <a href="tel:035575218300">📞 0355 75218300</a>
+                    <a href="mailto:info@auto-effenberger.de">✉️ info@auto-effenberger.de</a>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 20px; color: var(--primary);">Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag - Freitag</td><td>08:00 - 18:00</td></tr>
+                        <tr><td>Samstag</td><td>09:00 - 13:00</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-line">&copy; 2023 Effenberger Fahrzeuge & Service | Cottbus</div>
+            <div class="footer-line">
+                <a href="#" class="werkspree">Impressum</a> | 
+                <a href="#" class="werkspree">Datenschutz</a>
+            </div>
+            <div style="margin-top: 20px; font-size: 0.7rem; opacity: 0.5;">
+                Erstellt von <a href="https://werkspree.de" class="werkspree" target="_blank">Werkspree</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
