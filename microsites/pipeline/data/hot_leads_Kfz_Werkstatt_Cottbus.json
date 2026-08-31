@@ -3,160 +3,319 @@
   "region": "Cottbus",
   "all_candidates": [
     {
-      "name": "Kfz-Werkstatt Uwe Erfurt",
-      "maps_url": "https://www.google.com/maps/place/Kfz-Werkstatt+Uwe+Erfurt/data=!4m7!3m6!1s0x470873e5b4216a87:0x731a734702250942!8m2!3d51.7236!4d14.34549!16s%2Fg%2F1tdzdq1f!19sChIJh2ohtOVzCEcRQgklAkdzGnM?authuser=0&hl=en&rclk=1",
-      "rating": 4.9,
-      "category": "Auto repair shop",
-      "address": "Franz-Schubert-Straße 7",
-      "phone": null
-    },
-    {
       "name": "RST Kfz-Meisterwerkstatt Cottbus",
-      "maps_url": "https://www.google.com/maps/place/RST+Kfz-Meisterwerkstatt+Cottbus/data=!4m7!3m6!1s0x47087430011f493b:0x5f64684d0e26eeee!8m2!3d51.7671346!4d14.3617852!16s%2Fg%2F11h0ll56j!19sChIJO0kfATB0CEcR7u4mDk1oZF8?authuser=0&hl=en&rclk=1",
+      "address": "Merzdorfer Weg 33, 03042 Cottbus, Deutschland",
       "rating": 4.9,
-      "category": "Auto repair shop",
-      "address": "Merzdorfer Weg 33",
-      "phone": null
+      "place_id": "ChIJO0kfATB0CEcR7u4mDk1oZF8",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 2902027"
     },
     {
       "name": "Auto Service Cottbus - KFZ-Meisterbetrieb Auto-Hirsch",
-      "maps_url": "https://www.google.com/maps/place/Auto+Service+Cottbus+-+KFZ-Meisterbetrieb+Auto-Hirsch/data=!4m7!3m6!1s0x47087433ba505811:0xe60472e8a9ec777!8m2!3d51.7731925!4d14.3623121!16s%2Fg%2F1tjxdc6c!19sChIJEVhQujN0CEcRd8eeii5HYA4?authuser=0&hl=en&rclk=1",
+      "address": "Stadtring 3, 03042 Cottbus, Deutschland",
       "rating": 4.9,
-      "category": "Car repair and maintenance service",
-      "address": "Stadtring 3",
-      "phone": null,
-      "old_or_no_website": ""
-    },
-    {
-      "name": "Car service Mende & Wiesner - Car Meisterbetrieb",
-      "maps_url": "https://www.google.com/maps/place/Car+service+Mende+%26+Wiesner+-+Car+Meisterbetrieb/data=!4m7!3m6!1s0x4708744e54606d69:0x10a13e7bb7c588b0!8m2!3d51.7753083!4d14.3452986!16s%2Fg%2F1hc4mlwr_!19sChIJaW1gVE50CEcRsIjFt3s-oRA?authuser=0&hl=en&rclk=1",
-      "rating": 4.9,
-      "category": "Auto repair shop",
-      "address": "Gerhart-Hauptmann-Straße 15",
-      "phone": null
-    },
-    {
-      "name": "Autohaus Frunzke GbR",
-      "maps_url": "https://www.google.com/maps/place/Autohaus+Frunzke+GbR/data=!4m7!3m6!1s0x470874624a4af515:0x69c9dcf11d506a35!8m2!3d51.7564028!4d14.3157924!16s%2Fg%2F1th6ck23!19sChIJFfVKSmJ0CEcRNWpQHfHcyWk?authuser=0&hl=en&rclk=1",
-      "rating": 4.7,
-      "category": "Auto repair shop",
-      "address": "Karl-Liebknecht-Straße 43",
-      "phone": null,
-      "old_or_no_website": "http://www.autohausfrunzke.de",
-      "email": "kontakt@fahrschule-ulmann.de",
+      "place_id": "ChIJEVhQujN0CEcRd8eeii5HYA4",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 2892141",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.autoservice-cottbus.de/",
+      "email": "hirsch@autoservice-cottbus.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'cottbus' in domain/local",
       "branch": "Kfz Werkstatt",
       "region": "Cottbus"
     },
     {
-      "name": "KFZ Meisterbetrieb Herzog Stefan",
-      "maps_url": "https://www.google.com/maps/place/KFZ+Meisterbetrieb+Herzog+Stefan/data=!4m7!3m6!1s0x4708754927a475cb:0xb182fefed1d8c988!8m2!3d51.7731672!4d14.3663337!16s%2Fg%2F11fcv4tnkq!19sChIJy3WkJ0l1CEcRiMnY0f7-grE?authuser=0&hl=en&rclk=1",
-      "rating": 4.7,
-      "category": "Closed",
-      "address": "+49 162 7449059",
-      "phone": null
-    },
-    {
-      "name": "KFZ Werkstatt Sven Wehlauer",
-      "maps_url": "https://www.google.com/maps/place/KFZ+Werkstatt+Sven+Wehlauer/data=!4m7!3m6!1s0x470873f368d0abe9:0x42b739cbc9b19e10!8m2!3d51.73306!4d14.33318!16s%2Fg%2F1tgdm85f!19sChIJ6avQaPNzCEcREJ6xycs5t0I?authuser=0&hl=en&rclk=1",
-      "rating": 4.9,
-      "category": "Auto repair shop",
-      "address": "Ringstraße Wokolica 22",
-      "phone": null
-    },
-    {
       "name": "Autokraft Cottbus",
-      "maps_url": "https://www.google.com/maps/place/Autokraft+Cottbus/data=!4m7!3m6!1s0x4708743051bd2e23:0x26d3c35aec3c3fd3!8m2!3d51.7699919!4d14.3637082!16s%2Fg%2F11b6dp64yh!19sChIJIy69UTB0CEcR0z887FrD0yY?authuser=0&hl=en&rclk=1",
+      "address": "Drewitzer Str. 8a, 03042 Cottbus, Deutschland",
       "rating": 4.8,
-      "category": "Auto repair shop",
-      "address": "Drewitzer Str. 8a",
-      "phone": null,
-      "old_or_no_website": "http://www.autokraft-cottbus.de"
+      "place_id": "ChIJIy69UTB0CEcR0z887FrD0yY",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 3817471"
     },
     {
-      "name": "Jens Schomber Ströbitzer Boxengasse",
-      "maps_url": "https://www.google.com/maps/place/Jens+Schomber+Str%C3%B6bitzer+Boxengasse/data=!4m7!3m6!1s0x470874930d3cad3b:0x5dc3dfb14ff6462c!8m2!3d51.7637028!4d14.2960423!16s%2Fg%2F1vs5vdy6!19sChIJO608DZN0CEcRLEb2T7Hfw10?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Auto repair shop",
-      "address": "Fichtestraße 4",
-      "phone": null,
-      "old_or_no_website": ""
+      "name": "KFZ Meisterbetrieb Herzog Stefan",
+      "address": "Stadtring 3, 03042 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJy3WkJ0l1CEcRiMnY0f7-grE",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0162 7449059",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://kfz-werkstatt-cottbus.de/"
+    },
+    {
+      "name": "Auto-Service Mende & Wiesner - Kfz Meisterbetrieb",
+      "address": "Gerhart-Hauptmann-Straße 15, 03044 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJaW1gVE50CEcRsIjFt3s-oRA",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 4948283"
+    },
+    {
+      "name": "Effenberger Fahrzeuge & Service",
+      "address": "Stadtring 3, 03042 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJC7UqrO51CEcRlZdM4N1P9ks",
+      "types": [
+        "car_dealer",
+        "car_repair",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 75218300",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://auto-effenberger.de/",
+      "email": "info@auto-effenberger.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'effenberger' in domain/local",
+      "branch": "Kfz Werkstatt",
+      "region": "Cottbus"
     },
     {
       "name": "Auto Linke Inh. Marco Neumann",
-      "maps_url": "https://www.google.com/maps/place/Auto+Linke+Inh.+Marco+Neumann/data=!4m7!3m6!1s0x4708743a4488a051:0xe385abf52374dea2!8m2!3d51.7667404!4d14.3595114!16s%2Fg%2F1hc1sp0kn!19sChIJUaCIRDp0CEcRot50I_WrheM?authuser=0&hl=en&rclk=1",
+      "address": "Merzdorfer Weg 36, 03042 Cottbus, Deutschland",
       "rating": 4.7,
-      "category": "Auto repair shop",
-      "address": "Merzdorfer Weg 36",
-      "phone": null,
-      "old_or_no_website": ""
+      "place_id": "ChIJUaCIRDp0CEcRot50I_WrheM",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 873374",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://autolinke.de/"
+    },
+    {
+      "name": "Kfz-Werkstatt Uwe Erfurt",
+      "address": "Franz-Schubert-Straße 7, 03050 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJh2ohtOVzCEcRQgklAkdzGnM",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 523027"
     },
     {
       "name": "Autoreparatur M. Senkel Fahrzeug GmbH Autoreparatur",
-      "maps_url": "https://www.google.com/maps/place/Autoreparatur+M.+Senkel+Fahrzeug+GmbH+Autoreparatur/data=!4m7!3m6!1s0x47087426f7f50627:0xa5293101bcb608a9!8m2!3d51.7647936!4d14.3768437!16s%2Fg%2F1tmpj6mj!19sChIJJwb19yZ0CEcRqQi2vAExKaU?authuser=0&hl=en&rclk=1",
+      "address": "Dissenchener Str. 50, 03042 Cottbus-Dissenchen, Deutschland",
       "rating": 4.8,
-      "category": "Auto repair shop",
-      "address": "Dissenchener Str. 50"
+      "place_id": "ChIJJwb19yZ0CEcRqQi2vAExKaU",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 4938654"
+    },
+    {
+      "name": "Autohaus Frunzke GbR",
+      "address": "Karl-Liebknecht-Straße 43, 03046 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJFfVKSmJ0CEcRNWpQHfHcyWk",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 383400",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.autohausfrunzke.de/",
+      "email": "torsten@autohausfrunzke.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'autohaus' in domain/local",
+      "branch": "Kfz Werkstatt",
+      "region": "Cottbus"
     },
     {
       "name": "Auto-Matzk-Cottbus , Inh. Martin Matzk",
-      "maps_url": "https://www.google.com/maps/place/Auto-Matzk-Cottbus+,+Inh.+Martin+Matzk/data=!4m7!3m6!1s0x4708741e9c7a9693:0xbd377fa54131183f!8m2!3d51.7514807!4d14.3673182!16s%2Fg%2F11btl_vblq!19sChIJk5Z6nB50CEcRPxgxQaV_N70?authuser=0&hl=en&rclk=1",
+      "address": "Liebermannstraße 1a, 03042 Cottbus, Deutschland",
       "rating": 4.8,
-      "category": "Auto repair shop",
-      "address": "Liebermannstraße 1a"
+      "place_id": "ChIJk5Z6nB50CEcRPxgxQaV_N70",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "KFZ Werkstatt Sven Wehlauer",
+      "address": "Ringstraße Wokolica 22, 03050 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ6avQaPNzCEcREJ6xycs5t0I",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "SHS Motoring - Tuning, Werkstatt, Karosseriebau",
+      "address": "Dissenchener Waldstraße 9, 03052 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJr-vb9a13CEcR7qrkFpb4Yls",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
     },
     {
       "name": "PKW-Reparaturservice Senkel GmbH & Co.KG",
-      "maps_url": "https://www.google.com/maps/place/PKW-Reparaturservice+Senkel+GmbH+%26+Co.KG/data=!4m7!3m6!1s0x47087426f7f50627:0xe89766c2598e8191!8m2!3d51.7647824!4d14.376658!16s%2Fg%2F1vfp2bdw!19sChIJJwb19yZ0CEcRkYGOWcJml-g?authuser=0&hl=en&rclk=1",
+      "address": "Dissenchener Str. 50, 03042 Cottbus, Deutschland",
       "rating": 4.6,
-      "category": "Auto repair shop",
-      "address": "Dissenchener Str. 50"
+      "place_id": "ChIJJwb19yZ0CEcRkYGOWcJml-g",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
     },
     {
-      "name": "Car Service Sachsendorf GmbH",
-      "maps_url": "https://www.google.com/maps/place/Car+Service+Sachsendorf+GmbH/data=!4m7!3m6!1s0x4708738bb37b0da7:0x73c5123a9465816d!8m2!3d51.7374901!4d14.3283949!16s%2Fg%2F1x5f91q7!19sChIJpw17s4tzCEcRbYFllDoSxXM?authuser=0&hl=en&rclk=1",
+      "name": "Kfz-Service-Sachsendorf GmbH",
+      "address": "Gaglower Str. 7, 03048 Cottbus, Deutschland",
       "rating": 4.6,
-      "category": "Closed",
-      "address": "+49 355 424041"
+      "place_id": "ChIJpw17s4tzCEcRbYFllDoSxXM",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
     },
     {
       "name": "Fahrzeugservice Schulze",
-      "maps_url": "https://www.google.com/maps/place/Fahrzeugservice+Schulze/data=!4m7!3m6!1s0x470873bdcaa7970b:0xd3eb423f7ff0b21e!8m2!3d51.7177778!4d14.3138889!16s%2Fg%2F1vc80j5x!19sChIJC5enyr1zCEcRHrLwfz9C69M?authuser=0&hl=en&rclk=1",
+      "address": "Am Seegraben 19a, 03051 Cottbus-Groß Gaglow, Deutschland",
       "rating": 4.5,
-      "category": "Auto repair shop",
-      "address": "Am Seegraben 19a"
+      "place_id": "ChIJC5enyr1zCEcRHrLwfz9C69M",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Auto & Mobil",
+      "address": "Schmellwitzer Str. 91, 03044 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJP2Izsqx1CEcR2QQf7qNFA0s",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
     },
     {
       "name": "Torsten Eckert",
-      "maps_url": "https://www.google.com/maps/place/Torsten+Eckert/data=!4m7!3m6!1s0x47087155358e95e5:0xa4c5c7eeb46c357b!8m2!3d51.7354666!4d14.3656714!16s%2Fg%2F1tm__ydf!19sChIJ5ZWONVVxCEcRezVstO7HxaQ?authuser=0&hl=en&rclk=1",
+      "address": "An d. Aue 3, 03042 Cottbus, Deutschland",
       "rating": 4.8,
-      "category": "Auto repair shop",
-      "address": "An d. Aue 3"
+      "place_id": "ChIJ5ZWONVVxCEcRezVstO7HxaQ",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
     },
     {
-      "name": "Fix Auto Cottbus powered by LackPräsenz",
-      "maps_url": "https://www.google.com/maps/place/Fix+Auto+Cottbus+powered+by+LackPr%C3%A4senz/data=!4m7!3m6!1s0x4708769948430c57:0xf94b43983e9497b2!8m2!3d51.75899!4d14.38463!16s%2Fg%2F11f137m8sv!19sChIJVwxDSJl2CEcRspeUPphDS_k?authuser=0&hl=en&rclk=1",
-      "rating": 4.9,
-      "category": "Auto painting",
-      "address": "Werner-von-Siemens-Straße 13"
-    },
-    {
-      "name": "Andreas Hübsch",
-      "maps_url": "https://www.google.com/maps/place/Andreas+H%C3%BCbsch/data=!4m7!3m6!1s0x470873b0a7adc97d:0x932a476e12ff0fab!8m2!3d51.7102348!4d14.3106774!16s%2Fg%2F1tfrl0zj!19sChIJfcmtp7BzCEcRqw__Em5HKpM?authuser=0&hl=en&rclk=1",
-      "rating": 4.7,
-      "category": "Auto repair shop",
-      "address": "Siedlerstraße 5"
+      "name": "Jens Schomber Ströbitzer Boxengasse",
+      "address": "Fichtestraße 4, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJO608DZN0CEcRLEb2T7Hfw10",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
     }
   ],
   "hot_leads": [
     {
+      "name": "Auto Service Cottbus - KFZ-Meisterbetrieb Auto-Hirsch",
+      "address": "Stadtring 3, 03042 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJEVhQujN0CEcRd8eeii5HYA4",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 2892141",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.autoservice-cottbus.de/",
+      "email": "hirsch@autoservice-cottbus.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'cottbus' in domain/local",
+      "branch": "Kfz Werkstatt",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Effenberger Fahrzeuge & Service",
+      "address": "Stadtring 3, 03042 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJC7UqrO51CEcRlZdM4N1P9ks",
+      "types": [
+        "car_dealer",
+        "car_repair",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 75218300",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://auto-effenberger.de/",
+      "email": "info@auto-effenberger.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'effenberger' in domain/local",
+      "branch": "Kfz Werkstatt",
+      "region": "Cottbus"
+    },
+    {
       "name": "Autohaus Frunzke GbR",
-      "maps_url": "https://www.google.com/maps/place/Autohaus+Frunzke+GbR/data=!4m7!3m6!1s0x470874624a4af515:0x69c9dcf11d506a35!8m2!3d51.7564028!4d14.3157924!16s%2Fg%2F1th6ck23!19sChIJFfVKSmJ0CEcRNWpQHfHcyWk?authuser=0&hl=en&rclk=1",
+      "address": "Karl-Liebknecht-Straße 43, 03046 Cottbus, Deutschland",
       "rating": 4.7,
-      "category": "Auto repair shop",
-      "address": "Karl-Liebknecht-Straße 43",
-      "phone": null,
-      "old_or_no_website": "http://www.autohausfrunzke.de",
-      "email": "kontakt@fahrschule-ulmann.de",
+      "place_id": "ChIJFfVKSmJ0CEcRNWpQHfHcyWk",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 383400",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.autohausfrunzke.de/",
+      "email": "torsten@autohausfrunzke.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'autohaus' in domain/local",
       "branch": "Kfz Werkstatt",
       "region": "Cottbus"
     }
