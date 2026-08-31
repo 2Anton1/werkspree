@@ -333,6 +333,46 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 31.08.2026 — SaaS-Produkte, Branchen-Pages, Blog, Stripe-Onboarding, DNS-Fix
+
+#### DNS: CNAME auf GitHub Pages aktiviert
+- Strato hatte einen A-Record (217.160.0.191) auf der Subdomain `werkspree` — blockierte GitHub Pages.
+- A-Record gelöscht, CNAME `werkspree → 2anton1.github.io.` aktiviert (Strato-Warnung ignoriert — Mail läuft über `bki-de.de` MX, nicht Subdomain).
+- Alle Seiten jetzt HTTP 200 via GitHub Pages SSL.
+
+#### 3 SaaS-Produkte gebaut
+- **E-Rechnungs-Prüfer Pro** (`/e-rechnung-pruefen/`): Free (Browser) → Pro 29€/Mo (Auto-Mail-Forward). Stripe: `prod_VAn4FUwSclDBJ0`, Payment Link `8x214n3wR0UfaT70L1gnK06`.
+- **Microsite-Generator** (`/website-bau/`): Free (Vorschau+Wasserzeichen) → Pro 19€/Mo (eigene Domain). Stripe: `prod_VAn4ivWl8zOFM7`, Payment Link `bje3cv6J30Uf1ix65lgnK07`.
+- **Rechnungs-OCR Mail-Service** (`/rechnungs-ocr/`): Free (→ Prüfer) → Pro 39€/Mo (Mail-Forward+CSV). Stripe: `prod_VAnHo9GckzBcPl`, Payment Link `5kQ9AT3wR7iD0et9hxgnK08`.
+
+#### 5 Branchen-Landingpages (`/website-bau/<branche>/`)
+- Elektriker, Dachdecker, Maler, Friseur, Kfz — je mit SEO-Keywords, Benefits, JSON-LD, Breadcrumb, Cross-Selling-CTA.
+
+#### 3 Blog-Artikel (`/blog/<slug>/`)
+- `e-rechnungspflicht-2027/` (29KB), `e-rechnung-kleinunternehmer/` (24KB), `website-fuer-handwerker/` (22KB) — je mit BlogPosting-Schema, Meta-Tags, Conversion-Tracking, CTA.
+
+#### Stripe Onboarding-Webhook (automatisiert)
+- Stripe Webhook Endpoint `we_1UARo9ENKo4xUXGeoVXevGFq` (Events: `checkout.session.completed`, `invoice.paid`).
+- n8n Workflow `vlBfdOzUUMJlDgY8` (aktiv): Empfängt Stripe-Event → extrahiert Kunden-Mail/Produkt → sendet Onboarding-Mail via `send_mail.py`.
+- Stripe Secret kann nicht in n8n Env Variables (Enterprise-only) — wird bei Bedarf im Code-Node hardcoded.
+
+#### n8n Microsite-Generator-Webhook
+- Workflow `tZOlY46EecN1BRsd` (v4) aktiv, aber Respond-Node gibt leer zurück (n8n-API-Bug bei per API erstellten Workflows).
+- Workflow-JSON in `/n8n-workflows/microsite_generator.json` zum manuellen Import im n8n-UI.
+- Website nutzt client-seitigen Fallback (statische Vorschau mit Wasserzeichen) bis Respond-Node im UI funktioniert.
+- Vorherige Workflow-Versionen (`W1rkg94IIjYdtofn`, `oND7FMUw7mLWHpfp`, `bucANjxEfLqKkyGk`, `M3yNVOAaeQvXl4U5`) deaktiviert/umbenannt.
+
+#### Marketing-Strategie (`MARKETING.md`)
+- Vollständige Strategie-Doku: SEO-Keywords pro Produkt, Content-Plan, Cross-Selling-Pfade, KPIs, Automatisierungs-Pipeline.
+
+#### Sitemap erweitert
+- 8 neue URLs: 5 Branchen-Pages (0.8) + 3 Blog-Artikel (0.7).
+
+#### Offen
+- n8n Respond-Node manuell im UI konfigurieren (Microsite-Generator).
+- 12 weitere Branchen-Landingpages (Tischlerei, Kosmetik, Physio, Gartenbau, Sanitär, Reinigung, Steuerberater, Immobilien, Zahnarzt, Fahrschule, Bäckerei, Allgemein).
+- Google Search Console: Sitemap eingereicht (bestätigt durch User).
+
 ### 31.08.2026 — E-Mail-Umstellung, Website-SEO/UX, Tagesreport-Cron
 
 #### E-Mail-Adresse umgestellt: kontakt@bki-de.de → werkspree@bki-de.de
