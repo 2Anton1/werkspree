@@ -4,64 +4,106 @@
   "all_candidates": [
     {
       "name": "JR Reinigung",
-      "maps_url": "https://www.google.com/maps/place/JR+Reinigung/data=!4m7!3m6!1s0x470875ef3e740d55:0xae3532b7d1976ee6!8m2!3d51.7536165!4d14.328984!16s%2Fg%2F11mpc7vzym!19sChIJVQ10Pu91CEcR5m6X0bcyNa4?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 355 86922491",
-      "phone": null
-    },
-    {
-      "name": "Safety clean GmbH Sicherheits- und Reinigungsdienstleistungen",
-      "maps_url": "https://www.google.com/maps/place/Safety+clean+GmbH+Sicherheits-+und+Reinigungsdienstleistungen/data=!4m7!3m6!1s0x470875aaf9a963c9:0xbfe5d9c614a4ab2!8m2!3d51.7854955!4d14.3313253!16s%2Fg%2F1tw_lyvg!19sChIJyWOp-ap1CEcRskpKYZxd_gs?authuser=0&hl=en&rclk=1",
-      "rating": 4.4,
-      "category": "Cleaners",
-      "address": "Gewerbeweg 5",
-      "phone": null
-    },
-    {
-      "name": "Piepenbrock Dienstleistungen GmbH & Co. KG | Gebäudereinigung | Facility Management | Sicherheit",
-      "maps_url": "https://www.google.com/maps/place/Piepenbrock+Dienstleistungen+GmbH+%26+Co.+KG+%7C+Geb%C3%A4udereinigung+%7C+Facility+Management+%7C+Sicherheit/data=!4m7!3m6!1s0x470874fdbd2f02bd:0x1e230593c6c1a0e6!8m2!3d51.7481954!4d14.3277818!16s%2Fg%2F11csqw06mm!19sChIJvQIvvf10CEcR5qDBxpMFIx4?authuser=0&hl=en&rclk=1",
-      "rating": 4.5,
-      "category": "Closed",
-      "address": "+49 355 43099861",
-      "phone": null,
-      "old_or_no_website": "https://www.piepenbrock.de/standorte/cottbus/?utm_source=google&utm_medium=mybusiness&utm_campaign=cottbus-yext"
-    },
-    {
-      "name": "Ultimate Clean Mellack",
-      "maps_url": "https://www.google.com/maps/place/Ultimate+Clean+Mellack/data=!4m7!3m6!1s0x4c3c28905e2676c7:0xf2f97833c5a472e!8m2!3d51.7559552!4d14.3328465!16s%2Fg%2F11s7rh4mhj!19sChIJx3YmXpAoPEwRLkdaPIOXLw8?authuser=0&hl=en&rclk=1",
-      "rating": 4.4,
-      "category": "",
-      "address": "",
-      "phone": null
+      "address": "Marienstraße 2, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJVQ10Pu91CEcR5m6X0bcyNa4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 86922491"
     },
     {
       "name": "Campos Reinigungsdienste GmbH",
-      "maps_url": "https://www.google.com/maps/place/Campos+Reinigungsdienste+GmbH/data=!4m7!3m6!1s0x47087426f7f50627:0x51a8e1ffadec4505!8m2!3d51.7640064!4d14.3739679!16s%2Fg%2F1vvr4yhv!19sChIJJwb19yZ0CEcRBUXsrf_hqFE?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Closed",
-      "address": "+49 355 793084",
-      "phone": null,
-      "old_or_no_website": ""
+      "address": "Dissenchener Str. 50, 03042 Cottbus-Dissenchen, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJJwb19yZ0CEcRBUXsrf_hqFE",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0355 793084"
+    },
+    {
+      "name": "Safety clean GmbH Sicherheits- und Reinigungsdienstleistungen",
+      "address": "Gewerbeweg 5, 03044 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJyWOp-ap1CEcRskpKYZxd_gs",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 431220",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.safety-clean.de/",
+      "email": "info@safety-clean.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'safety' in domain/local",
+      "branch": "Reinigung",
+      "region": "Cottbus"
     },
     {
       "name": "LUCIA Dienstleistungsservice GmbH",
-      "maps_url": "https://www.google.com/maps/place/LUCIA+Dienstleistungsservice+GmbH/data=!4m7!3m6!1s0x47087164a9408bd7:0x9951d4d8012c9bea!8m2!3d51.7050183!4d14.355597!16s%2Fg%2F1tdmz6h7!19sChIJ14tAqWRxCEcR6pssAdjUUZk?authuser=0&hl=en&rclk=1",
+      "address": "Am Tschugagraben 2, 03051 Cottbus-Gallinchen, Deutschland",
       "rating": 4.4,
-      "category": "Closed",
-      "address": "+49 355 584360",
-      "phone": null,
-      "old_or_no_website": ""
+      "place_id": "ChIJ14tAqWRxCEcR6pssAdjUUZk",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 584360",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.lucia-gmbh.de/"
     },
     {
-      "name": "REWO Gebäudereinigungs und Service GmbH",
-      "maps_url": "https://www.google.com/maps/place/REWO+Geb%C3%A4udereinigungs+und+Service+GmbH/data=!4m7!3m6!1s0x470875aaf9a963c9:0xed6c78dc59a9257b!8m2!3d51.7853688!4d14.3313324!16s%2Fg%2F11b6d1rh09!19sChIJyWOp-ap1CEcReyWpWdx4bO0?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": "",
-      "phone": null,
-      "old_or_no_website": ""
+      "name": "Ultimate Clean Mellack",
+      "address": "Rudolf-Breitscheid-Straße 1, 03046 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJx3YmXpAoPEwRLkdaPIOXLw8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01522 2935245",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://ultimatecleanmellack.de/"
+    },
+    {
+      "name": "Piepenbrock Dienstleistungen GmbH & Co. KG | Gebäudereinigung | Facility Management | Sicherheit",
+      "address": "Thiemstraße 135, 03048 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJvQIvvf10CEcR5qDBxpMFIx4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 43099861"
     }
   ],
-  "hot_leads": []
+  "hot_leads": [
+    {
+      "name": "Safety clean GmbH Sicherheits- und Reinigungsdienstleistungen",
+      "address": "Gewerbeweg 5, 03044 Cottbus, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJyWOp-ap1CEcRskpKYZxd_gs",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 431220",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.safety-clean.de/",
+      "email": "info@safety-clean.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'safety' in domain/local",
+      "branch": "Reinigung",
+      "region": "Cottbus"
+    }
+  ]
 }
