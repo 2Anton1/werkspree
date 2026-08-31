@@ -1,0 +1,60 @@
+{
+  "name": "Werkspree Microsite-Generator",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "werkspree-microsite-generator",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "wh-1",
+      "name": "Microsite Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "webhookId": "ws-microsite-gen"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.first().json.body || $input.first().json;\nconst branche = body.branche || 'Allgemein';\nconst firmenname = body.firmenname || body.name || 'Ihr Betrieb';\nconst ort = body.ort || 'Berlin';\nconst email = body.email || '';\nconst beschreibung = body.beschreibung || '';\n\nconst profiles = {\n  'Maler': { c: 'Dunkelblau, Terrakotta, Creme', s: 'Hero, Leistungen, Galerie, Kontakt, Footer', m: 'Warm', e: 'Gradient-Boxen' },\n  'Elektriker': { c: 'Dunkelblau, Amber, Cremeweiß', s: 'Hero, Leistungen, Notdienst, Kontakt, Footer', m: 'Technisch', e: 'Notdienst-Box' },\n  'default': { c: 'Dunkelblau, Gold, Creme', s: 'Hero, Leistungen, Kontakt, Footer', m: 'Professionell', e: 'USP-Karten' }\n};\nconst p = profiles[branche] || profiles['default'];\n\nconst prompt = `Erstelle eine professionelle Microsite fuer:\\nFirma: ${firmenname}\\nBranche: ${branche}\\nStadt: ${ort}\\nE-Mail: ${email || 'Auf Anfrage'}\\nBeschreibung: ${beschreibung || 'Standardleistungen'}\\n\\nDesign: ${p.c}, ${p.s}, ${p.m}, ${p.e}\\n\\nRegeln:\\n1. Nur HTML (<!DOCTYPE html> bis </html>)\\n2. Inline CSS im head\\n3. Mobil-optimiert mit viewport meta\\n4. Google Fonts Inter\\n5. tel: und mailto: Links\\n6. Footer: © 2026 ${firmenname}. Demo-Website erstellt von Werkspree\\n7. Responsive bei 768px und 480px\\n8. CSS-Animationen\\n\\nBeginne mit <!DOCTYPE html>.`;\n\nconst apiKey = $env.GOOGLE_API_KEY;\nif (!apiKey) {\n  return [{json: {html: '<html><body><h1>Generator nicht verfuegbar</h1></body></html>', success: false}}];\n}\n\nconst geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp:generateContent?key=${apiKey}`;\n\ntry {\n  const resp = await fetch(geminiUrl, {\n    method: 'POST',\n    headers: {'Content-Type': 'application/json'},\n    body: JSON.stringify({\n      contents: [{parts: [{text: prompt}]}],\n      generationConfig: {temperature: 0.4, maxOutputTokens: 8000}\n    })\n  });\n  const data = await resp.json();\n  let html = '';\n  if (data.candidates && data.candidates[0]) {\n    html = data.candidates[0].content.parts[0].text || '';\n  }\n  const match = html.match(/<![Dd][Oo][Cc][Tt][Yy][Pp][Ee][^>]*>[\\\\s\\\\S]*?<\\\\/[Hh][Tt][Mm][Ll]>/);\n  if (match) html = match[0];\n  const wm = '<div style=\"position:fixed;bottom:10px;right:10px;background:rgba(31,157,116,0.9);color:#fff;padding:5px 15px;border-radius:999px;font-size:0.8rem;font-weight:600;z-index:99999\">Demo von Werkspree</div>';\n  if (html.includes('</body>')) html = html.replace('</body>', wm + '</body>'); else html += wm;\n  return [{json: {html: html, success: true}}];\n} catch(e) {\n  return [{json: {html: '<html><body><h1>Fehler</h1></body></html>', success: false}}];\n}"
+      },
+      "id": "code-1",
+      "name": "Generate",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ JSON.stringify({ html: $json.html, success: $json.success }) }}",
+        "options": {
+          "responseCode": 200,
+          "responseHeaders": {
+            "entries": [
+              {"name": "Content-Type", "value": "application/json"},
+              {"name": "Access-Control-Allow-Origin", "value": "*"},
+              {"name": "Access-Control-Allow-Methods", "value": "POST, OPTIONS"},
+              {"name": "Access-Control-Allow-Headers", "value": "Content-Type"}
+            ]
+          }
+        }
+      },
+      "id": "resp-1",
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [680, 300]
+    }
+  ],
+  "connections": {
+    "Microsite Webhook": {
+      "primary": [[{"node": "Generate", "type": "primary", "index": 0}]]
+    },
+    "Generate": {
+      "primary": [[{"node": "Respond", "type": "primary", "index": 0}]]
+    }
+  },
+  "settings": {"executionOrder": "v1"}
+}

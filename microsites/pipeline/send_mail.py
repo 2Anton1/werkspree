@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Werkspree zentraler Mail-Versand.
 
-Primär: Strato SMTP (kontakt@werkspree.bki-de.de)
+Primär: Strato SMTP (werkspree@bki-de.de)
 Fallback: Gmail OAuth (a2807d@gmail.com, Pseudonym Finn Werksby)
 
 Usage:

@@ -34,7 +34,8 @@
 **Werkspree** ist ein B2B-Service-Business, das konkrete Büroprozesse für kleine Handwerks- und Dienstleistungsbetriebe in Berlin/Brandenburg automatisiert. Die neue Kernpositionierung lautet: ein Prozess, klare Regeln, messbare Entlastung — mit menschlicher Kontrolle bei Entwürfen, finanziellen und irreversiblen Aktionen.
 
 **Pseudonym:** Finn Werksby (NIEMALS den echten Namen verwenden)
-**Absender-E-Mail:** a2807d@gmail.com (Display Name: "Finn Werksby")
+**Absender-E-Mail:** werkspree@bki-de.de (Display Name: "Finn Werksby") — Strato SMTP/IMAP, vorher kontakt@bki-de.de (umgestellt 31.08.2026)
+**Backup-E-Mail:** a2807d@gmail.com (Gmail OAuth, Fallback)
 **Domain:** werkspree.bki-de.de (Subdomain von bki-de.de, gekauft bei Strato)
 
 ---
@@ -111,7 +112,10 @@
 | Werkspree KI Starter | prod_V2GDkXbLtFIUpQ | price_1U2BhLENKo4xUXGetkUVrFmX | https://buy.stripe.com/fZu00j9VfgTde5j0L1gnK03 |
 | Werkspree KI Growth | prod_V2GDomqOfi78LM | price_1U2BhNENKo4xUXGewr7xIwcO | https://buy.stripe.com/4gMaEX1oJ46rbXbctJgnK04 |
 | Werkspree KI Enterprise | prod_V2GDuHgQi450Cg | price_1U2BhPENKo4xUXGe2KiaAqHO | https://buy.stripe.com/3cI4gzebv5avaT71P5gnK05 |
-| Individuelle Lösung | — (kein Stripe-Produkt) | — | mailto:a2807d@gmail.com |
+| Individuelle Lösung | — (kein Stripe-Produkt) | — | mailto:werkspree@bki-de.de |
+| E-Rechnungs-Prüfer Pro | prod_VAn4FUwSclDBJ0 | price_1UARUHENKo4xUXGefJovtl4o | https://buy.stripe.com/8x214n3wR0UfaT70L1gnK06 |
+| Microsite-Generator | prod_VAn4ivWl8zOFM7 | price_1UARUIENKo4xUXGeiZmj9qAW | https://buy.stripe.com/bje3cv6J30Uf1ix65lgnK07 |
+| Rechnungs-OCR Mail-Service | prod_VAnHo9GckzBcPl | price_1UARh0ENKo4xUXGe16nxOZUE | https://buy.stripe.com/5kQ9AT3wR7iD0et9hxgnK08 |
 
 ### 2.5 Gmail (E-Mail-Versand)
 - **Konto:** a2807d@gmail.com
@@ -239,8 +243,9 @@
 |---|---|---|---|
 | df4d149e4f8f | Werkspree Lead Pipeline (Script Mode) | Täglich 10:00 | run_pipeline.py: pipeline.py → warmth_scorer.py → warm_outreach.py (AUTO-SEND) → Airtable-Sync. Exit≠0 bei Fehler. Report: reports/pipeline_YYYYMMDD.md |
 | e85d58d7915e | Werkspree Health Check | Alle 6h | ~/.hermes/scripts/health_check.py (no_agent): silent bei OK, nur Issues melden |
-| 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Firecrawl) → eigener Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `kontakt@werkspree.bki-de.de`) |
+| 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Firecrawl) → eigener Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `werkspree@bki-de.de`) |
 | b68eea7332bc | Werkspree Reply Checker | 2x täglich 09:00 + 18:00 | ~/.hermes/scripts/check_replies.py (no_agent): prüft Strato IMAP + Gmail API auf Antworten versendeter Mails. Bei neuen Antworten → WhatsApp-Benachrichtigung. Keine Antwort → still (leere stdout). |
+| 3d145f5ac7af | Werkspree Tagesreport | Täglich 09:00 | ~/.hermes/scripts/werkspree_daily_summary.py (no_agent): sammelt Leads, Outreach-Mails, Microsites, Antworten, Pipeline-Report und sendet Zusammenfassung an anton.drooff@icloud.com via Strato SMTP. |
 
 ---
 
@@ -328,11 +333,84 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 31.08.2026 — E-Mail-Umstellung, Website-SEO/UX, Tagesreport-Cron
+
+#### E-Mail-Adresse umgestellt: kontakt@bki-de.de → werkspree@bki-de.de
+- **~/.hermes/.env:** `WERKSPREE_SMTP_USER`, `WERKSPREE_SMTP_FROM`, `WERKSPREE_IMAP_USER` alle auf `werkspree@bki-de.de` aktualisiert.
+- **check_replies.py:** `OWN_ADDRESSES` aktualisiert (werkspree@bki-de.de + kontakt@bki-de.de als Old-Adresse), Default-IMAP-User angepasst.
+- **n8n_lead_response_handler.json:** 3 Vorkommen (IMAP user, fromEmail, smtpUser) aktualisiert.
+- **send_mail.py:** Docstring aktualisiert.
+- **index.html, impressum.html, datenschutz.html:** Bereits `werkspree@bki-de.de` in allen Referenzen (war korrekt).
+
+#### Website-SEO & UX-Verbesserungen (index.html)
+- **Meta-Tags erweitert:** `description` aussagekräftiger, `author` und `keywords` hinzugefügt.
+- **FAQ-Schema (JSON-LD):** `FAQPage` Schema mit 6 Fragen/Antworten für Rich Snippets in Google.
+- **Mobile Navigation:** Hamburger-Menü für <720px mit Toggle-Animation, zugänglich (aria-expanded, aria-label).
+- **Sitemap aktualisiert:** `lastmod` auf 2026-08-31, `changefreq` Homepage → weekly, Prioritäten angepasst.
+- **Impressum/Datenschutz:** Stand-Datum auf 31.08.2026 aktualisiert.
+
+#### Tagesreport-Cron (3d145f5ac7af)
+- **Skript:** `~/.hermes/scripts/werkspree_daily_summary.py` (no_agent).
+- **Schedule:** Täglich 09:00.
+- **Funktion:** Sammelt Leads (total, with_email, hot, deep), Outreach-Mails (initial, followups, awaiting, replies), Microsites (Anzahl + letzte 10 mit Link), letzten Pipeline-Report, Verbesserungsvorschläge. Sendet Zusammenfassung an `anton.drooff@icloud.com` via Strato SMTP.
+- **Erster Test:** Erfolbrig — 73 Leads, 29 Outreach-Mails, 48 Microsites, 22 Antworten. Mail gesendet ✅.
+
+#### SaaS-Produkte: E-Rechnungs-Prüfer Pro + Microsite-Generator
+
+**E-Rechnungs-Prüfer Pro** (`e-rechnung-pruefen/index.html`)
+- Free vs Pro Sektion auf der bestehenden Prüfer-Seite.
+- **Free:** Einzeldatei im Browser (wie bisher, kostenlos).
+- **Pro (29€/Monat):** Automatische Prüfung per Mail-Forward, strukturierte Daten als CSV/Excel, Vorsortierung, monatliche Übersicht.
+- **Stripe-Produkt:** `prod_VAn4FUwSclDBJ0` · **Price:** `price_1UARUHENKo4xUXGefJovtl4o` (29,00€ / month)
+- **Payment Link:** `https://buy.stripe.com/8x214n3wR0UfaT70L1gnK06`
+
+**Microsite-Generator** (`website-bau/index.html` — neue Seite)
+- Landingpage mit Formular: Branche, Firmenname, Ort, E-Mail, Beschreibung → n8n-Webhook (`werkspree-microsite-generator`) → Gemini → Vorschau.
+- Fallback: Client-seitige statische Vorschau mit Wasserzeichen.
+- 17 Branchen-Profile als Auswahl.
+- **Free:** Vorschau mit Wasserzeichen.
+- **Pro (19€/Monat):** Eigene Domain, ohne Wasserzeichen, Anpassung, Hosting, SSL, Support.
+- **Stripe-Produkt:** `prod_VAn4ivWl8zOFM7` · **Price:** `price_1UARUIENKo4xUXGeiZmj9qAW` (19,00€ / month)
+- **Payment Link:** `https://buy.stripe.com/bje3cv6J30Uf1ix65lgnK07`
+- **Navigation:** In `index.html` und `e-rechnung-pruefen/index.html` Nav verlinkt.
+- **Sitemap:** `website-bau/` hinzugefügt.
+- **n8n-Webhook:** `POST https://n8n.anton-drooff.de/webhook/werkspree-microsite-generator` — Workflow `W1rkg94IIjYdtofn` per API erstellt, Respond-Node funktioniert per API nicht (n8n-Bug). Workflow-JSON in `/n8n-workflows/microsite_generator.json` zum manuellen Import im n8n-UI. Bis dahin greift der client-seitige Fallback (statische Vorschau mit Wasserzeichen).
+
+**Rechnungs-OCR Mail-Service** (`rechnungs-ocr/index.html` — neue Seite)
+- Landingpage mit Flussdiagramm (Mail → KI → Prüfung → CSV), Was erfasst wird, Was Sie bekommen, Pricing.
+- **Free:** Einzelprüfung im Browser (Verweis auf /e-rechnung-pruefen/).
+- **Pro (39€/Monat):** Mail-Forward, automatische Erfassung, CSV/Excel-Export, Vorsortierung, E-Mail-Benachrichtigung, Archiv.
+- **Stripe-Produkt:** `prod_VAnHo9GckzBcPl` · **Price:** `price_1UARh0ENKo4xUXGe16nxOZUE` (39,00€ / month)
+- **Payment Link:** `https://buy.stripe.com/5kQ9AT3wR7iD0et9hxgnK08`
+
+**Marketing-Strategie** (`MARKETING.md`)
+- Vollständige Strategie-Doku: SEO-Keywords pro Produkt, On-Page SEO, Content-Plan, Lead-Pipeline-Anpassung, Cross-Selling-Pfade, Automatisierungs-Pipeline, KPIs.
+- Cross-Selling: Free (19-39€) → Upsell zu KI-Paketen (290-1900€).
+- 3 Produkte als "Fuß-in-der-Tür": günstiges SaaS führt zu teurem Service-Paket.
+
+**Branchen-Landingpages** (`website-bau/<branche>/index.html`)
+- 5 Branchen-Seiten: `elektriker`, `dachdecker`, `maler`, `friseur`, `kfz` — jede mit eigenem SEO-Keyword-Set, Benefits, JSON-LD, Breadcrumb.
+- Jede Seite verlinkt zum Microsite-Generator (Free) und zum Stripe-Payment-Link (Pro 19€/Mo).
+- Cross-Selling: Jede Branchen-Seite hat einen CTA zum Rechnungs-OCR-Service (39€/Mo).
+
+**Blog-Artikel** (`blog/<slug>/index.html`)
+- `blog/website-fuer-handwerker/` — "Website für Handwerker: Warum jeder Betrieb eine braucht" (1200+ Wörter, BlogPosting-Schema).
+- `blog/e-rechnungspflicht-2027/` — "E-Rechnungspflicht 2027" (in Arbeit, Subagent).
+- `blog/e-rechnung-kleinunternehmer/` — "E-Rechnung für Kleinunternehmer" (in Arbeit, Subagent).
+- Jeder Artikel: JSON-LD BlogPosting, Meta description, og-tags, Conversion-Tracking, CTA zum jeweiligen Produkt.
+
+**Stripe Onboarding-Webhook** (`vlBfdOzUUMJlDgY8` in n8n)
+- **Stripe Webhook Endpoint:** `we_1UARo9ENKo4xUXGeoVXevGFq` — URL `https://n8n.anton-drooff.de/webhook/werkspree-stripe`, Events: `checkout.session.completed`, `invoice.paid`.
+- **n8n Workflow:** Empfängt Stripe-Event → extrahiert Kunden-E-Mail, Produkt, Betrag → sendet Onboarding-Mail via `send_mail.py` (Strato SMTP) → return `{ status: "ok" }`.
+- **Onboarding-Mail:** Produkt-spezifische Einrichtungs-Anleitung (Rechnungs-OCR: Weiterleitungsregel, Microsite: Domain-Setup, E-Rechnungs-Prüfer: Prüfdienst-Adresse).
+- **Secret:** `whsec_EOwddhgK8BW2R7mP2H...` (in Stripe Dashboard unter Webhooks zu finden).
+- **Status:** Workflow aktiv, Stripe-Webhook aktiv. Bei Zahlung wird automatisch Onboarding-Mail gesendet.
+
 ### 26.08.2026 — Reply Checker Cron + Scrapling-Migration
 
 #### Reply Checker (`b68eea7332bc`)
 - **2x täglich (09:00 + 18:00):** `~/.hermes/scripts/check_replies.py` (no_agent) prüft
-  Strato IMAP (`kontakt@bki-de.de`) + Gmail API (`a2807d@gmail.com`) auf Antworten von
+  Strato IMAP (`werkspree@bki-de.de`) + Gmail API (`a2807d@gmail.com`) auf Antworten von
   Adressen, an die Werkspree Mails versendet hat (aus `sent_emails.json` +
   `microsite_sent_emails.json`, aktuell 68 Adressen). Auto-Responder/Noreply werden
   gefiltert. Bei neuen Antworten → WhatsApp-Benachrichtigung (`deliver=all`). Keine
@@ -444,7 +522,7 @@ und `requests`+`BeautifulSoup` vollständig entfernt. 6 Dateien geändert, Commi
   `AttributeError: 'float' object has no attribute 'rstrip'`. Zusätzlich Refresh-Token revoked
   (`invalid_grant`). Fix: Float→ISO-Konvertierung in `_normalize_authorized_user_payload` +
   `get_credentials()` (kein Crash mehr); echter OAuth-Re-Login bleibt manuell offen (Browser).
-- **warm_outreach.py sendet jetzt via `send_mail.py` (Strato SMTP `kontakt@bki-de.de`)** statt
+- **warm_outreach.py sendet jetzt via `send_mail.py` (Strato SMTP `werkspree@bki-de.de`)** statt
   google_api.py/Gmail — konsistent mit der Microsite-Pipeline, Gmail nur noch Fallback.
   Verifiziert 17.08.: 4/4 Follow-ups via Strato gesendet (kanzlei-barz, recht-web,
   ra-gerd-engelmann, ruspravo) — vorher 0/5 via Gmail (Token-Crash).

@@ -3,23 +3,6 @@
   "region": "Frankfurt Oder",
   "all_candidates": [
     {
-      "name": "Das Schönheitsinstitut Daniela Hoffmann",
-      "address": "Uferstraße 3, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJZTtv9nSYB0cReG4iNNoioe4",
-      "types": [
-        "beauty_salon",
-        "clothing_store",
-        "establishment",
-        "hair_care",
-        "health",
-        "point_of_interest",
-        "spa",
-        "store"
-      ],
-      "phone": "0335 24285"
-    },
-    {
       "name": "Kosmetikinstitut Heike Dawidowski Silence Beauty",
       "address": "Fußgängerzone, Große Scharrnstraße 20A, 15230 Frankfurt (Oder), Deutschland",
       "rating": 4.6,
@@ -43,14 +26,31 @@
         "store"
       ],
       "phone": "0335 6659703",
-      "website_quality": "low",
-      "website_quality_score": 3,
+      "website_quality": "medium",
+      "website_quality_score": 4,
       "old_or_no_website": "http://www.kosmetik-eule.de/",
       "email": "info@kosmetik-eule.de",
       "email_verified": true,
       "email_verify_reason": "Impressum: Match: 'eule' in domain/local",
       "branch": "Kosmetik",
       "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Das Schönheitsinstitut Daniela Hoffmann",
+      "address": "Uferstraße 3, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJZTtv9nSYB0cReG4iNNoioe4",
+      "types": [
+        "beauty_salon",
+        "clothing_store",
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest",
+        "spa",
+        "store"
+      ],
+      "phone": "0335 24285"
     },
     {
       "name": "Beauty in Town (Kosmetik, Fußpflege, Microneedling, Aqua Facial, Massage, Love Rose Effect)",
@@ -66,7 +66,7 @@
       ],
       "phone": "01520 9352300",
       "website_quality": "low",
-      "website_quality_score": 1,
+      "website_quality_score": 3,
       "old_or_no_website": "http://www.beauty-in-town.de/"
     },
     {
@@ -85,18 +85,6 @@
       "old_or_no_website": ""
     },
     {
-      "name": "VILANCE Vitalbalance & Beauty GmbH",
-      "address": "Dresdener Str. 33, 15232 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJe0OM7PKZB0cRCtQppKic15Y",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0335 50089655"
-    },
-    {
       "name": "Kosmetik & Pediküre Regine Jeske",
       "address": "Luckauer Str. 7, 15232 Frankfurt (Oder)-Güldendorf, Deutschland",
       "rating": 5,
@@ -112,16 +100,16 @@
       "old_or_no_website": "http://www.kosmetikstudios-24.de/kosmetikinstitut-kosmetik-beauty-point-wellness-on-face-body-regine-jeske.218628.html"
     },
     {
-      "name": "Anke Mähnert - ganzheitliche Hautpflege, Fitness & Ernährung",
-      "address": "Große Müllroser Str. 51a, 15232 Frankfurt (Oder), Deutschland",
+      "name": "VILANCE Vitalbalance & Beauty GmbH",
+      "address": "Dresdener Str. 33, 15232 Frankfurt (Oder), Deutschland",
       "rating": 5,
-      "place_id": "ChIJNb4dTVuZB0cRjrSNs1Cl2C8",
+      "place_id": "ChIJe0OM7PKZB0cRCtQppKic15Y",
       "types": [
         "establishment",
-        "point_of_interest",
-        "store"
+        "health",
+        "point_of_interest"
       ],
-      "phone": "0173 6412833"
+      "phone": "0335 50089655"
     },
     {
       "name": "Princess deluxe",
@@ -136,8 +124,8 @@
         "store"
       ],
       "phone": "0174 4681086",
-      "website_quality": "none",
-      "website_quality_score": 0,
+      "website_quality": "low",
+      "website_quality_score": 3,
       "old_or_no_website": "https://m.facebook.com/princessdeluxe.de?tsid=0.5755065888265738&source=result"
     },
     {
@@ -166,6 +154,18 @@
         "establishment",
         "point_of_interest",
         "store"
+      ],
+      "phone": "0335 40154417"
+    },
+    {
+      "name": "Anke Mähnert - ganzheitliche Hautpflege, Fitness & Ernährung",
+      "address": "Große Müllroser Str. 51a, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNb4dTVuZB0cRjrSNs1Cl2C8",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
       ]
     },
     {
@@ -173,28 +173,6 @@
       "address": "Rudolf-Frantz-Straße 2, 15230 Frankfurt (Oder), Deutschland",
       "rating": 4.8,
       "place_id": "ChIJs9TgRaiZB0cRNKyFZoUU2B0",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Nagel- und Wimpernzauber",
-      "address": "Grüner Weg 7, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJXTz9OGmYB0cRYZGkkEceJG8",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "H.Nails & Spa (Nagelstudio, Headspa, Wimpernverlängerung,…)",
-      "address": "Karl-Marx-Straße 192, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJqzreIgCZB0cR9f_562ROwHo",
       "types": [
         "beauty_salon",
         "establishment",
@@ -224,6 +202,17 @@
       ]
     },
     {
+      "name": "Kosmetikstudio Ines Fechner",
+      "address": "Spiekerstraße, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJebTFQw2YB0cRdhS0sZFJ75I",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
       "name": "CARESSE Beauty Center",
       "address": "Langer Grund 61, 15236 Frankfurt (Oder), Deutschland",
       "rating": 5,
@@ -236,25 +225,38 @@
       ]
     },
     {
-      "name": "bixx Sun and Beauty Frankfurt-Oder",
-      "address": "Spitzkrugring 1/1b, 15234 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJKzRcMC2ZB0cRJkNONwzMZW4",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Kosmetikstudio Ines Fechner",
-      "address": "Spiekerstraße, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJebTFQw2YB0cRdhS0sZFJ75I",
+      "name": "Nagel- und Wimpernzauber",
+      "address": "Grüner Weg 7, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJXTz9OGmYB0cRYZGkkEceJG8",
       "types": [
         "beauty_salon",
         "establishment",
         "point_of_interest"
+      ]
+    },
+    {
+      "name": "H.Nails & Spa (Nagelstudio, Headspa, Wimpernverlängerung,…)",
+      "address": "Karl-Marx-Straße 192, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJqzreIgCZB0cR9f_562ROwHo",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "JP Körperpflege- und Modeboutique",
+      "address": "Müllroser Ch 7, 15236 Frankfurt (Oder)-Markendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJW74aJKGXB0cRMGgCUwLvrvM",
+      "types": [
+        "beauty_salon",
+        "clothing_store",
+        "establishment",
+        "point_of_interest",
+        "store"
       ]
     }
   ],
@@ -271,8 +273,8 @@
         "store"
       ],
       "phone": "0335 6659703",
-      "website_quality": "low",
-      "website_quality_score": 3,
+      "website_quality": "medium",
+      "website_quality_score": 4,
       "old_or_no_website": "http://www.kosmetik-eule.de/",
       "email": "info@kosmetik-eule.de",
       "email_verified": true,

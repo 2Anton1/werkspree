@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Werkspree — KI-Automatisierung für kleine Unternehmen</title>
-    <meta name="description" content="Wir automatisieren Rechnungswesen, Kundenkommunikation und Marketing für kleine Unternehmen in Berlin und Brandenburg.">
+    <meta name="description" content="Werkspree automatisiert Rechnungswesen, Kundenkommunikation und Marketing für kleine Unternehmen in Berlin und Brandenburg. Rechnungs-OCR, WhatsApp-KI, Lead-Pipelines — persönlich & lokal.">
+    <meta name="author" content="Finn Werksby">
+    <meta name="keywords" content="KI-Automatisierung, Rechnungsautomatisierung, OCR, E-Rechnung, WhatsApp Chatbot, Lead-Generierung, Kleinunternehmen, Handwerk, Berlin, Brandenburg, DATEV, n8n">
     <link rel="canonical" href="https://werkspree.bki-de.de/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -133,7 +135,42 @@
         }
         .nav-links a:hover { color: var(--primary); }
         .nav-cta { display: flex; align-items: center; gap: var(--space-md); }
-        @media (max-width: 720px) { .nav-links { display: none; } }
+        @media (max-width: 720px) {
+            .nav-links { display: none; }
+            .nav-menu-toggle {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 6px;
+            }
+            .nav-menu-toggle span {
+                width: 22px; height: 2px;
+                background: var(--text);
+                border-radius: 2px;
+                transition: transform 250ms var(--ease-out), opacity 200ms;
+            }
+            .nav-menu-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            .nav-menu-toggle.open span:nth-child(2) { opacity: 0; }
+            .nav-menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+            .nav-links.mobile-open {
+                display: flex;
+                flex-direction: column;
+                position: fixed;
+                top: var(--nav-height);
+                left: 0; right: 0;
+                background: var(--surface);
+                padding: var(--space-lg);
+                gap: var(--space-sm);
+                border-bottom: 1px solid var(--border);
+                box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
+                z-index: 99;
+            }
+            .nav-links.mobile-open a { font-size: 1.05rem; padding: 0.5rem 0; }
+        }
+        .nav-menu-toggle { display: none; }
 
         /* ---------- Buttons ---------- */
         .btn {
@@ -998,6 +1035,62 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was passiert mit meinen Daten? Wo werden sie verarbeitet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ihre Anfrage über das Kontaktformular läuft über den Dienst Formspree; die eigentliche Automatisierung (z. B. die Rechnungsverarbeitung) läuft auf einem eigenen Server in Deutschland."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wer haftet, wenn die KI eine Rechnung falsch erfasst?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Die KI erfasst und übergibt Rechnungen vor — die fachliche Prüfung und finale Freigabe bleibt bei Ihnen bzw. Ihrer Buchhaltung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange binde ich mich? Wie kündige ich?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Laufzeit und Kündigungsfrist legen wir im Erstgespräch fest, bevor Sie etwas beauftragen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was, wenn es bei meinem Betrieb nicht funktioniert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Im kostenlosen, unverbindlichen Erstgespräch schauen wir uns Ihren konkreten Ablauf an und sagen ehrlich, ob sich eine Automatisierung für Sie lohnt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie lange dauert die Einrichtung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Das hängt vom Umfang Ihres Pakets und Ihrer Ausgangslage ab. Eine realistische Einschätzung bekommen Sie im Erstgespräch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ab wann muss ich E-Rechnungen ausstellen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Empfangen müssen Sie E-Rechnungen bereits seit dem 1. Januar 2025. Beim Ausstellen entscheidet Ihr Umsatz: über 800.000 € im Jahr 2026 bedeutet Pflicht ab Januar 2027, sonst ab Januar 2028."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -1010,10 +1103,15 @@
                 <li><a href="#pakete">Pakete</a></li>
                 <li><a href="e-rechnung/">E-Rechnung</a></li>
                 <li><a href="e-rechnung-pruefen/">Rechnung prüfen</a></li>
+                <li><a href="website-bau/">Website-Bau</a></li>
+                <li><a href="rechnungs-ocr/">Rechnungs-OCR</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
             <div class="nav-cta">
                 <a href="#kontakt" class="btn btn-sm">Erstgespräch</a>
+                <button class="nav-menu-toggle" id="navMenuToggle" aria-label="Menü öffnen" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
@@ -1484,7 +1582,27 @@
             }
         })();
 
-        /* Kontaktformular: AJAX-Versand an Formspree, damit der Besucher
+        /* Mobile Nav Toggle */
+        (function () {
+            var btn = document.getElementById('navMenuToggle');
+            var links = document.querySelector('.nav-links');
+            if (!btn || !links) return;
+            btn.addEventListener('click', function () {
+                var isOpen = links.classList.toggle('mobile-open');
+                btn.classList.toggle('open', isOpen);
+                btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                btn.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+            });
+            links.addEventListener('click', function (e) {
+                if (e.target.tagName === 'A') {
+                    links.classList.remove('mobile-open');
+                    btn.classList.remove('open');
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+
+        /* Kontaktformular: AJAX-Versand an Formspree, dass der Besucher
            die Seite nicht verlässt. Fällt bei JS-Fehlern auf den normalen
            POST-Submit zurück. */
         (function () {

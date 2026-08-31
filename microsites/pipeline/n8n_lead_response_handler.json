@@ -9,7 +9,7 @@
     {
       "parameters": {
         "host": "imap.strato.de", "port": 993, "secure": true,
-        "user": "kontakt@bki-de.de",
+        "user": "werkspree@bki-de.de",
         "password": "={{ $env.STRATO_IMAP_PASS }}",
         "mailbox": "INBOX", "postProcessAction": "nothing", "customEmailConfig": {}
       },
@@ -34,7 +34,7 @@
     },
     {
       "parameters": {
-        "fromEmail": "kontakt@bki-de.de",
+        "fromEmail": "werkspree@bki-de.de",
         "toEmail": "a2807d@gmail.com",
         "subject": "=?utf-8?B?{{ $items('Parse Response')[0].json.subject }}?=",
         "emailFormat": "text",
@@ -42,7 +42,7 @@
         "send": {
           "smtpHost": "smtp.strato.de",
           "smtpPort": 465,
-          "smtpUser": "kontakt@bki-de.de",
+          "smtpUser": "werkspree@bki-de.de",
           "smtpPassword": "={{ $env.STRATO_IMAP_PASS }}",
           "secure": true
         },

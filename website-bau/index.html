@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microsite-Generator — Branchen-Website in 5 Minuten — Werkspree</title>
+<meta name="description" content="Generieren Sie eine professionelle Branchen-Website für Ihren Handwerks- oder Dienstleistungsbetrieb — in 5 Minuten, kostenlos testen. 17 Branchen-Profile, eigenes Design, eigene Domain.">
+<meta name="author" content="Finn Werksby">
+<meta name="keywords" content="Microsite-Generator, Branchen-Website, Handwerker Website, Website erstellen, KI-Website, Website Builder, Handwerk, Berlin, Brandenburg">
+<link rel="canonical" href="https://werkspree.bki-de.de/website-bau/">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Microsite-Generator — Branchen-Website in 5 Minuten">
+<meta property="og:description" content="Professionelle Branchen-Website generieren — kostenlos testen, 19€/Monat für eigene Domain und Support. 17 Branchen-Profile.">
+<meta property="og:url" content="https://werkspree.bki-de.de/website-bau/">
+<meta property="og:site_name" content="Werkspree">
+<meta property="og:image" content="https://werkspree.bki-de.de/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Microsite-Generator — Branchen-Website in 5 Minuten">
+<meta name="twitter:description" content="Professionelle Branchen-Website generieren — kostenlos testen, 19€/Monat für eigene Domain und Support.">
+<meta name="twitter:image" content="https://werkspree.bki-de.de/og-image.png">
+<meta name="theme-color" content="#0f2540">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  .hero-gensite {
+    background: radial-gradient(120% 140% at 15% -10%, #1c4270 0%, transparent 55%),
+                linear-gradient(160deg, var(--primary) 0%, var(--primary-deep) 100%);
+    color: white;
+    padding: calc(var(--nav-height) + var(--space-2xl)) 0 var(--space-2xl);
+    text-align: center;
+  }
+  .hero-gensite h1 { color: white; font-size: clamp(1.9rem, 4.5vw, 2.9rem); line-height: 1.15; margin-bottom: var(--space-md); }
+  .hero-gensite .lead { font-size: clamp(1rem, 2vw, 1.18rem); color: rgba(255, 255, 255, 0.82); max-width: 640px; margin: 0 auto var(--space-lg); }
+  .hero-gensite .tagline { margin-bottom: var(--space-md); }
+
+  .gen-form {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg);
+    box-shadow: 0 12px 36px rgba(16, 24, 40, 0.08);
+  }
+  .gen-form h2 { text-align: center; margin-bottom: var(--space-sm); }
+  .gen-field { margin-bottom: var(--space-sm); }
+  .gen-field label { display: block; font-weight: 600; font-size: 0.92rem; color: var(--text); margin-bottom: 0.35rem; }
+  .gen-field select, .gen-field input, .gen-field textarea {
+    width: 100%; font: inherit; font-size: 0.98rem; color: var(--text);
+    background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md);
+    padding: 0.7rem 0.9rem; transition: border-color 200ms var(--ease-out);
+  }
+  .gen-field select:focus, .gen-field input:focus, .gen-field textarea:focus {
+    border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 1px;
+  }
+  .gen-field textarea { min-height: 80px; resize: vertical; }
+  .gen-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
+  @media (max-width: 560px) { .gen-row { grid-template-columns: 1fr; gap: 0; } }
+  .gen-status { text-align: center; margin: var(--space-sm) 0; font-size: 0.9rem; min-height: 1.4em; }
+  .gen-status.ok { color: var(--accent-deep); }
+  .gen-status.err { color: #b02a2a; }
+  .gen-preview { margin-top: var(--space-lg); }
+  .gen-preview iframe { width: 100%; min-height: 500px; border: 1px solid var(--border); border-radius: var(--radius-md); }
+  .gen-watermark { text-align: center; font-size: 0.82rem; color: var(--text-muted); margin-top: var(--space-2xs); }
+
+  .branches-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-sm); margin: var(--space-lg) 0;
+  }
+  .branch-chip {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-full);
+    padding: 0.5rem 1rem; text-align: center; font-size: 0.88rem; font-weight: 500;
+  }
+
+  .pricing-cards { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md); max-width: 640px; margin: 0 auto; }
+  @media (max-width: 600px) { .pricing-cards { grid-template-columns: 1fr; } }
+  .price-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-lg); text-align: center; }
+  .price-card.featured { border: 2px solid var(--accent); position: relative; background: linear-gradient(180deg, rgba(31, 157, 116, 0.06), var(--surface) 22%); }
+  .price-card .price { font-size: 1.8rem; font-weight: 800; color: var(--primary); margin: var(--space-sm) 0; }
+  .price-card .price small { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; }
+  .price-card ul { list-style: none; text-align: left; margin-bottom: var(--space-md); font-size: 0.92rem; }
+  .price-card ul li { padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
+  .price-card ul li:last-child { border-bottom: none; }
+  .price-badge { position: absolute; top: -12px; right: var(--space-md); background: var(--accent); color: white; padding: 0.25rem 0.8rem; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700; }
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar" aria-label="Hauptnavigation">
+  <div class="nav-inner container">
+    <a href="../" class="brand">Werkspree</a>
+    <ul class="nav-links">
+      <li><a href="../e-rechnung/">E-Rechnung</a></li>
+      <li><a href="../e-rechnung-pruefen/">Rechnung prüfen</a></li>
+      <li><a href="./" aria-current="page">Website-Bau</a></li>
+      <li><a href="../#pakete">Pakete</a></li>
+      <li><a href="../#kontakt">Kontakt</a></li>
+    </ul>
+    <div class="nav-cta"><a href="../#kontakt" class="btn btn-sm">Erstgespräch</a></div>
+  </div>
+</nav>
+
+<header class="hero-gensite">
+  <div class="prose">
+    <span class="tagline"><span class="dot"></span>17 Branchen-Profile · KI-generiert · 5 Minuten</span>
+    <h1>Microsite-Generator</h1>
+    <p class="lead">Professionelle Branchen-Website für Ihren Handwerks- oder Dienstleistungsbetrieb — automatisch generiert, sofort online. Kostenlos testen, 19€/Monat für eigene Domain.</p>
+  </div>
+</header>
+
+<main class="prose">
+
+  <!-- Generator Formular -->
+  <div class="gen-form">
+    <h2>Website generieren — kostenlos</h2>
+    <p style="text-align: center; color: var(--text-muted); font-size: 0.92rem; margin-bottom: var(--space-md);">Füllen Sie die Felder aus und generieren Sie eine Vorschau. Keine Anmeldung, keine Karte.</p>
+
+    <form id="genForm">
+      <div class="gen-row">
+        <div class="gen-field">
+          <label for="g-branche">Branche *</label>
+          <select id="g-branche" name="branche" required>
+            <option value="">— wählen —</option>
+            <option value="Elektriker">Elektriker</option>
+            <option value="Dachdecker">Dachdecker</option>
+            <option value="Maler">Maler & Anstreicher</option>
+            <option value="Friseur">Friseur</option>
+            <option value="Fahrschule">Fahrschule</option>
+            <option value="Baeckerei">Bäckerei</option>
+            <option value="Kosmetik">Kosmetik & Beauty</option>
+            <option value="Physiotherapie">Physiotherapie</option>
+            <option value="Tischlerei">Tischlerei / Schreinerei</option>
+            <option value="Gartenbau">Gartenbau & Landschaftsbau</option>
+            <option value="Sanitaer">Sanitär & Heizung</option>
+            <option value="Kfz">Kfz-Werkstatt</option>
+            <option value="Reinigung">Reinigungsdienst</option>
+            <option value="Steuerberater">Steuerberater</option>
+            <option value="Immobilien">Immobilienmakler</option>
+            <option value="Zahnarzt">Zahnarztpraxis</option>
+            <option value="Allgemein">Allgemein (keine spezifische Branche)</option>
+          </select>
+        </div>
+        <div class="gen-field">
+          <label for="g-name">Firmenname *</label>
+          <input type="text" id="g-name" name="firmenname" required placeholder="z.B. Elektro Krause GmbH">
+        </div>
+      </div>
+      <div class="gen-row">
+        <div class="gen-field">
+          <label for="g-ort">Ort *</label>
+          <input type="text" id="g-ort" name="ort" required placeholder="z.B. Berlin">
+        </div>
+        <div class="gen-field">
+          <label for="g-email">E-Mail (für Rückfragen)</label>
+          <input type="email" id="g-email" name="email" placeholder="max@firma.de">
+        </div>
+      </div>
+      <div class="gen-field">
+        <label for="g-beschreibung">Beschreibung / Leistungen (optional)</label>
+        <textarea id="g-beschreibung" name="beschreibung" placeholder="z.B. Notdienst, Installation, Wartung, Photovoltaik …"></textarea>
+      </div>
+
+      <button type="submit" class="btn" style="width: 100%;" id="genBtn">Website generieren (kostenlos)</button>
+      <p class="gen-status" id="genStatus" role="status" aria-live="polite"></p>
+    </form>
+
+    <div class="gen-preview" id="genPreview" style="display: none;">
+      <h3 style="margin-bottom: var(--space-2xs);">Ihre Vorschau:</h3>
+      <iframe id="previewFrame" title="Website-Vorschau"></iframe>
+      <p class="gen-watermark">Vorschau — mit „Demo von Werkspree“ Wasserzeichen. <a href="#pricing">Pro für eigene Domain ohne Wasserzeichen</a>.</p>
+    </div>
+  </div>
+
+  <!-- Branchen -->
+  <h2 style="margin-top: var(--space-2xl);">17 Branchen-Profile — jedes mit eigenem Design</h2>
+  <p>Jede Branche bekommt ein angepasstes Layout: Eigene Farbpalette, branchenspezifische Sektionen (Preisliste beim Friseur, Projektgalerie beim Maler, Notdienst-Box beim Dachdecker, Saisonkalender beim Gärtner), und passenden Stimmung — von edel-minimalistisch bis technisch-robust.</p>
+
+  <div class="branches-grid">
+    <div class="branch-chip">Elektriker</div>
+    <div class="branch-chip">Dachdecker</div>
+    <div class="branch-chip">Maler</div>
+    <div class="branch-chip">Friseur</div>
+    <div class="branch-chip">Fahrschule</div>
+    <div class="branch-chip">Bäckerei</div>
+    <div class="branch-chip">Kosmetik</div>
+    <div class="branch-chip">Physiotherapie</div>
+    <div class="branch-chip">Tischlerei</div>
+    <div class="branch-chip">Gartenbau</div>
+    <div class="branch-chip">Sanitär</div>
+    <div class="branch-chip">Kfz</div>
+    <div class="branch-chip">Reinigung</div>
+    <div class="branch-chip">Steuerberater</div>
+    <div class="branch-chip">Immobilien</div>
+    <div class="branch-chip">Zahnarzt</div>
+    <div class="branch-chip">Allgemein</div>
+  </div>
+
+  <!-- Pricing -->
+  <div id="pricing" style="margin-top: var(--space-2xl);">
+    <h2 style="text-align: center; margin-bottom: var(--space-lg);">Free oder Pro?</h2>
+    <div class="pricing-cards">
+      <div class="price-card">
+        <h3 style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 0.5rem;">Free</h3>
+        <div class="price">0€<small> /für immer</small></div>
+        <ul>
+          <li>✓ Vorschau generieren</li>
+          <li>✓ Mit Wasserzeichen</li>
+          <li>✓ Alle Branchen-Profile</li>
+          <li>✓ Keine Anmeldung</li>
+        </ul>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Soeben oben getestet — kostenlos.</p>
+      </div>
+      <div class="price-card featured">
+        <span class="price-badge">Empfohlen</span>
+        <h3 style="color: var(--accent-deep); font-size: 1.1rem; margin-bottom: 0.5rem;">Pro</h3>
+        <div class="price">19€<small> /Monat</small></div>
+        <ul>
+          <li>✓ Eigene Domain</li>
+          <li>✓ Ohne Wasserzeichen</li>
+          <li>✓ Individuelle Anpassung</li>
+          <li>✓ SSL-Verschlüsselung</li>
+          <li>✓ Hosting inklusive</li>
+          <li>✓ Support per E-Mail</li>
+        </ul>
+        <a href="https://buy.stripe.com/bje3cv6J30Uf1ix65lgnK07" class="btn" style="width: 100%;" target="_blank" rel="noopener">Pro starten — 14 Tage kostenlos</a>
+        <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: var(--space-2xs); margin-bottom: 0;">Jederzeit kündbar, keine Mindestlaufzeit.</p>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: var(--space-md); font-size: 0.88rem; color: var(--text-muted);">Lieber erst persönlich sprechen? <a href="../#kontakt">Erstgespräch anfragen</a> — kostenlos und unverbindlich.</p>
+  </div>
+
+  <!-- Wie funktioniert's -->
+  <h2 style="margin-top: var(--space-2xl);">So funktioniert's</h2>
+  <ol>
+    <li><strong>Branche und Firmenname wählen</strong> — die KI wählt das passende Design-Profil.</li>
+    <li><strong>Generieren</strong> — eine vollständige Branchen-Website wird automatisch erstellt, mit Ihren Leistungen, Öffnungszeiten und Kontaktdaten.</li>
+    <li><strong>Vorschau ansehen</strong> — sofort online, mit Wasserzeichen in der Free-Version.</li>
+    <li><strong>Pro buchen</strong> — für 19€/Monat bekommen Sie Ihre eigene Domain, Anpassung und Hosting ohne Wasserzeichen.</li>
+  </ol>
+
+  <div class="cta-box">
+    <h3>Fragen? Wir helfen persönlich.</h3>
+    <p>Schreiben Sie uns — wir melden uns innerhalb eines Werktags und sagen Ihnen ehrlich, ob sich das für Ihren Betrieb lohnt.</p>
+    <a class="btn" href="../#kontakt">Erstgespräch anfragen</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>Werkspree — KI-Automatisierung für kleine Unternehmen | Berlin &amp; Brandenburg</p>
+  <p class="legal-links"><a href="../impressum.html">Impressum</a> · <a href="../datenschutz.html">Datenschutzerklärung</a></p>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  var nav = document.getElementById('navbar');
+  var toggleNav = function () { nav.classList.toggle('scrolled', window.scrollY > 8); };
+  toggleNav();
+  window.addEventListener('scroll', toggleNav, { passive: true });
+
+  var form = document.getElementById('genForm');
+  var status = document.getElementById('genStatus');
+  var preview = document.getElementById('genPreview');
+  var frame = document.getElementById('previewFrame');
+  var btn = document.getElementById('genBtn');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    var branche = document.getElementById('g-branche').value;
+    var name = document.getElementById('g-name').value;
+    var ort = document.getElementById('g-ort').value;
+    var email = document.getElementById('g-email').value;
+    var beschreibung = document.getElementById('g-beschreibung').value;
+
+    btn.disabled = true;
+    btn.textContent = 'Generiert …';
+    status.className = 'gen-status';
+    status.textContent = 'Website wird generiert — das dauert ca. 30 Sekunden …';
+
+    // n8n Webhook für Gemini-Generierung
+    var payload = {
+      branche: branche,
+      firmenname: name,
+      ort: ort,
+      email: email,
+      beschreibung: beschreibung,
+      source: 'website-bau',
+      timestamp: new Date().toISOString()
+    };
+
+    fetch('https://n8n.anton-drooff.de/webhook/werkspree-microsite-generator', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    }).then(function (data) {
+      // n8n gibt { html: "..." } oder { url: "..." } zurück
+      if (data && data.html) {
+        frame.srcdoc = data.html;
+        preview.style.display = 'block';
+        status.className = 'gen-status ok';
+        status.textContent = '✓ Website generiert! Scrollen Sie nach unten zur Vorschau.';
+        preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (data && data.url) {
+        frame.src = data.url;
+        preview.style.display = 'block';
+        status.className = 'gen-status ok';
+        status.textContent = '✓ Website generiert! Vorschau wird geladen …';
+        preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        status.className = 'gen-status ok';
+        status.textContent = '✓ Anfrage gesendet! Wir schicken Ihnen die Vorschau per E-Mail zu (falls angegeben) oder melden uns persönlich.';
+      }
+    }).catch(function () {
+      // Fallback: statische Vorschau generieren (clientseitig)
+      var fallbackHtml = generateFallbackHtml(name, branche, ort, beschreibung);
+      frame.srcdoc = fallbackHtml;
+      preview.style.display = 'block';
+      status.className = 'gen-status ok';
+      status.textContent = '✓ Vorschau generiert (vereinfachte Version). Für die vollständige KI-Website melden wir uns bei Ihnen.';
+      preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }).then(function () {
+      btn.disabled = false;
+      btn.textContent = 'Website generieren (kostenlos)';
+    });
+  });
+
+  function generateFallbackHtml(name, branche, ort, beschreibung) {
+    return '<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + escapeHtml(name) + ' — ' + escapeHtml(branche) + ' in ' + escapeHtml(ort) + '</title><style>body{font-family:Inter,-apple-system,sans-serif;margin:0;color:#1d2939;background:#fafafa}header{background:linear-gradient(135deg,#122c4d,#0a1b30);color:#fff;padding:60px 20px;text-align:center}header h1{margin:0 0 10px;font-size:2rem}header p{color:rgba(255,255,255,.7);font-size:1.1rem;margin:0}main{max-width:800px;margin:40px auto;padding:0 20px}section{background:#fff;border:1px solid rgba(18,44,77,.09);border-radius:14px;padding:30px;margin-bottom:20px}h2{color:#122c4d;margin:0 0 10px}p{color:#5b6b7f;line-height:1.6}.watermark{position:fixed;bottom:10px;right:10px;background:rgba(31,157,116,.9);color:#fff;padding:5px 15px;border-radius:999px;font-size:.8rem;font-weight:600;z-index:999}</style></head><body><header><h1>' + escapeHtml(name) + '</h1><p>' + escapeHtml(branche) + ' · ' + escapeHtml(ort) + '</p></header><main><section><h2>Über uns</h2><p>' + (beschreibung ? escapeHtml(beschreibung) : 'Wir sind Ihr zuverlässiger Partner für ' + escapeHtml(branche).toLowerCase() + ' in ' + escapeHtml(ort) + ' und Umgebung.') + '</p></section><section><h2>Leistungen</h2><p>Wir bieten Ihnen professionelle Dienstleistungen, persönliche Beratung und zuverlässige Ausführung — mit Erfahrung und regionaler Nähe.</p></section><section><h2>Kontakt</h2><p>Adresse: ' + escapeHtml(ort) + '<br>Telefon: auf Anfrage<br>E-Mail: auf Anfrage</p></section></main><div class="watermark">Demo von Werkspree</div></body></html>';
+  }
+
+  function escapeHtml(s) {
+    if (!s) return '';
+    return s.replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Werkspree Microsite-Generator",
+  "url": "https://werkspree.bki-de.de/website-bau/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Webbrowser",
+  "inLanguage": "de-DE",
+  "description": "Generiert professionelle Branchen-Websites für Handwerks- und Dienstleistungsbetriebe — 17 Branchen-Profile, eigenes Design, in 5 Minuten.",
+  "offers": [
+    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR" },
+    { "@type": "Offer", "name": "Pro", "price": "19", "priceCurrency": "EUR" }
+  ],
+  "publisher": { "@type": "Organization", "name": "Werkspree", "url": "https://werkspree.bki-de.de/" }
+}
+</script>
+
+<script>
+(function(){var API="https://n8n.anton-drooff.de/webhook/werkspree-tracking";function sid(){try{var k="ws_sid";var v=localStorage.getItem(k);if(!v){v=Math.random().toString(36).slice(2);localStorage.setItem(k,v);}return v;}catch(e){return "anon";}}function track(ev,meta){try{var p={event:ev,page:location.pathname,sid:sid(),ts:new Date().toISOString(),meta:meta||{}};if(navigator.sendBeacon){navigator.sendBeacon(API,new Blob([JSON.stringify(p)],{type:"application/json"}));}else{fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(p),keepalive:true}).catch(function(){});}}catch(e){}}track("page_view");document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a"):null;if(!a)return;var h=a.getAttribute("href")||"";if(h.indexOf("buy.stripe.com")>-1)track("stripe_click",{link:h});});document.addEventListener("submit",function(e){track("gen_form_submit",{branche:document.getElementById("g-branche")?document.getElementById("g-branche").value:""});},{capture:true});})();
+</script>
+</body>
+</html>
