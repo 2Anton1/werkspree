@@ -11,3 +11,5 @@ package-lock.json
 *.key
 credentials.json
 graphify-out/
+website-bau/config.js
+.env.local

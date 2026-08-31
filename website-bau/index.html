@@ -292,18 +292,15 @@
     status.className = 'gen-status';
     status.textContent = 'Website wird generiert — das dauert ca. 30 Sekunden …';
 
-    // n8n Webhook für Gemini-Generierung
+    // Versuche n8n-Webhook (serverseitige KI-Generierung), fallback auf clientseitige Vorschau
+    var n8nUrl = 'https://n8n.anton-drooff.de/webhook/werkspree-microsite-generator';
     var payload = {
-      branche: branche,
-      firmenname: name,
-      ort: ort,
-      email: email,
-      beschreibung: beschreibung,
-      source: 'website-bau',
-      timestamp: new Date().toISOString()
+      branche: branche, firmenname: name, ort: ort,
+      email: email, beschreibung: beschreibung,
+      source: 'website-bau', timestamp: new Date().toISOString()
     };
 
-    fetch('https://n8n.anton-drooff.de/webhook/werkspree-microsite-generator', {
+    fetch(n8nUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -311,24 +308,17 @@
       if (!res.ok) throw new Error('HTTP ' + res.status);
       return res.json();
     }).then(function (data) {
-      // n8n gibt { html: "..." } oder { url: "..." } zurück
-      if (data && data.html) {
+      if (data && data.html && data.html.length > 100) {
         frame.srcdoc = data.html;
         preview.style.display = 'block';
         status.className = 'gen-status ok';
         status.textContent = '✓ Website generiert! Scrollen Sie nach unten zur Vorschau.';
         preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else if (data && data.url) {
-        frame.src = data.url;
-        preview.style.display = 'block';
-        status.className = 'gen-status ok';
-        status.textContent = '✓ Website generiert! Vorschau wird geladen …';
-        preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else {
-        status.className = 'gen-status ok';
-        status.textContent = '✓ Anfrage gesendet! Wir schicken Ihnen die Vorschau per E-Mail zu (falls angegeben) oder melden uns persönlich.';
+        status.className = 'gen-status error';
+        status.textContent = '✗ Generierung fehlgeschlagen. Bitte versuchen Sie es erneut oder kontaktieren Sie uns.';
       }
-    }).catch(function () {
+    }).catch(function (err) {
       // Fallback: statische Vorschau generieren (clientseitig)
       var fallbackHtml = generateFallbackHtml(name, branche, ort, beschreibung);
       frame.srcdoc = fallbackHtml;
@@ -336,6 +326,7 @@
       status.className = 'gen-status ok';
       status.textContent = '✓ Vorschau generiert (vereinfachte Version). Für die vollständige KI-Website melden wir uns bei Ihnen.';
       preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      console.log('Gemini error:', err);
     }).then(function () {
       btn.disabled = false;
       btn.textContent = 'Website generieren (kostenlos)';
