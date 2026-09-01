@@ -21,6 +21,8 @@ Inbound- oder Umsatzimpuls.
 Das anonyme Tracking meldet für die letzten sieben Tage einen Seitenaufruf und
 kein Formularsignal. Der vorrangige Engpass ist damit qualifizierter Traffic,
 nicht der Zahlungs- oder Nachbearbeitungsweg.
+Die öffentliche Suche zeigte keine indexierten Werkspree-Seiten; die
+IndexNow-Hostverifikation ist als Beschleuniger für die Discovery vorbereitet.
 
 # Nächster Schritt
 Das Partnerpaket in drei persönlichen Gesprächen mit Steuerkanzleien,

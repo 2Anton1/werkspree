@@ -385,6 +385,12 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
   Preis des 890-€-Sprints. Zahlungsweg und Fälligkeit bleiben bewusst
   kundenspezifisch festzulegen; die Vorlage ist kein Vertrag oder eine Rechnung.
 
+### 01.09.2026 — IndexNow für Suchmaschinen-Discovery
+- Die öffentliche Suche hatte keine indexierten Werkspree-Treffer, obwohl
+  `robots.txt`, Sitemap und Canonicals erreichbar sind. Die Root-Datei
+  `66cfddf7-e60c-4203-8c92-130427ee0c11.txt` verifiziert den Host für die
+  kostenfreie IndexNow-Einreichung der wichtigsten Einstiegsseiten.
+
 ### 01.09.2026 — Sprint-Angebot und Umsatz-Ziel geschärft
 - `goal-ledger.md` ergänzt: Ziel sind drei bezahlte Automation Sprints in 90
   Tagen (2.670 € einmalig) und mindestens ein Betreuungsauftrag (290 € MRR).
