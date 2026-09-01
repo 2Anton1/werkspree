@@ -71,6 +71,10 @@
 - **Custom Domain:** https://werkspree.bki-de.de (CNAME gesetzt bei Strato, DNS propagiert, SSL-Zertifikat pending)
 - **Quelle:** ~/werkspree/index.html (im Root des Repos)
 - **Positionierung (11.08.2026):** Hero und Leistungsargumentation auf Rechnungs-OCR, Postfachentlastung, Lead-Nachfassung und Freigaben umgestellt. Paketnamen lauten jetzt Automation Starter/Growth/Enterprise; Leistungsumfang wurde auf konkrete, produktisierte Prozess-Sprints ausgerichtet.
+- **Conversion-Fokus (01.09.2026):** Der Hero führt nun auf den Automation Sprint
+  (890 € einmalig): Rechnungseingang als konkreter Einstieg, 14-Tage-Ablauf und
+  qualifizierbares Prozess-Check-Formular. Das vorhandene n8n-Tracking erhält
+  bei Formular-Absendung zusätzlich Angebot und ausgewählten Prozess.
 - **SSL:** GitHub Pages auto-SSL, HTTPS enforcement noch nicht aktiv (Zertifikat wird von GitHub ausgestellt, dauert 5-15 Min)
 - **Cron-Job "GitHub Pages SSL Check" (8a0ea7b0e123):** prüft alle 30 Min ob SSL bereit ist und aktiviert es automatisch. Wiederholt 12x; nach erfolgreicher Aktivierung pausieren/entfernen.
 
@@ -358,6 +362,19 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 01.09.2026 — Sprint-Angebot und Umsatz-Ziel geschärft
+- `goal-ledger.md` ergänzt: Ziel sind drei bezahlte Automation Sprints in 90
+  Tagen (2.670 € einmalig) und mindestens ein Betreuungsauftrag (290 € MRR).
+- `index.html`: Der Hero, die Navigation und der Kontaktbereich führen zum
+  Automation Sprint (890 €). Das Kontaktformular fragt den gewünschten
+  Prozess ab und übergibt Angebot/Prozess an Formspree bzw. das n8n-Tracking;
+  die Events unterscheiden Absendeversuch und erfolgreiche Anfrage.
+- Der Sprint erklärt nun einen konkreten 14-Tage-Ablauf; die vorhandenen
+  Paketpreise und Stripe-Links wurden nicht verändert. Der Ersparnis-Rechner
+  rechnet konsistent mit dem Sprintpreis statt mit dem Starter-Abo.
+- `docs/automation-sprint-sales-playbook.md` ergänzt den Ablauf für freiwillige
+  Anfragen: Reaktionsvorlage, Qualifizierung, Angebotsgrenze und CRM-Status.
 
 ### 31.08.2026 — SaaS-Produkte, Branchen-Pages, Blog, Stripe-Onboarding, DNS-Fix
 

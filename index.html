@@ -375,6 +375,28 @@
         }
         .card .btn { width: 100%; margin-top: auto; }
 
+        /* ---------- Sprint Ablauf ---------- */
+        .sprint-steps {
+            max-width: 780px;
+            margin: var(--space-xl) auto 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-sm);
+        }
+        .sprint-steps li {
+            background: rgba(31, 157, 116, 0.06);
+            border: 1px solid rgba(31, 157, 116, 0.18);
+            border-radius: var(--radius-md);
+            padding: var(--space-md);
+            color: var(--text-muted);
+            font-size: 0.94rem;
+            line-height: 1.5;
+        }
+        .sprint-steps strong { color: var(--primary); }
+        @media (max-width: 700px) { .sprint-steps { grid-template-columns: 1fr; } }
+
         /* ---------- Contact ---------- */
         .contact {
             position: relative;
@@ -411,7 +433,8 @@
         }
         .field .req { color: var(--accent); }
         .field input,
-        .field textarea {
+        .field textarea,
+        .field select {
             width: 100%;
             font: inherit;
             font-size: 0.98rem;
@@ -425,16 +448,20 @@
         .field input::placeholder,
         .field textarea::placeholder { color: rgba(255, 255, 255, 0.5); }
         .field input:focus,
-        .field textarea:focus {
+        .field textarea:focus,
+        .field select:focus {
             border-color: var(--accent);
             background: rgba(255, 255, 255, 0.14);
         }
         .field input:focus-visible,
-        .field textarea:focus-visible {
+        .field textarea:focus-visible,
+        .field select:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
         }
         .field textarea { resize: vertical; min-height: 110px; }
+        .field select { appearance: auto; }
+        .field select option { color: var(--text); background: white; }
         .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-sm); }
         @media (max-width: 560px) { .field-row { grid-template-columns: 1fr; gap: 0; } }
         .consent {
@@ -968,7 +995,7 @@
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Werkspree",
-      "description": "Wir automatisieren Rechnungswesen, Kundenkommunikation und Marketing für kleine Unternehmen in Berlin und Brandenburg.",
+      "description": "Werkspree automatisiert wiederkehrende Büroprozesse für kleine Unternehmen in Berlin und Brandenburg — beginnend mit dem Rechnungseingang in einem klar abgegrenzten 14-Tage-Sprint.",
       "url": "https://werkspree.bki-de.de/",
       "email": "werkspree@bki-de.de",
       "areaServed": [
@@ -988,6 +1015,13 @@
       },
       "priceRange": "€€",
       "makesOffer": [
+        {
+          "@type": "Offer",
+          "name": "Automation Sprint",
+          "description": "In 14 Tagen wird ein wiederkehrender Büroprozess mit klarer Freigabe und Übergabe automatisiert. Einmalig 890 €.",
+          "price": "890.00",
+          "priceCurrency": "EUR"
+        },
         {
           "@type": "Offer",
           "name": "KI Starter",
@@ -1100,6 +1134,7 @@
                 <li><a href="#warum">Warum wir</a></li>
                 <li><a href="#demos">Live-Demo</a></li>
                 <li><a href="#kalkulator">Ersparnis-Rechner</a></li>
+                <li><a href="#sprint">Automation Sprint</a></li>
                 <li><a href="#pakete">Pakete</a></li>
                 <li><a href="e-rechnung/">E-Rechnung</a></li>
                 <li><a href="e-rechnung-pruefen/">Rechnung prüfen</a></li>
@@ -1119,12 +1154,12 @@
     <div class="hero">
         <div class="hero-inner">
             <span class="tagline"><span class="dot"></span>Berlin · Brandenburg</span>
-            <h1>KI-Automatisierung für Ihr Unternehmen</h1>
-            <p class="lead">Wir automatisieren Rechnungswesen, Kundenkommunikation und Marketing — damit Sie sich auf das Wesentliche konzentrieren können.</p>
+            <h1>Weniger Rechnungschaos in 14 Tagen.</h1>
+            <p class="lead">Wir automatisieren einen wiederkehrenden Büroprozess in Ihrem Betrieb — zum Beispiel den Rechnungseingang. Sie behalten bei jeder fachlichen und finanziellen Entscheidung die Kontrolle.</p>
             <div class="cta-bar">
-                <a href="#pakete" class="btn">Pakete ansehen</a>
-                <a href="#kontakt" class="btn btn-outline">Erstgespräch anfragen</a>
-                <a href="#kontakt" class="btn btn-ghost btn-cal">Termin buchen</a>
+                <a href="#kontakt" class="btn">Kostenlosen Prozess-Check anfragen</a>
+                <a href="#sprint" class="btn btn-outline">14-Tage-Ablauf ansehen</a>
+                <a href="e-rechnung-pruefen/" class="btn btn-ghost btn-cal">E-Rechnung prüfen</a>
             </div>
         </div>
     </div>
@@ -1295,9 +1330,9 @@
                     </div>
                     <div class="calc-stat">
                         <div class="number" id="res-amortisation">7 Tage</div>
-                        <div class="label">Ihr Starter-Abo (290€/Mo) amortisiert sich in</div>
+                        <div class="label">Ihr Automation Sprint (890 € einmalig) amortisiert sich rechnerisch in</div>
                     </div>
-                    <p class="calc-note">Bei einer Einsparung von 1.200 € zahlt sich das Starter-Abo (290 €/Monat) bereits ab dem ersten Monat mehrfach aus.</p>
+                    <p class="calc-note">Die Berechnung ist eine Orientierung. Im Prozess-Check legen wir gemeinsam fest, welche Zeitersparnis für Ihren Betrieb realistisch messbar ist.</p>
                 </div>
             </div>
         </div>
@@ -1368,24 +1403,29 @@
     <div class="section sprint-section" id="sprint">
         <div class="container">
             <span class="section-eyebrow" data-reveal>Der Einstieg</span>
-            <h2 class="section-title" data-reveal>Automation Sprint — 14 Tage, ein Prozess, messbares Ergebnis</h2>
-            <p data-reveal>Wir automatisieren in 14 Tagen genau einen Büroprozess bei Ihnen — mit menschlicher Freigabe und messbarer Zeitersparnis. Kein Rundum-Paket, kein IT-Projekt: ein konkreter Ablauf, der Ihnen ab Tag 15 Zeit spart.</p>
+            <h2 class="section-title" data-reveal>Automation Sprint — 14 Tage, ein Prozess, klarer Übergang</h2>
+            <p data-reveal>Wir wählen gemeinsam einen wiederkehrenden Vorgang, setzen ihn mit klaren Regeln um und testen ihn mit echten Beispielen. Kein Rundum-Paket, kein Großprojekt: ein Ablauf, den Ihr Betrieb danach sicher weiterführt.</p>
             <div class="cards">
                 <div class="card featured" data-reveal>
                     <h3>Automation Sprint</h3>
-                    <p class="desc">Der klar kalkulierte Einstieg für Handwerk &amp; Dienstleister in Berlin/Brandenburg.</p>
+                    <p class="desc">Der kalkulierbare Einstieg für Handwerk &amp; Dienstleister in Berlin/Brandenburg — ideal für Rechnungseingang und Belegprüfung.</p>
                     <div class="price"><span class="accent-num">890€</span> <small>einmalig</small></div>
                     <ul>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Prozessanalyse &amp; Zieldefinition</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Einrichtung eines Workflows (z. B. Rechnungs-OCR)</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Getestet mit 3 Normalfällen + 1 Fehlerfall</li>
                         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Übergabe-Dokumentation &amp; Freigabeprozess</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>14-Tage-Erfolgsmessung — Zeitersparnis schwarz auf weiß</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Gemeinsam vereinbarte Messgröße für den Ablauf</li>
                     </ul>
-                    <a href="#kontakt" class="btn">Erstgespräch anfragen</a>
+                    <a href="#kontakt" class="btn">Kostenlosen Prozess-Check anfragen</a>
                     <p class="sprint-note">Alle Aktionen laufen mit menschlicher Freigabe — finanziell &amp; irreversibel bleibt alles manuell.</p>
                 </div>
             </div>
+            <ol class="sprint-steps" data-reveal aria-label="Ablauf des Automation Sprints">
+                <li><strong>Tag 1–2:</strong> Engpass und Ziel festlegen.</li>
+                <li><strong>Tag 3–10:</strong> Workflow einrichten und Regeln abstimmen.</li>
+                <li><strong>Tag 11–14:</strong> Mit Normal- und Fehlerfällen testen, dokumentieren und übergeben.</li>
+            </ol>
         </div>
     </div>
 
@@ -1459,8 +1499,8 @@
     </div>
 
     <div class="contact" id="kontakt">
-        <h2 data-reveal>Bereit für weniger Aufwand?</h2>
-        <p class="lead" data-reveal>Schreiben Sie kurz, was bei Ihnen am meisten Zeit frisst. Wir melden uns innerhalb eines Werktags und sagen Ihnen ehrlich, ob sich Automatisierung bei Ihnen lohnt — kostenlos und unverbindlich.</p>
+        <h2 data-reveal>Passt ein Automation Sprint zu Ihrem Betrieb?</h2>
+        <p class="lead" data-reveal>Beschreiben Sie kurz einen wiederkehrenden Vorgang. In einem kostenlosen 15-Minuten-Check klären wir, ob er sich sinnvoll automatisieren lässt — unverbindlich und ohne IT-Projekt.</p>
 
         <form class="contact-form" data-reveal id="kontaktformular" action="https://formspree.io/f/mqpzewzj" method="POST" novalidate>
             <div class="field-row">
@@ -1484,6 +1524,16 @@
                 </div>
             </div>
             <div class="field">
+                <label for="k-prozess">Welcher Vorgang soll zuerst besser laufen? <span class="req">*</span></label>
+                <select id="k-prozess" name="prozess" required>
+                    <option value="" selected disabled>Bitte auswählen</option>
+                    <option value="Rechnungseingang und Belege">Rechnungseingang und Belege</option>
+                    <option value="Postfach und Kundenanfragen">Postfach und Kundenanfragen</option>
+                    <option value="Angebots- oder Lead-Nachfassung">Angebots- oder Lead-Nachfassung</option>
+                    <option value="Anderer Büroprozess">Anderer Büroprozess</option>
+                </select>
+            </div>
+            <div class="field">
                 <label for="k-text">Worum geht es? <span class="req">*</span></label>
                 <textarea id="k-text" name="nachricht" required placeholder="Zum Beispiel: Ich tippe jede Woche rund vier Stunden Eingangsrechnungen ab."></textarea>
             </div>
@@ -1498,8 +1548,9 @@
                 <span>Ich bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</span>
             </label>
 
-            <input type="hidden" name="_subject" value="Neue Anfrage über werkspree.de">
-            <button type="submit" class="btn">Erstgespräch / Rückruf anfragen</button>
+            <input type="hidden" name="angebot" value="Automation Sprint">
+            <input type="hidden" name="_subject" value="Neue Anfrage: Automation Sprint">
+            <button type="submit" class="btn">Kostenlosen 15-Minuten-Check anfragen</button>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
 
@@ -1539,14 +1590,14 @@
                 var stundenProMonat = (rechnungen * zeit) / 60;
                 var geldErsparnis = stundenProMonat * 60; // 60€/Stunde durchschnittlich
                 
-                // Amortisation für das 290€ Starter-Abo
-                var amortisationTage = Math.round((290 / Math.max(geldErsparnis, 1)) * 30);
+                // Rechnerische Amortisation für den einmaligen 890€ Automation Sprint
+                var amortisationTage = Math.round((890 / Math.max(geldErsparnis, 1)) * 30);
                 if (amortisationTage < 1) amortisationTage = 1;
 
                 resStunden.textContent = stundenProMonat.toFixed(1).replace('.', ',') + ' Std.';
                 resGeld.textContent = Math.round(geldErsparnis).toLocaleString('de-DE') + ' €';
                 
-                if (geldErsparnis >= 290) {
+                if (geldErsparnis >= 890) {
                     resAmortisation.textContent = amortisationTage + ' ' + (amortisationTage === 1 ? 'Tag' : 'Tage');
                 } else {
                     resAmortisation.textContent = 'Ab 2. Monat';
@@ -1640,6 +1691,15 @@
                     headers: { Accept: 'application/json' }
                 }).then(function (res) {
                     if (res.ok) {
+                        var offer = form.querySelector('[name="angebot"]');
+                        var process = form.querySelector('[name="prozess"]');
+                        document.dispatchEvent(new CustomEvent('werkspree_form_success', {
+                            detail: {
+                                form: form.id,
+                                offer: offer ? offer.value : '',
+                                process: process ? process.value : ''
+                            }
+                        }));
                         form.reset();
                         setStatus('Danke — Ihre Anfrage ist angekommen. Wir melden uns innerhalb eines Werktags.', 'ok');
                     } else {
@@ -1662,7 +1722,8 @@
   function track(ev,meta){try{var p={event:ev,page:location.pathname,sid:sid(),ts:new Date().toISOString(),meta:meta||{}};if(navigator.sendBeacon){navigator.sendBeacon(API,new Blob([JSON.stringify(p)],{type:"application/json"}));}else{fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(p),keepalive:true}).catch(function(){});}}catch(e){}}
   track("page_view");
   document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a"):null;if(!a)return;var h=a.getAttribute("href")||"";if(h.indexOf("buy.stripe.com")>-1)track("stripe_click",{link:h});});
-  document.addEventListener("submit",function(e){track("form_submit",{form:(e.target&&(e.target.id||e.target.className||"unknown"))});},{capture:true});
+  document.addEventListener("submit",function(e){var f=e.target;if(!f||!f.checkValidity||!f.checkValidity())return;var offer=f.querySelector('[name="angebot"]');var process=f.querySelector('[name="prozess"]');track("form_submit_started",{form:(f.id||f.className||"unknown"),offer:offer?offer.value:"",process:process?process.value:""});},{capture:true});
+  document.addEventListener("werkspree_form_success",function(e){track("form_submit_success",e.detail||{});});
   document.addEventListener("change",function(e){var el=e.target;if(el&&el.type==="file")track("checker_used",{file:el.files&&el.files[0]?el.files[0].name:""});});
 })();
 </script>
