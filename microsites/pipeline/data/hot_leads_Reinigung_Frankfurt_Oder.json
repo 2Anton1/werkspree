@@ -18,17 +18,6 @@
       "old_or_no_website": ""
     },
     {
-      "name": "IFM Service – Hausmeisterservice & Reinigung Frankfurt (Oder)",
-      "address": "Bauernhilfe 1, 15236 Frankfurt (Oder)-Markendorf, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJEUgq4NuXB0cREmNpgiM29FI",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "01514 7358321"
-    },
-    {
       "name": "Wäscherei Stübchen",
       "address": "Große Müllroser Str. 72, 15232 Frankfurt (Oder), Deutschland",
       "rating": 5,
@@ -41,42 +30,15 @@
       "phone": "0173 3770715"
     },
     {
-      "name": "Queen Clean ADL GmbH",
-      "address": "Gubener Str. 35b, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJpdqaQyorqEcRR_TNRGBtczQ",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0335 60698866",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "https://queenclean-adl.eu/"
-    },
-    {
-      "name": "GLASKLAR Glas- und Fensterreinigung Frankfurt (Oder)",
-      "address": "Große Scharrnstraße, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJv1lvbI-ZB0cRjNMOlR1Pjzg",
+      "name": "IFM Service – Hausmeisterservice & Reinigung Frankfurt (Oder)",
+      "address": "Bauernhilfe 1, 15236 Frankfurt (Oder)-Markendorf, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJEUgq4NuXB0cREmNpgiM29FI",
       "types": [
         "establishment",
         "point_of_interest"
       ],
-      "phone": "01522 7012755"
-    },
-    {
-      "name": "Rohloff Reinigungsservice",
-      "address": "Sophienstraße 2, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJyVCRBJ2-2GARbCgc-7i5XbI",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": ""
+      "phone": "01514 7358321"
     },
     {
       "name": "Wittum Dienstleistung",
@@ -94,6 +56,44 @@
       "old_or_no_website": "http://www.gebaeudereinigung-wittum.de/"
     },
     {
+      "name": "Rohloff Reinigungsservice",
+      "address": "Sophienstraße 2, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyVCRBJ2-2GARbCgc-7i5XbI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": ""
+    },
+    {
+      "name": "Queen Clean ADL GmbH",
+      "address": "Gubener Str. 35b, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJpdqaQyorqEcRR_TNRGBtczQ",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 60698866"
+    },
+    {
+      "name": "Glas & Gebäudereinigung Dreger",
+      "address": "Spitzkrugring 10, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ4-1CKTg4ZUEREnlJWct7Ch8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 524404",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.gg-ffo.de/"
+    },
+    {
       "name": "LEHGRA GmbH",
       "address": "Lebuser Weg 27a, 15234 Frankfurt (Oder), Deutschland",
       "rating": 4.5,
@@ -103,6 +103,17 @@
         "point_of_interest"
       ],
       "phone": "033605 526153"
+    },
+    {
+      "name": "GLASKLAR Glas- und Fensterreinigung Frankfurt (Oder)",
+      "address": "Große Scharrnstraße, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJv1lvbI-ZB0cRjNMOlR1Pjzg",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01522 7012755"
     },
     {
       "name": "Lange Dienstleistungs GmbH",
@@ -117,20 +128,6 @@
       "website_quality": "none",
       "website_quality_score": 0,
       "old_or_no_website": "https://www.lange-dienstleistung.de/"
-    },
-    {
-      "name": "Glas & Gebäudereinigung Dreger",
-      "address": "Spitzkrugring 10, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJ4-1CKTg4ZUEREnlJWct7Ch8",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0335 524404",
-      "website_quality": "low",
-      "website_quality_score": 2,
-      "old_or_no_website": "http://www.gg-ffo.de/"
     }
   ],
   "hot_leads": []

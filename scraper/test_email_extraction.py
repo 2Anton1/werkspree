@@ -1,11 +1,22 @@
 import unittest
-from email_extraction import (
-    find_emails_in_text,
-    best_email,
-    find_gelbeseiten_profile_url,
-    find_real_website_on_profile_page,
-    is_real_company_website,
-)
+try:
+    from .email_extraction import (
+        find_emails_in_text,
+        best_email,
+        find_gelbeseiten_profile_url,
+        find_real_website_on_profile_page,
+        is_real_company_website,
+        contact_links_from_homepage,
+    )
+except ImportError:
+    from email_extraction import (
+        find_emails_in_text,
+        best_email,
+        find_gelbeseiten_profile_url,
+        find_real_website_on_profile_page,
+        is_real_company_website,
+        contact_links_from_homepage,
+    )
 
 
 class TestFindEmailsInText(unittest.TestCase):
@@ -89,6 +100,28 @@ class TestIsRealCompanyWebsite(unittest.TestCase):
 
     def test_real_domain_is_real(self):
         self.assertTrue(is_real_company_website('https://www.elektro-bs.de'))
+
+
+class TestContactLinksFromHomepage(unittest.TestCase):
+    def test_finds_same_host_nonstandard_contact_paths(self):
+        html = '''
+        <a href="/team-und-kontakt/">Kontakt</a>
+        <a href="https://www.firma.de/impressum.html">Rechtliches</a>
+        <a href="https://instagram.com/firma">Instagram</a>
+        <a href="https://anderes.example/kontakt">Extern</a>
+        '''
+        self.assertEqual(
+            contact_links_from_homepage(html, "https://www.firma.de/"),
+            ["https://www.firma.de/team-und-kontakt", "https://www.firma.de/impressum.html"],
+        )
+
+    def test_ignores_fragments_duplicates_and_unrelated_links(self):
+        html = '''<a href="/leistungen">Leistungen</a><a href="/kontakt#formular">Kontakt</a>
+        <a href="/kontakt">Kontakt erneut</a>'''
+        self.assertEqual(
+            contact_links_from_homepage(html, "https://firma.de"),
+            ["https://firma.de/kontakt"],
+        )
 
 
 if __name__ == "__main__":

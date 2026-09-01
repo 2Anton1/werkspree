@@ -12,24 +12,7 @@
         "establishment",
         "point_of_interest"
       ],
-      "phone": "0355 4949986",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "https://ighla.com/beauty-and-more-inh-uta-pabel-cottbus/"
-    },
-    {
-      "name": "Kosmetikstudio Jade Beauty Lounge",
-      "address": "Altmarkt 12, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJLbVhMi3fB0cRzWRE3sN9ihQ",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "hair_care",
-        "point_of_interest",
-        "spa"
-      ],
-      "phone": "0355 29020187"
+      "phone": "0355 4949986"
     },
     {
       "name": "Chiceria Cottbus - Kosmetikstudio und Stoffwechselzentrum",
@@ -47,6 +30,20 @@
       "phone": "0355 4949480"
     },
     {
+      "name": "Kosmetikstudio Jade Beauty Lounge",
+      "address": "Altmarkt 12, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJLbVhMi3fB0cRzWRE3sN9ihQ",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest",
+        "spa"
+      ],
+      "phone": "0355 29020187"
+    },
+    {
       "name": "Beauty Zone",
       "address": "Petersilienstraße 34, 03044 Cottbus, Deutschland",
       "rating": 4.9,
@@ -57,8 +54,8 @@
         "point_of_interest"
       ],
       "phone": "01512 7113629",
-      "website_quality": "low",
-      "website_quality_score": 3,
+      "website_quality": "medium",
+      "website_quality_score": 5,
       "old_or_no_website": "http://www.beautyzone-cottbus.de/"
     },
     {
@@ -73,10 +70,23 @@
         "spa",
         "store"
       ],
-      "phone": "0355 49363099",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "http://www.kosmetik-cottbus.de/"
+      "phone": "0355 49363099"
+    },
+    {
+      "name": "Schönheitswerk Teresia Krieger",
+      "address": "Karl-Liebknecht-Straße 125, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJgSS4gqx1CEcRjdaPQzPUKKg",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "spa",
+        "store"
+      ],
+      "phone": "0355 49497300",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.schoenheitswerk-cottbus.de/"
     },
     {
       "name": "Kosmetikstudio Cottbus- Studio Anna Le ( Gesichtsbehandlungen, Fußpflege, Nägel und Wimpernverlängerung",
@@ -100,22 +110,6 @@
       "region": "Cottbus"
     },
     {
-      "name": "Schönheitswerk Teresia Krieger",
-      "address": "Karl-Liebknecht-Straße 125, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJgSS4gqx1CEcRjdaPQzPUKKg",
-      "types": [
-        "establishment",
-        "point_of_interest",
-        "spa",
-        "store"
-      ],
-      "phone": "0355 49497300",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "http://www.schoenheitswerk-cottbus.de/"
-    },
-    {
       "name": "Kosmetikinstitut Vogt & Signorina by Doreen & Antje",
       "address": "Sachsendorfer Str. 2c, 03051 Cottbus-Groß Gaglow, Deutschland",
       "rating": 4.8,
@@ -127,6 +121,21 @@
         "store"
       ],
       "phone": "0355 4865780"
+    },
+    {
+      "name": "MAVIE Beauty Studio by Evelyn Kowal",
+      "address": "Neustädter Str. 5, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJw6a50851CEcRkgvt1TaWNjs",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0177 3729780",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://mavie-kosmetik.de/"
     },
     {
       "name": "Hautgefühl Cottbus Kosmetik | Glowsolution | Microneedling | Permanent Make up",
@@ -141,9 +150,19 @@
         "store"
       ],
       "phone": "015563 630055",
-      "website_quality": "low",
-      "website_quality_score": 3,
+      "website_quality": "medium",
+      "website_quality_score": 5,
       "old_or_no_website": "http://hautgefühl-cottbus.de/"
+    },
+    {
+      "name": "Pure Cosmetic | Kosmetikstudio, Futuracontour & Haarentfernung Cottbus",
+      "address": "Str. der Jugend 44, 03050 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJccIwKWR0CEcRqntD3Hj1Bjg",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
     },
     {
       "name": "Ästhetik-Salon Ebenmaß, Inh. Sina Krüger",
@@ -154,21 +173,17 @@
         "beauty_salon",
         "establishment",
         "point_of_interest"
-      ],
-      "phone": "01512 8974202",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "http://www.ebenmass-kosmetik.de/"
+      ]
     },
     {
-      "name": "MAVIE Beauty Studio by Evelyn Kowal",
-      "address": "Neustädter Str. 5, 03046 Cottbus, Deutschland",
+      "name": "Berlash - Cottbus",
+      "address": "Karl-Liebknecht-Straße 60a, 03046 Cottbus, Deutschland",
       "rating": 5,
-      "place_id": "ChIJw6a50851CEcRkgvt1TaWNjs",
+      "place_id": "ChIJO54WEp5JqEcRWYjRNcd52Vc",
       "types": [
+        "beauty_salon",
         "establishment",
-        "point_of_interest",
-        "store"
+        "point_of_interest"
       ]
     },
     {
@@ -207,10 +222,21 @@
       ]
     },
     {
-      "name": "Berlash - Cottbus",
-      "address": "Karl-Liebknecht-Straße 60a, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJO54WEp5JqEcRWYjRNcd52Vc",
+      "name": "Label A cosmetics, Inh. Anne Binder",
+      "address": "Ewald-Haase-Straße 12, 03044 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJWfZ-m-l1CEcRI2MAYj0plvs",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Lamiwax_boutique",
+      "address": "Neustädter Str. 1, 03046 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJdeE2Jyl1CEcR1z7W-Lp3oPc",
       "types": [
         "beauty_salon",
         "establishment",
@@ -229,43 +255,10 @@
       ]
     },
     {
-      "name": "Pure Cosmetic | Kosmetikstudio, Futuracontour & Haarentfernung Cottbus",
-      "address": "Str. der Jugend 44, 03050 Cottbus, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJccIwKWR0CEcRqntD3Hj1Bjg",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
       "name": "Cocoa Beauty - Cottbus",
       "address": "Oberkirchpl. 11, 03044 Cottbus, Deutschland",
       "rating": 4.9,
       "place_id": "ChIJp_rI8nJ1CEcR6JLTdWpnOFM",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Naturkosmetik im alten Speicher",
-      "address": "Taubenstraße 4, 03046 Cottbus, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJ3zEl2G50CEcRCStCICO_AS4",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "name": "Petra Legler Kosmetikstudio",
-      "address": "Gerhart-Hauptmann-Straße 7, 03044 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJe2UFtEh0CEcR2CrCXeK53Rs",
       "types": [
         "beauty_salon",
         "establishment",
@@ -293,9 +286,7 @@
       "email_verified": true,
       "email_verify_reason": "Impressum: Match: 'anna' in domain/local",
       "branch": "Kosmetik",
-      "region": "Cottbus",
-      "company_name": "Kosmetikstudio Cottbus- Studio Anna Le ( Gesichtsbehandlungen, Fußpflege, Nägel und Wimpernverlängerung",
-      "slug": "kosmetikstudio-cottbus-studio"
+      "region": "Cottbus"
     }
   ]
 }

@@ -55,9 +55,9 @@
 #### 2.0.2 Google Gemini API (Microsite-Builder)
 - **API Key:** `GOOGLE_API_KEY` in `~/.hermes/.env` (gleicher Key wie Places)
 - **Preis:** 0$ (60 Anfragen/Min, 1500 Anfragen/Tag — kostenlos)
-- **Verwendung:** Generiert professionelle HTML-Microsites für heiße Leads
+- **Verwendung:** Optionaler Experimentpfad für Inhalte; der produktive Bau nutzt seit 01.09.2026 das deterministische, geprüfte HTML-Template
 - **Modell:** gemini-3-flash-preview
-- **Fallback:** Statisches Template (`build_microsite.py`) wenn Gemini versagt
+- **Fallback/Produktion:** Statisches Template (`build_microsite.py`); unvollständige Gemini-Ausgaben werden verworfen
 - **Aktiviert am:** 20.08.2026
 
 ### 2.1 GitHub Repo
@@ -97,7 +97,9 @@
 - **Extrahiert:** Rechnungsnummer, Datum, Betrag, USt, IBAN, BIC, Absender, Konfidenz-Score
 - **Airtable Credential ID:** PxHtJTQCVZN6cO82 (in n8n gespeichert)
 - **Test:** Erfolgreich, Execution Status = success, Airtable Record erstellt
-- **Bekanntes Issue:** Code-Node extrahiert Daten unvollständig wenn JSON als String gesendet wird (RegEx greift nicht auf \n in JSON). Pipeline funktioniert prinzipiell.
+- **JSON-String-Fix:** Der Parser entpackt inzwischen rohe JSON-Strings,
+  verschachtelte Webhook-Bodies und escaped Newlines; lokale Node-Tests decken
+  diese Fälle ab.
 
 ### 2.4 Stripe (Zahlungen)
 - **Modus:** LIVE (echte Zahlungen möglich)
@@ -193,6 +195,10 @@
 - **Footer:** "Werkspree — KI-Automatisierung für kleine Unternehmen | Berlin & Brandenburg | Finn Werksby"
 - **E-Mail-Link:** mailto:a2807d@gmail.com
 - **Erledigt (08.08.2026):** Die verwaiste Duplikat-Seite `~/werkspree/landing/index.html` (falsche Kontakt-Mail, keine Stripe-Links) wurde gelöscht. `index.html` im Repo-Root ist jetzt die einzige Landing Page.
+- **Branchen-Seiten:** `website-bau/<slug>/index.html` enthält 17 branchenspezifische
+  SEO-Landingpages (Elektriker, Dachdecker, Maler, Friseur, Kfz sowie seit
+  01.09.2026 Tischlerei, Kosmetik, Physio, Gartenbau, Sanitär, Reinigung,
+  Steuerberater, Immobilien, Zahnarzt, Fahrschule, Bäckerei und Allgemein).
 
 ### 4.2 CRM Template
 - **Pfad:** ~/werkspree/crm/crm_template.json
@@ -225,12 +231,31 @@
 - **Pfad:** `PROZESSE.md`
 - **Inhalt:** Automation-Sicherheitsstufen, Automation-Sprint, Rechnungs-OCR-Referenzprozess, CRM-/Lead-Regeln und Monatsbetreuung.
 
+### 4.10 Tests und Demo-Dokumentation
+- **Pfad:** `tests/automation_starter_demo.py`, `docs/automation-starter-demo.md`
+- **Inhalt:** Netzwerkfreier Smoke-Test und reproduzierbare Anleitung für den
+  Automation-Starter-Ablauf.
+- **OCR-Tests:** `n8n-workflows/rechnungs-ocr-parser.test.js` prüft Webhook-
+  Objekt, rohe JSON-Strings, verschachtelte `body`-Strings und Rechnungsformate.
+- **Vertrieb:** `docs/automation-sprint-sales-playbook.md` beschreibt den
+  einwilligungsbasierten Weg von der Sprint-Anfrage bis zu Angebot, Kunde und
+  wöchentlichem Umsatz-Review.
+
 ### 4.11 CRM-Erfassung von Sprint-Anfragen
 - **Pfad:** `n8n-workflows/werkspree-sprint-lead-capture.json`
 - **Produktiv:** n8n-Workflow `IkvCTz0fSWiqjcGg` nimmt ausschließlich nach
   erfolgreicher Formspree-Übermittlung freiwillige Prozess-Check-Anfragen an,
   validiert sie und legt sie als `Inbound · [Betrieb]` mit Status `Neu` in
   Airtable an. Die versionierte JSON-Datei enthält keine Zugangsdaten.
+
+### 4.12 Microsite-Qualität
+- **Template:** `microsites/pipeline/microsite_template.html` — responsives,
+  branchengestyltes Static-Template mit korrekten Datenfeldern.
+- **Prüfung:** `microsites/pipeline/site_quality.py` und
+  `microsites/pipeline/test_build_microsite.py` — geschlossene HTML-Struktur,
+  sichtbarer Inhalt, Escaping, Platzhalter- und Opt-out-Schutz.
+- **Branchen-Ratgeber:** `scripts/generate_branch_blog_pages.py` erzeugt die
+  zwölf ergänzten Seiten unter `blog/website-*/` reproduzierbar.
 
 ### 4.6 n8n Workflow-Datei
 - **Pfad:** ~/werkspree/n8n-workflows/rechnungs-ocr-demo.json
@@ -254,7 +279,7 @@
 |---|---|---|---|
 | df4d149e4f8f | Werkspree Lead Pipeline (Script Mode) | Täglich 10:00 | `~/.hermes/scripts/run_pipeline.py` in der Produktionskopie `/Users/anton/work/werkspree`: Pipeline → Scoring → Outreach → Airtable-Sync. Der Sync übernimmt `sent_emails.json`; aktuelle Airtable-Statuswerte sind nur `Neu` und `Kontaktiert`. Exit≠0 bei Fehler. |
 | e85d58d7915e | Werkspree Health Check | Alle 6h | ~/.hermes/scripts/health_check.py (no_agent): silent bei OK, nur Issues melden |
-| 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Firecrawl) → eigener Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `werkspree@bki-de.de`) |
+| 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Scrapling) → geprüfter Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `werkspree@bki-de.de`) |
 | b68eea7332bc | Werkspree Reply Checker | 2x täglich 09:00 + 18:00 | ~/.hermes/scripts/check_replies.py (no_agent): prüft Strato IMAP + Gmail API auf Antworten versendeter Mails. Bei neuen Antworten → WhatsApp-Benachrichtigung. Keine Antwort → still (leere stdout). |
 | 3d145f5ac7af | Werkspree Tagesreport | Täglich 09:00 | ~/.hermes/scripts/werkspree_daily_summary.py (no_agent): sammelt Leads, Outreach-Mails, Microsites, Antworten, Pipeline-Report und sendet Zusammenfassung an anton.drooff@icloud.com via Strato SMTP. |
 
@@ -309,7 +334,7 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 - [x] Lead-Scraper Pipeline (pipeline.py)
 - [x] Outreach-Engine (outreach.py) + E-Mail-Templates
 - [x] Cron-Job: tägliche Lead-Pipeline um 10:00
-- [x] Pseudonym: Finn Werksby (überall, kein echter Name)
+- [x] Pseudonym: Finn Werksby für Marketing und Demo-Inhalte; rechtliche Pflichtangaben führen die verantwortliche Person korrekt
 - [x] Positionierung auf konkrete Büroprozesse, produktisierte Sprints und menschliche Freigaben ausgerichtet (11.08.2026)
 - [x] Liefer- und Sicherheitsprozesse in `PROZESSE.md` dokumentiert (11.08.2026)
 - [x] Outbound-E-Mail-Versand in `outreach.py` und `warm_outreach.py` standardmäßig deaktiviert; Aktivierung nur mit `--send` (11.08.2026)
@@ -318,49 +343,46 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 #### KI-Generierte Inhalte (ChatGPT-Workflow)
 Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und alle Details sind in HANDOVER.md dokumentiert.
 
-- [ ] **n8n Respond-Node** für `werkspree-microsite-generator` manuell im n8n-UI konfigurieren
-  - Webhook-Node: "Respond" → "Using Respond to Webhook Node"
-  - Respond-Node: "Respond With" = JSON, Body = `{{ JSON.stringify({html: $json.html, success: $json.success}) }}`, Status = 200, CORS-Header
-  - Save + Active
+- [x] **n8n Respond-Node** für `werkspree-microsite-generator` konfiguriert und aktiv (01.09.2026; geprüft im Workflow `tZOlY46EecN1BRsd`). JSON-Antwort, Status 200 und CORS-Header sind gesetzt.
 
-- [ ] **12 weitere Branchen-Landingpages** generieren (Template: `website-bau/index.html`)
-  1. Tischlerei
-  2. Kosmetik
-  3. Physiotherapie
-  4. Gartenbau
-  5. Sanitär
-  6. Reinigung
-  7. Steuerberater
-  8. Immobilien
-  9. Zahnarzt
-  10. Fahrschule
-  11. Bäckerei
-  12. Allgemein (Dienstleistungen allgemein)
+- [x] **12 weitere Branchen-Landingpages** generiert (01.09.2026): Tischlerei,
+  Kosmetik, Physiotherapie, Gartenbau, Sanitär, Reinigung, Steuerberater,
+  Immobilien, Zahnarzt, Fahrschule, Bäckerei und Allgemein. Alle Seiten sind
+  von `website-bau/index.html` verlinkt und in `sitemap.xml` enthalten.
 
-- [ ] **Blog-Artikel** für neue Branchen schreiben (Template: `blog/<slug>/`)
-  - SEO-Keywords, Meta-Tags, Conversion-CTA
-  - Cross-Selling-Links zu Produkten
+- [x] **Blog-Artikel** für die 12 neuen Branchen ergänzt (01.09.2026; `blog/website-*/`)
+  - SEO-Metadaten, Canonicals, Article-JSON-LD, Conversion-CTA
+  - Cross-Selling-Links zu Website-Bau, Rechnungs-OCR und E-Rechnungs-Prüfer
 
 #### Technische Aufgaben
-- [ ] HTTPS enforcement aktivieren (GitHub Pages Custom Domain)
-- [ ] Impressum & Datenschutzerklärung erstellen (rechtlich: siehe Abschnitt 11.1)
-- [ ] E-Mail-Yield der Lead-Pipeline verbessern (aktuell 4% = 2/50 Leads mit E-Mail)
+- [x] HTTPS enforcement geprüft (HTTP → HTTPS auf `werkspree.bki-de.de`, 01.09.2026)
+- [x] Impressum & Datenschutzerklärung vorhanden und verlinkt (`impressum.html`, `datenschutz.html`)
+- [x] E-Mail-Yield verbessert: Die Pipeline prüft neben Standardpfaden nun auch
+  same-host Kontakt-/Impressum-Links, die sie auf der Startseite findet
+  (01.09.2026)
 - [ ] WhatsApp-Alternative einrichten (Twilio-Nummer ~1€/Monat)
 - [ ] Outreach rechtlich prüfen und mit `--send` aktivieren
-- [ ] CRM-Statuswerte: Qualifiziert, Eingehend, Demo, Angebot, Nicht kontaktieren
-- [ ] Automation-Starter-Demo als reproduzierbaren Testlauf dokumentieren
-- [ ] Feintuning Rechnungs-OCR (RegEx-Anpassung für JSON-String-Eingabe)
+- [ ] Airtable-DPA/AVV vor dem ersten echten Inbound-Lead unterzeichnen (externer Vertrag)
+- [ ] Alten n8n-Tracking-Workflow `Ax3Kl8MCYm7Isykd` mit berechtigtem n8n-Konto deaktivieren (API-Key hat dafür 403)
+- [x] CRM-Statuswerte vereinheitlicht: Mapping und Funnel unterstützen
+  Qualifiziert, Eingehend, Demo, Angebot und Nicht kontaktieren; Vorlage und
+  README dokumentieren das Modell (01.09.2026)
+- [x] Automation-Starter-Demo als reproduzierbarer, netzwerkfreier Testlauf
+  dokumentiert (`docs/automation-starter-demo.md` + Test) (01.09.2026)
+- [x] Rechnungs-OCR für JSON-String-Eingaben abgesichert; verschachtelter
+  `body`-String und escaped Newlines sind getestet (01.09.2026)
 - [x] Hybrid-Lead-Plan eingeführt: günstiges Screening für alle, Deep-Research nur für maximal 10 Top-Leads, maximal 5 Outreach-Kandidaten pro Lauf (11.08.2026)
 - [x] Werkspree-Cron `e1e5b8283664` auf `gemini / models/gemini-3.5-flash` gepinnt, Versand deaktiviert und Zustellung auf `local` gestellt (11.08.2026)
-- [ ] `crm/crm_template.json` ist veraltet (echtes CRM ist in Airtable) — entfernen oder klar als Archiv kennzeichnen
+- [x] `crm/crm_template.json` als Archiv gekennzeichnet; `crm/README.md` erklärt,
+  dass Airtable Base `appyMLhXOMHpD5vfT` das produktive CRM ist (01.09.2026)
 
 ---
 
 ## 9. SICHERHEITSREGELN
 
-1. **NIEMALS** den echten Namen verwenden — immer "Finn Werksby"
+1. In Marketing-Kommunikation und Demo-Inhalten ausschließlich "Finn Werksby" verwenden. Rechtliche Pflichtangaben, Verträge und Rechnungen sind davon ausdrücklich ausgenommen und müssen die verantwortliche Person korrekt nennen.
 2. **NIEMALS** pv-ki.de, anton-drooff.de oder career-tool.pv-ki.de auf dem Hetzner-Server anfassen
-3. **Stripschüssel** nicht in Commits pushen (sind in .env, nicht im Repo)
+3. **Stripe-Schlüssel** nicht in Commits pushen (sind in .env, nicht im Repo)
 4. **Server-Passwort** nicht in Skripten hardcoden
 5. SSH zum Server nur via sshpass oder expect (sudo -S wird blockiert)
 
@@ -369,6 +391,59 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 01.09.2026 — Microsite-Generator stabilisiert und offene Punkte abgearbeitet
+- Ursache der schlecht aussehenden Microsites behoben: Das alte Template hatte
+  nicht passende Platzhalter, die Fallback-Seiten enthielten leere Kontakt-
+  und Zeitfelder, und der LLM-Pfad konnte mitten im CSS abbrechen. Der
+  produktive Orchestrator nutzt nun `build_microsite.py` mit einem vollständigen,
+  responsiven Branch-Template; Daten werden escaped und störende Scraper-/Markdown-
+  Fragmente herausgefiltert.
+- `microsites/pipeline/site_quality.py` prüft geschlossene HTML-Strukturen,
+  sichtbaren Inhalt, Platzhalter und abgebrochene Style-/Script-Blöcke. Ein
+  unvollständiger LLM-Output wird nicht veröffentlicht. Slugs sind jetzt
+  ASCII-normalisiert und stabil.
+- Neun vorhandene Lead-Seiten wurden neu gerendert. Zwei abgeschnittene Seiten
+  wurden repariert; die alte Fahrschul-Demo mit gesperrter Kontaktadresse ist
+  durch eine `noindex`-Hinweisseite ersetzt, ihre öffentliche `lead.json` wurde
+  entfernt. Neue Builds legen keine Lead-Daten mehr in den Website-Ordner.
+- Zwölf fehlende Branchen-Ratgeberseiten unter `blog/website-*/` ergänzt und
+  in `sitemap.xml` aufgenommen. Der Generator-Smoke-Test deckt Escaping,
+  Segment-Texte, Slugs und die Ablehnung abgeschnittener HTML-Dateien ab.
+- HTTPS-Weiterleitung geprüft: HTTP landet auf `https://werkspree.bki-de.de/`.
+
+### 01.09.2026 — Responsive Conversion-Audit der Landingpage
+- Live visuell geprüft bei 1.440 × 900, 768 × 1.024 und 390 × 844 px. Es gibt
+  keinen horizontalen Seitenüberlauf. Bei 768 px bleibt jedoch die komplette
+  Desktop-Navigation aktiv; ihre rechten Einträge werden sichtbar abgeschnitten.
+  **Priorität P0:** Ab etwa 900 px auf ein klar beschriftetes Menü umstellen,
+  damit Kontakt und die Produktwege erreichbar bleiben.
+- Der Hero ist inhaltlich klar, führt mobil aber drei gleichwertig wirkende
+  Handlungsoptionen vor. Der kostenlose E-Rechnungs-Prüfer steht erst an dritter
+  Stelle; die zugehörige Nutzenkarte beginnt erst nach dem ersten Viewport.
+  **Priorität P1:** Zwei Wege als Entscheidungsblock bündeln: „Rechnung kostenlos
+  prüfen (sofort, ohne Anmeldung)“ für kalten Traffic und „15-Minuten-
+  Prozess-Check“ für hohe Kaufabsicht. Der Prozess-Check bleibt der
+  vertriebliche Primärweg, der kostenlose Test wird aber sichtbar als Risiko-
+  freier Einstieg erklärt.
+- Auf 390 px liegt das Kontaktformular erst bei rund 13.400 px Seitenlänge. Es
+  verlangt Name, E-Mail, Prozess, Nachricht und Datenschutzhinweis. **P1:**
+  nach der ersten Wertprobe einen kurzen, wiederholten Einstieg anbieten und
+  den Check auf zwei Schritte reduzieren (zunächst E-Mail + Prozess; Details
+  freiwillig danach). Kein Pflichtfeld ohne unmittelbaren Nutzen.
+- Die beiden Produktwege wurden ebenfalls geprüft: Der E-Rechnungs-Prüfer ist
+  sinnvoll ohne Anmeldung und verarbeitet die Datei lokal; der Microsite-
+  Generator nimmt die E-Mail nur optional vor der Vorschau entgegen. **P1:**
+  erst nach einem Ergebnis eine freiwillige, nicht blockierende Auswahl
+  anbieten, z. B. „Ergebnis und 3-Schritte-Plan per E-Mail“. Der Eintrag muss
+  mit Quelle `E-Rechnung` bzw. `Microsite` ins CRM gehen und darf nur mit
+  passendem Datenschutzhinweis/AVV produktiv werden.
+- **P2:** Vor Preisen ein konkretes, eindeutig als Beispiel gekennzeichnetes
+  Ergebnis (Prüfresultat bzw. Microsite-Vorschau) und die nächsten zwei Schritte
+  zeigen; keine erfundenen Kundenstimmen. Für die spätere Optimierung nur
+  datensparsame, transparent erklärte Funnel-Kennzahlen (Teststart,
+  Ergebnisansicht, freiwillige E-Mail, Pro-Klick) einführen; die Website nutzt
+  derzeit keine Besucheranalyse.
 
 ### 01.09.2026 — Umsatzsignal gegengeprüft
 - Im Werkspree-Postfach lagen in den letzten sieben Tagen keine ungelesenen
@@ -459,6 +534,34 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
   separat erweitert werden.
 - `~/.hermes/scripts/werkspree_daily_summary.py` prüft nun reale neue
   Reply-Checker-Hinweise; Follow-ups werden nicht mehr als Antworten gezählt.
+
+### 01.09.2026 — Branchen-Landingpages und CRM-Archivkennzeichnung
+- Die 12 noch fehlenden Branchen-Seiten unter `website-bau/` angelegt, jeweils
+  mit individuellen SEO-Metadaten, Breadcrumbs, JSON-LD, Nutzenargumenten und
+  CTAs zum Generator bzw. Rechnungs-OCR.
+- Die 17 Branchen-Chips im Generator sind jetzt direkt auf die jeweiligen Seiten
+  verlinkt; `sitemap.xml` enthält die 12 neuen URLs.
+- `crm/crm_template.json` als historische Vorlage markiert und `crm/README.md`
+  mit Hinweis auf das produktive Airtable-CRM ergänzt.
+- n8n Respond-Node geprüft (01.09.2026): Im Workflow `tZOlY46EecN1BRsd`
+  („Werkspree Microsite Gen v4“) steht der Webhook auf „Using 'Respond to
+  Webhook' Node“. Respond ist JSON mit Body
+  `{{ JSON.stringify({html: $json.html, success: $json.success}) }}`, Status 200
+  und den vier benötigten CORS-/Content-Type-Headern. Workflow ist veröffentlicht
+  und aktiv; kein weiterer UI-Schritt offen.
+
+### 01.09.2026 — Pipeline-Ausbeute, CRM-Status, Starter-Demo und OCR
+- Die Lead-Pipeline erkennt neben Standardpfaden nun same-host Kontakt-,
+  Impressum- und Legal-Links aus der Startseite; E-Mail-Guessing bleibt
+  deaktiviert.
+- CRM-Sync, Funnel und Archivvorlage unterstützen die Statuswerte Eingehend,
+  Kontaktiert, Nachfassen, Qualifiziert, Demo, Angebot und Nicht kontaktieren.
+  Die Live-Auswahlliste in Airtable konnte wegen fehlender Netzwerkauflösung
+  aus dieser Sitzung nicht gelesen werden und sollte vor dem nächsten
+  Produktivlauf einmal abgeglichen werden.
+- Reproduzierbarer, netzwerkfreier Starter-Smoke-Test und Dokumentation unter
+  `tests/automation_starter_demo.py` und `docs/automation-starter-demo.md`.
+- OCR-Parser für verschachtelte JSON-String-Bodies mit Node-Test abgesichert.
 
 ### 31.08.2026 — SaaS-Produkte, Branchen-Pages, Blog, Stripe-Onboarding, DNS-Fix
 

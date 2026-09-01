@@ -3,6 +3,21 @@
   "region": "Brandenburg an der Havel",
   "all_candidates": [
     {
+      "name": "Auto Punkt GmbH",
+      "address": "Unter den Platanen 15, 14774 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ1dJJfYjHqEcRO72u8z66QyY",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 801376",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.auto-punkt.de/"
+    },
+    {
       "name": "Autohaus Roitzsch",
       "address": "Narzissenweg 35, 14772 Brandenburg an der Havel-Görden, Deutschland",
       "rating": 4.8,
@@ -39,18 +54,6 @@
       "phone": "03381 307620"
     },
     {
-      "name": "REHBRA GmbH Kfz-Meisterbetrieb seit 1992",
-      "address": "Meyerstraße 16, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJUS7xNIzAqEcROOgX3lD5B24",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "03381 663283"
-    },
-    {
       "name": "KP FAHRZEUGTECHNIK - KFZ Meisterwerkstatt",
       "address": "Rietzer Str. 17a, 14776 Brandenburg an der Havel-Schmerzke, Deutschland",
       "rating": 4.9,
@@ -61,14 +64,26 @@
         "point_of_interest"
       ],
       "phone": "0173 6369543",
-      "website_quality": "low",
-      "website_quality_score": 1,
+      "website_quality": "medium",
+      "website_quality_score": 5,
       "old_or_no_website": "http://www.kp-fahrzeugtechnik.de/",
       "email": "info@kp-fahrzeugtechnik.de",
       "email_verified": true,
       "email_verify_reason": "Impressum: Match: 'fahrzeugtechnik' in domain/local",
       "branch": "Kfz Werkstatt",
       "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "REHBRA GmbH Kfz-Meisterbetrieb seit 1992",
+      "address": "Meyerstraße 16, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJUS7xNIzAqEcROOgX3lD5B24",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 663283"
     },
     {
       "name": "Pro Car GmbH",
@@ -84,21 +99,6 @@
       "website_quality": "none",
       "website_quality_score": 0,
       "old_or_no_website": ""
-    },
-    {
-      "name": "Auto Punkt GmbH",
-      "address": "Unter den Platanen 15, 14774 Brandenburg an der Havel, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJ1dJJfYjHqEcRO72u8z66QyY",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "03381 801376",
-      "website_quality": "low",
-      "website_quality_score": 0,
-      "old_or_no_website": "http://www.auto-punkt.de/"
     },
     {
       "name": "Pro Rep",
@@ -122,15 +122,19 @@
         "establishment",
         "point_of_interest"
       ],
-      "phone": "03381 315777",
-      "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "https://www.automobilservice-brb.de/",
-      "email": "info@automobilservice-brb.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'automobilservice' in domain/local",
-      "branch": "Kfz Werkstatt",
-      "region": "Brandenburg an der Havel"
+      "phone": "03381 315777"
+    },
+    {
+      "name": "Kfz-Reparatur- und Klimaservice",
+      "address": "Ausbau 7, 14774 Brandenburg an der Havel-Plaue, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJidrCutXHqEcRnXMmOEeyIz4",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0176 43406380"
     },
     {
       "name": "MMW Kfz-Technik Mario Schimpf",
@@ -141,11 +145,7 @@
         "car_repair",
         "establishment",
         "point_of_interest"
-      ],
-      "phone": "03381 797543",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
+      ]
     },
     {
       "name": "Toyota KFZ Werkstatt Brandenburg",
@@ -161,17 +161,6 @@
       ]
     },
     {
-      "name": "AC Jechow GmbH Brandenburg / TESLA Approved Bodyshop",
-      "address": "Friedrichshafener Str. 6/8, 14772 Brandenburg an der Havel, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJV1guMTzBqEcR9hjOqUoztUI",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
       "name": "Kfz-Werkstatt",
       "address": "Am Heidekrug 1000, 14772 Brandenburg an der Havel, Deutschland",
       "rating": 4.8,
@@ -183,10 +172,10 @@
       ]
     },
     {
-      "name": "Kfz-Reparatur- und Klimaservice",
-      "address": "Ausbau 7, 14774 Brandenburg an der Havel-Plaue, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJidrCutXHqEcRnXMmOEeyIz4",
+      "name": "AC Jechow GmbH Brandenburg / TESLA Approved Bodyshop",
+      "address": "Friedrichshafener Str. 6/8, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJV1guMTzBqEcR9hjOqUoztUI",
       "types": [
         "car_repair",
         "establishment",
@@ -194,12 +183,25 @@
       ]
     },
     {
-      "name": "Kfz-Reparaturservice Jens Wiedenhöft",
-      "address": "Chausseestraße 69B, 14774 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ8xH1ZwDHqEcRnjeuGdXcCfs",
+      "name": "FirstStop",
+      "address": "Karl-Liebknecht-Straße 6/7, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJs5zdSPDAqEcR0NQkklpzeG4",
       "types": [
         "car_repair",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "AS-Ausbeulservice - Der Beulendoktor in Brandenburg",
+      "address": "Upstallstraße 10, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJVy4KNhrBqEcRuPFSyC7woAQ",
+      "types": [
+        "car_repair",
+        "car_wash",
         "establishment",
         "point_of_interest"
       ]
@@ -217,32 +219,12 @@
         "point_of_interest"
       ],
       "phone": "0173 6369543",
-      "website_quality": "low",
-      "website_quality_score": 1,
+      "website_quality": "medium",
+      "website_quality_score": 5,
       "old_or_no_website": "http://www.kp-fahrzeugtechnik.de/",
       "email": "info@kp-fahrzeugtechnik.de",
       "email_verified": true,
       "email_verify_reason": "Impressum: Match: 'fahrzeugtechnik' in domain/local",
-      "branch": "Kfz Werkstatt",
-      "region": "Brandenburg an der Havel"
-    },
-    {
-      "name": "Automobilservice Robert Heymann",
-      "address": "Friedrich-Engels-Straße 6, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJPRzgZurAqEcR4AjRapXsgYE",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "03381 315777",
-      "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "https://www.automobilservice-brb.de/",
-      "email": "info@automobilservice-brb.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'automobilservice' in domain/local",
       "branch": "Kfz Werkstatt",
       "region": "Brandenburg an der Havel"
     }

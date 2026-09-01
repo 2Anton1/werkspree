@@ -1,0 +1,260 @@
+{
+  "branch": "Friseur",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "LEVANTE-Friseur-Salon",
+      "address": "Friedrich-Ebert-Straße 95, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJt1V37X_1qEcRMVTIJTKKBho",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0176 64788852",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://levantefriseur.my.canva.site/"
+    },
+    {
+      "name": "Friseur Potsdam - Konturzimmer denis puck",
+      "address": "Dortustraße 53, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ-39hqqr1qEcRzf6UpaYBiWo",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0176 61358666",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.konturzimmer-denispuck.de/"
+    },
+    {
+      "name": "Friseuratelier Christine Wolff",
+      "address": "Gutenbergstraße 71/72, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJTTgeSAz1qEcRtcv5l1K7v2I",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0331 70400866"
+    },
+    {
+      "name": "Friseur ohne Termin | Meistercut",
+      "address": "Friedrich-Ebert-Straße 105-108, 14467 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJF0YVKn71qEcRgzF3TijaVTQ",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0176 57719033",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://www.facebook.com/Meistercut/?ref=NONE_xav_ig_profile_page_web"
+    },
+    {
+      "name": "FRISEUR SALON FIRAS",
+      "address": "Anna-Zielenziger-Straße 6, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJgdGL_Phh0A4RzHNCJBUKLhQ",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0176 76884444",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "https://www.instagram.com/firas_pdm.de"
+    },
+    {
+      "name": "A-Class Friseur – Damen & Herren Friseur Potsdam",
+      "address": "Gutenbergstraße 87, 14467 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ378N1ao5KCgRcQRmrFCLJ1w",
+      "types": [
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0176 62668637"
+    },
+    {
+      "name": "Enver Erol Friseur - Potsdam",
+      "address": "Charlottenstraße 29, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJZebSptr1qEcRLZtTLLKvDeI",
+      "types": [
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0331 5883091"
+    },
+    {
+      "name": "Sinan Rrahimi - Potsdam",
+      "address": "Heinrich-Mann-Allee 6, 14473 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJoz7jDI71qEcRuADAzS_mzMA",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0331 64721664",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Friseur Haarphilosophie Potsdam",
+      "address": "Gutenbergstraße 31, 14467 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJuxxhb9r1qEcRulJ_ZxIr0AQ",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0331 2709433"
+    },
+    {
+      "name": "Barbershop-Hair Chic - Potsdam",
+      "address": "Zeppelinstraße 20, 14471 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJJSGrJ6j1qEcRJaCzzv62vDM",
+      "types": [
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0331 64751917"
+    },
+    {
+      "name": "Bianka Simon - Friseure",
+      "address": "Neuendorfer Str. 74, 14480 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJA7Gi0u_1qEcR-f03JhWakRA",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "MYF BARBERSHOP - Potsdam",
+      "address": "Georg-Hermann-Allee 11, 14469 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ38lj-s33qEcRJYQgPLvyYP0",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Cut Father Friseur – Herren ohne Termin",
+      "address": "Friedrich-Ebert-Straße 86, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJTx8x9Bj1qEcR1-vYfAKrMXk",
+      "types": [
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Mahsa Hair & Beauty",
+      "address": "Annemarie-Wolff-Platz 2, 14469 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJhUMKf6j3qEcRQmMA7JpjDCI",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Haarwei-Land",
+      "address": "Heinrich-Mann-Allee 23, 14473 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJQYDzPuv1qEcRBa7piY1UNsg",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Friseursalon Berenike",
+      "address": "Benkertstraße 3, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ0XN1m9_1qEcRyxQThcxHFJc",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "New style - Potsdam",
+      "address": "Brandenburger Str. 39, 14467 Potsdam, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJLXvwB171qEcRurQzO2FMaTU",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Coiffeur Ritt / Ritt GmbH",
+      "address": "Schopenhauerstraße 10, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJg2tpHs71qEcRlgcv5KtgjwQ",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Dreamir Aesthetic Hair Concept",
+      "address": "Lindenstraße 22, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyVTm-s71qEcRelJocpujEhw",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Schnittpunkt GmbH",
+      "address": "Kurfürstenstraße 2, 14467 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ2fcpi9n1qEcRbOrsFKGr51g",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": []
+}

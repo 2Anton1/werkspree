@@ -11,10 +11,21 @@
         "establishment",
         "point_of_interest"
       ],
-      "phone": "0172 3758256",
+      "phone": "0160 95821629",
       "website_quality": "none",
       "website_quality_score": 0,
       "old_or_no_website": "http://www.fahrschule-klasse.de/"
+    },
+    {
+      "name": "Arnold´s Fahrschule - PKW & Motorrad & Anhänger Ausbildung und Aufbauseminare",
+      "address": "Dresdener Pl. 2, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJQxyZahGZB0cRhSImwgxTQno",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0173 9870636"
     },
     {
       "name": "Fahrschule Pintschovius",
@@ -29,17 +40,6 @@
       "website_quality": "medium",
       "website_quality_score": 4,
       "old_or_no_website": "http://www.fahrschule-pintschovius.de/"
-    },
-    {
-      "name": "Arnold´s Fahrschule - PKW & Motorrad & Anhänger Ausbildung und Aufbauseminare",
-      "address": "Dresdener Pl. 2, 15232 Frankfurt (Oder), Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJQxyZahGZB0cRhSImwgxTQno",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0173 9870636"
     },
     {
       "name": "Hans-Joachim Schücke Fahrschule",

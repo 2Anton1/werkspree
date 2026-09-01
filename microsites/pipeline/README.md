@@ -2,9 +2,9 @@
 
 ## Aktueller Status
 
-**Funktioniert:** Google-Maps-Scraping, Rating-Filter, Detailseiten-Website-Erkennung, Ausschluss von Buchungs-/Aggregator-Links, Ausgabe von `hot_leads_*.json`, Lovable-Zugang via Claude Code MCP verifiziert.
+**Funktioniert:** Google-Maps-Scraping, Rating-Filter, Detailseiten-Website-Erkennung, Ausschluss von Buchungs-/Aggregator-Links, Ausgabe von `hot_leads_*.json`, strenge E-Mail-/Opt-out-Prüfung und ein deterministischer, responsiver Static-Site-Generator.
 
-**Noch nicht produktionsbereit:** E-Mail-Auflösung aus Google-Maps/GelbeSeiten ist wegen fehlender/uneindeutiger GelbeSeiten-Suchergebnisse noch nicht stabil genug für automatischen Versand. Es gibt deshalb bewusst noch keinen automatischen Lovable-Bau und keinen Mailversand.
+Der produktive Orchestrator baut Seiten aus bestätigten Lead-Daten mit `build_microsite.py`. Der frühere Vollseiten-LLM-Pfad bleibt als manueller Experimentpfad vorhanden, darf aber keine ungeprüfte HTML-Datei veröffentlichen. E-Mail-Auflösung und Versand bleiben bis zur rechtlichen Freigabe separat geschützt.
 
 ## Ausführen
 
@@ -30,7 +30,7 @@ python3 hot_leads_pipeline.py "restaurant" "Berlin Mitte" 20 10
 
 ## Nächster technischer Schritt
 
-GelbeSeiten-Suche als Primärquelle für die E-Mail-Auflösung durch Suche der exakten Profilseite auf der Branchen-Ergebnisseite ersetzen. Danach 1 Lead in einen Dry-Run überführen: Profil + E-Mail verifizieren, Lovable-Microsite erstellen/deployen, E-Mail zunächst als Entwurf speichern; erst nach Nutzerfreigabe senden.
+Vor dem nächsten echten Lauf einen verifizierten Lead im Dry-Run prüfen: Profil + E-Mail bestätigen, Static-Site bauen, HTML-Qualitätsprüfung ausführen und die E-Mail zunächst als Entwurf speichern; erst nach rechtlicher Freigabe senden.
 
 Angebot: 189 EUR einmalig, inklusive 3 Monate Hosting/Wartung.
 Absender: Finn Werksby / Werkspree.

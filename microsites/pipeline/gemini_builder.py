@@ -17,6 +17,11 @@ import re
 import urllib.request
 from pathlib import Path
 
+try:
+    from site_quality import is_valid_html as is_complete_html
+except ImportError:  # Import als Paket im lokalen Testlauf
+    from microsites.pipeline.site_quality import is_valid_html as is_complete_html
+
 ENV_PATH = Path.home() / ".hermes" / ".env"
 OUT_DIR = Path(__file__).parent.parent / "sites"
 
@@ -69,7 +74,7 @@ BRANCH_PROFILES = {
     },
     "kosmetik": {
         "colors": "Farbpalette: Rosé/Pink (#D4A5A5) als Primärfarbe, tiefes Burgunder (#8B3A4A) als Akzent, warmes Cremeweiß (#FBF5F3) als Hintergrund. Stil: sanft, weiblich, luxuriös.",
-        "sections": "Sektionen: (1) Hero mit sanftem Titel + Tagline + CTA 'Behörde buchen', (2) Über uns, (3) **Behandlungsliste** als elegante Cards (Gesichtsbehandlung, Wimpern, Brows, Maniküre), (4) **Warum wir?** mit 3 weichen Feature-Karten (Hautanalyse, Premium-Produkte, Entspannung), (5) Preisliste als Tabelle, (6) Kontakt, (7) Öffnungszeiten, (8) Footer",
+        "sections": "Sektionen: (1) Hero mit sanftem Titel + Tagline + CTA 'Behandlung anfragen', (2) Über uns, (3) **Behandlungsliste** als elegante Cards (Gesichtsbehandlung, Wimpern, Brows, Maniküre), (4) **Warum wir?** mit 3 weichen Feature-Karten (Hautanalyse, Premium-Produkte, Entspannung), (5) Preisliste als Tabelle, (6) Kontakt, (7) Öffnungszeiten, (8) Footer",
         "mood": "Stil: sanft und luxuriös. Abgerundete Ecken (20px), sanfte Schatten, rosé Gradient-Header. Font-weight 300-400 für Body, 600 für Headers.",
         "extras": "Sanfte CSS-Wellen oder abgerundete decorative Shapes im Header-Bereich. Behandlungs-Cards mit sanften Hover-Effekten (transform: scale(1.02)).",
     },
@@ -259,8 +264,8 @@ def build_prompt(lead):
 **Über uns (echter Text, verwende ihn!):**
 {about or 'Nicht verfügbar — schreibe einen kurzen, professionellen Text basierend auf Branche und Stadt.'}
 
-**Leistungen (verwende diese als echte Daten!):**
-{prod_text or 'Nicht verfügbar — leite 4-6 typische Leistungen aus der Branche ab.'}
+**Leistungen (verwende diese als echte Daten; falls leer, zeige keine erfundenen Details):**
+{prod_text or 'Nicht verfügbar — verwende nur eine neutrale Rubrik "Leistungen auf Anfrage".'}
 
 **Öffnungszeiten:**
 {hours_text or 'Nicht verfügbar — schreibe typische Öffnungszeiten für diese Branche.'}
@@ -308,22 +313,7 @@ def extract_html(text):
 
 
 def is_valid_html(html):
-    if not html:
-        return False
-    if not re.search(r"<html[\s\S]*?</html>", html, re.IGNORECASE):
-        return False
-    if not re.search(r"<body[\s\S]*?</body>", html, re.IGNORECASE):
-        return False
-    if "{{" in html or "}}" in html:
-        return False
-    platzhalter = ["Max Mustermann", "Musterstraße", "Hier steht", "Lorem ipsum", "Beispiel"]
-    for p in platzhalter:
-        if p.lower() in html.lower():
-            return False
-    # Mindestgröße: 3000 Zeichen (echtes Design, kein Stub)
-    if len(html) < 3000:
-        return False
-    return True
+    return is_complete_html(html, minimum_chars=3000)
 
 
 def generate_microsite(lead, output_path):

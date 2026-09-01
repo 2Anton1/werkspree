@@ -5,6 +5,7 @@ ohne Firecrawl-Credits getestet werden kann.
 """
 
 import re
+from urllib.parse import urljoin, urlparse
 
 GENERIC_BLOCKLIST = ["example", "spam", "meinungsmeister", "webmaster@", "sentry.io", "wixpress.com"]
 
@@ -74,6 +75,47 @@ EMAIL_SEARCH_PATHS = [
     "/impressum.html",
     "/ueber-uns",
 ]
+
+CONTACT_LINK_HINTS = (
+    "impressum", "kontakt", "contact", "about", "ueber-uns", "über-uns",
+    "datenschutz", "legal",
+)
+
+
+def contact_links_from_homepage(homepage_html, homepage_url, max_links=8):
+    """Find likely contact/legal links on a company's homepage.
+
+    Only same-host HTTP(S) links whose URL or visible label contains a contact
+    hint are returned. This improves coverage for sites with localized or
+    non-standard paths without guessing an email address or crawling broadly.
+    """
+    if not homepage_html or not homepage_url:
+        return []
+    try:
+        origin = urlparse(homepage_url)
+        host = origin.netloc.lower().removeprefix("www.")
+    except Exception:
+        return []
+
+    candidates = []
+    seen = set()
+    for href, label in re.findall(
+        r'<a\b[^>]*href=["\']([^"\']+)["\'][^>]*>(.*?)</a>',
+        homepage_html, flags=re.IGNORECASE | re.DOTALL,
+    ):
+        absolute = urljoin(homepage_url, href).split("#", 1)[0].rstrip("/")
+        parsed = urlparse(absolute)
+        target_host = parsed.netloc.lower().removeprefix("www.")
+        haystack = f"{parsed.path} {parsed.query} {re.sub(r'<[^>]+>', ' ', label)}".lower()
+        if (parsed.scheme not in ("http", "https") or target_host != host or
+                not any(hint in haystack for hint in CONTACT_LINK_HINTS) or
+                absolute in seen):
+            continue
+        seen.add(absolute)
+        candidates.append(absolute)
+        if len(candidates) >= max_links:
+            break
+    return candidates
 
 _GSBIZ_LINK_PATTERN = re.compile(r'\]\((https?://(?:www\.)?gelbeseiten\.de/gsbiz/[^)\s]+)\)', re.IGNORECASE)
 _PROFILE_WEBSITE_PATTERN = re.compile(r'\[(?:Website|Webseite)\]\((https?://[^\s")]+)', re.IGNORECASE)

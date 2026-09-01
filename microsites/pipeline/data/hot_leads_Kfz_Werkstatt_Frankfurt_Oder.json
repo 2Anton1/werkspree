@@ -3,18 +3,6 @@
   "region": "Frankfurt Oder",
   "all_candidates": [
     {
-      "name": "Joker Autoservice - Frankfurt (Oder)",
-      "address": "Karl-Liebknecht-Straße 39, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJc8OxXGqYB0cRpTasK745ZwA",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0335 24539"
-    },
-    {
       "name": "Matthias Junghanns Kfz- Meisterbetrieb",
       "address": "Karl-Liebknecht-Straße 59, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
       "rating": 4.9,
@@ -25,6 +13,18 @@
         "point_of_interest"
       ],
       "phone": "0335 50097907"
+    },
+    {
+      "name": "Joker Autoservice - Frankfurt (Oder)",
+      "address": "Karl-Liebknecht-Straße 39, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJc8OxXGqYB0cRpTasK745ZwA",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 24539"
     },
     {
       "name": "Ziegel Straße Werkstatt",
@@ -49,18 +49,6 @@
         "point_of_interest"
       ],
       "phone": "0335 4000100"
-    },
-    {
-      "name": "KFZ Meisterbetrieb Auto Service Schewsky",
-      "address": "Fürstenwalder Poststraße 86, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
-      "rating": 4.4,
-      "place_id": "ChIJZclktLeZB0cRw2w9MBdsn1A",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0335 4008606"
     },
     {
       "name": "Thomas Linke",
@@ -90,16 +78,16 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Eastside Carservice Dany Miekeley",
-      "address": "Georg-Richter-Straße 6, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJY0tb1xWZB0cRJ0V3KJoAvF4",
+      "name": "KFZ Meisterbetrieb Auto Service Schewsky",
+      "address": "Fürstenwalder Poststraße 86, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJZclktLeZB0cRw2w9MBdsn1A",
       "types": [
         "car_repair",
         "establishment",
         "point_of_interest"
       ],
-      "phone": "0335 60673600"
+      "phone": "0335 4008606"
     },
     {
       "name": "Auto Service Fricke",
@@ -111,10 +99,7 @@
         "establishment",
         "point_of_interest"
       ],
-      "phone": "0335 5005077",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "http://www.autowerkstatt-ffo.de/"
+      "phone": "0335 5005077"
     },
     {
       "name": "Die Werkstatt",
@@ -132,10 +117,22 @@
       "old_or_no_website": "http://www.die-werkstatt-ffo.de/"
     },
     {
-      "name": "Auto Car-Check-Point",
-      "address": "Max-Hannemann-Straße 6, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJ7X-5yUCYB0cRONh9EqUkEFY",
+      "name": "Eastside Carservice Dany Miekeley",
+      "address": "Georg-Richter-Straße 6, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJY0tb1xWZB0cRJ0V3KJoAvF4",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 60673600"
+    },
+    {
+      "name": "Oliver Böhme KFZ-Werkstatt",
+      "address": "Eisenwerk 5, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJS4ZSNkuZB0cRYJyPD2wYxd8",
       "types": [
         "car_repair",
         "establishment",
@@ -143,10 +140,10 @@
       ]
     },
     {
-      "name": "Oliver Böhme KFZ-Werkstatt",
-      "address": "Eisenwerk 5, 15234 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJS4ZSNkuZB0cRYJyPD2wYxd8",
+      "name": "Auto Car-Check-Point",
+      "address": "Max-Hannemann-Straße 6, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ7X-5yUCYB0cRONh9EqUkEFY",
       "types": [
         "car_repair",
         "establishment",
@@ -166,32 +163,10 @@
       ]
     },
     {
-      "name": "Elvis-Autotechnik",
-      "address": "Berliner Ch 99, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJHeKvccOZB0cRQfbGAuJhDvc",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
       "name": "Autohaus Werkmeister, Inh. Sebastian Werkmeister",
       "address": "Goethestraße 14, 15234 Frankfurt (Oder), Deutschland",
       "rating": 4.8,
       "place_id": "ChIJE-Lt2UWYB0cRlLda8KKtQso",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Karney Reifen- Kraftfahrzeugservice & Autoteile GmbH",
-      "address": "Goepelstraße 90, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJ_cnCIV6YB0cRkDH4K1KKw9o",
       "types": [
         "car_repair",
         "establishment",
@@ -208,6 +183,30 @@
         "establishment",
         "point_of_interest",
         "store"
+      ]
+    },
+    {
+      "name": "Autohaus Minnich an der Oder GmbH",
+      "address": "Nuhnenstraße 7, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJmzEaajWYB0cRRjXyrZl_LvU",
+      "types": [
+        "car_dealer",
+        "car_repair",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Autokult Frank Dralle",
+      "address": "Gerhard-Neumann-Straße 4, 15236 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJoY03aXaXB0cRqu2Zc6rd1eY",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
       ]
     }
   ],

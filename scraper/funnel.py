@@ -21,8 +21,8 @@ ENV_PATH = os.path.expanduser("~/.hermes/.env")
 # Airtable "Status"-Werte, die als "kontaktiert"/"geantwortet"/"Kunde" zaehlen.
 # Aktuell nutzt die Base nur "Neu" -- sobald Outreach faktisch startet, hier
 # die echten Statuswerte ergaenzen, die dafuer verwendet werden.
-CONTACTED_STATUSES = {"Kontaktiert", "Outreach gesendet", "Nachfassen"}
-REPLIED_STATUSES = {"Geantwortet", "Interessiert", "Termin vereinbart"}
+CONTACTED_STATUSES = {"Kontaktiert", "Outreach gesendet", "Nachfassen", "Demo", "Angebot"}
+REPLIED_STATUSES = {"Geantwortet", "Interessiert", "Qualifiziert", "Termin vereinbart"}
 CUSTOMER_STATUSES = {"Kunde", "Abgeschlossen"}
 
 
@@ -102,7 +102,9 @@ def main():
     print_funnel(rows)
 
     statuses = set(r["fields"].get("Status", "") for r in records)
-    unmapped = statuses - CONTACTED_STATUSES - REPLIED_STATUSES - CUSTOMER_STATUSES - {"Neu", ""}
+    unmapped = statuses - CONTACTED_STATUSES - REPLIED_STATUSES - CUSTOMER_STATUSES - {
+        "Neu", "Eingehend", "Nicht kontaktieren", "Absage", ""
+    }
     if unmapped:
         print(f"\nHinweis: unbekannte Status-Werte in Airtable, nicht in der Funnel-Zuordnung erfasst: {sorted(unmapped)}")
 

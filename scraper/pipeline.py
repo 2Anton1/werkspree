@@ -25,6 +25,7 @@ from email_extraction import (
     find_gelbeseiten_profile_url,
     find_real_website_on_profile_page,
     is_real_company_website,
+    contact_links_from_homepage,
 )
 
 DATA_DIR = Path(__file__).parent / "data"
@@ -236,8 +237,15 @@ def get_email_from_imprint(website):
     if not website:
         return ""
     base = website.rstrip("/")
-    for path in EMAIL_SEARCH_PATHS:
-        url = base + path
+    urls = [base + path for path in EMAIL_SEARCH_PATHS]
+    homepage = scrapling_scrape(base, timeout=30)
+    if homepage:
+        urls.extend(contact_links_from_homepage(homepage.html_content or "", base))
+    seen = set()
+    for url in urls:
+        if url in seen:
+            continue
+        seen.add(url)
         text = scrapling_scrape_text(url, timeout=30)
         if text:
             email = best_email(text)

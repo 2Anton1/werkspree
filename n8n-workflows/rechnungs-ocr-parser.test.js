@@ -54,6 +54,16 @@ test('JSON-String mit \\n: ganzer Payload kommt als String an (nicht als Objekt)
   assert.equal(result.absender, 'Musterfirma GmbH');
 });
 
+test('Webhook-Body als JSON-String: verschachtelter Body wird ebenfalls geparst', () => {
+  const result = extractRechnungsdaten({
+    headers: { 'content-type': 'text/plain' },
+    body: JSON.stringify({ text: FULL_INVOICE_TEXT }),
+  });
+  assert.equal(result.rechnungsnummer, 'RE-2026-00123');
+  assert.equal(result.betrag, '1.234,56');
+  assert.equal(result.konfidenz, 100);
+});
+
 test('fehlende USt-Zeile: bleibt leer, kein Crash', () => {
   const textOhneUst = [
     'Musterfirma GmbH',

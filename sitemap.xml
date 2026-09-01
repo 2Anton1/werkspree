@@ -60,6 +60,78 @@
      <changefreq>monthly</changefreq>
      <priority>0.8</priority>
    </url>
++   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/tischlerei/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/kosmetik/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/physio/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/gartenbau/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/sanitaer/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/reinigung/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/steuerberater/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/immobilien/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/zahnarzt/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/fahrschule/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/baeckerei/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
+   <url>
+     <loc>https://werkspree.bki-de.de/website-bau/allgemein/</loc>
+     <lastmod>2026-09-01</lastmod>
+     <changefreq>monthly</changefreq>
+     <priority>0.8</priority>
+   </url>
    <url>
      <loc>https://werkspree.bki-de.de/blog/e-rechnungspflicht-2027/</loc>
      <lastmod>2026-08-31</lastmod>
@@ -78,6 +150,18 @@
      <changefreq>monthly</changefreq>
      <priority>0.7</priority>
    </url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-allgemein/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-baeckerei/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-fahrschule/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-gartenbau/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-immobilien/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-kosmetik/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-physio/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-reinigung/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-sanitaer/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-steuerberater/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-tischlerei/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://werkspree.bki-de.de/blog/website-zahnarzt/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
     <loc>https://werkspree.bki-de.de/impressum.html</loc>
     <changefreq>yearly</changefreq>

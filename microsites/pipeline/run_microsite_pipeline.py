@@ -24,6 +24,8 @@ DATA = PIPE / "data"
 REPORTS = PIPE / "reports"
 REPORTS.mkdir(exist_ok=True)
 
+from build_microsite import slugify
+
 ROTATION = [
     ("Kosmetik", "Potsdam"),
     ("Fahrschule", "Brandenburg an der Havel"),
@@ -209,7 +211,7 @@ def main():
             continue
 
         # 2) Lead-JSON fuer Generator aufbereiten
-        slug = "".join(c.lower() if c.isalnum() else "-" for c in name)[:40].strip("-")
+        slug = slugify(name)
         lead_json = {
             "company_name": name,
             "segment": branch,
@@ -230,11 +232,13 @@ def main():
         lead_path = DATA / f"lead_{slug}.json"
         lead_path.write_text(json.dumps(lead_json, ensure_ascii=False, indent=2))
 
-        # 3) Build (Gemini API - professionelle Microsite)
+        # 3) Deterministischer Build: vollständige, responsive Seite aus
+        # verifizierten Daten. Ein LLM darf keine unvollständige HTML-Seite in
+        # den öffentlichen Ordner schreiben.
         lead_path.write_text(json.dumps(lead_json, ensure_ascii=False, indent=2))
-        ok_b, _ = run([sys.executable, "gemini_builder.py", str(lead_path)])
+        ok_b, _ = run([sys.executable, "build_microsite.py", "--lead", str(lead_path)])
         if not ok_b:
-            print("  Build fehlgeschlagen (Gemini)")
+            print("  Build fehlgeschlagen (Qualitäts-/Opt-out-Prüfung)")
             continue
         # 3b) Deploy (zentral pushen, damit Sandbox-Git-Context genutzt wird)
         run(["git", "-C", str(PIPE.parent), "add", "-A"])
