@@ -341,9 +341,6 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 - [ ] Feintuning Rechnungs-OCR (RegEx-Anpassung für JSON-String-Eingabe)
 - [x] Hybrid-Lead-Plan eingeführt: günstiges Screening für alle, Deep-Research nur für maximal 10 Top-Leads, maximal 5 Outreach-Kandidaten pro Lauf (11.08.2026)
 - [x] Werkspree-Cron `e1e5b8283664` auf `gemini / models/gemini-3.5-flash` gepinnt, Versand deaktiviert und Zustellung auf `local` gestellt (11.08.2026)
-- [ ] CRM-Statuswerte um Qualifiziert, Eingehend, Demo, Angebot und Nicht kontaktieren ergänzen
-- [ ] Automation-Starter-Demo als reproduzierbaren Testlauf mit anonymisierten Rechnungen dokumentieren
-- [ ] Feintuning Rechnungs-OCR (RegEx-Anpassung für JSON-String-Eingabe)
 - [ ] `crm/crm_template.json` ist veraltet (echtes CRM ist in Airtable) — entfernen oder klar als Archiv kennzeichnen
 
 ---
