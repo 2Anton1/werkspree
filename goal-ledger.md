@@ -26,7 +26,8 @@ nicht der Zahlungs- oder Nachbearbeitungsweg.
 Das Partnerpaket in drei persönlichen Gesprächen mit Steuerkanzleien,
 Lohnbüros oder IT-Systemhäusern einsetzen. Eingehende Sprint-Anfragen oder
 echte Antworten innerhalb eines Werktags persönlich qualifizieren, im CRM mit
-Quelle und Status dokumentieren und bis zum Angebot nachfassen.
+Quelle und Status dokumentieren und mit der Angebotsvorlage bis zum Angebot
+nachfassen.
 
 # Offene Fragen / Blocker
 Für qualifizierte Gespräche, Angebote und Kunden fehlen noch auswählbare

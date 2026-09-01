@@ -379,6 +379,12 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
   Vermittlungskonditionen bewusst vor der ersten Empfehlung schriftlich
   vereinbaren.
 
+### 01.09.2026 — Angebotsvorlage für Sprint-Abschlüsse
+- `docs/automation-sprint-angebot-vorlage.md` bündelt den nach einem
+  qualifizierten Check bestätigten Umfang, Abnahmekriterien, Mitwirkung und
+  Preis des 890-€-Sprints. Zahlungsweg und Fälligkeit bleiben bewusst
+  kundenspezifisch festzulegen; die Vorlage ist kein Vertrag oder eine Rechnung.
+
 ### 01.09.2026 — Sprint-Angebot und Umsatz-Ziel geschärft
 - `goal-ledger.md` ergänzt: Ziel sind drei bezahlte Automation Sprints in 90
   Tagen (2.670 € einmalig) und mindestens ein Betreuungsauftrag (290 € MRR).
