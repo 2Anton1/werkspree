@@ -245,7 +245,7 @@
 
 | Job ID | Name | Schedule | Zweck |
 |---|---|---|---|
-| df4d149e4f8f | Werkspree Lead Pipeline (Script Mode) | Täglich 10:00 | run_pipeline.py: pipeline.py → warmth_scorer.py → warm_outreach.py (AUTO-SEND) → Airtable-Sync. Exit≠0 bei Fehler. Report: reports/pipeline_YYYYMMDD.md |
+| df4d149e4f8f | Werkspree Lead Pipeline (Script Mode) | Täglich 10:00 | `~/.hermes/scripts/run_pipeline.py` in der Produktionskopie `/Users/anton/work/werkspree`: Pipeline → Scoring → Outreach → Airtable-Sync. Der Sync übernimmt `sent_emails.json`; aktuelle Airtable-Statuswerte sind nur `Neu` und `Kontaktiert`. Exit≠0 bei Fehler. |
 | e85d58d7915e | Werkspree Health Check | Alle 6h | ~/.hermes/scripts/health_check.py (no_agent): silent bei OK, nur Issues melden |
 | 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Firecrawl) → eigener Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `werkspree@bki-de.de`) |
 | b68eea7332bc | Werkspree Reply Checker | 2x täglich 09:00 + 18:00 | ~/.hermes/scripts/check_replies.py (no_agent): prüft Strato IMAP + Gmail API auf Antworten versendeter Mails. Bei neuen Antworten → WhatsApp-Benachrichtigung. Keine Antwort → still (leere stdout). |
@@ -378,6 +378,20 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
 - Commit `9cd4a1d` wurde auf `main` gepusht; der öffentliche Abruf von
   `https://werkspree.bki-de.de/` bestätigte Hero, Prozess-Check-CTA und
   Erfolgs-Tracking der neuen Sprint-Strecke.
+
+### 01.09.2026 — Funnel-Audit und produktiver CRM-Sync
+- Reale Airtable-Prüfung: 347 Leads, 29 nachweislich kontaktiert, 0 Antworten
+  und 0 Kunden. Zuvor standen alle Kontakte wegen einer fehlenden Rückführung
+  aus `sent_emails.json` im Eingangszustand.
+- Der produktive Cron läuft aus `/Users/anton/work/werkspree`, nicht aus dem
+  Git-Checkout `/Users/anton/werkspree`. Seine `run_pipeline.py` übernimmt nun
+  Versandstatus vor dem Airtable-Abgleich und schützt bestehende Kontaktstatus.
+- Das produktive Airtable-Statusfeld enthält aktuell nur `Neu` und
+  `Kontaktiert`; die Automation nutzt deshalb keine nicht vorhandenen Werte.
+  Für `Qualifiziert`, `Angebot` und `Kunde` muss die Airtable-Auswahlliste
+  separat erweitert werden.
+- `~/.hermes/scripts/werkspree_daily_summary.py` prüft nun reale neue
+  Reply-Checker-Hinweise; Follow-ups werden nicht mehr als Antworten gezählt.
 
 ### 31.08.2026 — SaaS-Produkte, Branchen-Pages, Blog, Stripe-Onboarding, DNS-Fix
 

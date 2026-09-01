@@ -18,17 +18,26 @@ SCRAPER_DIR = WORKDIR / "scraper"
 DATA_DIR = SCRAPER_DIR / "data"
 REPORT_DIR = WORKDIR / "reports"
 REPORT_DIR.mkdir(exist_ok=True)
+SENT_FILE = DATA_DIR / "sent_emails.json"
 
 # Airtable CRM
 AIRTABLE_BASE = "appyMLhXOMHpD5vfT"
 AIRTABLE_TABLE = "tbluCUpuCPxW1GcWD"
+# Die produktive Airtable-Auswahlliste enthält aktuell nur diese beiden Werte.
+# Zusätzliche, in der Archivvorlage dokumentierte Statuswerte liefern dort 422
+# und dürfen deshalb erst nach einer Schema-Erweiterung verwendet werden.
+AIRTABLE_STATUS_VALUES = {"Neu", "Kontaktiert"}
 AIRTABLE_STATUS_MAP = {
     "none": "Neu",
     "awaiting_reply": "Kontaktiert",
     "followup_sent": "Kontaktiert",
-    "bounced": "Absage",
-    "replied": "Interessiert",
+    "bounced": "Neu",
+    "replied": "Kontaktiert",
+    "demo_sent": "Kontaktiert",
+    "proposal_sent": "Kontaktiert",
+    "not_contacted": "Neu",
 }
+PROTECTED_CRM_STATUSES = {"Kontaktiert"}
 
 
 def load_env():
@@ -71,6 +80,43 @@ def airtable_api(method, url, payload=None, token=""):
     return {"error": "unreachable"}
 
 
+def merge_outreach_statuses(leads, sent_file=SENT_FILE):
+    """Apply locally recorded outreach state to matching scored leads.
+
+    The outreach engine writes only ``sent_emails.json``. Without this merge,
+    the subsequent Airtable upsert sees the stale ``response_status`` from the
+    scorer and resets a contacted lead to its intake state.
+    """
+    if not sent_file.exists():
+        return 0
+    try:
+        sent = json.loads(sent_file.read_text())
+    except (OSError, json.JSONDecodeError):
+        return 0
+
+    merged = 0
+    for lead in leads:
+        record = sent.get(lead.get("company_name", ""))
+        if not record:
+            continue
+        status = record.get("response_status", "")
+        if status:
+            lead["response_status"] = status
+            merged += 1
+    return merged
+
+
+def resolved_crm_status(lead, existing_fields):
+    """Use outreach state unless a human has already advanced the CRM lead."""
+    existing_status = existing_fields.get("Status", "")
+    if existing_status in PROTECTED_CRM_STATUSES:
+        return existing_status
+    explicit_status = lead.get("crm_status")
+    if explicit_status in AIRTABLE_STATUS_VALUES:
+        return explicit_status
+    return AIRTABLE_STATUS_MAP.get(lead.get("response_status", "none"), "Eingehend")
+
+
 def sync_airtable(leads, token):
     """Upsert leads into Airtable CRM (match by Company field)."""
     if not token:
@@ -90,7 +136,7 @@ def sync_airtable(leads, token):
         for rec in resp.get("records", []):
             name = (rec.get("fields") or {}).get("Company", "")
             if name:
-                existing[name] = rec["id"]
+                existing[name] = rec
         offset = resp.get("offset")
         if not offset:
             break
@@ -117,13 +163,13 @@ def sync_airtable(leads, token):
             # KEIN "Email"-Feld: Die Tabelle (Table 1 / tbluCUpuCPxW1GcWD) hat
             # keine Email-Spalte — E-Mail wird in Notes abgelegt (422-Schutz).
             "Phone": lead.get("phone", ""),
-            "Status": AIRTABLE_STATUS_MAP.get(lead.get("response_status", "none"), "Neu"),
+            "Status": resolved_crm_status(lead, (existing.get(name) or {}).get("fields", {})),
             "Potential_Score": lead.get("warmth_score", 0),
             "Notes": notes,
         }
         fields = {k: v for k, v in fields.items() if v not in (None, "")}
         if name in existing:
-            airtable_api("PATCH", f"{base_url}/{existing[name]}", {"fields": fields}, token=token)
+            airtable_api("PATCH", f"{base_url}/{existing[name]['id']}", {"fields": fields}, token=token)
             updated += 1
         else:
             airtable_api("POST", base_url, {"fields": fields}, token=token)
@@ -165,6 +211,7 @@ def main():
     if scored_file.exists():
         try:
             leads = json.loads(scored_file.read_text())
+            outreach_merged = merge_outreach_statuses(leads)
             summary = {
                 "total": len(leads),
                 "deep": sum(1 for l in leads if l.get("research_depth") == "deep"),
@@ -172,6 +219,7 @@ def main():
                 "with_email": sum(1 for l in leads if l.get("verified_email") or l.get("email")),
             }
             msg = sync_airtable(leads, os.environ.get("AIRTABLE_API_KEY", ""))
+            log(f"Outreach-Status gemerged: {outreach_merged}")
             log(msg)
         except Exception as e:
             log(f"Airtable sync failed: {e}")
