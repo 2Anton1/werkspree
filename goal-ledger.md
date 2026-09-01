@@ -10,8 +10,8 @@ Werkspree erzielt innerhalb von 90 Tagen die ersten drei bezahlten Automation Sp
 
 # Stand
 Am 01.09.2026 ist der primäre Pfad auf den Automation Sprint (890 € einmalig)
-geschärft: Hero, Sprint-Ablauf und Kontaktformular in `index.html` führen zu
-einem konkreten Prozess-Check. Das Tracking sendet Angebot und Prozesswahl.
+geschärft und als Commit `9cd4a1d` auf GitHub Pages veröffentlicht. Der
+öffentliche Abruf bestätigt Hero, Prozess-Check-CTA und Erfolgs-Tracking.
 Noch fehlt der Nachweis von Gesprächen, Angebot, Zahlung und MRR.
 
 # Nächster Schritt

@@ -375,6 +375,9 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
   rechnet konsistent mit dem Sprintpreis statt mit dem Starter-Abo.
 - `docs/automation-sprint-sales-playbook.md` ergänzt den Ablauf für freiwillige
   Anfragen: Reaktionsvorlage, Qualifizierung, Angebotsgrenze und CRM-Status.
+- Commit `9cd4a1d` wurde auf `main` gepusht; der öffentliche Abruf von
+  `https://werkspree.bki-de.de/` bestätigte Hero, Prozess-Check-CTA und
+  Erfolgs-Tracking der neuen Sprint-Strecke.
 
 ### 31.08.2026 — SaaS-Produkte, Branchen-Pages, Blog, Stripe-Onboarding, DNS-Fix
 
