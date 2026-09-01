@@ -28,6 +28,9 @@ eingereicht; Indexierung und daraus entstehender Traffic sind noch offen.
 Der kostenlose E-Rechnungs-Prüfer besteht den echten XML- und PDF-Testpfad mit
 den vorhandenen Beispielrechnungen; der Einstieg ist damit vor späterem Traffic
 technisch verifiziert.
+Freiwillige, von Formspree angenommene Prozess-Check-Anfragen werden seit dem
+01.09.2026 automatisch als neue `Neu`-Einträge im Airtable-CRM angelegt. Ein
+End-to-End-Smoke-Test mit erfundenen Daten war erfolgreich und wurde gelöscht.
 
 # Nächster Schritt
 Das Partnerpaket in drei persönlichen Gesprächen mit Steuerkanzleien,

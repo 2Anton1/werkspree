@@ -7,9 +7,15 @@ Umsatzsteuerausweis.
 
 ## 1. Eingang dokumentieren
 
-In Airtable sofort anlegen oder ergänzen:
+Eine erfolgreich von Formspree angenommene Website-Anfrage wird automatisch als
+neuer Eintrag `Inbound · [Betrieb]` im produktiven Airtable-CRM angelegt. Der
+Eintrag beginnt mit Status `Neu`; unvollständige Eingaben oder Honeypot-Treffer
+werden nicht angelegt.
 
-- Status: `Eingehend`
+Bei einer Antwort bzw. beim ersten persönlichen Kontakt sofort ergänzen:
+
+- Status: `Kontaktiert` (bis die weiterführenden Auswahleinträge im Airtable-
+  Schema ergänzt sind)
 - Quelle: Website / Empfehlung / Partner / sonstige Quelle in `Notes`
 - Gewählter Prozess aus dem Formular
 - Datum und nächster Kontaktzeitpunkt

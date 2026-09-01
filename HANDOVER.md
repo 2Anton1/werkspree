@@ -225,6 +225,13 @@
 - **Pfad:** `PROZESSE.md`
 - **Inhalt:** Automation-Sicherheitsstufen, Automation-Sprint, Rechnungs-OCR-Referenzprozess, CRM-/Lead-Regeln und Monatsbetreuung.
 
+### 4.11 CRM-Erfassung von Sprint-Anfragen
+- **Pfad:** `n8n-workflows/werkspree-sprint-lead-capture.json`
+- **Produktiv:** n8n-Workflow `IkvCTz0fSWiqjcGg` nimmt ausschließlich nach
+  erfolgreicher Formspree-Übermittlung freiwillige Prozess-Check-Anfragen an,
+  validiert sie und legt sie als `Inbound · [Betrieb]` mit Status `Neu` in
+  Airtable an. Die versionierte JSON-Datei enthält keine Zugangsdaten.
+
 ### 4.6 n8n Workflow-Datei
 - **Pfad:** ~/werkspree/n8n-workflows/rechnungs-ocr-demo.json
 - **Inhalt:** n8n-Workflow-JSON für Rechnungs-OCR
@@ -398,6 +405,30 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
 - Die vorhandenen Browserpfad-Tests für XRechnung-XML, ZUGFeRD-CII, fehlerhafte
   XML und ZUGFeRD-PDF mit eingebettetem XML wurden lokal vollständig bestanden.
   Sie verwenden ausschließlich erfundene Beispieldaten und keinen Upload.
+
+### 01.09.2026 — CRM-Erfassung freiwilliger Sprint-Anfragen
+- `index.html`: Nach erfolgreicher Formspree-Annahme sendet das Formular die
+  freiwillig eingegebenen Anfrageangaben an den separaten n8n-Webhook
+  `werkspree-sprint-lead`; die bisherige sitzungsübergreifende Besucheranalyse
+  wurde entfernt.
+- `datenschutz.html` dokumentiert Formspree, den n8n-Server in Deutschland und
+  Airtable als CRM sowie die Datenkategorien, Zweck und Drittlandhinweis. Der
+  Formulartest bestätigt die Kenntnisnahme dieser Hinweise statt eine pauschale
+  Einwilligung einzuholen.
+- n8n-Workflow `IkvCTz0fSWiqjcGg` („Werkspree Sprint Lead Capture“) ist aktiv.
+  Er prüft Formularkennung, E-Mail, Prozessauswahl, Datenschutzhinweis und
+  Honeypot, bevor er einen Datensatz `Inbound · [Betrieb]` mit Status `Neu` in
+  Airtable anlegt. Die sanitisierte Definition liegt unter
+  `n8n-workflows/werkspree-sprint-lead-capture.json`; sie enthält keine Secrets.
+- End-to-End geprüft: Fiktive valide Anfrage erzeugte einen CRM-Eintrag mit
+  Status `Neu` und Score 10; der exakt identifizierte Testdatensatz wurde danach
+  gelöscht. Ungültige Testnutzlast erreichte den CRM-Schritt nicht.
+- **Offen:** Vor dem ersten echten Lead den Airtable Data Processing Addendum
+  (DPA/AVV) unterzeichnen; Airtable stellt ihn separat bereit.
+- Der ältere Tracking-Workflow `Ax3Kl8MCYm7Isykd` ließ sich mit dem vorhandenen
+  API-Schlüssel nicht deaktivieren (HTTP 403). Er wird von der aktualisierten
+  Website nicht mehr aufgerufen, sollte aber mit einem berechtigten n8n-Konto
+  deaktiviert werden.
 
 ### 01.09.2026 — Sprint-Angebot und Umsatz-Ziel geschärft
 - `goal-ledger.md` ergänzt: Ziel sind drei bezahlte Automation Sprints in 90

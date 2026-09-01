@@ -1,0 +1,80 @@
+{
+  "name": "Werkspree Sprint Lead Capture",
+  "active": true,
+  "nodes": [
+    {
+      "name": "Sprint Lead Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "werkspree-sprint-lead",
+        "respondMode": "json",
+        "responseMode": "onReceived",
+        "options": {}
+      }
+    },
+    {
+      "name": "Validate and Format Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [300, 0],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const raw = $json.body || {};\nlet b = raw;\ntry { if (typeof raw === 'string') b = JSON.parse(raw); } catch (_) { return []; }\nconst clean = (value, limit = 500) => String(value || '').trim().replace(/[\\u0000-\\u001f\\u007f]/g, ' ').slice(0, limit);\nconst email = clean(b.email, 254).toLowerCase();\nconst allowedProcesses = new Set(['Rechnungseingang und Belege', 'Postfach und Kundenanfragen', 'Angebots- oder Lead-Nachfassung', 'Anderer Büroprozess']);\nconst privacyAcknowledged = ['on', 'true', '1', true].includes(b.datenschutz_kenntnis);\nif (b.event !== 'sprint_lead' || b.form !== 'kontaktformular' || !email || !/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email) || !allowedProcesses.has(b.prozess) || !privacyAcknowledged || clean(b.honeypot)) return [];\nconst name = clean(b.name, 160);\nconst company = clean(b.firma, 160) || name;\nif (!name || !company || !clean(b.nachricht, 4000)) return [];\nconst notes = [\n  'Quelle: ' + (clean(b.quelle, 120) || 'Website / Prozess-Check'),\n  'Angebot: ' + (clean(b.angebot, 120) || 'Automation Sprint'),\n  'Name: ' + name,\n  'E-Mail: ' + email,\n  'Prozess: ' + clean(b.prozess, 160),\n  'Nachricht: ' + clean(b.nachricht, 4000),\n  'Eingang: ' + clean(b.submitted_at, 80),\n  'Seite: ' + clean(b.page, 500)\n];\nconst phone = clean(b.telefon, 80);\nif (phone) notes.splice(4, 0, 'Telefon: ' + phone);\nreturn { fields: { Company: ('Inbound · ' + company).slice(0, 255), Branch: 'Website-Anfrage', Region: 'Berlin & Brandenburg', Website: clean(b.page, 500), Phone: phone, Status: 'Neu', Potential_Score: 10, Notes: notes.join('\\n') } };"
+      }
+    },
+    {
+      "name": "Create CRM Lead",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [620, 0],
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.airtable.com/v0/appyMLhXOMHpD5vfT/tbluCUpuCPxW1GcWD",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "__COPY_FROM_EXISTING_TRACKING_WORKFLOW__"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Sprint Lead Webhook": {
+      "main": [
+        [
+          {
+            "node": "Validate and Format Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate and Format Lead": {
+      "main": [
+        [
+          {
+            "node": "Create CRM Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "meta": {
+    "templateNote": "The production deployment copies the existing Airtable Authorization header in n8n. Never commit that value."
+  }
+}

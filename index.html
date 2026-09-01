@@ -1544,11 +1544,12 @@
             </div>
 
             <label class="consent">
-                <input type="checkbox" name="einwilligung" required>
-                <span>Ich bin damit einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert und verarbeitet werden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</span>
+                <input type="checkbox" name="datenschutz_kenntnis" required>
+                <span>Ich habe die Hinweise zur Verarbeitung meiner Anfrage in der <a href="datenschutz.html">Datenschutzerklärung</a> gelesen.</span>
             </label>
 
             <input type="hidden" name="angebot" value="Automation Sprint">
+            <input type="hidden" name="quelle" value="Website / Prozess-Check">
             <input type="hidden" name="_subject" value="Neue Anfrage: Automation Sprint">
             <button type="submit" class="btn">Kostenlosen 15-Minuten-Check anfragen</button>
             <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
@@ -1659,11 +1660,42 @@
         (function () {
             var form = document.getElementById('kontaktformular');
             var status = document.getElementById('form-status');
+            var crmApi = 'https://n8n.anton-drooff.de/webhook/werkspree-sprint-lead';
             if (!form || !status) return;
 
             var setStatus = function (text, kind) {
                 status.textContent = text;
                 status.className = 'form-status' + (kind ? ' ' + kind : '');
+            };
+
+            var sendLeadToCrm = function (formData) {
+                var value = function (name) { return String(formData.get(name) || '').trim(); };
+                var payload = {
+                    event: 'sprint_lead',
+                    form: form.id,
+                    name: value('name'),
+                    firma: value('firma'),
+                    email: value('email'),
+                    telefon: value('telefon'),
+                    prozess: value('prozess'),
+                    nachricht: value('nachricht'),
+                    angebot: value('angebot'),
+                    quelle: value('quelle'),
+                    datenschutz_kenntnis: value('datenschutz_kenntnis'),
+                    honeypot: value('_gotcha'),
+                    submitted_at: new Date().toISOString(),
+                    page: window.location.href
+                };
+                try {
+                    var body = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+                    if (navigator.sendBeacon && navigator.sendBeacon(crmApi, body)) return;
+                    fetch(crmApi, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload),
+                        keepalive: true
+                    }).catch(function () {});
+                } catch (err) {}
             };
 
             form.addEventListener('submit', function (e) {
@@ -1691,6 +1723,7 @@
                     headers: { Accept: 'application/json' }
                 }).then(function (res) {
                     if (res.ok) {
+                        sendLeadToCrm(new FormData(form));
                         var offer = form.querySelector('[name="angebot"]');
                         var process = form.querySelector('[name="prozess"]');
                         document.dispatchEvent(new CustomEvent('werkspree_form_success', {
@@ -1713,19 +1746,6 @@
                 });
             });
         })();
-    </script>
-<script>
-/* Werkspree conversion tracking — fire-and-forget events to n8n webhook */
-(function(){
-  var API="https://n8n.anton-drooff.de/webhook/werkspree-tracking";
-  function sid(){try{var k="ws_sid";var v=localStorage.getItem(k);if(!v){v=Math.random().toString(36).slice(2);localStorage.setItem(k,v);}return v;}catch(e){return "anon";}}
-  function track(ev,meta){try{var p={event:ev,page:location.pathname,sid:sid(),ts:new Date().toISOString(),meta:meta||{}};if(navigator.sendBeacon){navigator.sendBeacon(API,new Blob([JSON.stringify(p)],{type:"application/json"}));}else{fetch(API,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(p),keepalive:true}).catch(function(){});}}catch(e){}}
-  track("page_view");
-  document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a"):null;if(!a)return;var h=a.getAttribute("href")||"";if(h.indexOf("buy.stripe.com")>-1)track("stripe_click",{link:h});});
-  document.addEventListener("submit",function(e){var f=e.target;if(!f||!f.checkValidity||!f.checkValidity())return;var offer=f.querySelector('[name="angebot"]');var process=f.querySelector('[name="prozess"]');track("form_submit_started",{form:(f.id||f.className||"unknown"),offer:offer?offer.value:"",process:process?process.value:""});},{capture:true});
-  document.addEventListener("werkspree_form_success",function(e){track("form_submit_success",e.detail||{});});
-  document.addEventListener("change",function(e){var el=e.target;if(el&&el.type==="file")track("checker_used",{file:el.files&&el.files[0]?el.files[0].name:""});});
-})();
 </script>
 </body>
 </html>
