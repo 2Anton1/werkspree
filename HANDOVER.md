@@ -304,12 +304,41 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 - [x] Outbound-E-Mail-Versand in `outreach.py` und `warm_outreach.py` standardmäßig deaktiviert; Aktivierung nur mit `--send` (11.08.2026)
 
 ### Ausstehend ⏳
-- [x] SSL-Zertifikat für werkspree.bki-de.de — **erledigt.** Am 09.08.2026 live über HTTPS geprüft, Zertifikat ist da. Cron `8a0ea7b0e123` kann abgeschaltet werden.
-- [ ] HTTPS enforcement aktivieren (sobald Zertifikat da — kann laut GitHub-API erst gesetzt werden, wenn das Zertifikat existiert)
-- [ ] **Impressum & Datenschutzerklärung fehlen komplett** — rechtlich verpflichtend, siehe Abschnitt 11.1 (kritisch, blockiert nichts technisch, aber Abmahnrisiko)
-- [ ] E-Mail-Yield der Lead-Pipeline verbessern (aktuell nur 2 von 50 Leads mit E-Mail = 4%) — siehe Abschnitt 11.2
-- [ ] WhatsApp-Alternative (keine 2. Handynummer; Option: Twilio-Nummer ~1€/Monat)
-- [ ] Outreach rechtlich prüfen und nur bei zulässiger Grundlage/Einwilligung mit `--send` aktivieren
+#### KI-Generierte Inhalte (ChatGPT-Workflow)
+Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und alle Details sind in HANDOVER.md dokumentiert.
+
+- [ ] **n8n Respond-Node** für `werkspree-microsite-generator` manuell im n8n-UI konfigurieren
+  - Webhook-Node: "Respond" → "Using Respond to Webhook Node"
+  - Respond-Node: "Respond With" = JSON, Body = `{{ JSON.stringify({html: $json.html, success: $json.success}) }}`, Status = 200, CORS-Header
+  - Save + Active
+
+- [ ] **12 weitere Branchen-Landingpages** generieren (Template: `website-bau/index.html`)
+  1. Tischlerei
+  2. Kosmetik
+  3. Physiotherapie
+  4. Gartenbau
+  5. Sanitär
+  6. Reinigung
+  7. Steuerberater
+  8. Immobilien
+  9. Zahnarzt
+  10. Fahrschule
+  11. Bäckerei
+  12. Allgemein (Dienstleistungen allgemein)
+
+- [ ] **Blog-Artikel** für neue Branchen schreiben (Template: `blog/<slug>/`)
+  - SEO-Keywords, Meta-Tags, Conversion-CTA
+  - Cross-Selling-Links zu Produkten
+
+#### Technische Aufgaben
+- [ ] HTTPS enforcement aktivieren (GitHub Pages Custom Domain)
+- [ ] Impressum & Datenschutzerklärung erstellen (rechtlich: siehe Abschnitt 11.1)
+- [ ] E-Mail-Yield der Lead-Pipeline verbessern (aktuell 4% = 2/50 Leads mit E-Mail)
+- [ ] WhatsApp-Alternative einrichten (Twilio-Nummer ~1€/Monat)
+- [ ] Outreach rechtlich prüfen und mit `--send` aktivieren
+- [ ] CRM-Statuswerte: Qualifiziert, Eingehend, Demo, Angebot, Nicht kontaktieren
+- [ ] Automation-Starter-Demo als reproduzierbaren Testlauf dokumentieren
+- [ ] Feintuning Rechnungs-OCR (RegEx-Anpassung für JSON-String-Eingabe)
 - [x] Hybrid-Lead-Plan eingeführt: günstiges Screening für alle, Deep-Research nur für maximal 10 Top-Leads, maximal 5 Outreach-Kandidaten pro Lauf (11.08.2026)
 - [x] Werkspree-Cron `e1e5b8283664` auf `gemini / models/gemini-3.5-flash` gepinnt, Versand deaktiviert und Zustellung auf `local` gestellt (11.08.2026)
 - [ ] CRM-Statuswerte um Qualifiziert, Eingehend, Demo, Angebot und Nicht kontaktieren ergänzen
