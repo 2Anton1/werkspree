@@ -23,6 +23,8 @@ kein Formularsignal. Der vorrangige Engpass ist damit qualifizierter Traffic,
 nicht der Zahlungs- oder Nachbearbeitungsweg.
 Die öffentliche Suche zeigte keine indexierten Werkspree-Seiten; die
 IndexNow-Hostverifikation ist als Beschleuniger für die Discovery vorbereitet.
+Fünf Kernseiten wurden am 01.09.2026 mit HTTP 202 beim offiziellen Endpoint
+eingereicht; Indexierung und daraus entstehender Traffic sind noch offen.
 
 # Nächster Schritt
 Das Partnerpaket in drei persönlichen Gesprächen mit Steuerkanzleien,

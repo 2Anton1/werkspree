@@ -391,6 +391,10 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
   `66cfddf7-e60c-4203-8c92-130427ee0c11.txt` verifiziert den Host für die
   kostenfreie IndexNow-Einreichung der wichtigsten Einstiegsseiten.
 
+- Startseite, E-Rechnungs-Ratgeber, E-Rechnungs-Prüfer, Rechnungs-OCR und
+  Website-Bau wurden am 01.09.2026 eingereicht; der offizielle Endpunkt
+  antwortete mit HTTP 202 (angenommen, Verifikation/Crawling ausstehend).
+
 ### 01.09.2026 — Sprint-Angebot und Umsatz-Ziel geschärft
 - `goal-ledger.md` ergänzt: Ziel sind drei bezahlte Automation Sprints in 90
   Tagen (2.670 € einmalig) und mindestens ein Betreuungsauftrag (290 € MRR).
