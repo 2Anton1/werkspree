@@ -363,6 +363,22 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 01.09.2026 — Umsatzsignal gegengeprüft
+- Im Werkspree-Postfach lagen in den letzten sieben Tagen keine ungelesenen
+  Antworten; die Stripe-Live-Abfrage ergab keine erfolgreichen Zahlungen.
+  Der Funnel hat daher noch keinen belegten Inbound- oder Umsatzimpuls.
+- Das vorhandene Airtable-Tracking enthält im selben Zeitraum einen
+  Seitenaufruf und keine Formularaktion. Der unmittelbare Engpass ist daher
+  qualifizierter Traffic. Das Tracking speichert derzeit nur Ereignisse, keine
+  konkreten Sprint-Anfragen im CRM.
+
+### 01.09.2026 — Partnerpaket für Empfehlungs-Traffic
+- `docs/partner-kooperationspaket.md` stellt ein Gesprächs- und
+  Nachfasspaket für Steuerkanzleien, Lohnbüros und IT-Systemhäuser bereit.
+  Es setzt auf persönliche, einwilligungsbasierte Einführungen und lässt
+  Vermittlungskonditionen bewusst vor der ersten Empfehlung schriftlich
+  vereinbaren.
+
 ### 01.09.2026 — Sprint-Angebot und Umsatz-Ziel geschärft
 - `goal-ledger.md` ergänzt: Ziel sind drei bezahlte Automation Sprints in 90
   Tagen (2.670 € einmalig) und mindestens ein Betreuungsauftrag (290 € MRR).

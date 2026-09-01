@@ -15,11 +15,18 @@ geschärft und als Commit `9cd4a1d` auf GitHub Pages veröffentlicht. Der
 Funnel-Audit am 01.09.: 347 CRM-Leads, 29 nachweislich kontaktiert, 0 Antworten
 und 0 Kunden. Der produktive Cron-Sync übernimmt Versandstatus jetzt korrekt;
 der Tagesreport zählt Follow-ups nicht mehr als Antworten.
+Gegencheck am selben Tag: 0 ungelesene Werkspree-Antworten der letzten sieben
+Tage und 0 erfolgreiche Stripe-Zahlungen. Es gibt damit noch keinen belegten
+Inbound- oder Umsatzimpuls.
+Das anonyme Tracking meldet für die letzten sieben Tage einen Seitenaufruf und
+kein Formularsignal. Der vorrangige Engpass ist damit qualifizierter Traffic,
+nicht der Zahlungs- oder Nachbearbeitungsweg.
 
 # Nächster Schritt
-Eingehende Sprint-Anfragen oder echte Antworten innerhalb eines Werktags
-persönlich qualifizieren, im CRM mit Quelle und Status dokumentieren und bis
-zum Angebot nachfassen.
+Das Partnerpaket in drei persönlichen Gesprächen mit Steuerkanzleien,
+Lohnbüros oder IT-Systemhäusern einsetzen. Eingehende Sprint-Anfragen oder
+echte Antworten innerhalb eines Werktags persönlich qualifizieren, im CRM mit
+Quelle und Status dokumentieren und bis zum Angebot nachfassen.
 
 # Offene Fragen / Blocker
 Für qualifizierte Gespräche, Angebote und Kunden fehlen noch auswählbare
