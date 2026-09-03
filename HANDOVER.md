@@ -394,6 +394,32 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 03.09.2026 — Website-Bau-Generator repariert (war nur generisch)
+- **Symptom:** website-bau/index.html erzeugte nur generische Seiten (Über uns/Leistungen/
+  Kontakt), nie branchenspezifisches Design.
+- **Ursachenkette (alle behoben):**
+  1. n8n-Webhook `werkspree-microsite-generator` lieferte HTTP 500 „No Respond to Webhook
+     node found" → Website fiel auf generischen JS-Fallback zurück.
+  2. Falsche n8n-Connections: `"primary"` statt `"main"` → Generate-Node lief nie.
+     (Vergleich mit funktionierendem Rechnungs-OCR-Workflow: der nutzt `main`.)
+  3. n8n-Code-Node-Sandbox blockt `$env` („access to env vars denied") UND `require('https')`
+     UND `fetch` („fetch is not defined") → HTTP-Aufruf aus Code-Node unmöglich.
+  4. Lösung: Workflow v7 = Webhook → **HTTP Request-Node** (Gemini, mit Key in der URL,
+     Timeout 180s) → **Extract-Node** (reines JS, kein require/fetch) → Respond.
+  5. Pfad-Kollision: 4 Workflows beanspruchten `werkspree-microsite-generator`; alte
+     wurden auf `-old1/-old2/-old-v6` umbenannt (inaktive blockieren trotzdem!).
+- **Ergebnis (verifiziert):** Elektriker → Blau/Amber-Palette, 24h-Notdienst-Sektion,
+  Meta-Description, 12,5 KB HTML. Friseur → Gold/Schwarz, Preisliste + Team-Sektion,
+  12,2 KB. Beide mit Wasserzeichen + echten Firmendaten.
+- **Aktiver Workflow:** `Jsz07d7IrWGCIFK8` („Werkspree Microsite Gen v7 (HTTP-Node)").
+  Alte v2-v6 (F7Cl6niSZv7q5iKK, bucANjxEfLqKkyGk, oND7FMUw7mLWHpfp, tZOlY46EecN1BRsd,
+  W1rkg94IIjYdtofn, M3yNVOAaeQvXl4U5) inaktiv/umbenannt; Test-Echo bM6C1n5PhdSnYY6a inaktiv.
+- **Server-Config:** `/home/anton/n8n/docker-compose.yml` repariert (war YAML-kaputt durch
+  verrutschtes `STRATO_IMAP_PASS` unter `volumes:`); `GOOGLE_API_KEY` + `N8N_ENV_ALLOWED_VARS`
+  in der Compose-Env (letzteres wirkungslos, da n8n-Code-Nodes env ohnehin blocken).
+- **WICHTIG:** Gemini-Key liegt im HTTP-Request-Node in der URL (Workflow-JSON). Bei
+  Key-Rotation: Workflow v7-URL updaten. NIE `fetch`/`require` in n8n-Code-Nodes verwenden.
+
 ### 03.09.2026 — Gemini als Primärgenerator aktiviert, DPA unterschrieben
 - **Microsite-Build:** Neu `build_microsite_gemini.py` — Gemini (gemini-3-flash-preview)
   ist jetzt Primärgenerator, mit automatischem Fallback auf das deterministische
