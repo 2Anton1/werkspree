@@ -14,6 +14,7 @@ Fallback: branchenspezifisches Template (build_fallback_template in build_micros
 import json
 import os
 import re
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -50,10 +51,30 @@ def call_gemini(prompt, max_tokens=8000, temperature=0.4):
         "generationConfig": {"temperature": temperature, "maxOutputTokens": max_tokens}
     }).encode()
     req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=90) as resp:
-        data = json.loads(resp.read().decode())
-    if "candidates" in data and data["candidates"]:
-        return data["candidates"][0]["content"]["parts"][0].get("text", "")
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            data = json.loads(resp.read().decode())
+    except urllib.error.HTTPError as e:
+        try:
+            detail = json.loads(e.read().decode())
+            msg = detail.get("error", {}).get("message", str(e))
+        except Exception:
+            msg = str(e)
+        raise RuntimeError(f"Gemini HTTP {e.code}: {msg}")
+    if "error" in data:
+        raise RuntimeError(f"Gemini API-Fehler: {data['error'].get('message', data['error'])}")
+    if not data.get("candidates"):
+        return ""
+    cand = data["candidates"][0]
+    # Thinking-Modelle (gemini-3-flash-preview) liefern bei kleinem Budget
+    # finishReason=MAX_TOKENS mit leerem content, weil die Gedanken Tokens
+    # verbrauchen. Dann einmal mit mehr Budget erneut versuchen.
+    content = cand.get("content") or {}
+    parts = content.get("parts") or []
+    if parts:
+        return parts[0].get("text", "")
+    if cand.get("finishReason") == "MAX_TOKENS" and max_tokens < 32000:
+        return call_gemini(prompt, max_tokens=min(32000, max_tokens * 4), temperature=temperature)
     return ""
 
 

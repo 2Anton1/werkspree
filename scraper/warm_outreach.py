@@ -161,6 +161,9 @@ def get_eligible_leads(leads, sent):
                     elif status == "followup_3days_sent" and days_since >= 7:
                         lead["next_action"] = "followup_7days"
                         eligible.append(lead)
+                    elif status == "followup_7days_sent" and days_since >= 14:
+                        lead["next_action"] = "followup_14days"
+                        eligible.append(lead)
                 except Exception:
                     pass
 
@@ -301,7 +304,17 @@ def main():
             lines = template_copy["body"].split("\n", 2)
             template_copy["body"] = lines[0] + "\n\n{warmth_intro}\n" + (lines[1] if len(lines) > 1 else "")
 
-        subject = personalize(template_copy["subject"], lead, sent)
+        # A/B-Betreffzeilen (seit 03.09.): Variante deterministisch pro Firma
+        # wählen (gleiche Firma -> immer gleiche Variante), damit Antwortraten
+        # pro Variante später in sent_emails.json vergleichbar sind.
+        import hashlib
+        subject_variants = template.get("subject_variants") or []
+        if subject_variants:
+            variant_idx = int(hashlib.md5(company.encode("utf-8")).hexdigest(), 16) % len(subject_variants)
+            subject = personalize(subject_variants[variant_idx], lead, sent)
+        else:
+            variant_idx = -1
+            subject = personalize(template_copy["subject"], lead, sent)
         body = personalize(template_copy["body"], lead, sent)
 
         if dry_run:
@@ -321,6 +334,8 @@ def main():
                 "region": lead.get("region", ""),
                 "warmth_score": score,
                 "response_status": "awaiting_reply" if action == "initial" else "followup_sent",
+                "subject_variant": variant_idx,
+                "subject_used": subject,
             }
             sent_ok += 1
             print(f"  ✅ Sent to {company}")

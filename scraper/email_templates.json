@@ -2,6 +2,11 @@
   "templates": {
     "initial": {
       "subject": "KI-Automatisierung für {branch} in {region} — 30 Min. einsparen pro Tag",
+      "subject_variants": [
+        "KI-Automatisierung für {branch} in {region} — 30 Min. einsparen pro Tag",
+        "{branch} in {region}: Was wäre, wenn Rechnungen sich von selbst sortieren?",
+        "Kurze Frage zu {branch} in {region} (KI-Erstgespräch)"
+      ],
       "body": "Sehr geehrte Damen und Herren,\n\nmein Name ist Finn Werksby von Werkspree. Wir helfen kleinen Unternehmen in Berlin und Brandenburg, Routineaufgaben per KI zu automatisieren — damit mehr Zeit für das Wesentliche bleibt.\n\nIch bin auf Ihr Unternehmen als {branch} in {region} aufmerksam geworden. Typische Aufgaben, die wir für Betriebe wie Ihren automatisieren:\n\n• Rechnungsverarbeitung: Eingangsrechnungen werden per KI erkannt, kategorisiert und an die Buchhaltung übergeben — kein manuelles Abtippen mehr.\n• Kundenkommunikation: Ein KI-Assistent beantwortet Anfragen per WhatsApp oder E-Mail rund um die Uhr.\n• Terminverwaltung: Kunden buchen selbst online, Erinnerungen gehen automatisch raus.\n\nKostenloses Erstgespräch?\nIch analysiere unverbindlich, wo bei Ihnen am meisten Zeit gespart werden kann — in 15 Minuten am Telefon.\n\nMöchten Sie einen Termin vereinbaren?\n\nBeste Grüße\nFinn Werksby\nWerkspree — KI-Automatisierung für kleine Unternehmen\nhttps://werkspree.bki-de.de/\n\nFalls Sie keine weiteren Nachrichten dieser Art erhalten möchten, lassen Sie es mich bitte kurz wissen — ich trage Sie dann sofort aus."
     },
     "followup_3days": {
@@ -11,6 +16,10 @@
     "followup_7days": {
       "subject": "Letzter Hinweis: {company_name} — KI-Erstgespräch",
       "body": "Sehr geehrte Damen und Herren,\n\nich möchte Sie nicht weiter belästigen — dies ist meine letzte Nachricht.\n\nFalls Automatisierung für Sie aktuell kein Thema ist, verstehe ich das. Falls sich Ihre Situation ändert, erreichen Sie mich jederzeit unter a2807d@gmail.com oder auf unserer Website.\n\nAlles Gute für Ihr Geschäft!\nFinn Werksby\nWerkspree\n\nDies war die letzte Nachricht in dieser Serie — Sie müssen sich nicht extra abmelden."
+    },
+    "followup_14days": {
+      "subject": "Re: {company_name} — kurze Erinnerung (keine Antwort nötig)",
+      "body": "Sehr geehrte Damen und Herren,\n\nvor zwei Wochen habe ich Ihnen geschrieben, weil wir kleinen Betrieben in {region} helfen, wiederkehrende Büroarbeit per KI zu automatisieren — Rechnungen, Termine, Kundenanfragen.\n\nFalls das gerade nicht passt, ist das völlig in Ordnung. Ich wollte nur sicherstellen, dass meine vorherige Nachricht nicht untergegangen ist.\n\nFalls Sie doch Interesse haben: Ein 15-minütiges kostenloses Erstgespräch genügt, und Sie erfahren konkret, wo sich bei Ihnen Zeit sparen lässt.\n\nBeste Grüße\nFinn Werksby\nWerkspree\nhttps://werkspree.bki-de.de/\n\nDies ist die letzte Erinnerung von mir — Sie hören danach nichts mehr von uns."
     }
   },
   "signature": "Finn Werksby | Werkspree | KI-Automatisierung für kleine Unternehmen | https://werkspree.bki-de.de/"
