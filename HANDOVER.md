@@ -419,6 +419,12 @@ Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-St
   in der Compose-Env (letzteres wirkungslos, da n8n-Code-Nodes env ohnehin blocken).
 - **WICHTIG:** Gemini-Key liegt im HTTP-Request-Node in der URL (Workflow-JSON). Bei
   Key-Rotation: Workflow v7-URL updaten. NIE `fetch`/`require` in n8n-Code-Nodes verwenden.
+- **Client-Fallback branchenspezifisch:** `website-bau/index.html` erzeugt bei n8n-Ausfall
+  jetzt branchenspezifische Vorschauen statt generischem Template — 17 Profile mit
+  Farbpaletten (konsistent mit dem n8n-Prompt) + Branchen-Sektionen (24h-Notdienst,
+  Preisliste, Saisonkalender, Objekte), Meta-Description, Öffnungszeiten, tel/mailto.
+  Verifiziert per node-Test (Elektriker/Friseur/Gartenbau/Dachdecker/Allgemein).
+  Commit `898ce49`.
 
 ### 03.09.2026 — Gemini als Primärgenerator aktiviert, DPA unterschrieben
 - **Microsite-Build:** Neu `build_microsite_gemini.py` — Gemini (gemini-3-flash-preview)
