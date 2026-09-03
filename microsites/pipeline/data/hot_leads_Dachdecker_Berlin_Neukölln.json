@@ -1,0 +1,221 @@
+{
+  "branch": "Dachdecker",
+  "region": "Berlin Neukölln",
+  "all_candidates": [
+    {
+      "name": "CS Dachservice GmbH",
+      "address": "Lahnstraße 87, 12055 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJhXTRC3ZPqEcRkQUeXK8ixHM",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "030 99253733",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://csdachservice.de/",
+      "email": "info@csdachservice.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'dachservice' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Berlin Neukölln"
+    },
+    {
+      "name": "Dachdeckermeister K.-D. Rotter GmbH",
+      "address": "Silbersteinstraße 71, 12051 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJp5pwBZtPqEcRZW2ZmSQerUM",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "030 6849053"
+    },
+    {
+      "name": "Bretsch Dachdecker- u. Bauklempnerei GmbH",
+      "address": "Buckower Damm 232, 12349 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ3bMcJrtFqEcRzBt5bRfEIZs",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "030 6044034"
+    },
+    {
+      "name": "Dachdeckerei-otay",
+      "address": "Karl-Marx-Straße 104, 12043 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNWjPHlJPqEcRK2yKm9OWtlg",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0176 21454768"
+    },
+    {
+      "name": "Dachdecker Dachdeckermeister Berlin",
+      "address": "Rollbergstraße 28B, 12053 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJxfDjTgBPqEcRgNyU8yJu1EE",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "01578 1170086",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Dachdecker Service Mathias",
+      "address": "Karl-Marx-Straße 7, 12043 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJS8jxajdPqEcRjVrySsMvllY",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "015510 160316",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://dein-dachdecker-service.de/"
+    },
+    {
+      "name": "D & B Dachdeckerei GmbH",
+      "address": "Ringbahnstraße 10-14, 12099 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJZQx1kGKDnmIRjZvpT_rjpLw",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "01525 9207879"
+    },
+    {
+      "name": "C Roofs",
+      "address": "Urbanstraße 96, 10967 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJGfUnwjRPqEcRRAWDy1PXao4",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "015563 533543"
+    },
+    {
+      "name": "P & H DACHBAU GmbH (Büro Rudow)",
+      "address": "Waltersdorfer Ch 7, 12355 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJsysGWnJGqEcRG1k9-P6H-eI",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor",
+        "store"
+      ],
+      "phone": "030 6621009"
+    },
+    {
+      "name": "Dachdeckerei Mähner & Co. GmbH",
+      "address": "Gallwitzallee 88, 12249 Berlin-Bezirk Steglitz-Zehlendorf, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJg2MjYdBaqEcRlvFyY3xzqdg",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "030 41748891"
+    },
+    {
+      "name": "Top Dachdecker Berlin",
+      "address": "Neuköllner Str. 222a, 12357 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ4SoKXmxFqEcREoH03Zcc-98",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Dachdeckerei Maudrich",
+      "address": "Steinträgerweg 49, 12351 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJU10q27xFqEcREIGpwvzXBXQ",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Jonas Bauklempnerei & Dachdeckerei",
+      "address": "Grüner Weg 80, 12359 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJcYiBJpJFqEcRM7glj8b51CU",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Dachdecker Berlin - Laubinger & Russ",
+      "address": "Glockenblumenweg 131A, 12357 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJz8o5PtZHqEcRwq692ERWRLM",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Drei-Dachdeckerei GmbH",
+      "address": "Heimstraße 14, 10965 Berlin-Bezirk Friedrichshain-Kreuzberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJe635gtlPqEcRW572najhkig",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "CS Dachservice GmbH",
+      "address": "Lahnstraße 87, 12055 Berlin-Bezirk Neukölln, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJhXTRC3ZPqEcRkQUeXK8ixHM",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "030 99253733",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://csdachservice.de/",
+      "email": "info@csdachservice.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'dachservice' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Berlin Neukölln"
+    }
+  ]
+}
