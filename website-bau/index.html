@@ -324,7 +324,7 @@
       frame.srcdoc = fallbackHtml;
       preview.style.display = 'block';
       status.className = 'gen-status ok';
-      status.textContent = '✓ Vorschau generiert (vereinfachte Version). Für die vollständige KI-Website melden wir uns bei Ihnen.';
+      status.textContent = '✓ Vorschau generiert (branchenspezifische Version). Für die vollständige KI-Website melden wir uns bei Ihnen.';
       preview.scrollIntoView({ behavior: 'smooth', block: 'start' });
       console.log('Gemini error:', err);
     }).then(function () {
@@ -334,7 +334,71 @@
   });
 
   function generateFallbackHtml(name, branche, ort, beschreibung) {
-    return '<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + escapeHtml(name) + ' — ' + escapeHtml(branche) + ' in ' + escapeHtml(ort) + '</title><style>body{font-family:Inter,-apple-system,sans-serif;margin:0;color:#1d2939;background:#fafafa}header{background:linear-gradient(135deg,#122c4d,#0a1b30);color:#fff;padding:60px 20px;text-align:center}header h1{margin:0 0 10px;font-size:2rem}header p{color:rgba(255,255,255,.7);font-size:1.1rem;margin:0}main{max-width:800px;margin:40px auto;padding:0 20px}section{background:#fff;border:1px solid rgba(18,44,77,.09);border-radius:14px;padding:30px;margin-bottom:20px}h2{color:#122c4d;margin:0 0 10px}p{color:#5b6b7f;line-height:1.6}.watermark{position:fixed;bottom:10px;right:10px;background:rgba(31,157,116,.9);color:#fff;padding:5px 15px;border-radius:999px;font-size:.8rem;font-weight:600;z-index:999}</style></head><body><header><h1>' + escapeHtml(name) + '</h1><p>' + escapeHtml(branche) + ' · ' + escapeHtml(ort) + '</p></header><main><section><h2>Über uns</h2><p>' + (beschreibung ? escapeHtml(beschreibung) : 'Wir sind Ihr zuverlässiger Partner für ' + escapeHtml(branche).toLowerCase() + ' in ' + escapeHtml(ort) + ' und Umgebung.') + '</p></section><section><h2>Leistungen</h2><p>Wir bieten Ihnen professionelle Dienstleistungen, persönliche Beratung und zuverlässige Ausführung — mit Erfahrung und regionaler Nähe.</p></section><section><h2>Kontakt</h2><p>Adresse: ' + escapeHtml(ort) + '<br>Telefon: auf Anfrage<br>E-Mail: auf Anfrage</p></section></main><div class="watermark">Demo von Werkspree</div></body></html>';
+    // Branchenspezifische Profile (konsistent mit dem n8n-Gemini-Prompt):
+    // Farbpalette + Sektionen pro Branche, damit die Vorschau auch bei
+    // n8n-Ausfall kein generisches Template zeigt.
+    var profiles = {
+      'Elektriker': { c: ['#1f5f85', '#12344b', '#f0b429'], s: ['24h ELEKTRO-NOTDIENST', 'Unsere Leistungen', 'Warum wir?'] },
+      'Dachdecker': { c: ['#43596d', '#263541', '#c27a42'], s: ['Dach-Notdienst', 'Unsere Leistungen', 'Referenzen'] },
+      'Maler': { c: ['#1b3a5f', '#2d2419', '#e07a3f'], s: ['Unsere Leistungen', 'Projektgalerie', 'Warum wir?'] },
+      'Friseur': { c: ['#c39a53', '#1a1a1a', '#f5eee5'], s: ['Unsere Leistungen', 'Preisliste', 'Unser Team'] },
+      'Fahrschule': { c: ['#1764a0', '#0b2945', '#e05a47'], s: ['Unsere Leistungen', 'Preise', 'Ablauf'] },
+      'Baeckerei': { c: ['#7b3f25', '#4d2519', '#d69b45'], s: ['Unser Sortiment', 'Bestseller', 'Über uns'] },
+      'Kosmetik': { c: ['#a0445b', '#5b2638', '#df9aaa'], s: ['Unsere Behandlungen', 'Preisliste', 'Unser Team'] },
+      'Physiotherapie': { c: ['#347f7f', '#225252', '#9bd5c5'], s: ['Unsere Behandlungen', 'Über uns', 'Preise'] },
+      'Tischlerei': { c: ['#8a5a32', '#4b3020', '#c99358'], s: ['Unsere Leistungen', 'Galerie', 'Über uns'] },
+      'Gartenbau': { c: ['#3d805d', '#204b3a', '#91c98e'], s: ['Unsere Leistungen', 'Saisonkalender', 'Referenzen'] },
+      'Sanitaer': { c: ['#286b91', '#17415c', '#77bdd8'], s: ['Notdienst', 'Unsere Leistungen', 'Über uns'] },
+      'Kfz': { c: ['#46596c', '#202d38', '#eea62a'], s: ['Unsere Leistungen', 'Preise', 'Über uns'] },
+      'Reinigung': { c: ['#187d83', '#124b56', '#6cc7bd'], s: ['Unsere Leistungen', 'Preise', 'Referenzen'] },
+      'Zahnarzt': { c: ['#3e8e9a', '#20505d', '#8acbd0'], s: ['Unsere Leistungen', 'Über uns', 'Sprechzeiten'] },
+      'Steuerberater': { c: ['#1b3a5f', '#122c4d', '#c9a961'], s: ['Unsere Leistungen', 'Mandanten-Info', 'Sprechzeiten'] },
+      'Immobilien': { c: ['#122c4d', '#0a1b30', '#b98a2f'], s: ['Unsere Objekte', 'Unsere Leistungen', 'Über uns'] },
+      'Allgemein': { c: ['#122c4d', '#0a1b30', '#b98a2f'], s: ['Unsere Leistungen', 'Über uns', 'Kontakt'] }
+    };
+    var prof = profiles[branche] || profiles['Allgemein'];
+    var primary = prof.c[0], primaryDark = prof.c[1], accent = prof.c[2];
+    var sections = prof.s;
+
+    var cleanName = escapeHtml(name) || 'Ihr Betrieb';
+    var cleanOrt = escapeHtml(ort) || 'Ihre Stadt';
+    var cleanBesch = escapeHtml(beschreibung) || ('Wir sind Ihr zuverlässiger Partner für ' + escapeHtml(branche || 'Ihre Branche').toLowerCase() + ' in ' + cleanOrt + ' und Umgebung.');
+
+    var sectionHtml = '';
+    for (var i = 0; i < sections.length; i++) {
+      var title = sections[i];
+      var body = 'Wir bieten Ihnen professionelle ' + escapeHtml(branche || 'Dienstleistungen').toLowerCase() + '-Leistungen, persönliche Beratung und zuverlässige Ausführung — mit Erfahrung und regionaler Nähe.';
+      if (title.indexOf('NOTDIENST') !== -1 || title === 'Notdienst' || title.indexOf('Notdienst') !== -1) {
+        body = 'Sie brauchen schnelle Hilfe? Rufen Sie uns an: <a href="tel:+4930000000" style="color:' + accent + ';font-weight:700;">+49 30 000000</a> — wir sind für Sie da.';
+      }
+      if (title === 'Preisliste') {
+        body = '<table style="width:100%;border-collapse:collapse;margin-top:12px;"><tr style="background:' + primaryDark + ';color:#fff;"><td style="padding:8px 12px;">Leistung</td><td style="padding:8px 12px;">Preis</td></tr><tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:8px 12px;">Standardleistung</td><td style="padding:8px 12px;">auf Anfrage</td></tr><tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:8px 12px;">Beratung</td><td style="padding:8px 12px;">kostenlos</td></tr><tr><td style="padding:8px 12px;">Spezialanfertigung</td><td style="padding:8px 12px;">auf Anfrage</td></tr></table>';
+      }
+      if (title === 'Saisonkalender') {
+        body = '<table style="width:100%;border-collapse:collapse;margin-top:12px;"><tr style="background:' + primaryDark + ';color:#fff;"><td style="padding:8px 12px;">Saison</td><td style="padding:8px 12px;">Arbeiten</td></tr><tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:8px 12px;">Frühjahr</td><td style="padding:8px 12px;">Neupflanzung, Rasenpflege</td></tr><tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:8px 12px;">Sommer</td><td style="padding:8px 12px;">Bewässerung, Hecken</td></tr><tr><td style="padding:8px 12px;">Herbst</td><td style="padding:8px 12px;">Laub, Pflanzenschutz</td></tr></table>';
+      }
+      if (title === 'Unsere Objekte') {
+        body = 'Aktuelle Angebote stellen wir Ihnen gern persönlich vor — sprechen Sie uns an: <a href="mailto:' + cleanName.toLowerCase().replace(/\s+/g, '-') + '@example.de">E-Mail schreiben</a>.';
+      }
+      sectionHtml += '<section style="background:#fff;border:1px solid rgba(18,44,77,.09);border-radius:14px;padding:30px;margin-bottom:20px;"><h2 style="color:' + primaryDark + ';margin:0 0 10px;">' + title + '</h2><p style="color:#5b6b7f;line-height:1.6;">' + body + '</p></section>';
+    }
+
+    var hoursHtml = '<table style="width:100%;border-collapse:collapse;margin-top:12px;">' +
+      '<tr style="background:' + primaryDark + ';color:#fff;"><td style="padding:8px 12px;">Tag</td><td style="padding:8px 12px;">Zeiten</td></tr>' +
+      '<tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:8px 12px;">Mo – Fr</td><td style="padding:8px 12px;">09:00 – 18:00</td></tr>' +
+      '<tr style="border-bottom:1px solid #e5e7eb;"><td style="padding:8px 12px;">Sa</td><td style="padding:8px 12px;">10:00 – 14:00</td></tr>' +
+      '<tr><td style="padding:8px 12px;">So</td><td style="padding:8px 12px;">geschlossen</td></tr></table>';
+
+    return '<!DOCTYPE html><html lang="de"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
+      '<meta name="description" content="' + cleanName + ' – ' + escapeHtml(branche || 'Ihr Betrieb') + ' in ' + cleanOrt + '. ' + cleanBesch.slice(0, 120) + '">' +
+      '<title>' + cleanName + ' — ' + escapeHtml(branche || 'Ihre Branche') + ' in ' + cleanOrt + '</title>' +
+      '<style>body{font-family:Inter,-apple-system,sans-serif;margin:0;color:#1d2939;background:#fafafa}header{background:linear-gradient(135deg,' + primary + ',' + primaryDark + ');color:#fff;padding:60px 20px;text-align:center}header h1{margin:0 0 10px;font-size:2rem}header p{color:rgba(255,255,255,.85);font-size:1.1rem;margin:0}main{max-width:800px;margin:40px auto;padding:0 20px}h2{font-size:1.3rem}.watermark{position:fixed;bottom:10px;right:10px;background:rgba(31,157,116,.9);color:#fff;padding:5px 15px;border-radius:999px;font-size:.8rem;font-weight:600;z-index:999}a{color:' + accent + '}</style></head><body>' +
+      '<header><h1>' + cleanName + '</h1><p>' + escapeHtml(branche || '') + (branche && ort ? ' · ' : '') + cleanOrt + '</p></header><main>' +
+      '<section style="background:#fff;border:1px solid rgba(18,44,77,.09);border-radius:14px;padding:30px;margin-bottom:20px;"><h2 style="color:' + primaryDark + ';margin:0 0 10px;">Über uns</h2><p style="color:#5b6b7f;line-height:1.6;">' + cleanBesch + '</p></section>' +
+      sectionHtml +
+      '<section style="background:#fff;border:1px solid rgba(18,44,77,.09);border-radius:14px;padding:30px;margin-bottom:20px;"><h2 style="color:' + primaryDark + ';margin:0 0 10px;">Öffnungszeiten</h2>' + hoursHtml + '</section>' +
+      '<section style="background:#fff;border:1px solid rgba(18,44,77,.09);border-radius:14px;padding:30px;margin-bottom:20px;"><h2 style="color:' + primaryDark + ';margin:0 0 10px;">Kontakt</h2><p style="color:#5b6b7f;line-height:1.6;">Adresse: ' + cleanOrt + '<br>Telefon: <a href="tel:+4930000000">+49 30 000000</a><br>E-Mail: <a href="mailto:' + cleanName.toLowerCase().replace(/[^a-z0-9]/g, '-') + '@example.de">' + cleanName.toLowerCase().replace(/[^a-z0-9]/g, '-') + '@example.de</a></p></section>' +
+      '</main><div class="watermark">Demo von Werkspree</div></body></html>';
   }
 
   function escapeHtml(s) {
