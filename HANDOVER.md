@@ -364,9 +364,7 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 - [x] Outreach rechtlich geprüft und freigegeben (03.09.2026) — Auto-Send aktiv,
       läuft via Cron `df4d149e4f8f` täglich 10:00 (ohne `--send`-Flag, Versand ist
       Standard; `--dry-run` simuliert)
-- [ ] Airtable-DPA/AVV unterzeichnen — Signatur-Seite: **https://www.airtable.com/dpa**
-      (HTTP 200 verifiziert 03.09.; muss mit dem Airtable-Account erfolgen, der die
-      Leads-Base `appyMLhXOMHpD5vfT` besitzt)
+- [x] Airtable-DPA/AVV unterzeichnet (03.09.2026, via https://www.airtable.com/dpa)
 - [ ] Alten n8n-Tracking-Workflow `Ax3Kl8MCYm7Isykd` mit berechtigtem n8n-Konto deaktivieren (API-Key hat dafür 403)
 - [x] CRM-Statuswerte vereinheitlicht: Mapping und Funnel unterstützen
   Qualifiziert, Eingehend, Demo, Angebot und Nicht kontaktieren; Vorlage und
@@ -395,6 +393,17 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 03.09.2026 — Gemini als Primärgenerator aktiviert, DPA unterschrieben
+- **Microsite-Build:** Neu `build_microsite_gemini.py` — Gemini (gemini-3-flash-preview)
+  ist jetzt Primärgenerator, mit automatischem Fallback auf das deterministische
+  Template (`build_microsite.py`), wenn Gemini unvollständiges HTML liefert oder die
+  API nicht antwortet. Exit-Codes kompatibel (0/2/3). `run_microsite_pipeline.py`
+  ruft nun `build_microsite_gemini.py` auf. Commit `5575181`.
+- **Verifiziert:** Gemini-Build live (11,5 KB HTML, Quality-Gate bestanden, echte
+  Firmendaten, keine Platzhalter) + Fallback-Test (Key leer → Template greift).
+- **Bekannt:** Gemini-Seiten haben noch keine Meta-Description (SEO-ToDo).
+- **Airtable DPA/AVV unterschrieben** (03.09.2026, via airtable.com/dpa).
 
 ### 03.09.2026 — Gemini-Builder verifiziert & repariert, Outreach-Optimierungen, DPA-Frage
 - **Microsite-Generator/Gemini (Frage des Eigentümers):** Der aktive Microsite-Cron
