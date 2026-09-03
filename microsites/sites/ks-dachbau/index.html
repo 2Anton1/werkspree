@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KS-Dachbau | Ihr Dachdecker-Meisterbetrieb in Cottbus</title>
+    <meta name="description" content="KS-Dachbau in Cottbus – Ihr zuverlässiger Partner für Neueindeckung, Sanierung und Notdienst. Qualität, die Wind und Wetter trotzt.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2C3E50; /* Dunkles Schiefer-Blau */
+            --accent: #B87333;  /* Warmes Kupfer */
+            --accent-hover: #a0632d;
+            --bg-light: #F5F5F5; /* Helles Grau-Weiß */
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--primary);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
+                        url('https://images.unsplash.com/photo-1635424710928-0544e8512eae?q=80&w=2071&auto=format&fit=crop') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(184, 115, 51, 0.4);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto 0;
+        }
+
+        /* Über uns */
+        .about {
+            background: white;
+        }
+
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* Dachmaterialien Badges */
+        .materials-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .material-badge {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .material-badge:hover {
+            background: var(--accent);
+        }
+
+        /* Notdienst Box */
+        .emergency-section {
+            text-align: center;
+        }
+
+        .emergency-box {
+            background-color: var(--accent);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            display: inline-block;
+            max-width: 600px;
+            width: 100%;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 0 0 rgba(184, 115, 51, 0.7);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(184, 115, 51, 0.7); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(184, 115, 51, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(184, 115, 51, 0); }
+        }
+
+        .emergency-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .emergency-box a {
+            color: white;
+            font-size: 2rem;
+            font-weight: 800;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3, .hours-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .contact-link {
+            display: block;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.2rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            section { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <div class="logo">KS-<span>DACHBAU</span></div>
+            <a href="#kontakt" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Kontakt</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Ihr Dach in besten Händen</h1>
+            <p>Meisterhafte Handwerkskunst aus Cottbus. Wir schützen Ihr Zuhause mit robusten Lösungen, die jedem Wetter trotzen.</p>
+            <a href="#kontakt" class="btn">Kostenloses Angebot anfordern</a>
+        </div>
+    </header>
+
+    <section id="ueber-uns" class="about">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <div class="about-text">
+                <p>KS-Dachbau ist Ihr erfahrener Partner für alle Arbeiten rund um das Dach in Cottbus und Umgebung. Mit handwerklicher Präzision und tiefem Verständnis für regionale Witterungsbedingungen schützen wir Ihr Zuhause von oben. Zuverlässigkeit, Termintreue und höchste Qualität stehen bei uns an erster Stelle – für ein Dach, das Generationen überdauert.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Neueindeckung</h3>
+                    <p>Moderne und klassische Eindeckungen für Neubauten nach höchsten energetischen Standards.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Sanierung</h3>
+                    <p>Werterhalt und Schutz für Bestandsgebäude durch fachgerechte Dachsanierung und Dämmung.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reparatur</h3>
+                    <p>Schnelle Hilfe bei Sturmschäden, undichten Stellen oder lockeren Ziegeln.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Leistungen auf Anfrage</h3>
+                    <p>Individuelle Lösungen für Ihr spezielles Bauvorhaben. Sprechen Sie uns einfach an.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="materialien" style="background: white;">
+        <div class="container">
+            <h2 class="section-title">Dachmaterialien</h2>
+            <p style="text-align: center;">Wir arbeiten ausschließlich mit hochwertigen Materialien namhafter Hersteller:</p>
+            <div class="materials-list">
+                <span class="material-badge">Ton-Ziegel</span>
+                <span class="material-badge">Naturschiefer</span>
+                <span class="material-badge">Metalldach (Zink/Kupfer)</span>
+                <span class="material-badge">Flachdach-Abdichtung</span>
+                <span class="material-badge">Betondachsteine</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="emergency-section">
+        <div class="container">
+            <div class="emergency-box">
+                <h2>24h Dach-Notdienst</h2>
+                <p>Sturmschaden oder Wassereinbruch? Wir sind sofort für Sie da!</p>
+                <a href="tel:0355422786">0355 422786</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Kontakt</h2>
+                    <p style="margin-bottom: 20px;">KS-Dachbau<br>Finsterwalder Str. 5<br>03048 Cottbus, Deutschland</p>
+                    <a href="tel:0355422786" class="contact-link">📞 0355 422786</a>
+                    <a href="mailto:info@ks-dachbau.de" class="contact-link">✉️ info@ks-dachbau.de</a>
+                </div>
+                <div class="hours-info">
+                    <h3 class="section-title" style="text-align: left; margin-left: 0;">Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag - Donnerstag</td><td>07:00 - 16:30 Uhr</td></tr>
+                        <tr><td>Freitag</td><td>07:00 - 14:00 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo" style="margin-bottom: 20px;">KS-<span>DACHBAU</span></div>
+            <p>&copy; 2023 KS-Dachbau Cottbus. Alle Rechte vorbehalten.</p>
+            <div class="footer-line">
+                <p>Erstellt von Werkspree</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
