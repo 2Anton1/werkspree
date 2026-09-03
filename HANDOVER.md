@@ -364,7 +364,9 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 - [x] Outreach rechtlich geprüft und freigegeben (03.09.2026) — Auto-Send aktiv,
       läuft via Cron `df4d149e4f8f` täglich 10:00 (ohne `--send`-Flag, Versand ist
       Standard; `--dry-run` simuliert)
-- [ ] Airtable-DPA/AVV vor dem ersten echten Inbound-Lead unterzeichnen (externer Vertrag)
+- [ ] Airtable-DPA/AVV unterzeichnen — Signatur-Seite: **https://www.airtable.com/dpa**
+      (HTTP 200 verifiziert 03.09.; muss mit dem Airtable-Account erfolgen, der die
+      Leads-Base `appyMLhXOMHpD5vfT` besitzt)
 - [ ] Alten n8n-Tracking-Workflow `Ax3Kl8MCYm7Isykd` mit berechtigtem n8n-Konto deaktivieren (API-Key hat dafür 403)
 - [x] CRM-Statuswerte vereinheitlicht: Mapping und Funnel unterstützen
   Qualifiziert, Eingehend, Demo, Angebot und Nicht kontaktieren; Vorlage und
@@ -393,6 +395,34 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 03.09.2026 — Gemini-Builder verifiziert & repariert, Outreach-Optimierungen, DPA-Frage
+- **Microsite-Generator/Gemini (Frage des Eigentümers):** Der aktive Microsite-Cron
+  `3778ad6ca1e7` nutzt derzeit den **deterministischen Builder** (`build_microsite.py`),
+  NICHT Gemini. Der Gemini-Pfad (`gemini_builder.py`, Modell `gemini-3-flash-preview`,
+  17 Branchen-Profile) wurde live getestet und funktioniert — ABER `call_gemini` crashte
+  bei Thinking-Modellen mit `KeyError 'parts'`, wenn das Token-Budget klein war
+  (finishReason=MAX_TOKENS, leerer content). **Fix:** HTTP-Fehler sauber behandeln,
+  leeres content tolerieren, bei MAX_TOKENS einmal mit 4x Budget retrien. Beide
+  Live-Tests (10 Tokens + 2000 Tokens) bestanden. Wer den Gemini-Pfad produktiv
+  nutzen will, muss ihn in `run_microsite_pipeline.py` als Generator anbinden
+  (aktuell: `build_microsite.py` deterministisch).
+- **14-Tage-Follow-up:** `warm_outreach.py` sendet nach der 7-Tage-Mail eine finale
+  `followup_14days` (Cadence: initial → 3 → 7 → 14 Tage). Vorlage in
+  `email_templates.json` ergänzt.
+- **A/B-Betreffzeilen:** `initial`-Template hat `subject_variants` (3 Varianten).
+  Auswahl deterministisch per Firmen-Hash (gleiche Firma → gleiche Variante);
+  gewählte Variante + Betreff werden in `sent_emails.json` geloggt
+  (`subject_variant`, `subject_used`) für spätere Antwortraten-Auswertung.
+- **Segment-Rotation erweitert:** 26 neue Branchen/Stadt-Kombinationen in
+  `run_microsite_pipeline.py` (Dachdecker, Bäckerei, Sanitär; Potsdam/Frankfurt
+  Oder/Cottbus/Berlin). Die alten 46 Segmente waren alle abgearbeitet — ohne
+  Erweiterung hätte die Pipeline nur noch Leerläufe produziert.
+- **IndexNow:** Key-Datei + Sitemap (39 URLs) erreichbar; Hauptseiten am 03.09.
+  erneut eingereicht (HTTP 200).
+- **Airtable DPA/AVV:** Signatur-Seite ist **https://www.airtable.com/dpa** (HTTP 200).
+  Airtable-API-Zugriff verifiziert: 2 Bases, Leads-Base hat Tabellen `Table 1`
+  (Company/Status/Branch/Region) + `Tracking`.
 
 ### 03.09.2026 — Outreach rechtlich freigegeben, TLD-Filter gegen Encoding-Müll
 - **Rechtliche Freigabe durch Eigentümer erteilt** — E-Mail-Outreach ist aktiv
