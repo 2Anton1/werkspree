@@ -361,7 +361,9 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
   same-host Kontakt-/Impressum-Links, die sie auf der Startseite findet
   (01.09.2026)
 - [ ] WhatsApp-Alternative einrichten (Twilio-Nummer ~1€/Monat)
-- [ ] Outreach rechtlich prüfen und mit `--send` aktivieren
+- [x] Outreach rechtlich geprüft und freigegeben (03.09.2026) — Auto-Send aktiv,
+      läuft via Cron `df4d149e4f8f` täglich 10:00 (ohne `--send`-Flag, Versand ist
+      Standard; `--dry-run` simuliert)
 - [ ] Airtable-DPA/AVV vor dem ersten echten Inbound-Lead unterzeichnen (externer Vertrag)
 - [ ] Alten n8n-Tracking-Workflow `Ax3Kl8MCYm7Isykd` mit berechtigtem n8n-Konto deaktivieren (API-Key hat dafür 403)
 - [x] CRM-Statuswerte vereinheitlicht: Mapping und Funnel unterstützen
