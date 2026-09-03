@@ -115,6 +115,32 @@ def get_eligible_leads(leads, sent):
             if re.search(r'[^\w.\-+]', local) or len(local) > 64:
                 print(f"  SKIP {company}: garbled E-Mail-Local-Part ({email_addr}) -> übersprungen")
                 continue
+            # TLD muss bekannt sein (verhindert Encoding-Müll wie "nivzrisig"/"decrsfe",
+            # der bei jedem Lauf einen Sendeslot verbrennt und bei Strato 521 wirft).
+            # Mallwitz-Fall 03.09.: elmcha@r-utneodegkwt-lmales.nivzrisig
+            COMMON_TLDS = {
+                "de", "com", "net", "org", "eu", "info", "biz", "online", "store",
+                "site", "tech", "berlin", "gmbh", "co", "io", "ai", "app", "dev",
+                "cloud", "digital", "solutions", "services", "agency", "consulting",
+                "at", "ch", "uk", "nl", "fr", "it", "es", "pl", "se", "no", "dk",
+                "fi", "cz", "sk", "hu", "ro", "bg", "gr", "pt", "be", "lu", "li",
+                "im", "me", "tv", "cc", "ws", "xyz", "top", "club", "shop", "design",
+                "marketing", "media", "systems", "management", "engineering",
+                "company", "group", "team", "center", "care", "works", "build",
+                "construction", "contractors", "haus", "immobilien", "kaufen",
+                "versicherung", "restaurant", "cafe", "photography", "gallery",
+                "fitness", "health", "dental", "law", "legal", "tax", "finance",
+                "capital", "ltd", "pro", "one", "page", "link", "live", "life",
+                # Deutsche/österreichische/schweizer Geo-TLDs (echte Adressen!)
+                "ruhr", "bayern", "koeln", "cologne", "hamburg", "muenchen",
+                "frankfurt", "stuttgart", "dortmund", "duesseldorf", "wien",
+                "zuerich", "zurich", "tirol", "saarland", "nrw", "ruhr",
+                "sachsen", "thueringen", "berlin",
+            }
+            tld = domain.rsplit(".", 1)[-1].lower()
+            if tld not in COMMON_TLDS:
+                print(f"  SKIP {company}: unbekannte TLD ({tld}) bei ({email_addr}) -> übersprungen")
+                continue
 
         if company not in sent:
             if score >= MIN_WARMTH_SCORE and lead.get("research_depth") == "deep":
