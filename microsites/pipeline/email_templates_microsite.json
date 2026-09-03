@@ -4,5 +4,26 @@
     "greeting": "Sehr geehrte Damen und Herren",
     "body": "wir haben uns Ihr Geschäft angesehen und Ihnen eine professionelle Website gebaut – kostenlos und ohne Verpflichtung.\n\n{SITE_URL}\n\nIhre neue Seite ist mobil-optimiert und zeigt Ihre Leistungen, Öffnungszeiten und Kontaktdaten im besten Licht.\n\nWenn Sie möchten, können wir sie gemeinsam anpassen. Sprechen Sie uns einfach an.\n\nMit freundlichen Grüßen\nFinn Werksby\nWerkspree – KI-Automatisierung für kleine Unternehmen\n\nPS: Wenn Sie keine weitere Kommunikation wünschen, löschen wir die Beispiel-Seite gerne wieder.",
     "opt_out": "Sie möchten keine weiteren Mails? Antworten Sie einfach mit 'Bitte nicht mehr'."
+  },
+  "ab_test_a": {
+    "subject": "Ihre neue Website für {COMPANY} ist fertig — kostenlos",
+    "greeting": "Guten Tag",
+    "body": "ich bin Finn Werksby von Werkspree. Wir bauen professionelle Websites für Unternehmen in {REGION} — und ich habe eine für {COMPANY} erstellt.\n\nHier können Sie sie sich ansehen:\n{SITE_URL}\n\nDie Seite ist:\n- Mobil-optimiert (Smartphone-Tauglichkeit)\n- Mit Ihren echten Kontaktdaten, Leistungen und Öffnungszeiten\n- Kostenlos und unverbindlich\n\nWenn Ihnen die Seite gefällt, können wir sie unter Ihrer eigenen Domain veröffentlichen. Wenn nicht, ist das auch völlig in Ordnung — sie kostet Sie nichts.\n\nFragen? Antworten Sie einfach auf diese E-Mail.\n\nBeste Grüße\nFinn Werksby\nWerkspree — KI-Automatisierung für kleine Unternehmen",
+    "opt_out": "Keine weiteren Mails? Antworten Sie mit 'Bitte nicht mehr'."
+  },
+  "ab_test_b1": {
+    "subject": "Kostenlose Demo-Website für {COMPANY} — fertig zum Ansehen",
+    "greeting": "Hallo",
+    "body": "wir haben eine neue, moderne Website für {COMPANY} entworfen — basierend auf Ihren Daten aus Google Maps und öffentlichen Quellen.\n\n{SITE_URL}\n\nDie Seite enthält:\n- Ihre Adresse, Telefonnummer und Öffnungszeiten\n- Eine Übersicht Ihrer Leistungen\n- Mobiles Design (für Smartphone & Tablet)\n- Google-Maps-Einbettung für die Anfahrt\n\nDie Website ist live — Sie können sie sich jetzt ansehen. Wenn Sie möchten, passen wir sie kostenlos an oder veröffentlichen sie unter Ihrer eigenen Domain.\n\nEin Vergleich: Eine Agentur kostet für eine solche Seite 800–2.000€. Bei uns ist sie im ersten Jahr kostenlos.\n\nFragen? Antworten Sie einfach auf diese E-Mail.\n\nHerzliche Grüße\nFinn Werksby\nWerkspree — KI-Automatisierung\n\nPS: Nicht interessiert? Antworten Sie mit 'Bitte keine Mails mehr' — ich respektiere das sofort."
+  },
+  "ab_test_b2": {
+    "subject": "Ich habe für {COMPANY} eine Website gebaut",
+    "greeting": "Hallo",
+    "body": "und zwar nicht irgendeine — sondern eine, die aussieht wie {COMPANY}, mit Ihren echten Leistungen und Kontaktdaten, mobil-optimiert und sofort einsatzbereit.\n\n{SITE_URL}\n\nWarum? Ich baue Websites für kleine Betriebe in {REGION} und zeige gerne, was möglich ist. Die Seite ist fertig. Wenn Ihnen gefällt, was Sie sehen — behalten Sie sie. Kostenlos. Wenn nicht, ist das auch gut.\n\nWas kostet das? Im ersten Jahr: nichts. Danach: 19€/Monat — aber nur, wenn Sie möchten.\n\nWas ist der Haken? Keiner. Ich hoffe, dass Sie meine Arbeit weiterempfehlen. Das ist mein Modell.\n\nMachen Sie sich ein Bild:\n{SITE_URL}\n\nBeste Grüße\nFinn Werksby\nWerkspree — KI-Automatisierung für kleine Unternehmen"
+  },
+  "ab_test_b3": {
+    "subject": "Eine Website für {COMPANY} — ich habe sie schon gebaut",
+    "greeting": "Hallo",
+    "body": "ich heiße Finn Werksby und baue digitale Lösungen für kleine Betriebe in {REGION}. Ich habe mir {COMPANY} angeschaut und festgestellt: Sie haben aktuell keine eigene Website — oder eine, die nicht mehr aktuell ist.\n\nAlso habe ich eine gebaut:\n\n{SITE_URL}\n\nWas die Seite kann:\n- Ihre Leistungen übersichtlich dargestellt\n- Ihre Kontaktdaten und Öffnungszeiten (aus Google Maps)\n- Mobile-optimiert für Smartphone-Nutzer\n- Google-Maps Integration für die Anfahrt\n- Professionelles Design in Branchenfarben\n\nKostenlos. Keine Verpflichtung. Kein Haken.\n\nWenn Sie Interesse haben: Antworten Sie auf diese Mail. Ich melde mich innerhalb von 24 Stunden.\n\nSchönen Tag noch,\nFinn Werksby\nWerkspree — KI-Automatisierung\n\nPS: Wenn das nicht Ihr Ding ist, antworten Sie mit 'Bitte keine Mails mehr' — ich werde Sie nicht wieder kontaktieren."
   }
 }

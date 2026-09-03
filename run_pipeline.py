@@ -90,19 +90,13 @@ def airtable_api(method, url, payload=None, token=""):
 
 
 def merge_outreach_statuses(leads, sent_file=SENT_FILE):
-    """Apply locally recorded outreach state to matching scored leads.
-
-    The outreach engine writes only ``sent_emails.json``. Without this merge,
-    the subsequent Airtable upsert sees the stale ``response_status`` from the
-    scorer and resets a contacted lead to its intake state.
-    """
+    """Merge locally logged outreach state into matching scored leads."""
     if not sent_file.exists():
         return 0
     try:
         sent = json.loads(sent_file.read_text())
     except (OSError, json.JSONDecodeError):
         return 0
-
     merged = 0
     for lead in leads:
         record = sent.get(lead.get("company_name", ""))
@@ -116,7 +110,7 @@ def merge_outreach_statuses(leads, sent_file=SENT_FILE):
 
 
 def resolved_crm_status(lead, existing_fields):
-    """Use outreach state unless a human has already advanced the CRM lead."""
+    """Keep human CRM progress; otherwise use the recorded outreach state."""
     existing_status = existing_fields.get("Status", "")
     if existing_status in PROTECTED_CRM_STATUSES:
         return existing_status

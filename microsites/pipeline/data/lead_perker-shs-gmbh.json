@@ -13,5 +13,8 @@
   "address": "Friedrich-Engels-Straße 6, 14770 Brandenburg an der Havel, Deutschland",
   "city": "Brandenburg an der Havel",
   "slug": "perker-shs-gmbh",
-  "site_url": "https://werkspree.bki-de.de/microsites/sites/perker-shs-gmbh/"
+  "site_url": "https://werkspree.bki-de.de/microsites/sites/perker-shs-gmbh/",
+  "ab_group": "b",
+  "template_version": "v3_improved",
+  "built_at": "2026-08-30T14:30:12"
 }

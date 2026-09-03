@@ -323,6 +323,52 @@ PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 31.08.2026 — A/B-Test-Microsite-Pipeline (Microsite v3 + E-Mail A/B-Test)
+
+**Problem:** 45 Microsite-E-Mails verschickt, 0 Antworten. Sites generisch (keine echten Daten,
+keine Maps, keine Icons). E-Mail-Template einheitlich und wenig überzeugend.
+
+**Lösung — zwei Hebel:**
+
+#### 1. Verbesserter Microsite-Builder v3 (`ab_test_microsite.py`)
+- **Neu:** `ab_test_microsite.py` ersetzt `agent_build_microsite.py` als Standard-Builder
+- **Hero-Section** mit Gradient, Branchen-Icon, Bewertung (falls Google Maps Rating vorhanden)
+- **Google Maps Embed** (Adresse als interaktive Karte)
+- **Service-Cards** mit Branchen-spezifischen Icons + Leistungen (Heizung, Maler, Elektriker, etc.)
+- **Öffnungszeiten-Tabelle** (7 Tage, "Auf Anfrage" als Fallback)
+- **Trust-Bar** ("Professionell · Regional verwurzelt")
+- **Branchen-spezifische Farbpaletten** (12 Branchen)
+- **CTA-Buttons** (Anrufen + E-Mail)
+- **Responsive** (mobile-optimiert mit clamp()-Schriftgrößen)
+- **A/B-Zuweisung:** deterministisch per slug-hash (50/50 Split)
+  - Gruppe A = `build_v1_fallback()` (altes Template, Kontrolle)
+  - Gruppe B = `build_v3_html()` (verbessertes Template)
+- `--force-version a|b` zum Erzwingen der Version
+
+#### 2. A/B-Test-E-Mail-Sender (`ab_test_sender.py`)
+- **4 neue E-Mail-Templates** in `email_templates_microsite.json`:
+  - `ab_test_a` — Persönlich, direkt, mit Telefon ("Ich bin Finn Werksby...")
+  - `ab_test_b1` — Preis-Vergleich + Social Proof ("Agentur kostet 800-2.000€, bei uns kostenlos")
+  - `ab_test_b2` — Kontrast/Persönlich ("Warum? Ich baue Websites für kleine Betriebe...")
+  - `ab_test_b3` — Problembewusst + Direkt ("Sie haben keine Website — also habe ich eine gebaut")
+- **Zufällige Template-Auswahl** pro Versand (jeweils 25% Wahrscheinlichkeit)
+- **Tracking:** `data/ab_test_results.json` protokolliert welche Variante an wen gesendet wurde
+- **Opt-out-Liste** wird vor jedem Versand geprüft (`data/opt_out.json`)
+- **Idempotenz:** bereits gesendete Adressen werden übersprungen
+
+#### 3. Cron-Job aktualisiert (`251104e77a29`)
+- Schedule: 2x täglich (09:00 + 21:00 Uhr)
+- Prompt aktualisiert: ruft `ab_test_microsite.py` + `ab_test_sender.py` auf
+- Statistik-Ausgabe am Ende (`ab_test_results.json`)
+
+**Dateien:**
+- `microsites/pipeline/ab_test_microsite.py` — neuer A/B-Microsite-Builder (ersetzt `agent_build_microsite.py`)
+- `microsites/pipeline/ab_test_sender.py` — neuer A/B-E-Mail-Sender (ersetzt `send_microsite_mail.py`)
+- `microsites/pipeline/email_templates_microsite.json` — 5 Templates (1 Kontrolle + 4 A/B-Varianten)
+- `microsites/pipeline/data/ab_test_results.json` — A/B-Tracking (wird beim ersten Versand erstellt)
+
+**Status:** Getestet mit 3 Leads (Schallmann, Stefan Kriegs, Zahnarztpraxis Riedel) — alle Builds erfolgreich, A/B-Zuweisung funktioniert, v3-HTML hat Hero/Maps/Services/Trust-Bar.
+
 ### 28.08.2026 — Lead-Pipeline-Cron-Fix: Scrapling-Python im Script-Mode
 
 **Problem (7 Fehlschläge in Folge, 26.–28.08.):** `run_pipeline.py` (Cron-Job `df4d149e4f8f`,

@@ -63,8 +63,8 @@
     "response_status": "followup_sent"
   },
   "HKF Hergenröther Kurka Steuerberatungsgesellschaft mbH": {
-    "status": "followup_3days_sent",
-    "last_sent": "2026-08-25T10:24:23.136998",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-09-02T10:00:49.943856",
     "email": "info@hkf.de",
     "branch": "Steuerberater",
     "region": "Potsdam",
@@ -126,13 +126,13 @@
     "response_status": "followup_sent"
   },
   "Steuerberaterin Zimniok, Claudia": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-23T17:07:33.264835",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-28T10:00:41.794265",
     "email": "c.zimniok@steuerberatung-zimniok.de",
     "branch": "Steuerberater",
     "region": "Potsdam",
     "warmth_score": 10,
-    "response_status": "awaiting_reply"
+    "response_status": "followup_sent"
   },
   "Schuch, Melanie Steuerberaterin": {
     "status": "initial_sent",
@@ -144,63 +144,153 @@
     "response_status": "awaiting_reply"
   },
   "Zimniok Claudia Steuerberaterin": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-23T17:07:34.477575",
+    "status": "followup_7days_sent",
+    "last_sent": "2026-09-03T10:01:46.071635",
     "email": "c.zimniok@steuerberatung-zimniok.de",
     "branch": "Steuerberater",
     "region": "Potsdam",
     "warmth_score": 10,
-    "response_status": "awaiting_reply"
+    "response_status": "followup_sent"
   },
   "H+P Steuerberatungsgesellschaft Wirtschaftsberatungsgesellschaft mbH": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-25T10:24:24.459627",
-    "email": "hallodetmold@sutter-media.de",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-29T10:00:43.468895",
+    "email": "kundenservice@sutter.ruhr",
     "branch": "Steuerberater",
     "region": "Potsdam",
-    "warmth_score": 8,
-    "response_status": "awaiting_reply"
+    "warmth_score": 10,
+    "response_status": "followup_sent"
   },
   "Christl Bernd": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-25T10:24:25.053443",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-29T10:00:43.949136",
     "email": "christl@stb-christl.de",
     "branch": "Steuerberater",
     "region": "Potsdam",
-    "warmth_score": 7,
-    "response_status": "awaiting_reply"
+    "warmth_score": 9,
+    "response_status": "followup_sent"
   },
   "K.u.A. Münster Sanitec Sanitär- u. Bauklempnerei": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-25T10:24:27.661353",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-29T10:00:46.362371",
     "email": "info@sanitec-muenster.de",
     "branch": "Sanitär",
     "region": "Berlin",
     "warmth_score": 6,
-    "response_status": "awaiting_reply"
+    "response_status": "followup_sent"
   },
   "Pfister Sanitär & Heizung": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-26T10:01:15.149867",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-30T10:03:41.636132",
     "email": "info@pfister-berlin.de",
     "branch": "Sanitär",
     "region": "Berlin",
     "warmth_score": 6,
-    "response_status": "awaiting_reply"
+    "response_status": "followup_sent"
   },
   "Bock GmbH Versorgungstechnik": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-26T10:01:15.730156",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-30T10:03:42.231430",
     "email": "info@bock-versorgungstechnik.de",
     "branch": "Sanitär",
     "region": "Berlin",
     "warmth_score": 6,
-    "response_status": "awaiting_reply"
+    "response_status": "followup_sent"
   },
   "La Choza de la Anaconda": {
-    "status": "initial_sent",
-    "last_sent": "2026-08-26T10:01:16.298703",
+    "status": "followup_3days_sent",
+    "last_sent": "2026-08-30T10:03:43.236417",
     "email": "info@lachozadelaanaconda.de",
+    "branch": "Restaurant",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
+  },
+  "Dachdeckerei Hellmund": {
+    "status": "followup_3days_sent",
+    "last_sent": "2026-09-03T10:01:49.438641",
+    "email": "info@dachdeckerei-hellmund.de",
+    "branch": "Dachdecker",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
+  },
+  "BDG Bedachungen Berlin GmbH": {
+    "status": "followup_3days_sent",
+    "last_sent": "2026-09-03T10:01:50.031044",
+    "email": "info@bdg-bedachungen.de",
+    "branch": "Dachdecker",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
+  },
+  "HÄRTE Bau GmbH": {
+    "status": "followup_3days_sent",
+    "last_sent": "2026-09-03T10:01:50.583314",
+    "email": "info@hartebau-gmbh.de",
+    "branch": "Dachdecker",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
+  },
+  "Walter Wahnig Dachdeckermeister Inhaber Dirk Hoffm": {
+    "status": "followup_3days_sent",
+    "last_sent": "2026-09-03T10:01:51.174009",
+    "email": "info@dachdeckerei-wahnig.de",
+    "branch": "Dachdecker",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
+  },
+  "K.u.A. Münster Sanitec Sanitär- u.  Bauklempnerei": {
+    "status": "followup_3days_sent",
+    "last_sent": "2026-09-03T10:01:51.910262",
+    "email": "info@sanitec-muenster.de",
+    "branch": "Sanitär",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "followup_sent"
+  },
+  "Steuerberatung Nicola Bülow": {
+    "status": "followup_3days_sent",
+    "last_sent": "2026-09-03T10:01:46.628201",
+    "email": "steuerberaterin@integel.de",
+    "branch": "Steuerberater",
+    "region": "Berlin",
+    "warmth_score": 9,
+    "response_status": "followup_sent"
+  },
+  "Robert & Martin Jaenichen GbR": {
+    "status": "initial_sent",
+    "last_sent": "2026-09-02T10:00:52.314519",
+    "email": "hochzeitskonditor@konditorei-jaenichen.de",
+    "branch": "Restaurant",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "awaiting_reply"
+  },
+  "Altstadtcafé Cöpenick": {
+    "status": "initial_sent",
+    "last_sent": "2026-09-02T10:00:52.835460",
+    "email": "info@altstadtcafe.de",
+    "branch": "Restaurant",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "awaiting_reply"
+  },
+  "Karros": {
+    "status": "initial_sent",
+    "last_sent": "2026-09-02T10:00:53.274852",
+    "email": "contact@karros.cafe",
+    "branch": "Restaurant",
+    "region": "Berlin",
+    "warmth_score": 6,
+    "response_status": "awaiting_reply"
+  },
+  "Weingalerie u.Cafe \"Nö!\"": {
+    "status": "initial_sent",
+    "last_sent": "2026-09-02T10:00:53.666282",
+    "email": "info@cafe-noe.de",
     "branch": "Restaurant",
     "region": "Berlin",
     "warmth_score": 6,

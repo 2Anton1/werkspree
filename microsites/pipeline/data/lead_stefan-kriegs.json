@@ -13,5 +13,8 @@
   "address": "Genthiner Str. 91, 14774 Brandenburg an der Havel-Plaue, Deutschland",
   "city": "Brandenburg an der Havel",
   "slug": "stefan-kriegs",
-  "site_url": "https://werkspree.bki-de.de/microsites/sites/stefan-kriegs/"
+  "site_url": "https://werkspree.bki-de.de/microsites/sites/stefan-kriegs/",
+  "ab_group": "a",
+  "template_version": "v1_control",
+  "built_at": "2026-08-30T14:30:12"
 }
