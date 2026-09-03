@@ -259,11 +259,12 @@ def main():
         lead_path = DATA / f"lead_{slug}.json"
         lead_path.write_text(json.dumps(lead_json, ensure_ascii=False, indent=2))
 
-        # 3) Deterministischer Build: vollständige, responsive Seite aus
-        # verifizierten Daten. Ein LLM darf keine unvollständige HTML-Seite in
-        # den öffentlichen Ordner schreiben.
+        # 3) Build: Gemini als Primärgenerator (3 Versuche mit Qualitätsprüfung),
+        #    automatischer Fallback auf das deterministische Template, wenn
+        #    Gemini unvollständiges HTML liefert oder die API nicht antwortet.
+        #    Kein LLM-Output landet ungeprüft im öffentlichen Ordner.
         lead_path.write_text(json.dumps(lead_json, ensure_ascii=False, indent=2))
-        ok_b, _ = run([sys.executable, "build_microsite.py", "--lead", str(lead_path)])
+        ok_b, _ = run([sys.executable, "build_microsite_gemini.py", "--lead", str(lead_path)])
         if not ok_b:
             print("  Build fehlgeschlagen (Qualitäts-/Opt-out-Prüfung)")
             continue
