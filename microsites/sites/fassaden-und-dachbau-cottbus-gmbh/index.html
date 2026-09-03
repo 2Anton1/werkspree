@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fassaden- und Dachbau Cottbus GmbH | Ihr Dachdecker-Meisterbetrieb</title>
+    <meta name="description" content="Ihr zuverlässiger Partner für Dach- und Fassadenbau in Cottbus. Neueindeckung, Sanierung und Notdienst.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2C3E50; /* Dunkles Schiefer-Blau */
+            --accent: #B87333;  /* Warmes Kupfer */
+            --bg-light: #F5F5F5; /* Helles Grau-Weiß */
+            --text-dark: #1A1A1A;
+            --text-light: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--primary);
+            padding: 20px 0;
+            border-bottom: 4px solid var(--accent);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), 
+                        url('https://images.unsplash.com/photo-1635424710928-0544e8512eae?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--text-light);
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 2px;
+            transition: var(--transition);
+            border: 2px solid var(--accent);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--accent);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        /* Über uns */
+        .about-box {
+            background: white;
+            padding: 40px;
+            border-left: 8px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-bottom: 4px solid var(--primary);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--accent);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Dachmaterialien Pills */
+        .materials-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .material-pill {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid var(--accent);
+        }
+
+        /* Notdienst Box */
+        .notdienst-container {
+            margin-top: 50px;
+        }
+
+        .notdienst-box {
+            background-color: var(--accent);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 4px;
+            animation: pulse 2s infinite;
+            box-shadow: 0 0 0 0 rgba(184, 115, 51, 0.7);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(184, 115, 51, 0.7); }
+            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(184, 115, 51, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(184, 115, 51, 0); }
+        }
+
+        .notdienst-box h2 { margin-bottom: 10px; }
+        .notdienst-box a {
+            color: white;
+            font-size: 2rem;
+            font-weight: 800;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info h3, .hours-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            .hero { height: 60vh; }
+            section { padding: 50px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">FASSADEN- & DACHBAU <span>COTTBUS</span></a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Ihr Dach in besten Händen</h1>
+            <p>Meisterhafte Qualität und handwerkliche Präzision für Cottbus und Umgebung. Wir schützen, was Ihnen wichtig ist.</p>
+            <a href="#kontakt" class="cta-button">Kostenloses Angebot</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <div class="about-box">
+                <p>Als Fachbetrieb in Cottbus steht die <strong>Fassaden- und Dachbau Cottbus GmbH</strong> für Beständigkeit und höchste handwerkliche Qualität. In einer Region, die von wechselhaftem Wetter geprägt ist, bieten wir robuste Lösungen, die Generationen überdauern. Unser Team verbindet traditionelles Dachdeckerhandwerk mit moderner Technik, um Ihr Zuhause sicher und wetterfest zu machen. Zuverlässigkeit, Termintreue und eine saubere Ausführung sind das Fundament unserer täglichen Arbeit für unsere Kunden in der Lausitz.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #fff;">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Neueindeckung</h3>
+                    <p>Professionelle Eindeckung für Neubauten nach modernsten Standards. Leistungen auf Anfrage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Sanierung</h3>
+                    <p>Energetische Dachsanierung und Werterhalt für Ihr Bestandsgebäude. Leistungen auf Anfrage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reparatur</h3>
+                    <p>Schnelle Hilfe bei Sturmschäden oder Undichtigkeiten. Leistungen auf Anfrage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Notdienst</h3>
+                    <p>Wir sind zur Stelle, wenn es darauf ankommt – schnell und unkompliziert.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="materialien">
+        <div class="container">
+            <h2 class="section-title">Dachmaterialien</h2>
+            <p style="text-align: center; margin-bottom: 30px;">Wir arbeiten ausschließlich mit hochwertigen Materialien für maximale Langlebigkeit:</p>
+            <div class="materials-list">
+                <span class="material-pill">Ziegel</span>
+                <span class="material-pill">Schiefer</span>
+                <span class="material-pill">Metalldach</span>
+                <span class="material-pill">Flachdach</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container notdienst-container">
+        <div class="notdienst-box">
+            <h2>24h Dach-Notdienst</h2>
+            <p>Akuter Wasserschaden oder Sturmschaden? Rufen Sie uns direkt an:</p>
+            <a href="tel:03554309755">0355 4309755</a>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Kontakt</h2>
+                    <p><strong>Fassaden- und Dachbau Cottbus GmbH</strong></p>
+                    <p>Paul-Greifzu-Straße 4</p>
+                    <p>03042 Cottbus, Deutschland</p>
+                    <br>
+                    <a href="tel:03554309755" class="contact-link">📞 0355 4309755</a>
+                    <a href="mailto:info@fassaden-dachbau.de" class="contact-link">✉️ info@fassaden-dachbau.de</a>
+                </div>
+                <div class="hours-info">
+                    <h3 class="section-title" style="text-align: left; margin-left: 0;">Öffnungszeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag - Donnerstag:</span> <span>07:00 - 16:30 Uhr</span></li>
+                        <li><span>Freitag:</span> <span>07:00 - 14:00 Uhr</span></li>
+                        <li><span>Samstag - Sonntag:</span> <span>Geschlossen (Notdienst aktiv)</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Fassaden- und Dachbau Cottbus GmbH. Alle Rechte vorbehalten.</p>
+            <div class="footer-line">
+                <p>Erstellt von Werkspree</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

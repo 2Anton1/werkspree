@@ -1,0 +1,300 @@
+{
+  "branch": "Dachdecker",
+  "region": "Cottbus",
+  "all_candidates": [
+    {
+      "name": "Dachbau Hensel",
+      "address": "Sibeliusstraße 14, 03044 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJl5Yyx2Z0CEcR_GQZpsSHIYY",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 52983788"
+    },
+    {
+      "name": "StadtLandDach Dachdeckermeister Kilian Schulz",
+      "address": "Gerhart-Hauptmann-Straße 9, 03044 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJVdLzFT91CEcR2k0Ybj0xBjM",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0177 7610141",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.stadtlanddach.de/"
+    },
+    {
+      "name": "Böhm Bedachung GmbH",
+      "address": "Semmelweisstraße 26, 03044 Cottbus, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJX07LCnl1CEcRdOYDlEldmmQ",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 4763977"
+    },
+    {
+      "name": "Fassaden- und Dachbau Cottbus GmbH",
+      "address": "Paul-Greifzu-Straße 4, 03042 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJW1-hUzt0CEcRNlb9FtvHS5g",
+      "types": [
+        "establishment",
+        "moving_company",
+        "painter",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 4309755",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.fassaden-dachbau.de/",
+      "email": "info@fassaden-dachbau.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'fassaden' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Dachdecker-Innung Cottbus",
+      "address": "Gulbener Str. 1, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ3wIlSV50CEcR9YVy6zOYnP0",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 474571"
+    },
+    {
+      "name": "Ricardo Kaßner Dachdeckermeister",
+      "address": "Kiekebuscher Str. 35, 03042 Cottbus-Branitz, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJJ3-vQ1VxCEcRQUZWzGpJuKE",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 7296133"
+    },
+    {
+      "name": "KS-Dachbau",
+      "address": "Finsterwalder Str. 5, 03048 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJLw6_oBd1CEcRFzCqn3Ho208",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 422786",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://www.ks-dachbau.de/",
+      "email": "info@ks-dachbau.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'dachbau' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Cottbus Dach - Dachdeckerei & Bauklempnerei",
+      "address": "Döbbricker Str. 19, 03096 Dissen-Striesow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ1b3HPgx1CEcRdLVXjpOdi2A",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0172 3456936"
+    },
+    {
+      "name": "Tt Bedachung Gmbh & Co. Kg",
+      "address": "Branitzer Str. 1, 03052 Cottbus-Dissenchen, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ8e1Ip5p2CEcRzdRPyeoiESo",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "G & L Dachbau GmbH",
+      "address": "Ackerstraße 14, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJjypOT2NxCEcRhn9_AyQNZUM",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 542973",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://gundldachbau.net/",
+      "email": "gundldachbau@enviatel.net",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'dachbau' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Cottbus"
+    },
+    {
+      "name": "Körner U.G Dachdeckerei",
+      "address": "Merzdorfer Weg 31A, 03042 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJT2E98y90CEcRJlWbPTAmyl8",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "LKDachbau (Lars Kegel)",
+      "address": "Graureiherstraße, 03185 Peitz, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJpSgfPyjfB0cRvagqwiAQBQ4",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "PROFATEC Dachbeschichtung, Fassadenbeschichtung, Vorgehängte Fassaden",
+      "address": "Merzdorfer Weg 31a, 03042 Cottbus, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJnVOUzB2RokcReEgQUT88DYI",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Melle Gallhöfer Dach GmbH",
+      "address": "Schorbuser Weg 1, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJw4Bbo3pxCEcRdgUmi-VEyiw",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Lecher Daecher GmbH",
+      "address": "Friedensweg 1A, 03099 Kolkwitz, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJX-0gLKp0CEcRxmZFpEHEftw",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ]
+    },
+    {
+      "name": "Lausitzer Holz- und Dachbau GmbH Co. KG",
+      "address": "Merzdorfer Weg 28D, 03042 Cottbus-Merzdorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJCdrdcBwZcEERhnan4TlgCgo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "mh Bedachungshandel GmbH",
+      "address": "Ringstraße Wokolica 21, 03050 Cottbus, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ6avQaPNzCEcR3b-6FpuCLZ4",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "store"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Fassaden- und Dachbau Cottbus GmbH",
+      "address": "Paul-Greifzu-Straße 4, 03042 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJW1-hUzt0CEcRNlb9FtvHS5g",
+      "types": [
+        "establishment",
+        "moving_company",
+        "painter",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 4309755",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.fassaden-dachbau.de/",
+      "email": "info@fassaden-dachbau.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'fassaden' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Cottbus"
+    },
+    {
+      "name": "KS-Dachbau",
+      "address": "Finsterwalder Str. 5, 03048 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJLw6_oBd1CEcRFzCqn3Ho208",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 422786",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://www.ks-dachbau.de/",
+      "email": "info@ks-dachbau.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'dachbau' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Cottbus"
+    },
+    {
+      "name": "G & L Dachbau GmbH",
+      "address": "Ackerstraße 14, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJjypOT2NxCEcRhn9_AyQNZUM",
+      "types": [
+        "establishment",
+        "point_of_interest",
+        "roofing_contractor"
+      ],
+      "phone": "0355 542973",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://gundldachbau.net/",
+      "email": "gundldachbau@enviatel.net",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'dachbau' in domain/local",
+      "branch": "Dachdecker",
+      "region": "Cottbus"
+    }
+  ]
+}
