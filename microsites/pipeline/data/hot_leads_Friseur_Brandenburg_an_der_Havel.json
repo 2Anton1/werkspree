@@ -12,25 +12,7 @@
         "hair_care",
         "point_of_interest"
       ],
-      "phone": "03381 224030",
-      "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "https://www.haarstudio-black-white.de/"
-    },
-    {
-      "name": "Nico Cut Barbershop",
-      "address": "Vereinsstraße 2, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJazfuXt3BqEcRNL3EC7dinGA",
-      "types": [
-        "establishment",
-        "hair_care",
-        "point_of_interest"
-      ],
-      "phone": "0176 63381176",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
+      "phone": "03381 224030"
     },
     {
       "name": "Scherenschnitt Barbershop",
@@ -50,7 +32,7 @@
     {
       "name": "HAIReinspaziert",
       "address": "Im Gebäude des betreuten Wohnung \"Deutsches rotes Kreuz, Magdeburger Str. 18, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
+      "rating": 4.9,
       "place_id": "ChIJWXKp2vDBqEcR_Ps9UWOXMlU",
       "types": [
         "establishment",
@@ -63,53 +45,19 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Boss Fade",
-      "address": "Steinstraße 30, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJfUxo04TBqEcROYEv0vI0B08",
-      "types": [
-        "establishment",
-        "hair_care",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "",
-      "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "https://bossfade.pages.dev/",
-      "email": "momo.bossfade@gmail.com",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'boss' in domain/local",
-      "branch": "Friseur",
-      "region": "Brandenburg an der Havel"
-    },
-    {
-      "name": "Kupko Friseursalon",
-      "address": "Wilhelmsdorfer Str. 50, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJQUfL5YrAqEcRgRx_k9PArlk",
+      "name": "Nico Cut Barbershop",
+      "address": "Vereinsstraße 2, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJazfuXt3BqEcRNL3EC7dinGA",
       "types": [
         "establishment",
         "hair_care",
         "point_of_interest"
       ],
-      "phone": "03381 661822",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "http://www.kupko.de/"
-    },
-    {
-      "name": "One Cut",
-      "address": "Hauptstraße 10, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJ2wVNhUjBqEcR75V4BMYY_X0",
-      "types": [
-        "establishment",
-        "hair_care",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "03381 3468723"
+      "phone": "0176 63381176",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
     },
     {
       "name": "Friseur am Markt Neue Linie GmbH",
@@ -129,16 +77,19 @@
       "old_or_no_website": "http://www.neue-linie.com/?portfolio=friseur_am_markt"
     },
     {
-      "name": "Salon Lupke, Friseur in Brandenburg, Braut- u. Eventstyling",
-      "address": "Nelkenweg 4, 14772 Brandenburg an der Havel, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJzU4rrXM7ZUER1VmsZZ3QlHE",
+      "name": "Friseursalon Wolff",
+      "address": "Haydnstraße 30, 14772 Brandenburg an der Havel-Görden, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ6b6xyiDBqEcRUDbIS7zej0M",
       "types": [
         "establishment",
         "hair_care",
         "point_of_interest"
       ],
-      "phone": "01522 9457491"
+      "phone": "03381 730736",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
     },
     {
       "name": "Friseur Schnittpunkt",
@@ -156,38 +107,16 @@
       "old_or_no_website": ""
     },
     {
-      "name": "New Look Barbershop",
-      "address": "Steinstraße 17, 14776 Brandenburg an der Havel-Göttin, Deutschland",
+      "name": "Salon Lupke, Friseur in Brandenburg, Braut- u. Eventstyling",
+      "address": "Nelkenweg 4, 14772 Brandenburg an der Havel, Deutschland",
       "rating": 4.8,
-      "place_id": "ChIJ3Zsu-m_BqEcRAE_HSc47LiI",
-      "types": [
-        "establishment",
-        "hair_care",
-        "health",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Salam Barbershop",
-      "address": "Rosa-Luxemburg-Allee 2, 14772 Brandenburg an der Havel, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJc0iyStHBqEcRhvAvzs2SE30",
+      "place_id": "ChIJzU4rrXM7ZUER1VmsZZ3QlHE",
       "types": [
         "establishment",
         "hair_care",
         "point_of_interest"
-      ]
-    },
-    {
-      "name": "Friseursalon Wolff",
-      "address": "Haydnstraße 30, 14772 Brandenburg an der Havel-Görden, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJ6b6xyiDBqEcRUDbIS7zej0M",
-      "types": [
-        "establishment",
-        "hair_care",
-        "point_of_interest"
-      ]
+      ],
+      "phone": "01522 9457491"
     },
     {
       "name": "HAARtreff Neue Linie GmbH",
@@ -200,13 +129,42 @@
         "hair_care",
         "point_of_interest",
         "spa"
-      ]
+      ],
+      "phone": "03381 521736",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.neue-linie.com/",
+      "email": "info@neue-linie.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'neue' in domain/local",
+      "branch": "Friseur",
+      "region": "Brandenburg an der Havel"
     },
     {
-      "name": "Friseursalon marie STYLE",
-      "address": "St. Petri 2, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJBQvLVlHAqEcRjIO02u6zqBg",
+      "name": "AR Haarmanufaktur",
+      "address": "Steinstraße 41, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJb0AKuUPBqEcR576m4UGuT8c",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "03381 2182750",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://ar-haarmanufaktur.de/",
+      "email": "info@ar-haarmanufaktur.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'haarmanufaktur' in domain/local",
+      "branch": "Friseur",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Friseur Das Handwerk",
+      "address": "Große Gartenstraße 1C, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ0zGyB4DBqEcRWIoKFXsLq-A",
       "types": [
         "establishment",
         "hair_care",
@@ -214,10 +172,32 @@
       ]
     },
     {
-      "name": "Friseursalon Rapunzel",
-      "address": "Fouquestraße 8, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ62AXoljBqEcRRqtvg878G7U",
+      "name": "Rehwald Friseure Gbr",
+      "address": "Große Gartenstraße 5, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJB-A6qF7AqEcRHXtUi7ufrQg",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Kupko Friseursalon",
+      "address": "Wilhelmsdorfer Str. 50, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJQUfL5YrAqEcRgRx_k9PArlk",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Hair-Team Monika Nowotny",
+      "address": "Steinstraße 13, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJfeYJ91nAqEcRirqpdB7w624",
       "types": [
         "establishment",
         "hair_care",
@@ -238,18 +218,29 @@
       ]
     },
     {
-      "name": "Friseur Das Handwerk",
-      "address": "Große Gartenstraße 1C, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJ0zGyB4DBqEcRWIoKFXsLq-A",
+      "name": "HAARstudio Nord Neue Linie",
+      "address": "Werner-Seelenbinder-Straße 53, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ6yDyogLBqEcRosA93d5PNQY",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Top Ten Friseur Isabell Bahrs",
+      "address": "Magdeburger Str. 11, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJETXsT-XAqEcRHTAzPRAAPuA",
       "types": [
         "establishment",
         "hair_care",
         "point_of_interest"
       ]
-    }
-  ],
-  "hot_leads": [
+    },
     {
       "name": "Boss Fade",
       "address": "Steinstraße 30, 14776 Brandenburg an der Havel, Deutschland",
@@ -260,14 +251,60 @@
         "hair_care",
         "health",
         "point_of_interest"
+      ]
+    },
+    {
+      "name": "Friseursalon marie STYLE",
+      "address": "St. Petri 2, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJBQvLVlHAqEcRjIO02u6zqBg",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "HAARtreff Neue Linie GmbH",
+      "address": "Bahnhofspassage 4, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ3WUCx1zAqEcRktHLIUtlFZw",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest",
+        "spa"
       ],
-      "phone": "",
+      "phone": "03381 521736",
       "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "https://bossfade.pages.dev/",
-      "email": "momo.bossfade@gmail.com",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.neue-linie.com/",
+      "email": "info@neue-linie.com",
       "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'boss' in domain/local",
+      "email_verify_reason": "Impressum: Match: 'neue' in domain/local",
+      "branch": "Friseur",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "AR Haarmanufaktur",
+      "address": "Steinstraße 41, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJb0AKuUPBqEcR576m4UGuT8c",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "03381 2182750",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://ar-haarmanufaktur.de/",
+      "email": "info@ar-haarmanufaktur.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'haarmanufaktur' in domain/local",
       "branch": "Friseur",
       "region": "Brandenburg an der Havel"
     }
