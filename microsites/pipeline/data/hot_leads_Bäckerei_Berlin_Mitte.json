@@ -1,0 +1,258 @@
+{
+  "branch": "Bäckerei",
+  "region": "Berlin Mitte",
+  "all_candidates": [
+    {
+      "name": "tigertörtchen Café und Backschule - Berlin Cupcakes",
+      "address": "Chausseestraße 60, 10115 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJdV4z4I1RqEcRlRdgz-Tuj3M",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 67969051"
+    },
+    {
+      "name": "ZEIT FÜR BROT",
+      "address": "Alte Schönhauser Str. 4, 10119 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJyTPda-JRqEcRFHRtJJAZIwE",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 28046780"
+    },
+    {
+      "name": "Bäcker Taudien",
+      "address": "Invalidenstraße 156, 10115 Berlin, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJrfqg9-9RqEcRo7j6hWsvNKE",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 2829137",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://www.instagram.com/taudienhandwerksbaecker/"
+    },
+    {
+      "name": "The Sanctuary - Italian Vegan Bakery",
+      "address": "Torstraße 175, 10115 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJWch6Ll5RqEcR37T0ArvNj3I",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://thesanctuaryberlin.com/",
+      "email": "info@thesanctuaryberlin.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'the' in domain/local",
+      "branch": "Bäckerei",
+      "region": "Berlin Mitte"
+    },
+    {
+      "name": "Fresh Bäckerei",
+      "address": "Reinhardtstraße 8, 10117 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJm0wQ5OlRqEcRhlW7NC-5ie0",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 27890594",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "hansis brot",
+      "address": "Kiautschoustraße 1, 13353 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJN0bbUetRqEcR1IYSCeQDqdw",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "FREA Bakery",
+      "address": "Gartenstraße 9, 10115 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ85onOJ1RqEcRqIvn3fGOa-0",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "030 13897068",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.freabakery.de/",
+      "email": "info@freabakery.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'frea' in domain/local",
+      "branch": "Bäckerei",
+      "region": "Berlin Mitte"
+    },
+    {
+      "name": "Bäckerei Bellevue Berlin Café",
+      "address": "Paulstraße 22, 10557 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJw1IxrLNRqEcRms51S0ExaGA",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0176 64747519",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Du Bonheur",
+      "address": "Brunnenstraße 39, 10115 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ72qAj_BRqEcRN1YQdIUYuFQ",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 56591955"
+    },
+    {
+      "name": "Wiener Brot Holzofenbäckerei",
+      "address": "Tucholskystraße 31, 10117 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ5VOrhOhRqEcRITT5B6n5Ooc",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 32516526",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.wienerbrot.de/",
+      "email": "info@wienerbrot.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'wiener' in domain/local",
+      "branch": "Bäckerei",
+      "region": "Berlin Mitte"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "The Sanctuary - Italian Vegan Bakery",
+      "address": "Torstraße 175, 10115 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJWch6Ll5RqEcR37T0ArvNj3I",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://thesanctuaryberlin.com/",
+      "email": "info@thesanctuaryberlin.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'the' in domain/local",
+      "branch": "Bäckerei",
+      "region": "Berlin Mitte"
+    },
+    {
+      "name": "FREA Bakery",
+      "address": "Gartenstraße 9, 10115 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ85onOJ1RqEcRqIvn3fGOa-0",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "030 13897068",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.freabakery.de/",
+      "email": "info@freabakery.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'frea' in domain/local",
+      "branch": "Bäckerei",
+      "region": "Berlin Mitte"
+    },
+    {
+      "name": "Wiener Brot Holzofenbäckerei",
+      "address": "Tucholskystraße 31, 10117 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ5VOrhOhRqEcRITT5B6n5Ooc",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 32516526",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.wienerbrot.de/",
+      "email": "info@wienerbrot.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'wiener' in domain/local",
+      "branch": "Bäckerei",
+      "region": "Berlin Mitte"
+    }
+  ]
+}
