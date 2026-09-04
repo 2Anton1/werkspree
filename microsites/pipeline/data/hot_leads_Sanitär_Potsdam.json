@@ -1,0 +1,206 @@
+{
+  "branch": "Sanitär",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "Laabs GmbH für Heizung, Sanitär und Fliesen",
+      "address": "Am Silbergraben 16, 14480 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJc3YdjwdfqEcRh5c0UnbuQWg",
+      "types": [
+        "electrician",
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 649590"
+    },
+    {
+      "name": "Rudski GmbH Bäder & Heizungen",
+      "address": "Weinbergstraße 27, 14469 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJR84XZHz1qEcRZsrPZwxZh1o",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0331 2000610"
+    },
+    {
+      "name": "Bensch, Hendrick Installateurmeiste",
+      "address": "Rückertstraße 11, 14469 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ3ePPiw73qEcR_4KqCsHMV8E",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0331 296019"
+    },
+    {
+      "name": "Schulz & Co GmbH",
+      "address": "Florastraße 40, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJT4oBGKP2qEcRMaQZ05srIY4",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 500355"
+    },
+    {
+      "name": "Axel Jaenecke GmbH",
+      "address": "Lennestraße 74, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ_92emM31qEcRJyCElnRUAyM",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0331 860077",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.potsdam-heizung.de/",
+      "email": "a.jaenecke@web.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'jaenecke' in domain/local",
+      "branch": "Sanitär",
+      "region": "Potsdam"
+    },
+    {
+      "name": "H2O BÄDER & HEIZUNGSBAU GmbH",
+      "address": "Fritz-Zubeil-Straße 14, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJzX29njP0qEcRemssKNGJCFQ",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 23618334"
+    },
+    {
+      "name": "Werner Platz GmbH & Co. KG",
+      "address": "Sternstraße 66, 14480 Potsdam Südost, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJURRFT4_1qEcRibIGodVaNz0",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 6001135"
+    },
+    {
+      "name": "Siegert Heizung-Sanitär",
+      "address": "Weißes Haus, 20m vor dem Standblitzer, Heinrich-Mann-Allee 103C, 14473 Potsdam Süd, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ16-69Iv1qEcRFlbjBWV0yHY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 60082068"
+    },
+    {
+      "name": "HVT Haus-und Versorgungstechnik GmbH",
+      "address": "Gewerbegebiet Gartenstraße-Ost, Großbeerenstraße 139, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJrf3MOUNfqEcRUiv8U4Iqmgc",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0800 7487100"
+    },
+    {
+      "name": "DEIN HÄNDLER René Fischer & Dennis Subirge GbR",
+      "address": "Am Raubfang 3-5, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJR5OzP6A7ZUERWADRzX_s0gM",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 5507090"
+    },
+    {
+      "name": "Giesbert Rühlemann Klempner- u. Installateurmeister - Potsdam",
+      "address": "Schlaatzstraße 18, 14473 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ4WdvCbD1qEcRWmNrm83rUO8",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "HTA Haustechnik Atlas",
+      "address": "Gutenbergstraße 16, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJOSmQWdD1qEcRXM5ULtHE6qA",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Dirk Müller Heizung Klima Sanitär",
+      "address": "Kietzerstraße 18, 14476 Potsdam-Fahrland, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJNzLSai33qEcRV13j25HF_o8",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Axel Jaenecke GmbH",
+      "address": "Lennestraße 74, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ_92emM31qEcRJyCElnRUAyM",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0331 860077",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.potsdam-heizung.de/",
+      "email": "a.jaenecke@web.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'jaenecke' in domain/local",
+      "branch": "Sanitär",
+      "region": "Potsdam"
+    }
+  ]
+}
