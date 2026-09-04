@@ -1,0 +1,256 @@
+{
+  "branch": "Sanitär",
+  "region": "Berlin Mitte",
+  "all_candidates": [
+    {
+      "name": "VTG mbH - Sanitär Heizung Gas und Notdienst",
+      "address": "Perleberger Str. 5, 10559 Berlin, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ1UUz09tTqEcRbcXSpBu0Eyw",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 81700444"
+    },
+    {
+      "name": "Olaf Rathmann",
+      "address": "Gottschedstraße 21, 13357 Berlin, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ34aEFC9SqEcRXaRFByCVm28",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 49791187"
+    },
+    {
+      "name": "Gebrüder Schlaf Bäder & Heizungen GmbH",
+      "address": "Lengeder Straße 21-23, 13353 Berlin-Bezirk Reinickendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ_2CqZYNRqEcR8P-Xv3UL1_c",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 55488692"
+    },
+    {
+      "name": "Sanitär Morhardt",
+      "address": "Sellerstraße 17, 13353 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ0SQ3xrJwCKsRpysU2nRkOvw",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 13881234"
+    },
+    {
+      "name": "RohrKlar Klempner Berlin - Mitte 24h Notdienst",
+      "address": "Voltairestraße 11, 10179 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJm0CtEzHl1WQRZvw-c0LZOX4",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "0176 32444322"
+    },
+    {
+      "name": "A + M Heizung-Sanitär GmbH",
+      "address": "Torstraße 105-107, 10119 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJAWw8kB1OqEcR4KVAgBs7Myc",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 24628350"
+    },
+    {
+      "name": "Sanitär Express",
+      "address": "Alt-Moabit 43, 10555 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ5Wu9oQ5RqEcR1yupECnvVTY",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "030 39876655",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://www.sanitaer-express.berlin/"
+    },
+    {
+      "name": "SANA-TEC GmbH - Gas, Wasser, Heizung, Sanitär Installateur und Notdienst",
+      "address": "Armenische Str. 15, 13349 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJt54ZpohRqEcR8q-DGGw6GoY",
+      "types": [
+        "car_repair",
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 53112265"
+    },
+    {
+      "name": "Daniel Buland e.K.",
+      "address": "Bochumer Str. 5, 10555 Berlin, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJC8GUBAxRqEcRM6D6yHG5moM",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 3916727",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "https://www.buland.de/",
+      "email": "mail@buland.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'buland' in domain/local",
+      "branch": "Sanitär",
+      "region": "Berlin Mitte"
+    },
+    {
+      "name": "Penning Sanitär Handel GmbH + Co. KG",
+      "address": "Schützenstraße 39, 10117 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJI50od71TqEcRuM-ujvCnq1w",
+      "types": [
+        "car_repair",
+        "establishment",
+        "furniture_store",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 4099030",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://penning-sanitaer.de/kuechen/ausstellung-berlin/"
+    },
+    {
+      "name": "Leberecht GmbH",
+      "address": "Schönwalder Str. 16, 13347 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJgzS5qYhRqEcR36qwihVw4Y4",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "EK-Haustechnik Heizung-Sanitär, Notdienst",
+      "address": "Liebenwalder Str. 6, 13347 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJbSOuIp1TqEcRqA0jjSsztZE",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "ABEX Mitte",
+      "address": "Heidestraße 46-52, 10557 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJma3RfyZRqEcRqgCYP-hcU_o",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "M. Schulze Sanitärinstallation",
+      "address": "Blücherstraße 57A, 10961 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJt6pBtNZPqEcRQx_erJQ3BJs",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "SHK | SHOP",
+      "address": "Stromstraße 30, 10551 Berlin, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJNym6ynRRqEcRhoE9XU9BQww",
+      "types": [
+        "establishment",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Heizung & Sanitär Y. Ekinci",
+      "address": "Beusselstraße 3, 10553 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJHdkeKRJRqEcRKP34CC1vyOw",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Heizung/Sanitär Notdienst Hohler Berlin",
+      "address": "Koloniestraße 143, 13359 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJgSiETmRTqEcRELLCNF7NtbU",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Daniel Buland e.K.",
+      "address": "Bochumer Str. 5, 10555 Berlin, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJC8GUBAxRqEcRM6D6yHG5moM",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 3916727",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "https://www.buland.de/",
+      "email": "mail@buland.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'buland' in domain/local",
+      "branch": "Sanitär",
+      "region": "Berlin Mitte"
+    }
+  ]
+}

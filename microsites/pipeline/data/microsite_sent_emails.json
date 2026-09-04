@@ -352,6 +352,13 @@
       "subject": "FREA Bakery: Ihre neue Website ist fertig",
       "site_url": "https://werkspree.bki-de.de/microsites/sites/frea-bakery/",
       "sent_at": "2026-09-04T03:02:28.052421+02:00"
+    },
+    {
+      "company_name": "Bäcker Lenz",
+      "email": "info@backlenz.de",
+      "subject": "Bäcker Lenz: Ihre neue Website ist fertig",
+      "site_url": "https://werkspree.bki-de.de/microsites/sites/backer-lenz/",
+      "sent_at": "2026-09-04T06:01:21.227197+02:00"
     }
   ]
 }
