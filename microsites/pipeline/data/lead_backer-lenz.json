@@ -1,0 +1,19 @@
+{
+  "company_name": "Bäcker Lenz",
+  "segment": "Bäckerei",
+  "region": "Potsdam",
+  "email": "info@backlenz.de",
+  "email_verified": "yes",
+  "phone": "0331 970487",
+  "website_issue": "keine/veraltete eigene Website",
+  "about": "",
+  "products": [],
+  "opening_hours": {},
+  "owner": "",
+  "address": "Geschwister-Scholl-Straße 8, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+  "city": "Potsdam",
+  "slug": "backer-lenz",
+  "site_url": "https://werkspree.bki-de.de/microsites/sites/backer-lenz/",
+  "built_at": "2026-09-04T06:01:17.970162+02:00",
+  "builder": "gemini"
+}

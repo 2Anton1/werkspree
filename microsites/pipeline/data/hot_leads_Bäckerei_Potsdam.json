@@ -1,0 +1,160 @@
+{
+  "branch": "Bäckerei",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "Bäckerei Schmidtke",
+      "address": "Benzstraße 21, 14482 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJMehASVhfqEcRi9N_HxyKS38",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 7480082"
+    },
+    {
+      "name": "Landbackstube",
+      "address": "Ketziner Str. 51, 14476 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJyYiTmC33qEcRjCWs96xqFdI",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "033208 234849"
+    },
+    {
+      "name": "Bäcker Lenz",
+      "address": "Geschwister-Scholl-Straße 8, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJPevMQc47ZUERC2xMnBj0o-c",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 970487",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.bäckerei-lenz.de/",
+      "email": "info@backlenz.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'lenz' in domain/local",
+      "branch": "Bäckerei",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Müseler's Brotladen",
+      "address": "Geschwister-Scholl-Straße 3, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJvZgDqMz1qEcRBt07O_ZQk1I",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 900380",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "ZEIT FÜR BROT",
+      "address": "Brandenburger Str. 28A, 14467 Potsdam, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ3fRZYsP1qEcRjm3lPwGD4wM",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 62069904"
+    },
+    {
+      "name": "Matthias + Andreas Schröter GbR Bäckerei/Konditorei",
+      "address": "Dortustraße 51, 14467 Potsdam, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJL4EPG9D1qEcRZMnox3PtfFs",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 296818",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Bäcker Izi",
+      "address": "Rudolf-Breitscheid-Straße 45, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ8Y7Hr_f1qEcRH8p5kerURbw",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Bäcker Thonke Potsdam, Café am Krongut",
+      "address": "Potsdamer Str. 186, 14469 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJY_nt4Hj3qEcRLzrMQ467C8s",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 55058713"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Bäcker Lenz",
+      "address": "Geschwister-Scholl-Straße 8, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJPevMQc47ZUERC2xMnBj0o-c",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 970487",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.bäckerei-lenz.de/",
+      "email": "info@backlenz.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'lenz' in domain/local",
+      "branch": "Bäckerei",
+      "region": "Potsdam"
+    }
+  ]
+}

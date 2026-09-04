@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bäcker Lenz | Traditionelle Bäckerei in Potsdam</title>
+    <meta name="description" content="Bäcker Lenz in Potsdam-West – Frische Backwaren, traditionelles Handwerk und gemütliches Stehcafé in der Geschwister-Scholl-Straße.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-gold: #D4A843;
+            --accent-brown: #6B4423;
+            --bg-cream: #FAF6EF;
+            --text-dark: #3E2A1A;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--accent-brown);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Navigation --- */
+        nav {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-brown);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(107, 68, 35, 0.6), rgba(107, 68, 35, 0.6)), 
+                        url('https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: var(--white);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-brown);
+            transform: translateY(-3px);
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-gold);
+        }
+
+        /* --- Über uns --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 20px 20px 0 var(--primary-gold);
+        }
+
+        /* --- Sortiment Cards --- */
+        .sortiment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(212, 168, 67, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(107, 68, 35, 0.1);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+
+        /* --- Tagesangebot --- */
+        .tagesangebot-box {
+            background: var(--white);
+            border: 3px solid var(--primary-gold);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .tagesangebot-box::before {
+            content: 'HEUTE FRISCH';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-gold);
+            color: var(--white);
+            padding: 5px 20px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        /* --- Stehcafé --- */
+        .stehcafe {
+            background-color: var(--accent-brown);
+            color: var(--white);
+            text-align: center;
+            border-radius: 20px;
+            padding: 60px 40px;
+        }
+
+        .stehcafe h2 { color: var(--white); margin-bottom: 20px; }
+
+        /* --- Kontakt & Öffnungszeiten --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .opening-hours {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .info-item i {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            width: 25px;
+        }
+
+        .info-item:hover {
+            color: var(--primary-gold);
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dotted #ddd;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--accent-brown);
+            color: rgba(255,255,255,0.8);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+            .about-image { order: -1; }
+        }
+
+        /* Animation */
+        .fade-in {
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <i class="fas fa-bread-slice"></i> Bäcker Lenz
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Frisch gebacken jeden Tag</h1>
+            <p>Handwerkliche Tradition, die man schmeckt. Mitten im Herzen von Potsdam-West verwöhnen wir Sie täglich mit ofenfrischen Köstlichkeiten.</p>
+            <a href="#kontakt" class="cta-button">Komm vorbei</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Unsere Tradition</h2>
+                    </div>
+                    <p>Willkommen bei Bäcker Lenz in Potsdam. Seit vielen Jahren stehen wir für echtes Backhandwerk und höchste Qualität in der Geschwister-Scholl-Straße. Unsere Backstube ist das Herzstück unseres Betriebs, in dem wir täglich mit Leidenschaft und ausgewählten Zutaten für Sie backen.</p>
+                    <p>Ob das krustige Abendbrot, die lockeren Brötchen am Morgen oder ein feines Stück Kuchen zum Nachmittagskaffee – bei uns finden Sie ehrliche Produkte ohne unnötige Zusatzstoffe. Wir sind stolz darauf, ein Teil der Potsdamer Nachbarschaft zu sein.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1026&q=80" alt="Frisches Brot in der Bäckerei">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sortiment" style="background-color: #fdfbf7;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Sortiment</h2>
+            </div>
+            <div class="sortiment-grid">
+                <div class="card">
+                    <i class="fas fa-bread-slice"></i>
+                    <h3>Brot</h3>
+                    <p>Herzhafte Natursauerteigbrote und Spezialitäten.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-cookie"></i>
+                    <h3>Brötchen</h3>
+                    <p>Knusprige Vielfalt für Ihren perfekten Frühstückstisch.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Kuchen</h3>
+                    <p>Hausgemachte Blechkuchen wie bei Oma.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-stroopwafel"></i>
+                    <h3>Torten</h3>
+                    <p>Feine Konditorwaren für besondere Anlässe.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px; font-style: italic; color: #888;">
+                <p>Weitere Leistungen auf Anfrage</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="angebot">
+        <div class="container">
+            <div class="tagesangebot-box">
+                <h3>Unser heutiges Highlight</h3>
+                <p style="font-size: 1.4rem; color: var(--accent-brown); margin: 15px 0; font-weight: 600;">
+                    Frische Dinkel-Krustis & Apfel-Zimt-Schnecken
+                </p>
+                <p>Nur solange der Vorrat reicht! Schauen Sie direkt bei uns im Laden vorbei.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="stehcafe">
+                <h2>Besuchen Sie unser Stehcafé</h2>
+                <p>Genießen Sie einen Moment der Ruhe bei einer Tasse frisch gebrühtem Kaffee und einem belegten Brötchen oder einem süßen Teilchen direkt vor Ort.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontakt & Anfahrt</h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>So erreichen Sie uns</h3>
+                    <br>
+                    <p><strong>Bäcker Lenz</strong></p>
+                    <p>Geschwister-Scholl-Straße 8</p>
+                    <p>14471 Potsdam-Westliche Vorstadt</p>
+                    <br>
+                    <a href="tel:0331970487" class="info-item">
+                        <i class="fas fa-phone"></i> 0331 970487
+                    </a>
+                    <a href="mailto:info@backlenz.de" class="info-item">
+                        <i class="fas fa-envelope"></i> info@backlenz.de
+                    </a>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i> Potsdam, Deutschland
+                    </div>
+                </div>
+                <div class="opening-hours">
+                    <h3>Öffnungszeiten</h3>
+                    <br>
+                    <ul class="hours-list">
+                        <li><span>Montag - Freitag</span> <span>06:30 - 18:00 Uhr</span></li>
+                        <li><span>Samstag</span> <span>07:00 - 13:00 Uhr</span></li>
+                        <li><span>Sonntag</span> <span>08:00 - 11:00 Uhr</span></li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.85rem; color: #666;">* An Feiertagen können die Zeiten abweichen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Bäcker Lenz - Potsdam. Alle Rechte vorbehalten.</p>
+            <div class="footer-line">
+                <p>Erstellt mit Leidenschaft für das Handwerk von <strong>Werkspree</strong></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
