@@ -373,6 +373,13 @@
       "subject": "Axel Jaenecke GmbH: Ihre neue Website ist fertig",
       "site_url": "https://werkspree.bki-de.de/microsites/sites/axel-jaenecke-gmbh/",
       "sent_at": "2026-09-04T12:01:23.288309+02:00"
+    },
+    {
+      "company_name": "Malermeister Robert Noreisch",
+      "email": "malermeister@noreisch.de",
+      "subject": "Malermeister Robert Noreisch: Ihre neue Website ist fertig",
+      "site_url": "https://werkspree.bki-de.de/microsites/sites/malermeister-robert-noreisch/",
+      "sent_at": "2026-09-05T00:01:20.320770+02:00"
     }
   ]
 }

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steffen Kadetzki Malerfachbetrieb | Frankfurt (Oder)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1B3A5F;
+            --accent: #E07A3F;
+            --bg-cream: #FAF6EF;
+            --text-dark: #2D2419;
+            --white: #ffffff;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(27, 58, 95, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(135deg, rgba(27, 58, 95, 0.9) 0%, rgba(27, 58, 95, 0.7) 100%), 
+                        url('https://images.unsplash.com/photo-1589939705384-5185138a047a?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: left;
+            border-bottom-right-radius: 100px;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: var(--radius);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(224, 122, 63, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(224, 122, 63, 0.5);
+            background-color: #cf6d35;
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* Über uns */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Leistungen */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--accent);
+            box-shadow: var(--shadow);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Projektgalerie (CSS Gradients) */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            color: var(--white);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .g1 { background: linear-gradient(45deg, #1B3A5F, #FAF6EF); }
+        .g2 { background: linear-gradient(45deg, #E07A3F, #FFD700); }
+        .g3 { background: linear-gradient(45deg, #1B3A5F, #E07A3F); }
+        .g4 { background: linear-gradient(45deg, #2D2419, #1B3A5F); }
+
+        /* Warum wir? */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .usp-card {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .usp-card h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .hours-info {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-grid, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                height: auto;
+                padding: 150px 0 100px 0;
+                text-align: center;
+                border-bottom-right-radius: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">KADETZKI MALERFACHBETRIEB</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Meisterhafte Akzente für Ihr Zuhause.</h1>
+                <p>Ihr zuverlässiger Partner für Malerarbeiten, Fassadengestaltung und exklusive Oberflächen in Frankfurt (Oder) und Umgebung.</p>
+                <a href="#kontakt" class="btn">Kostenloses Angebot</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+                        <h2>Über uns</h2>
+                    </div>
+                    <p>Willkommen beim <strong>Steffen Kadetzki Malerfachbetrieb</strong>. Als traditionsbewusster Handwerksbetrieb in Frankfurt (Oder) stehen wir für höchste Präzision und ästhetischen Anspruch. Unsere Leidenschaft ist es, Räumen eine Seele zu verleihen und Fassaden dauerhaft zu schützen.</p>
+                    <br>
+                    <p>Mit tiefem Verständnis für Materialien und Farben setzen wir Ihre individuellen Wünsche fachgerecht um. Ob moderne Raumgestaltung oder klassische Instandsetzung – wir verbinden handwerkliches Können mit moderner Technik, um für Sie Ergebnisse zu schaffen, die begeistern.</p>
+                </div>
+                <div style="background: var(--accent); height: 100%; min-height: 300px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: white; padding: 40px; text-align: center;">
+                    <h3 style="color: white; font-size: 2rem;">Qualität aus Meisterhand seit vielen Jahren.</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background-color: rgba(27, 58, 95, 0.03);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+                <p>Professionelle Lösungen für jeden Anspruch</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Innenanstrich</h3>
+                    <p>Frische Farben und hochwertige Wandgestaltungen für Ihr Wohlbefinden.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fassaden</h3>
+                    <p>Schutz und Ästhetik für Ihre Immobilie durch professionelle Außenanstriche.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tapezierarbeiten</h3>
+                    <p>Von Raufaser bis hin zu exklusiven Designtapeten – präzise verarbeitet.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Lackieren</h3>
+                    <p>Perfekte Oberflächen für Türen, Fenster und Heizkörper.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <p><em>Weitere Leistungen auf Anfrage verfügbar.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projektgalerie</h2>
+                <p>Ein Einblick in unsere Farbwelten</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item g1">Wohnraumkonzepte</div>
+                <div class="gallery-item g2">Fassadenschutz</div>
+                <div class="gallery-item g3">Exklusive Techniken</div>
+                <div class="gallery-item g4">Gewerbeobjekte</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" style="background-color: var(--primary); color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Warum wir?</h2>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-card">
+                    <h3>Erfahrung</h3>
+                    <p>Langjährige Expertise im Malerhandwerk garantiert Ihnen Sicherheit bei jedem Projekt.</p>
+                </div>
+                <div class="usp-card">
+                    <h3>Qualität</h3>
+                    <p>Wir verwenden ausschließlich hochwertige Materialien namhafter Hersteller.</p>
+                </div>
+                <div class="usp-card">
+                    <h3>Termintreue</h3>
+                    <p>Saubere Planung und pünktliche Ausführung sind für uns selbstverständlich.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontakt & Zeiten</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Steffen Kadetzki</h3>
+                    <p style="margin-bottom: 25px;">Malerfachbetrieb</p>
+                    
+                    <p><strong>Adresse:</strong><br>Wildbahn 8D<br>15236 Frankfurt (Oder)-Markendorf</p>
+                    <br>
+                    <a href="tel:0335547772" class="contact-link"><strong>Telefon:</strong> 0335 547772</a>
+                    <a href="mailto:kadetzki@maler-kadetzki.de" class="contact-link"><strong>E-Mail:</strong> kadetzki@maler-kadetzki.de</a>
+                </div>
+                <div class="hours-info">
+                    <h3>Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag</td><td>07:00 - 16:30</td></tr>
+                        <tr><td>Dienstag</td><td>07:00 - 16:30</td></tr>
+                        <tr><td>Mittwoch</td><td>07:00 - 16:30</td></tr>
+                        <tr><td>Donnerstag</td><td>07:00 - 16:30</td></tr>
+                        <tr><td>Freitag</td><td>07:00 - 14:00</td></tr>
+                        <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Steffen Kadetzki</span>
+            <p>&copy; 2023 Steffen Kadetzki Malerfachbetrieb. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">Erstellt mit handwerklicher Präzision | Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
