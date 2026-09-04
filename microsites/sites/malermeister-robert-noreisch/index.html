@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malermeister Robert Noreisch | Frankfurt (Oder)</title>
+    <meta name="description" content="Ihr zuverlässiger Malermeister in Frankfurt (Oder). Qualität, Präzision und handwerkliche Leidenschaft für Ihre Wände.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1B3A5F;
+            --accent: #E07A3F;
+            --bg-cream: #FAF6EF;
+            --text-dark: #2D2419;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(224, 122, 63, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(224, 122, 63, 0.4);
+            background-color: #f18b50;
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* --- Über uns --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--accent);
+        }
+
+        /* --- Leistungen --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        /* --- Projektgalerie (CSS Gradients) --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            color: var(--white);
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+
+        .grad-1 { background: linear-gradient(45deg, var(--primary), var(--bg-cream)); }
+        .grad-2 { background: linear-gradient(45deg, var(--accent), #f9d423); }
+        .grad-3 { background: linear-gradient(45deg, #2D2419, var(--accent)); }
+        .grad-4 { background: linear-gradient(45deg, #4a90e2, var(--bg-cream)); }
+
+        /* --- Warum wir? --- */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .usp-card {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .usp-card h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* --- Kontakt & Öffnungszeiten --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .opening-hours {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-link {
+            display: block;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .werkspree {
+            margin-top: 20px;
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-grid, .contact-container { grid-template-columns: 1fr; }
+            .section-title h2 { font-size: 1.8rem; }
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">Malermeister <span>Noreisch</span></a>
+            <div class="contact-header-link">
+                <a href="tel:033562633" style="text-decoration: none; color: var(--primary); font-weight: 600;">📞 0335 62633</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1 class="animate">Handwerkliche Präzision & Frische Farben</h1>
+                <p class="animate">Ihr Malermeister Robert Noreisch in Frankfurt (Oder). Wir bringen Qualität und Ästhetik in Ihr Zuhause oder Ihr Unternehmen.</p>
+                <a href="#kontakt" class="cta-button animate">Kostenloses Angebot anfordern</a>
+            </div>
+        </section>
+
+        <!-- Über uns -->
+        <section id="ueber-uns">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h2>Über uns</h2>
+                        <p>Herzlich willkommen bei Malermeister Robert Noreisch. Als traditionsbewusster Fachbetrieb in Frankfurt (Oder) stehen wir für Zuverlässigkeit, Sauberkeit und höchste handwerkliche Qualität. Unser Anspruch ist es, Ihre Räumlichkeiten nicht nur zu streichen, sondern sie durch fachgerechte Beratung und präzise Ausführung in echte Wohlfühloasen zu verwandeln.</p>
+                        <br>
+                        <p>Ob moderne Farbkonzepte oder klassische Malerarbeiten – wir sind Ihr kompetenter Partner direkt vor Ort in Kliestow.</p>
+                    </div>
+                    <div class="about-image" style="background: var(--accent); height: 300px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">
+                        🎨
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leistungen -->
+        <section id="leistungen" style="background: #fdfdfd;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Unsere Leistungen</h2>
+                    <p>Qualität vom Meisterbetrieb</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Innenanstrich</h3>
+                        <p>Individuelle Farbgestaltung für Ihre Wohn- und Arbeitsräume.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Fassaden</h3>
+                        <p>Schutz und neue Optik für Ihre Gebäudehülle.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Tapezierarbeiten</h3>
+                        <p>Von Raufaser bis zu hochwertigen Designtapeten.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Lackieren</h3>
+                        <p>Präzise Oberflächenveredelung für Türen, Fenster und mehr.</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <p><strong>Weitere Leistungen auf Anfrage.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projektgalerie -->
+        <section id="projekte">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Projektgalerie</h2>
+                    <p>Ein Einblick in unsere Farbwelt</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item grad-1">Wohnraumkonzepte</div>
+                    <div class="gallery-item grad-2">Fassadenschutz</div>
+                    <div class="gallery-item grad-3">Exklusive Techniken</div>
+                    <div class="gallery-item grad-4">Gewerbeobjekte</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warum wir? -->
+        <section id="warum-wir">
+            <div class="container">
+                <div class="usp-grid">
+                    <div class="usp-card">
+                        <h3>Erfahrung</h3>
+                        <p>Langjährige Expertise im Malerhandwerk garantiert beste Ergebnisse.</p>
+                    </div>
+                    <div class="usp-card">
+                        <h3>Qualität</h3>
+                        <p>Wir verwenden ausschließlich hochwertige Materialien namhafter Hersteller.</p>
+                    </div>
+                    <div class="usp-card">
+                        <h3>Termintreue</h3>
+                        <p>Pünktlichkeit und eine saubere Baustelle sind für uns selbstverständlich.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt & Öffnungszeiten -->
+        <section id="kontakt">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h2>Kontakt</h2>
+                        <p style="margin-bottom: 20px;">Wir freuen uns auf Ihre Anfrage!</p>
+                        <p><strong>Adresse:</strong><br>Herbert-Jensch-Straße 31<br>15234 Frankfurt (Oder)-Kliestow</p>
+                        <br>
+                        <a href="tel:033562633" class="contact-link">📞 0335 62633</a>
+                        <a href="mailto:malermeister@noreisch.de" class="contact-link">📧 malermeister@noreisch.de</a>
+                    </div>
+                    <div class="opening-hours">
+                        <h2>Öffnungszeiten</h2>
+                        <ul class="hours-list">
+                            <li><span>Montag - Donnerstag:</span> <span>07:00 - 16:30 Uhr</span></li>
+                            <li><span>Freitag:</span> <span>07:00 - 14:00 Uhr</span></li>
+                            <li><span>Samstag:</span> <span>Nach Vereinbarung</span></li>
+                            <li><span>Sonntag:</span> <span>Geschlossen</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Malermeister Robert Noreisch</span>
+            <p>&copy; 2023 - 2024 Alle Rechte vorbehalten.</p>
+            <p>Frankfurt (Oder) | Kliestow</p>
+            <div class="werkspree">
+                Erstellt mit Leidenschaft für das Handwerk – Werkspree
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

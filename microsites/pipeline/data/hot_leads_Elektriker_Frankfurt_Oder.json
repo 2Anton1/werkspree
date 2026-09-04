@@ -1,0 +1,84 @@
+{
+  "branch": "Elektriker",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Elektro Schneider",
+      "address": "Nußweg 1, 15232 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJby_ZbQCYB0cRzMYeNzdpbU0",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 543582"
+    },
+    {
+      "name": "Elektro Stachecki",
+      "address": "Fischerstraße 42, 15230 Frankfurt (Oder)-Gubener Vorstadt, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJswXAOwqYB0cRgGxHegiCS48",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 24207"
+    },
+    {
+      "name": "Elektro-Bollfras",
+      "address": "Damaschkeweg 6, 15234 Frankfurt (Oder)-Markendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ6QFjBT6YB0cRdaUtkqT5rTA",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 4333424",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.elektro-bollfras.de/"
+    },
+    {
+      "name": "Welenga Elektrohandwerk GmbH",
+      "address": "Sandfurt 2, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJV3pKXZk5ZUERllUzfi1vWyA",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01516 5001010"
+    },
+    {
+      "name": "Norbert Huck Elektroinstallation",
+      "address": "Rostocker Str. 15, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJTxJj7V2YB0cRRZvvF9AkbN8",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 324441"
+    },
+    {
+      "name": "Obeta",
+      "address": "Goepelstraße 90, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ4xTdzkWYB0cRwzZ_5g7Wh_0",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 4014480",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.obeta.de/"
+    }
+  ],
+  "hot_leads": []
+}

@@ -366,6 +366,13 @@
       "subject": "Daniel Buland e.K.: Ihre neue Website ist fertig",
       "site_url": "https://werkspree.bki-de.de/microsites/sites/daniel-buland-e-k/",
       "sent_at": "2026-09-04T09:01:39.941651+02:00"
+    },
+    {
+      "company_name": "Axel Jaenecke GmbH",
+      "email": "a.jaenecke@web.de",
+      "subject": "Axel Jaenecke GmbH: Ihre neue Website ist fertig",
+      "site_url": "https://werkspree.bki-de.de/microsites/sites/axel-jaenecke-gmbh/",
+      "sent_at": "2026-09-04T12:01:23.288309+02:00"
     }
   ]
 }
