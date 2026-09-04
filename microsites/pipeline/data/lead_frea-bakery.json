@@ -1,0 +1,19 @@
+{
+  "company_name": "FREA Bakery",
+  "segment": "Bäckerei",
+  "region": "Berlin Mitte",
+  "email": "info@freabakery.de",
+  "email_verified": "yes",
+  "phone": "030 13897068",
+  "website_issue": "keine/veraltete eigene Website",
+  "about": "",
+  "products": [],
+  "opening_hours": {},
+  "owner": "",
+  "address": "Gartenstraße 9, 10115 Berlin, Deutschland",
+  "city": "Berlin Mitte",
+  "slug": "frea-bakery",
+  "site_url": "https://werkspree.bki-de.de/microsites/sites/frea-bakery/",
+  "built_at": "2026-09-04T03:02:25.613594+02:00",
+  "builder": "gemini"
+}
