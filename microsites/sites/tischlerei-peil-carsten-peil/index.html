@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tischlerei Peil Carsten Peil | Maßarbeit aus Frankfurt (Oder)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B6F47;
+            --primary-dark: #6F5838;
+            --accent: #4A3C28;
+            --bg-light: #FAF6EF;
+            --text-dark: #2D2419;
+            --white: #ffffff;
+            --wood-gradient: repeating-linear-gradient(
+                90deg,
+                #8B6F47 0px,
+                #8B6F47 2px,
+                #967b55 2px,
+                #967b55 4px
+            );
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo span {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--primary);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 120px 0;
+            background: linear-gradient(rgba(74, 60, 40, 0.85), rgba(74, 60, 40, 0.85)), url('https://images.unsplash.com/photo-1581447100595-3a813599346f?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--wood-gradient);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--white);
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 6px 6px 0px var(--accent);
+        }
+
+        .cta-button:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0px var(--accent);
+            background: var(--primary-dark);
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto 0;
+        }
+
+        /* --- About Us --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            background: var(--white);
+            padding: 40px;
+            border-left: 8px solid var(--primary);
+            box-shadow: 20px 20px 60px rgba(0,0,0,0.03);
+        }
+
+        /* --- Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        /* --- Materials --- */
+        .materials-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .material-item {
+            background: var(--accent);
+            color: var(--white);
+            padding: 15px 30px;
+            font-weight: 600;
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .material-item::before {
+            content: "•";
+            color: var(--primary);
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* --- References --- */
+        .reference-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .ref-box {
+            height: 250px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+        .ref-1 { background: linear-gradient(45deg, #4A3C28, #8B6F47); }
+        .ref-2 { background: linear-gradient(135deg, #6F5838, #4A3C28); }
+        .ref-3 { background: linear-gradient(to bottom right, #8B6F47, #2D2419); }
+
+        .ref-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            z-index: 2;
+        }
+
+        .ref-box p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            z-index: 2;
+        }
+
+        .ref-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--wood-gradient);
+            opacity: 0.1;
+        }
+
+        /* --- Contact & Info --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info {
+            background: var(--accent);
+            color: var(--white);
+            padding: 50px;
+            border-radius: 4px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 30px;
+            color: var(--primary);
+        }
+
+        .contact-link {
+            color: var(--white);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #1a150f;
+            color: rgba(255,255,255,0.6);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            width: 100%;
+            height: 4px;
+            background: var(--wood-gradient);
+            margin-bottom: 30px;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .about-grid, .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 { font-size: 2.5rem; }
+            section { padding: 60px 0; }
+        }
+
+        /* Animations */
+        [data-aos] {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    TISCHLEREI PEIL
+                    <span>Carsten Peil • Frankfurt (Oder)</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Maßarbeit aus Holz</h1>
+            <p>Ihr kompetenter Partner für individuellen Innenausbau und traditionelles Handwerk in Frankfurt (Oder).</p>
+            <a href="#kontakt" class="cta-button">Angebot anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 style="margin-bottom: 20px;">Tradition & Präzision</h2>
+                    <p>Seit vielen Jahren steht die Tischlerei Peil in Frankfurt (Oder) für höchste Präzision und Leidenschaft im Holzhandwerk. In unserer Werkstatt in der Otto-Hahn-Straße verbinden wir traditionelle Techniken mit modernen Lösungen, um individuelle Wohnträume wahr werden zu lassen. Unser Fokus liegt auf Qualität, Langlebigkeit und der natürlichen Schönheit des Werkstoffs Holz.</p>
+                </div>
+                <div style="background: var(--wood-gradient); height: 300px; box-shadow: 15px 15px 0 var(--accent);"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #f2ede4;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Individuelle Beratung</h3>
+                    <p>Wir planen gemeinsam mit Ihnen Ihr Projekt nach Maß.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Leistungen auf Anfrage</h3>
+                    <p>Gerne erstellen wir Ihnen ein individuelles Angebot für Ihr Vorhaben.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Handwerkliche Qualität</h3>
+                    <p>Präzise Ausführung durch erfahrene Tischlerhand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="materialien">
+        <div class="container">
+            <div class="section-title">
+                <h2>Materialien</h2>
+            </div>
+            <ul class="materials-list">
+                <li class="material-item">Massivholz</li>
+                <li class="material-item">Eiche</li>
+                <li class="material-item">Buche</li>
+                <li class="material-item">Esche</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="referenzen" style="background-color: #f2ede4;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Referenzen</h2>
+            </div>
+            <div class="reference-grid">
+                <div class="ref-box ref-1">
+                    <h4>Möbelbau</h4>
+                    <p>Individuelle Einzelstücke für Wohnräume.</p>
+                </div>
+                <div class="ref-box ref-2">
+                    <h4>Innenausbau</h4>
+                    <p>Passgenaue Lösungen für anspruchsvolle Architektur.</p>
+                </div>
+                <div class="ref-box ref-3">
+                    <h4>Restaurierung</h4>
+                    <p>Erhalt von historischer Bausubstanz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Kontakt aufnehmen</h3>
+                    <p style="margin-bottom: 30px;">Besuchen Sie uns in unserer Werkstatt oder rufen Sie uns an. Wir freuen uns auf Ihr Projekt.</p>
+                    
+                    <p><strong>Adresse:</strong><br>Otto-Hahn-Straße 18<br>15236 Frankfurt (Oder)</p>
+                    <br>
+                    <a href="tel:03352849439" class="contact-link">📞 0335 2849439</a>
+                    <a href="mailto:info@tischlerei-peil.com" class="contact-link">✉️ info@tischlerei-peil.com</a>
+                </div>
+                <div>
+                    <h3 style="margin-bottom: 20px;">Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag - Donnerstag</td><td>07:00 - 16:00 Uhr</td></tr>
+                        <tr><td>Freitag</td><td>07:00 - 13:00 Uhr</td></tr>
+                        <tr><td>Samstag - Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                    <p style="margin-top: 20px; font-size: 0.9rem; font-style: italic;">Termine außerhalb der Öffnungszeiten nach telefonischer Vereinbarung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-line"></div>
+        <div class="container">
+            <p>&copy; 2023 Tischlerei Peil Carsten Peil. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Erstellt mit Werkspree</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Scroll Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, .service-card, .ref-box').forEach(el => {
+            el.style.opacity = "0";
+            el.style.transform = "translateY(20px)";
+            el.style.transition = "all 0.6s ease-out";
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

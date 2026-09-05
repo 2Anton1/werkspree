@@ -1,0 +1,213 @@
+{
+  "branch": "Tischlerei",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Tischlerei Strowich GmbH",
+      "address": "Kleine Str. 20, 15234 Frankfurt (Oder)-Booßen, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJTVWY9pyZB0cRSuUXAlcosIA",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "033605 212"
+    },
+    {
+      "name": "Tischlerei Peil Carsten Peil",
+      "address": "Otto-Hahn-Straße 18, 15236 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNYBhaqqXB0cRgvc9cZjJgNo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 2849439",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.tischlerei-peil.com/",
+      "email": "info@tischlerei-peil.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'peil' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Tischlerei Büttner",
+      "address": "Mixdorfer Str. 9, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJVVVVVQqYB0cRWDK37E6I2PM",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0172 3042469",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.tischlerei-ffo.de/kontakt.html"
+    },
+    {
+      "name": "Stadt Bau Tischlereigesellschaft mbH",
+      "address": "Goethestraße 11E, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ4xTdzkWYB0cRmF0SCKtdBN4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 4014830",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "https://stadtbau-tischlerei.de/",
+      "email": "stadt-bau-tischlerei@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'stadt' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Michael Jahn Tischlerei",
+      "address": "Seestraße 39, 15236 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJYa3u5P2XB0cRihWCO_XANjQ",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 5005262",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Tischlerei Jahn",
+      "address": "Leipziger Str. 184, 15232 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJKYI218uZB0cR4xC7npF4ZOQ",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 5005262",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Modellbau Stein GmbH",
+      "address": "Goepelstraße 93, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJdZH03F6YB0cRacTte-zr5ls",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 6803497"
+    },
+    {
+      "name": "Tischlerei Knuth",
+      "address": "Burgwallstraße 18 A, 15236 Frankfurt (Oder)-Lossow, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJYWlyaGW9B0cRbIRn_F8OFNo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 545777",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Möbeltischlerei Christian Schulz",
+      "address": "Gewerbeparkring 23, 15299 Müllrose, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJM4REdJqWB0cRdi9i1l84rfA",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0171 2650406",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.tischlerei-cschulz.de/",
+      "email": "tischlerei-cschulz@gmx.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'schulz' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Top Schrank Inh. M. Walczak, M. Frackiewicz",
+      "address": "Karl-Marx-Straße 178, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ-aWe6XGYB0cRAhOuX49Je4o",
+      "types": [
+        "establishment",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 2847687"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Tischlerei Peil Carsten Peil",
+      "address": "Otto-Hahn-Straße 18, 15236 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNYBhaqqXB0cRgvc9cZjJgNo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 2849439",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.tischlerei-peil.com/",
+      "email": "info@tischlerei-peil.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'peil' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Stadt Bau Tischlereigesellschaft mbH",
+      "address": "Goethestraße 11E, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ4xTdzkWYB0cRmF0SCKtdBN4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 4014830",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "https://stadtbau-tischlerei.de/",
+      "email": "stadt-bau-tischlerei@t-online.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'stadt' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Möbeltischlerei Christian Schulz",
+      "address": "Gewerbeparkring 23, 15299 Müllrose, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJM4REdJqWB0cRdi9i1l84rfA",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0171 2650406",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.tischlerei-cschulz.de/",
+      "email": "tischlerei-cschulz@gmx.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'schulz' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Frankfurt Oder"
+    }
+  ]
+}
