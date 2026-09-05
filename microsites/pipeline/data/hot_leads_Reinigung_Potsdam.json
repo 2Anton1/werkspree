@@ -1,0 +1,145 @@
+{
+  "branch": "Reinigung",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "Textilreinigung Coton in Berlin und Potsdam mit Abholung - jetzt online bestellen!",
+      "address": "Königstraße 23, 14109 Berlin-Bezirk Steglitz-Zehlendorf, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJM86YqMJYqEcRCxd1UnHH1Dc",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest"
+      ],
+      "phone": "030 49930480"
+    },
+    {
+      "name": "Adrian Luxenburger",
+      "address": "Charlottenstraße 21, 14467 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJJdoqPM31qEcRErF_70dowcg",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest"
+      ],
+      "phone": "0331 963128"
+    },
+    {
+      "name": "Änderungsschneiderei mit Reinigungsannahme O-TEK (Galeria)",
+      "address": "Brandenburger Str. 49-52, 14467 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJtUssAbX1qEcR6dHWfg6HZcE",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 87099251",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Geislers Betten & Matratzen Reinigung",
+      "address": "Konsumhof 1, 14482 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJxUPGRABfqEcRzT81inHirvM",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest"
+      ],
+      "phone": "",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "K&K Gebäudereinigung GmbH Potsdam",
+      "address": "Auf dem Kiewitt 23, 14471 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJMwX2kkJfqEcRvWJm31WntYU",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 719166"
+    },
+    {
+      "name": "Haus & Motivservice Braun",
+      "address": "Am Bürohochhaus, 14478 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJvQKied92fw8RHv5mHBBvgz8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 58254520",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.hausundmotivservicebraun.de/",
+      "email": "hausundmotivservice-braun@web.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'haus' in domain/local",
+      "branch": "Reinigung",
+      "region": "Potsdam"
+    },
+    {
+      "name": "ANG Reinigung UG",
+      "address": "Willy-A.-Kleinau-Weg 12, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJs-Wri5JfqEcRFw2aWaAtqXg",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01575 4124631"
+    },
+    {
+      "name": "MARDOR – Mobile Rennrad Reinigung Potsdam & Berlin",
+      "address": "Karl-Gruhl-Straße 28, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJHaNAIttfqEcRvIcxB-oxFGE",
+      "types": [
+        "bicycle_store",
+        "establishment",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "01525 5729369"
+    },
+    {
+      "name": "Änderungsschneiderei Turan",
+      "address": "Gerlachstraße 37, 14480 Potsdam Südost, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJyaPc7hpfqEcR_9g-_o3QDFo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 5056840"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Haus & Motivservice Braun",
+      "address": "Am Bürohochhaus, 14478 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJvQKied92fw8RHv5mHBBvgz8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 58254520",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.hausundmotivservicebraun.de/",
+      "email": "hausundmotivservice-braun@web.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'haus' in domain/local",
+      "branch": "Reinigung",
+      "region": "Potsdam"
+    }
+  ]
+}

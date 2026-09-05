@@ -3,132 +3,217 @@
   "region": "Frankfurt Oder",
   "all_candidates": [
     {
-      "name": "Friseursalon & Barber Shop Cut4You",
-      "maps_url": "https://www.google.com/maps/place/Friseursalon+%26+Barber+Shop+Cut4You/data=!4m7!3m6!1s0x470799a3e4169a9b:0x2c1c0e0329bcc320!8m2!3d52.3441485!4d14.5527676!16s%2Fg%2F11frf643vh!19sChIJm5oW5KOZB0cRIMO8KQMOHCw?authuser=0&hl=en&rclk=1",
+      "name": "Big Boss Barber Shop",
+      "address": "Karl-Marx-Straße 192, 15230 Frankfurt (Oder), Deutschland",
       "rating": 4.8,
-      "category": "Hair salon",
-      "address": "Große Scharrnstraße 30",
-      "phone": null
-    },
-    {
-      "name": "Friseur Maske und Schnitt",
-      "maps_url": "https://www.google.com/maps/place/Friseur+Maske+und+Schnitt/data=!4m7!3m6!1s0x4707986b5abd649b:0x1f0053586acf4559!8m2!3d52.34817!4d14.54372!16s%2Fg%2F11ckvh63nd!19sChIJm2S9WmuYB0cRWUXPalhTAB8?authuser=0&hl=en&rclk=1",
-      "rating": 4.9,
-      "category": "Hair salon",
-      "address": "Sophienstraße 9",
-      "phone": null
-    },
-    {
-      "name": "Free Style Friseur & Barbershop",
-      "maps_url": "https://www.google.com/maps/place/Free+Style+Friseur+%26+Barbershop/data=!4m7!3m6!1s0x470799c0300a41e7:0x8800e23d268f0d4d!8m2!3d52.35181!4d14.54898!16s%2Fg%2F11tmxj6dml!19sChIJ50EKMMCZB0cRTQ2PJj3iAIg?authuser=0&hl=en&rclk=1",
-      "rating": 4.9,
-      "category": "Hair salon",
-      "address": "Berliner Str. 5",
-      "phone": "+4933540154484",
+      "place_id": "ChIJHx2iVr-ZB0cR4JZf9wjV9Mo",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0335 27952797",
+      "website_quality": "none",
+      "website_quality_score": 0,
       "old_or_no_website": ""
     },
     {
       "name": "Friseurstudio Sandra Hintze",
-      "maps_url": "https://www.google.com/maps/place/Friseurstudio+Sandra+Hintze/data=!4m7!3m6!1s0x47079873e243af89:0xb01d51dfe286119d!8m2!3d52.34597!4d14.55281!16s%2Fg%2F1w97t2s8!19sChIJia9D4nOYB0cRnRGG4t9RHbA?authuser=0&hl=en&rclk=1",
+      "address": "Große Scharrnstraße 8, 15230 Frankfurt (Oder), Deutschland",
       "rating": 4.8,
-      "category": "Hair salon",
-      "address": "Große Scharrnstraße 8",
-      "phone": null,
-      "old_or_no_website": ""
-    },
-    {
-      "name": "Big Boss Barber Shop",
-      "maps_url": "https://www.google.com/maps/place/Big+Boss+Barber+Shop/data=!4m7!3m6!1s0x470799bf56a21d1f:0xcaf4d508f75f96e0!8m2!3d52.343379!4d14.5507085!16s%2Fg%2F11v0sr9jzm!19sChIJHx2iVr-ZB0cR4JZf9wjV9Mo?authuser=0&hl=en&rclk=1",
-      "rating": 4.8,
-      "category": "Hair salon",
-      "address": "Karl-Marx-Straße 192",
-      "phone": null,
-      "old_or_no_website": ""
-    },
-    {
-      "name": "Haargenau Pethe",
-      "maps_url": "https://www.google.com/maps/place/Haargenau+Pethe/data=!4m7!3m6!1s0x470798120948b0a3:0xda74c6086251d36e!8m2!3d52.3356196!4d14.5373677!16s%2Fg%2F1td31rdv!19sChIJo7BICRKYB0cRbtNRYgjGdNo?authuser=0&hl=en&rclk=1",
-      "rating": 4.5,
-      "category": "",
-      "address": "",
-      "phone": null,
-      "old_or_no_website": ""
-    },
-    {
-      "name": "Friseurstudio Stephan Pierau",
-      "maps_url": "https://www.google.com/maps/place/Friseurstudio+Stephan+Pierau/data=!4m7!3m6!1s0x470799dd2180a60f:0xd65e5920d5132e72!8m2!3d52.3449207!4d14.5514416!16s%2Fg%2F11qpkbfkxt!19sChIJD6aAId2ZB0cRci4T1SBZXtY?authuser=0&hl=en&rclk=1",
-      "rating": 4.9,
-      "category": "Hair salon",
-      "address": "Karl-Marx-Straße 13",
-      "phone": null
-    },
-    {
-      "name": "Friseur Capelli Inh.Mandy Seidler",
-      "maps_url": "https://www.google.com/maps/place/Friseur+Capelli+Inh.Mandy+Seidler/data=!4m7!3m6!1s0x4707981234935be3:0x1dc08760511ccb73!8m2!3d52.3370705!4d14.539861!16s%2Fg%2F1tfnx8_t!19sChIJ41uTNBKYB0cRc8scUWCHwB0?authuser=0&hl=en&rclk=1",
-      "rating": 4.9,
-      "category": "",
-      "address": "",
-      "phone": null
-    },
-    {
-      "name": "Sabine Skiba",
-      "maps_url": "https://www.google.com/maps/place/Sabine+Skiba/data=!4m7!3m6!1s0x4707bd71b88289c5:0xc166f74574add47!8m2!3d52.3378757!4d14.5524142!16s%2Fg%2F1thzmly9!19sChIJxYmCuHG9B0cRR91KV3RvFgw?authuser=0&hl=en&rclk=1",
-      "rating": 4.7,
-      "category": "Closes soon",
-      "address": "Opens 8 AM Tue",
-      "phone": "+49335325332",
-      "old_or_no_website": ""
+      "place_id": "ChIJia9D4nOYB0cRnRGG4t9RHbA",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0335 5009662"
     },
     {
       "name": "Studio Glow",
-      "maps_url": "https://www.google.com/maps/place/Studio+Glow/data=!4m7!3m6!1s0x470799faf774b8e5:0xb521050f493e848f!8m2!3d52.34443!4d14.5423213!16s%2Fg%2F11y7t18v5m!19sChIJ5bh09_qZB0cRj4Q-SQ8FIbU?authuser=0&hl=en&rclk=1",
+      "address": "Franz-Mehring-Straße 17, 15230 Frankfurt (Oder), Deutschland",
       "rating": 4.9,
-      "category": "",
-      "address": "",
-      "phone": null,
-      "old_or_no_website": "https://www.planity.com/de-DE/studio-glow-15230-frankfurt-oder?rwg_token=AE37R_iVZnlUbYa91-87jCiULT6oJhsYnk0m6lH_KzTIyaMD3oHBnPb6zxgnP0qK1Y51Us5xPZpqEo4DUNpouV4KwUQXmyZUKQ%3D%3D"
+      "place_id": "ChIJ5bh09_qZB0cRj4Q-SQ8FIbU",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0335 13099327"
     },
     {
-      "name": "fönix Haarschneiderei",
-      "maps_url": "https://www.google.com/maps/place/f%C3%B6nix+Haarschneiderei/data=!4m7!3m6!1s0x4707980d43db2a07:0x753c1e0dee090d76!8m2!3d52.3393264!4d14.5461834!16s%2Fg%2F11btmbv22h!19sChIJByrbQw2YB0cRdg0J7g0ePHU?authuser=0&hl=en&rclk=1",
+      "name": "Friseursalon & Barber Shop Cut4You",
+      "address": "Große Scharrnstraße 30, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJm5oW5KOZB0cRIMO8KQMOHCw",
+      "types": [
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 40112345"
+    },
+    {
+      "name": "City Style Barbershop",
+      "address": "Karl-Marx-Straße 176, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ_4L31KuZB0cRfhZU5j6F9Ik",
+      "types": [
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 40111510",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Friseur Maske und Schnitt",
+      "address": "Sophienstraße 9, 15230 Frankfurt (Oder), Deutschland",
       "rating": 4.9,
-      "category": "",
-      "address": ""
+      "place_id": "ChIJm2S9WmuYB0cRWUXPalhTAB8",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0335 3870670"
     },
     {
-      "name": "AS Friseursalon",
-      "maps_url": "https://www.google.com/maps/place/AS+Friseursalon/data=!4m7!3m6!1s0x470799fc45d68fe5:0xf121e68c056f12ca!8m2!3d52.3404764!4d14.5503938!16s%2Fg%2F11sh68fmll!19sChIJ5Y_WRfyZB0cRyhJvBYzmIfE?authuser=0&hl=en&rclk=1",
-      "rating": 4.5,
-      "category": "Hair salon",
-      "address": "Zehmepl. 11a"
-    },
-    {
-      "name": "Friseur am Ufer",
-      "maps_url": "https://www.google.com/maps/place/Friseur+am+Ufer/data=!4m7!3m6!1s0x4707997d99d3f31f:0x6d33188b7630ab4b!8m2!3d52.3433399!4d14.557854!16s%2Fg%2F11ptvbtg33!19sChIJH_PTmX2ZB0cRS6swdosYM20?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "Hair salon",
-      "address": "Uferstraße 3"
-    },
-    {
-      "name": "Friseur F&O Figaro GmbH",
-      "maps_url": "https://www.google.com/maps/place/Friseur+F%26O+Figaro+GmbH/data=!4m7!3m6!1s0x470798471b6a1423:0xc0a2ff7acb2940fa!8m2!3d52.345912!4d14.52211!16s%2Fg%2F1thmd2y9!19sChIJIxRqG0eYB0cR-kApy3r_osA?authuser=0&hl=en&rclk=1",
-      "rating": 4.7,
-      "category": "Hair salon",
-      "address": "August- Bebel- Str. 10"
+      "name": "Friseurstudio Stephan Pierau",
+      "address": "Karl-Marx-Straße 13, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJD6aAId2ZB0cRci4T1SBZXtY",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0335 50086411"
     },
     {
       "name": "Studio Glam",
-      "maps_url": "https://www.google.com/maps/place/Studio+Glam/data=!4m7!3m6!1s0x47079925b8b7c173:0x4a117589f41fbe6f!8m2!3d52.3567841!4d14.5463284!16s%2Fg%2F11yr_z2ys0!19sChIJc8G3uCWZB0cRb74f9Il1EUo?authuser=0&hl=en&rclk=1",
-      "rating": 5.0,
-      "category": "",
-      "address": ""
+      "address": "Herbert-Jensch-Straße 104, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJc8G3uCWZB0cRb74f9Il1EUo",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0335 43300508",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "https://www.studio-glam.de/de-DE/mein-konto/#myAccount"
+    },
+    {
+      "name": "Friseur am Ufer",
+      "address": "Uferstraße 3, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJH_PTmX2ZB0cRS6swdosYM20",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0335 528763"
+    },
+    {
+      "name": "Free Style Friseur & Barbershop",
+      "address": "Berliner Str. 5, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ50EKMMCZB0cRTQ2PJj3iAIg",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0335 40154484",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://www.instagram.com/free_style_2023?igsh=bTdwYWNsdXRueXpj"
+    },
+    {
+      "name": "AS Friseursalon",
+      "address": "Zehmepl. 11a, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ5Y_WRfyZB0cRyhJvBYzmIfE",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Salon Britta",
+      "address": "Leipziger Str. 164, 15232 Frankfurt (Oder)-Markendorf, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ8SrnOReYB0cR8AZJ4VbiXyM",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Haargenau Pethe",
+      "address": "Leipziger Str. 177, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJo7BICRKYB0cRbtNRYgjGdNo",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
     },
     {
       "name": "Hairstyling Hahnekamm",
-      "maps_url": "https://www.google.com/maps/place/Hairstyling+Hahnekamm/data=!4m7!3m6!1s0x4707986800a85abd:0xe7243da09ed939d2!8m2!3d52.3348097!4d14.5413819!16s%2Fg%2F11cn2m27py!19sChIJvVqoAGiYB0cR0jnZnqA9JOc?authuser=0&hl=en&rclk=1",
+      "address": "Große Müllroser Str. 51 a, 15232 Frankfurt (Oder), Deutschland",
       "rating": 4.8,
-      "category": "Hair salon",
-      "address": "Große Müllroser Str. 51 a"
+      "place_id": "ChIJvVqoAGiYB0cR0jnZnqA9JOc",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "fönix Haarschneiderei",
+      "address": "Bahnhofstraße 15, 15230 Frankfurt (Oder)-Gubener Vorstadt, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJByrbQw2YB0cRdg0J7g0ePHU",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Der Schnitt",
+      "address": "Rathenaustraße 63a, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJFxYulxGYB0cRF8-adqjR-48",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Friseur F&O Figaro GmbH",
+      "address": "Dresdener Str. 4, 15232 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJaZn-zBOYB0cRB2D3lv9HgsA",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest",
+        "spa"
+      ]
     }
   ],
   "hot_leads": []
