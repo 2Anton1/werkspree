@@ -1,0 +1,281 @@
+{
+  "branch": "Tischlerei",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "TISCHLEREI BESIC DESIGN",
+      "address": "Am Stadtrand 25 A, 14478 Potsdam Süd, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJH8WjHVtbqEcRkI5apTyJmkA",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0170 2739999",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.tischlerei-besic.de/"
+    },
+    {
+      "name": "Tischlerei Gänserich GbR",
+      "address": "Döberitzer Str. 1, 14476 Potsdam-Fahrland, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJG0IvLM3wqEcRuYcUYvrKBbk",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "033208 50304"
+    },
+    {
+      "name": "Stellmacherei & Tischlerei Riek",
+      "address": "Schulpl. 3, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJuTMHyl1fqEcRmhFCY1tpMLo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 86742167",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.stellmacherei-riek.de/",
+      "email": "Stellmacherei-Riek@gmx.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'stellmacherei' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Potsdam"
+    },
+    {
+      "name": "KreativHolz / Holzwerkstatt",
+      "address": "Verkehrshof 17, 14478 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJVyiKoPtfqEcREwR5SHpwPRI",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0172 4966159"
+    },
+    {
+      "name": "Eastside Moebelmanufaktur",
+      "address": "Gartenstraße 17, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJG4GEtTJfqEcRrzz8KdTpLIQ",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0178 9716453"
+    },
+    {
+      "name": "WOODBROTHERS Tischlerei in Potsdam",
+      "address": "Marquardter Str. 22, 14476 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJCRxVmbzxqEcR8NH5dkfpyQ0",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "033208 279475",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://woodbrothers-pdm.de/",
+      "email": "info@woodbrothers-pdm.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'woodbrothers' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Tischlerei Construct & Beschlaghandel TCB Potsdam",
+      "address": "Schlaatzweg 9/Haus Nr. 3, 14473 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJFZoK3jX1qEcRIAUAbEMMNkY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 60086199"
+    },
+    {
+      "name": "Frank Praetsch Tischlermeister",
+      "address": "Bruno-H.-Bürgel-Straße 74, 14482 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ1ZziFFVfqEcRx_Hd2qVMojc",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 705832",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.tischlerei-praetsch.de/",
+      "email": "firma@tischlerei-praetsch.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'praetsch' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Tischlerei Andreas Butze",
+      "address": "Tiroler Damm 19, 14478 Potsdam Süd, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJC5WBUGNfqEcR-7hxNdkv7wE",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 7480025"
+    },
+    {
+      "name": "Tischlerei Könitzer, Inhaber Anja Kloohs",
+      "address": "Schumannstraße 15, 14558 Nuthetal, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJYWnivDxfqEcRYuX3vJqmSSE",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "033200 82837",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.tischlerei-koenitzer.de/"
+    },
+    {
+      "name": "Ojikko Holzmanufaktur GmbH",
+      "address": "Ketziner Str. 122/Gebäude 7, 14476 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ3S7HotzxqEcRMVw0Ix3jnLI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Frank Adam DEHOTEC Design -Holz - Technik",
+      "address": "Zum bhf Pirschheide, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJDfcg01n0qEcRh7NvCLPHsik",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Montagebau Ehmke",
+      "address": "Karl-Liebknecht-Straße 3, 14476 Potsdam Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJLTMothTzqEcRKOKWeY8q-xc",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Tischlerei Firck",
+      "address": "Am Raubfang 3, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJAQDQq5j2qEcRZ_syKDrSk1g",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Tischlerei Kuron",
+      "address": "Am Buchhorst 33/Halle 4/15, 14478 Potsdam Süd, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJFfRQNWtfqEcRzWnyEFFouYw",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Atelier für Möbelrestaurierung Olaf Praetsch",
+      "address": "Pasteurstraße 14, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJP3RQmvj1qEcR-UJd8eMb6gE",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Sebastian Rießbeck Montage",
+      "address": "Dorfstraße 7 a, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJy-mhvsPwqEcR8EtGHy2-HpM",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Stellmacherei & Tischlerei Riek",
+      "address": "Schulpl. 3, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJuTMHyl1fqEcRmhFCY1tpMLo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 86742167",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.stellmacherei-riek.de/",
+      "email": "Stellmacherei-Riek@gmx.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'stellmacherei' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Potsdam"
+    },
+    {
+      "name": "WOODBROTHERS Tischlerei in Potsdam",
+      "address": "Marquardter Str. 22, 14476 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJCRxVmbzxqEcR8NH5dkfpyQ0",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "033208 279475",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://woodbrothers-pdm.de/",
+      "email": "info@woodbrothers-pdm.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'woodbrothers' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Frank Praetsch Tischlermeister",
+      "address": "Bruno-H.-Bürgel-Straße 74, 14482 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ1ZziFFVfqEcRx_Hd2qVMojc",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 705832",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.tischlerei-praetsch.de/",
+      "email": "firma@tischlerei-praetsch.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'praetsch' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Potsdam"
+    }
+  ]
+}
