@@ -1,0 +1,199 @@
+{
+  "branch": "Gartenbau",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Dapoz Gartengestaltung",
+      "address": "Waldstraße 8, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJUXcDo9yZB0cRoMjQ-vR60Mk",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0335 4014626"
+    },
+    {
+      "name": "Garten- und Landschaftsbau Rose",
+      "address": "Seestraße 42, 15236 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJNVp4B1a9B0cRA7YAdF1uDEo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 520922",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.galabau-rose.de/",
+      "email": "info@galabau-rose.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'rose' in domain/local",
+      "branch": "Gartenbau",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Bernd Liebner",
+      "address": "Mühlenweg 4, 15232 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJR7-RuAaYB0cRtfta8TWt1pk",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0160 1635555",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.galabau-liebner.de/"
+    },
+    {
+      "name": "Gärtnerei & Baumschule Irrling",
+      "address": "Fürstenwalder Poststrasse 2, Zufahrt über die, Birnbaumsmühle 60 D, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJv_vlTrWZB0cR05a44R_RlgA",
+      "types": [
+        "establishment",
+        "florist",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 4002206"
+    },
+    {
+      "name": "Landschaft Kreativ - Landschaftsbau und Gartenpflege Märkisch-Oderland",
+      "address": "Kienitzer Oderstraße 48, 15324 Letschin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ7ym-5AV7B0cRutl8wUtJIzo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0170 8954707"
+    },
+    {
+      "name": "Förster Garten- und Landschaftsbau",
+      "address": "Gewerbegebiet Seefichten, Schubertstraße 65, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJk1OMLEeYB0cRUl1Zi-wiaks",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0335 547350"
+    },
+    {
+      "name": "Flora-Craft",
+      "address": "Pflaumenallee 4, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJZ4NwwyW7qy8RFvuDm_9Wc3c",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0172 4126141"
+    },
+    {
+      "name": "Garten- und Kommunaltechnik Dreier GmbH",
+      "address": "Wildbahn 6, 15236 Frankfurt (Oder), Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJwzXVsbiZB0cRPwIk5mPcuh0",
+      "types": [
+        "clothing_store",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 4003146"
+    },
+    {
+      "name": "Steven Förster — Garten & Landschaftsbau - Abrissarbeiten",
+      "address": "Trebuser Str. 47, 15517 Fürstenwalde/Spree, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ65RhWuEnqEcRPyzhTpyL3dU",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "03361 3652678"
+    },
+    {
+      "name": "Baumfällungen und mobiles Sägewerk Max Görsdorf",
+      "address": "Georg-Simon-Ohm-Straße 1, 15236 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJv_45Q3GXB0cRSNBM7mCRXpI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0174 2108930",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Grüner Leben Garten- und Landschaftsbau",
+      "address": "Am Leisrain 18, 65936 Frankfurt am Main, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ0Rz1c6ygvUcRbELYj_3c_9E",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Büro Baumcut",
+      "address": "Richard-Wagner-Straße 27, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJz_U2RwCZB0cRwUmmZr9hmm4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Hema",
+      "address": "Beeskower Str. 10, 15234 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJcU1MSjGYB0cR9mwSdKkmDFw",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Garten- und Landschaftsbau Rose",
+      "address": "Seestraße 42, 15236 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJNVp4B1a9B0cRA7YAdF1uDEo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 520922",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.galabau-rose.de/",
+      "email": "info@galabau-rose.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'rose' in domain/local",
+      "branch": "Gartenbau",
+      "region": "Frankfurt Oder"
+    }
+  ]
+}

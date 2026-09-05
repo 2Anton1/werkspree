@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garten- und Landschaftsbau Rose | Frankfurt (Oder)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2D6A4F;
+            --primary-light: #40916C;
+            --accent: #95D5B2;
+            --bg-warm: #F4F1DE;
+            --text-dark: #1B4332;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            padding: 20px 0;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            padding: 100px 0 140px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+            text-align: center;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: var(--white);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- About Us --- */
+        .about-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* --- Services Cards --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            border-bottom: 5px solid var(--accent);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* --- Pflanzenwelt --- */
+        .plants-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .plants-list li {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* --- Saisonkalender --- */
+        .calendar-wrapper {
+            overflow-x: auto;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .calendar-table th {
+            background: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .calendar-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .calendar-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .month-tag {
+            font-weight: 700;
+            color: var(--primary-light);
+        }
+
+        /* --- Contact & Hours --- */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .hours-info {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 10px 0;
+            transition: color 0.2s;
+        }
+
+        .contact-link:hover {
+            color: var(--primary-light);
+        }
+
+        .hours-table {
+            width: 100%;
+        }
+
+        .hours-table tr td {
+            padding: 8px 0;
+        }
+
+        .hours-table tr td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-werkspree {
+            margin-top: 10px;
+            opacity: 0.7;
+            font-size: 0.8rem;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <div class="logo">Gartenbau Rose</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Ihr Garten in besten Händen</h1>
+            <p>Professionelle Gestaltung und Pflege für Ihr grünes Paradies in Frankfurt (Oder).</p>
+            <a href="#kontakt" class="cta-button">Beratung anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <div class="about-box">
+                <p>Willkommen bei Garten- und Landschaftsbau Rose. Als erfahrener Fachbetrieb in Frankfurt (Oder) sind wir Ihr kompetenter Ansprechpartner für alle Belange rund um Ihren Garten. In unserem Standort im idyllischen Güldendorf vereinen wir handwerkliche Präzision mit einer tiefen Leidenschaft für die Natur. Unser Ziel ist es, nachhaltige und ästhetische Außenanlagen zu schaffen, in denen Sie sich rundum wohlfühlen können. Ob private Wohlfühloase oder gewerbliche Grünfläche – wir betreuen Ihr Projekt mit Sorgfalt und Fachverstand.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Gartengestaltung</h3>
+                    <p>Individuelle Planung und Neuanlage Ihrer Gartenräume. Leistungen auf Anfrage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gartenpflege</h3>
+                    <p>Regelmäßige Pflege für dauerhafte Schönheit und Vitalität. Leistungen auf Anfrage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Baumschnitt</h3>
+                    <p>Fachgerechte Schnitte für Gesundheit und Sicherheit Ihrer Bäume. Leistungen auf Anfrage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Saisonarbeit</h3>
+                    <p>Vorbereitung Ihres Gartens auf die wechselnden Jahreszeiten. Leistungen auf Anfrage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pflanzenwelt">
+        <div class="container">
+            <h2 class="section-title">Unsere Pflanzenwelt</h2>
+            <ul class="plants-list">
+                <li>Heimische Gehölze</li>
+                <li>Blühende Stauden</li>
+                <li>Ziergräser</li>
+                <li>Obstbäume</li>
+                <li>Bodendecker</li>
+                <li>Heckenpflanzen</li>
+                <li>Saisonale Blumen</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="saisonkalender">
+        <div class="container">
+            <h2 class="section-title">Saisonkalender</h2>
+            <div class="calendar-wrapper">
+                <table class="calendar-table">
+                    <thead>
+                        <tr>
+                            <th>Jahreszeit</th>
+                            <th>Empfohlene Arbeiten & Angebote</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="month-tag">Frühling</td>
+                            <td>Rückschnitt, Düngung und Neupflanzungen für den Saisonstart.</td>
+                        </tr>
+                        <tr>
+                            <td class="month-tag">Sommer</td>
+                            <td>Fachgerechte Bewässerungssysteme und Rasenpflege bei Hitze.</td>
+                        </tr>
+                        <tr>
+                            <td class="month-tag">Herbst</td>
+                            <td>Laubbeseitigung, Pflanzung von Blumenzwiebeln und Winterschutz.</td>
+                        </tr>
+                        <tr>
+                            <td class="month-tag">Winter</td>
+                            <td>Baumfällungen, Gehölzpflege und detaillierte Gartenplanung für das Folgejahr.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <h2 class="section-title">Kontakt & Öffnungszeiten</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>So erreichen Sie uns</h3>
+                    <p>Seestraße 42<br>15236 Frankfurt (Oder)-Güldendorf</p>
+                    <a href="tel:0335520922" class="contact-link">📞 0335 520922</a>
+                    <a href="mailto:info@galabau-rose.de" class="contact-link">✉️ info@galabau-rose.de</a>
+                </div>
+                <div class="hours-info">
+                    <h3>Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <td>Montag - Freitag</td>
+                            <td>07:30 - 16:30 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Samstag</td>
+                            <td>Nach Vereinbarung</td>
+                        </tr>
+                        <tr>
+                            <td>Sonntag</td>
+                            <td>Geschlossen</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Garten- und Landschaftsbau Rose. Alle Rechte vorbehalten.</p>
+            <p class="footer-werkspree">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
