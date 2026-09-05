@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadt Bau Tischlereigesellschaft mbH | Frankfurt (Oder)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B6F47;
+            --accent: #4A3C28;
+            --bg-light: #FAF6EF;
+            --text-dark: #2D2419;
+            --white: #ffffff;
+            --wood-gradient: repeating-linear-gradient(
+                90deg,
+                #8B6F47,
+                #8B6F47 40px,
+                #82663f 40px,
+                #82663f 80px
+            );
+            --grain: repeating-linear-gradient(
+                to right,
+                rgba(0,0,0,0.03) 0px,
+                rgba(0,0,0,0.03) 1px,
+                transparent 1px,
+                transparent 10px
+            );
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--accent);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(rgba(74, 60, 40, 0.85), rgba(74, 60, 40, 0.85)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2070') center/cover;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: var(--wood-gradient);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border: 1px solid transparent;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            border-color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        /* About Us */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 10px 10px 0px var(--primary);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            text-align: center;
+            border-radius: 5px;
+            border-bottom: 4px solid var(--primary);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Materials */
+        .materials-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .material-item {
+            background: var(--accent);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .material-item::before {
+            content: '•';
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        /* References */
+        .reference-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .ref-box {
+            height: 200px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            border-radius: 8px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #8B6F47 0%, #4A3C28 100%);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .ref-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--grain);
+            opacity: 0.2;
+        }
+
+        .ref-box h3 {
+            color: var(--white);
+            font-size: 1.2rem;
+            z-index: 1;
+        }
+
+        .ref-box p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            z-index: 1;
+        }
+
+        /* Contact & Hours */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-item a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--accent);
+            color: var(--bg-light);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-grid, .contact-container { grid-template-columns: 1fr; }
+            .about-text { box-shadow: 5px 5px 0px var(--primary); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Stadt Bau Tischlerei</div>
+                <div class="contact-quick">
+                    <a href="tel:03354014830" style="text-decoration: none; color: var(--accent); font-weight: 600;">📞 0335 4014830</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Maßarbeit aus Holz</h1>
+            <p>Ihr kompetenter Partner für individuelles Tischlerhandwerk in Frankfurt (Oder). Wir verbinden Tradition mit moderner Präzision.</p>
+            <a href="#kontakt" class="cta-button">Angebot anfragen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 style="margin-bottom: 20px;">Handwerk mit Leidenschaft</h2>
+                    <p>Die <strong>Stadt Bau Tischlereigesellschaft mbH</strong> ist Ihr Fachbetrieb in Frankfurt (Oder)-Rosengarten. Seit unserer Gründung stehen wir für Zuverlässigkeit, Qualität und die Liebe zum Werkstoff Holz.</p>
+                    <br>
+                    <p>In unserer modern ausgestatteten Werkstatt fertigen wir individuelle Lösungen, die genau auf die Bedürfnisse unserer Kunden zugeschnitten sind. Ob privater Innenausbau oder gewerbliche Projekte – wir setzen auf langlebige Materialien und meisterhafte Verarbeitung direkt aus der Region.</p>
+                </div>
+                <div class="about-image">
+                    <div style="width: 100%; height: 300px; background: var(--wood-gradient); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;">
+                        Qualität aus Meisterhand
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #f2ede4;">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 style="margin-bottom: 15px;">Leistungen auf Anfrage</h3>
+                    <p>Wir bieten Ihnen ein breites Spektrum an Tischlerarbeiten. Kontaktieren Sie uns gerne für ein individuelles Beratungsgespräch und ein maßgeschneidertes Angebot für Ihr Vorhaben.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="materialien">
+        <div class="container">
+            <h2 class="section-title">Materialien</h2>
+            <p style="text-align: center; margin-bottom: 40px;">Wir arbeiten vorzugsweise mit hochwertigen Naturhölzern für beste Ergebnisse:</p>
+            <ul class="materials-list">
+                <li class="material-item">Massivholz</li>
+                <li class="material-item">Eiche</li>
+                <li class="material-item">Buche</li>
+                <li class="material-item">Esche</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="referenzen" style="background-color: #f2ede4;">
+        <div class="container">
+            <h2 class="section-title">Referenzen</h2>
+            <div class="reference-grid">
+                <div class="ref-box">
+                    <h3>Individueller Innenausbau</h3>
+                    <p>Maßgefertigte Lösungen für Wohnräume.</p>
+                </div>
+                <div class="ref-box" style="background: linear-gradient(135deg, #4A3C28 0%, #2D2419 100%);">
+                    <h3>Fenster & Türen</h3>
+                    <p>Passgenaue Montage und Fertigung.</p>
+                </div>
+                <div class="ref-box">
+                    <h3>Objekteinrichtungen</h3>
+                    <p>Funktionale Holzkonzepte für Gewerbe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <h2 class="section-title">Kontakt & Öffnungszeiten</h2>
+            <div class="contact-container">
+                <div class="info-card">
+                    <h3>Stadt Bau Tischlereigesellschaft mbH</h3>
+                    <p style="margin-bottom: 25px;">Goethestraße 11E<br>15234 Frankfurt (Oder)-Rosengarten</p>
+                    
+                    <div class="info-item">
+                        <span><strong>Telefon:</strong></span>
+                        <a href="tel:03354014830">0335 4014830</a>
+                    </div>
+                    <div class="info-item">
+                        <span><strong>E-Mail:</strong></span>
+                        <a href="mailto:stadt-bau-tischlerei@t-online.de">stadt-bau-tischlerei@t-online.de</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3 style="margin-bottom: 20px;">Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag - Donnerstag</td><td>07:00 - 16:00 Uhr</td></tr>
+                        <tr><td>Freitag</td><td>07:00 - 13:00 Uhr</td></tr>
+                        <tr><td>Samstag - Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                    <p style="margin-top: 15px; font-size: 0.85rem; font-style: italic;">Termine nach telefonischer Vereinbarung auch außerhalb der Kernzeiten möglich.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Stadt Bau Tischlereigesellschaft mbH. Alle Rechte vorbehalten.</p>
+            <div class="footer-line">
+                Erstellt von Werkspree
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
