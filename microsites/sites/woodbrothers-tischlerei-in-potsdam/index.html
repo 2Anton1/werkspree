@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WOODBROTHERS Tischlerei Potsdam | Maßarbeit aus Holz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B6F47;
+            --accent: #4A3C28;
+            --bg: #FAF6EF;
+            --text: #2D241A;
+            --white: #ffffff;
+            --wood-gradient: repeating-linear-gradient(
+                90deg,
+                rgba(139, 111, 71, 0.05) 0px,
+                rgba(139, 111, 71, 0.05) 2px,
+                transparent 2px,
+                transparent 40px
+            );
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0;
+            background: linear-gradient(rgba(74, 60, 40, 0.85), rgba(74, 60, 40, 0.85)), url('https://images.unsplash.com/photo-1581447100595-37750c9484ed?auto=format&fit=crop&q=80&w=2000') center/cover;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--wood-gradient);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #a68556;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 15px auto 0;
+        }
+
+        /* Über uns */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            background: var(--accent);
+            height: 400px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 20px 20px 0 var(--primary);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-bottom: 5px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        /* Materialien */
+        .materials {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        .materials-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .materials-list li {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border: 1px solid var(--primary);
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* Referenzen */
+        .reference-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .ref-box {
+            padding: 40px;
+            background: linear-gradient(135deg, #8B6F47 0%, #4A3C28 100%);
+            color: var(--white);
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ref-box::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--wood-gradient);
+            opacity: 0.1;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info a {
+            display: block;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--accent);
+            color: rgba(255,255,255,0.7);
+            padding: 50px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-content, .contact-wrapper { grid-template-columns: 1fr; }
+            .about-image { order: -1; height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">WOOD<span>BROTHERS</span></div>
+                <div class="contact-link">
+                    <a href="tel:033208279475" style="color: var(--accent); font-weight: 600; text-decoration: none;">📞 033208 279475</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Maßarbeit aus Holz</h1>
+            <p>Ihre Experten für individuellen Innenausbau und traditionelles Tischlerhandwerk in Potsdam. Wir verwandeln Ihre Ideen in massives Design.</p>
+            <a href="#kontakt" class="cta-button">Angebot anfragen</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Über uns</h2>
+                    <p>Willkommen bei der WOODBROTHERS Tischlerei in Potsdam. Als leidenschaftlicher Meisterbetrieb stehen wir für höchste Präzision und die Liebe zum natürlichen Werkstoff Holz. In unserer Werkstatt in Marquardt verbinden wir märkische Handwerkstradition mit zeitgemäßen Wohnkonzepten.</p>
+                    <br>
+                    <p>Ob individuelle Einzelstücke oder komplexe Raumlösungen – wir begleiten Sie von der ersten Skizze bis zur finalen Montage. Qualität, Langlebigkeit und eine ehrliche Beratung sind das Fundament unserer Arbeit.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=800" alt="Tischlerei Werkstatt">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #f2ede4;">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Möbelbau</h3>
+                    <p>Individuelle Tische, Schränke und Regalsysteme nach Maß.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Türen & Tore</h3>
+                    <p>Eingangs- und Innentüren, die Charakter verleihen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fenster</h3>
+                    <p>Hochwertige Holzfenster für Neubau und Sanierung.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Restaurierung</h3>
+                    <p>Erhalt und Aufarbeitung historischer Holzsubstanz.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-style: italic;">Weitere Leistungen auf Anfrage.</p>
+        </div>
+    </section>
+
+    <section class="materials">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Unsere Materialien</h2>
+            <ul class="materials-list">
+                <li>Massivholz</li>
+                <li>Eiche</li>
+                <li>Buche</li>
+                <li>Esche</li>
+                <li>Nussbaum</li>
+                <li>Zirbe</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="referenzen">
+        <div class="container">
+            <h2 class="section-title">Projekt-Referenzen</h2>
+            <div class="reference-grid">
+                <div class="ref-box">
+                    <h3>Massivholztisch "Eiche Rustikal"</h3>
+                    <p>Ein Unikat aus märkischer Eiche mit natürlicher Baumkante für ein Potsdamer Loft.</p>
+                </div>
+                <div class="ref-box">
+                    <h3>Bibliotheksausbau</h3>
+                    <p>Deckenhohe Regalsysteme aus dunkler Esche mit integrierter Beleuchtung.</p>
+                </div>
+                <div class="ref-box">
+                    <h3>Denkmal-Sanierung</h3>
+                    <p>Originalgetreue Nachbildung historischer Kastenfenster in der Potsdamer Innenstadt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background-color: var(--white);">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Kontakt</h2>
+                    <p><strong>WOODBROTHERS Tischlerei</strong></p>
+                    <p>Marquardter Str. 22</p>
+                    <p>14476 Potsdam, Deutschland</p>
+                    <br>
+                    <a href="tel:033208279475">📞 033208 279475</a>
+                    <a href="mailto:info@woodbrothers-pdm.de">✉️ info@woodbrothers-pdm.de</a>
+                </div>
+                <div class="opening-hours">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Öffnungszeiten</h2>
+                    <table class="hours-table">
+                        <tr><td>Montag - Donnerstag</td><td>07:30 – 16:30 Uhr</td></tr>
+                        <tr><td>Freitag</td><td>07:30 – 14:00 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">WOODBROTHERS</span>
+            <p>&copy; 2023-2024 WOODBROTHERS Tischlerei Potsdam. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
