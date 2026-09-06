@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahnarztpraxis Stefanie Uhlmann | Frankfurt (Oder)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4A9EAB;
+            --accent: #B8E0E6;
+            --bg-light: #F8FAFA;
+            --text-dark: #2C3E50;
+            --text-muted: #5D6D7E;
+            --white: #FFFFFF;
+            --shadow: 0 10px 30px rgba(74, 158, 171, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--white);
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary);
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background: var(--bg-light);
+        }
+
+        /* About Section */
+        .about {
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 auto 15px;
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        /* Patient Info Section */
+        .patients {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: var(--shadow);
+        }
+
+        .info-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .info-list li {
+            position: relative;
+            padding-left: 35px;
+            font-weight: 500;
+        }
+
+        .info-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Contact & Hours */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info a {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .contact-info a:hover {
+            color: var(--primary);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .werkspree {
+            margin-top: 20px;
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            section { padding: 60px 0; }
+            .patients { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Zahnarztpraxis Uhlmann</a>
+            <div class="contact-mini">
+                <a href="tel:0335531102" style="text-decoration: none; color: var(--primary); font-weight: 600;">📞 0335 531102</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Ihre Zahngesundheit in Frankfurt (Oder)</h1>
+            <p>Moderne Zahnheilkunde für ein strahlendes Lächeln. Wir empfangen Sie in entspannter Atmosphäre in unserer Praxis in der Dresdener Straße.</p>
+            <a href="#kontakt" class="cta-button">Termin buchen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2>Herzlich willkommen</h2>
+                <p>In der Zahnarztpraxis Stefanie Uhlmann in Frankfurt (Oder) stehen Sie als Patient im Mittelpunkt. Unser Ziel ist es, Ihre natürlichen Zähne durch präventive Maßnahmen langfristig zu erhalten und Ihnen eine Behandlung auf höchstem fachlichem Niveau zu bieten. Mit Empathie und moderner Technik sorgen wir dafür, dass Sie sich bei uns gut aufgehoben fühlen – von der Prophylaxe bis zum Zahnersatz.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" class="container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Unsere Leistungen</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Prophylaxe</h3>
+                <p>Professionelle Zahnreinigung für dauerhaften Schutz.</p>
+            </div>
+            <div class="service-card">
+                <h3>Behandlung</h3>
+                <p>Schonende Therapie bei Karies und Parodontitis.</p>
+            </div>
+            <div class="service-card">
+                <h3>Implantate</h3>
+                <p>Moderner Zahnersatz für Ihre Lebensqualität.</p>
+            </div>
+            <div class="service-card">
+                <h3>Ästhetik</h3>
+                <p>Verschönerung Ihres Lächelns durch moderne Verfahren.</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; font-style: italic; color: var(--text-muted);">Detaillierte Leistungen auf Anfrage.</p>
+    </section>
+
+    <section id="team" class="container">
+        <h2 style="text-align: center; margin-bottom: 40px;">Unser Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="avatar">SU</div>
+                <p><strong>Stefanie Uhlmann</strong></p>
+                <p style="color: var(--text-muted);">Zahnärztin & Inhaberin</p>
+            </div>
+            <div class="team-member">
+                <div class="avatar">TH</div>
+                <p><strong>Team</strong></p>
+                <p style="color: var(--text-muted);">Assistenz & Verwaltung</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="patients">
+            <h2 style="text-align: center;">Für unsere Patienten</h2>
+            <ul class="info-list">
+                <li>Barrierefreier Zugang</li>
+                <li>Kurze Wartezeiten durch Terminmanagement</li>
+                <li>Individuelle Beratung</li>
+                <li>Zentrale Lage in Frankfurt (Oder)</li>
+                <li>Erinnerungsservice (Recall)</li>
+                <li>Angstpatienten-Betreuung</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="kontakt" class="container">
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h2>Kontakt</h2>
+                <p style="margin-bottom: 20px;">Wir freuen uns auf Ihren Besuch in unserer Praxis.</p>
+                <p><strong>Adresse:</strong><br>Dresdener Str. 4<br>15232 Frankfurt (Oder)</p>
+                <br>
+                <a href="tel:0335531102"><strong>Tel:</strong> 0335 531102</a>
+                <a href="mailto:kontakt@praxis-uhlmann.de"><strong>E-Mail:</strong> kontakt@praxis-uhlmann.de</a>
+            </div>
+            <div class="opening-hours">
+                <h2>Öffnungszeiten</h2>
+                <table class="hours-table">
+                    <tr><td>Montag</td><td>08:00 – 12:00 & 14:00 – 18:00</td></tr>
+                    <tr><td>Dienstag</td><td>08:00 – 12:00 & 14:00 – 18:00</td></tr>
+                    <tr><td>Mittwoch</td><td>08:00 – 13:00</td></tr>
+                    <tr><td>Donnerstag</td><td>08:00 – 12:00 & 14:00 – 18:00</td></tr>
+                    <tr><td>Freitag</td><td>08:00 – 12:00</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Zahnarztpraxis Stefanie Uhlmann</span>
+            <p>&copy; 2023 Zahnarztpraxis Stefanie Uhlmann. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px;">
+                <a href="#" style="color: var(--accent); text-decoration: none;">Impressum</a> | 
+                <a href="#" style="color: var(--accent); text-decoration: none;">Datenschutz</a>
+            </p>
+            <div class="werkspree">Erstellt von Werkspree</div>
+        </div>
+    </footer>
+
+</body>
+</html>
