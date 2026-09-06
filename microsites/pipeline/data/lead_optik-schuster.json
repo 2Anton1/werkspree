@@ -1,0 +1,19 @@
+{
+  "company_name": "Optik Schuster",
+  "segment": "Optiker",
+  "region": "Frankfurt Oder",
+  "email": "info@optik-schuster.de",
+  "email_verified": "yes",
+  "phone": "0335 6066841",
+  "website_issue": "keine/veraltete eigene Website",
+  "about": "",
+  "products": [],
+  "opening_hours": {},
+  "owner": "",
+  "address": "Karl-Marx-Straße 189, 15230 Frankfurt (Oder), Deutschland",
+  "city": "Frankfurt Oder",
+  "slug": "optik-schuster",
+  "site_url": "https://werkspree.bki-de.de/microsites/sites/optik-schuster/",
+  "built_at": "2026-09-06T15:22:08.198303+02:00",
+  "builder": "gemini"
+}

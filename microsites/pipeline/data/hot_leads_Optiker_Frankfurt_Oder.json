@@ -1,0 +1,102 @@
+{
+  "branch": "Optiker",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Optik Schuster",
+      "address": "Karl-Marx-Straße 189, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJlZRaYGWYB0cRF_S3BYo1KvI",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 6066841",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.optik-schuster.de/",
+      "email": "info@optik-schuster.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'optik' in domain/local",
+      "branch": "Optiker",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "KIND Hörgeräte & Augenoptik Frankfurt/Oder",
+      "address": "Karl-Marx-Straße 13, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJJfFDLXKYB0cRnZXntv7juW0",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 6069400"
+    },
+    {
+      "name": "Fielmann",
+      "address": "Karl-Marx-Straße 10, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJTzvyynOYB0cR8bjnjlaUc0U",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 321014"
+    },
+    {
+      "name": "Apollo-Optik - Frankfurt (Oder) im Oderturm",
+      "address": "Logenstraße 8, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJWYTOGnOYB0cRYcwBORlg5x8",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 2848784"
+    },
+    {
+      "name": "Apollo-Optik - Frankfurt/ Oder im Spitzkrug-Center",
+      "address": "Spitzkrugring 1, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJZ7I-eFeYB0cRssylqwLw-JI",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 6068855"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Optik Schuster",
+      "address": "Karl-Marx-Straße 189, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJlZRaYGWYB0cRF_S3BYo1KvI",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 6066841",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.optik-schuster.de/",
+      "email": "info@optik-schuster.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'optik' in domain/local",
+      "branch": "Optiker",
+      "region": "Frankfurt Oder"
+    }
+  ]
+}

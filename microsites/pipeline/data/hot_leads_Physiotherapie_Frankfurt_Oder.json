@@ -1,0 +1,223 @@
+{
+  "branch": "Physiotherapie",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Praxis für Physiotherapie Brian Hellwig",
+      "address": "Große Scharrnstraße 8, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ-3shpO2PCwQRW8JTi0uknRI",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "01515 4838902"
+    },
+    {
+      "name": "Physiotherapie Anke Steinicke",
+      "address": "Fürstenwalder Str. 18A, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJd7lkPGuYB0cRJDaX_K5OB_s",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0335 520550"
+    },
+    {
+      "name": "Therapiezentrum links der ODER",
+      "address": "Goepelstraße 90, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJd1TNQ16YB0cRiViaPrEkoLw",
+      "types": [
+        "establishment",
+        "gym",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0335 6069626",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.therapiezentrumlinksderoder.de/"
+    },
+    {
+      "name": "Physiotherapie und Naturheilpraxis Breitkreutz & Therapiezentrum Breitkreutz GmbH",
+      "address": "Gubener Str. 40, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJl-AAugyYB0cRCJ9ikIDNOsI",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 534079"
+    },
+    {
+      "name": "Praxis für Physiotherapie Tetiana Bonetska - Frankfurt Oder Zentrum",
+      "address": "Oberkirchpl. 2, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJY92jPwCZB0cRx3yb92ayuP8",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0335 32302730"
+    },
+    {
+      "name": "Physio am Park (Physiotherapie)",
+      "address": "Cottbuser Str. 6, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJEUW9EGuYB0cRQaatRIVZwOM",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0335 86922943"
+    },
+    {
+      "name": "Physiotherapie Sonne",
+      "address": "Görlitzer Str. 7, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJrzNtSfqZB0cRRQihGjk545Q",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0160 92258738",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Katrin Sprung Physiotherapie",
+      "address": "Grüner Weg 20, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJcwzACGmYB0cRfBouKXFOocs",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0335 6803173",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "PhysioAktivFFO Ulrike Gittner",
+      "address": "Karl-Liebknecht-Straße 61, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJAevaAUeZB0cRK8xKvu35Io4",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0335 60695970",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.physioaktivffo.de/"
+    },
+    {
+      "name": "LUKAS MITZKATIS",
+      "address": "Holzmarkt 4a, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJVVWFN3SYB0cRGe8CTXBoZj8",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0335 40116633",
+      "website_quality": "low",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://lm-physiotherapie.de/"
+    },
+    {
+      "name": "Physiotherapie & Bewegungszentrum Haase",
+      "address": "Am Kleistpark 1, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ_y_R2QGZB0cRQsEuvUQKBJQ",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "M2 Concept GmbH Physiotherapie",
+      "address": "Seelower Kehre 3, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ5c90rmeYB0cR1YDoUfYjlPw",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "TOP-PHYSIO by Marta Aniol",
+      "address": "Puschkinstraße 1, 15236 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJnyN7rRiZB0cR0QgogInfnug",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Physiotherapie „An der Oder“",
+      "address": "Nadine Wegener, Carl-Philipp-Emanuel-Bach-Straße 13, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJYbwZueiZB0cRaPnIjI4A7iw",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Physiotherapie Stefan Kühlberg",
+      "address": "Buschmühlenweg 173, 15230 Frankfurt (Oder)-Gubener Vorstadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyehjpAmYB0cR-sBNr7lIaQI",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Roland Stoll Physiotherapie",
+      "address": "Stendaler Str. 26, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJW_H8mFyYB0cRZcle_S178DE",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": []
+}

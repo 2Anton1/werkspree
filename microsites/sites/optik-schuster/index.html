@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optik Schuster | Ihr Optiker in Frankfurt (Oder)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3D3D6B;
+            --accent: #B8A9D9;
+            --bg-color: #F5F5F8;
+            --text-dark: #2D2D2D;
+            --text-light: #FFFFFF;
+            --gradient: linear-gradient(135deg, #3D3D6B 0%, #5A5A8F 100%);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Brillen-Visualisierung */
+        .glasses-icon {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+        }
+        .bridge {
+            width: 8px;
+            height: 2px;
+            background: var(--primary);
+            margin-top: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            background: var(--gradient);
+            color: var(--text-light);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            color: var(--text-light);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--accent);
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background-color: #c9bce6;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin: 15px auto 0;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Services Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--accent);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .service-note {
+            text-align: center;
+            margin-top: 30px;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Brands */
+        .brands-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .brand-pill {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .brand-pill:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        /* Contact & Hours */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-item span {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .info-item a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .info-item a:hover {
+            color: var(--accent);
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .footer-logo .circle { border-color: white; }
+        .footer-logo .bridge { background: white; }
+        .footer-logo span { color: white; font-weight: 700; margin-left: 10px;}
+
+        .werkspree {
+            margin-top: 10px;
+            opacity: 0.6;
+            font-size: 0.8rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .hero { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="#" class="logo">
+                <div class="glasses-icon">
+                    <div class="circle"></div>
+                    <div class="bridge"></div>
+                    <div class="circle"></div>
+                </div>
+                <span>Optik Schuster</span>
+            </a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Klares Sicht, klarer Stil</h1>
+            <p>Ihr kompetenter Partner für Augenoptik in Frankfurt (Oder). Wir vereinen präzise Handwerkskunst mit modernster Technik für Ihr perfektes Seherlebnis.</p>
+            <a href="#kontakt" class="cta-button">Beratung vereinbaren</a>
+        </div>
+    </header>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <div class="about-content">
+                <p>Willkommen bei Optik Schuster, Ihrem Traditionsgeschäft im Herzen von Frankfurt (Oder). Seit vielen Jahren stehen wir für höchste Qualität und individuelle Beratung rund um Ihr Sehen. In der Karl-Marx-Straße 189 kombinieren wir fachliche Expertise mit einer Leidenschaft für Ästhetik. Unser Ziel ist es, nicht nur Ihre Sehkraft zu optimieren, sondern auch Ihren persönlichen Stil mit der perfekten Fassung zu unterstreichen. Vertrauen Sie auf Präzision, Empathie und erstklassigen Service vor Ort.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #fff;">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Sehtest</h3>
+                    <p>Präzise Augenprüfung mit modernster Messtechnik für Ihre optimale Sehschärfe.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Brillen</h3>
+                    <p>Große Auswahl an Designerfassungen, Arbeitsplatzbrillen und Gleitsichtgläsern.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Kontaktlinsen</h3>
+                    <p>Individuelle Anpassung und Beratung für alle Arten von Kontaktlinsen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Beratung</h3>
+                    <p>Persönliche Stil- und Typberatung für ein sicheres Auftreten mit Ihrer neuen Brille.</p>
+                </div>
+            </div>
+            <p class="service-note">Weitere Leistungen auf Anfrage.</p>
+        </div>
+    </section>
+
+    <section id="marken">
+        <div class="container">
+            <h2 class="section-title">Unsere Marken</h2>
+            <div class="brands-list">
+                <div class="brand-pill">Ray-Ban</div>
+                <div class="brand-pill">Oakley</div>
+                <div class="brand-pill">Zeiss</div>
+                <div class="brand-pill">Rodenstock</div>
+                <div class="brand-pill">Esprit</div>
+                <div class="brand-pill">Silhouette</div>
+                <div class="brand-pill">Persol</div>
+                <div class="brand-pill">Titanflex</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="info-box">
+                    <h2 style="margin-bottom: 25px;">Kontakt</h2>
+                    <div class="info-item">
+                        <span>Adresse</span>
+                        Karl-Marx-Straße 189<br>15230 Frankfurt (Oder)
+                    </div>
+                    <div class="info-item">
+                        <span>Telefon</span>
+                        <a href="tel:03356066841">0335 6066841</a>
+                    </div>
+                    <div class="info-item">
+                        <span>E-Mail</span>
+                        <a href="mailto:info@optik-schuster.de">info@optik-schuster.de</a>
+                    </div>
+                </div>
+                <div class="info-box opening-hours">
+                    <h2 style="margin-bottom: 25px;">Öffnungszeiten</h2>
+                    <table>
+                        <tr><td>Montag</td><td>09:00 - 18:00</td></tr>
+                        <tr><td>Dienstag</td><td>09:00 - 18:00</td></tr>
+                        <tr><td>Mittwoch</td><td>09:00 - 18:00</td></tr>
+                        <tr><td>Donnerstag</td><td>09:00 - 18:00</td></tr>
+                        <tr><td>Freitag</td><td>09:00 - 18:00</td></tr>
+                        <tr><td>Samstag</td><td>09:00 - 13:00</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo footer-logo">
+                <div class="glasses-icon">
+                    <div class="circle"></div>
+                    <div class="bridge"></div>
+                    <div class="circle"></div>
+                </div>
+                <span>Optik Schuster</span>
+            </div>
+            <p>&copy; 2023 Optik Schuster. Alle Rechte vorbehalten.</p>
+            <p class="werkspree">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
