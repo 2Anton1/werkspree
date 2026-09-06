@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLEY - Sicherheitstechnik Cottbus | Schlüsseldienst & Notdienst</title>
+    <meta name="description" content="Ihr zuverlässiger Schlüsseldienst in Cottbus. 24h Notdienst, Türöffnungen und Sicherheitstechnik. Schnell, kompetent und fair.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #3A3A3A;
+            --accent: #FFD93D;
+            --accent-hover: #e6c235;
+            --bg-light: #F0F0F0;
+            --text-dark: #1A1A1A;
+            --text-light: #FFFFFF;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background-color: var(--primary);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-phone {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .nav-phone:hover {
+            background: var(--text-light);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(58, 58, 58, 0.85), rgba(58, 58, 58, 0.85)), 
+                        url('https://images.unsplash.com/photo-1582139329536-e7284fece509?q=80&w=2080&auto=format&fit=crop') center/cover;
+            padding: 100px 0;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 18px 35px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(255, 217, 61, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 217, 61, 0.5);
+            background-color: var(--accent-hover);
+        }
+
+        /* --- 24h Notdienst Box --- */
+        .emergency-box {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            border-bottom: 5px solid var(--accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .emergency-box h2 {
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .pulse-container {
+            margin: 20px 0;
+        }
+
+        .pulse-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            font-size: 2rem;
+            animation: pulse-yellow 2s infinite;
+            text-decoration: none;
+        }
+
+        @keyframes pulse-yellow {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 217, 61, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(255, 217, 61, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 217, 61, 0); }
+        }
+
+        .emergency-phone {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-light);
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        /* --- Section Styling --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        /* --- About Us --- */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* --- Services Cards --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid #ddd;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* --- Service Areas --- */
+        .areas-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .areas-list li {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* --- Contact & Info --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .contact-item i {
+            background: var(--accent);
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 5px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .contact-item a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .opening-hours {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .opening-hours table {
+            width: 100%;
+        }
+
+        .opening-hours td {
+            padding: 8px 0;
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+
+        .footer-line {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 30px;
+            padding-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .werkspree-hint {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .nav-phone { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">POLEY<span>.</span></a>
+            <a href="tel:0355524216" class="nav-phone"><i class="fas fa-phone"></i> 0355 524216</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Schnell. Zuverlässig. Vor Ort.</h1>
+                <p>Ihr professioneller Schlüsseldienst in Cottbus. Wir öffnen Türen schadenfrei, sichern Ihr Zuhause und sind im Notfall sofort zur Stelle.</p>
+                <a href="tel:0355524216" class="cta-button">JETZT ANRUFEN</a>
+            </div>
+        </section>
+
+        <!-- Emergency Box -->
+        <div class="container">
+            <div class="emergency-box">
+                <h2>24h Schlüssel-Notdienst</h2>
+                <p>Ausgesperrt? Schlüssel verloren? Wir helfen Ihnen sofort – Tag & Nacht.</p>
+                <div class="pulse-container">
+                    <a href="tel:0355524216" class="pulse-btn">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
+                </div>
+                <a href="tel:0355524216" class="emergency-phone">0355 524216</a>
+                <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">In ganz Cottbus und Umgebung</p>
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <section id="ueber-uns">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Über uns</h2>
+                </div>
+                <div class="about-content">
+                    <p>POLEY Sicherheitstechnik ist Ihr kompetenter Fachbetrieb in Cottbus. Seit Jahren stehen wir für höchste Zuverlässigkeit und Schnelligkeit, wenn es um Ihre Sicherheit geht. Ob akute Türöffnung im Notfall oder die Planung moderner Schließanlagen für Ihr Objekt – wir kombinieren handwerkliche Präzision mit modernster Technik. Als lokaler Partner direkt in der Bogenstraße sind wir tief mit der Region verwurzelt und garantieren Ihnen kurze Anfahrtswege und faire Konditionen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="leistungen" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Unsere Leistungen</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-door-open"></i>
+                        <h3>Türöffnung</h3>
+                        <p>Schnelle und möglichst schadenfreie Öffnung von Haus-, Wohnungs- und Autotüren.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-key"></i>
+                        <h3>Schlossaustausch</h3>
+                        <p>Fachgerechter Wechsel von Zylindern und Schlössern nach Einbruch oder bei Defekt.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Sicherheitstechnik</h3>
+                        <p>Beratung und Installation von Schließanlagen, Panzerriegeln und Einbruchschutz.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Leistungen auf Anfrage</h3>
+                        <p>Individuelle Sicherheitslösungen für Privat- und Gewerbekunden in Cottbus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Areas -->
+        <section id="gebiete">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Einsatzgebiete</h2>
+                </div>
+                <ul class="areas-list">
+                    <li>Cottbus-Mitte</li>
+                    <li>Sandow</li>
+                    <li>Ströbitz</li>
+                    <li>Schmellwitz</li>
+                    <li>Madlow</li>
+                    <li>Sachsendorf</li>
+                    <li>Kolkwitz</li>
+                    <li>Neuhausen</li>
+                    <li>Peitz</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="kontakt" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Kontakt & Öffnungszeiten</h2>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-info">
+                        <h3>So erreichen Sie uns</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Bogenstraße 19<br>03050 Cottbus, Deutschland</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:0355524216">0355 524216</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@poley-sicherheit.de">info@poley-sicherheit.de</a>
+                        </div>
+                    </div>
+                    <div class="opening-hours">
+                        <h3>Öffnungszeiten</h3>
+                        <table>
+                            <tr><td>Montag - Freitag</td><td>08:00 - 18:00</td></tr>
+                            <tr><td>Samstag</td><td>09:00 - 13:00</td></tr>
+                            <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                            <tr style="color: #d9534f; font-weight: bold;">
+                                <td>Notdienst</td>
+                                <td>24 Std. erreichbar</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>POLEY - Sicherheitstechnik</strong></p>
+            <p>Ihr Partner für Sicherheit in Cottbus.</p>
+            <div class="footer-line">
+                &copy; 2023 POLEY - Sicherheitstechnik. Alle Rechte vorbehalten. | Erstellt von <a href="#" class="werkspree-hint">Werkspree</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
