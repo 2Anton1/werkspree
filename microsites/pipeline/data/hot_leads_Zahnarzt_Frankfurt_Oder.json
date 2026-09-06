@@ -1,0 +1,240 @@
+{
+  "branch": "Zahnarzt",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "BAG Zahnärzte Alexander und Birgit Budach",
+      "address": "Zehmepl. 13, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ22w0MHOYB0cRbbAKspc3AEQ",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 326177",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.zahnarzt-budach.de/",
+      "email": "info@zahnarzt-budach.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'budach' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Steffi Geiseler",
+      "address": "Weinbergweg 46, 15236 Frankfurt (Oder)-Markendorf, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ1wIpdheYB0cRELIYZW6IEXw",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 523115"
+    },
+    {
+      "name": "Zahnarztpraxis Dehn",
+      "address": "Bergstraße 158, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJU_CeAGmYB0cREmsmHrf_zCk",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 67024"
+    },
+    {
+      "name": "Praxis für Oralchirurgie Dr. Julia Felten-Seifert",
+      "address": "Dresdener Str. 5, 15232 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJVyJaMRKYB0cRn2tuJzlEM2Q",
+      "types": [
+        "dentist",
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 32391360",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Franziska Langer",
+      "address": "Halbe Stadt 11, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJSWQd-22YB0cReLF_YEnjKSM",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 5000129"
+    },
+    {
+      "name": "Frau Dipl.-Stom. Susanne Peters",
+      "address": "Am Kleistpark 1, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJX8yE-myYB0cRiu13o9-iWnY",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 533099",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "ENDODONTIE LINDENPASSAGE - FALK REINHOLD MSc",
+      "address": "Praxis für Endodontie & Zahnerhaltung, Lindenstraße 11, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJa72T_BGYB0cRCNgc-enQdyw",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 50086480"
+    },
+    {
+      "name": "Dr. Andreas Jäntsch",
+      "address": "August- Bebel- Str. 6F, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJV9juL0eYB0cRLQ16ZiVoy4o",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 5008858"
+    },
+    {
+      "name": "Frau Dipl.-Stom. Kirsten Dölves-Jonas",
+      "address": "August- Bebel- Str. 112, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJbeERr0eYB0cRoEWABgA6rqE",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 4335501",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Zahnarztpraxis Stefanie Uhlmann",
+      "address": "Dresdener Str. 4, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJTzgk5b6ZB0cR0MtGPEVLvJc",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 531102",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://praxis-uhlmann.de/",
+      "email": "kontakt@praxis-uhlmann.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'uhlmann' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Zahnarztpraxis Felgendreher",
+      "address": "Bergstraße 2, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJwXHTjJ2ZB0cRjHXfAbxqmbY",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Zahnarztpraxis Beate Ermlich-Pocher",
+      "address": "Weinbergweg 4, 15236 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJJ7iQtReYB0cRvUCKRcfwBuc",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Dr. Flex GmbH",
+      "address": "Stresemannstraße 21, 10963 Berlin-Bezirk Friedrichshain-Kreuzberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJSarHg2pRqEcRCzK4B7lgTrw",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "BAG Zahnärzte Alexander und Birgit Budach",
+      "address": "Zehmepl. 13, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ22w0MHOYB0cRbbAKspc3AEQ",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 326177",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.zahnarzt-budach.de/",
+      "email": "info@zahnarzt-budach.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'budach' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Frankfurt Oder"
+    },
+    {
+      "name": "Zahnarztpraxis Stefanie Uhlmann",
+      "address": "Dresdener Str. 4, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJTzgk5b6ZB0cR0MtGPEVLvJc",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 531102",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://praxis-uhlmann.de/",
+      "email": "kontakt@praxis-uhlmann.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'uhlmann' in domain/local",
+      "branch": "Zahnarzt",
+      "region": "Frankfurt Oder"
+    }
+  ]
+}
