@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAP Verkehrsfachschule Potsdam GmbH | Deine Fahrschule in Babelsberg</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0B1D3A;
+            --signal-blue: #0066CC;
+            --signal-red: #D9232D;
+            --bg-light: #F0F4FA;
+            --white: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--navy);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--signal-red);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #162e55 100%);
+            color: var(--white);
+            padding: 100px 0 140px;
+            text-align: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--navy);
+            padding: 18px 40px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: var(--transition);
+            border: 2px solid var(--white);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--navy);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--signal-red);
+        }
+
+        /* About Us */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Vehicle Classes */
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .class-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+            border-bottom: 4px solid var(--signal-blue);
+        }
+
+        .class-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--signal-red);
+        }
+
+        .class-badge {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            background: var(--navy);
+            color: var(--white);
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Why Us? */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .usp-item {
+            background: var(--navy);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .usp-item h3 {
+            color: var(--signal-blue);
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .usp-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Steps */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--signal-blue);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 0 auto 20px;
+            border: 5px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Contact & Hours */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .hours-info {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--navy);
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 15px 0;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--signal-blue);
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .contact-layout { grid-template-columns: 1fr; }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .badge-red { background: var(--signal-red); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">GAP <span>VERKEHRSSCHULE</span></a>
+            <div style="color: white; font-weight: 600;">Potsdam</div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>DEIN WEG ZUM <br>FÜHRERSCHEIN.</h1>
+            <p>Professionelle Ausbildung, moderne Fahrzeuge und ein erfahrenes Team in Potsdam-Babelsberg. Wir bringen dich sicher und schnell auf die Straße.</p>
+            <a href="#kontakt" class="cta-button">Jetzt Durchstarten</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container about-grid">
+            <div>
+                <div class="section-title" style="text-align: left;">
+                    <h2>Über uns</h2>
+                </div>
+                <p>Willkommen bei der GAP Verkehrsfachschule Potsdam GmbH. Als Ihre kompetente Fahrschule im Herzen von Potsdam-Babelsberg stehen wir für eine erstklassige Ausbildung in Theorie und Praxis. Unser Ziel ist es, Fahranfänger nicht nur zur Prüfung zu führen, sondern zu verantwortungsbewussten und sicheren Teilnehmern am Straßenverkehr auszubilden.</p>
+                <br>
+                <p>Mit modernster Technik und geduldigen Ausbildern schaffen wir eine Lernatmosphäre, in der das Fahrenlernen Spaß macht. Vertrauen Sie auf unsere langjährige Erfahrung in der Landeshauptstadt.</p>
+            </div>
+            <div style="background: var(--navy); padding: 40px; border-radius: 8px; color: white;">
+                <h3 style="margin-bottom: 20px; color: var(--signal-blue);">Leistungen</h3>
+                <p>Wir bieten Ihnen ein breites Spektrum an Ausbildungsmöglichkeiten. Für detaillierte Informationen zu unseren Kursen kontaktieren Sie uns bitte direkt.</p>
+                <p style="margin-top: 20px; font-weight: bold; font-style: italic;">— Leistungen auf Anfrage —</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="klassen" style="background: #e9eff7;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fahrzeug-Klassen</h2>
+            </div>
+            <div class="classes-grid">
+                <div class="class-card">
+                    <div class="class-badge">B</div>
+                    <h3>PKW</h3>
+                    <p>Der Klassiker für volle Mobilität.</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-badge badge-red">A</div>
+                    <h3>Motorrad</h3>
+                    <p>Freiheit auf zwei Rädern genießen.</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-badge">BE</div>
+                    <h3>Anhänger</h3>
+                    <p>Mehr Last, mehr Möglichkeiten.</p>
+                </div>
+                <div class="class-card">
+                    <div class="class-badge badge-red">BF17</div>
+                    <h3>Begleitet</h3>
+                    <p>Sicher starten ab 17 Jahren.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="warum-wir">
+        <div class="container">
+            <div class="section-title">
+                <h2>Warum wir?</h2>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <h3>Hohe Bestehensquote</h3>
+                    <p>Unsere gezielte Prüfungsvorbereitung sorgt für überdurchschnittliche Erfolge in Theorie und Praxis.</p>
+                </div>
+                <div class="usp-item">
+                    <h3>Moderne Fahrzeuge</h3>
+                    <p>Lerne auf den neuesten Modellen mit aktueller Sicherheitstechnik und höchstem Komfort.</p>
+                </div>
+                <div class="usp-item">
+                    <h3>Flexible Zeiten</h3>
+                    <p>Wir passen die Fahrstunden deinem Alltag an – egal ob Schule, Studium oder Beruf.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ablauf" style="background: var(--white);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Dein Weg zum Ziel</h2>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Anmeldung</h3>
+                    <p>Komm vorbei und wir planen gemeinsam deinen Weg.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Theorie</h3>
+                    <p>Spannender Unterricht in unseren modernen Räumen.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Praxis</h3>
+                    <p>Sammle Erfahrung direkt im Potsdamer Stadtverkehr.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Prüfung</h3>
+                    <p>Mit Sicherheit und Routine zum eigenen Führerschein.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Kontakt</h2>
+                    </div>
+                    <p><strong>GAP Verkehrsfachschule Potsdam GmbH</strong></p>
+                    <p>Großbeerenstraße 64</p>
+                    <p>14482 Potsdam-Babelsberg</p>
+                    <br>
+                    <a href="tel:033164751647" class="contact-link">📞 0331 64751647</a>
+                    <a href="mailto:info@vfs-potsdam.de" class="contact-link">✉️ info@vfs-potsdam.de</a>
+                </div>
+                <div class="hours-info">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Bürozeiten</h2>
+                    </div>
+                    <ul class="hours-list">
+                        <li><span>Montag</span> <span>10:00 - 18:00</span></li>
+                        <li><span>Dienstag</span> <span>10:00 - 18:00</span></li>
+                        <li><span>Mittwoch</span> <span>10:00 - 18:00</span></li>
+                        <li><span>Donnerstag</span> <span>10:00 - 18:00</span></li>
+                        <li><span>Freitag</span> <span>10:00 - 16:00</span></li>
+                        <li><span>Samstag</span> <span>Geschlossen</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo">GAP <span>VERKEHRSSCHULE</span> POTSDAM</div>
+            <p style="margin-top: 10px; opacity: 0.8;">Deine Profis für den Führerschein in Babelsberg.</p>
+            <div class="footer-bottom">
+                &copy; 2023 GAP Verkehrsfachschule Potsdam GmbH. Alle Rechte vorbehalten. <br>
+                Realisiert mit Werkspree
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

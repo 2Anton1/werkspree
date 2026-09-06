@@ -1,0 +1,250 @@
+{
+  "branch": "Fahrschule",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "Fahrschule Frank Ehlenbeck",
+      "address": "Friedrich-Engels-Straße 1, 14473 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJwUSsTur1qEcReTd_TiBu0gc",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 291564"
+    },
+    {
+      "name": "Fahrschule Dynamic",
+      "address": "Gerlachstraße 25, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJaynvjJhfqEcRiuX-pXIQz0k",
+      "types": [
+        "establishment",
+        "local_government_office",
+        "point_of_interest"
+      ],
+      "phone": "0331 23532935"
+    },
+    {
+      "name": "GAP Verkehrsfachschule Potsdam GmbH / Fahrschule",
+      "address": "Großbeerenstraße 64, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJW8VlaP1fqEcRhOWZ2LXOuXM",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 64751647",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.vfs-potsdam.de/",
+      "email": "info@vfs-potsdam.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'potsdam' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Fahrschule Stern",
+      "address": "Mozartstraße 2, 14480 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJfzvE_nxfqEcRk6YXZea_ENI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0176 29701099"
+    },
+    {
+      "name": "Fahrschule 44 Forty Four Potsdam",
+      "address": "Zeppelinstraße 40, 14471 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJDYL3U6v1qEcR2grDfJ2JWt8",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 23539303"
+    },
+    {
+      "name": "Fahrschule Thomas Ehlenbeck",
+      "address": "Gutenbergstraße 72, 14467 Potsdam, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJSY8o3dv1qEcRjmLNsMqmXJI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 2701790"
+    },
+    {
+      "name": "Triple X Fahrschule & Coaching GmbH",
+      "address": "Karl-Liebknecht-Straße 24, 14482 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJIU0YlYH1qEcRvF_Q0zy3Wcc",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0331 95144811"
+    },
+    {
+      "name": "Fahrschule ABF Potsdam",
+      "address": "WEBERPARK, Tuchmacherstraße 45b, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJWeSsFxv1qEcR5PgfH70_5Uc",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 96795854",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://abf-fahrschule.de/"
+    },
+    {
+      "name": "SBH Fahrschule Potsdam",
+      "address": "Ricarda-Huch-Straße 2, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJIbs-fGVfqEcRq4k--OmdyAc",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0800 2200060"
+    },
+    {
+      "name": "Fahrschule Thomas Ehlenbeck",
+      "address": "Potsdamer Str. 18, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJBzTZIJz2qEcR1HpbooLdYck",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 503929"
+    },
+    {
+      "name": "Fahrschule Schalk, Norbert",
+      "address": "Hans-Albers-Straße 1, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJY_9gghtfqEcRttU5GZxK2oA",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Micha's Fahrschule",
+      "address": "Johannes-Kepler-Platz 2, 14480 Potsdam Südost, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJBa9u9hZfqEcRK8j6xFH6M5w",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Yellow Fahrschule Birgit Vetter",
+      "address": "Semmelweisstraße 45, 14482 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJzRfHIfn1qEcR4Az2r-_MsPA",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Fahrschule VISION",
+      "address": "Fultonstraße 8, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJXxO535j1qEcRTLXU9y2SNL4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "RED STAR Akademie",
+      "address": "Verkehrshof 6a, 14478 Potsdam Süd, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJCdc969M7ZUERww4q2Ka_2oU",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Fahrschule Syring",
+      "address": "Käthe-Kollwitz-Straße 44, 14478 Potsdam Süd, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ0a6c0I31qEcRYIqluH2sycE",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "A-S Fahrschule",
+      "address": "Rudolf-Breitscheid-Straße 15, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJxZTW0fD1qEcRfcqg7FM_bPw",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Fahrschule Stern",
+      "address": "Charlottenstraße 29, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJD1-lg9b1qEcRGl4Sf70KPDw",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Fahrschule Toros",
+      "address": "Großbeerenstraße 75, 14482 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJTZ9dJ-tfqEcRxl-kORyQL1c",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Fahrschule Krone GmbH",
+      "address": "Kirschallee 90, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJpfbexCn3qEcREea_fR1cRxo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "GAP Verkehrsfachschule Potsdam GmbH / Fahrschule",
+      "address": "Großbeerenstraße 64, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJW8VlaP1fqEcRhOWZ2LXOuXM",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 64751647",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.vfs-potsdam.de/",
+      "email": "info@vfs-potsdam.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'potsdam' in domain/local",
+      "branch": "Fahrschule",
+      "region": "Potsdam"
+    }
+  ]
+}
