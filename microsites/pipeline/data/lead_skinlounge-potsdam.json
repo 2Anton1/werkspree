@@ -13,5 +13,7 @@
   "address": "Gutenbergstraße 107, 14467 Potsdam, Deutschland",
   "city": "Potsdam",
   "slug": "skinlounge-potsdam",
-  "site_url": "https://werkspree.bki-de.de/microsites/sites/skinlounge-potsdam/"
+  "site_url": "https://werkspree.bki-de.de/microsites/sites/skinlounge-potsdam/",
+  "built_at": "2026-09-08T00:12:49.827805+02:00",
+  "builder": "gemini"
 }

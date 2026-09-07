@@ -70,7 +70,7 @@
     {
       "name": "House of Beauty",
       "address": "Breite Str. 25-27, 14471 Potsdam, Deutschland",
-      "rating": 4.9,
+      "rating": 4.8,
       "place_id": "ChIJZUcD4TP1qEcRq77XEyOF0b4",
       "types": [
         "beauty_salon",
@@ -109,6 +109,27 @@
       "phone": "0331 293537"
     },
     {
+      "name": "Beautylogie Hair Care Spa",
+      "address": "Marlene-Dietrich-Allee 17, 14482 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ5zydiYpfqEcR4zfm9RxF5y8",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0331 90142456",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.beautylogie.de/",
+      "email": "info@beautylogie.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'beautylogie' in domain/local",
+      "branch": "Kosmetik",
+      "region": "Potsdam"
+    },
+    {
       "name": "Kosmetik in der kleinen Gasse",
       "address": "Kleine G. 2, 14467 Potsdam, Deutschland",
       "rating": 4.8,
@@ -134,25 +155,16 @@
       "phone": "0331 23161890"
     },
     {
-      "name": "Beautylogie Hair Care Spa",
-      "address": "Marlene-Dietrich-Allee 17, 14482 Potsdam, Deutschland",
-      "rating": 4.4,
-      "place_id": "ChIJ5zydiYpfqEcR4zfm9RxF5y8",
+      "name": "Kosmetikwerk Ronny Gallandi",
+      "address": "Großbeerenstraße 230, 14480 Potsdam Südost, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJgdWrW79fqEcRiPshAh8W9VI",
       "types": [
         "beauty_salon",
         "establishment",
-        "hair_care",
-        "point_of_interest"
-      ],
-      "phone": "0331 90142456",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "http://www.beautylogie.de/",
-      "email": "info@beautylogie.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'beautylogie' in domain/local",
-      "branch": "Kosmetik",
-      "region": "Potsdam"
+        "point_of_interest",
+        "spa"
+      ]
     },
     {
       "name": "Silktouch Beauty und Waxing",
@@ -180,10 +192,22 @@
       ]
     },
     {
-      "name": "Kosmetikwerk Ronny Gallandi",
-      "address": "Großbeerenstraße 230, 14480 Potsdam Südost, Deutschland",
+      "name": "Kosmetikinstitut Potsdam | Kosmetikstudio",
+      "address": "Berliner Str, Seitenflügel 131, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ_WcPDz_1qEcRBZhhc10mCYE",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "BEWEI Lounge Potsdam",
+      "address": "Georg-Hermann-Allee 26, 14469 Potsdam, Deutschland",
       "rating": 5,
-      "place_id": "ChIJgdWrW79fqEcRiPshAh8W9VI",
+      "place_id": "ChIJT6UG15j3qEcR9pAzG5qeyMw",
       "types": [
         "beauty_salon",
         "establishment",
@@ -204,10 +228,21 @@
       ]
     },
     {
-      "name": "Kosmetikstudio Kerstin Merkouris",
-      "address": "Hebbelstraße 39, 14469 Potsdam, Deutschland",
+      "name": "Antje Warnke Permanent Make-up",
+      "address": "Lindenstraße 7, 14467 Potsdam, Deutschland",
       "rating": 5,
-      "place_id": "ChIJAQB0nN_1qEcRf9ip0yQEDRA",
+      "place_id": "ChIJUQn5_9D1qEcR0bi-jqxx314",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Oak Hills Kosmetikstudio Johana Mendez",
+      "address": "Altes Rad 2C, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNS8xwZL1qEcR-y0bLHJAl_Y",
       "types": [
         "beauty_salon",
         "establishment",
@@ -216,22 +251,10 @@
       ]
     },
     {
-      "name": "Kosmetikstudio hautnah - Potsdam",
-      "address": "Potsdamer Str. 18 - 20, 14469 Potsdam, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJsUBqTJz2qEcRZj2lZ7z8qNc",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "name": "BEWEI Lounge Potsdam",
-      "address": "Georg-Hermann-Allee 26, 14469 Potsdam, Deutschland",
+      "name": "Kosmetikstudio Kerstin Merkouris",
+      "address": "Hebbelstraße 39, 14469 Potsdam, Deutschland",
       "rating": 5,
-      "place_id": "ChIJT6UG15j3qEcR9pAzG5qeyMw",
+      "place_id": "ChIJAQB0nN_1qEcRf9ip0yQEDRA",
       "types": [
         "beauty_salon",
         "establishment",
@@ -250,30 +273,6 @@
         "point_of_interest",
         "spa",
         "store"
-      ]
-    },
-    {
-      "name": "Oak Hills Kosmetikstudio Johana Mendez",
-      "address": "Altes Rad 2C, 14469 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJNS8xwZL1qEcR-y0bLHJAl_Y",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "spa"
-      ]
-    },
-    {
-      "name": "Kosmetikstudio Susanne Rücker",
-      "address": "Mies-van-der-Rohe-Straße 2, 14469 Potsdam Nord, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJZ8jLWMv1qEcR_CqjYVGmtoY",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "spa"
       ]
     }
   ],

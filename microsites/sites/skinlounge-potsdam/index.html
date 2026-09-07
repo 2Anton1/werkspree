@@ -6,15 +6,15 @@
     <title>Skinlounge Potsdam | Exklusive Kosmetik & Hautpflege</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #D4A5A5;
             --accent: #8B3A4A;
             --bg-warm: #FBF5F3;
-            --text-dark: #333;
+            --text-dark: #4A4A4A;
             --white: #ffffff;
-            --shadow: 0 10px 30px rgba(139, 58, 74, 0.1);
+            --shadow: 0 10px 30px rgba(212, 165, 165, 0.15);
             --radius: 20px;
         }
 
@@ -29,7 +29,7 @@
             background-color: var(--bg-warm);
             color: var(--text-dark);
             line-height: 1.6;
-            font-weight: 300;
+            overflow-x: hidden;
         }
 
         h1, h2, h3 {
@@ -44,54 +44,61 @@
             padding: 0 20px;
         }
 
-        /* Header & Hero */
+        /* --- Header & Hero --- */
         header {
-            background: linear-gradient(135deg, var(--primary) 0%, #e8c4c4 100%);
-            color: var(--white);
-            padding: 100px 0 140px 0;
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+            position: relative;
+            padding: 100px 0 150px 0;
             text-align: center;
-            position: relative;
             overflow: hidden;
-            border-bottom-left-radius: 50% 20px;
-            border-bottom-right-radius: 50% 20px;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            animation: fadeIn 1s ease-out;
+        .hero-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            line-height: 0;
         }
 
-        .hero h1 {
-            color: var(--white);
-            font-size: 3rem;
-            margin-bottom: 10px;
+        .hero-wave svg {
+            display: block;
+            width: 100%;
+            height: 80px;
         }
 
-        .hero p {
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .hero-content p {
             font-size: 1.2rem;
+            color: var(--text-dark);
             margin-bottom: 30px;
-            opacity: 0.9;
+            font-weight: 300;
         }
 
         .cta-button {
             display: inline-block;
             background-color: var(--accent);
             color: var(--white);
-            padding: 15px 35px;
+            padding: 16px 35px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(139, 58, 74, 0.3);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 20px rgba(139, 58, 74, 0.4);
+            background-color: #7a3241;
         }
 
-        /* Sections */
+        /* --- Sections General --- */
         section {
             padding: 80px 0;
         }
@@ -102,7 +109,7 @@
         }
 
         .section-title h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             position: relative;
             display: inline-block;
             padding-bottom: 10px;
@@ -118,60 +125,82 @@
             background: var(--primary);
         }
 
-        /* Über uns */
-        .about-text {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.1rem;
+        /* --- Über uns --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
         }
 
-        /* Behandlungs-Cards */
-        .grid {
+        .about-text {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* --- Behandlungen --- */
+        .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(212, 165, 165, 0.1);
+        }
+
+        .service-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(212, 165, 165, 0.25);
+        }
+
+        .service-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        /* --- Warum wir? --- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .card {
-            background: var(--white);
-            padding: 40px 30px;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: scale(1.02);
-        }
-
-        .card h3 {
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-
-        /* Warum wir? */
-        .why-us {
-            background-color: #fff;
-            border-radius: 40px;
-            margin: 20px;
-        }
-
         .feature-card {
-            background: var(--bg-warm);
-            padding: 30px;
+            background: linear-gradient(145deg, #ffffff, #fbf5f3);
+            padding: 40px;
             border-radius: var(--radius);
             text-align: center;
         }
 
-        /* Preisliste */
-        .price-table-wrapper {
-            overflow-x: auto;
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        /* --- Preisliste --- */
+        .price-container {
             background: var(--white);
-            padding: 30px;
+            padding: 40px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
+            overflow-x: auto;
         }
 
         table {
@@ -179,201 +208,259 @@
             border-collapse: collapse;
         }
 
-        table tr {
-            border-bottom: 1px solid #eee;
+        th {
+            text-align: left;
+            color: var(--accent);
+            padding: 15px;
+            border-bottom: 2px solid var(--bg-warm);
         }
 
-        table td {
-            padding: 15px 0;
+        td {
+            padding: 15px;
+            border-bottom: 1px solid var(--bg-warm);
         }
 
-        table td:last-child {
+        .price-val {
             text-align: right;
             font-weight: 600;
             color: var(--accent);
         }
 
-        /* Kontakt & Öffnungszeiten */
-        .contact-grid {
+        /* --- Kontakt & Öffnungszeiten --- */
+        .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
 
-        .contact-info, .opening-hours {
+        .info-box {
             background: var(--white);
             padding: 40px;
             border-radius: var(--radius);
             box-shadow: var(--shadow);
         }
 
-        .contact-info a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 400;
-        }
-
-        .hours-list {
-            list-style: none;
-        }
-
-        .hours-list li {
+        .info-item {
+            margin-bottom: 20px;
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
+            align-items: center;
         }
 
-        /* Footer */
+        .info-item strong {
+            display: block;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        .info-item a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .info-item a:hover {
+            color: var(--primary);
+        }
+
+        .opening-hours table td {
+            padding: 8px 0;
+            border: none;
+        }
+
+        /* --- Footer --- */
         footer {
             background: var(--accent);
             color: var(--white);
-            text-align: center;
             padding: 40px 0;
-            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
         }
 
         footer p {
-            font-size: 0.9rem;
             opacity: 0.8;
         }
 
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .werkspree-hint {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            display: block;
         }
 
-        /* Responsive */
+        /* --- Responsive --- */
         @media (max-width: 768px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
+            .hero-content h1 { font-size: 2.5rem; }
+            .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+            section { padding: 50px 0; }
         }
     </style>
 </head>
 <body>
 
-    <header class="hero">
+    <header>
         <div class="container hero-content">
             <h1>Skinlounge Potsdam</h1>
-            <p>Ihre Experten für strahlende Haut und zeitlose Schönheit.</p>
-            <a href="#kontakt" class="cta-button">Behandlung buchen</a>
+            <p>Ihre Oase für Schönheit, Ästhetik und tiefenwirksame Hautpflege im Herzen von Potsdam.</p>
+            <a href="#kontakt" class="cta-button">Behandlung anfragen</a>
+        </div>
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+                <path fill="#FBF5F3" fill-opacity="1" d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,224C672,245,768,267,864,250.7C960,235,1056,181,1152,165.3C1248,149,1344,171,1392,181.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
         </div>
     </header>
 
     <section id="ueber-uns">
         <div class="container">
-            <div class="section-title">
-                <h2>Willkommen</h2>
-            </div>
-            <div class="about-text">
-                <p>Willkommen in der Skinlounge Potsdam – Ihrer Oase für Schönheit und Wohlbefinden im Herzen der Landeshauptstadt. In der Gutenbergstraße 107 verbinden wir modernste kosmetische Expertise mit einer Atmosphäre purer Entspannung. Unser Ziel ist es, Ihre natürliche Ausstrahlung zu unterstreichen und Ihnen eine Auszeit vom Alltag zu schenken. Mit Leidenschaft und Präzision kümmern wir uns um die individuellen Bedürfnisse Ihrer Haut.</p>
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left; margin-bottom: 20px;">
+                        <h2>Willkommen</h2>
+                    </div>
+                    <p>In der Skinlounge Potsdam verbinden wir modernste Kosmetik-Expertise mit einer Atmosphäre vollkommener Entspannung. Gelegen in der malerischen Gutenbergstraße, bieten wir Ihnen maßgeschneiderte Treatments, die Ihre natürliche Schönheit unterstreichen und Ihre Haut zum Strahlen bringen. Unser Ziel ist es, Ihnen nicht nur eine Behandlung, sondern eine Auszeit vom Alltag zu schenken, bei der Professionalität und Wohlbefinden Hand in Hand gehen.</p>
+                </div>
+                <div style="background: var(--primary); height: 300px; border-radius: var(--radius); opacity: 0.3; display: flex; align-items: center; justify-content: center;">
+                    <span style="color: var(--accent); font-style: italic;">Premium Beauty Experience</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="behandlungen">
+    <section id="behandlungen" style="background-color: #fff;">
         <div class="container">
             <div class="section-title">
                 <h2>Unsere Leistungen</h2>
+                <p style="margin-top: 10px; color: #888;">Exklusive Treatments für Ihr Wohlbefinden</p>
             </div>
-            <div class="grid">
-                <div class="card">
+            <div class="services-grid">
+                <div class="service-card">
                     <h3>Gesichtsbehandlung</h3>
-                    <p>Individuelle Tiefenreinigung und Pflege, perfekt abgestimmt auf Ihren Hauttyp.</p>
+                    <p>Individuelle Hautpflege für einen strahlenden Teint.</p>
                 </div>
-                <div class="card">
-                    <h3>Wimpern & Brows</h3>
-                    <p>Lifting und Styling für einen ausdrucksstarken Blick und perfekt geformte Brauen.</p>
+                <div class="service-card">
+                    <h3>Wimpern</h3>
+                    <p>Perfekter Schwung und Volumen für Ihren Augenaufschlag.</p>
                 </div>
-                <div class="card">
+                <div class="service-card">
+                    <h3>Brows</h3>
+                    <p>Präzises Shaping und Styling für ausdrucksstarke Brauen.</p>
+                </div>
+                <div class="service-card">
                     <h3>Maniküre</h3>
-                    <p>Professionelle Nagelpflege und langanhaltende Farben für gepflegte Hände.</p>
-                </div>
-                <div class="card">
-                    <h3>Apparative Kosmetik</h3>
-                    <p>Modernste Technologien wie Microneedling für ein verjüngtes Hautbild.</p>
+                    <p>Gepflegte Hände und ästhetisches Nageldesign.</p>
                 </div>
             </div>
+            <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--accent);">Weitere Leistungen auf Anfrage verfügbar.</p>
         </div>
     </section>
 
-    <section class="why-us">
+    <section id="warum-wir">
         <div class="container">
             <div class="section-title">
-                <h2>Warum wir?</h2>
+                <h2>Das Skinlounge-Versprechen</h2>
             </div>
-            <div class="grid">
+            <div class="features-grid">
                 <div class="feature-card">
                     <h3>Hautanalyse</h3>
-                    <p>Jede Behandlung beginnt mit einer fundierten Analyse Ihres aktuellen Hautzustands.</p>
+                    <p>Jede Behandlung beginnt mit einer fundierten Analyse, um exakt auf die Bedürfnisse Ihrer Haut einzugehen.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Premium-Produkte</h3>
-                    <p>Wir verwenden ausschließlich hochwertige Wirkstoffkosmetik für beste Ergebnisse.</p>
+                    <p>Wir verwenden ausschließlich hochwertige Wirkstoffkosmetik namhafter Hersteller für beste Ergebnisse.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Entspannung</h3>
-                    <p>Genießen Sie Ihr Treatment in einem exklusiven, ruhigen Ambiente zum Wohlfühlen.</p>
+                    <p>Genießen Sie Ihr Treatment in einem luxuriösen Ambiente, das Körper und Geist zur Ruhe kommen lässt.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="preise">
+    <section id="preise" style="background-color: #fff;">
         <div class="container">
             <div class="section-title">
                 <h2>Preisliste</h2>
             </div>
-            <div class="price-table-wrapper">
+            <div class="price-container">
                 <table>
-                    <tr>
-                        <td>Classic Facial (60 Min.)</td>
-                        <td>79,00 €</td>
-                    </tr>
-                    <tr>
-                        <td>Wimpernlifting inkl. Färben</td>
-                        <td>55,00 €</td>
-                    </tr>
-                    <tr>
-                        <td>Augenbrauenkorrektur & Farbe</td>
-                        <td>25,00 €</td>
-                    </tr>
-                    <tr>
-                        <td>Maniküre mit Shellac</td>
-                        <td>45,00 €</td>
-                    </tr>
-                    <tr>
-                        <td>Microneedling Intensiv</td>
-                        <td>120,00 €</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Behandlung</th>
+                            <th class="price-val">Preis ab</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Basis Gesichtsbehandlung (60 Min.)</td>
+                            <td class="price-val">69,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Premium Anti-Aging Treatment</td>
+                            <td class="price-val">95,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Wimpernlifting inkl. Färben</td>
+                            <td class="price-val">55,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Augenbrauen-Korrektur & Farbe</td>
+                            <td class="price-val">25,00 €</td>
+                        </tr>
+                        <tr>
+                            <td>Klassische Maniküre</td>
+                            <td class="price-val">39,00 €</td>
+                        </tr>
+                    </tbody>
                 </table>
+                <p style="margin-top: 20px; font-size: 0.85rem; color: #999;">* Alle Preise inkl. MwSt. Finale Preise richten sich nach individuellem Aufwand.</p>
             </div>
         </div>
     </section>
 
     <section id="kontakt">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Kontakt</h3>
-                    <p>Skinlounge Potsdam</p>
-                    <p>Gutenbergstraße 107</p>
-                    <p>14467 Potsdam</p>
-                    <br>
-                    <p>Telefon: <a href="tel:03312438790">0331 2438790</a></p>
-                    <p>E-Mail: <a href="mailto:info@skinlounge.com">info@skinlounge.com</a></p>
+            <div class="contact-wrapper">
+                <div class="info-box">
+                    <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+                        <h2>Kontakt</h2>
+                    </div>
+                    <div class="info-item">
+                        <div>
+                            <strong>Adresse</strong>
+                            Gutenbergstraße 107, 14467 Potsdam
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div>
+                            <strong>Telefon</strong>
+                            <a href="tel:03312438790">0331 2438790</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div>
+                            <strong>E-Mail</strong>
+                            <a href="mailto:info@skinlounge.com">info@skinlounge.com</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="opening-hours">
-                    <h3>Öffnungszeiten</h3>
-                    <ul class="hours-list">
-                        <li><span>Montag - Freitag</span> <span>09:00 - 19:00 Uhr</span></li>
-                        <li><span>Samstag</span> <span>10:00 - 16:00 Uhr</span></li>
-                        <li><span>Sonntag</span> <span>Geschlossen</span></li>
-                    </ul>
+                <div class="info-box opening-hours">
+                    <div class="section-title" style="text-align: left; margin-bottom: 30px;">
+                        <h2>Öffnungszeiten</h2>
+                    </div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>Montag - Freitag</td>
+                            <td style="text-align: right;">10:00 - 19:00 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Samstag</td>
+                            <td style="text-align: right;">10:00 - 16:00 Uhr</td>
+                        </tr>
+                        <tr>
+                            <td>Sonntag</td>
+                            <td style="text-align: right;">Geschlossen</td>
+                        </tr>
+                    </table>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: var(--accent);">Termine nach Vereinbarung.</p>
                 </div>
             </div>
         </div>
@@ -382,7 +469,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2023 Skinlounge Potsdam. Alle Rechte vorbehalten.</p>
-            <p>Erstellt mit Herz durch Werkspree</p>
+            <span class="werkspree-hint">Erstellt mit Professionalität für die Schönheit.</span>
         </div>
     </footer>
 
