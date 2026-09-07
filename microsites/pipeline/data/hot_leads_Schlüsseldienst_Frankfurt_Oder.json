@@ -1,0 +1,67 @@
+{
+  "branch": "Schlüsseldienst",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Schlüsseldienst Peggy Günzel",
+      "address": "Hellweg 58, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJRf0UsUmYB0cRGjchruRWoEw",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0335 4001227",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Schlüsseldienst 24",
+      "address": "Bahnhofssiedlung 10, 15236 Jacobsdorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJi-HKMc-RB0cR6_UkLFYHBEM",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "033608 708833",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "https://schluessel24h.de/"
+    },
+    {
+      "name": "Schlüsseldienst Ostermann",
+      "address": "a. See 8, 15236 Treplin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJDVk6hAIHwmER4gYpEWqpUj4",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0160 1835240",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://schlüsseldienst-frankfurt-oder.de/"
+    },
+    {
+      "name": "Wolfgang Scheuer Schlüsseldienst",
+      "address": "Jungclaussenweg 6, 15232 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJdcbjswWYB0cRcqiAYE_LphA",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    }
+  ],
+  "hot_leads": []
+}

@@ -1,0 +1,23 @@
+{
+  "branch": "Metzgerei",
+  "region": "Frankfurt Oder",
+  "all_candidates": [
+    {
+      "name": "Imbiss, Fleischerei und Catering Niesyt",
+      "address": "Im Technologiepark 33, 15236 Frankfurt (Oder)-Markendorf, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ408dmISXB0cRCVK9ti4Ua_s",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0335 5009935",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://www.partyservice-niesyt.de/"
+    }
+  ],
+  "hot_leads": []
+}

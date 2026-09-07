@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kfz Meisterbetrieb Erol | Potsdam - Ihre Werkstatt für alle Fälle</title>
+    <meta name="description" content="Kfz Meisterbetrieb Erol in Potsdam. Professionelle Fahrzeugreparatur, Inspektion und Service direkt in der Ahornstraße.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #3A4A5C; /* Stahlgrau */
+            --accent: #F5A623;  /* Warnendes Orange/Gelb */
+            --bg-light: #EEF1F4; /* Helles Grau */
+            --text-dark: #1A252F;
+            --text-light: #FFFFFF;
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+            --radius: 6px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, rgba(58, 74, 92, 0.95) 0%, rgba(26, 37, 47, 0.9) 100%), 
+                        url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1600') center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            color: var(--text-light);
+            position: relative;
+            border-bottom: 8px solid var(--accent);
+        }
+
+        .hero-content {
+            max-width: 700px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--text-dark);
+            padding: 16px 32px;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: var(--radius);
+            transition: var(--transition);
+            text-transform: uppercase;
+            box-shadow: 0 4px 0 #C4841A;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #C4841A;
+            background-color: #ffb433;
+        }
+
+        /* --- Section Styling --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 10px auto 0;
+        }
+
+        /* --- Über uns --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary);
+        }
+
+        /* --- Leistungen Cards --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            box-shadow: var(--shadow);
+        }
+
+        .service-card:hover {
+            border-bottom-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        /* --- Service Badges --- */
+        .badges-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .badge i {
+            color: var(--accent);
+        }
+
+        /* --- Ablauf Steps --- */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step {
+            position: relative;
+            padding: 30px;
+            background: #fff;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0 auto 20px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); /* Hexagon/Schraube Style */
+        }
+
+        /* --- Kontakt & Öffnungszeiten --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-info, .opening-hours {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .opening-hours {
+            background: white;
+            color: var(--text-dark);
+            border: 2px solid var(--primary);
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        .contact-link i {
+            background: var(--accent);
+            color: var(--text-dark);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #1A252F;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-logo span {
+            color: var(--accent);
+        }
+
+        .werkspree {
+            margin-top: 20px;
+            opacity: 0.6;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .about-grid, .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                height: auto;
+                padding: 100px 0;
+                text-align: center;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Kfz Meisterbetrieb <span>Erol</span></h1>
+                <p>Ihr kompetenter Partner für Fahrzeugtechnik, Wartung und Reparatur in Potsdam. Qualität vom Meister – zuverlässig, schnell und fair.</p>
+                <a href="tel:033170468800" class="btn"><i class="fas fa-calendar-check"></i> Termin vereinbaren</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Über uns -->
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Über uns</h2>
+                    </div>
+                    <p>Willkommen beim Kfz Meisterbetrieb Erol in Potsdam. Als Ihr zuverlässiger Partner rund um Ihr Fahrzeug stehen wir für höchste Präzision, fachliche Kompetenz und einen erstklassigen Service. In unserer modern ausgestatteten Werkstatt in der Ahornstraße kümmern wir uns mit Leidenschaft um die Sicherheit und Langlebigkeit Ihres Autos – markenunabhängig und meistergeführt. Wir setzen auf transparente Beratung und handwerkliche Perfektion, damit Sie jederzeit sicher ans Ziel kommen.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1632823471565-1ec2c63db7f5?auto=format&fit=crop&q=80&w=800" alt="Werkstatt Team" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="services" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h3>Inspektion</h3>
+                    <p>Nach Herstellervorgaben für alle Marken.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Reparatur</h3>
+                    <p>Fachgerechte Instandsetzung aller Komponenten.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-compact-disc"></i>
+                    <h3>Bremsen</h3>
+                    <p>Sicherheit durch modernste Prüftechnik.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Reifen</h3>
+                    <p>Wechsel, Wuchten und Einlagerung.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>HU/AU</h3>
+                    <p>Haupt- und Abgasuntersuchung im Haus.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-weight: 600; color: var(--primary);">Weitere Leistungen auf Anfrage.</p>
+        </div>
+    </section>
+
+    <!-- Service Features -->
+    <section id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Exklusiver Service</h2>
+            </div>
+            <div class="badges-container">
+                <div class="badge"><i class="fas fa-truck-pickup"></i> Hol- und Bringservice</div>
+                <div class="badge"><i class="fas fa-car"></i> Leihwagen verfügbar</div>
+                <div class="badge"><i class="fas fa-bolt"></i> Express-Reparatur</div>
+                <div class="badge"><i class="fas fa-shield-alt"></i> Meistergarantie</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ablauf -->
+    <section id="process" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>So arbeiten wir</h2>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Termin</h3>
+                    <p>Einfache Vereinbarung per Telefon oder vor Ort.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Diagnose</h3>
+                    <p>Präzise Fehleranalyse mit modernster Technik.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Reparatur</h3>
+                    <p>Fachmännische Ausführung durch unser Team.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Abholung</h3>
+                    <p>Übergabe Ihres fahrbereiten Fahrzeugs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt & Öffnungszeiten -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Direktkontakt</h2>
+                    <p style="margin-bottom: 30px;">Haben Sie Fragen oder benötigen Sie ein Angebot? Melden Sie sich bei uns!</p>
+                    
+                    <a href="https://maps.google.com/?q=Ahornstraße+26,+14482+Potsdam" target="_blank" class="contact-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ahornstraße 26, 14482 Potsdam</span>
+                    </a>
+                    
+                    <a href="tel:033170468800" class="contact-link">
+                        <i class="fas fa-phone"></i>
+                        <span>0331 70468800</span>
+                    </a>
+                    
+                    <a href="mailto:info@erol-potsdam.de" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@erol-potsdam.de</span>
+                    </a>
+                </div>
+                
+                <div class="opening-hours">
+                    <h2 style="color: var(--primary); margin-bottom: 20px;">Öffnungszeiten</h2>
+                    <ul class="hours-list">
+                        <li><span>Montag</span> <span>08:00 - 17:00 Uhr</span></li>
+                        <li><span>Dienstag</span> <span>08:00 - 17:00 Uhr</span></li>
+                        <li><span>Mittwoch</span> <span>08:00 - 17:00 Uhr</span></li>
+                        <li><span>Donnerstag</span> <span>08:00 - 17:00 Uhr</span></li>
+                        <li><span>Freitag</span> <span>08:00 - 16:00 Uhr</span></li>
+                        <li><span>Samstag</span> <span>Nach Vereinbarung</span></li>
+                        <li><span>Sonntag</span> <span>Geschlossen</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">MEISTERBETRIEB <span>EROL</span></div>
+            <p>&copy; 2023 Kfz Meisterbetrieb Erol. Alle Rechte vorbehalten.</p>
+            <p class="werkspree">Erstellt mit Leidenschaft für das Handwerk – Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>

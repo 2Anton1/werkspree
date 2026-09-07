@@ -1,0 +1,176 @@
+{
+  "branch": "Metzgerei",
+  "region": "Potsdam",
+  "all_candidates": [
+    {
+      "name": "Meissner - Fleischerei & Catering",
+      "address": "Karl-Liebknecht-Straße 131, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJt1YjQff1qEcRcHIP2RryojA",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 710204",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "https://www.meissners-potsdam.de/"
+    },
+    {
+      "name": "Fleischerei Riek GbR",
+      "address": "Zeppelinstraße 16, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJqQu_V8z1qEcRunbfIQ3jgg4",
+      "types": [
+        "establishment",
+        "food",
+        "meal_takeaway",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "0331 903782"
+    },
+    {
+      "name": "Fleischerei & Imbiss Th. Borgmann",
+      "address": "Rudolf-Breitscheid-Straße 18, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJcZIJxvD1qEcRMUFWwBxUz-w",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 708008"
+    },
+    {
+      "name": "Fleischerei Pirsch",
+      "address": "Feuerbachstraße 33, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJT343KzP0qEcRpWA8F-LPjE4",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 970831"
+    },
+    {
+      "name": "GUDEs",
+      "address": "Gutenbergstraße 16, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJXyxxvo71qEcRgHS5mtT82WY",
+      "types": [
+        "establishment",
+        "food",
+        "liquor_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 27370334",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.gude-potsdam.de/"
+    },
+    {
+      "name": "Fleischerei & Partyservice Buttgereit",
+      "address": "Garnstraße 2, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJB4vFd_r1qEcRBZGdhDH1KiQ",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 707193",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://www.kringelwurst.de/"
+    },
+    {
+      "name": "Fleischer Metzger Catering Bothe",
+      "address": "Hauffstraße 81, 14548 Schwielowsee, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJC5ybvJr0qEcRi9CXLl5OEUc",
+      "types": [
+        "establishment",
+        "food",
+        "meal_takeaway",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "03327 56084",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://metzgerbothe.com/",
+      "email": "info@metzgerbothe.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'metzger' in domain/local",
+      "branch": "Metzgerei",
+      "region": "Potsdam"
+    },
+    {
+      "name": "HAASE - FEINE KOST",
+      "address": "Stern-Center 1-10, 14480 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJj90-9RpfqEcRzR41NjKvCVw",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 43201364",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.haase-feinekost.de/"
+    },
+    {
+      "name": "eurogroupe",
+      "address": "Berliner Str. 121, 14467 Potsdam-Nördliche Vorstadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJq6rqTHX2qEcRO25Ds3viCaE",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 27355101",
+      "website_quality": "low",
+      "website_quality_score": 2,
+      "old_or_no_website": "http://www.eurogroupe.eu/kontakt.html"
+    }
+  ],
+  "hot_leads": [
+    {
+      "name": "Fleischer Metzger Catering Bothe",
+      "address": "Hauffstraße 81, 14548 Schwielowsee, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJC5ybvJr0qEcRi9CXLl5OEUc",
+      "types": [
+        "establishment",
+        "food",
+        "meal_takeaway",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "03327 56084",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "http://metzgerbothe.com/",
+      "email": "info@metzgerbothe.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'metzger' in domain/local",
+      "branch": "Metzgerei",
+      "region": "Potsdam"
+    }
+  ]
+}
