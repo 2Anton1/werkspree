@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety clean GmbH | Professionelle Reinigung in Cottbus</title>
+    <meta name="description" content="Safety clean GmbH - Ihr zuverlässiger Partner für Sicherheits- und Reinigungsdienstleistungen in Cottbus. Zertifiziert, umweltfreundlich und gründlich.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #2E86AB;
+            --accent: #A8DADC;
+            --bg-light: #F8FAFA;
+            --text-dark: #2D3436;
+            --text-light: #636E72;
+            --white: #FFFFFF;
+            --radius: 12px;
+            --shadow: 0 10px 30px rgba(46, 134, 171, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            padding: 160px 0 120px;
+            color: var(--white);
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--primary);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            background-color: var(--bg-light);
+        }
+
+        /* Wave Effect */
+        .wave-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            line-height: 0;
+        }
+
+        .wave-container svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+        }
+
+        .wave-container .shape-fill {
+            fill: var(--bg-light);
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title .underline {
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        /* About Us */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(46, 134, 171, 0.1);
+            color: var(--primary);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Services Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Why Us (USPs) */
+        .usp-section {
+            background-color: var(--white);
+        }
+
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .usp-item i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .usp-item h4 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        /* Area & Contact */
+        .contact-area-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .info-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            height: 100%;
+        }
+
+        .info-box h3 {
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+        }
+
+        .area-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .area-list li::before {
+            content: "✓";
+            color: var(--primary);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #2D3436;
+            color: var(--white);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .footer-copy {
+            opacity: 0.6;
+            font-size: 0.9rem;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        .werkspree-hint {
+            font-size: 0.8rem;
+            opacity: 0.5;
+            margin-top: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-grid, .usp-grid, .contact-area-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="container">
+        <a href="#" class="logo">Safety clean</a>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content animate">
+            <span class="badge" style="background: rgba(255,255,255,0.2); color: white;">Ihr Partner in Cottbus</span>
+            <h1>Frisch & Sauber</h1>
+            <p>Professionelle Sicherheits- und Reinigungsdienstleistungen für gewerbliche und private Objekte in Cottbus und Umgebung.</p>
+            <a href="#kontakt" class="cta-button">Angebot anfragen</a>
+        </div>
+        <div class="wave-container">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35c63.47,8.52,148.34,24.04,221.74,29.11Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text animate">
+                    <span class="badge">Über uns</span>
+                    <h2>Qualität aus Cottbus</h2>
+                    <p>Die Safety clean GmbH steht für erstklassige Reinigungsdienstleistungen und zuverlässigen Objektschutz. Als lokales Unternehmen in Cottbus verstehen wir die Bedürfnisse unserer Kunden genau.</p>
+                    <p>Unser Team kombiniert Fachkompetenz mit modernster Technik, um für Sie ein hygienisches und sicheres Umfeld zu schaffen. Ob Büro, Baustelle oder Privathaushalt – wir sorgen für Glanz und Sicherheit.</p>
+                </div>
+                <div class="about-stats animate" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                    <div class="service-card" style="padding: 20px;">
+                        <h3 style="font-size: 2rem; margin-bottom: 5px;">100%</h3>
+                        <p>Zuverlässig</p>
+                    </div>
+                    <div class="service-card" style="padding: 20px;">
+                        <h3 style="font-size: 2rem; margin-bottom: 5px;">Regio</h3>
+                        <p>Cottbus & Umland</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+                <div class="underline"></div>
+                <p style="margin-top: 15px; color: var(--text-light);">Maßgeschneiderte Lösungen für Ihre Anforderungen.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Unterhaltsreinigung</h3>
+                    <p>Regelmäßige Reinigung Ihrer Geschäftsräume für ein dauerhaft gepflegtes Erscheinungsbild.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Glasreinigung</h3>
+                    <p>Streifenfreie Sauberkeit für Fenster und Glasfassaden jeder Art und Höhe.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Grundreinigung</h3>
+                    <p>Intensive Tiefenreinigung zur Werterhaltung Ihrer Bodenbeläge und Oberflächen.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Bauendreinigung</h3>
+                    <p>Wir machen Ihre Baustelle bezugsfertig – gründlich, schnell und termingerecht.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--text-light);">Weitere Leistungen auf Anfrage verfügbar.</p>
+        </div>
+    </section>
+
+    <section class="usp-section">
+        <div class="container">
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">🛡️</div>
+                    <h4>Zertifiziert</h4>
+                    <p>Geprüfte Qualität und höchste Sicherheitsstandards bei jedem Auftrag.</p>
+                </div>
+                <div class="usp-item">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">🌿</div>
+                    <h4>Umweltfreundlich</h4>
+                    <p>Wir nutzen nachhaltige Reinigungsmittel zum Schutz von Mensch und Natur.</p>
+                </div>
+                <div class="usp-item">
+                    <div style="font-size: 3rem; margin-bottom: 10px;">🤝</div>
+                    <h4>Zuverlässig</h4>
+                    <p>Pünktlichkeit und diskrete Ausführung sind für uns selbstverständlich.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-area-grid">
+                <div class="info-box animate">
+                    <h3>Kontakt & Anfahrt</h3>
+                    <p style="margin-bottom: 20px;"><strong>Safety clean GmbH</strong><br>Gewerbeweg 5<br>03044 Cottbus</p>
+                    <a href="tel:0355431220" class="contact-link">📞 0355 431220</a>
+                    <a href="mailto:info@safety-clean.de" class="contact-link">✉️ info@safety-clean.de</a>
+                    
+                    <h3 style="margin-top: 40px;">Einsatzgebiet</h3>
+                    <ul class="area-list">
+                        <li>Cottbus</li>
+                        <li>Spree-Neiße</li>
+                        <li>Kolkwitz</li>
+                        <li>Peitz</li>
+                        <li>Burg (Spreewald)</li>
+                        <li>Vetschau</li>
+                    </ul>
+                </div>
+                <div class="info-box animate">
+                    <h3>Öffnungszeiten</h3>
+                    <div class="opening-hours">
+                        <table>
+                            <tr><td>Montag</td><td>08:00 - 17:00</td></tr>
+                            <tr><td>Dienstag</td><td>08:00 - 17:00</td></tr>
+                            <tr><td>Mittwoch</td><td>08:00 - 17:00</td></tr>
+                            <tr><td>Donnerstag</td><td>08:00 - 17:00</td></tr>
+                            <tr><td>Freitag</td><td>08:00 - 16:00</td></tr>
+                            <tr><td>Samstag</td><td>Nach Absprache</td></tr>
+                            <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                        </table>
+                    </div>
+                    <div style="margin-top: 30px; padding: 20px; background: var(--bg-light); border-radius: 8px; font-size: 0.9rem;">
+                        <strong>Hinweis:</strong> Termine außerhalb der Geschäftszeiten sind für Notfälle oder Spezialreinigungen nach Vereinbarung möglich.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Safety clean GmbH</span>
+            <p>Sicherheits- und Reinigungsdienstleistungen aus Cottbus</p>
+            <div class="footer-copy">
+                &copy; 2023 Safety clean GmbH. Alle Rechte vorbehalten.
+                <div class="werkspree-hint">Erstellt mit Werkspree</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

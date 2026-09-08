@@ -27,6 +27,20 @@
       "phone": "0355 793084"
     },
     {
+      "name": "LUCIA Dienstleistungsservice GmbH",
+      "address": "Am Tschugagraben 2, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ14tAqWRxCEcR6pssAdjUUZk",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 584360",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.lucia-gmbh.de/"
+    },
+    {
       "name": "Safety clean GmbH Sicherheits- und Reinigungsdienstleistungen",
       "address": "Gewerbeweg 5, 03044 Cottbus, Deutschland",
       "rating": 4.4,
@@ -44,20 +58,6 @@
       "email_verify_reason": "Impressum: Match: 'safety' in domain/local",
       "branch": "Reinigung",
       "region": "Cottbus"
-    },
-    {
-      "name": "LUCIA Dienstleistungsservice GmbH",
-      "address": "Am Tschugagraben 2, 03051 Cottbus-Gallinchen, Deutschland",
-      "rating": 4.4,
-      "place_id": "ChIJ14tAqWRxCEcR6pssAdjUUZk",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0355 584360",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": "https://www.lucia-gmbh.de/"
     },
     {
       "name": "Ultimate Clean Mellack",
@@ -83,6 +83,20 @@
         "point_of_interest"
       ],
       "phone": "0355 43099861"
+    },
+    {
+      "name": "REWO Gebäudereinigungs und Service GmbH",
+      "address": "Gewerbeweg 5, 03044 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyWOp-ap1CEcReyWpWdx4bO0",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0355 23220",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
     }
   ],
   "hot_leads": [
