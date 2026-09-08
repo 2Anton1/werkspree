@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Service Cottbus - KFZ-Meisterbetrieb Auto-Hirsch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3A4A5C;
+            --accent: #F5A623;
+            --bg-light: #EEF1F4;
+            --text-dark: #1A1A1A;
+            --text-light: #FFFFFF;
+            --shadow: 0 10px 30px rgba(0,0,0,0.15);
+            --radius: 6px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--primary);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(58, 74, 92, 0.85), rgba(58, 74, 92, 0.85)), url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1600') center/cover;
+            padding: 120px 0;
+            color: var(--text-light);
+            text-align: center;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: var(--radius);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 0 #C4841A;
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #C4841A;
+            background: #ffb433;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        /* About Section */
+        .about-box {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 8px solid var(--primary);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Service Badges */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            border: 2px solid var(--accent);
+        }
+
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            color: var(--accent);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        /* Contact & Hours */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .opening-hours {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+        }
+
+        .contact-info h3, .opening-hours h3 {
+            color: var(--accent);
+            margin-bottom: 25px;
+        }
+
+        .contact-link {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-brand {
+            color: white;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .contact-wrapper { grid-template-columns: 1fr; }
+            .nav-content { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <a href="#" class="logo">AUTO-<span>HIRSCH</span></a>
+            <div style="color: white; font-size: 0.9rem; font-weight: 600;">
+                <span style="color: var(--accent)">📞</span> 0355 2892141
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Ihr KFZ-Meisterbetrieb in Cottbus</h1>
+            <p>Professioneller Rundum-Service für alle Fahrzeugmarken. Kompetent, transparent und direkt am Stadtring.</p>
+            <a href="tel:03552892141" class="cta-button">Termin vereinbaren</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-box">
+                <h2 class="section-title" style="text-align: left; margin-left: 0;">Über uns</h2>
+                <p>Willkommen beim Auto Service Cottbus – Ihrem KFZ-Meisterbetrieb Auto-Hirsch. Als traditionsbewusste Werkstatt im Herzen von Cottbus stehen wir für technisches Know-how und erstklassigen Service. Unser Team aus erfahrenen Mechanikern sorgt dafür, dass Ihr Fahrzeug sicher und zuverlässig auf der Straße bleibt. Ob moderne Elektronik oder klassische Mechanik: Wir verbinden handwerkliche Präzision mit modernster Diagnosetechnik, um Ihnen die beste Lösung für Ihr Auto zu bieten.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background-color: #e2e7ec;">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Inspektion</h3>
+                    <p>Nach Herstellervorgaben für den Erhalt Ihrer Garantie.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reparatur</h3>
+                    <p>Fachgerechte Instandsetzung aller mechanischen Komponenten.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reifen & Räder</h3>
+                    <p>Reifenwechsel, Wuchten und Einlagerungsservice.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Bremsenservice</h3>
+                    <p>Sicherheit durch regelmäßige Prüfung und Wartung.</p>
+                </div>
+                <div class="service-card">
+                    <h3>HU / AU</h3>
+                    <p>Haupt- und Abgasuntersuchung direkt bei uns im Haus.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic;">Weitere Leistungen auf Anfrage verfügbar.</p>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">Service-Vorteile</h2>
+            <div class="badge-container">
+                <div class="badge">✓ Hol- und Bringservice</div>
+                <div class="badge">✓ Leihwagen verfügbar</div>
+                <div class="badge">✓ Express-Reparatur</div>
+                <div class="badge">✓ Meisterqualität</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" style="background-color: white;">
+        <div class="container">
+            <h2 class="section-title">Der Ablauf</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Termin</h3>
+                    <p>Anrufen oder vorbeikommen und Wunschtermin sichern.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Diagnose</h3>
+                    <p>Präzise Fehleranalyse durch unsere Experten.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Reparatur</h3>
+                    <p>Schnelle und saubere Ausführung der Arbeiten.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Abholung</h3>
+                    <p>Sicher weiterfahren mit Ihrem top-gepflegten Fahrzeug.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Kontakt</h3>
+                    <p style="margin-bottom: 20px;"><strong>Auto Service Cottbus - Auto-Hirsch</strong></p>
+                    <p style="margin-bottom: 20px;">Stadtring 3<br>03042 Cottbus, Deutschland</p>
+                    <a href="tel:03552892141" class="contact-link">📞 0355 2892141</a>
+                    <a href="mailto:hirsch@autoservice-cottbus.de" class="contact-link">✉️ hirsch@autoservice-cottbus.de</a>
+                </div>
+                <div class="opening-hours">
+                    <h3>Öffnungszeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag - Freitag</span> <span>08:00 - 17:00 Uhr</span></li>
+                        <li><span>Samstag</span> <span>09:00 - 12:00 Uhr</span></li>
+                        <li><span>Sonntag</span> <span>Geschlossen</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-brand">Auto Service Cottbus - KFZ-Meisterbetrieb Auto-Hirsch</span>
+            <p>&copy; 2023 Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>

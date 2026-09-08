@@ -506,6 +506,13 @@
       "subject": "Hendrik’s Fahrschule: Ihre neue Website ist fertig",
       "site_url": "https://werkspree.bki-de.de/microsites/sites/hendriks-fahrschule/",
       "sent_at": "2026-09-08T07:09:54.835006+02:00"
+    },
+    {
+      "company_name": "Fahrschule Hatzius",
+      "email": "info@fahrschule-hatzius.de",
+      "subject": "Fahrschule Hatzius: Ihre neue Website ist fertig",
+      "site_url": "https://werkspree.bki-de.de/microsites/sites/fahrschule-hatzius/",
+      "sent_at": "2026-09-08T07:10:15.419514+02:00"
     }
   ]
 }
