@@ -4,16 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fahrschule Hatzius | Brandenburg an der Havel</title>
-    <meta name="description" content="Deine Fahrschule in Brandenburg an der Havel. Sicher zum Führerschein mit modernen Fahrzeugen und erfahrenen Fahrlehrern.">
-    
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --navy: #0B1D3A;
@@ -22,7 +15,6 @@
             --bg-light: #F0F4FA;
             --white: #FFFFFF;
             --text-dark: #1A1A1A;
-            --text-muted: #4A5568;
             --transition: all 0.3s ease;
         }
 
@@ -34,67 +26,27 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            background-color: var(--bg-light);
             color: var(--text-dark);
-            background-color: var(--white);
+            line-height: 1.6;
             overflow-x: hidden;
         }
 
         h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        .section-padding {
-            padding: 80px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 15px 35px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .btn-primary {
-            background-color: var(--white);
-            color: var(--navy);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--signal-blue);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-
-        .btn-accent {
-            background-color: var(--signal-red);
-            color: var(--white);
-        }
-
-        .btn-accent:hover {
-            background-color: #b51d25;
-            transform: translateY(-3px);
-        }
-
         /* Header & Nav */
         header {
-            background-color: var(--navy);
+            background: var(--navy);
             padding: 20px 0;
             position: sticky;
             top: 0;
@@ -112,7 +64,7 @@
             color: var(--white);
             font-size: 1.5rem;
             font-weight: 800;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .logo span {
@@ -121,296 +73,241 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--navy) 0%, #162e54 100%);
+            background: linear-gradient(rgba(11, 29, 58, 0.85), rgba(11, 29, 58, 0.85)), 
+                        url('https://images.unsplash.com/photo-1449960232330-79ba99d70d91?auto=format&fit=crop&q=80&w=1920') center/cover no-repeat;
+            padding: 120px 0;
             color: var(--white);
-            padding: 120px 0 100px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -50px;
-            right: -50px;
-            width: 300px;
-            height: 300px;
-            background: var(--signal-blue);
-            opacity: 0.1;
-            border-radius: 50%;
-        }
-
-        .hero-content {
-            max-width: 700px;
-            position: relative;
-            z-index: 2;
+            text-align: center;
         }
 
         .hero h1 {
             font-size: clamp(2.5rem, 5vw, 4rem);
             margin-bottom: 20px;
-            animation: fadeInUp 0.8s ease-out;
+            line-height: 1.1;
         }
 
         .hero p {
             font-size: 1.2rem;
-            margin-bottom: 35px;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
             opacity: 0.9;
-            animation: fadeInUp 0.8s ease-out 0.2s backwards;
         }
 
-        /* About Section */
-        .about {
-            background-color: var(--white);
+        .cta-button {
+            display: inline-block;
+            background-color: var(--signal-red);
+            color: var(--white);
+            padding: 18px 40px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: var(--transition);
+            text-transform: uppercase;
+            border: 2px solid transparent;
         }
 
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+        .cta-button:hover {
+            background-color: transparent;
+            border-color: var(--white);
+            transform: translateY(-3px);
         }
 
-        .about-text h2 {
-            color: var(--navy);
-            margin-bottom: 20px;
-            font-size: 2.2rem;
-        }
-
-        .about-text p {
-            margin-bottom: 20px;
-            color: var(--text-muted);
-        }
-
-        /* Vehicle Classes */
-        .classes {
-            background-color: var(--bg-light);
+        /* Sections General */
+        section {
+            padding: 80px 0;
         }
 
         .section-title {
             text-align: center;
             margin-bottom: 50px;
+            position: relative;
         }
 
         .section-title h2 {
-            color: var(--navy);
             font-size: 2.2rem;
+            color: var(--navy);
         }
 
-        .class-grid {
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--signal-blue);
+            margin: 15px auto 0;
+        }
+
+        /* Über uns */
+        .about-content {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--signal-blue);
+        }
+
+        /* Fahrzeug-Klassen Badge Style */
+        .classes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
 
         .class-card {
-            background: var(--white);
+            background: var(--navy);
+            color: var(--white);
             padding: 30px;
-            border-radius: 12px;
             text-align: center;
+            border-radius: 8px;
             transition: var(--transition);
-            border-bottom: 4px solid var(--signal-blue);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            cursor: default;
         }
 
         .class-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .class-badge {
-            display: inline-block;
-            background: var(--navy);
-            color: var(--white);
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            background: var(--signal-blue);
+            transform: scale(1.05);
         }
 
         .class-card h3 {
+            font-size: 2.5rem;
             margin-bottom: 10px;
-            color: var(--navy);
         }
 
-        /* Why Us */
-        .why-us {
-            background-color: var(--navy);
-            color: var(--white);
+        .class-card p {
+            font-weight: 600;
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
+        /* Warum wir? USPs */
         .usp-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
 
         .usp-item {
             text-align: center;
-            padding: 20px;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 8px;
         }
 
-        .usp-item i {
-            font-size: 3rem;
+        .usp-icon {
+            font-size: 2.5rem;
             color: var(--signal-red);
             margin-bottom: 20px;
+            display: block;
         }
 
-        /* Steps Section */
-        .steps {
-            background-color: var(--white);
-        }
-
+        /* Ablauf Steps */
         .steps-container {
-            max-width: 900px;
-            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
         }
 
-        .step-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
+        .step {
+            text-align: center;
             position: relative;
         }
 
-        .step-circle {
-            min-width: 60px;
-            height: 60px;
-            background: var(--signal-blue);
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: var(--navy);
             color: var(--white);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 2rem;
             font-weight: 800;
-            margin-right: 30px;
-            z-index: 2;
+            margin: 0 auto 20px;
+            border: 4px solid var(--signal-blue);
         }
 
-        .step-content h3 {
+        .step h4 {
+            margin-bottom: 10px;
             color: var(--navy);
-            margin-bottom: 5px;
         }
 
-        /* Contact & Hours */
-        .contact-info {
-            background-color: var(--bg-light);
-        }
-
-        .contact-grid {
+        /* Kontakt & Öffnungszeiten */
+        .contact-wrapper {
             display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 50px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
         }
 
         .info-box {
             background: var(--white);
             padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            height: 100%;
         }
 
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
+        .info-box h3 {
+            margin-bottom: 20px;
+            color: var(--navy);
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
         }
 
-        .info-item i {
+        .contact-link {
+            display: block;
             color: var(--signal-blue);
-            font-size: 1.2rem;
-            margin-right: 20px;
-            margin-top: 5px;
-        }
-
-        .info-item a {
-            color: var(--text-dark);
             text-decoration: none;
-            transition: var(--transition);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }
 
-        .info-item a:hover {
-            color: var(--signal-blue);
+        .contact-link:hover {
+            text-decoration: underline;
         }
 
-        .hours-box {
-            background: var(--navy);
-            color: var(--white);
-            padding: 40px;
-            border-radius: 12px;
-        }
-
-        .hours-table {
+        .opening-hours table {
             width: 100%;
             border-collapse: collapse;
         }
 
-        .hours-table td {
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+        .opening-hours td {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
         }
 
-        .hours-table td:last-child {
+        .opening-hours td:last-child {
             text-align: right;
+            font-weight: 600;
         }
 
         /* Footer */
         footer {
-            background-color: #050d1a;
+            background: var(--navy);
             color: var(--white);
-            padding: 40px 0;
+            padding: 50px 0 20px;
             text-align: center;
-            font-size: 0.9rem;
         }
 
-        .footer-content p {
-            opacity: 0.7;
-            margin-bottom: 10px;
+        .footer-content {
+            margin-bottom: 30px;
+            opacity: 0.8;
         }
 
-        .werkspree {
-            color: var(--signal-blue);
-            text-decoration: none;
-            font-weight: 600;
+        .copyright {
+            font-size: 0.85rem;
+            opacity: 0.6;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 992px) {
-            .grid-2, .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .hero {
-                text-align: center;
-                padding: 80px 0;
-            }
-            .hero-content {
-                margin: 0 auto;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .step-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            .step-circle {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero { padding: 80px 0; }
+            .section-title h2 { font-size: 1.8rem; }
         }
     </style>
 </head>
@@ -419,197 +316,139 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">HATZIUS<span>.</span></div>
-                <a href="tel:01738975485" class="btn btn-accent"><i class="fas fa-phone"></i> Jetzt anrufen</a>
+                <div class="logo">FAHRSCHULE <span>HATZIUS</span></div>
             </nav>
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>Dein Weg zur Freiheit beginnt hier.</h1>
-                <p>Die Fahrschule Hatzius in Brandenburg an der Havel begleitet dich sicher, kompetent und mit modernsten Fahrzeugen zu deinem Führerschein.</p>
-                <a href="#kontakt" class="btn btn-primary">Jetzt Durchstarten</a>
-            </div>
+            <h1>Dein Weg zum Führerschein in Brandenburg</h1>
+            <p>Sicher, kompetent und mit modernsten Fahrzeugen begleiten wir dich durch die Theorie und Praxis bis zur erfolgreichen Prüfung.</p>
+            <a href="#kontakt" class="cta-button">Jetzt Durchstarten</a>
         </div>
     </section>
 
-    <section class="about section-padding">
-        <div class="container">
-            <div class="grid-2">
-                <div class="about-text">
-                    <h2>Deine Fahrschule in Brandenburg</h2>
-                    <p>Willkommen bei der Fahrschule Hatzius! Wir sind dein zuverlässiger Partner in Brandenburg an der Havel, wenn es um eine erstklassige Fahrausbildung geht. Unser Ziel ist es, dich nicht nur schnell, sondern vor allem sicher und verantwortungsbewusst auf die Straße zu bringen.</p>
-                    <p>Mit viel Geduld, langjähriger Erfahrung und einer Prise Humor gestalten wir den Theorie- und Praxisunterricht so angenehm wie möglich. Egal ob du gerade erst 17 wirst oder als Erwachsener neu durchstarten möchtest – wir passen uns deinem Lerntempo an.</p>
-                    <a href="#klassen" class="btn btn-accent">Unsere Klassen</a>
-                </div>
-                <div class="about-image">
-                    <div style="background: var(--bg-light); border-radius: 20px; height: 400px; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--signal-blue);">
-                        <i class="fas fa-car" style="font-size: 10rem; color: var(--navy); opacity: 0.1;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="klassen" class="classes section-padding">
+    <section id="ueber-uns">
         <div class="container">
             <div class="section-title">
-                <h2>Unsere Fahrzeug-Klassen</h2>
-                <p>Wähle deine Ausbildung – wir haben das passende Fahrzeug.</p>
+                <h2>Über uns</h2>
             </div>
-            <div class="class-grid">
-                <div class="class-card">
-                    <div class="class-badge">B</div>
-                    <h3>PKW</h3>
-                    <p>Der klassische Autoführerschein für Schaltwagen oder Automatik.</p>
-                </div>
-                <div class="class-card">
-                    <div class="class-badge">BF17</div>
-                    <h3>Begleitetes Fahren</h3>
-                    <p>Schon mit 17 Jahren hinter das Steuer und Fahrpraxis sammeln.</p>
-                </div>
-                <div class="class-card">
-                    <div class="class-badge">A</div>
-                    <h3>Motorrad</h3>
-                    <p>Freiheit auf zwei Rädern – Ausbildung für alle Zweirad-Klassen.</p>
-                </div>
-                <div class="class-card">
-                    <div class="class-badge">BE</div>
-                    <h3>Anhänger</h3>
-                    <p>Erweitere deinen B-Führerschein für schwere Anhängergespanne.</p>
-                </div>
+            <div class="about-content">
+                <p>Die Fahrschule Hatzius ist Ihr zuverlässiger Partner für die Führerscheinausbildung in Brandenburg an der Havel. Mit langjähriger Erfahrung und einem modernen Schulungskonzept bereiten wir unsere Fahrschüler optimal auf den Straßenverkehr vor. Unser Ziel ist es, nicht nur die Prüfung zu bestehen, sondern verantwortungsbewusste und sichere Fahrer auszubilden. In entspannter Atmosphäre und mit geduldigen Ausbildern führen wir dich Schritt für Schritt zu deinem Ziel.</p>
             </div>
         </div>
     </section>
 
-    <section class="why-us section-padding">
+    <section id="klassen" style="background-color: var(--white);">
         <div class="container">
             <div class="section-title">
-                <h2 style="color: white;">Warum wir?</h2>
+                <h2>Fahrzeug-Klassen</h2>
+            </div>
+            <div class="classes-grid">
+                <div class="class-card">
+                    <h3>B</h3>
+                    <p>PKW / Auto</p>
+                </div>
+                <div class="class-card">
+                    <h3>BF17</h3>
+                    <p>Begleitetes Fahren</p>
+                </div>
+                <div class="class-card">
+                    <h3>A</h3>
+                    <p>Motorrad</p>
+                </div>
+                <div class="class-card">
+                    <h3>BE</h3>
+                    <p>PKW mit Anhänger</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <p><strong>Leistungen auf Anfrage</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="warum-wir">
+        <div class="container">
+            <div class="section-title">
+                <h2>Warum wir?</h2>
             </div>
             <div class="usp-grid">
                 <div class="usp-item">
-                    <i class="fas fa-graduation-cap"></i>
+                    <span class="usp-icon">🏆</span>
                     <h3>Hohe Bestehensquote</h3>
-                    <p>Durch unsere gezielte Vorbereitung gehen unsere Schüler entspannt und sicher in die Prüfung.</p>
+                    <p>Durch unsere gezielte Vorbereitung führen wir dich sicher und effizient zum Erfolg.</p>
                 </div>
                 <div class="usp-item">
-                    <i class="fas fa-car-side"></i>
+                    <span class="usp-icon">🚗</span>
                     <h3>Moderne Fahrzeuge</h3>
-                    <p>Lerne auf den neuesten Modellen mit modernster Sicherheitstechnik und Komfort.</p>
+                    <p>Lerne auf dem neuesten Stand der Technik mit unseren aktuellen Schulungsfahrzeugen.</p>
                 </div>
                 <div class="usp-item">
-                    <i class="fas fa-calendar-alt"></i>
+                    <span class="usp-icon">📅</span>
                     <h3>Flexible Zeiten</h3>
-                    <p>Wir passen die Fahrstunden deinem Alltag an – egal ob Schule, Studium oder Beruf.</p>
+                    <p>Wir passen die Fahrstunden deinem Alltag an – für eine stressfreie Ausbildung.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="steps section-padding">
+    <section id="ablauf" style="background-color: var(--white);">
         <div class="container">
             <div class="section-title">
-                <h2>In 4 Schritten zum Führerschein</h2>
+                <h2>Dein Weg zum Ziel</h2>
             </div>
             <div class="steps-container">
-                <div class="step-item">
-                    <div class="step-circle">1</div>
-                    <div class="step-content">
-                        <h3>Anmeldung</h3>
-                        <p>Komm vorbei, lass dich beraten und melde dich unkompliziert bei uns an.</p>
-                    </div>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Anmeldung</h4>
+                    <p>Komm vorbei und wir erledigen gemeinsam den Papierkram.</p>
                 </div>
-                <div class="step-item">
-                    <div class="step-circle">2</div>
-                    <div class="step-content">
-                        <h3>Theorie</h3>
-                        <p>Besuche unseren spannenden Theorieunterricht und bereite dich auf die Prüfung vor.</p>
-                    </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Theorie</h4>
+                    <p>Spannender Unterricht, der dich fit für die Straße macht.</p>
                 </div>
-                <div class="step-item">
-                    <div class="step-circle">3</div>
-                    <div class="step-content">
-                        <h3>Praxis</h3>
-                        <p>Jetzt geht's auf die Straße! Gemeinsam meistern wir die ersten Fahrstunden.</p>
-                    </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Praxis</h4>
+                    <p>Sammle wertvolle Erfahrung hinter dem Steuer.</p>
                 </div>
-                <div class="step-item">
-                    <div class="step-circle">4</div>
-                    <div class="step-content">
-                        <h3>Prüfung</h3>
-                        <p>Nach erfolgreicher Vorbereitung absolvierst du deine Prüfung und hältst deinen Schein in den Händen.</p>
-                    </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>Prüfung</h4>
+                    <p>Der große Tag – wir begleiten dich bis zum Führerschein.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="kontakt" class="contact-info section-padding">
+    <section id="kontakt">
         <div class="container">
-            <div class="contact-grid">
+            <div class="contact-wrapper">
                 <div class="info-box">
-                    <h2>Kontakt aufnehmen</h2>
-                    <p style="margin-bottom: 30px;">Hast du Fragen oder möchtest dich anmelden? Wir freuen uns auf deine Nachricht oder deinen Anruf!</p>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Adresse:</strong><br>
-                            Geschwister-Scholl-Straße 32<br>
-                            14776 Brandenburg an der Havel
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <strong>Telefon:</strong><br>
-                            <a href="tel:01738975485">0173 8975485</a>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>E-Mail:</strong><br>
-                            <a href="mailto:info@fahrschule-hatzius.de">info@fahrschule-hatzius.de</a>
-                        </div>
-                    </div>
+                    <h3>Kontakt</h3>
+                    <p><strong>Fahrschule Hatzius</strong></p>
+                    <p>Geschwister-Scholl-Straße 32</p>
+                    <p>14776 Brandenburg an der Havel</p>
+                    <br>
+                    <a href="tel:01738975485" class="contact-link">📞 0173 8975485</a>
+                    <a href="mailto:info@fahrschule-hatzius.de" class="contact-link">✉️ info@fahrschule-hatzius.de</a>
                 </div>
-
-                <div class="hours-box">
+                <div class="info-box">
                     <h3>Öffnungszeiten</h3>
-                    <p style="margin-bottom: 20px; opacity: 0.8;">Bürozeiten & Theorieunterricht</p>
-                    <table class="hours-table">
-                        <tr>
-                            <td>Montag</td>
-                            <td>15:00 - 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Dienstag</td>
-                            <td>15:00 - 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Mittwoch</td>
-                            <td>15:00 - 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Donnerstag</td>
-                            <td>15:00 - 18:00</td>
-                        </tr>
-                        <tr>
-                            <td>Freitag</td>
-                            <td>Nach Vereinbarung</td>
-                        </tr>
-                        <tr>
-                            <td>Sa / So</td>
-                            <td>Geschlossen</td>
-                        </tr>
-                    </table>
-                    <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.7;">Fahrstunden finden individuell nach Vereinbarung statt.</p>
+                    <div class="opening-hours">
+                        <table>
+                            <tr><td>Montag</td><td>15:00 - 18:00</td></tr>
+                            <tr><td>Dienstag</td><td>15:00 - 18:00</td></tr>
+                            <tr><td>Mittwoch</td><td>15:00 - 18:00</td></tr>
+                            <tr><td>Donnerstag</td><td>15:00 - 18:00</td></tr>
+                            <tr><td>Freitag</td><td>Nach Vereinbarung</td></tr>
+                            <tr><td>Sa / So</td><td>Geschlossen</td></tr>
+                        </table>
+                        <p style="margin-top: 15px; font-size: 0.9rem; font-style: italic;">Fahrstunden nach individueller Absprache.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -618,8 +457,11 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2023 Fahrschule Hatzius. Alle Rechte vorbehalten.</p>
-                <p>Erstellt mit Leidenschaft von <a href="https://werkspree.de" class="werkspree" target="_blank">Werkspree</a></p>
+                <div class="logo" style="margin-bottom: 20px;">FAHRSCHULE <span>HATZIUS</span></div>
+                <p>Deine Fahrschule in Brandenburg an der Havel.</p>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Fahrschule Hatzius. Alle Rechte vorbehalten. | Erstellt von Werkspree
             </div>
         </div>
     </footer>
