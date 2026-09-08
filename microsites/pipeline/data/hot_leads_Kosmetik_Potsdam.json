@@ -46,6 +46,20 @@
       "phone": "0331 58148310"
     },
     {
+      "name": "Beauty Cosmetics Potsdam",
+      "address": "Jägerstraße 31, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJSR-6eNr1qEcRLIzdFYwXYiU",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa",
+        "store"
+      ],
+      "phone": "0331 293537"
+    },
+    {
       "name": "Skinlounge Potsdam",
       "address": "Gutenbergstraße 107, 14467 Potsdam, Deutschland",
       "rating": 4.9,
@@ -68,18 +82,6 @@
       "region": "Potsdam"
     },
     {
-      "name": "House of Beauty",
-      "address": "Breite Str. 25-27, 14471 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJZUcD4TP1qEcRq77XEyOF0b4",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0176 36188888"
-    },
-    {
       "name": "Kosmetikstudio Pamela Lawrenz",
       "address": "Arthur-Scheunert-Allee 2/Haus 7, 14558 Nuthetal, Deutschland",
       "rating": 5,
@@ -95,18 +97,29 @@
       "phone": "0176 81366535"
     },
     {
-      "name": "Beauty Cosmetics Potsdam",
-      "address": "Jägerstraße 31, 14467 Potsdam, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJSR-6eNr1qEcRLIzdFYwXYiU",
+      "name": "House of Beauty",
+      "address": "Breite Str. 25-27, 14471 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJZUcD4TP1qEcRq77XEyOF0b4",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0176 36188888"
+    },
+    {
+      "name": "Kosmetik in der kleinen Gasse",
+      "address": "Kleine G. 2, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJC8xyJ9D1qEcR3_CT56RpZeg",
       "types": [
         "beauty_salon",
         "establishment",
         "point_of_interest",
-        "spa",
-        "store"
+        "spa"
       ],
-      "phone": "0331 293537"
+      "phone": "0331 70431686"
     },
     {
       "name": "Beautylogie Hair Care Spa",
@@ -130,19 +143,6 @@
       "region": "Potsdam"
     },
     {
-      "name": "Kosmetik in der kleinen Gasse",
-      "address": "Kleine G. 2, 14467 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJC8xyJ9D1qEcR3_CT56RpZeg",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "spa"
-      ],
-      "phone": "0331 70431686"
-    },
-    {
       "name": "Kosmetik Shine Skin Care",
       "address": "Garnstraße 12, 14482 Potsdam-Babelsberg, Deutschland",
       "rating": 5,
@@ -155,10 +155,46 @@
       "phone": "0331 23161890"
     },
     {
+      "name": "Kosmetikinstitut Potsdam | Kosmetikstudio",
+      "address": "Berliner Str, Seitenflügel 131, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ_WcPDz_1qEcRBZhhc10mCYE",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
       "name": "Kosmetikwerk Ronny Gallandi",
       "address": "Großbeerenstraße 230, 14480 Potsdam Südost, Deutschland",
       "rating": 5,
       "place_id": "ChIJgdWrW79fqEcRiPshAh8W9VI",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "AURA & SKIN - Kosmetik Potsdam | Christiane Lapuhs",
+      "address": "Gutenbergstraße 65, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJXbchhlT3qEcRmvAKi_-jnik",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "BEWEI Lounge Potsdam",
+      "address": "Georg-Hermann-Allee 26, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJT6UG15j3qEcR9pAzG5qeyMw",
       "types": [
         "beauty_salon",
         "establishment",
@@ -180,46 +216,35 @@
       ]
     },
     {
-      "name": "AURA & SKIN - Kosmetik Potsdam | Christiane Lapuhs",
-      "address": "Gutenbergstraße 65, 14467 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJXbchhlT3qEcRmvAKi_-jnik",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "spa"
-      ]
-    },
-    {
-      "name": "Kosmetikinstitut Potsdam | Kosmetikstudio",
-      "address": "Berliner Str, Seitenflügel 131, 14467 Potsdam, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJ_WcPDz_1qEcRBZhhc10mCYE",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "spa"
-      ]
-    },
-    {
-      "name": "BEWEI Lounge Potsdam",
-      "address": "Georg-Hermann-Allee 26, 14469 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJT6UG15j3qEcR9pAzG5qeyMw",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "spa"
-      ]
-    },
-    {
       "name": "Crème de la Crème",
       "address": "Großbeerenstraße 48, 14482 Potsdam, Deutschland",
       "rating": 5,
       "place_id": "ChIJnQ_3rE5fqEcRIiDb2zPb2tY",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa"
+      ]
+    },
+    {
+      "name": "Schönheitszauber Potsdam UG",
+      "address": "Kaiser-Friedrich-Straße 24, 14469 Potsdam Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ0Yj7v6P1qEcRYeIO6TDmU4g",
+      "types": [
+        "beauty_salon",
+        "establishment",
+        "point_of_interest",
+        "spa",
+        "store"
+      ]
+    },
+    {
+      "name": "Kosmetikstudio Susanne Rücker",
+      "address": "Mies-van-der-Rohe-Straße 2, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJZ8jLWMv1qEcR_CqjYVGmtoY",
       "types": [
         "beauty_salon",
         "establishment",
@@ -248,31 +273,6 @@
         "establishment",
         "point_of_interest",
         "spa"
-      ]
-    },
-    {
-      "name": "Kosmetikstudio Kerstin Merkouris",
-      "address": "Hebbelstraße 39, 14469 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJAQB0nN_1qEcRf9ip0yQEDRA",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "spa"
-      ]
-    },
-    {
-      "name": "Schönheitszauber Potsdam UG",
-      "address": "Kaiser-Friedrich-Straße 24, 14469 Potsdam Nord, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ0Yj7v6P1qEcRYeIO6TDmU4g",
-      "types": [
-        "beauty_salon",
-        "establishment",
-        "point_of_interest",
-        "spa",
-        "store"
       ]
     }
   ],
