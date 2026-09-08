@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effenberger Fahrzeuge & Service | Kfz-Meisterbetrieb Cottbus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3A4A5C; /* Stahlgrau */
+            --accent: #F5A623;  /* Warnendes Orange/Gelb */
+            --bg-light: #EEF1F4; /* Helles Grau */
+            --text-dark: #1F2937;
+            --text-light: #FFFFFF;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 6px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(58, 74, 92, 0.9), rgba(58, 74, 92, 0.8)), 
+                        url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            border-bottom: 8px solid var(--accent);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: slideUp 0.8s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--primary);
+            padding: 15px 35px;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: var(--radius);
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: var(--shadow);
+            text-transform: uppercase;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+        }
+
+        /* --- Section Styling --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            margin: 15px auto 0;
+        }
+
+        /* --- Über uns --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--primary);
+        }
+
+        /* --- Leistungen Cards --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            border-bottom: 3px solid var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            font-size: 1rem;
+            color: var(--primary);
+        }
+
+        /* --- Service Badges --- */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            border: 2px solid var(--accent);
+        }
+
+        /* --- Ablauf Steps --- */
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step {
+            position: relative;
+            padding: 30px;
+            background: #fff;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            margin: 0 auto 20px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        /* --- Kontakt & Öffnungszeiten --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-box {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: var(--radius);
+        }
+
+        .info-box h3 {
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .info-link {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .info-link:hover {
+            color: var(--accent);
+        }
+
+        .opening-hours table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-hours td {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .opening-hours td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #252f3a;
+            color: rgba(255,255,255,0.6);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* --- Animations --- */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .about-grid, .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <h1>Effenberger Fahrzeuge & Service</h1>
+            <p>Ihr kompetenter Kfz-Meisterbetrieb am Stadtring in Cottbus.</p>
+            <a href="tel:035575218300" class="cta-button">Termin vereinbaren</a>
+        </div>
+    </header>
+
+    <!-- Über uns -->
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">Über uns</h2>
+                    <p>Willkommen bei <strong>Effenberger Fahrzeuge & Service</strong>. Als fest verwurzelte Kfz-Werkstatt in Cottbus stehen wir für technische Präzision und ehrliches Handwerk. Direkt am Stadtring 3 gelegen, bieten wir Autofahrern der Region einen Rundum-Service, der Kompetenz mit moderner Diagnose verbindet.</p>
+                    <br>
+                    <p>Unser Ziel ist Ihre Sicherheit auf der Straße. Ob routinemäßige Wartung oder komplexe Instandsetzung – wir behandeln jedes Fahrzeug mit der Sorgfalt eines Profis.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&q=80&w=800" alt="Werkstatt" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="leistungen" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Leistungen auf Anfrage</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Inspektion</h3>
+                </div>
+                <div class="service-card">
+                    <h3>Reparatur</h3>
+                </div>
+                <div class="service-card">
+                    <h3>Reifenservice</h3>
+                </div>
+                <div class="service-card">
+                    <h3>Bremsen</h3>
+                </div>
+                <div class="service-card">
+                    <h3>HU/AU Service</h3>
+                </div>
+            </div>
+
+            <div class="badge-container">
+                <div class="badge">Hol- und Bringservice</div>
+                <div class="badge">Leihwagen</div>
+                <div class="badge">Express-Reparatur</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ablauf -->
+    <section id="ablauf">
+        <div class="container">
+            <h2 class="section-title">Unser Werkstatt-Prozess</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Termin</h3>
+                    <p>Kurzer Anruf oder Besuch vor Ort zur Abstimmung.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Diagnose</h3>
+                    <p>Präzise Fehleranalyse durch unsere Experten.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Reparatur</h3>
+                    <p>Fachgerechte Ausführung mit Qualitäts-Ersatzteilen.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Abfahrt</h3>
+                    <p>Sicher und geprüft zurück auf die Straße.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt & Öffnungszeiten -->
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="info-box">
+                    <h3>Kontakt</h3>
+                    <p style="margin-bottom: 20px;">Effenberger Fahrzeuge & Service<br>Stadtring 3<br>03042 Cottbus</p>
+                    <a href="tel:035575218300" class="info-link"><strong>Tel:</strong> 0355 75218300</a>
+                    <a href="mailto:info@auto-effenberger.de" class="info-link"><strong>E-Mail:</strong> info@auto-effenberger.de</a>
+                </div>
+                <div class="info-box" style="background: #4A5A6C;">
+                    <h3>Öffnungszeiten</h3>
+                    <div class="opening-hours">
+                        <table>
+                            <tr><td>Montag - Freitag</td><td>08:00 - 18:00 Uhr</td></tr>
+                            <tr><td>Samstag</td><td>09:00 - 13:00 Uhr</td></tr>
+                            <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Effenberger Fahrzeuge & Service. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem;">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
