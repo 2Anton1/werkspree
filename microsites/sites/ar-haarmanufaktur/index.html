@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Haarmanufaktur | Exklusiver Friseur in Brandenburg an der Havel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #C5A059; /* Bronze/Gold */
+            --dark: #1A1A1A;    /* Deep Black */
+            --light: #F8F5F0;   /* Off-White */
+            --text: #333333;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            background: var(--dark);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            color: #ccc;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--primary);
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 0;
+            transition: var(--transition);
+            border: 1px solid var(--primary);
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            margin: 10px auto 0;
+        }
+
+        /* Über uns */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* Preisliste Table */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .price-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .price-table tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .price-table td {
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .price-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .price-category {
+            background-color: var(--dark) !important;
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Leistungen Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border: 1px solid #eee;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* Team Section */
+        .team-flex {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border: 3px solid white;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3, .hours h3 {
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--primary);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--dark);
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--primary);
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">AR HAARMANUFAKTUR</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>AR <span>Haarmanufaktur</span></h1>
+            <p>Exzellenz in jedem Schnitt. Ihr exklusiver Rückzugsort für Stil und Ästhetik.</p>
+            <a href="tel:033812182750" class="cta-button">TERMIN BUCHEN</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Über uns</h2>
+            </div>
+            <div class="about-content">
+                <p>Willkommen in der AR Haarmanufaktur in Brandenburg an der Havel. In der historischen Steinstraße gelegen, verbinden wir traditionelles Friseurhandwerk mit modernster Schnittführung und individueller Typberatung. Unser Salon steht für eine Atmosphäre der Ruhe und Exklusivität, in der Ihre Persönlichkeit im Mittelpunkt steht. Wir nehmen uns Zeit für das Detail, um Ergebnisse zu schaffen, die nicht nur Trends folgen, sondern Ihren individuellen Stil unterstreichen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="prices" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Preisliste</h2>
+            </div>
+            <table class="price-table">
+                <tr class="price-category"><td colspan="2">Damen</td></tr>
+                <tr><td>Waschen, Schneiden, Styling</td><td>ab 45,00 €</td></tr>
+                <tr><td>Farbe & Glossing</td><td>ab 55,00 €</td></tr>
+                <tr><td>Balayage / Highlights</td><td>auf Anfrage</td></tr>
+                
+                <tr class="price-category"><td colspan="2">Herren</td></tr>
+                <tr><td>Haarschnitt (Waschen/Styling)</td><td>ab 28,00 €</td></tr>
+                <tr><td>Bartpflege / Bar Beard Design</td><td>ab 15,00 €</td></tr>
+                
+                <tr class="price-category"><td colspan="2">Specials</td></tr>
+                <tr><td>Kopfhautanalyse & Pflege</td><td>ab 12,00 €</td></tr>
+                <tr><td>Event-Styling</td><td>auf Anfrage</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Individuelle Beratung</h3>
+                    <p>Leistungen auf Anfrage. Wir finden gemeinsam den Look, der perfekt zu Ihrer Gesichtsform und Ihrem Lifestyle passt.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Coloration & Technik</h3>
+                    <p>Leistungen auf Anfrage. Von natürlichen Reflexen bis hin zu modernen Farbtechniken auf höchstem Niveau.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Men's Grooming</h3>
+                    <p>Leistungen auf Anfrage. Klassische Schnitte und präzise Bartpflege für den modernen Gentleman.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" style="background-color: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Stil</h2>
+            </div>
+            <div class="team-flex">
+                <div class="team-member">
+                    <div class="avatar">AR</div>
+                    <p><strong>Kreativität</strong></p>
+                </div>
+                <div class="team-member">
+                    <div class="avatar">HM</div>
+                    <p><strong>Präzision</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Kontakt</h3>
+                    <p><strong>AR Haarmanufaktur</strong></p>
+                    <p>Steinstraße 41</p>
+                    <p>14776 Brandenburg an der Havel</p>
+                    <br>
+                    <a href="tel:033812182750" class="contact-link">Tel: 03381 2182750</a>
+                    <a href="mailto:info@ar-haarmanufaktur.de" class="contact-link">info@ar-haarmanufaktur.de</a>
+                </div>
+                <div class="hours">
+                    <h3>Öffnungszeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag</span> <span>Geschlossen</span></li>
+                        <li><span>Dienstag</span> <span>09:00 - 18:00</span></li>
+                        <li><span>Mittwoch</span> <span>09:00 - 18:00</span></li>
+                        <li><span>Donnerstag</span> <span>09:00 - 19:00</span></li>
+                        <li><span>Freitag</span> <span>09:00 - 18:00</span></li>
+                        <li><span>Samstag</span> <span>08:00 - 13:00</span></li>
+                        <li><span>Sonntag</span> <span>Geschlossen</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AR Haarmanufaktur. Alle Rechte vorbehalten.</p>
+            <p class="footer-line">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
