@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing. Jürgen Krüger | Malerfachbetrieb Brandenburg an der Havel</title>
+    <meta name="description" content="Ihr professioneller Malerfachbetrieb in Brandenburg an der Havel. Qualität, Präzision und handwerkliche Leidenschaft von Ing. Jürgen Krüger.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1B3A5F; /* Tiefes Dunkelblau */
+            --accent: #E07A3F;  /* Warmes Terrakotta */
+            --bg-cream: #FAF6EF; /* Cremeweiß */
+            --text-dark: #2D2419; /* Anthrazit */
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 140px;
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            clip-path: ellipse(150% 100% at 50% 0%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(224, 122, 63, 0.3);
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(224, 122, 63, 0.4);
+            background-color: #f08a4f;
+        }
+
+        /* Sections General */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-title .underline {
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        /* About Us */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-image {
+            background: var(--white);
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border-left: 8px solid var(--accent);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .service-note {
+            text-align: center;
+            margin-top: 40px;
+            font-style: italic;
+            color: #666;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: var(--radius);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .grad-1 { background: linear-gradient(135deg, var(--primary), var(--bg-cream)); color: var(--primary); }
+        .grad-2 { background: linear-gradient(135deg, var(--accent), #FAF6EF); color: var(--text-dark); }
+        .grad-3 { background: linear-gradient(135deg, var(--text-dark), var(--accent)); }
+        .grad-4 { background: linear-gradient(135deg, var(--primary), var(--accent)); }
+
+        /* Why Us */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .usp-card {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            background: rgba(255,255,255,0.5);
+            padding: 25px;
+            border-radius: var(--radius);
+        }
+
+        .usp-icon {
+            background: var(--accent);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        /* Contact & Hours */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info, .opening-hours {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-link {
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-bottom {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-grid, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 80px 0 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <strong>Ing. Jürgen Krüger</strong>
+                    <span>Malerfachbetrieb</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Malerhandwerk mit Präzision & Leidenschaft</h1>
+            <p>Ihr zuverlässiger Partner für hochwertige Wandgestaltung, Fassadenschutz und exklusive Oberflächen in Brandenburg an der Havel.</p>
+            <a href="#kontakt" class="cta-button">Kostenloses Angebot anfordern</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Tradition trifft Ingenieurs-Know-how</h3>
+                    <p>Seit vielen Jahren steht der Malerfachbetrieb von Ing. Jürgen Krüger für erstklassige Handwerksqualität in Brandenburg an der Havel. Als inhabergeführter Betrieb verbinden wir fundiertes technisches Wissen mit der Liebe zum Detail.</p>
+                    <br>
+                    <p>Ob private Wohnräume oder gewerbliche Objekte – wir bringen Farbe in Ihr Leben und sorgen für langlebige Ergebnisse, die begeistern. Vertrauen Sie auf einen Fachbetrieb, der sein Handwerk von der Pike auf versteht.</p>
+                </div>
+                <div class="about-image">
+                    <p><em>"Farbe ist nicht nur ein Anstrich, sondern Ausdruck von Lebensqualität. Wir sorgen dafür, dass Ihr Zuhause in Brandenburg genau diesen Charakter widerspiegelt."</em></p>
+                    <p style="margin-top: 15px; font-weight: 600;">— Ing. Jürgen Krüger</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Innenanstrich</h3>
+                    <p>Individuelle Farbkonzepte für ein behagliches Zuhause.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fassaden</h3>
+                    <p>Schutz und Ästhetik für die Visitenkarte Ihres Hauses.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tapezierarbeiten</h3>
+                    <p>Von klassisch bis modern – wir bringen Struktur an die Wand.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Lackieren</h3>
+                    <p>Präzise Oberflächenveredelung für Türen, Fenster und mehr.</p>
+                </div>
+            </div>
+            <p class="service-note">Weitere Leistungen auf Anfrage. Wir beraten Sie gerne individuell!</p>
+        </div>
+    </section>
+
+    <section id="galerie">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projektgalerie</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item grad-1">Wohnraumgestaltung</div>
+                <div class="gallery-item grad-2">Fassadensanierung</div>
+                <div class="gallery-item grad-3">Exklusive Techniken</div>
+                <div class="gallery-item grad-4">Gewerbeobjekte</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="warum-wir">
+        <div class="container">
+            <div class="section-title">
+                <h2>Warum wir?</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-card">
+                    <div class="usp-icon">✓</div>
+                    <div>
+                        <h3>Erfahrung</h3>
+                        <p>Langjährige Expertise im Malerhandwerk und technische Präzision.</p>
+                    </div>
+                </div>
+                <div class="usp-card">
+                    <div class="usp-icon">✓</div>
+                    <div>
+                        <h3>Qualität</h3>
+                        <p>Verwendung hochwertiger Materialien für langlebige Ergebnisse.</p>
+                    </div>
+                </div>
+                <div class="usp-card">
+                    <div class="usp-icon">✓</div>
+                    <div>
+                        <h3>Termintreue</h3>
+                        <p>Zuverlässige Planung und saubere Ausführung Ihrer Projekte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Kontakt aufnehmen</h3>
+                    <p style="margin-bottom: 30px;">Haben Sie ein Projekt geplant? Wir freuen uns auf Ihre Anfrage.</p>
+                    
+                    <p><strong>Adresse:</strong><br>Bredowstraße 3<br>14774 Brandenburg an der Havel</p>
+                    <br>
+                    <a href="tel:03381403662" class="contact-link"><strong>Telefon:</strong> 03381 403662</a>
+                    <a href="mailto:malerkrueger-brandenburg@t-online.de" class="contact-link"><strong>E-Mail:</strong> malerkrueger-brandenburg@t-online.de</a>
+                </div>
+                <div class="opening-hours">
+                    <h3>Öffnungszeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag - Donnerstag</span> <span>07:00 - 16:30</span></li>
+                        <li><span>Freitag</span> <span>07:00 - 14:00</span></li>
+                        <li><span>Samstag - Sonntag</span> <span>Geschlossen</span></li>
+                    </ul>
+                    <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7;">Termine vor Ort nach individueller Vereinbarung.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p><strong>Ing. Jürgen Krüger Malerfachbetrieb</strong></p>
+                <p>Ihr Meisterbetrieb in Brandenburg an der Havel</p>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2023 Ing. Jürgen Krüger Malerfachbetrieb. Erstellt mit Werkspree.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
