@@ -17,17 +17,6 @@
       "old_or_no_website": "http://www.fahrschule-klasse.de/"
     },
     {
-      "name": "Arnold´s Fahrschule - PKW & Motorrad & Anhänger Ausbildung und Aufbauseminare",
-      "address": "Dresdener Pl. 2, 15232 Frankfurt (Oder), Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJQxyZahGZB0cRhSImwgxTQno",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0173 9870636"
-    },
-    {
       "name": "Fahrschule Pintschovius",
       "address": "Fürstenberger Str. 15, 15232 Frankfurt (Oder), Deutschland",
       "rating": 4.6,
@@ -40,6 +29,17 @@
       "website_quality": "medium",
       "website_quality_score": 4,
       "old_or_no_website": "http://www.fahrschule-pintschovius.de/"
+    },
+    {
+      "name": "Arnold´s Fahrschule - PKW & Motorrad & Anhänger Ausbildung und Aufbauseminare",
+      "address": "Dresdener Pl. 2, 15232 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJQxyZahGZB0cRhSImwgxTQno",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0173 9870636"
     },
     {
       "name": "Hans-Joachim Schücke Fahrschule",

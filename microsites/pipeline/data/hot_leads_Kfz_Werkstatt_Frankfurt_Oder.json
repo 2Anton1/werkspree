@@ -63,18 +63,6 @@
       "phone": "0335 4008606"
     },
     {
-      "name": "Eastside Carservice Dany Miekeley",
-      "address": "Georg-Richter-Straße 6, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJY0tb1xWZB0cRJ0V3KJoAvF4",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0335 60673600"
-    },
-    {
       "name": "Thomas Linke",
       "address": "August- Bebel- Str. 5B, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
       "rating": 5,
@@ -85,6 +73,18 @@
         "point_of_interest"
       ],
       "phone": "0335 4014400"
+    },
+    {
+      "name": "Eastside Carservice Dany Miekeley",
+      "address": "Georg-Richter-Straße 6, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJY0tb1xWZB0cRJ0V3KJoAvF4",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 60673600"
     },
     {
       "name": "Dietmar Doerge KFZ-Meisterbetrieb",

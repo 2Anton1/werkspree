@@ -3,21 +3,6 @@
   "region": "Cottbus",
   "all_candidates": [
     {
-      "name": "Roma Salon Barbershop Cottbus Friseur",
-      "address": "Karl-Liebknecht-Straße 9A, 03046 Cottbus, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJ1eqrj2R1CEcRtQhsK7J26fw",
-      "types": [
-        "establishment",
-        "hair_care",
-        "point_of_interest"
-      ],
-      "phone": "0355 52989133",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "https://www.facebook.com/Salon-Roma-2016932601912391/"
-    },
-    {
       "name": "Legende Style Frisur & Barbershop",
       "address": "Gerhart-Hauptmann-Straße 15, 03044 Cottbus, Deutschland",
       "rating": 4.7,
@@ -33,6 +18,21 @@
       "old_or_no_website": ""
     },
     {
+      "name": "Roma Salon Barbershop Cottbus Friseur",
+      "address": "Karl-Liebknecht-Straße 9A, 03046 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ1eqrj2R1CEcRtQhsK7J26fw",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ],
+      "phone": "0355 52989133",
+      "website_quality": "low",
+      "website_quality_score": 3,
+      "old_or_no_website": "https://www.facebook.com/Salon-Roma-2016932601912391/"
+    },
+    {
       "name": "Salon Capello",
       "address": "Mühlenstraße 35, 03046 Cottbus, Deutschland",
       "rating": 5,
@@ -46,6 +46,19 @@
       "website_quality": "none",
       "website_quality_score": 0,
       "old_or_no_website": ""
+    },
+    {
+      "name": "Pro Salon",
+      "address": "Altmarkt 9, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJayE_BQB1CEcRe_INA7-MYXA",
+      "types": [
+        "establishment",
+        "hair_care",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0355 12166380"
     },
     {
       "name": "Cottbus Hair Team GmbH - Salon Altmarkt",
@@ -84,17 +97,16 @@
       "old_or_no_website": "http://www.salondelpierro.de/"
     },
     {
-      "name": "Pro Salon",
-      "address": "Altmarkt 9, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJayE_BQB1CEcRe_INA7-MYXA",
+      "name": "Zahra Salon - Barbershop - Cottbus",
+      "address": "Friedrich-Ebert-Straße 15, 03044 Cottbus, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ3dtacWd1CEcRZZjpo6diiZw",
       "types": [
         "establishment",
         "hair_care",
-        "health",
         "point_of_interest"
       ],
-      "phone": "0355 12166380"
+      "phone": "01521 0809053"
     },
     {
       "name": "Salon Richter & Sohn Gbr",
@@ -107,18 +119,6 @@
         "point_of_interest"
       ],
       "phone": "0355 24851"
-    },
-    {
-      "name": "Zahra Salon - Barbershop - Cottbus",
-      "address": "Friedrich-Ebert-Straße 15, 03044 Cottbus, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJ3dtacWd1CEcRZZjpo6diiZw",
-      "types": [
-        "establishment",
-        "hair_care",
-        "point_of_interest"
-      ],
-      "phone": "01521 0809053"
     },
     {
       "name": "Der Altstadt Friseur - zertifizierter Farbprofi & Extensions für sie und ihn",
@@ -136,19 +136,6 @@
       "old_or_no_website": "http://www.friseur-sandow-cottbus.de/"
     },
     {
-      "name": "Modefriseur Rossow - Friseur",
-      "address": "Modefriseur Rossow, Forster Str. 91, 03042 Cottbus, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJhRrG-ht0CEcRT-UjMreeyCI",
-      "types": [
-        "establishment",
-        "hair_care",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0355 713918"
-    },
-    {
       "name": "Lion Salon Barbershop",
       "address": "Marktstraße 2, 03046 Cottbus, Deutschland",
       "rating": 4.5,
@@ -157,6 +144,18 @@
         "establishment",
         "hair_care",
         "health",
+        "point_of_interest"
+      ],
+      "phone": ""
+    },
+    {
+      "name": "Darwish Salon",
+      "address": "Am Anger 1, 03042 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJQw4UpV91CEcRfOqUNQVS6oo",
+      "types": [
+        "establishment",
+        "hair_care",
         "point_of_interest"
       ]
     },
@@ -172,13 +171,14 @@
       ]
     },
     {
-      "name": "Darwish Salon",
-      "address": "Am Anger 1, 03042 Cottbus, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJQw4UpV91CEcRfOqUNQVS6oo",
+      "name": "Modefriseur Rossow - Friseur",
+      "address": "Modefriseur Rossow, Forster Str. 91, 03042 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJhRrG-ht0CEcRT-UjMreeyCI",
       "types": [
         "establishment",
         "hair_care",
+        "health",
         "point_of_interest"
       ]
     },
@@ -196,10 +196,10 @@
       ]
     },
     {
-      "name": "House of Hair Antje Wendt",
-      "address": "Schloßkirchstraße 4, 03046 Cottbus, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJUceMrWl0CEcR-wGBCA4US8I",
+      "name": "Cottbuser Hair Team GmbH - Salon Leipziger Straße",
+      "address": "Leipziger Str. 13, 03048 Cottbus, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJX7hHFn90CEcRhFuO1zVCDCU",
       "types": [
         "establishment",
         "hair_care",
@@ -218,6 +218,17 @@
       ]
     },
     {
+      "name": "House of Hair Antje Wendt",
+      "address": "Schloßkirchstraße 4, 03046 Cottbus, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJUceMrWl0CEcR-wGBCA4US8I",
+      "types": [
+        "establishment",
+        "hair_care",
+        "point_of_interest"
+      ]
+    },
+    {
       "name": "Silke Selke Friseursalon",
       "address": "Sielower Str. 41, 03044 Cottbus, Deutschland",
       "rating": 4.8,
@@ -229,10 +240,10 @@
       ]
     },
     {
-      "name": "Cottbuser Hair Team GmbH - Salon Leipziger Straße",
-      "address": "Leipziger Str. 13, 03048 Cottbus, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJX7hHFn90CEcRhFuO1zVCDCU",
+      "name": "Friseursalon Mia",
+      "address": "Rudolf-Breitscheid-Straße 74, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ22v6Xd51CEcRNZRZT7mZXEg",
       "types": [
         "establishment",
         "hair_care",
@@ -247,18 +258,6 @@
       "types": [
         "establishment",
         "hair_care",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "KaDee Friseure",
-      "address": "Ostrower Str. 18/Eingang Rechts, 03046 Cottbus, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJX3kjNml0CEcRjXkMu7egRTc",
-      "types": [
-        "establishment",
-        "hair_care",
-        "health",
         "point_of_interest"
       ]
     }

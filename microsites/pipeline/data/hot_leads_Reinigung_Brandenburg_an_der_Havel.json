@@ -77,31 +77,6 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Cleanforce Havel",
-      "address": "Friedrich-Engels-Straße 6, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJPRzgZurAqEcRqf8yF7m5l0s",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "01511 4129238",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": "http://www.cleanforce-havel.de/79/kontakt-formular"
-    },
-    {
-      "name": "CleanStar Gebäudereinigung",
-      "address": "Venise-Gosnat-Straße 34, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJHUmyT3nBqEcRnE3vWJGjbUE",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "03381 5599141"
-    },
-    {
       "name": "N. Polatov Service - Hausmeisterservice, Umzüge & Küchenmontage",
       "address": "Carl-Reichstein-Straße 4, 14770 Brandenburg an der Havel, Deutschland",
       "rating": 5,
@@ -124,6 +99,20 @@
       "phone": "030 921087061"
     },
     {
+      "name": "Cleanforce Havel",
+      "address": "Friedrich-Engels-Straße 6, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJPRzgZurAqEcRqf8yF7m5l0s",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01511 4129238",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://www.cleanforce-havel.de/79/kontakt-formular"
+    },
+    {
       "name": "Hausmeisterservice Pantel",
       "address": "Prager Str. 30, 14772 Brandenburg an der Havel, Deutschland",
       "rating": 5,
@@ -131,7 +120,11 @@
       "types": [
         "establishment",
         "point_of_interest"
-      ]
+      ],
+      "phone": "0176 46000664",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
     }
   ],
   "hot_leads": []

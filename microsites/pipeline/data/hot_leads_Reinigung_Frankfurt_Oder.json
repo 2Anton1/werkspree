@@ -41,6 +41,30 @@
       "phone": "01514 7358321"
     },
     {
+      "name": "Queen Clean ADL GmbH",
+      "address": "Gubener Str. 35b, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJpdqaQyorqEcRR_TNRGBtczQ",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 60698866"
+    },
+    {
+      "name": "Rohloff Reinigungsservice",
+      "address": "Sophienstraße 2, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyVCRBJ2-2GARbCgc-7i5XbI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": ""
+    },
+    {
       "name": "Wittum Dienstleistung",
       "address": "Johann-Eichorn-Straße 15, 15232 Frankfurt (Oder), Deutschland",
       "rating": 4.6,
@@ -56,28 +80,15 @@
       "old_or_no_website": "http://www.gebaeudereinigung-wittum.de/"
     },
     {
-      "name": "Rohloff Reinigungsservice",
-      "address": "Sophienstraße 2, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJyVCRBJ2-2GARbCgc-7i5XbI",
+      "name": "LEHGRA GmbH",
+      "address": "Lebuser Weg 27a, 15234 Frankfurt (Oder), Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJ0ee3FXGYB0cRohc25ptGre4",
       "types": [
         "establishment",
         "point_of_interest"
       ],
-      "phone": ""
-    },
-    {
-      "name": "Queen Clean ADL GmbH",
-      "address": "Gubener Str. 35b, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJpdqaQyorqEcRR_TNRGBtczQ",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0335 60698866"
+      "phone": "033605 526153"
     },
     {
       "name": "Glas & Gebäudereinigung Dreger",
@@ -92,42 +103,6 @@
       "website_quality": "medium",
       "website_quality_score": 4,
       "old_or_no_website": "http://www.gg-ffo.de/"
-    },
-    {
-      "name": "LEHGRA GmbH",
-      "address": "Lebuser Weg 27a, 15234 Frankfurt (Oder), Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJ0ee3FXGYB0cRohc25ptGre4",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "033605 526153"
-    },
-    {
-      "name": "GLASKLAR Glas- und Fensterreinigung Frankfurt (Oder)",
-      "address": "Große Scharrnstraße, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJv1lvbI-ZB0cRjNMOlR1Pjzg",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "01522 7012755"
-    },
-    {
-      "name": "Lange Dienstleistungs GmbH",
-      "address": "Lindenstraße 21, 15230 Frankfurt (Oder)-Gubener Vorstadt, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ3-23dwuYB0cRqfXA5kDpfzo",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0335 4011078",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": "https://www.lange-dienstleistung.de/"
     }
   ],
   "hot_leads": []

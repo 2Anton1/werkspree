@@ -30,18 +30,6 @@
       "phone": "03381 701930"
     },
     {
-      "name": "KFZ Servicepark Suck",
-      "address": "Am Elisabethhof 15, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJCVUiJN3AqEcRXS8uVNkarmM",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0176 23457252"
-    },
-    {
       "name": "Be-Ka Inh.Bernd Näther",
       "address": "Carl-Reichstein-Straße 21, 14770 Brandenburg an der Havel, Deutschland",
       "rating": 4.8,
@@ -52,6 +40,30 @@
         "point_of_interest"
       ],
       "phone": "03381 307620"
+    },
+    {
+      "name": "REHBRA GmbH Kfz-Meisterbetrieb seit 1992",
+      "address": "Meyerstraße 16, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJUS7xNIzAqEcROOgX3lD5B24",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03381 663283"
+    },
+    {
+      "name": "KFZ Servicepark Suck",
+      "address": "Am Elisabethhof 15, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJCVUiJN3AqEcRXS8uVNkarmM",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0176 23457252"
     },
     {
       "name": "KP FAHRZEUGTECHNIK - KFZ Meisterwerkstatt",
@@ -74,18 +86,6 @@
       "region": "Brandenburg an der Havel"
     },
     {
-      "name": "REHBRA GmbH Kfz-Meisterbetrieb seit 1992",
-      "address": "Meyerstraße 16, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJUS7xNIzAqEcROOgX3lD5B24",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "03381 663283"
-    },
-    {
       "name": "Pro Car GmbH",
       "address": "Friedrichshafener Str. 20, 14772 Brandenburg an der Havel, Deutschland",
       "rating": 4.6,
@@ -101,18 +101,6 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Pro Rep",
-      "address": "Warschauer Str. 23, 14772 Brandenburg an der Havel-Hohenstücken, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJs42nI0bBqEcRSeGQGK_GJV0",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0176 64228347"
-    },
-    {
       "name": "Automobilservice Robert Heymann",
       "address": "Friedrich-Engels-Straße 6, 14770 Brandenburg an der Havel, Deutschland",
       "rating": 4.6,
@@ -125,16 +113,16 @@
       "phone": "03381 315777"
     },
     {
-      "name": "Kfz-Reparatur- und Klimaservice",
-      "address": "Ausbau 7, 14774 Brandenburg an der Havel-Plaue, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJidrCutXHqEcRnXMmOEeyIz4",
+      "name": "Pro Rep",
+      "address": "Warschauer Str. 23, 14772 Brandenburg an der Havel-Hohenstücken, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJs42nI0bBqEcRSeGQGK_GJV0",
       "types": [
         "car_repair",
         "establishment",
         "point_of_interest"
       ],
-      "phone": "0176 43406380"
+      "phone": "0176 64228347"
     },
     {
       "name": "MMW Kfz-Technik Mario Schimpf",
@@ -145,31 +133,11 @@
         "car_repair",
         "establishment",
         "point_of_interest"
-      ]
-    },
-    {
-      "name": "Toyota KFZ Werkstatt Brandenburg",
-      "address": "Potsdamer Str. 10, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJ61ZG0lrAqEcRnPpld_ZOvDk",
-      "types": [
-        "car_dealer",
-        "car_repair",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "name": "Kfz-Werkstatt",
-      "address": "Am Heidekrug 1000, 14772 Brandenburg an der Havel, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJMz1R0DrHqEcRCscCPeSWOqo",
-      "types": [
-        "car_repair",
-        "establishment",
-        "point_of_interest"
-      ]
+      ],
+      "phone": "03381 797543",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
     },
     {
       "name": "AC Jechow GmbH Brandenburg / TESLA Approved Bodyshop",
@@ -178,6 +146,29 @@
       "place_id": "ChIJV1guMTzBqEcR9hjOqUoztUI",
       "types": [
         "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Kfz-Reparatur- und Klimaservice",
+      "address": "Ausbau 7, 14774 Brandenburg an der Havel-Plaue, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJidrCutXHqEcRnXMmOEeyIz4",
+      "types": [
+        "car_repair",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "AS-Ausbeulservice - Der Beulendoktor in Brandenburg",
+      "address": "Upstallstraße 10, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJVy4KNhrBqEcRuPFSyC7woAQ",
+      "types": [
+        "car_repair",
+        "car_wash",
         "establishment",
         "point_of_interest"
       ]
@@ -195,13 +186,12 @@
       ]
     },
     {
-      "name": "AS-Ausbeulservice - Der Beulendoktor in Brandenburg",
-      "address": "Upstallstraße 10, 14772 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJVy4KNhrBqEcRuPFSyC7woAQ",
+      "name": "Kfz-Werkstatt",
+      "address": "Am Heidekrug 1000, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJMz1R0DrHqEcRCscCPeSWOqo",
       "types": [
         "car_repair",
-        "car_wash",
         "establishment",
         "point_of_interest"
       ]
