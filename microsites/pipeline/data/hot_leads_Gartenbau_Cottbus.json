@@ -56,6 +56,18 @@
       "phone": "0355 712359"
     },
     {
+      "name": "alpina ag, Garten-, Landschaft-, Sportplatzbau",
+      "address": "Am Gewerbepark 3, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJxxu0IWNxCEcRHIQ66YWxJo8",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0355 4309190"
+    },
+    {
       "name": "Garten- und Land- schaftsbau Tietz",
       "address": "Merzdorfer Weg 3, 03042 Cottbus-Merzdorf, Deutschland",
       "rating": 4.8,
@@ -86,18 +98,6 @@
       "old_or_no_website": "http://www.pschuskel.de/"
     },
     {
-      "name": "alpina ag, Garten-, Landschaft-, Sportplatzbau",
-      "address": "Am Gewerbepark 3, 03051 Cottbus-Gallinchen, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJxxu0IWNxCEcRHIQ66YWxJo8",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "point_of_interest"
-      ],
-      "phone": "0355 4309190"
-    },
-    {
       "name": "Grün- und Parkanlagen der Stadt Cottbus",
       "address": "Dresdener Str. 34, 03050 Cottbus, Deutschland",
       "rating": 4.7,
@@ -111,6 +111,18 @@
       "website_quality": "none",
       "website_quality_score": 0,
       "old_or_no_website": ""
+    },
+    {
+      "name": "Terra-Aqua | Beregnungsanlagen & Rasenservice",
+      "address": "Kiefernstraße 3, 03051 Cottbus-Gallinchen, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJlWFVJW9zCEcRSR6CmB1HURY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0176 64305148"
     },
     {
       "name": "F. Garten",
@@ -128,56 +140,16 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Terra-Aqua | Beregnungsanlagen & Rasenservice",
-      "address": "Kiefernstraße 3, 03051 Cottbus-Gallinchen, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJlWFVJW9zCEcRSR6CmB1HURY",
+      "name": "M&V Handwerkerservice GbR (Garten- und Landschaftsbau)",
+      "address": "Alte Siedlung 56a, 03099 Kolkwitz-Hänchen, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJQ0FdpUJzCEcRwVysq_9OEA8",
       "types": [
         "establishment",
         "general_contractor",
-        "point_of_interest"
-      ],
-      "phone": "0176 64305148",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "https://www.terra-aqua-lausitz.de/",
-      "email": "info@terra-aqua-lausitz.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'terra' in domain/local",
-      "branch": "Gartenbau",
-      "region": "Cottbus"
-    },
-    {
-      "name": "Baumpflegeservice Hellwig",
-      "address": "Alte Lindenstraße 1, 03053 Cottbus-Willmersdorf, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJw2cnl-91CEcR1SCCnK1UKdQ",
-      "types": [
-        "establishment",
         "point_of_interest"
       ]
     }
   ],
-  "hot_leads": [
-    {
-      "name": "Terra-Aqua | Beregnungsanlagen & Rasenservice",
-      "address": "Kiefernstraße 3, 03051 Cottbus-Gallinchen, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJlWFVJW9zCEcRSR6CmB1HURY",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "point_of_interest"
-      ],
-      "phone": "0176 64305148",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "https://www.terra-aqua-lausitz.de/",
-      "email": "info@terra-aqua-lausitz.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'terra' in domain/local",
-      "branch": "Gartenbau",
-      "region": "Cottbus"
-    }
-  ]
+  "hot_leads": []
 }

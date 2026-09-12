@@ -39,7 +39,7 @@
       ],
       "phone": "03381 524338",
       "website_quality": "low",
-      "website_quality_score": 1,
+      "website_quality_score": 3,
       "old_or_no_website": "http://www.tischlerei-ribguth.de/",
       "email": "info@tischlerei-ribguth.de",
       "email_verified": true,
@@ -89,29 +89,23 @@
       "phone": "033051 904485"
     },
     {
-      "name": "Kuhl-Möbelwerkstatt GmbH",
-      "address": "Am Rosengarten 7B, 14621 Schönwalde-Glien-Wansdorf, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJqZFdBtH9qEcRlLwH3wZtpso",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "033231 62704"
-    },
-    {
-      "name": "Tischlermeister Mario Geppert",
-      "address": "Unter den Linden 14, 14778 Beetzseeheide-Ketzür, Deutschland",
+      "name": "HeBoGo Tischlerei",
+      "address": "Am Eichenhain 13, 14550 Groß Kreutz (Havel), Deutschland",
       "rating": 5,
-      "place_id": "ChIJAcy_c2HCqEcRMoM8t87Wp1I",
+      "place_id": "ChIJx1RZyALyqEcRHjMrHakX85o",
       "types": [
         "establishment",
         "point_of_interest"
       ],
-      "phone": "033836 209701",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
+      "phone": "033207 547434",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.hebogo.de/",
+      "email": "info@hebogo.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hebogo' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Brandenburg an der Havel"
     },
     {
       "name": "Bautischlerei Zander GmbH",
@@ -136,14 +130,18 @@
       "phone": "03327 7251136"
     },
     {
-      "name": "HeBoGo Tischlerei",
-      "address": "Am Eichenhain 13, 14550 Groß Kreutz (Havel), Deutschland",
+      "name": "Tischlermeister Mario Geppert",
+      "address": "Unter den Linden 14, 14778 Beetzseeheide-Ketzür, Deutschland",
       "rating": 5,
-      "place_id": "ChIJx1RZyALyqEcRHjMrHakX85o",
+      "place_id": "ChIJAcy_c2HCqEcRMoM8t87Wp1I",
       "types": [
         "establishment",
         "point_of_interest"
-      ]
+      ],
+      "phone": "033836 209701",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
     },
     {
       "name": "Tischlerei Bernhard Zimmermann",
@@ -153,6 +151,26 @@
       "types": [
         "establishment",
         "general_contractor",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Kuhl-Möbelwerkstatt GmbH",
+      "address": "Am Rosengarten 7B, 14621 Schönwalde-Glien-Wansdorf, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJqZFdBtH9qEcRlLwH3wZtpso",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "paku furniture - Tischlerei · Möbelmanufaktur · Meisterbetrieb",
+      "address": "Möllendorfer Weg 12, 14550 Groß Kreutz (Havel), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ4215-CztqEcReBMAhmuf9Qc",
+      "types": [
+        "establishment",
         "point_of_interest"
       ]
     },
@@ -177,16 +195,6 @@
       ]
     },
     {
-      "name": "Bernhard Goede Bautischlerei",
-      "address": "Berliner Str. 50, 14641 Nauen, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ9ShvXp3jqEcR-kTMi9ZUudE",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
       "name": "Stellmacherei & Tischlerei Riek",
       "address": "Schulpl. 3, 14469 Potsdam Nord, Deutschland",
       "rating": 4.7,
@@ -197,20 +205,21 @@
       ]
     },
     {
-      "name": "paku furniture - Tischlerei · Möbelmanufaktur · Meisterbetrieb",
-      "address": "Möllendorfer Weg 12, 14550 Groß Kreutz (Havel), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ4215-CztqEcReBMAhmuf9Qc",
+      "name": "Tischlerei Deryckere-Handwerk Berlin Brandenburg",
+      "address": "Friedhofsweg 1, 12529 Schönefeld-Großziethen, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJvfnyAtREqEcRga05RhUyIRM",
       "types": [
         "establishment",
+        "general_contractor",
         "point_of_interest"
       ]
     },
     {
-      "name": "Tischlerei Habig",
-      "address": "Dorfstraße 62, 14550 Groß Kreutz (Havel)-Schmergow, Deutschland",
+      "name": "Bernhard Goede Bautischlerei",
+      "address": "Berliner Str. 50, 14641 Nauen, Deutschland",
       "rating": 5,
-      "place_id": "ChIJ7a5a4VrsqEcRfR9cYlgdmsQ",
+      "place_id": "ChIJ9ShvXp3jqEcR-kTMi9ZUudE",
       "types": [
         "establishment",
         "point_of_interest"
@@ -229,7 +238,7 @@
       ],
       "phone": "03381 524338",
       "website_quality": "low",
-      "website_quality_score": 1,
+      "website_quality_score": 3,
       "old_or_no_website": "http://www.tischlerei-ribguth.de/",
       "email": "info@tischlerei-ribguth.de",
       "email_verified": true,
@@ -253,6 +262,25 @@
       "email": "raik@tischlerei-schlusche.de",
       "email_verified": true,
       "email_verify_reason": "Impressum: Match: 'raik' in domain/local",
+      "branch": "Tischlerei",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "HeBoGo Tischlerei",
+      "address": "Am Eichenhain 13, 14550 Groß Kreutz (Havel), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJx1RZyALyqEcRHjMrHakX85o",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "033207 547434",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.hebogo.de/",
+      "email": "info@hebogo.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'hebogo' in domain/local",
       "branch": "Tischlerei",
       "region": "Brandenburg an der Havel"
     }

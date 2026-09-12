@@ -29,19 +29,6 @@
       "phone": "0355 870587"
     },
     {
-      "name": "Montagetischler Cottbus - Lukas Schwarz",
-      "address": "Sielower Ch 10, 03055 Cottbus-Sielow, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ32UZamx1CEcRvYyLVIw_fqQ",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "0172 5228895"
-    },
-    {
       "name": "Erdmann Peter u. Erdmann Jens GbR",
       "address": "Gaglower Str. 37, 03051 Cottbus-Gallinchen, Deutschland",
       "rating": 5,
@@ -75,20 +62,6 @@
       "region": "Cottbus"
     },
     {
-      "name": "Tischlerei Bosse",
-      "address": "Stromstraße 13, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJq6veuRJ0CEcR3-umY3KcV_8",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0355 43090114",
-      "website_quality": "low",
-      "website_quality_score": 1,
-      "old_or_no_website": "http://www.bosse-tischlerei.de/kontakt-und-anfahrt.html"
-    },
-    {
       "name": "Bautischlerei Schulerowitz",
       "address": "Eschenweg 4, 03055 Cottbus-Sielow, Deutschland",
       "rating": 5,
@@ -103,15 +76,31 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Tischlerei -Möbel - Innenausbau Vater GmbH & Co. KG",
-      "address": "Oßniger Dorfstraße 14, 03058 Neuhausen/Spree-Groß Oßnig, Deutschland",
+      "name": "Tischlerei Bosse",
+      "address": "Stromstraße 13, 03046 Cottbus, Deutschland",
       "rating": 5,
-      "place_id": "ChIJQw5P9r1xCEcRrD7K-Uv9TAw",
+      "place_id": "ChIJq6veuRJ0CEcR3-umY3KcV_8",
       "types": [
         "establishment",
         "point_of_interest"
       ],
-      "phone": "035608 332"
+      "phone": "0355 43090114",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.bosse-tischlerei.de/kontakt-und-anfahrt.html"
+    },
+    {
+      "name": "Montagetischler Cottbus - Lukas Schwarz",
+      "address": "Sielower Ch 10, 03055 Cottbus-Sielow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ32UZamx1CEcRvYyLVIw_fqQ",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0172 5228895"
     },
     {
       "name": "Kurt During Tischlereibedarf",
@@ -128,6 +117,20 @@
       "old_or_no_website": ""
     },
     {
+      "name": "Tischlerei -Möbel - Innenausbau Vater GmbH & Co. KG",
+      "address": "Oßniger Dorfstraße 14, 03058 Neuhausen/Spree-Groß Oßnig, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJQw5P9r1xCEcRrD7K-Uv9TAw",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "035608 332",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.tischlerei-vater.de/"
+    },
+    {
       "name": "Tischlerei Hagen Städter",
       "address": "Laubsdorfer Hauptstraße 21, 03058 Neuhausen/Spree, Deutschland",
       "rating": 5,
@@ -142,6 +145,16 @@
       "old_or_no_website": "https://www.tischlerei-staedter.de/"
     },
     {
+      "name": "Tischlerei Hartmut Kühn",
+      "address": "Am Pflanzenberg 13A, 03116 Drebkau-Schorbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJQU5Ay4pyCEcRBB0JZEx0MRk",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
       "name": "Erdmann GmbH | Fenster - Türen - Tischlerei",
       "address": "Kahseler Hauptstraße 18, 03058 Neuhausen/Spree-Drieschnitz-Kahsel, Deutschland",
       "rating": 5,
@@ -149,16 +162,6 @@
       "types": [
         "establishment",
         "general_contractor",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Tischlerei Hartmut Kühn",
-      "address": "Am Pflanzenberg 13A, 03116 Drebkau-Schorbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJQU5Ay4pyCEcRBB0JZEx0MRk",
-      "types": [
-        "establishment",
         "point_of_interest"
       ]
     },

@@ -15,18 +15,6 @@
       "phone": "0171 1934701"
     },
     {
-      "name": "AV Elektroinstallation",
-      "address": "Schönwalder Str. 25, 13347 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJqQRnmJ0hZUER2YOQQIFrADc",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "030 4612993"
-    },
-    {
       "name": "M&Y Elektro GmbH - Elektriker Mitte | Elektro Notdienst",
       "address": "Dircksenstraße 41, 10178 Berlin, Deutschland",
       "rating": 5,
@@ -37,33 +25,9 @@
         "point_of_interest"
       ],
       "phone": "0178 8337500",
-      "website_quality": "none",
-      "website_quality_score": 0,
+      "website_quality": "low",
+      "website_quality_score": 3,
       "old_or_no_website": "https://my-elektrik.de/"
-    },
-    {
-      "name": "Elektriker Berlin - Pinguin",
-      "address": "Düsseldorfer Str. 60a, 10707 Berlin, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJzQxvcfpWqEcRNkiMo1kwE1A",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "030 55278405"
-    },
-    {
-      "name": "Hauptstadt-Elektriker Sofort service",
-      "address": "Kommandantenstraße 56, 10969 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJNYPEyyFPqEcRCpaAoSAIQ3c",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "030 45977067"
     },
     {
       "name": "Elektriker Berlin Mitte",
@@ -93,48 +57,93 @@
       "old_or_no_website": "https://my-elektrik.de/"
     },
     {
-      "name": "M&Y Elektro GmbH - Elektriker Wedding | Elektriker Notdienst",
-      "address": "Kameruner Str. 55, 13351 Berlin, Deutschland",
+      "name": "AV Elektroinstallation",
+      "address": "Schönwalder Str. 25, 13347 Berlin, Deutschland",
       "rating": 5,
-      "place_id": "ChIJ_YMV1DNTqEcROtkIlvpoj7c",
+      "place_id": "ChIJqQRnmJ0hZUER2YOQQIFrADc",
       "types": [
         "electrician",
         "establishment",
         "point_of_interest"
       ],
-      "phone": "0178 8337500",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "https://my-elektrik.de/"
+      "phone": "030 4612993"
     },
     {
-      "name": "M&Y Elektro GmbH - Elektriker Kreuzberg | Elektro Notdienst",
-      "address": "Stresemannstraße 37, 10963 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ73PZoZtRqEcRUhkHD34yWTA",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0178 8337500",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "https://my-elektrik.de/"
-    },
-    {
-      "name": "Herd anschließen Berlin",
-      "address": "Fraenkelufer 32, 10999 Berlin-Bezirk Friedrichshain-Kreuzberg, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJXavvUMxPqEcRaXOyujqnht4",
+      "name": "Elektro - Scholz Installationen e. Kfm.",
+      "address": "Kühnemannstraße 22/24, 13409 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJSYLdvzdSqEcR5aJxnFfQ8ss",
       "types": [
         "electrician",
         "establishment",
         "point_of_interest"
       ],
-      "phone": "01514 0340945",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "http://deutsch-elektrotechnik.de/"
+      "phone": "030 3958005"
+    },
+    {
+      "name": "Elektriker Berlin - Pinguin",
+      "address": "Düsseldorfer Str. 60a, 10707 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJzQxvcfpWqEcRNkiMo1kwE1A",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "030 55278405"
+    },
+    {
+      "name": "Rayan Elektro- und Steuerungstechnik GmbH",
+      "address": "Mollstraße 8, 10178 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJS3mkoS5PqEcRaMTWaBPl6Mk",
+      "types": [
+        "electrician",
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0172 6986169",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://rayan-e.com/?utm_source=gmb&utm_medium=referral",
+      "email": "farid@rayan-e.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'rayan' in domain/local",
+      "branch": "Elektriker",
+      "region": "Berlin Mitte"
+    },
+    {
+      "name": "Pro-eltek GmbH",
+      "address": "Friedrichstraße 95, 10117 Berlin, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJsZ7gSlZRqEcRI13kkBmk6eo",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.pro-eltek.de/",
+      "email": "kontakt@pro-eltek.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'pro' in domain/local",
+      "branch": "Elektriker",
+      "region": "Berlin Mitte"
+    },
+    {
+      "name": "Buzz Elektrotechnik GmbH",
+      "address": "John-Schehr-Straße 20A, 10407 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJFyVJ8nFPqEcR2srLrVz1vCY",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0162 1534521"
     },
     {
       "name": "Keko Elektrokonstruktionen",
@@ -148,60 +157,82 @@
       ]
     },
     {
-      "name": "Pro-eltek GmbH",
-      "address": "Friedrichstraße 95, 10117 Berlin, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJsZ7gSlZRqEcRI13kkBmk6eo",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Bala24 UG - Elektroinstallation Berlin",
-      "address": "Kurfürstendamm 14, 10719 Berlin, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJX89KMllXqEcRjUc-5fFnVs0",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "BeDeWo Plus UG - Elektriker Kreuzberg | Elektro Notdienst",
-      "address": "Oranienstraße 196, 10999 Berlin, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJQ7atEChPqEcRJoGvfVvr4rw",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Elektro - Scholz Installationen e. Kfm.",
-      "address": "Kühnemannstraße 22/24, 13409 Berlin, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJSYLdvzdSqEcR5aJxnFfQ8ss",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "KFZ-Elektriker Berlin",
-      "address": "Böttgerstraße 15, 13357 Berlin, Deutschland",
+      "name": "Bogdan Olteanu - Innenausbau und Elektroinstallation",
+      "address": "Stendaler Str. 16, 10559 Berlin, Deutschland",
       "rating": 5,
-      "place_id": "ChIJ0W-EdltTqEcRm4sJX4IVoNs",
+      "place_id": "ChIJOejObwpRqEcRJTv979NZ83g",
       "types": [
-        "car_repair",
+        "electrician",
         "establishment",
         "point_of_interest"
       ]
     },
+    {
+      "name": "Simple Elektrotechnik",
+      "address": "Bachstraße, 10555 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJkyuTcClRqEcRkNGeLDksQrA",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Oktay Elektrotechnik Gmbh",
+      "address": "Levetzowstraße 12 A, 10555 Berlin, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJm8VJMQ9RqEcRwNGl0AMu4kk",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "GoElektrik GmbH",
+      "address": "Wittstocker Str. 8, 10553 Berlin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJLXgTKo0v1o0RUoCsuc793Ww",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "MEMO ElektroMeisterBetrieb GmbH",
+      "address": "Adalbertstraße 35, 10179 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJoUe4Ce_3l6URlezCVLz_8lc",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Notdienst24-Elektro",
+      "address": "Wallstraße 9, 10179 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ_VbWWSVPqEcRJrqxKNrk6N4",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Ackermann & Bahr Inh. Detlef Bahr",
+      "address": "Gottschedstraße 4, 13357 Berlin, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJXSVaEClSqEcRT5VZBL-00z4",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ]
+    }
+  ],
+  "hot_leads": [
     {
       "name": "Rayan Elektro- und Steuerungstechnik GmbH",
       "address": "Mollstraße 8, 10178 Berlin, Deutschland",
@@ -212,19 +243,36 @@
         "establishment",
         "general_contractor",
         "point_of_interest"
-      ]
+      ],
+      "phone": "0172 6986169",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://rayan-e.com/?utm_source=gmb&utm_medium=referral",
+      "email": "farid@rayan-e.com",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'rayan' in domain/local",
+      "branch": "Elektriker",
+      "region": "Berlin Mitte"
     },
     {
-      "name": "BeDeWo Plus UG - Elektriker Wilmersdorf | Elektro Notdienst",
-      "address": "Landhausstraße 31, 10717 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJR0nCalFRqEcR3gRLC_SRJys",
+      "name": "Pro-eltek GmbH",
+      "address": "Friedrichstraße 95, 10117 Berlin, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJsZ7gSlZRqEcRI13kkBmk6eo",
       "types": [
         "electrician",
         "establishment",
         "point_of_interest"
-      ]
+      ],
+      "phone": "",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.pro-eltek.de/",
+      "email": "kontakt@pro-eltek.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'pro' in domain/local",
+      "branch": "Elektriker",
+      "region": "Berlin Mitte"
     }
-  ],
-  "hot_leads": []
+  ]
 }

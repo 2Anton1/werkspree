@@ -19,22 +19,6 @@
       "old_or_no_website": "http://www.fleischerei-schlachthof.de/"
     },
     {
-      "name": "Fleischerei Zimmermann GmbH",
-      "address": "Ziesarer Landstraße 101, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJcT1B9p3AqEcRfvDWgYRiCXU",
-      "types": [
-        "establishment",
-        "food",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "03381 2586595",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "http://metzgerei-zimmermann-goerzke.de//"
-    },
-    {
       "name": "Fleischerei am Gorrenberg",
       "address": "Gorrenberg 4, 14776 Brandenburg an der Havel, Deutschland",
       "rating": 4.5,
@@ -46,6 +30,38 @@
         "store"
       ],
       "phone": "03381 522218",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Fleischerei Zimmermann GmbH",
+      "address": "Ziesarer Landstraße 101, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJcT1B9p3AqEcRfvDWgYRiCXU",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 2586595",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "http://metzgerei-zimmermann-goerzke.de//"
+    },
+    {
+      "name": "Mario Schmurr Fleischermeister",
+      "address": "Brandenburger Str. 7, 14641 Retzow, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJ04lUGXXeqEcRr6Sakb1pbCw",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "033237 89560",
       "website_quality": "none",
       "website_quality_score": 0,
       "old_or_no_website": ""
@@ -66,22 +82,6 @@
       "website_quality": "low",
       "website_quality_score": 0,
       "old_or_no_website": "http://www.fleischerei-kraus.de/"
-    },
-    {
-      "name": "Mario Schmurr Fleischermeister",
-      "address": "Brandenburger Str. 7, 14641 Retzow, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJ04lUGXXeqEcRr6Sakb1pbCw",
-      "types": [
-        "establishment",
-        "food",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "033237 89560",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
     },
     {
       "name": "Fleischer Metzger Catering Bothe",
@@ -105,6 +105,50 @@
       "email_verify_reason": "Impressum: Match: 'metzger' in domain/local",
       "branch": "Metzgerei",
       "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Biomanufaktur Havelland, Havelring 17",
+      "address": "Havelring 17, 16727 Velten, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJgaODfw0AqUcRQdYF0sM4WM0",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03304 205440",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.biomanufaktur-havelland.de/"
+    },
+    {
+      "name": "Gut Kerkow Bio-Metzgerei",
+      "address": "Tucholskystraße 31, 10117 Berlin, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJP2J-vXdRqEcRKjPab0Iz47M",
+      "types": [
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 24047233"
+    },
+    {
+      "name": "Meat Bringer GmbH (Hall of Meat - Die Naturfleischerei)",
+      "address": "Jahnstraße 26-28, 15745 Wildau, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJJwtuCupyqEcRL3lAZiVZY28",
+      "types": [
+        "establishment",
+        "food",
+        "meal_takeaway",
+        "point_of_interest",
+        "restaurant",
+        "store"
+      ],
+      "phone": "0176 63253415"
     }
   ],
   "hot_leads": [
