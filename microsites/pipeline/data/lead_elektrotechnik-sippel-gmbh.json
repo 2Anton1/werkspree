@@ -12,5 +12,8 @@
   "owner": "",
   "address": "Gerlachstraße 10, 14480 Potsdam, Deutschland",
   "city": "Potsdam",
-  "slug": "elektrotechnik-sippel-gmbh"
+  "slug": "elektrotechnik-sippel-gmbh",
+  "site_url": "https://werkspree.bki-de.de/microsites/sites/elektrotechnik-sippel-gmbh/",
+  "built_at": "2026-09-12T12:17:22.431473+02:00",
+  "builder": "gemini"
 }

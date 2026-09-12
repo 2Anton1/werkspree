@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elektrotechnik Sippel GmbH | Ihr Elektriker in Potsdam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1B3A5F;
+            --accent: #D4A843;
+            --bg-light: #FAF6EF;
+            --text-dark: #2D2419;
+            --white: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+            padding: 20px 0;
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+            color: var(--white);
+            padding: 100px 0 140px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--white);
+            padding: 16px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 168, 67, 0.3);
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 168, 67, 0.5);
+            background-color: #c3973a;
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent);
+            border-radius: 2px;
+        }
+
+        /* --- About Us --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border-left: 8px solid var(--accent);
+        }
+
+        /* --- Services --- */
+        .services-grid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            max-width: 500px;
+            transition: var(--transition);
+            border-bottom: 4px solid var(--primary);
+        }
+
+        .service-card:hover {
+            transform: scale(1.02);
+        }
+
+        /* --- Why Us (USPs) --- */
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .usp-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .usp-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        /* --- Contact & Hours --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+        }
+
+        .contact-info, .hours-info {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            opacity: 0.6;
+            margin-top: 10px;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .about-grid, .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                padding: 80px 0 100px;
+            }
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <div class="logo">Sippel<span>GmbH</span></div>
+            <div class="contact-quick">Potsdam</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Elektrotechnik Sippel GmbH</h1>
+            <p>Ihr kompetenter Meisterbetrieb für sichere und moderne Elektroinstallationen in Potsdam und Umgebung.</p>
+            <a href="#kontakt" class="cta-button">Jetzt Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <section id="uber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Über uns</h2>
+                    </div>
+                    <p>Seit vielen Jahren steht die Elektrotechnik Sippel GmbH für erstklassiges Handwerk in Potsdam. Als lokaler Fachbetrieb verbinden wir traditionelle Werte mit modernster Technik.</p>
+                    <br>
+                    <p>Ob Neuinstallation, Wartung oder Reparatur – wir sorgen dafür, dass Ihre elektrischen Anlagen sicher, effizient und nach den neuesten Standards laufen. Vertrauen Sie auf unsere Expertise für Ihr Zuhause oder Ihr Gewerbeobjekt.</p>
+                </div>
+                <div class="about-image">
+                    <h3 style="color: var(--primary); margin-bottom: 15px;">Meisterqualität aus Potsdam</h3>
+                    <p>Wir sind Ihr Ansprechpartner für alle Fragen rund um die Elektrotechnik. Zuverlässig, regional und fachgerecht.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background-color: #f0f4f8;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Leistungen</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-circle">⚡</div>
+                    <h3>Leistungen auf Anfrage</h3>
+                    <p>Wir bieten ein breites Spektrum an elektrotechnischen Lösungen an. Kontaktieren Sie uns gerne für ein individuelles Angebot oder eine Beratung zu Ihrem Vorhaben.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="warum-wir">
+        <div class="container">
+            <div class="section-title">
+                <h2>Warum wir?</h2>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-card">
+                    <div class="icon-circle">✓</div>
+                    <h3>Erfahrung</h3>
+                    <p>Langjährige Expertise im Elektrohandwerk garantiert Ihnen fachgerechte Lösungen für jedes Problem.</p>
+                </div>
+                <div class="usp-card">
+                    <div class="icon-circle">★</div>
+                    <h3>Qualität</h3>
+                    <p>Wir verwenden ausschließlich hochwertige Materialien namhafter Hersteller für maximale Sicherheit.</p>
+                </div>
+                <div class="usp-card">
+                    <div class="icon-circle">📅</div>
+                    <h3>Termintreue</h3>
+                    <p>Pünktlichkeit und eine zuverlässige Abwicklung Ihrer Aufträge sind für uns selbstverständlich.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt" style="background-color: #f0f4f8;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Kontakt & Öffnungszeiten</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 25px; color: var(--primary);">So erreichen Sie uns</h3>
+                    <p style="margin-bottom: 20px;"><strong>Elektrotechnik Sippel GmbH</strong><br>
+                    Gerlachstraße 10<br>
+                    14480 Potsdam, Deutschland</p>
+                    
+                    <a href="tel:03316003828" class="contact-link"><strong>Telefon:</strong> 0331 6003828</a>
+                    <a href="mailto:elektrotechnik-sippel@arcor.de" class="contact-link"><strong>E-Mail:</strong> elektrotechnik-sippel@arcor.de</a>
+                </div>
+                <div class="hours-info">
+                    <h3 style="margin-bottom: 25px; color: var(--primary);">Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag - Donnerstag</td><td>07:30 - 16:30</td></tr>
+                        <tr><td>Freitag</td><td>07:30 - 14:00</td></tr>
+                        <tr><td>Samstag</td><td>Geschlossen</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Elektrotechnik Sippel GmbH. Alle Rechte vorbehalten.</p>
+            <p class="footer-line">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>
