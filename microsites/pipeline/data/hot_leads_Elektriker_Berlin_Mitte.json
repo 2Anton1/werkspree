@@ -81,16 +81,24 @@
       "phone": "030 3958005"
     },
     {
-      "name": "Elektriker Berlin - Pinguin",
-      "address": "Düsseldorfer Str. 60a, 10707 Berlin, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJzQxvcfpWqEcRNkiMo1kwE1A",
+      "name": "Pro-eltek GmbH",
+      "address": "Friedrichstraße 95, 10117 Berlin, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJsZ7gSlZRqEcRI13kkBmk6eo",
       "types": [
         "electrician",
         "establishment",
         "point_of_interest"
       ],
-      "phone": "030 55278405"
+      "phone": "",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.pro-eltek.de/",
+      "email": "kontakt@pro-eltek.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'pro' in domain/local",
+      "branch": "Elektriker",
+      "region": "Berlin Mitte"
     },
     {
       "name": "Rayan Elektro- und Steuerungstechnik GmbH",
@@ -114,24 +122,28 @@
       "region": "Berlin Mitte"
     },
     {
-      "name": "Pro-eltek GmbH",
-      "address": "Friedrichstraße 95, 10117 Berlin, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJsZ7gSlZRqEcRI13kkBmk6eo",
+      "name": "Keko Elektrokonstruktionen",
+      "address": "Schönwalder Str. 14, 13347 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJd6EpEStRqEcR1xGUEkqqG8g",
       "types": [
         "electrician",
         "establishment",
         "point_of_interest"
       ],
-      "phone": "",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "http://www.pro-eltek.de/",
-      "email": "kontakt@pro-eltek.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'pro' in domain/local",
-      "branch": "Elektriker",
-      "region": "Berlin Mitte"
+      "phone": "0176 61388383"
+    },
+    {
+      "name": "Elektriker Berlin - Pinguin",
+      "address": "Düsseldorfer Str. 60a, 10707 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJzQxvcfpWqEcRNkiMo1kwE1A",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "030 55278405"
     },
     {
       "name": "Buzz Elektrotechnik GmbH",
@@ -142,14 +154,13 @@
         "electrician",
         "establishment",
         "point_of_interest"
-      ],
-      "phone": "0162 1534521"
+      ]
     },
     {
-      "name": "Keko Elektrokonstruktionen",
-      "address": "Schönwalder Str. 14, 13347 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJd6EpEStRqEcR1xGUEkqqG8g",
+      "name": "Oktay Elektrotechnik Gmbh",
+      "address": "Levetzowstraße 12 A, 10555 Berlin, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJm8VJMQ9RqEcRwNGl0AMu4kk",
       "types": [
         "electrician",
         "establishment",
@@ -168,22 +179,22 @@
       ]
     },
     {
-      "name": "Simple Elektrotechnik",
-      "address": "Bachstraße, 10555 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJkyuTcClRqEcRkNGeLDksQrA",
+      "name": "Ackermann & Bahr Inh. Detlef Bahr",
+      "address": "Gottschedstraße 4, 13357 Berlin, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJXSVaEClSqEcRT5VZBL-00z4",
       "types": [
+        "electrician",
         "establishment",
         "point_of_interest"
       ]
     },
     {
-      "name": "Oktay Elektrotechnik Gmbh",
-      "address": "Levetzowstraße 12 A, 10555 Berlin, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJm8VJMQ9RqEcRwNGl0AMu4kk",
+      "name": "Simple Elektrotechnik",
+      "address": "Bachstraße, 10555 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJkyuTcClRqEcRkNGeLDksQrA",
       "types": [
-        "electrician",
         "establishment",
         "point_of_interest"
       ]
@@ -200,39 +211,38 @@
       ]
     },
     {
-      "name": "MEMO ElektroMeisterBetrieb GmbH",
-      "address": "Adalbertstraße 35, 10179 Berlin, Deutschland",
+      "name": "KFZ-Elektriker Berlin",
+      "address": "Böttgerstraße 15, 13357 Berlin, Deutschland",
       "rating": 5,
-      "place_id": "ChIJoUe4Ce_3l6URlezCVLz_8lc",
+      "place_id": "ChIJ0W-EdltTqEcRm4sJX4IVoNs",
       "types": [
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Notdienst24-Elektro",
-      "address": "Wallstraße 9, 10179 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ_VbWWSVPqEcRJrqxKNrk6N4",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Ackermann & Bahr Inh. Detlef Bahr",
-      "address": "Gottschedstraße 4, 13357 Berlin, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJXSVaEClSqEcRT5VZBL-00z4",
-      "types": [
-        "electrician",
+        "car_repair",
         "establishment",
         "point_of_interest"
       ]
     }
   ],
   "hot_leads": [
+    {
+      "name": "Pro-eltek GmbH",
+      "address": "Friedrichstraße 95, 10117 Berlin, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJsZ7gSlZRqEcRI13kkBmk6eo",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.pro-eltek.de/",
+      "email": "kontakt@pro-eltek.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'pro' in domain/local",
+      "branch": "Elektriker",
+      "region": "Berlin Mitte"
+    },
     {
       "name": "Rayan Elektro- und Steuerungstechnik GmbH",
       "address": "Mollstraße 8, 10178 Berlin, Deutschland",
@@ -251,26 +261,6 @@
       "email": "farid@rayan-e.com",
       "email_verified": true,
       "email_verify_reason": "Impressum: Match: 'rayan' in domain/local",
-      "branch": "Elektriker",
-      "region": "Berlin Mitte"
-    },
-    {
-      "name": "Pro-eltek GmbH",
-      "address": "Friedrichstraße 95, 10117 Berlin, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJsZ7gSlZRqEcRI13kkBmk6eo",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "http://www.pro-eltek.de/",
-      "email": "kontakt@pro-eltek.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'pro' in domain/local",
       "branch": "Elektriker",
       "region": "Berlin Mitte"
     }
