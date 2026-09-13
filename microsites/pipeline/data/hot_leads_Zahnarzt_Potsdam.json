@@ -17,6 +17,19 @@
       "phone": ""
     },
     {
+      "name": "Buenger & Meißner Zahnheilkunde Potsdam",
+      "address": "Georg-Hermann-Allee 26, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJyZOrX7D3qEcRmhyS5IPncTU",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0331 97925577"
+    },
+    {
       "name": "KU64 Zahnarzt Potsdam - Zahnärzte Dr. Ziegler & Partner",
       "address": "Berliner Str. 139, 14467 Potsdam, Deutschland",
       "rating": 4.8,
@@ -29,45 +42,6 @@
         "point_of_interest"
       ],
       "phone": "0331 98222280"
-    },
-    {
-      "name": "POTSDAMDENT | Praxis für ganzheitliche Zahnmedizin",
-      "address": "Wildeberstraße 30, 14480 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJ4-AAQsZfqEcR3rAeKnMaheY",
-      "types": [
-        "dentist",
-        "establishment",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0331 6009323"
-    },
-    {
-      "name": "Die Zahngalerie - Dr. Antje Hottelmann & Dr. Lisa Hottelmann",
-      "address": "Charlottenstraße 42, 14467 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJX1ovp971qEcR-Zeg6PDNZoA",
-      "types": [
-        "dentist",
-        "establishment",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0331 23707520"
-    },
-    {
-      "name": "Buenger & Meißner Zahnheilkunde Potsdam",
-      "address": "Georg-Hermann-Allee 26, 14469 Potsdam Nord, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJyZOrX7D3qEcRmhyS5IPncTU",
-      "types": [
-        "dentist",
-        "establishment",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0331 97925577"
     },
     {
       "name": "Prof. Dr. Rosin & Partner Ästhetische Zahnheilkunde und Implantologie",
@@ -83,18 +57,17 @@
       "phone": "0331 2016769"
     },
     {
-      "name": "MEINDENTIST-Praxis Potsdam",
-      "address": "Friedrich-Engels-Straße 80, 14473 Potsdam, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJPa7_rR71qEcRx0qq8tWdiBI",
+      "name": "Die Zahngalerie - Dr. Antje Hottelmann & Dr. Lisa Hottelmann",
+      "address": "Charlottenstraße 42, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJX1ovp971qEcR-Zeg6PDNZoA",
       "types": [
         "dentist",
-        "doctor",
         "establishment",
         "health",
         "point_of_interest"
       ],
-      "phone": "0331 58567979"
+      "phone": "0331 23707520"
     },
     {
       "name": "Zahnarztpraxis in der Remise - Dr. Ron Schubert & Kollegen",
@@ -111,6 +84,33 @@
       "phone": "0331 903743"
     },
     {
+      "name": "MEINDENTIST-Praxis Potsdam",
+      "address": "Friedrich-Engels-Straße 80, 14473 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJPa7_rR71qEcRx0qq8tWdiBI",
+      "types": [
+        "dentist",
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0331 58567979"
+    },
+    {
+      "name": "POTSDAMDENT | Praxis für ganzheitliche Zahnmedizin",
+      "address": "Wildeberstraße 30, 14480 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ4-AAQsZfqEcR3rAeKnMaheY",
+      "types": [
+        "dentist",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0331 6009323"
+    },
+    {
       "name": "Dr. Manina Knobloch - Zahnarztpraxis Am Neuen Garten",
       "address": "Am Neuen Garten 3, 14469 Potsdam, Deutschland",
       "rating": 5,
@@ -121,41 +121,26 @@
         "health",
         "point_of_interest"
       ],
-      "phone": "0331 294700",
-      "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "http://www.potsdamszahnaerztin.de/"
-    },
-    {
-      "name": "Zahnarztpraxis & Praxisdentallabor Dr. Wertmann",
-      "address": "Behlertstraße 3A/Haus B1, 14467 Potsdam, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJDzi0Nd71qEcRObzLLHB4JiE",
-      "types": [
-        "dentist",
-        "establishment",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0331 8170010"
+      "phone": "0331 294700"
     },
     {
       "name": "Niemeyer + Neubauer Zahnärzte",
       "address": "Benzstraße 8, 14482 Potsdam-Babelsberg, Deutschland",
-      "rating": 4.8,
+      "rating": 4.9,
       "place_id": "ChIJmxFbeVhfqEcRC9zcyGCtYcY",
       "types": [
         "dentist",
         "establishment",
         "health",
         "point_of_interest"
-      ]
+      ],
+      "phone": "0331 707055"
     },
     {
-      "name": "Dr. Szabadi Zahnarztpraxis",
-      "address": "Gutenbergstraße 60, 14467 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJezPSZz31qEcRq_hvICRag3c",
+      "name": "Zahnarztpraxis & Praxisdentallabor Dr. Wertmann",
+      "address": "Behlertstraße 3A/Haus B1, 14467 Potsdam, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJDzi0Nd71qEcRObzLLHB4JiE",
       "types": [
         "dentist",
         "establishment",
@@ -171,6 +156,18 @@
       "types": [
         "dentist",
         "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Dr. Szabadi Zahnarztpraxis",
+      "address": "Gutenbergstraße 60, 14467 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJezPSZz31qEcRq_hvICRag3c",
+      "types": [
+        "dentist",
         "establishment",
         "health",
         "point_of_interest"
@@ -238,10 +235,10 @@
       ]
     },
     {
-      "name": "Potsdams Zähne | Zahnarztpraxis Luisa Behrendt",
-      "address": "Kurfürstenstraße 18, 14467 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJxTLIPtn1qEcR2o6xzn3Ka9A",
+      "name": "Zahnarztpraxis und Oralchirurgie Potsdam, MVZ Dres.Grote&Kirchheim",
+      "address": "Erich-Mendelsohn-Allee 4a, 14469 Potsdam Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ2728TIH2qEcRIrBGdbBcI3s",
       "types": [
         "dentist",
         "establishment",
@@ -250,10 +247,10 @@
       ]
     },
     {
-      "name": "Zahnarztpraxis Anne Wenzel",
-      "address": "Berliner Str. 47/48, 14467 Potsdam, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJzZvjVQr2qEcRTY3W2Q2Cndo",
+      "name": "Dr. Maria Csides - Zahnheilkunde am Heiligen See",
+      "address": "Mangerstraße 25, 14467 Potsdam-Nördliche Vorstadt, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJadq0aZT3qEcRZcRHQEPIe_s",
       "types": [
         "dentist",
         "establishment",

@@ -285,8 +285,9 @@
 
 ---
 
-## 6. ENV-VARIABLEN (~/.hermes/.env)
+## 6. ENV-VARIABLEN
 
+### 6.1 Maßgebliche Ablage: ~/.hermes/.env
 Alle Secrets/Keys befinden sich in ~/.hermes/.env. NIEMALS in Dateien committen.
 ```
 STRIPE_PUBLIC_KEY=...  (pk_live_...)
@@ -295,6 +296,23 @@ AIRTABLE_API_KEY=...   (pat...)
 N8N_API_KEY=...        (eyJhbG...)
 PONCHO_API_KEY=...     (pk_poncho_..., nur in ~/.hermes/.env; niemals committen/ausgeben)
 ```
+
+### 6.2 Projekt-Sammeldatei: ~/werkspree/.env (lokal, gitignored)
+- **Pfad:** `~/werkspree/.env` — projektspezifische Sammlung aller Zugangsdaten
+  (Server, n8n, Stripe, Airtable, Google, Strato-Mail, GitHub, Poncho) **plus**
+  der nicht-geheimen Bezeichner (Hosts, URLs, Base-/Table-IDs, Logins).
+- **Warum:** Tools/Sessions sollen alle Projekt-Zugänge an einer Stelle finden,
+  statt sie aus dieser Handover oder aus Skripten zusammenzusuchen.
+- **Schutz:** `.env` ist über `.gitignore` ausgeschlossen (`git check-ignore .env`
+  bestätigt es) und liegt mit Modus `0600`. Sie taucht nicht in `git status` auf.
+- **🔴 Diese Datei NIEMALS committen, pushen oder in Cloud-KI-Tools (ChatGPT & Co.)
+  hochladen** — das Repo `github.com/2Anton1/werkspree` ist öffentlich, und die
+  Datei bündelt Live-Secrets (Stripe live, Server, Airtable, SMTP).
+- **Nicht enthalten / manuell zu ergänzen:** `SERVER_SSH_PASSWORD` und
+  `N8N_LOGIN_PASSWORD` — beide wurden am 08.08.2026 wegen der öffentlichen
+  Historie aus dieser Datei entfernt und sind lokal nicht gespeichert.
+- **Keine Werte in dieser Handover.** HANDOVER.md ist public; hier stehen nur
+  Verweise, nie Secrets.
 
 ---
 
@@ -387,12 +405,36 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 3. **Stripe-Schlüssel** nicht in Commits pushen (sind in .env, nicht im Repo)
 4. **Server-Passwort** nicht in Skripten hardcoden
 5. SSH zum Server nur via sshpass oder expect (sudo -S wird blockiert)
+6. **Zugangsdaten-Sammeldatei `~/werkspree/.env`:** nur lokal, Modus 0600, per `.gitignore` ausgeschlossen. Nie committen/pushen, nie in Cloud-KI-Tools (ChatGPT & Co.) hochladen — sie enthält Live-Secrets. In HANDOVER.md (public) nur Verweise, niemals Werte.
 
 ---
 
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 13.09.2026 — Landingpage: Anfrageweg und Tablet-Navigation repariert
+- **Conversion:** Das vorhandene, einwilligungsbasierte Automation-Sprint-Formular
+  wird nach dem Hero platziert (statt nach rund 9.900 px Inhalt bei 768 px
+  Breite). Formspree-, n8n- und CRM-Payload bleiben unverändert.
+- **Navigation:** Die Menüansicht schaltet nun bis 1.100 px um. Damit ist der
+  primäre Gesprächsweg auf Tabletbreiten nicht mehr durch überbreite oder
+  unsichtbare Navigation blockiert.
+- **Lokal geprüft:** 390 px, 768 px und 1.440 px ohne horizontalen Überlauf;
+  ein Formular, keine Browserfehler. Vor einem Go-live die Veröffentlichung
+  und die echte Formspree-/n8n-Zustellung separat prüfen.
+
+### 13.09.2026 — Projekt-.env als zentrale Zugangsdaten-Datei angelegt
+- **Neu:** `~/werkspree/.env` (Modus `0600`, per `.gitignore` ausgeschlossen)
+  bündelt alle Werkspree-Zugangsdaten: Hetzner-Server, n8n (URL/Login/API-Key),
+  Stripe (live), Airtable, Google Places/Gemini, Strato-SMTP/IMAP, GitHub, Poncho
+  — plus nicht-geheime Bezeichner (Base-/Table-IDs, Hosts, Accounts).
+- **Quelle:** Werte aus `~/.hermes/.env` (maßgeblich) und HANDOVER Abschnitt 2.
+- **Offen:** `SERVER_SSH_PASSWORD` und `N8N_LOGIN_PASSWORD` sind am 08.08.2026 aus
+  der Handover entfernt worden und lokal nicht gespeichert → in der .env als
+  `TODO_MANUELL_EINTRAGEN` markiert.
+- **Sicherheit:** Keine Secret-Werte in HANDOVER.md (public) — nur Verweise.
+  `.env` nie committen/pushen oder in Cloud-KI-Tools hochladen. Siehe 6.2 + Abschnitt 9.
 
 ### 03.09.2026 — Website-Bau-Generator repariert (war nur generisch)
 - **Symptom:** website-bau/index.html erzeugte nur generische Seiten (Über uns/Leistungen/

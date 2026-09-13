@@ -30,18 +30,6 @@
       "phone": "03381 629410"
     },
     {
-      "name": "Lohn Heiztechnik & Installation in Brandenburg",
-      "address": "Mittelstraße 10, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJ9WuzS5TBqEcR7wolnTnomeE",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "point_of_interest"
-      ],
-      "phone": "03381 2181820"
-    },
-    {
       "name": "Laminski Bäder & Heizung",
       "address": "Carolinenring 50, 14772 Brandenburg an der Havel, Deutschland",
       "rating": 5,
@@ -55,8 +43,20 @@
       ],
       "phone": "0174 4161186",
       "website_quality": "low",
-      "website_quality_score": 1,
+      "website_quality_score": 3,
       "old_or_no_website": "http://www.laminski-bäder-heizung.de/"
+    },
+    {
+      "name": "Lohn Heiztechnik & Installation in Brandenburg",
+      "address": "Mittelstraße 10, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ9WuzS5TBqEcR7wolnTnomeE",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "03381 2181820"
     },
     {
       "name": "Stefan Kriegs",
@@ -164,17 +164,6 @@
         "home_goods_store",
         "point_of_interest",
         "store"
-      ]
-    },
-    {
-      "name": "HB Heizung + Bad GmbH",
-      "address": "August-Bebel-Straße 21, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJsbpVI47BqEcRNipfWcQUoX8",
-      "types": [
-        "establishment",
-        "plumber",
-        "point_of_interest"
       ]
     }
   ],
