@@ -413,6 +413,15 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 13.09.2026 — Öffentlichen Einstieg auf den lieferbaren Sprint fokussiert
+- Die nicht abgesicherten Starter-, Growth- und Enterprise-Abos wurden aus
+  Landingpage und strukturierten Angebotsdaten entfernt. Sie versprachen unter
+  anderem laufenden Support, Mahnwesen, Chatbots und unbegrenzte Workflows,
+  die derzeit nicht als reproduzierbare Leistung belegt sind.
+- Öffentlich angeboten wird nun ausschließlich der dokumentierte Automation
+  Sprint: ein Prozess, 14 Tage, 890 € einmalig, menschliche Freigaben sowie
+  schriftliche Vereinbarung von Umfang und Zahlungsweg vor dem Start.
+
 ### 13.09.2026 — Freiwilligen Partnerweg veröffentlicht
 - Neue Seite `partner/index.html` für Steuerkanzleien, Lohnbüros und
   IT-Partner: Sie erläutert den klar abgegrenzten Sprint, verbietet die
