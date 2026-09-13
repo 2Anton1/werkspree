@@ -282,6 +282,7 @@
 | 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Scrapling) → geprüfter Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `werkspree@bki-de.de`) |
 | b68eea7332bc | Werkspree Reply Checker | 2x täglich 09:00 + 18:00 | ~/.hermes/scripts/check_replies.py (no_agent): prüft Strato IMAP + Gmail API auf Antworten versendeter Mails. Bei neuen Antworten → WhatsApp-Benachrichtigung. Keine Antwort → still (leere stdout). |
 | 3d145f5ac7af | Werkspree Tagesreport | Täglich 09:00 | ~/.hermes/scripts/werkspree_daily_summary.py (no_agent): sammelt Leads, Outreach-Mails, Microsites, Antworten, Pipeline-Report und sendet Zusammenfassung an anton.drooff@icloud.com via Strato SMTP. |
+| werkspree-erstkundenmonitor | Codex Erstkundenmonitor | Täglich | Rein lesende Prüfung der produktiven Airtable- und Stripe-Daten. Still ohne neue Anfrage/Zahlung; keine Nachrichten, Zahlungslinks oder Datenänderungen. |
 
 ---
 
@@ -412,6 +413,11 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 13.09.2026 — Erstkundenmonitor aktiviert
+- Codex-Heartbeat `werkspree-erstkundenmonitor` prüft täglich rein lesend
+  freiwillige CRM-Anfragen sowie Stripe-Zahlungen. Ohne relevante Änderung
+  bleibt er still und führt keine externe Kommunikation oder Finanzaktion aus.
 
 ### 13.09.2026 — Öffentlichen Einstieg auf den lieferbaren Sprint fokussiert
 - Die nicht abgesicherten Starter-, Growth- und Enterprise-Abos wurden aus
