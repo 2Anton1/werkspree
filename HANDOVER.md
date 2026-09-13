@@ -413,6 +413,12 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 13.09.2026 — Sitemap für Indexierung bereinigt
+- Das versehentliche führende `+` vor einem Sitemap-Eintrag wurde entfernt.
+  `xmllint --noout sitemap.xml` bestätigt valides XML.
+- Die `lastmod`-Werte der am 13.09. geänderten Angebots-, Branchen- und
+  Blogseiten wurden auf das reale Änderungsdatum aktualisiert.
+
 ### 13.09.2026 — Zahlungsversprechen gegen Live-Stripe abgeglichen
 - **Live-Check:** Stripe zeigt für die aktiven Abos sofortige Monatsbeträge
   von 19 €, 29 € und 39 €; keines der drei Payment Links hat einen
