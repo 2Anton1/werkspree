@@ -291,7 +291,7 @@
 | 251104e77a29 | Werkspree Hot-Lead Microsites (Generator + Mail) | Alle 48h | Maps-Discovery (Scrapling) → geprüfter Static-Site-Generator (`build_microsite.py`) → Git-Deploy auf werkspree.bki-de.de/microsites/sites/<slug>/ → Mail an Lead (Strato SMTP `werkspree@bki-de.de`) |
 | b68eea7332bc | Werkspree Reply Checker | 2x täglich 09:00 + 18:00 | ~/.hermes/scripts/check_replies.py (no_agent): prüft Strato IMAP + Gmail API auf Antworten versendeter Mails. Bei neuen Antworten → WhatsApp-Benachrichtigung. Keine Antwort → still (leere stdout). |
 | 3d145f5ac7af | Werkspree Tagesreport | Täglich 09:00 | ~/.hermes/scripts/werkspree_daily_summary.py (no_agent): sammelt Leads, Outreach-Mails, Microsites, Antworten, Pipeline-Report und sendet Zusammenfassung an anton.drooff@icloud.com via Strato SMTP. |
-| werkspree-erstkundenmonitor | Codex Erstkundenmonitor | Täglich | Rein lesende Prüfung der produktiven Airtable- und Stripe-Daten. Still ohne neue Anfrage/Zahlung; keine Nachrichten, Zahlungslinks oder Datenänderungen. |
+| werkspree-erstkundenmonitor | Codex Erstkundenmonitor | Täglich | Rein lesende Prüfung der produktiven Airtable- und Stripe-Daten sowie öffentlicher, neu veröffentlichter Freelancermap-Projekte zu n8n- und Prozessautomatisierung. Still ohne relevante Änderung; keine Nachrichten, Profiländerungen, Zahlungslinks oder Datenänderungen. |
 
 ---
 
@@ -422,6 +422,19 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 13.09.2026 — Projektmarktzugang aktiviert und Monitor erweitert
+- Das Freelancer-Konto bei Freelancermap wurde mit der Werkspree-Adresse
+  registriert und per E-Mail aktiviert. Das erste geprüfte, passende
+  easybill-/n8n-Projekt war beim angemeldeten Abruf bereits geschlossen; es
+  wurde keine Bewerbung oder Nachricht versendet.
+- Für eine bewerbbare Profilfreischaltung verlangt die Plattform eine echte
+  vollständige Geschäftsanschrift. Diese wurde nicht geraten oder eingetragen;
+  ohne bestätigte Angaben bleibt der Freelancer-Steckbrief unvollständig.
+- Der bestehende rein lesende Codex-Heartbeat `werkspree-erstkundenmonitor`
+  prüft zusätzlich täglich neue, noch bewerbbare Freelancermap-Anfragen zu
+  n8n-, Rechnungs- und Prozessautomatisierung. Er bleibt ohne passenden Fund
+  still und führt niemals Bewerbungen, Profiländerungen oder Nachrichten aus.
 
 ### 13.09.2026 — Freiwillige Projektbewerbung vorbereitet
 - Eine weiterhin öffentlich sichtbare Freelancermap-Ausschreibung für
