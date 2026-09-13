@@ -1570,7 +1570,7 @@
 
     <footer>
         <p>Werkspree — KI-Automatisierung für kleine Unternehmen | Berlin &amp; Brandenburg | Finn Werksby</p>
-        <p class="legal-links"><a href="e-rechnung/">E-Rechnungspflicht</a> · <a href="e-rechnung-pruefen/">E-Rechnung prüfen</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a></p>
+        <p class="legal-links"><a href="e-rechnung/">E-Rechnungspflicht</a> · <a href="e-rechnung-pruefen/">E-Rechnung prüfen</a> · <a href="partner/">Für Partner</a> · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutzerklärung</a></p>
     </footer>
 
     <script>
@@ -1679,6 +1679,15 @@
             var status = document.getElementById('form-status');
             var crmApi = 'https://n8n.anton-drooff.de/webhook/werkspree-sprint-lead';
             if (!form || !status) return;
+
+            var source = new URLSearchParams(window.location.search).get('quelle');
+            if (source === 'Partner-Empfehlung') {
+                var sourceInput = form.querySelector('[name="quelle"]');
+                if (sourceInput) {
+                    sourceInput.defaultValue = source;
+                    sourceInput.value = source;
+                }
+            }
 
             var setStatus = function (text, kind) {
                 status.textContent = text;

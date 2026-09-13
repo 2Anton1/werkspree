@@ -413,6 +413,16 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 13.09.2026 — Freiwilligen Partnerweg veröffentlicht
+- Neue Seite `partner/index.html` für Steuerkanzleien, Lohnbüros und
+  IT-Partner: Sie erläutert den klar abgegrenzten Sprint, verbietet die
+  Weitergabe von Kontaktdaten ohne Wunsch des Betriebs und verlinkt auf einen
+  freiwilligen Prozess-Check.
+- Der Empfehlungslink setzt ausschließlich die Quelle `Partner-Empfehlung` im
+  bestehenden Formular. Diese Quelle wird nach erfolgreicher Formspree-Annahme
+  an den unveränderten CRM-Webhook übergeben; beliebige URL-Parameter werden
+  nicht übernommen. Footer und Sitemap verlinken die neue Seite.
+
 ### 13.09.2026 — Sitemap für Indexierung bereinigt
 - Das versehentliche führende `+` vor einem Sitemap-Eintrag wurde entfernt.
   `xmllint --noout sitemap.xml` bestätigt valides XML.
