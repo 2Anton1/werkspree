@@ -423,6 +423,17 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 13.09.2026 — Freiwillige Projektbewerbung vorbereitet
+- Eine weiterhin öffentlich sichtbare Freelancermap-Ausschreibung für
+  n8n-, easybill- und Bestellprozess-Automatisierung wurde als konkreter,
+  nachfragegetriebener Erstkundenkanal geprüft. Die Bewerbung erfordert ein
+  aktiviertes Freelancer-Profil; es wurde weder ein Konto erstellt noch eine
+  Nachricht versendet.
+- `docs/freelancermap-easybill-projektantwort.md` enthält eine bewusst
+  wahrheitsgemäße, eng abgegrenzte Antwort für einen 14-tägigen Sprint. Sie
+  darf erst nach Prüfung echter Profilangaben und kurz vor der freiwilligen
+  Plattform-Bewerbung verwendet werden.
+
 ### 13.09.2026 — IndexNow für neue Kernseiten angestoßen
 - Öffentlicher Besitznachweis im Root veröffentlicht und über die offizielle
   IndexNow-API eine einmalige Meldung für sieben kürzlich geänderte Kernseiten
