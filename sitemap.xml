@@ -168,14 +168,4 @@
    <url><loc>https://werkspree.bki-de.de/blog/website-steuerberater/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
    <url><loc>https://werkspree.bki-de.de/blog/website-tischlerei/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
    <url><loc>https://werkspree.bki-de.de/blog/website-zahnarzt/</loc><lastmod>2026-09-01</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url>
-    <loc>https://werkspree.bki-de.de/impressum.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://werkspree.bki-de.de/datenschutz.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
 </urlset>

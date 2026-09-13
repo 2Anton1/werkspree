@@ -257,6 +257,15 @@
 - **Branchen-Ratgeber:** `scripts/generate_branch_blog_pages.py` erzeugt die
   zwölf ergänzten Seiten unter `blog/website-*/` reproduzierbar.
 
+### 4.13 IndexNow
+- **Besitznachweis:** `586BDDB4-DA3A-4C5B-B501-99CF79CF2FCC.txt` im
+  Repository-Root. Die Datei ist absichtlich öffentlich und enthält nur den
+  IndexNow-Schlüssel, keine Zugangsdaten.
+- **Erste Meldung:** Am 13.09.2026 wurden Start-, Partner-, E-Rechnungs- und
+  Website-Bau-Kernseiten einmalig an `api.indexnow.org` übermittelt. Antwort
+  `HTTP 202` bedeutet Annahme bei noch ausstehender Besitzvalidierung, nicht
+  garantierte Indexierung oder Traffic.
+
 ### 4.6 n8n Workflow-Datei
 - **Pfad:** ~/werkspree/n8n-workflows/rechnungs-ocr-demo.json
 - **Inhalt:** n8n-Workflow-JSON für Rechnungs-OCR
@@ -413,6 +422,14 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 ## 10. CHANGELOG
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
+
+### 13.09.2026 — IndexNow für neue Kernseiten angestoßen
+- Öffentlicher Besitznachweis im Root veröffentlicht und über die offizielle
+  IndexNow-API eine einmalige Meldung für sieben kürzlich geänderte Kernseiten
+  abgegeben. Die API antwortete mit `HTTP 202` (angenommen, Validierung steht
+  noch aus); daraus darf weder eine Indexierung noch Umsatz abgeleitet werden.
+- Die beiden absichtlich mit `noindex` versehenen Rechtsseiten wurden aus der
+  Sitemap entfernt, damit Crawling-Signale nicht widersprüchlich sind.
 
 ### 13.09.2026 — Erstkundenmonitor aktiviert
 - Codex-Heartbeat `werkspree-erstkundenmonitor` prüft täglich rein lesend
