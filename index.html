@@ -135,7 +135,10 @@
         }
         .nav-links a:hover { color: var(--primary); }
         .nav-cta { display: flex; align-items: center; gap: var(--space-md); }
-        @media (max-width: 720px) {
+        /* The ten navigation links no longer fit reliably on tablet widths.
+           Keep the compact, keyboard-accessible menu until there is enough
+           room for every destination and the primary CTA. */
+        @media (max-width: 1100px) {
             .nav-links { display: none; }
             .nav-menu-toggle {
                 display: flex;
@@ -171,6 +174,9 @@
             .nav-links.mobile-open a { font-size: 1.05rem; padding: 0.5rem 0; }
         }
         .nav-menu-toggle { display: none; }
+        @media (max-width: 1100px) {
+            .nav-menu-toggle { display: flex; }
+        }
 
         /* ---------- Buttons ---------- */
         .btn {
@@ -1631,6 +1637,17 @@
                 revealables.forEach(function (el) { io.observe(el); });
             } else {
                 revealables.forEach(function (el) { el.classList.add('in-view'); });
+            }
+        })();
+
+        /* Keep the voluntary qualification step directly after the promise.
+           The same form and submission path stay intact; only its placement
+           changes so a visitor does not have to traverse the whole page first. */
+        (function () {
+            var hero = document.querySelector('.hero');
+            var contact = document.getElementById('kontakt');
+            if (hero && contact && hero.nextElementSibling !== contact) {
+                hero.insertAdjacentElement('afterend', contact);
             }
         })();
 
