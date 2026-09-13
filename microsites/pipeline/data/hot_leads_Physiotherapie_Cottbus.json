@@ -3,38 +3,6 @@
   "region": "Cottbus",
   "all_candidates": [
     {
-      "name": "Physio Klemp",
-      "address": "Bahnhofstraße 1, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJkf2VE2d1CEcRNWCScBm0Rx4",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ],
-      "phone": "0355 52935606",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
-    },
-    {
-      "name": "Physio Aktiv | Inh. Grit Gärtner",
-      "address": "Lieberoser Str. 35-36, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJISKOiq11CEcRyu8eb7ncXr8",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ],
-      "phone": "0355 8625000",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "http://www.physio-cottbus.de/"
-    },
-    {
       "name": "Physio Pakulla",
       "address": "Hänchener Str. 18, 03050 Cottbus, Deutschland",
       "rating": 4.9,
@@ -63,6 +31,22 @@
       "phone": "0355 860772"
     },
     {
+      "name": "Physio Klemp",
+      "address": "Bahnhofstraße 1, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJkf2VE2d1CEcRNWCScBm0Rx4",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0355 52935606",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
       "name": "provita Physio - Praxis für Physiotherapie",
       "address": "Rosenstraße 4, 03046 Cottbus, Deutschland",
       "rating": 4.7,
@@ -85,6 +69,49 @@
       "region": "Cottbus"
     },
     {
+      "name": "Physio Aktiv | Inh. Grit Gärtner",
+      "address": "Lieberoser Str. 35-36, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJISKOiq11CEcRyu8eb7ncXr8",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0355 8625000",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.physio-cottbus.de/"
+    },
+    {
+      "name": "Physiotherapie Liebezeit",
+      "address": "Schillerstraße 22, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJAfar4IF1CEcR6R1wst30cUE",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0355 72999580"
+    },
+    {
+      "name": "Physiotherapie Mensch für Mensch",
+      "address": "Karlstraße 60, 03044 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJn5tBXxl1CEcRiK8QBtYlbEA",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest",
+        "spa"
+      ],
+      "phone": "0355 821558"
+    },
+    {
       "name": "Physiotherapie Tim Reinke",
       "address": "bei MediFit Cottbus, Parzellenstraße 68, 03050 Cottbus, Deutschland",
       "rating": 5,
@@ -95,6 +122,19 @@
         "point_of_interest"
       ],
       "phone": "0355 48573765"
+    },
+    {
+      "name": "Physiotherapie Martina Schmidt",
+      "address": "Thierbacher Str. 1, 03048 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ7RsHho1zCEcRMEMpd6UshjE",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0355 531333"
     },
     {
       "name": "PhysioPuschkinPromenade",
@@ -111,6 +151,18 @@
       "phone": "0355 22322"
     },
     {
+      "name": "Meldevilla Physiotherapie",
+      "address": "August-Bebel-Straße 24, 03046 Cottbus, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJm3HiSmF0CEcR_uJKFQ8D9fQ",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
       "name": "Physiotherapie und Naturheilpraxis Will",
       "address": "Brandenburger Pl. 59, 03046 Cottbus, Deutschland",
       "rating": 4.8,
@@ -121,16 +173,32 @@
         "health",
         "physiotherapist",
         "point_of_interest"
-      ],
-      "phone": "0355 473059",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "http://www.physiotherapie-will.de/",
-      "email": "physioawill@gmail.com",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'will' in domain/local",
-      "branch": "Physiotherapie",
-      "region": "Cottbus"
+      ]
+    },
+    {
+      "name": "Physiotherapie Lebenszeit",
+      "address": "Senftenberger Str. 68, 03048 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ-YFi8nl0CEcR1gvdAhEVi0Y",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Physiotherapie Markus Merl",
+      "address": "Ostrower Wohnpark 2, 03046 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJSzHCb2t0CEcRcWZexcGNDg4",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest",
+        "spa"
+      ]
     },
     {
       "name": "Physiotherapie Jenser",
@@ -141,8 +209,19 @@
         "establishment",
         "health",
         "point_of_interest"
-      ],
-      "phone": "0355 7557777"
+      ]
+    },
+    {
+      "name": "Praxis für Physiotherapie Quetk",
+      "address": "Zuschka Cužka 39, 03044 Cottbus, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyZwCoSd1CEcRd1kx_qG6zfE",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
     },
     {
       "name": "Physio Plus Cottbus",
@@ -153,16 +232,7 @@
         "establishment",
         "health",
         "point_of_interest"
-      ],
-      "phone": "0355 3554990",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "https://www.physioplus-cb.de/",
-      "email": "kontakt@physioplus-cb.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'plus' in domain/local",
-      "branch": "Physiotherapie",
-      "region": "Cottbus"
+      ]
     },
     {
       "name": "Physiotherapie Roland Niedworok",
@@ -188,19 +258,6 @@
       ]
     },
     {
-      "name": "Physiotherapie Markus Merl",
-      "address": "Ostrower Wohnpark 2, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJSzHCb2t0CEcRcWZexcGNDg4",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest",
-        "spa"
-      ]
-    },
-    {
       "name": "Physiotherapie Am Spreebogen",
       "address": "Am Spreebogen 19B, 03054 Cottbus-Döbbrick, Deutschland",
       "rating": 4.9,
@@ -209,78 +266,6 @@
         "establishment",
         "health",
         "physiotherapist",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Impuls Physiotherapie",
-      "address": "Bahnhofstraße 56, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJe0LeaQB1CEcRuiMOPlnGtHM",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Physiotherapie Thomas Krokor",
-      "address": "Thiemstraße 112, 03050 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJtYX8zlp1CEcRxx7YWbRcoc4",
-      "types": [
-        "doctor",
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Ambulant-Physio Ergo Logo GmbH",
-      "address": "Merzdorfer Weg 43/44, 03042 Cottbus, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJiY0fFjl0CEcRW6nUfaokG7A",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Physiotherapie Mensch für Mensch",
-      "address": "Karlstraße 60, 03044 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJn5tBXxl1CEcRiK8QBtYlbEA",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest",
-        "spa"
-      ]
-    },
-    {
-      "name": "Physio Maxima",
-      "address": "Sachsendorfer Str. 2c, 03051 Cottbus-Groß Gaglow, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ__8vKr9zCEcRNqjMYfvujpU",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Physiotherapie in Cottbus",
-      "address": "Feigestraße 1, 03046 Cottbus, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJyZjxEGx0CEcRSeDROQHHTVo",
-      "types": [
-        "establishment",
-        "health",
         "point_of_interest"
       ]
     }
@@ -305,48 +290,6 @@
       "email": "info@provita-physio.net",
       "email_verified": true,
       "email_verify_reason": "Impressum: Match: 'provita' in domain/local",
-      "branch": "Physiotherapie",
-      "region": "Cottbus"
-    },
-    {
-      "name": "Physiotherapie und Naturheilpraxis Will",
-      "address": "Brandenburger Pl. 59, 03046 Cottbus, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJo0o6umh0CEcRo0x3VfCP30k",
-      "types": [
-        "establishment",
-        "gym",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ],
-      "phone": "0355 473059",
-      "website_quality": "medium",
-      "website_quality_score": 5,
-      "old_or_no_website": "http://www.physiotherapie-will.de/",
-      "email": "physioawill@gmail.com",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'will' in domain/local",
-      "branch": "Physiotherapie",
-      "region": "Cottbus"
-    },
-    {
-      "name": "Physio Plus Cottbus",
-      "address": "Schweriner Str. 1B, 03046 Cottbus, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJddvf7et1CEcRHIn3gyCMlnk",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0355 3554990",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "https://www.physioplus-cb.de/",
-      "email": "kontakt@physioplus-cb.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'plus' in domain/local",
       "branch": "Physiotherapie",
       "region": "Cottbus"
     }

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">Klarraum Gesundheit – Signal</title>
+  <desc id="desc">Drei farbige, abgerundete Signale in einem offenen dunkelgrünen Kreis.</desc>
+  <path d="M125 25A65 65 0 1 0 138 110" fill="none" stroke="#18323A" stroke-linecap="round" stroke-width="14"/>
+  <rect x="43" y="57" width="19" height="53" rx="9.5" fill="#2F7254"/>
+  <rect x="71" y="70" width="19" height="40" rx="9.5" fill="#AA7418"/>
+  <rect x="99" y="83" width="19" height="27" rx="9.5" fill="#A14338"/>
+</svg>

@@ -28,19 +28,6 @@
       "phone": "0331 20197777"
     },
     {
-      "name": "Physiotherapie BodyPotential Potsdam",
-      "address": "Gutenbergstraße 1, 14467 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ90Bf5Sv1qEcRuhLDoIwyxtI",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ],
-      "phone": "0176 41638825"
-    },
-    {
       "name": "Physiotherapie Physio Vital Potsdam",
       "address": "Georg-Hermann-Allee 127, 14469 Potsdam, Deutschland",
       "rating": 5,
@@ -54,17 +41,17 @@
       "phone": "0331 60058015"
     },
     {
-      "name": "Physiotherapie Potsdam Hand- & Fußzentrum",
-      "address": "Am Kanal 56, 14467 Potsdam, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJ_4TnCs31qEcR6YftiuC2uCo",
+      "name": "Physiotherapie BodyPotential Potsdam",
+      "address": "Gutenbergstraße 1, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ90Bf5Sv1qEcRuhLDoIwyxtI",
       "types": [
         "establishment",
         "health",
         "physiotherapist",
         "point_of_interest"
       ],
-      "phone": "0331 27308361"
+      "phone": "0176 41638825"
     },
     {
       "name": "Physiotherapie Potsdam Kurfürstenstift",
@@ -80,6 +67,32 @@
       "phone": "0331 58168180"
     },
     {
+      "name": "Physiotherapie Sina Reinhardt",
+      "address": "Kleine G. 1, 14467 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJpSnG6QX1qEcRMCzV0NRJV4k",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0331 27378185"
+    },
+    {
+      "name": "Physiotherapie Potsdam Hand- & Fußzentrum",
+      "address": "Am Kanal 56, 14467 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ_4TnCs31qEcR6YftiuC2uCo",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "0331 27308361"
+    },
+    {
       "name": "Iconic Physio Potsdam",
       "address": "Konrad-Zuse-Ring 6B, 14469 Potsdam, Deutschland",
       "rating": 4.8,
@@ -92,33 +105,20 @@
       "phone": "0331 55077143"
     },
     {
-      "name": "Physiotherapie Potsdam Humboldtring",
-      "address": "Humboldtring 25, 14473 Potsdam, Deutschland",
-      "rating": 4.4,
-      "place_id": "ChIJ5Z9t4uX1qEcRUmfoCYBj5gE",
+      "name": "Physiotherapie Babelsberg-Potsdam Ronny Sens",
+      "address": "Rudolf-Breitscheid-Straße, Daimlerstraße 19 Ecke, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJD56pUpD1qEcRspn2udLjHo0",
       "types": [
+        "doctor",
         "establishment",
+        "gym",
         "health",
         "physiotherapist",
-        "point_of_interest"
+        "point_of_interest",
+        "spa"
       ],
-      "phone": "0331 713555"
-    },
-    {
-      "name": "Physiotherapie Liquo",
-      "address": "Konrad-Wolf-Allee 55, 14480 Potsdam, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJN0sv4CRfqEcR2dcWhyMBK-0",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ],
-      "phone": "0331 81324455",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
+      "phone": "0331 70464512"
     },
     {
       "name": "Cellsiuspoint - Physiotherapie Potsdam",
@@ -134,45 +134,10 @@
       "phone": "0331 64721199"
     },
     {
-      "name": "Physio Zentrum Medicus Physiotherapie",
-      "address": "Behlertstraße 33A, 14467 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJX7tKFtD1qEcR90tlPEwli_w",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Physiotherapie Babelsberg - Ronny Sens",
-      "address": "Rudolf-Breitscheid-Straße 19, 14482 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJD56pUpD1qEcRspn2udLjHo0",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "kamaphysio GmbH",
-      "address": "Schloßstraße 9a, 14467 Potsdam, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJPU-01zT1qEcRMS1mBrqs2lo",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Physiotherapie am Bornstedter Feld",
-      "address": "Kiepenheuerallee 23, 14469 Potsdam Nord, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJ-TXcpID2qEcR9ShyFh66l3Q",
+      "name": "Physiotherapie Potsdam Humboldtring",
+      "address": "Humboldtring 25, 14473 Potsdam, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ5Z9t4uX1qEcRUmfoCYBj5gE",
       "types": [
         "establishment",
         "health",
@@ -192,6 +157,19 @@
       ]
     },
     {
+      "name": "Physiotherapie Blau",
+      "address": "Kiezstraße 13, Eingang Auf Hof, Wall am Kiez 6, 14467 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJyyUrTM_1qEcRhIM5Lu5PQw4",
+      "types": [
+        "establishment",
+        "gym",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
       "name": "Praxis für Physiotherapie und Osteopathie René Eichler & Team",
       "address": "Luisenplatz, im Ärztehaus 1, 14471 Potsdam, Deutschland",
       "rating": 4.8,
@@ -202,6 +180,18 @@
         "physiotherapist",
         "point_of_interest",
         "spa"
+      ]
+    },
+    {
+      "name": "Physiotherapie Liquo",
+      "address": "Konrad-Wolf-Allee 55, 14480 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJN0sv4CRfqEcR2dcWhyMBK-0",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
       ]
     }
   ],
