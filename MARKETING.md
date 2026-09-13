@@ -96,7 +96,7 @@ Bei Interesse: Anpassung für 19€/Monat mit eigener Domain."
 Rechnungs-OCR:
 "Wussten Sie, dass Sie eingehende Rechnungen ab 2025 als E-Rechnung
 entgegennehmen müssen? Unser Mail-Service erfasst und prüft sie
-automatisch — 14 Tage kostenlos testen.
+automatisch — 39 € im Monat, jederzeit kündbar.
 
 E-Rechnungs-Prüfer:
 "Kostenlose E-Rechnungs-Prüfung direkt im Browser — ohne Upload,

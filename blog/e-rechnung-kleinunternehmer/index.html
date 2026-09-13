@@ -51,46 +51,6 @@
 }
 </script>
 
-<script>
-// Conversion-Tracking via n8n-Webhook
-(function() {
-  const webhookUrl = 'https://n8n.anton-drooff.de/webhook/werkspree-tracking';
-  const trackPageView = function() {
-    fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        event: 'page_view',
-        page: '/blog/e-rechnung-kleinunternehmer/',
-        source: 'blog',
-        timestamp: new Date().toISOString(),
-        referrer: document.referrer || null
-      })
-    }).catch(function(e) { console.warn('Tracking failed:', e); });
-  };
-  const trackCTA = function(label) {
-    fetch(webhookUrl, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        event: 'cta_click',
-        page: '/blog/e-rechnung-kleinunternehmer/',
-        label: label,
-        source: 'blog',
-        timestamp: new Date().toISOString()
-      })
-    }).catch(function(e) { console.warn('Tracking failed:', e); });
-  };
-  document.addEventListener('DOMContentLoaded', trackPageView);
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('[data-cta]').forEach(function(el) {
-      el.addEventListener('click', function() {
-        trackCTA(el.getAttribute('data-cta'));
-      });
-    });
-  });
-})();
-</script>
 </head>
 <body>
 

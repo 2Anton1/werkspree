@@ -413,6 +413,23 @@ Diese Aufgaben können von ChatGPT bearbeitet werden. Der aktuelle Stand und all
 
 Chronologisches Log für Hermes/Claude — was sich seit dem letzten Handover-Stand geändert hat. Neue Einträge oben anfügen.
 
+### 13.09.2026 — Zahlungsversprechen gegen Live-Stripe abgeglichen
+- **Live-Check:** Stripe zeigt für die aktiven Abos sofortige Monatsbeträge
+  von 19 €, 29 € und 39 €; keines der drei Payment Links hat einen
+  Testzeitraum. Die Zahlungsquelle enthielt außerdem 0 Charges.
+- **Korrektur im Arbeitsstand:** Falsche Aussagen zu einem 14-tägigen
+  Gratis-Test wurden aus den betroffenen Produkt-, Branchen- und Blogseiten
+  entfernt. Die Preise bleiben transparent; die öffentlichen Kauf-Buttons
+  führen nun zunächst in den kostenlosen Ablauf- bzw. Prozess-Check.
+- **Offen vor Veröffentlichung:** Eine automatisierte Bereitstellung nach
+  erfolgreicher Stripe-Zahlung ist nicht nachgewiesen. Bis sie nachweisbar
+  funktioniert, dürfen die Produktseiten nicht wieder direkt auf Stripe
+  verlinken.
+- **Datenschutz:** Die ungenutzten n8n-/Airtable-Tracker wurden aus zwölf
+  statischen Produkt-, Branchen- und Blogseiten entfernt. Damit erzeugt die
+  Website keine dauerhafte `ws_sid` mehr und entspricht wieder dem Hinweis in
+  `datenschutz.html`.
+
 ### 13.09.2026 — Landingpage: Anfrageweg und Tablet-Navigation repariert
 - **Conversion:** Das vorhandene, einwilligungsbasierte Automation-Sprint-Formular
   wird nach dem Hero platziert (statt nach rund 9.900 px Inhalt bei 768 px

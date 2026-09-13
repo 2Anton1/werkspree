@@ -345,8 +345,8 @@
 
   <div class="cta-box">
     <h3>Möchten Sie eingehende Rechnungen automatisch prüfen lassen?</h3>
-    <p>Der Rechnungs-OCR Mail-Service von Werkspree erfasst eingehende Rechnungen automatisch, prüft sie auf E-Rechnungskonformität und liefert Ihnen strukturierte Daten als CSV oder Excel. 14 Tage kostenlos testen — jederzeit kündbar.</p>
-    <a href="../../rechnungs-ocr/" class="btn">14 Tage kostenlos testen</a>
+    <p>Der Rechnungs-OCR Mail-Service von Werkspree erfasst eingehende Rechnungen automatisch, prüft sie auf E-Rechnungskonformität und liefert Ihnen strukturierte Daten als CSV oder Excel. 39 € im Monat, jederzeit kündbar.</p>
+    <a href="../../rechnungs-ocr/" class="btn">Rechnungs-OCR für 39 € / Monat ansehen</a>
     <p style="margin-top: var(--space-sm); font-size: 0.88rem; color: var(--text-muted);">Oder <a href="../../e-rechnung-pruefen/" style="color: var(--accent-deep); text-decoration: underline;">hier kostenlos im Browser prüfen</a> — ohne Anmeldung.</p>
   </div>
 
@@ -417,10 +417,6 @@
     "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32022L0542"
   ]
 }
-</script>
-
-<script>
-(function(){var API="https://n8n.anton-drooff.de/webhook/werkspree-tracking";function sid(){try{var k="ws_sid";var v=localStorage.getItem(k);if(!v){v=Math.random().toString(36).slice(2);localStorage.setItem(k,v);}return v;}catch(e){return "anon";}}function track(ev,meta){try{var p={event:ev,page:location.pathname,sid:sid(),ts:new Date().toISOString(),meta:meta||{}};if(navigator.sendBeacon){navigator.sendBeacon(API,new Blob([JSON.stringify(p)],{type:"application/json"}));}else{fetch(API,{method:"POST",headers:{\"Content-Type\":\"application/json\"},body:JSON.stringify(p),keepalive:true}).catch(function(){});}}catch(e){}}track("page_view");track("blog_view",{slug:"e-rechnungspflicht-2027"});document.addEventListener("click",function(e){var a=e.target&&e.target.closest?e.target.closest("a"):null;if(!a)return;var h=a.getAttribute("href")||"";if(h.indexOf("buy.stripe.com")>-1)track("stripe_click",{link:h});if(h.indexOf("/rechnungs-ocr/")>-1)track("cta_click",{target:"rechnungs-ocr"});if(h.indexOf("/e-rechnung-pruefen/")>-1)track("cta_click",{target:"e-rechnung-pruefen"});if(h.indexOf("/#kontakt")>-1)track("cta_click",{target:"kontakt"});});})();
 </script>
 
 </body>
