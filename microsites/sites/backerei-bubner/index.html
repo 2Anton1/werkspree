@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bäckerei Bubner | Traditionelles Backhandwerk in Cottbus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #D4A843;
+            --accent-brown: #6B4423;
+            --bg-cream: #FAF6EF;
+            --text-dark: #332D29;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            color: var(--accent-brown);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-brown);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(rgba(107, 68, 35, 0.7), rgba(107, 68, 35, 0.7)), 
+                        url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80&w=1600') center/cover;
+            color: var(--white);
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: var(--white);
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 168, 67, 0.4);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-brown);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-gold);
+        }
+
+        /* Über uns */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        /* Sortiment Cards */
+        .assortment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(212, 168, 67, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(107, 68, 35, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Tagesangebot Box */
+        .daily-offer {
+            background: var(--white);
+            border: 3px solid var(--primary-gold);
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            max-width: 700px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .daily-offer::before {
+            content: '★';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-gold);
+            color: white;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+
+        /* Stehcafé Section */
+        .cafe-box {
+            background: linear-gradient(135deg, var(--accent-brown), #8B5E34);
+            color: var(--white);
+            padding: 60px;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        .cafe-box h2 { color: var(--primary-gold); }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            height: 100%;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-item a {
+            color: var(--accent-brown);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .opening-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .opening-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .opening-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--accent-brown);
+            color: var(--white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+            .hero { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Bäckerei <span>Bubner</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Frisch gebacken jeden Tag</h1>
+            <p>Erleben Sie echtes Backhandwerk in Cottbus. Von knusprigen Brötchen bis zu meisterhaften Torten – wir backen mit Liebe und Tradition.</p>
+            <a href="#kontakt" class="cta-button">Komm vorbei</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Unsere Tradition</h2>
+                    </div>
+                    <p>Mitten im Herzen von Cottbus steht die Bäckerei Bubner für Qualität, die man schmecken kann. Als lokaler Handwerksbetrieb verbinden wir traditionelle Rezepturen mit modernen Backverfahren. Unsere Leidenschaft gilt dem täglichen Genuss unserer Kunden in der Rosenstraße. Wir setzen auf hochwertige Zutaten und geben unseren Teigen die Zeit, die sie für ein volles Aroma benötigen.</p>
+                    <p style="margin-top: 15px;"><strong>Leistungen auf Anfrage:</strong> Gerne beraten wir Sie individuell zu unseren Spezialitäten und Bestellmöglichkeiten.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&q=80&w=800" alt="Bäckerei Handwerk" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sortiment" style="background-color: rgba(212, 168, 67, 0.05);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Sortiment</h2>
+            </div>
+            <div class="assortment-grid">
+                <div class="card">
+                    <span class="card-icon">🍞</span>
+                    <h3>Brot</h3>
+                    <p>Herzhaft, krustig und lange frisch.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🥐</span>
+                    <h3>Brötchen</h3>
+                    <p>Goldgelb gebacken für Ihr Frühstück.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🍰</span>
+                    <h3>Kuchen</h3>
+                    <p>Süße Sünden wie bei Oma gebacken.</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🎂</span>
+                    <h3>Torten</h3>
+                    <p>Meisterwerke für Ihre besonderen Momente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="daily-offer">
+                <h3 style="color: var(--primary-gold); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Tagesangebot</h3>
+                <h2 style="margin-bottom: 15px;">Ofenfrischer Apfelkuchen</h2>
+                <p>Nach unserem geheimen Hausrezept mit regionalen Äpfeln und einer feinen Zimtnote. Nur heute, solange der Vorrat reicht!</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cafe">
+        <div class="container">
+            <div class="cafe-box">
+                <h2>Besuchen Sie unser Stehcafé</h2>
+                <p style="font-size: 1.2rem; margin-top: 20px;">Genießen Sie Ihren Kaffee und ein frisches Gebäck direkt bei uns vor Ort. Der ideale Ort für eine kurze Auszeit im Cottbuser Alltag.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="info-card">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Kontakt</h2>
+                    </div>
+                    <div class="info-item">
+                        <span>📍</span>
+                        <p>Rosenstraße 4<br>03046 Cottbus, Deutschland</p>
+                    </div>
+                    <div class="info-item">
+                        <span>📞</span>
+                        <p><a href="tel:035549486254">0355 49486254</a></p>
+                    </div>
+                    <div class="info-item">
+                        <span>✉️</span>
+                        <p><a href="mailto:info@bubner.de">info@bubner.de</a></p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="section-title" style="text-align: left;">
+                        <h2>Öffnungszeiten</h2>
+                    </div>
+                    <table class="opening-table">
+                        <tr><td>Montag - Freitag</td><td>06:00 - 18:00 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>06:00 - 12:00 Uhr</td></tr>
+                        <tr><td>Sonntag</td><td>07:00 - 11:00 Uhr</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Bäckerei Bubner. Alle Rechte vorbehalten.</p>
+            <div class="footer-links">
+                Erstellt von <a href="#" style="color: var(--primary-gold); text-decoration: none;">Werkspree</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

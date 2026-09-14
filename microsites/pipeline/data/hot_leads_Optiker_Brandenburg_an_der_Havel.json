@@ -51,45 +51,6 @@
       "old_or_no_website": "http://www.roeger-optik.de/"
     },
     {
-      "name": "Hallmann Optik (ehem. Brillen Storlet GmbH)",
-      "address": "Bahnhofspassage 4, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJQ8vQxlzAqEcRIMAcn1TmyEI",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "03381 8046640"
-    },
-    {
-      "name": "Fielmann",
-      "address": "Hauptstraße 23, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJodnVllfAqEcRv1XTvkSGQ8Q",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "03381 524090"
-    },
-    {
-      "name": "Optik Hirsch",
-      "address": "Steinstraße 48, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJlXclClnAqEcR2CmzA1SONC0",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "03381 224280"
-    },
-    {
       "name": "Optiker Schmidt",
       "address": "Hauptstraße 50-52, 14776 Brandenburg an der Havel, Deutschland",
       "rating": 5,
@@ -106,17 +67,43 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Apollo-Optik - Brandenburg an der Havel im Brandenburger EKZ Wust",
-      "address": "An d. Bundesstraße 1, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJD0cpXinAqEcRtBkxAtoRE7U",
+      "name": "Hallmann Optik (ehem. Brillen Storlet GmbH)",
+      "address": "Bahnhofspassage 4, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJQ8vQxlzAqEcRIMAcn1TmyEI",
       "types": [
         "establishment",
         "health",
         "point_of_interest",
         "store"
       ],
-      "phone": "03381 794617"
+      "phone": "03381 8046640"
+    },
+    {
+      "name": "Optik Hirsch",
+      "address": "Steinstraße 48, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJlXclClnAqEcR2CmzA1SONC0",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 224280"
+    },
+    {
+      "name": "Fielmann",
+      "address": "Hauptstraße 23, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJodnVllfAqEcRv1XTvkSGQ8Q",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 524090"
     },
     {
       "name": "brillen.de",
@@ -143,6 +130,19 @@
         "store"
       ],
       "phone": "03381 730605"
+    },
+    {
+      "name": "Apollo-Optik - Brandenburg an der Havel im Brandenburger EKZ Wust",
+      "address": "An d. Bundesstraße 1, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJD0cpXinAqEcRtBkxAtoRE7U",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 794617"
     },
     {
       "name": "Schmidt Optik",
