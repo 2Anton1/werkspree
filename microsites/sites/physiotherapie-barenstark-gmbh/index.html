@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physiotherapie Bärenstark GmbH | Brandenburg an der Havel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-teal: #1B7A7A;
+            --accent-mint: #A8E6CF;
+            --bg-off-white: #F8F6F3;
+            --text-dark: #2D3436;
+            --text-light: #636E72;
+            --white: #FFFFFF;
+            --gradient-teal: linear-gradient(135deg, #1B7A7A 0%, #2A9D8F 100%);
+            --shadow: 0 10px 30px rgba(27, 122, 122, 0.08);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-off-white);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary-teal);
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 0 100px;
+            background: radial-gradient(circle at top right, var(--accent-mint), transparent 40%),
+                        radial-gradient(circle at bottom left, #e0f2f1, transparent 30%);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            color: var(--primary-teal);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gradient-teal);
+            color: var(--white);
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(27, 122, 122, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(27, 122, 122, 0.4);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary-teal);
+            margin-bottom: 15px;
+        }
+
+        .section-title .underline {
+            width: 60px;
+            height: 4px;
+            background: var(--accent-mint);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        /* About Us */
+        .about-content {
+            background: var(--white);
+            padding: 50px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Treatments Cards */
+        .treatment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .treatment-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-bottom: 4px solid transparent;
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--primary-teal);
+        }
+
+        .treatment-card h3 {
+            color: var(--primary-teal);
+            margin-bottom: 15px;
+        }
+
+        .treatment-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* Badges List */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .badge {
+            background: var(--accent-mint);
+            color: var(--primary-teal);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .badge:hover {
+            background: #8cd7bc;
+        }
+
+        /* Team Section */
+        .team-placeholder {
+            text-align: center;
+            padding: 40px;
+            background: rgba(27, 122, 122, 0.05);
+            border-radius: var(--radius);
+            border: 2px dashed var(--accent-mint);
+        }
+
+        /* Contact & Opening Hours */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .contact-info, .opening-hours {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-link {
+            display: block;
+            color: var(--primary-teal);
+            text-decoration: none;
+            margin: 10px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .hours-list {
+            list-style: none;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-teal);
+            color: var(--white);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        .footer-content p {
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .werkspree {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            section {
+                padding: 60px 0;
+            }
+        }
+
+        /* Animations */
+        [data-aos] {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+
+        .visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="container">
+        <a href="#" class="logo">Bärenstark</a>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1 data-aos>Ihre Gesundheit in<br>guten Händen</h1>
+            <p data-aos>Physiotherapie Bärenstark GmbH – Ihr Partner für Mobilität und Wohlbefinden in Brandenburg an der Havel.</p>
+            <a href="#kontakt" class="cta-button" data-aos>Termin vereinbaren</a>
+        </div>
+    </header>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="section-title">
+                <h2>Über uns</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content" data-aos>
+                <p>Willkommen bei der Physiotherapie Bärenstark GmbH in Brandenburg an der Havel. In unserer modernen Praxis in der Steinstraße setzen wir auf ganzheitliche Therapieansätze, um Ihre Beweglichkeit zu fördern und Schmerzen nachhaltig zu lindern. Unser Ziel ist es, Sie mit fachlicher Kompetenz und Empathie auf Ihrem Weg zu neuer Stärke zu begleiten. Wir nehmen uns Zeit für Ihre individuelle Situation und entwickeln gemeinsam mit Ihnen den optimalen Behandlungsplan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="behandlungen" style="background-color: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unsere Behandlungen</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="treatment-grid">
+                <div class="treatment-card" data-aos>
+                    <h3>Manuelle Therapie</h3>
+                    <p>Spezielle Handgrifftechniken zur Mobilisation von Gelenken und zur Linderung von Blockaden.</p>
+                </div>
+                <div class="treatment-card" data-aos>
+                    <h3>Lymphdrainage</h3>
+                    <p>Sanfte Entstauungstherapie zur Förderung des Lymphabflusses und Reduktion von Schwellungen.</p>
+                </div>
+                <div class="treatment-card" data-aos>
+                    <h3>Sportphysio</h3>
+                    <p>Gezielte Rehabilitation und Prävention für Sportler zur schnellen Rückkehr in den aktiven Alltag.</p>
+                </div>
+                <div class="treatment-card" data-aos>
+                    <h3>Ergonomie</h3>
+                    <p>Beratung und Anpassung von Bewegungsabläufen zur Schonung des Bewegungsapparates im Beruf.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 40px; color: var(--text-light); font-style: italic;">Weitere Leistungen auf Anfrage verfügbar.</p>
+        </div>
+    </section>
+
+    <section id="was-wir-behandeln">
+        <div class="container">
+            <div class="section-title">
+                <h2>Was wir behandeln</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="badge-container" data-aos>
+                <span class="badge">Rückenschmerzen</span>
+                <span class="badge">Gelenkbeschwerden</span>
+                <span class="badge">Nachbehandlung nach OPs</span>
+                <span class="badge">Sportverletzungen</span>
+                <span class="badge">Verspannungen</span>
+                <span class="badge">Bandscheibenvorfälle</span>
+                <span class="badge">Haltungsschäden</span>
+                <span class="badge">Chronische Schmerzen</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Unser Team</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="team-placeholder" data-aos>
+                <p>Lernen Sie bald unser kompetentes Team aus erfahrenen Therapeuten kennen. Wir freuen uns darauf, Sie persönlich zu betreuen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info" data-aos>
+                    <h3>Kontakt</h3>
+                    <p style="margin-bottom: 20px;">Physiotherapie Bärenstark GmbH</p>
+                    <p>Steinstraße 60<br>14776 Brandenburg an der Havel</p>
+                    <div style="margin-top: 30px;">
+                        <a href="tel:033817965128" class="contact-link">03381 7965128</a>
+                        <a href="mailto:kontakt@physiotherapie-baerenstark.de" class="contact-link">kontakt@physiotherapie-baerenstark.de</a>
+                    </div>
+                </div>
+                <div class="opening-hours" data-aos>
+                    <h3>Öffnungszeiten</h3>
+                    <ul class="hours-list">
+                        <li><span>Montag</span> <span>08:00 - 18:00 Uhr</span></li>
+                        <li><span>Dienstag</span> <span>08:00 - 18:00 Uhr</span></li>
+                        <li><span>Mittwoch</span> <span>08:00 - 18:00 Uhr</span></li>
+                        <li><span>Donnerstag</span> <span>08:00 - 18:00 Uhr</span></li>
+                        <li><span>Freitag</span> <span>08:00 - 14:00 Uhr</span></li>
+                        <li><span>Sa - So</span> <span>Geschlossen</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 Physiotherapie Bärenstark GmbH. Alle Rechte vorbehalten.</p>
+                <div class="werkspree">DESIGNED BY WERKSPREE</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Scroll Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
