@@ -19,6 +19,18 @@
       "old_or_no_website": "http://www.physio-expert-brb.de/"
     },
     {
+      "name": "Weber Physiotherapie GmbH",
+      "address": "Am Rosenhag 1, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJO93FwbLBqEcRcbH4iJ-UTDU",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 3287501"
+    },
+    {
       "name": "Weber Therapiezentrum",
       "address": "Petersilienstraße 12, 14776 Brandenburg an der Havel, Deutschland",
       "rating": 4.9,
@@ -32,55 +44,32 @@
       "phone": "03381 2182490"
     },
     {
-      "name": "Weber Physiotherapie GmbH",
-      "address": "Am Rosenhag 1, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJO93FwbLBqEcRcbH4iJ-UTDU",
+      "name": "Physio Company Brandenburg a. d. Havel",
+      "address": "Neuendorfer Str. 75, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJkyXFpszBqEcRirAtbuEr598",
       "types": [
         "establishment",
         "health",
+        "physiotherapist",
         "point_of_interest"
       ],
-      "phone": "03381 3287501"
+      "phone": "03381 3278967"
     },
     {
-      "name": "Physiozeit GbR Brandenburg",
-      "address": "Veilchenweg 2, 14772 Brandenburg an der Havel, Deutschland",
+      "name": "Kayas Physio Brandenburg a. d. Havel",
+      "address": "Magdeburger Landstraße 5, 14770 Brandenburg an der Havel, Deutschland",
       "rating": 5,
-      "place_id": "ChIJw7DXn9TBqEcRiaoRopJwlv0",
+      "place_id": "ChIJdxXXrdnBqEcRbkheg6GYCME",
       "types": [
         "establishment",
         "health",
-        "physiotherapist",
         "point_of_interest"
       ],
-      "phone": "03381 2586324"
-    },
-    {
-      "name": "Physensio - Brandenburg",
-      "address": "Nicolaipl. 7, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJAQDs9vnAqEcRedXbAbnlrMk",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ],
-      "phone": "03381 3287771"
-    },
-    {
-      "name": "PROMNITZ",
-      "address": "Gördenallee 34, 14772 Brandenburg an der Havel-Görden, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJFe2jQvjAqEcRL-utoRRZvLk",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ],
-      "phone": "03381 701964"
+      "phone": "03381 6193472",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://kayasphysio.de/"
     },
     {
       "name": "Physiotherapie am Quenz",
@@ -104,33 +93,38 @@
       "region": "Brandenburg an der Havel"
     },
     {
-      "name": "Physio Company Brandenburg a. d. Havel",
-      "address": "Neuendorfer Str. 75, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJkyXFpszBqEcRirAtbuEr598",
+      "name": "Physensio-Brandenburg",
+      "address": "Nicolaipl. 7, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJAQDs9vnAqEcRedXbAbnlrMk",
       "types": [
         "establishment",
         "health",
         "physiotherapist",
         "point_of_interest"
       ],
-      "phone": "03381 3278967"
+      "phone": "03381 3287771"
     },
     {
-      "name": "Physiotherapie Fouquéstraße",
-      "address": "Fouquestraße 6, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJRfnICeXAqEcRjyY4fOhIYyE",
+      "name": "Physiotherapie Bärenstark GmbH",
+      "address": "Steinstraße 60, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJy8N9kVnAqEcRSWSsH8nYCjg",
       "types": [
+        "doctor",
         "establishment",
         "health",
-        "physiotherapist",
         "point_of_interest"
       ],
-      "phone": "03381 315331",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
+      "phone": "03381 7965128",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.physiotherapie-baerenstark.de/",
+      "email": "kontakt@physiotherapie-baerenstark.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'bärenstark' in domain/local",
+      "branch": "Physiotherapie",
+      "region": "Brandenburg an der Havel"
     },
     {
       "name": "PhysioBalance Madeleine Moch",
@@ -145,16 +139,17 @@
       "phone": "03381 3287490"
     },
     {
-      "name": "PROMNITZ",
-      "address": "Johanniskirchpl. 3, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJUeEhaPjAqEcR8t8CuM9B1LA",
+      "name": "Physioaktiv Physiotherapie Brandenburg",
+      "address": "Walther-Ausländer-Straße 4, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJN6KIqC3BqEcRz8PNwwcXTdY",
       "types": [
         "establishment",
         "health",
         "physiotherapist",
         "point_of_interest"
-      ]
+      ],
+      "phone": "03381 8908787"
     },
     {
       "name": "Physio Phydeon",
@@ -169,33 +164,10 @@
       ]
     },
     {
-      "name": "Physiotherapie Bärenstark GmbH",
-      "address": "Steinstraße 60, 14776 Brandenburg an der Havel, Deutschland",
+      "name": "PROMNITZ",
+      "address": "Gördenallee 34, 14772 Brandenburg an der Havel-Görden, Deutschland",
       "rating": 4.6,
-      "place_id": "ChIJy8N9kVnAqEcRSWSsH8nYCjg",
-      "types": [
-        "doctor",
-        "establishment",
-        "health",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Kayas Physio Brandenburg a. d. Havel",
-      "address": "Magdeburger Landstraße 5, 14770 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJdxXXrdnBqEcRbkheg6GYCME",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Physioaktiv Physiotherapie Brandenburg",
-      "address": "Walther-Ausländer-Straße 4, 14772 Brandenburg an der Havel, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJN6KIqC3BqEcRz8PNwwcXTdY",
+      "place_id": "ChIJFe2jQvjAqEcRL-utoRRZvLk",
       "types": [
         "establishment",
         "health",
@@ -204,22 +176,22 @@
       ]
     },
     {
-      "name": "Vitalis Brandenburg GmbH",
-      "address": "Kirchhofstraße 3-7, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 4.4,
-      "place_id": "ChIJI46vIVvAqEcRIWpkSmXgbqE",
+      "name": "Physiozeit GbR Brandenburg",
+      "address": "Veilchenweg 2, 14772 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJw7DXn9TBqEcRiaoRopJwlv0",
       "types": [
         "establishment",
         "health",
-        "point_of_interest",
-        "spa"
+        "physiotherapist",
+        "point_of_interest"
       ]
     },
     {
-      "name": "Physiotherapie Kathrin Bossan",
-      "address": "Linienstraße 23, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJswla8V_AqEcRsudZYlIVRT0",
+      "name": "Physiotherapie Fouquéstraße",
+      "address": "Fouquestraße 6, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJRfnICeXAqEcRjyY4fOhIYyE",
       "types": [
         "establishment",
         "health",
@@ -232,6 +204,42 @@
       "address": "Gördenallee 60, 14772 Brandenburg an der Havel, Deutschland",
       "rating": 4.8,
       "place_id": "ChIJy7E609zAqEcR_rJq_pIm5D4",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "PHYSIO GENTH",
+      "address": "Lilli-Friesicke-Straße 2, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJLaGpg_3AqEcRQ2TUHC33e1g",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Physiotherapie Stenczel",
+      "address": "Jacobstraße 8, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ6SJxcUDBqEcR_EQhA_zWmR0",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Physiotherapie Nörenberg",
+      "address": "Frankenstraße 44, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJt4iPgTfBqEcRN4ETRcZLC0o",
       "types": [
         "establishment",
         "health",
@@ -259,6 +267,27 @@
       "email": "info@physiotherapie-am-quenz.de",
       "email_verified": true,
       "email_verify_reason": "Impressum: Match: 'quenz' in domain/local",
+      "branch": "Physiotherapie",
+      "region": "Brandenburg an der Havel"
+    },
+    {
+      "name": "Physiotherapie Bärenstark GmbH",
+      "address": "Steinstraße 60, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJy8N9kVnAqEcRSWSsH8nYCjg",
+      "types": [
+        "doctor",
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "03381 7965128",
+      "website_quality": "medium",
+      "website_quality_score": 5,
+      "old_or_no_website": "http://www.physiotherapie-baerenstark.de/",
+      "email": "kontakt@physiotherapie-baerenstark.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'bärenstark' in domain/local",
       "branch": "Physiotherapie",
       "region": "Brandenburg an der Havel"
     }
