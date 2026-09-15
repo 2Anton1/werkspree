@@ -3,42 +3,6 @@
   "region": "Potsdam",
   "all_candidates": [
     {
-      "name": "G&B Schlüsseldienst",
-      "address": "Habichthorst 3, 14478 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJP3NAf-IBykYRRLktYcbmyi8",
-      "types": [
-        "establishment",
-        "locksmith",
-        "point_of_interest"
-      ],
-      "phone": "0173 9724063"
-    },
-    {
-      "name": "Schlüsseldienst Cammin",
-      "address": "Weißdornweg 8, 14469 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJNSiIKJ_qW2YRtWai2U7H5nY",
-      "types": [
-        "establishment",
-        "locksmith",
-        "point_of_interest"
-      ],
-      "phone": "0170 2481987"
-    },
-    {
-      "name": "Falke Sicherheitstechnik & Schlüsseldienst",
-      "address": "Brandenburger Str. 9, 14467 Potsdam, Deutschland",
-      "rating": 4.7,
-      "place_id": "ChIJGW3uUAFSqEcRz0N9AkSQuGY",
-      "types": [
-        "establishment",
-        "locksmith",
-        "point_of_interest"
-      ],
-      "phone": "0331 28129893"
-    },
-    {
       "name": "Schlüsseldienst DB",
       "address": "Leipziger Str. 29, 14473 Potsdam, Deutschland",
       "rating": 5,
@@ -66,16 +30,55 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Schlüsseldienst B. Jung",
-      "address": "Hans-Sachs-Straße 61, 14542 Werder (Havel), Deutschland",
+      "name": "G&B Schlüsseldienst",
+      "address": "Habichthorst 3, 14478 Potsdam, Deutschland",
       "rating": 5,
-      "place_id": "ChIJZ1DIBmPzqEcRAVIoVlHwLJo",
+      "place_id": "ChIJP3NAf-IBykYRRLktYcbmyi8",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0173 9724063"
+    },
+    {
+      "name": "PSS Schlüsseldienst & Sicherheitstechnik",
+      "address": "Großbeerenstraße 126, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ_cJSa65fqEcRDIboTQijINE",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0331 28129897",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://schluesseldienst-pss.de/"
+    },
+    {
+      "name": "Schlüsseldienst Cammin",
+      "address": "Weißdornweg 8, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJNSiIKJ_qW2YRtWai2U7H5nY",
       "types": [
         "establishment",
         "locksmith",
         "point_of_interest"
       ],
       "phone": "0170 2481987"
+    },
+    {
+      "name": "Falke Sicherheitstechnik & Schlüsseldienst",
+      "address": "Brandenburger Str. 9, 14467 Potsdam, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJGW3uUAFSqEcRz0N9AkSQuGY",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0331 28129893"
     },
     {
       "name": "KAUFMANN Schloß- & Schlüsselservice",
@@ -88,6 +91,21 @@
         "point_of_interest"
       ],
       "phone": "0331 710126",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Jörg-Andreas Reiher Schließanlagen-Service",
+      "address": "Großbeerenstraße 85, 14482 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJkS8gsV5fqEcRoxznVT-e_tg",
+      "types": [
+        "establishment",
+        "locksmith",
+        "point_of_interest"
+      ],
+      "phone": "0331 296167",
       "website_quality": "none",
       "website_quality_score": 0,
       "old_or_no_website": ""
@@ -108,21 +126,6 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Falke Schlüsseldienst & Sicherheitstechnik",
-      "address": "Pichelsdorfer Str. 138, 13595 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJTVQN_z9XqEcRhwCJEEuJiYA",
-      "types": [
-        "establishment",
-        "locksmith",
-        "point_of_interest"
-      ],
-      "phone": "030 754396164",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": "https://falke.berlin/"
-    },
-    {
       "name": "Potsdamer Sicherheitsgesellschaft mbH",
       "address": "Heinrich-Mann-Allee 20, 14473 Potsdam, Deutschland",
       "rating": 4.7,
@@ -136,17 +139,6 @@
       "website_quality": "medium",
       "website_quality_score": 5,
       "old_or_no_website": "https://www.info-potsdam.de/branchen/schluesseldienste/potsdamer-sicherheitsgesellschaft-mbh/"
-    },
-    {
-      "name": "Jörg-Andreas Reiher Schließanlagen-Service",
-      "address": "Großbeerenstraße 85, 14482 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJkS8gsV5fqEcRoxznVT-e_tg",
-      "types": [
-        "establishment",
-        "locksmith",
-        "point_of_interest"
-      ]
     }
   ],
   "hot_leads": []

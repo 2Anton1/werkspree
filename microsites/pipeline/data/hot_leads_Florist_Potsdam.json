@@ -52,28 +52,6 @@
       "region": "Potsdam"
     },
     {
-      "name": "Gartenbau Buba Inh. Christian Buba",
-      "address": "Potsdamer Chaussee 51, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJTWqdmqj3qEcR_WKSH4bIeoE",
-      "types": [
-        "establishment",
-        "florist",
-        "general_contractor",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "033208 20799",
-      "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "http://www.blumenbuba.de/",
-      "email": "info@blumenbuba.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'buba' in domain/local",
-      "branch": "Florist",
-      "region": "Potsdam"
-    },
-    {
       "name": "Blumenhaus Zur Rose",
       "address": "Hebbelstraße 45, 14467 Potsdam, Deutschland",
       "rating": 4.7,
@@ -85,32 +63,6 @@
         "store"
       ],
       "phone": "0331 2703018"
-    },
-    {
-      "name": "Potsdamer Staudenkulturen",
-      "address": "Golmer Ch 47, 14469 Potsdam, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJw5aZ5FLxqEcReTyQsAH3Pyw",
-      "types": [
-        "establishment",
-        "florist",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "0331 503337"
-    },
-    {
-      "name": "Ingo Salzmann Blumen und Mehr",
-      "address": "Potsdamer Str. 33C, 14558 Nuthetal, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJncgv9NFfqEcRNe1X8N2E8UA",
-      "types": [
-        "establishment",
-        "florist",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "0178 8360871"
     },
     {
       "name": "Blumenhaus Lavendel",
@@ -139,6 +91,41 @@
       "phone": "0331 97990685"
     },
     {
+      "name": "Gartenbau Buba Inh. Christian Buba",
+      "address": "Potsdamer Chaussee 51, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJTWqdmqj3qEcR_WKSH4bIeoE",
+      "types": [
+        "establishment",
+        "florist",
+        "general_contractor",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "033208 20799",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.blumenbuba.de/",
+      "email": "info@blumenbuba.de",
+      "email_verified": true,
+      "email_verify_reason": "Impressum: Match: 'buba' in domain/local",
+      "branch": "Florist",
+      "region": "Potsdam"
+    },
+    {
+      "name": "Potsdamer Staudenkulturen",
+      "address": "Golmer Ch 47, 14469 Potsdam, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJw5aZ5FLxqEcReTyQsAH3Pyw",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 503337"
+    },
+    {
       "name": "Blumen Und Pflanzen",
       "address": "Großbeerenstraße 208, 14480 Potsdam, Deutschland",
       "rating": 4.7,
@@ -159,6 +146,34 @@
       "address": "Friedrich-Ebert-Straße 83, 14469 Potsdam, Deutschland",
       "rating": 4.8,
       "place_id": "ChIJkxSq5Nn1qEcRxLMMTSwtQqU",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0172 3157876",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Blumen im Kiez",
+      "address": "Geschwister-Scholl-Straße 88, 14471 Potsdam, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJw0PCRwD1qEcRH86nAtDI8Ic",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "Blumenkorb Anja Flache",
+      "address": "Potsdamer Chaussee 114, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJa0MkAFwjZUERTpiW6-Q6jQs",
       "types": [
         "establishment",
         "florist",

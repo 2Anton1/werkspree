@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blumen-Sühr | Ihr Florist in Potsdam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #E8B4B8;
+            --accent: #7CB342;
+            --bg-warm: #FBF5F3;
+            --text-dark: #4A4A4A;
+            --white: #ffffff;
+            --radius: 20px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Dekorative CSS-Blumen */
+        .flower-dec {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.4;
+            z-index: -1;
+            filter: blur(20px);
+        }
+
+        /* Header & Nav */
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #FBF5F3 0%, #fce4e6 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(124, 179, 66, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(124, 179, 66, 0.4);
+            background-color: #689f38;
+        }
+
+        /* Sektionen Allgemein */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        /* Über uns */
+        .about-box {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        /* Anlässe Cards */
+        .occasions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .occasion-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(232, 180, 184, 0.2);
+        }
+
+        .occasion-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+
+        .occasion-card i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Sträuße Liste */
+        .arrangements-list {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            columns: 2;
+            column-gap: 40px;
+        }
+
+        .arrangements-list ul {
+            list-style: none;
+        }
+
+        .arrangements-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .arrangements-list li::before {
+            content: '🌸';
+            margin-right: 10px;
+        }
+
+        /* Saison Box */
+        .seasonal-box {
+            background: linear-gradient(135deg, #7CB342 0%, #E8B4B8 100%);
+            color: white;
+            padding: 60px;
+            border-radius: var(--radius);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .seasonal-box h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        /* Kontakt & Öffnungszeiten */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            height: 100%;
+        }
+
+        .info-link {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .info-link:hover {
+            color: var(--accent);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Animationen */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .arrangements-list { columns: 1; }
+            .seasonal-box { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container" style="display: flex; justify-content: space-between; width: 100%; align-items: center;">
+            <div class="logo">Blumen-Sühr</div>
+            <nav>
+                <a href="#kontakt" class="cta-button" style="padding: 10px 25px; font-size: 0.9rem;">Kontakt</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="flower-dec" style="top: 10%; left: 5%;"></div>
+        <div class="flower-dec" style="bottom: 10%; right: 5%; background: var(--accent);"></div>
+        <div class="container">
+            <h1>Blumen, die Freude machen</h1>
+            <p>Ihr Traditionsflorist im Herzen von Potsdam. Wir verwandeln Ihre Emotionen in florale Kunstwerke – frisch, kreativ und individuell.</p>
+            <a href="tel:033120064077" class="cta-button">Jetzt Bestellen</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <div class="about-box">
+                <div class="section-title">
+                    <h2>Über uns</h2>
+                </div>
+                <p>Willkommen bei Blumen-Sühr in Potsdam. Als leidenschaftliche Floristen in der historischen Dortustraße stehen wir für handwerkliche Perfektion und die Liebe zum Detail. Ob ein kleiner Gruß für zwischendurch oder die komplette Ausstattung für Ihre besonderen Momente – wir beraten Sie mit Herz und Fachverstand, um genau die Blumen zu finden, die Ihre Sprache sprechen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="anlaesse">
+        <div class="container">
+            <div class="section-title">
+                <h2>Anlässe</h2>
+            </div>
+            <div class="occasions-grid">
+                <div class="occasion-card">
+                    <h3>Hochzeit</h3>
+                    <p>Brautsträuße & Tischdeko für Ihren schönsten Tag.</p>
+                </div>
+                <div class="occasion-card">
+                    <h3>Geburtstag</h3>
+                    <p>Farbenfrohe Überraschungen, die in Erinnerung bleiben.</p>
+                </div>
+                <div class="occasion-card">
+                    <h3>Trauer</h3>
+                    <p>Würdevolle Kränze und Gestecke zum Abschied.</p>
+                </div>
+                <div class="occasion-card">
+                    <h3>Saison</h3>
+                    <p>Immer die passenden Blüten der aktuellen Jahreszeit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sträuße & Arrangements</h2>
+            </div>
+            <div class="arrangements-list">
+                <ul>
+                    <li>Klassische Rundsträuße</li>
+                    <li>Moderne Gestecke</li>
+                    <li>Tischdekorationen</li>
+                    <li>Zimmerpflanzen</li>
+                    <li>Event-Floristik</li>
+                    <li>Leistungen auf Anfrage</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="saison">
+        <div class="container">
+            <div class="seasonal-box">
+                <h3>Frühlingserwachen bei Blumen-Sühr</h3>
+                <p>Entdecken Sie jetzt unsere frischen Tulpen, duftenden Hyazinthen und kreativen Frühlingsboten direkt aus der Region.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="info-card">
+                    <h3>Kontakt</h3>
+                    <p style="margin-bottom: 20px;">Besuchen Sie uns in unserem Ladengeschäft oder rufen Sie uns an.</p>
+                    <p><strong>Adresse:</strong><br>Dortustraße 66, 14467 Potsdam</p>
+                    <br>
+                    <a href="tel:033120064077" class="info-link">📞 0331 20064077</a>
+                    <a href="mailto:info@blumen-suehr.de" class="info-link">✉️ info@blumen-suehr.de</a>
+                </div>
+                <div class="info-card">
+                    <h3>Öffnungszeiten</h3>
+                    <table class="hours-table">
+                        <tr><td>Montag - Freitag</td><td>09:00 - 18:30</td></tr>
+                        <tr><td>Samstag</td><td>09:00 - 14:00</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                    <p style="margin-top: 20px; font-size: 0.85rem; color: #888;">* An Feiertagen können die Zeiten abweichen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">Blumen-Sühr</span>
+            <p>&copy; 2024 Blumen-Sühr Potsdam. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Erstellt von <a href="#" style="color: #fff; text-decoration: none;">Werkspree</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
