@@ -1,0 +1,90 @@
+{
+  "branch": "Bäcker",
+  "region": "Brandenburg an der Havel",
+  "all_candidates": [
+    {
+      "name": "Bäckerei Röhe",
+      "address": "Steinstraße 46, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJUVVdMVjAqEcRQeKEFi0n0Mk",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 3252471",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Brotmeisterei Steinecke",
+      "address": "Hauptstraße 7, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJ92D_Uj7BqEcRQ2XwWXBHmm4",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 796181"
+    },
+    {
+      "name": "Bäckerei und Konditorei Ulrich von Kuhlnew & Sohn",
+      "address": "Klein Kreutzer Dorfstraße 43, 14776 Brandenburg an der Havel-Klein Kreutz, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJpzSab-DBqEcRmyrP2XJvABM",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 221273",
+      "website_quality": "low",
+      "website_quality_score": 1,
+      "old_or_no_website": "http://www.unsere-baeckerei.de/"
+    },
+    {
+      "name": "Bäckerei Röhe",
+      "address": "Hochstraße 11, 14770 Brandenburg an der Havel, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJq3OoWvrAqEcRjYBMb3swM6E",
+      "types": [
+        "bakery",
+        "cafe",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 3281405",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
+      "name": "Bäckerei Röhe",
+      "address": "Gorrenberg 4-5, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.7,
+      "place_id": "ChIJw9_7M1jAqEcRzyd3v0S4TsU",
+      "types": [
+        "bakery",
+        "establishment",
+        "food",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 3252472",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    }
+  ],
+  "hot_leads": []
+}
