@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dachdeckerei Maudrich | Ihr Dachdecker in Berlin Neukölln</title>
+    <meta name="description" content="Dachdeckerei Maudrich in Berlin Neukölln – Ihr zuverlässiger Partner für Neueindeckung, Sanierung und Notdienst.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #2C3E50; /* Schiefer-Blau */
+            --accent: #B87333;  /* Kupfer */
+            --accent-hover: #D2691E;
+            --bg-light: #F5F5F5;
+            --text-dark: #1A1A1A;
+            --text-light: #FFFFFF;
+            --shadow: 0 4px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: var(--primary);
+            color: var(--text-light);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), 
+                        url('https://images.unsplash.com/photo-1635424710928-0544e8512eae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--text-light);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* --- Sections General --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* --- Über Uns --- */
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        /* --- Leistungen Cards --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* --- Dachmaterialien (Pills) --- */
+        .materials-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .badge-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .badge:hover {
+            background: var(--accent);
+        }
+
+        /* --- Notdienst Box (Pulsing) --- */
+        .emergency-box {
+            background: var(--accent);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(184, 115, 51, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(184, 115, 51, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(184, 115, 51, 0); }
+        }
+
+        .emergency-box h2 {
+            margin-bottom: 10px;
+        }
+
+        .emergency-box a {
+            color: white;
+            font-size: 2rem;
+            font-weight: 800;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* --- Kontakt & Öffnungszeiten --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info div {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .contact-info i {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+
+        .contact-info a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2rem; }
+            section { padding: 50px 0; }
+            .emergency-box a { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">MAUDRICH<span>DACH</span></a>
+                <a href="tel:01728477699" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                    <i class="fas fa-phone"></i> Anrufen
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Ihr Dach in besten Händen</h1>
+            <p>Meisterhafte Qualität und zuverlässiges Handwerk für Berlin Neukölln. Wir schützen, was Ihnen wichtig ist – bei jedem Wetter.</p>
+            <a href="#kontakt" class="btn">Kostenloses Angebot</a>
+        </div>
+    </section>
+
+    <section id="ueber-uns">
+        <div class="container">
+            <h2 class="section-title">Über uns</h2>
+            <div class="about-text">
+                <p>Willkommen bei der Dachdeckerei Maudrich. Als Ihr kompetenter Fachbetrieb in Berlin Neukölln stehen wir für erstklassige Handwerksleistungen rund um Ihr Dach. Mit tiefem Verständnis für die Architektur unserer Stadt und einem Fokus auf langlebige Materialien bieten wir Ihnen Sicherheit und Ästhetik aus einer Hand. Ob kleine Reparatur oder komplettes Projekt – wir arbeiten präzise, termingerecht und mit Berliner Herzblut.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="leistungen" style="background: #eee;">
+        <div class="container">
+            <h2 class="section-title">Unsere Leistungen</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Neueindeckung</h3>
+                    <p>Professionelle Eindeckung von Steil- und Flachdächern nach modernsten Standards.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Sanierung</h3>
+                    <p>Energetische Dachsanierung und Werterhaltung Ihrer Immobilie.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Reparatur</h3>
+                    <p>Schnelle Hilfe bei Sturmschäden oder undichten Stellen.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-Exclamation-triangle"></i>
+                    <h3>Notdienst</h3>
+                    <p>Wir sind zur Stelle, wenn es darauf ankommt. Sofortmaßnahmen bei Gefahr.</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic;">Detaillierte Leistungen auf Anfrage.</p>
+        </div>
+    </section>
+
+    <section id="materialien">
+        <div class="container">
+            <h2 class="section-title">Dachmaterialien</h2>
+            <div class="materials-container">
+                <ul class="badge-list">
+                    <li class="badge">Ziegel</li>
+                    <li class="badge">Schiefer</li>
+                    <li class="badge">Metalldach</li>
+                    <li class="badge">Flachdach</li>
+                    <li class="badge">Bitumen</li>
+                    <li class="badge">Tondachziegel</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="emergency-box">
+            <h2><i class="fas fa-phone-alt"></i> 24h Notdienst</h2>
+            <p>Haben Sie einen akuten Dachschaden? Wir helfen sofort!</p>
+            <a href="tel:01728477699">0172 8477699</a>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 style="margin-bottom: 30px;">Kontakt</h2>
+                    <div>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Steinträgerweg 49<br>12351 Berlin-Bezirk Neukölln, Deutschland</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-phone"></i>
+                        <p><a href="tel:01728477699">0172 8477699</a></p>
+                    </div>
+                    <div>
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:info@dachdeckerei-maudrich.de">info@dachdeckerei-maudrich.de</a></p>
+                    </div>
+                </div>
+                <div class="opening-hours">
+                    <h2 style="margin-bottom: 30px;">Öffnungszeiten</h2>
+                    <table class="hours-table">
+                        <tr><td>Montag</td><td>07:00 – 16:30</td></tr>
+                        <tr><td>Dienstag</td><td>07:00 – 16:30</td></tr>
+                        <tr><td>Mittwoch</td><td>07:00 – 16:30</td></tr>
+                        <tr><td>Donnerstag</td><td>07:00 – 16:30</td></tr>
+                        <tr><td>Freitag</td><td>07:00 – 14:00</td></tr>
+                        <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Dachdeckerei Maudrich. Alle Rechte vorbehalten.</p>
+            <div class="footer-line">
+                <p>Erstellt von Werkspree</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

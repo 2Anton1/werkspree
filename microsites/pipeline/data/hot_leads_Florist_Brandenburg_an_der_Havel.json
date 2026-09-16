@@ -58,19 +58,6 @@
       "phone": "03381 220916"
     },
     {
-      "name": "Blumenkiste",
-      "address": "Jacobstraße 9, 14776 Brandenburg an der Havel, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJyz1XzVjAqEcRkFMCvIwCsNM",
-      "types": [
-        "establishment",
-        "florist",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "03381 619894"
-    },
-    {
       "name": "Blumenhandel Zahn GbR Generation Z",
       "address": "Werner-Seelenbinder-Straße 53, 14770 Brandenburg an der Havel, Deutschland",
       "rating": 4.5,
@@ -82,6 +69,19 @@
         "store"
       ],
       "phone": "03381 300359"
+    },
+    {
+      "name": "Blumenkiste",
+      "address": "Jacobstraße 9, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJyz1XzVjAqEcRkFMCvIwCsNM",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 619894"
     },
     {
       "name": "Blumenwerk Sylke Priewisch",
@@ -98,6 +98,22 @@
       "website_quality": "none",
       "website_quality_score": 0,
       "old_or_no_website": ""
+    },
+    {
+      "name": "Blumenhaus Schossau",
+      "address": "Eichhorstweg 10, 14776 Brandenburg an der Havel, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJiSn-MIC_qEcRUb7qG06VowM",
+      "types": [
+        "establishment",
+        "florist",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "03381 669950",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://www.fleurop.de/partnerfloristen/fleurop-filialen/14776-brandenburg/schossau-andre-eichhorstweg-10"
     },
     {
       "name": "Blumenladen \"Fliedners Blumenland\"",
@@ -135,8 +151,7 @@
         "general_contractor",
         "point_of_interest",
         "store"
-      ],
-      "phone": "03381 662874"
+      ]
     },
     {
       "name": "Gartenfachgeschäft Edda Ehrich Inh. Ines Puhl",
@@ -162,18 +177,6 @@
       ]
     },
     {
-      "name": "Blumen selber schneiden",
-      "address": "Wenzlower Str. 5-1, 14778 Wollin, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJA2cvKmi9qEcRM2X-AgOSQKM",
-      "types": [
-        "establishment",
-        "food",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
       "name": "Floristik Flair",
       "address": "Am Südtor 1 c, 14774 Brandenburg an der Havel, Deutschland",
       "rating": 4.6,
@@ -181,6 +184,19 @@
       "types": [
         "establishment",
         "florist",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
+      "name": "BluGeSa Floristik und Gartenbau GmbH",
+      "address": "Seestraße 2, 14778 Beetzsee-Brielow, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJVy5L1NvDqEcRo6GPQnpX5yw",
+      "types": [
+        "establishment",
+        "florist",
+        "general_contractor",
         "point_of_interest",
         "store"
       ]
@@ -205,19 +221,6 @@
       "types": [
         "establishment",
         "florist",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "name": "BluGeSa Floristik und Gartenbau GmbH",
-      "address": "Seestraße 2, 14778 Beetzsee-Brielow, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJVy5L1NvDqEcRo6GPQnpX5yw",
-      "types": [
-        "establishment",
-        "florist",
-        "general_contractor",
         "point_of_interest",
         "store"
       ]
