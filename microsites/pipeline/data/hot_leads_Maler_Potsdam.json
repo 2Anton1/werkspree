@@ -50,6 +50,18 @@
       "phone": "0160 6115413"
     },
     {
+      "name": "Andreas Brose Malermeister",
+      "address": "Thaerstraße 17, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ823lPJz2qEcR4EkbSkFOcy8",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ],
+      "phone": "0331 5811350"
+    },
+    {
       "name": "Malerfachbetrieb Potsdam",
       "address": "Gartenstraße 45, 14482 Potsdam-Babelsberg, Deutschland",
       "rating": 5,
@@ -63,16 +75,16 @@
       "phone": "0173 2314994"
     },
     {
-      "name": "Andreas Brose Malermeister",
-      "address": "Thaerstraße 17, 14469 Potsdam Nord, Deutschland",
-      "rating": 4.6,
-      "place_id": "ChIJ823lPJz2qEcR4EkbSkFOcy8",
+      "name": "Deine Lieblingsmaler KRAFT BAU GmbH",
+      "address": "August-Bebel-Str. 26, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJwToWA5NfqEcRfGb8U9kBx6Q",
       "types": [
         "establishment",
         "painter",
         "point_of_interest"
       ],
-      "phone": "0331 5811350"
+      "phone": "01520 6667767"
     },
     {
       "name": "Malermeister Stephan Jachmann",
@@ -90,16 +102,19 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Deine Lieblingsmaler KRAFT BAU GmbH",
-      "address": "August-Bebel-Str. 26, 14482 Potsdam-Babelsberg, Deutschland",
+      "name": "Jörg Ziemer, Malermeister",
+      "address": "Nedlitzer Str. 8, 14469 Potsdam, Deutschland",
       "rating": 5,
-      "place_id": "ChIJwToWA5NfqEcRfGb8U9kBx6Q",
+      "place_id": "ChIJU5razzT3qEcRxzr5wQYREI0",
       "types": [
         "establishment",
         "painter",
         "point_of_interest"
       ],
-      "phone": "01520 6667767"
+      "phone": "0171 4812780",
+      "website_quality": "medium",
+      "website_quality_score": 4,
+      "old_or_no_website": "http://www.malerbetrieb-ziemer.de/"
     },
     {
       "name": "Karl-Heinz Breilich Malerfachbetrieb",
@@ -132,65 +147,6 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Jörg Ziemer, Malermeister",
-      "address": "Nedlitzer Str. 8, 14469 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJU5razzT3qEcRxzr5wQYREI0",
-      "types": [
-        "establishment",
-        "painter",
-        "point_of_interest"
-      ],
-      "phone": "0171 4812780",
-      "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "http://www.malerbetrieb-ziemer.de/"
-    },
-    {
-      "name": "F. Naue Malerei GmbH",
-      "address": "Zum Kahleberg 93, 14478 Potsdam Süd, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJe08smYD1qEcR_syBlkVSYoc",
-      "types": [
-        "establishment",
-        "painter",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Matthias Boehlke",
-      "address": "Friedrich-Engels-Straße 39, 14482 Potsdam-Babelsberg, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJt-Asb_H1qEcRHARji6oWxL4",
-      "types": [
-        "establishment",
-        "painter",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Zacharias Klaus",
-      "address": "Stadtheide 2, 14471 Potsdam-Westliche Vorstadt, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJiY9fFE_0qEcRfGFzI4JyvHk",
-      "types": [
-        "establishment",
-        "painter",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Roundabout Iffouzar",
-      "address": "Anni-von-Gottberg-Straße 8B, 14480 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJXaDPJ6BfqEcR-e6IoXZcxJ4",
-      "types": [
-        "establishment",
-        "painter",
-        "point_of_interest"
-      ]
-    },
-    {
       "name": "Malermeister Schulz & Kersten GbR",
       "address": "Am Buchhorst 13, 14558 Nuthetal-Bergholz-Rehbrücke, Deutschland",
       "rating": 4.7,
@@ -202,21 +158,10 @@
       ]
     },
     {
-      "name": "Malerbetrieb Kasperowski",
-      "address": "Jägerallee 37 B, 14469 Potsdam, Deutschland",
+      "name": "F. Naue Malerei GmbH",
+      "address": "Zum Kahleberg 93, 14478 Potsdam Süd, Deutschland",
       "rating": 5,
-      "place_id": "ChIJh7HMRZD1qEcRGQ-bbbXmc1w",
-      "types": [
-        "establishment",
-        "painter",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Malermeister Thomas Metzdorf",
-      "address": "Dieselstraße 13, 14482 Potsdam-Babelsberg, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJh-8G0_X1qEcRXgcNUbgweBw",
+      "place_id": "ChIJe08smYD1qEcR_syBlkVSYoc",
       "types": [
         "establishment",
         "painter",
@@ -235,10 +180,65 @@
       ]
     },
     {
-      "name": "Ingo Raboldt",
-      "address": "Pasteurstraße 26, 14482 Potsdam-Babelsberg, Deutschland",
+      "name": "Malermeister Thomas Metzdorf",
+      "address": "Dieselstraße 13, 14482 Potsdam-Babelsberg, Deutschland",
       "rating": 5,
-      "place_id": "ChIJ7SVOelhfqEcR3UTPqMwVIxk",
+      "place_id": "ChIJh-8G0_X1qEcRXgcNUbgweBw",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Matthias Boehlke",
+      "address": "Friedrich-Engels-Straße 39, 14482 Potsdam-Babelsberg, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJt-Asb_H1qEcRHARji6oWxL4",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Malerbetrieb Kasperowski",
+      "address": "Jägerallee 37 B, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJh7HMRZD1qEcRGQ-bbbXmc1w",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Roundabout Iffouzar",
+      "address": "Anni-von-Gottberg-Straße 8B, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJXaDPJ6BfqEcR-e6IoXZcxJ4",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Zacharias Klaus",
+      "address": "Stadtheide 2, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJiY9fFE_0qEcRfGFzI4JyvHk",
+      "types": [
+        "establishment",
+        "painter",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Malermeister Maxim Schweigert",
+      "address": "Nelly-Sachs-Straße 4, 14480 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJsb72tAVfqEcRWVezzrJgH5k",
       "types": [
         "establishment",
         "painter",

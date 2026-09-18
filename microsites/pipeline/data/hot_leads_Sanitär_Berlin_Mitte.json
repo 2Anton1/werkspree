@@ -29,6 +29,31 @@
       "phone": "030 49791187"
     },
     {
+      "name": "A + M Heizung-Sanitär GmbH",
+      "address": "Torstraße 105-107, 10119 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJAWw8kB1OqEcR4KVAgBs7Myc",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 24628350"
+    },
+    {
+      "name": "Sanitär Morhardt",
+      "address": "Sellerstraße 17, 13353 Berlin, Deutschland",
+      "rating": 4.6,
+      "place_id": "ChIJ0SQ3xrJwCKsRpysU2nRkOvw",
+      "types": [
+        "establishment",
+        "plumber",
+        "point_of_interest"
+      ],
+      "phone": "030 13881234"
+    },
+    {
       "name": "Gebrüder Schlaf Bäder & Heizungen GmbH",
       "address": "Lengeder Straße 21-23, 13353 Berlin-Bezirk Reinickendorf, Deutschland",
       "rating": 5,
@@ -44,43 +69,6 @@
       "phone": "030 55488692"
     },
     {
-      "name": "Sanitär Morhardt",
-      "address": "Sellerstraße 17, 13353 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ0SQ3xrJwCKsRpysU2nRkOvw",
-      "types": [
-        "establishment",
-        "plumber",
-        "point_of_interest"
-      ],
-      "phone": "030 13881234"
-    },
-    {
-      "name": "RohrKlar Klempner Berlin - Mitte 24h Notdienst",
-      "address": "Voltairestraße 11, 10179 Berlin, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJm0CtEzHl1WQRZvw-c0LZOX4",
-      "types": [
-        "establishment",
-        "plumber",
-        "point_of_interest"
-      ],
-      "phone": "0176 32444322"
-    },
-    {
-      "name": "A + M Heizung-Sanitär GmbH",
-      "address": "Torstraße 105-107, 10119 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJAWw8kB1OqEcR4KVAgBs7Myc",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "plumber",
-        "point_of_interest"
-      ],
-      "phone": "030 24628350"
-    },
-    {
       "name": "Sanitär Express",
       "address": "Alt-Moabit 43, 10555 Berlin, Deutschland",
       "rating": 5,
@@ -89,10 +77,7 @@
         "establishment",
         "point_of_interest"
       ],
-      "phone": "030 39876655",
-      "website_quality": "low",
-      "website_quality_score": 3,
-      "old_or_no_website": "https://www.sanitaer-express.berlin/"
+      "phone": "030 39876655"
     },
     {
       "name": "SANA-TEC GmbH - Gas, Wasser, Heizung, Sanitär Installateur und Notdienst",
@@ -130,6 +115,33 @@
       "region": "Berlin Mitte"
     },
     {
+      "name": "M. Schulze Sanitärinstallation",
+      "address": "Blücherstraße 57A, 10961 Berlin, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJt6pBtNZPqEcRQx_erJQ3BJs",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "030 6929655"
+    },
+    {
+      "name": "Leberecht GmbH",
+      "address": "Schönwalder Str. 16, 13347 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJgzS5qYhRqEcR36qwihVw4Y4",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "030 4657539"
+    },
+    {
       "name": "Penning Sanitär Handel GmbH + Co. KG",
       "address": "Schützenstraße 39, 10117 Berlin, Deutschland",
       "rating": 4.5,
@@ -142,21 +154,6 @@
         "home_goods_store",
         "point_of_interest",
         "store"
-      ],
-      "phone": "030 4099030",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": "https://penning-sanitaer.de/kuechen/ausstellung-berlin/"
-    },
-    {
-      "name": "Leberecht GmbH",
-      "address": "Schönwalder Str. 16, 13347 Berlin, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJgzS5qYhRqEcR36qwihVw4Y4",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "point_of_interest"
       ]
     },
     {
@@ -173,49 +170,22 @@
       ]
     },
     {
-      "name": "ABEX Mitte",
-      "address": "Heidestraße 46-52, 10557 Berlin, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJma3RfyZRqEcRqgCYP-hcU_o",
+      "name": "AAA Abfluss - Rohrreinigung Berlin",
+      "address": "Gerichtstraße 18, 13347 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJdbFKC5xWGwARR1sP8Geg3EU",
       "types": [
         "establishment",
         "point_of_interest"
       ]
     },
     {
-      "name": "M. Schulze Sanitärinstallation",
-      "address": "Blücherstraße 57A, 10961 Berlin, Deutschland",
+      "name": "ABEX Mitte",
+      "address": "Heidestraße 46-52, 10557 Berlin, Deutschland",
       "rating": 4.8,
-      "place_id": "ChIJt6pBtNZPqEcRQx_erJQ3BJs",
+      "place_id": "ChIJma3RfyZRqEcRqgCYP-hcU_o",
       "types": [
         "establishment",
-        "general_contractor",
-        "home_goods_store",
-        "plumber",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "name": "SHK | SHOP",
-      "address": "Stromstraße 30, 10551 Berlin, Deutschland",
-      "rating": 4.4,
-      "place_id": "ChIJNym6ynRRqEcRhoE9XU9BQww",
-      "types": [
-        "establishment",
-        "home_goods_store",
-        "point_of_interest",
-        "store"
-      ]
-    },
-    {
-      "name": "Heizung & Sanitär Y. Ekinci",
-      "address": "Beusselstraße 3, 10553 Berlin, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJHdkeKRJRqEcRKP34CC1vyOw",
-      "types": [
-        "establishment",
-        "plumber",
         "point_of_interest"
       ]
     },
@@ -228,6 +198,18 @@
         "establishment",
         "general_contractor",
         "point_of_interest"
+      ]
+    },
+    {
+      "name": "SHK | SHOP",
+      "address": "Stromstraße 30, 10551 Berlin, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJNym6ynRRqEcRhoE9XU9BQww",
+      "types": [
+        "establishment",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
       ]
     }
   ],

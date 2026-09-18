@@ -15,6 +15,18 @@
       "phone": "0335 543582"
     },
     {
+      "name": "Welenga Elektrohandwerk GmbH",
+      "address": "Sandfurt 2, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJV3pKXZk5ZUERllUzfi1vWyA",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "01516 5001010"
+    },
+    {
       "name": "Elektro Stachecki",
       "address": "Fischerstraße 42, 15230 Frankfurt (Oder)-Gubener Vorstadt, Deutschland",
       "rating": 4.7,
@@ -42,18 +54,6 @@
       "old_or_no_website": "https://www.elektro-bollfras.de/"
     },
     {
-      "name": "Welenga Elektrohandwerk GmbH",
-      "address": "Sandfurt 2, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJV3pKXZk5ZUERllUzfi1vWyA",
-      "types": [
-        "electrician",
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "01516 5001010"
-    },
-    {
       "name": "Norbert Huck Elektroinstallation",
       "address": "Rostocker Str. 15, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
       "rating": 5,
@@ -78,6 +78,30 @@
       "website_quality": "low",
       "website_quality_score": 0,
       "old_or_no_website": "http://www.obeta.de/"
+    },
+    {
+      "name": "Elektro Schmidt GmbH & Co. KG",
+      "address": "Mühlenstraße 19, 15295 Brieskow-Finkenheerd, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJCxC4FzK9B0cRFIn5-lsKUoY",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "033609 850"
+    },
+    {
+      "name": "Elektroservice DEKA GmbH *Elektriker - Photovoltaikanlagen - Solaranlagen *",
+      "address": "Ringstraße 2B, 15890 Eisenhüttenstadt, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJFUCEFe24B0cRyNZOP4ZC4wQ",
+      "types": [
+        "electrician",
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "03364 452012"
     }
   ],
   "hot_leads": []

@@ -55,29 +55,7 @@
         "establishment",
         "point_of_interest"
       ],
-      "phone": "0335 4014830",
-      "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "https://stadtbau-tischlerei.de/",
-      "email": "stadt-bau-tischlerei@t-online.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'stadt' in domain/local",
-      "branch": "Tischlerei",
-      "region": "Frankfurt Oder"
-    },
-    {
-      "name": "Michael Jahn Tischlerei",
-      "address": "Seestraße 39, 15236 Frankfurt (Oder)-Güldendorf, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJYa3u5P2XB0cRihWCO_XANjQ",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0335 5005262",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
+      "phone": "0335 4014830"
     },
     {
       "name": "Tischlerei Jahn",
@@ -119,6 +97,20 @@
       "old_or_no_website": ""
     },
     {
+      "name": "Michael Jahn Tischlerei",
+      "address": "Seestraße 39, 15236 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJYa3u5P2XB0cRihWCO_XANjQ",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0335 5005262",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": ""
+    },
+    {
       "name": "Möbeltischlerei Christian Schulz",
       "address": "Gewerbeparkring 23, 15299 Müllrose, Deutschland",
       "rating": 4.8,
@@ -138,6 +130,31 @@
       "region": "Frankfurt Oder"
     },
     {
+      "name": "Holzmanufaktur Roland | Treppen-, Türen- und Fensterbau",
+      "address": "Seelower Str. 4, 15306 Vierlinden, Deutschland",
+      "rating": 4.4,
+      "place_id": "ChIJDRBIpAB4B0cRkgD9EFW0pGo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "03346 845193"
+    },
+    {
+      "name": "Küchenstudio Tackenberg GmbH",
+      "address": "Waldstraße 4, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJKx4M4OeZB0cR2M_K2K4g2_E",
+      "types": [
+        "establishment",
+        "furniture_store",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ]
+    },
+    {
       "name": "Top Schrank Inh. M. Walczak, M. Frackiewicz",
       "address": "Karl-Marx-Straße 178, 15230 Frankfurt (Oder), Deutschland",
       "rating": 4.8,
@@ -147,8 +164,7 @@
         "home_goods_store",
         "point_of_interest",
         "store"
-      ],
-      "phone": "0335 2847687"
+      ]
     }
   ],
   "hot_leads": [
@@ -168,25 +184,6 @@
       "email": "info@tischlerei-peil.com",
       "email_verified": true,
       "email_verify_reason": "Impressum: Match: 'peil' in domain/local",
-      "branch": "Tischlerei",
-      "region": "Frankfurt Oder"
-    },
-    {
-      "name": "Stadt Bau Tischlereigesellschaft mbH",
-      "address": "Goethestraße 11E, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ4xTdzkWYB0cRmF0SCKtdBN4",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0335 4014830",
-      "website_quality": "medium",
-      "website_quality_score": 4,
-      "old_or_no_website": "https://stadtbau-tischlerei.de/",
-      "email": "stadt-bau-tischlerei@t-online.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'stadt' in domain/local",
       "branch": "Tischlerei",
       "region": "Frankfurt Oder"
     },

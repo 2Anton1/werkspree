@@ -70,6 +70,20 @@
       "phone": "0178 9716453"
     },
     {
+      "name": "Tischlerei Construct & Beschlaghandel TCB Potsdam",
+      "address": "Schlaatzweg 9/Haus Nr. 3, 14473 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJFZoK3jX1qEcRIAUAbEMMNkY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 60086199"
+    },
+    {
       "name": "WOODBROTHERS Tischlerei in Potsdam",
       "address": "Marquardter Str. 22, 14476 Potsdam, Deutschland",
       "rating": 5,
@@ -90,18 +104,15 @@
       "region": "Potsdam"
     },
     {
-      "name": "Tischlerei Construct & Beschlaghandel TCB Potsdam",
-      "address": "Schlaatzweg 9/Haus Nr. 3, 14473 Potsdam, Deutschland",
+      "name": "Tischlerei Andreas Butze",
+      "address": "Tiroler Damm 19, 14478 Potsdam Süd, Deutschland",
       "rating": 5,
-      "place_id": "ChIJFZoK3jX1qEcRIAUAbEMMNkY",
+      "place_id": "ChIJC5WBUGNfqEcR-7hxNdkv7wE",
       "types": [
         "establishment",
-        "general_contractor",
-        "home_goods_store",
-        "point_of_interest",
-        "store"
+        "point_of_interest"
       ],
-      "phone": "0331 60086199"
+      "phone": "0331 7480025"
     },
     {
       "name": "Frank Praetsch Tischlermeister",
@@ -123,29 +134,28 @@
       "region": "Potsdam"
     },
     {
-      "name": "Tischlerei Andreas Butze",
-      "address": "Tiroler Damm 19, 14478 Potsdam Süd, Deutschland",
+      "name": "Frank Adam DEHOTEC Design -Holz - Technik",
+      "address": "Zum bhf Pirschheide, 14471 Potsdam-Westliche Vorstadt, Deutschland",
       "rating": 5,
-      "place_id": "ChIJC5WBUGNfqEcR-7hxNdkv7wE",
+      "place_id": "ChIJDfcg01n0qEcRh7NvCLPHsik",
       "types": [
         "establishment",
         "point_of_interest"
       ],
-      "phone": "0331 7480025"
-    },
-    {
-      "name": "Tischlerei Könitzer, Inhaber Anja Kloohs",
-      "address": "Schumannstraße 15, 14558 Nuthetal, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJYWnivDxfqEcRYuX3vJqmSSE",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "033200 82837",
+      "phone": "0172 6609260",
       "website_quality": "none",
       "website_quality_score": 0,
-      "old_or_no_website": "https://www.tischlerei-koenitzer.de/"
+      "old_or_no_website": "http://www.dehotec.de/"
+    },
+    {
+      "name": "Tischlerei Firck",
+      "address": "Am Raubfang 3, 14469 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJAQDQq5j2qEcRZ_syKDrSk1g",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
     },
     {
       "name": "Ojikko Holzmanufaktur GmbH",
@@ -158,10 +168,20 @@
       ]
     },
     {
-      "name": "Frank Adam DEHOTEC Design -Holz - Technik",
-      "address": "Zum bhf Pirschheide, 14471 Potsdam-Westliche Vorstadt, Deutschland",
+      "name": "Tegometall Service Center Potsdam - Berlin / Brandenburg",
+      "address": "Großbeerenstraße 139, 14482 Potsdam-Babelsberg, Deutschland",
       "rating": 5,
-      "place_id": "ChIJDfcg01n0qEcRh7NvCLPHsik",
+      "place_id": "ChIJ2SKH6vn1qEcRpt_x5b4jBdY",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Tischlerei Könitzer, Inhaber Anja Kloohs",
+      "address": "Schumannstraße 15, 14558 Nuthetal, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJYWnivDxfqEcRYuX3vJqmSSE",
       "types": [
         "establishment",
         "point_of_interest"
@@ -178,20 +198,10 @@
       ]
     },
     {
-      "name": "Tischlerei Firck",
-      "address": "Am Raubfang 3, 14469 Potsdam, Deutschland",
+      "name": "Hüller & Lüdecke Hübau GmbH",
+      "address": "Im Gewerbepark 6, 14548 Schwielowsee-Caputh, Deutschland",
       "rating": 5,
-      "place_id": "ChIJAQDQq5j2qEcRZ_syKDrSk1g",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Tischlerei Kuron",
-      "address": "Am Buchhorst 33/Halle 4/15, 14478 Potsdam Süd, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJFfRQNWtfqEcRzWnyEFFouYw",
+      "place_id": "ChIJxW_c1MD0qEcR6OBVPNlrJ7M",
       "types": [
         "establishment",
         "point_of_interest"
@@ -202,16 +212,6 @@
       "address": "Pasteurstraße 14, 14482 Potsdam, Deutschland",
       "rating": 5,
       "place_id": "ChIJP3RQmvj1qEcR-UJd8eMb6gE",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Sebastian Rießbeck Montage",
-      "address": "Dorfstraße 7 a, 14476 Potsdam-Nördliche Ortsteile, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJy-mhvsPwqEcR8EtGHy2-HpM",
       "types": [
         "establishment",
         "point_of_interest"

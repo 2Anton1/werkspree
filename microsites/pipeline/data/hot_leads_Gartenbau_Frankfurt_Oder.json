@@ -65,18 +65,6 @@
       "phone": "0335 4002206"
     },
     {
-      "name": "Landschaft Kreativ - Landschaftsbau und Gartenpflege Märkisch-Oderland",
-      "address": "Kienitzer Oderstraße 48, 15324 Letschin, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJ7ym-5AV7B0cRutl8wUtJIzo",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "point_of_interest"
-      ],
-      "phone": "0170 8954707"
-    },
-    {
       "name": "Förster Garten- und Landschaftsbau",
       "address": "Gewerbegebiet Seefichten, Schubertstraße 65, 15234 Frankfurt (Oder)-Rosengarten, Deutschland",
       "rating": 4.5,
@@ -99,6 +87,18 @@
         "point_of_interest"
       ],
       "phone": "0172 4126141"
+    },
+    {
+      "name": "Landschaft Kreativ - Landschaftsbau und Gartenpflege Märkisch-Oderland",
+      "address": "Kienitzer Oderstraße 48, 15324 Letschin, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ7ym-5AV7B0cRutl8wUtJIzo",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "point_of_interest"
+      ],
+      "phone": "0170 8954707"
     },
     {
       "name": "Garten- und Kommunaltechnik Dreier GmbH",
@@ -125,52 +125,6 @@
         "point_of_interest"
       ],
       "phone": "03361 3652678"
-    },
-    {
-      "name": "Baumfällungen und mobiles Sägewerk Max Görsdorf",
-      "address": "Georg-Simon-Ohm-Straße 1, 15236 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJv_45Q3GXB0cRSNBM7mCRXpI",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0174 2108930",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
-    },
-    {
-      "name": "Grüner Leben Garten- und Landschaftsbau",
-      "address": "Am Leisrain 18, 65936 Frankfurt am Main, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJ0Rz1c6ygvUcRbELYj_3c_9E",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Büro Baumcut",
-      "address": "Richard-Wagner-Straße 27, 15234 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJz_U2RwCZB0cRwUmmZr9hmm4",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Hema",
-      "address": "Beeskower Str. 10, 15234 Frankfurt (Oder)-Güldendorf, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJcU1MSjGYB0cR9mwSdKkmDFw",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "point_of_interest"
-      ]
     }
   ],
   "hot_leads": [

@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Möbeltischlerei Christian Schulz | Maßarbeit aus Holz in Frankfurt Oder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #8B6F47;
+            --primary-dark: #4A3C28;
+            --bg-light: #FAF6EF;
+            --text-dark: #2D2419;
+            --white: #ffffff;
+            --wood-gradient: repeating-linear-gradient(
+                90deg,
+                #8B6F47 0px,
+                #8B6F47 2px,
+                #7A5F37 2px,
+                #7A5F37 4px
+            );
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            padding: 20px 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(rgba(74, 60, 40, 0.85), rgba(74, 60, 40, 0.85)), url('https://images.unsplash.com/photo-1581428982868-e410dd047a90?auto=format&fit=crop&q=80&w=2000') center/cover;
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--wood-gradient);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: var(--white);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        /* About Us */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: url('https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&q=80&w=800') center/cover;
+            border: 15px solid var(--white);
+            box-shadow: 10px 10px 0px var(--primary);
+        }
+
+        /* Services Cards */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 40px 30px;
+            text-align: center;
+            border-bottom: 5px solid var(--primary);
+            transition: transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Materials List */
+        .materials-section {
+            background-color: var(--primary-dark);
+            color: var(--white);
+        }
+
+        .materials-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .materials-list li {
+            background: rgba(255,255,255,0.1);
+            padding: 15px 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* References */
+        .ref-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .ref-box {
+            padding: 40px;
+            color: var(--white);
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #8B6F47 0%, #4A3C28 100%);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .ref-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--wood-gradient);
+            opacity: 0.1;
+        }
+
+        .ref-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            z-index: 1;
+        }
+
+        .ref-box p {
+            font-size: 0.9rem;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        /* Contact & Hours */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info a {
+            display: block;
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary);
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .hours-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-line {
+            width: 100%;
+            height: 4px;
+            background: var(--wood-gradient);
+            margin-bottom: 30px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .about-grid, .contact-container { grid-template-columns: 1fr; }
+            .about-image { height: 300px; order: -1; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-content">
+            <div class="logo">MÖBELTISCHLEREI<br>CHRISTIAN SCHULZ</div>
+            <div class="contact-trigger">
+                <a href="#kontakt" class="cta-button" style="padding: 10px 20px; font-size: 0.8rem;">Kontakt</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Maßarbeit aus Holz</h1>
+            <p>Präzision, Leidenschaft und traditionelles Handwerk für Ihr Zuhause in Frankfurt (Oder) und Umgebung.</p>
+            <a href="#kontakt" class="cta-button">Angebot anfragen</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Über uns</h2>
+                    <p>Willkommen bei der Möbeltischlerei Christian Schulz. In unserer Werkstatt in Müllrose bei Frankfurt (Oder) verbinden wir traditionelles Handwerk mit moderner Präzision. Seit Jahren stehen wir für Qualität, Langlebigkeit und die tiefe Liebe zum Werkstoff Holz.</p>
+                    <br>
+                    <p>Jedes Stück, das unsere Werkstatt verlässt, ist ein Unikat – gefertigt nach Ihren individuellen Wünschen und mit höchstem Anspruch an Ästhetik und Funktionalität. Wir verstehen uns als Partner für anspruchsvolle Holzarbeiten, die Generationen überdauern.</p>
+                </div>
+                <div class="about-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background: #f2ede4;">
+        <div class="container">
+            <h2 class="section-title">Leistungen auf Anfrage</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Möbelbau</h3>
+                    <p>Individuelle Schränke, Tische und Regalsysteme nach Maß.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Türen</h3>
+                    <p>Hochwertige Innentüren und Haustüren aus Massivholz.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Fenster</h3>
+                    <p>Passgenaue Fensterlösungen für Neubau und Sanierung.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Restaurierung</h3>
+                    <p>Erhalt und Aufarbeitung historischer Holzsubstanz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="materials-section">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Unsere Materialien</h2>
+            <ul class="materials-list">
+                <li>Massivholz</li>
+                <li>Eiche</li>
+                <li>Buche</li>
+                <li>Esche</li>
+                <li>Nussbaum</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="references">
+        <div class="container">
+            <h2 class="section-title">Referenzen</h2>
+            <div class="ref-grid">
+                <div class="ref-box">
+                    <h4>Maßgefertigte Wohnwand</h4>
+                    <p>Eichenholz-Kombination mit integrierter Beleuchtung für ein modernes Wohnzimmer in Frankfurt Oder.</p>
+                </div>
+                <div class="ref-box">
+                    <h4>Restaurierung Landhaus-Portal</h4>
+                    <p>Aufarbeitung einer historischen Doppelflügeltür unter Berücksichtigung des Denkmalschutzes.</p>
+                </div>
+                <div class="ref-box">
+                    <h4>Massivholztisch "Esche"</h4>
+                    <p>Einzigartiger Esstisch aus einer massiven Bohle mit natürlicher Baumkante.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontakt">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Kontakt</h2>
+                    <p style="margin-bottom: 20px;">Gerne beraten wir Sie persönlich zu Ihrem Holzprojekt. Rufen Sie uns an oder schreiben Sie eine E-Mail.</p>
+                    <p><strong>Adresse:</strong><br>Gewerbeparkring 23, 15299 Müllrose</p>
+                    <br>
+                    <a href="tel:01712650406">📞 0171 2650406</a>
+                    <a href="mailto:tischlerei-cschulz@gmx.de">✉️ tischlerei-cschulz@gmx.de</a>
+                </div>
+                <div class="opening-hours">
+                    <h2 class="section-title" style="text-align: left; margin-left: 0;">Öffnungszeiten</h2>
+                    <table class="hours-table">
+                        <tr><td>Montag - Donnerstag</td><td>07:00 - 16:30 Uhr</td></tr>
+                        <tr><td>Freitag</td><td>07:00 - 13:30 Uhr</td></tr>
+                        <tr><td>Samstag</td><td>Nach Vereinbarung</td></tr>
+                        <tr><td>Sonntag</td><td>Geschlossen</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-line"></div>
+        <div class="container">
+            <p>&copy; 2023 Möbeltischlerei Christian Schulz. Alle Rechte vorbehalten.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; opacity: 0.6;">Erstellt von Werkspree</p>
+        </div>
+    </footer>
+
+</body>
+</html>

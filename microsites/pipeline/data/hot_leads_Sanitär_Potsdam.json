@@ -5,7 +5,7 @@
     {
       "name": "Laabs GmbH für Heizung, Sanitär und Fliesen",
       "address": "Am Silbergraben 16, 14480 Potsdam, Deutschland",
-      "rating": 4.7,
+      "rating": 4.6,
       "place_id": "ChIJc3YdjwdfqEcRh5c0UnbuQWg",
       "types": [
         "electrician",
@@ -17,6 +17,21 @@
         "store"
       ],
       "phone": "0331 649590"
+    },
+    {
+      "name": "Schulz & Co GmbH",
+      "address": "Florastraße 40, 14469 Potsdam Nord, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJT4oBGKP2qEcRMaQZ05srIY4",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "plumber",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 500355"
     },
     {
       "name": "Rudski GmbH Bäder & Heizungen",
@@ -41,21 +56,6 @@
         "point_of_interest"
       ],
       "phone": "0331 296019"
-    },
-    {
-      "name": "Schulz & Co GmbH",
-      "address": "Florastraße 40, 14469 Potsdam Nord, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJT4oBGKP2qEcRMaQZ05srIY4",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "home_goods_store",
-        "plumber",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "0331 500355"
     },
     {
       "name": "Axel Jaenecke GmbH",
@@ -106,20 +106,6 @@
       "phone": "0331 6001135"
     },
     {
-      "name": "Siegert Heizung-Sanitär",
-      "address": "Weißes Haus, 20m vor dem Standblitzer, Heinrich-Mann-Allee 103C, 14473 Potsdam Süd, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJ16-69Iv1qEcRFlbjBWV0yHY",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "home_goods_store",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "0331 60082068"
-    },
-    {
       "name": "HVT Haus-und Versorgungstechnik GmbH",
       "address": "Gewerbegebiet Gartenstraße-Ost, Großbeerenstraße 139, 14482 Potsdam-Babelsberg, Deutschland",
       "rating": 4.8,
@@ -146,6 +132,20 @@
       "phone": "0331 5507090"
     },
     {
+      "name": "Siegert Heizung-Sanitär",
+      "address": "Weißes Haus, 20m vor dem Standblitzer, Heinrich-Mann-Allee 103C, 14473 Potsdam Süd, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ16-69Iv1qEcRFlbjBWV0yHY",
+      "types": [
+        "establishment",
+        "general_contractor",
+        "home_goods_store",
+        "point_of_interest",
+        "store"
+      ],
+      "phone": "0331 60082068"
+    },
+    {
       "name": "Giesbert Rühlemann Klempner- u. Installateurmeister - Potsdam",
       "address": "Schlaatzstraße 18, 14473 Potsdam, Deutschland",
       "rating": 5,
@@ -165,19 +165,6 @@
         "establishment",
         "general_contractor",
         "point_of_interest"
-      ]
-    },
-    {
-      "name": "Dirk Müller Heizung Klima Sanitär",
-      "address": "Kietzerstraße 18, 14476 Potsdam-Fahrland, Deutschland",
-      "rating": 4.5,
-      "place_id": "ChIJNzLSai33qEcRV13j25HF_o8",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "home_goods_store",
-        "point_of_interest",
-        "store"
       ]
     }
   ],
