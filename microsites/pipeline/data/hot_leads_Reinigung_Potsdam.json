@@ -27,6 +27,18 @@
       "phone": "0331 963128"
     },
     {
+      "name": "Namiks Gebäudereinigungsservice",
+      "address": "Fritz-Zubeil-Straße 14, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJwfmFbA5fqEcRCIw4MO4UHJE",
+      "types": [
+        "establishment",
+        "laundry",
+        "point_of_interest"
+      ],
+      "phone": "0176 21315318"
+    },
+    {
       "name": "Änderungsschneiderei mit Reinigungsannahme O-TEK (Galeria)",
       "address": "Brandenburger Str. 49-52, 14467 Potsdam, Deutschland",
       "rating": 4.6,
@@ -56,15 +68,16 @@
       "old_or_no_website": ""
     },
     {
-      "name": "K&K Gebäudereinigung GmbH Potsdam",
-      "address": "Auf dem Kiewitt 23, 14471 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJMwX2kkJfqEcRvWJm31WntYU",
+      "name": "Wäscherei Berlin | Jonny Fresh",
+      "address": "Invalidenstraße 115, 10115 Berlin, Deutschland",
+      "rating": 4.5,
+      "place_id": "ChIJGc04hwNPqEcRpfCr-TfdhVo",
       "types": [
         "establishment",
+        "laundry",
         "point_of_interest"
       ],
-      "phone": "0331 719166"
+      "phone": "030 536034570"
     },
     {
       "name": "Haus & Motivservice Braun",
@@ -86,6 +99,17 @@
       "region": "Potsdam"
     },
     {
+      "name": "K&K Gebäudereinigung GmbH Potsdam",
+      "address": "Auf dem Kiewitt 23, 14471 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJMwX2kkJfqEcRvWJm31WntYU",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0331 719166"
+    },
+    {
       "name": "ANG Reinigung UG",
       "address": "Willy-A.-Kleinau-Weg 12, 14480 Potsdam, Deutschland",
       "rating": 5,
@@ -95,19 +119,6 @@
         "point_of_interest"
       ],
       "phone": "01575 4124631"
-    },
-    {
-      "name": "MARDOR – Mobile Rennrad Reinigung Potsdam & Berlin",
-      "address": "Karl-Gruhl-Straße 28, 14482 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJHaNAIttfqEcRvIcxB-oxFGE",
-      "types": [
-        "bicycle_store",
-        "establishment",
-        "point_of_interest",
-        "store"
-      ],
-      "phone": "01525 5729369"
     },
     {
       "name": "Änderungsschneiderei Turan",

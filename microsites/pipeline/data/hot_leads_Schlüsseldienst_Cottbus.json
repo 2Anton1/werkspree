@@ -46,29 +46,26 @@
       "phone": "0355 542012"
     },
     {
-      "name": "Laurisch Sicherheitstechnik und Metallbau GmbH",
-      "address": "Kleiststraße 6, 03050 Cottbus, Deutschland",
-      "rating": 4.4,
-      "place_id": "ChIJE1nbomt0CEcRtnHUG8XRNfQ",
+      "name": "Der Schlüsseldienst",
+      "address": "Blankenburger Str. 1, 13089 Berlin, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJJaQKDNNNqEcRvO8Pr0p4xv0",
       "types": [
+        "electronics_store",
         "establishment",
-        "general_contractor",
-        "point_of_interest"
+        "locksmith",
+        "point_of_interest",
+        "store"
       ],
-      "phone": "0355 701565",
-      "website_quality": "low",
-      "website_quality_score": 1,
-      "old_or_no_website": "http://metallbau-laurisch-cottbus.de/",
-      "email": "service@metallbau-laurisch-cottbus.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'laurisch' in domain/local",
-      "branch": "Schlüsseldienst",
-      "region": "Cottbus"
+      "phone": "01520 9074178",
+      "website_quality": "none",
+      "website_quality_score": 0,
+      "old_or_no_website": "https://derschlüsseldienst.de/"
     },
     {
       "name": "Meißner Sicherheitstechnik GmbH",
       "address": "Gerhart-Hauptmann-Straße 15, 03044 Cottbus, Deutschland",
-      "rating": 4.5,
+      "rating": 4.6,
       "place_id": "ChIJ_yZbQjh1CEcRwHcP7VuaEKw",
       "types": [
         "establishment",
@@ -121,29 +118,9 @@
       "region": "Cottbus"
     },
     {
-      "name": "Laurisch Sicherheitstechnik und Metallbau GmbH",
-      "address": "Kleiststraße 6, 03050 Cottbus, Deutschland",
-      "rating": 4.4,
-      "place_id": "ChIJE1nbomt0CEcRtnHUG8XRNfQ",
-      "types": [
-        "establishment",
-        "general_contractor",
-        "point_of_interest"
-      ],
-      "phone": "0355 701565",
-      "website_quality": "low",
-      "website_quality_score": 1,
-      "old_or_no_website": "http://metallbau-laurisch-cottbus.de/",
-      "email": "service@metallbau-laurisch-cottbus.de",
-      "email_verified": true,
-      "email_verify_reason": "Impressum: Match: 'laurisch' in domain/local",
-      "branch": "Schlüsseldienst",
-      "region": "Cottbus"
-    },
-    {
       "name": "Meißner Sicherheitstechnik GmbH",
       "address": "Gerhart-Hauptmann-Straße 15, 03044 Cottbus, Deutschland",
-      "rating": 4.5,
+      "rating": 4.6,
       "place_id": "ChIJ_yZbQjh1CEcRwHcP7VuaEKw",
       "types": [
         "establishment",

@@ -3,19 +3,6 @@
   "region": "Frankfurt Oder",
   "all_candidates": [
     {
-      "name": "Praxis für Physiotherapie Brian Hellwig",
-      "address": "Große Scharrnstraße 8, 15230 Frankfurt (Oder), Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJ-3shpO2PCwQRW8JTi0uknRI",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ],
-      "phone": "01515 4838902"
-    },
-    {
       "name": "Physiotherapie Anke Steinicke",
       "address": "Fürstenwalder Str. 18A, 15234 Frankfurt (Oder), Deutschland",
       "rating": 5,
@@ -27,6 +14,19 @@
         "point_of_interest"
       ],
       "phone": "0335 520550"
+    },
+    {
+      "name": "Praxis für Physiotherapie Brian Hellwig",
+      "address": "Große Scharrnstraße 8, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJ-3shpO2PCwQRW8JTi0uknRI",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ],
+      "phone": "01515 4838902"
     },
     {
       "name": "Therapiezentrum links der ODER",
@@ -58,6 +58,18 @@
       "phone": "0335 534079"
     },
     {
+      "name": "Physiotherapie & Bewegungszentrum Haase",
+      "address": "Am Kleistpark 1, 15230 Frankfurt (Oder), Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ_y_R2QGZB0cRQsEuvUQKBJQ",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0335 86950704"
+    },
+    {
       "name": "Praxis für Physiotherapie Tetiana Bonetska - Frankfurt Oder Zentrum",
       "address": "Oberkirchpl. 2, 15230 Frankfurt (Oder), Deutschland",
       "rating": 5,
@@ -69,19 +81,6 @@
         "point_of_interest"
       ],
       "phone": "0335 32302730"
-    },
-    {
-      "name": "Physio am Park (Physiotherapie)",
-      "address": "Cottbuser Str. 6, 15232 Frankfurt (Oder), Deutschland",
-      "rating": 5,
-      "place_id": "ChIJEUW9EGuYB0cRQaatRIVZwOM",
-      "types": [
-        "establishment",
-        "health",
-        "physiotherapist",
-        "point_of_interest"
-      ],
-      "phone": "0335 86922943"
     },
     {
       "name": "Physiotherapie Sonne",
@@ -100,20 +99,17 @@
       "old_or_no_website": ""
     },
     {
-      "name": "Katrin Sprung Physiotherapie",
-      "address": "Grüner Weg 20, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
+      "name": "Physio am Park (Physiotherapie)",
+      "address": "Cottbuser Str. 6, 15232 Frankfurt (Oder), Deutschland",
       "rating": 5,
-      "place_id": "ChIJcwzACGmYB0cRfBouKXFOocs",
+      "place_id": "ChIJEUW9EGuYB0cRQaatRIVZwOM",
       "types": [
         "establishment",
         "health",
         "physiotherapist",
         "point_of_interest"
       ],
-      "phone": "0335 6803173",
-      "website_quality": "none",
-      "website_quality_score": 0,
-      "old_or_no_website": ""
+      "phone": "0335 86922943"
     },
     {
       "name": "PhysioAktivFFO Ulrike Gittner",
@@ -132,37 +128,26 @@
       "old_or_no_website": "http://www.physioaktivffo.de/"
     },
     {
-      "name": "LUKAS MITZKATIS",
-      "address": "Holzmarkt 4a, 15230 Frankfurt (Oder), Deutschland",
+      "name": "Katrin Sprung Physiotherapie",
+      "address": "Grüner Weg 20, 15230 Frankfurt (Oder)-Obere Stadt, Deutschland",
       "rating": 5,
-      "place_id": "ChIJVVWFN3SYB0cRGe8CTXBoZj8",
+      "place_id": "ChIJcwzACGmYB0cRfBouKXFOocs",
       "types": [
         "establishment",
         "health",
         "physiotherapist",
         "point_of_interest"
       ],
-      "phone": "0335 40116633",
-      "website_quality": "low",
+      "phone": "0335 6803173",
+      "website_quality": "none",
       "website_quality_score": 0,
-      "old_or_no_website": "http://lm-physiotherapie.de/"
+      "old_or_no_website": ""
     },
     {
-      "name": "Physiotherapie & Bewegungszentrum Haase",
-      "address": "Am Kleistpark 1, 15230 Frankfurt (Oder), Deutschland",
+      "name": "LUKAS MITZKATIS",
+      "address": "Holzmarkt 4a, 15230 Frankfurt (Oder), Deutschland",
       "rating": 5,
-      "place_id": "ChIJ_y_R2QGZB0cRQsEuvUQKBJQ",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "M2 Concept GmbH Physiotherapie",
-      "address": "Seelower Kehre 3, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJ5c90rmeYB0cR1YDoUfYjlPw",
+      "place_id": "ChIJVVWFN3SYB0cRGe8CTXBoZj8",
       "types": [
         "establishment",
         "health",
@@ -175,6 +160,18 @@
       "address": "Puschkinstraße 1, 15236 Frankfurt (Oder), Deutschland",
       "rating": 5,
       "place_id": "ChIJnyN7rRiZB0cR0QgogInfnug",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "M2 Concept GmbH Physiotherapie",
+      "address": "Seelower Kehre 3, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJ5c90rmeYB0cR1YDoUfYjlPw",
       "types": [
         "establishment",
         "health",
@@ -211,6 +208,30 @@
       "address": "Stendaler Str. 26, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
       "rating": 4.8,
       "place_id": "ChIJW_H8mFyYB0cRZcle_S178DE",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Anja Enke Physiotherapeutin",
+      "address": "Leipziger Str. 53, 15232 Frankfurt (Oder)-Güldendorf, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJ54DkEheYB0cRVPbfo4gqTLI",
+      "types": [
+        "establishment",
+        "health",
+        "physiotherapist",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Physiotherapie Vicky Waldow",
+      "address": "Prager Str. 35, 15234 Frankfurt (Oder)-Kliestow, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJFWfoq0KYB0cRenXHumKOoOI",
       "types": [
         "establishment",
         "health",

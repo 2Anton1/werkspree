@@ -45,17 +45,6 @@
       "region": "Potsdam"
     },
     {
-      "name": "Fahrschule Stern",
-      "address": "Mozartstraße 2, 14480 Potsdam, Deutschland",
-      "rating": 4.9,
-      "place_id": "ChIJfzvE_nxfqEcRk6YXZea_ENI",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ],
-      "phone": "0176 29701099"
-    },
-    {
       "name": "Fahrschule 44 Forty Four Potsdam",
       "address": "Zeppelinstraße 40, 14471 Potsdam, Deutschland",
       "rating": 5,
@@ -67,6 +56,29 @@
       "phone": "0331 23539303"
     },
     {
+      "name": "Fahrschule Stern",
+      "address": "Mozartstraße 2, 14480 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJfzvE_nxfqEcRk6YXZea_ENI",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ],
+      "phone": "0176 29701099"
+    },
+    {
+      "name": "Triple X Fahrschule & Coaching GmbH",
+      "address": "Karl-Liebknecht-Straße 24, 14482 Potsdam, Deutschland",
+      "rating": 4.9,
+      "place_id": "ChIJIU0YlYH1qEcRvF_Q0zy3Wcc",
+      "types": [
+        "establishment",
+        "health",
+        "point_of_interest"
+      ],
+      "phone": "0331 95144811"
+    },
+    {
       "name": "Fahrschule Thomas Ehlenbeck",
       "address": "Gutenbergstraße 72, 14467 Potsdam, Deutschland",
       "rating": 4.5,
@@ -76,18 +88,6 @@
         "point_of_interest"
       ],
       "phone": "0331 2701790"
-    },
-    {
-      "name": "Triple X Fahrschule & Coaching GmbH",
-      "address": "Karl-Liebknecht-Straße 24, 14482 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJIU0YlYH1qEcRvF_Q0zy3Wcc",
-      "types": [
-        "establishment",
-        "health",
-        "point_of_interest"
-      ],
-      "phone": "0331 95144811"
     },
     {
       "name": "Fahrschule ABF Potsdam",
@@ -126,6 +126,16 @@
       "phone": "0331 503929"
     },
     {
+      "name": "Fahrschule VISION",
+      "address": "Fultonstraße 8, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJXxO535j1qEcRTLXU9y2SNL4",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
       "name": "Fahrschule Schalk, Norbert",
       "address": "Hans-Albers-Straße 1, 14480 Potsdam, Deutschland",
       "rating": 5,
@@ -146,30 +156,20 @@
       ]
     },
     {
-      "name": "Yellow Fahrschule Birgit Vetter",
-      "address": "Semmelweisstraße 45, 14482 Potsdam, Deutschland",
-      "rating": 4.8,
-      "place_id": "ChIJzRfHIfn1qEcR4Az2r-_MsPA",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
-      "name": "Fahrschule VISION",
-      "address": "Fultonstraße 8, 14482 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJXxO535j1qEcRTLXU9y2SNL4",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
       "name": "RED STAR Akademie",
       "address": "Verkehrshof 6a, 14478 Potsdam Süd, Deutschland",
       "rating": 4.6,
       "place_id": "ChIJCdc969M7ZUERww4q2Ka_2oU",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Yellow Fahrschule Birgit Vetter",
+      "address": "Semmelweisstraße 45, 14482 Potsdam, Deutschland",
+      "rating": 4.8,
+      "place_id": "ChIJzRfHIfn1qEcR4Az2r-_MsPA",
       "types": [
         "establishment",
         "point_of_interest"
@@ -186,16 +186,6 @@
       ]
     },
     {
-      "name": "A-S Fahrschule",
-      "address": "Rudolf-Breitscheid-Straße 15, 14482 Potsdam, Deutschland",
-      "rating": 5,
-      "place_id": "ChIJxZTW0fD1qEcRfcqg7FM_bPw",
-      "types": [
-        "establishment",
-        "point_of_interest"
-      ]
-    },
-    {
       "name": "Fahrschule Stern",
       "address": "Charlottenstraße 29, 14467 Potsdam, Deutschland",
       "rating": 5,
@@ -206,10 +196,10 @@
       ]
     },
     {
-      "name": "Fahrschule Toros",
-      "address": "Großbeerenstraße 75, 14482 Potsdam, Deutschland",
-      "rating": 4.4,
-      "place_id": "ChIJTZ9dJ-tfqEcRxl-kORyQL1c",
+      "name": "A-S Fahrschule",
+      "address": "Rudolf-Breitscheid-Straße 15, 14482 Potsdam, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJxZTW0fD1qEcRfcqg7FM_bPw",
       "types": [
         "establishment",
         "point_of_interest"
@@ -220,6 +210,16 @@
       "address": "Kirschallee 90, 14469 Potsdam, Deutschland",
       "rating": 5,
       "place_id": "ChIJpfbexCn3qEcREea_fR1cRxo",
+      "types": [
+        "establishment",
+        "point_of_interest"
+      ]
+    },
+    {
+      "name": "Fahrschule Kai Bannier",
+      "address": "Reiherbergstraße 68, 14476 Potsdam Nord, Deutschland",
+      "rating": 5,
+      "place_id": "ChIJicye3wn0qEcR_0CXmtfhPhk",
       "types": [
         "establishment",
         "point_of_interest"
