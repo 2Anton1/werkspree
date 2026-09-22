@@ -3,6 +3,22 @@
 
 ---
 
+## PROJEKT AUF EIS (22.09.2026)
+
+**Anweisung des Nutzers: Werkspree komplett einstellen.**
+- Alle 5 Werkspree-Cron-Jobs PAUSIERT (nicht gelöscht, wieder aktivierbar mit `hermes cron resume <id>`):
+  - `df4d149e4f8f` Werkspree Lead Pipeline (Script Mode)
+  - `e85d58d7915e` Werkspree Health Check
+  - `3778ad6ca1e7` Werkspree Hot-Lead Microsites (Orchestrator)
+  - `b68eea7332bc` Werkspree Reply Checker
+  - `3d145f5ac7af` Werkspree Tagesreport
+- Kein Mailversand, keine Pipeline-Läufe, keine Microsite-Veröffentlichungen mehr.
+- Webseite (werkspree.bki-de.de / GitHub Pages) noch ONLINE — Takedown per Nutzerentscheidung.
+- n8n-Workflow "Rechnungs-OCR Demo" (bj8yGBoDgrSkRPKR) noch aktiv (Demo-Webhook, versendet keine Mails).
+- Nicht-Werkspree-Jobs (Spreadshop, Gumroad, Crons-Zusammenfassung) unberührt.
+
+---
+
 ## Kritischer Vorfall: Opt-out / Falsch-Zuordnung (15.08.2026)
 
 **Beschwerde von P. Ulmann (kontakt@fahrschule-ulmann.de):**
