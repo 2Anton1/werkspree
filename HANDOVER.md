@@ -12,6 +12,15 @@
   - `3778ad6ca1e7` Werkspree Hot-Lead Microsites (Orchestrator)
   - `b68eea7332bc` Werkspree Reply Checker
   - `3d145f5ac7af` Werkspree Tagesreport
+- Auch die 4 Shop-Jobs PAUSIERT (Spreadshop/Gumroad, auf weitere Anweisung des Nutzers):
+  - `87f2c6e160c1` Shop Marketing Mo/Do
+  - `3157d7392984` Shop Tiefenanalyse Woechentlich
+  - `91b6abbf9151` Gumroad Daily Promo
+  - `5b01ceba7ac8` Gumroad Sales Tracker
+- Webseite vom Netz genommen (22.09.2026): GitHub Pages fuer 2Anton1/werkspree via API
+  deaktiviert; werkspree.bki-de.de und 2anton1.github.io/werkspree/ antworten mit 404 (verifiziert).
+  Strato-CNAME fuer werkspree.bki-de.de zeigt jetzt ins Leere — kann bei Strato geloescht werden.
+  Reaktivierung jederzeit moeglich (Pages wieder aktivieren + CNAME-Datei).
 - Kein Mailversand, keine Pipeline-Läufe, keine Microsite-Veröffentlichungen mehr.
 - Webseite (werkspree.bki-de.de / GitHub Pages) noch ONLINE — Takedown per Nutzerentscheidung.
 - n8n-Workflow "Rechnungs-OCR Demo" (bj8yGBoDgrSkRPKR) noch aktiv (Demo-Webhook, versendet keine Mails).
